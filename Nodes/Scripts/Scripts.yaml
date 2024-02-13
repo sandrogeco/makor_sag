@@ -1,0 +1,134 @@
+Name: Scripts
+Id: g=af0b916ed29858c1f50d2dd585530a6e
+Type: FolderType
+Children:
+- File: DesignTime/DesignTime.yaml
+- Name: SystemVariablesLogic
+  Id: g=b8c87fa1551f906366cc9d883185a99b
+  Type: NetLogic
+  Children:
+  - Name: Windows
+    Id: g=c899402b063592d66686eb155d7275df
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Linux
+    Id: g=a9fe3b6a93c438001af3feac972607ac
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: WindowsIP1
+    Id: g=1195f9b45339ae5944fa6fe2208d08b6
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: WindowsIP2
+    Id: g=088ad806c2c12d970b9dc691d90c8caf
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: UsbPresent
+    Id: g=25c9a353ef68c1d3895b20cc48a6b7e8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Blink_500ms
+    Id: g=26829b66b8fccb632b651c8c17a4d3d9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Blink_1s
+    Id: g=4c4e6996de62c0ac37617b18b5aac7fe
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Blink_2s
+    Id: g=db81c26e95f67a3d5fcce7cea464dd53
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Blink_5s
+    Id: g=31960138fcbf60e1b8baf54beaa6e90f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Blink_10s
+    Id: g=e9138a4ce85213dfbbae4690c85c61a9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: GestAvvioProcessiEsterni
+  Id: g=0fbe698278e1326578e5a70776ce2be4
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: Start_VLCPlayer
+    Id: g=654798c4c6c57587e7fc83fcab934f88
+- Name: Runtime_Utility
+  Id: g=e6debf765bd406cf9d5cad3a9141f810
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R1"}
+- Name: EmailSenderLogic
+  Id: g=cb39ebe4553102e75251929c5c73a06f
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R2. Gestito con LongRunnigTask"}
+  Children:
+  - Name: MailingList
+    Id: g=fa72de9b4b4c1745c838a156cfc4522f
+    Type: BaseObjectType
+  - Name: SenderEmailAddress
+    Id: g=46285b7e06ff0e651d11fa40f0fff7ae
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "report@makor.it"
+  - Name: SenderEmailPassword
+    Id: g=011b56617cc58addb314e7c78f48e3b8
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "Makor2021!!21"
+  - Name: SMTPHostname
+    Id: g=ffea0e33aa9ce0f04b05804e583fe262
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "smtps.aruba.it"
+  - Name: SMTPPort
+    Id: g=e1d0e8afe3ec7768d7a3e158139094fb
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 587
+  - Name: EnableSSL
+    Id: g=bbd65bfd2a46e919fd5d91c327f8979d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: EmailSendingStatus
+    Id: g=2503102e5c63ad0c2e12d9d0177c3425
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: MaxRetriesOnFailure
+    Id: g=8cf50e57b34f08bf28e4820a34bf3b17
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: DelayBeforeRetry
+    Id: g=363b78ff12fa30234569bfab183f2dec
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:00:00:10.0000000"
+  - Class: Method
+    Name: SendEmail_LongRunningTask
+    Id: g=c9f963cee9dbf763cd79f08be03211e2
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=91a4b52974ab4d3b7c6a178b442162f3
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"mailSubject","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"mailBody","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Attachmentfile","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"MailingListNode","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: GestRicette
+  Id: g=d3cac29b84990d6cd7117325ce62b342
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R3"}

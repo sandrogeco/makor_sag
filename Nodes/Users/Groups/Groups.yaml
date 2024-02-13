@@ -1,0 +1,20 @@
+Name: Groups
+Id: g=ac85bbd0bac3cefebd17f39c64c24551
+Type: FolderType
+Children:
+- Name: OperatoriMacchina
+  Id: g=38516d21be2459d689030c16e3d73fac
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":46,"TextId":"Operatori macchina"}
+- Name: UtentiManutenzione
+  Id: g=8628ec9a16637ec6799d8c9c4b59c6e0
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":46,"TextId":"Manutentori"}
+- Name: UtentiSpecializzati
+  Id: g=dd1b555d5c77384cc9c25dfc76322b8f
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":46,"TextId":"Utenti specializzati"}
+- Name: UtentiMakor
+  Id: g=157ee34b7fb624744b7fca964f2f9e59
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":46,"TextId":"Utenti Makor"}

@@ -1,0 +1,94 @@
+Name: TemplateAppoggio
+Id: g=f0da683d2dc8311f784afd9d37910226
+Type: FolderType
+Children:
+- Name: ContextDialogConferma
+  Id: g=a2252d1b0276405d5b2d0cd091997918
+  Type: ContextDialogConferma_R2
+  Children:
+  - Name: OnConfirm
+    Id: g=e71cd0fb8276ce8037f883111bf45b28
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+      Direction: Forward
+    - Name: ObjectPointer
+      Id: g=febe09a6c4fcad2700a7ed6e1bd067cd
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=7cda221b73423f7735b1ba96380d1b8b
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=e7083c49e8028e765ae84322bd698099
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: OnCancel
+    Id: g=5000424fd483edd136fa8122c582a689
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+      Direction: Forward
+    - Name: ObjectPointer
+      Id: g=af315e805f065fa3e14b0b974b393fa9
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=ad1793165d6361d476e55cd383707c5a
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=3615492d115780e4572b53915f5eabac
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: Title
+    Id: g=559fbd0e9e3e235599115d75e72e8236
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":""}
+  - Name: Message
+    Id: g=8c2cb5ff34fdfb4537eac684fdd1c592
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ErrorMessage
+    Id: g=c4e4a99ad9d9fae10310af671c98838f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ShowErrorMsg
+    Id: g=6c360fccbd6474d6aabbc69c430fd3de
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: ConfirmVisible
+    Id: g=ebb54855df6fa833d843d86ca376220e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: CancelVisibile
+    Id: g=32c096f310630d64be631924ad9f441a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Image
+    Id: g=8423219e85297e87939a3604f64dc5f9
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: ""
+  - Name: InProgress
+    Id: g=15e0e897040f495c8866dd16c3f586eb
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false

@@ -1,0 +1,92 @@
+Name: Varie
+Id: g=126643199d9accc17084b4f3d742ec16
+Type: FolderType
+Children:
+- Name: Driver_ConnStatus
+  Id: g=51bfde447c21f8c084bad3e3e4968021
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Pairs
+    Id: g=04b507232d86ac5e6ac3f017bd81bb4b
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=66c3ebbf565054066a493cc0c85cae54
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=ff15d17d382d3006e3f4d7d0bf6aac34
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: None
+        Value: 0
+      - Name: Value
+        Id: g=8763cdf540ac20de24813e2c2de01c6e
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+        Value: false
+    - Name: Pair1
+      Id: g=a250151f7f9bbe0fd9b2c5519b799f92
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=d5c5c624bb8ccfd3a4ac90283683e44a
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: None
+        Value: 1
+      - Name: Value
+        Id: g=c7b7dfec3daab440b92c258812001399
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+        Value: true
+- Name: OPC_ConnStatus
+  Id: g=2c77ec54f4a8d71827d845be096786cd
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Pairs
+    Id: g=47ae597dd716b5c7315f921e3ddd8ff5
+    Type: BaseObjectType
+    ModellingRule: None
+    Children:
+    - Name: Pair
+      Id: g=f09418af5e9cf0f095beef580fb842ea
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=f563cf5a5c9c56134b04c72c4daa2a27
+        Type: BaseDataVariableType
+        DataType: ConnectionStatusEnum
+        ModellingRule: None
+        Value: 0
+      - Name: Value
+        Id: g=8191f167e3ec2f36ea20f11741574f42
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+        Value: false
+    - Name: Pair1
+      Id: g=de812e66b20a1462ead4d81047372fb3
+      Type: ValueMapPair
+      ModellingRule: None
+      Children:
+      - Name: Key
+        Id: g=da4de3951be17394a4e7909195b4ac75
+        Type: BaseDataVariableType
+        DataType: ConnectionStatusEnum
+        ModellingRule: None
+        Value: 2
+      - Name: Value
+        Id: g=d65bda86436b78679ad95f987412fd79
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: None
+        Value: true

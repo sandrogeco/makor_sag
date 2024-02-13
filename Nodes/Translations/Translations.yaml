@@ -1,0 +1,473 @@
+Name: Translations
+Id: g=1de46cf00e0468169720fad0a90eb515
+Type: TranslationsCategoryFolder
+Children:
+- Name: Traduz_Alm
+  Id: g=0d54426ea63d03e14354adf1fe61d827
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [161,8],
+    "Body": [
+     "","it-IT","en-US","de-DE","fr-FR","es-ES","hu-HU","ru-RU",
+     "Q4_Kurex_AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina","AlmGenEmergMacchina",
+     "Q4_Kurex_AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte","AlmGenEmergLineaMonte",
+     "Q4_Kurex_AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati","AlmGenTermiciScattati",
+     "Q4_Kurex_AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle","AlmGenEmergLineaValle",
+     "Q4_Kurex_AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro","AlmGenTemperQuadro",
+     "Q4_Kurex_AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze","AlmRichRiprisSicurezze",
+     "Q4_Kurex_WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto","WrnAnomaliaInvTrasporto",
+     "Q4_Kurex_WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto","WrnErrCommInvTrasporto",
+     "Q4_Kurex_WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp","WrnAnomaliaProxyTrasp",
+     "Q4_Kurex_WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte","WrnAnomaliaInvTepMonte",
+     "Q4_Kurex_WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte","WrnErrCommInvTepMonte",
+     "Q4_Kurex_WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle","WrnAnomaliaInvTepValle",
+     "Q4_Kurex_WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle","WrnErrCommInvTepValle",
+     "Q4_Kurex_WrnFreeM163","WrnFreeM163","WrnFreeM163","WrnFreeM163","WrnFreeM163","WrnFreeM163","WrnFreeM163","WrnFreeM163",
+     "Q4_Kurex_WrnFreeM164","WrnFreeM164","WrnFreeM164","WrnFreeM164","WrnFreeM164","WrnFreeM164","WrnFreeM164","WrnFreeM164",
+     "Q4_Kurex_WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore","WrnAnomaliaInvAspiratore",
+     "Q4_Kurex_WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore","WrnErrCommInvAspiratore",
+     "Q4_Kurex_WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione","WrnAnomaliaInvImmissione",
+     "Q4_Kurex_WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione","WrnErrCommInvImmissione",
+     "Q4_Kurex_WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti","WrnSportelliAperti",
+     "Q4_Kurex_WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati","WrnPezziBloccati",
+     "Q4_Kurex_WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata","WrnBarrIngBloccata",
+     "Q4_Kurex_WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata","WrnBarrUscBloccata",
+     "Q4_Kurex_WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina","WrnAttivazMacchina",
+     "Q4_Kurex_WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC","WrnGenBatteriaBassaPLC",
+     "Q4_Kurex_WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI","WrnGenBatteriaBassaHMI",
+     "Q4_Kurex_WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1","WrnLampNonInPosizGrup1",
+     "Q4_Kurex_WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2","WrnLampNonInPosizGrup2",
+     "Q4_Kurex_WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0","WrnAnomaliaAlimLamp0",
+     "Q4_Kurex_WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1","WrnAnomaliaAlimLamp1",
+     "Q4_Kurex_WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2","WrnAnomaliaAlimLamp2",
+     "Q4_Kurex_WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3","WrnAnomaliaAlimLamp3",
+     "Q4_Kurex_WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4","WrnAnomaliaAlimLamp4",
+     "Q4_Kurex_WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5","WrnAnomaliaAlimLamp5",
+     "Q4_Kurex_WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6","WrnAnomaliaAlimLamp6",
+     "Q4_Kurex_WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7","WrnAnomaliaAlimLamp7",
+     "Q4_Kurex_WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8","WrnAnomaliaAlimLamp8",
+     "Q4_Kurex_WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9","WrnAnomaliaAlimLamp9",
+     "Q4_Kurex_WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10","WrnAnomaliaAlimLamp10",
+     "Q4_Kurex_WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0","WrnErrCommAlimLamp0",
+     "Q4_Kurex_WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1","WrnErrCommAlimLamp1",
+     "Q4_Kurex_WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2","WrnErrCommAlimLamp2",
+     "Q4_Kurex_WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3","WrnErrCommAlimLamp3",
+     "Q4_Kurex_WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4","WrnErrCommAlimLamp4",
+     "Q4_Kurex_WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5","WrnErrCommAlimLamp5",
+     "Q4_Kurex_WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6","WrnErrCommAlimLamp6",
+     "Q4_Kurex_WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7","WrnErrCommAlimLamp7",
+     "Q4_Kurex_WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8","WrnErrCommAlimLamp8",
+     "Q4_Kurex_WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9","WrnErrCommAlimLamp9",
+     "Q4_Kurex_WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10","WrnErrCommAlimLamp10",
+     "Q4_Kurex_WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0","WrnErrCommTermoregLamp0",
+     "Q4_Kurex_WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1","WrnErrCommTermoregLamp1",
+     "Q4_Kurex_WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2","WrnErrCommTermoregLamp2",
+     "Q4_Kurex_WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3","WrnErrCommTermoregLamp3",
+     "Q4_Kurex_WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4","WrnErrCommTermoregLamp4",
+     "Q4_Kurex_WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5","WrnErrCommTermoregLamp5",
+     "Q4_Kurex_WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6","WrnErrCommTermoregLamp6",
+     "Q4_Kurex_WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7","WrnErrCommTermoregLamp7",
+     "Q4_Kurex_WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8","WrnErrCommTermoregLamp8",
+     "Q4_Kurex_WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9","WrnErrCommTermoregLamp9",
+     "Q4_Kurex_WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10","WrnErrCommTermoregLamp10",
+     "Q4_Kurex_WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0","WrnPasticcaTermicaLamp0",
+     "Q4_Kurex_WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1","WrnPasticcaTermicaLamp1",
+     "Q4_Kurex_WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2","WrnPasticcaTermicaLamp2",
+     "Q4_Kurex_WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3","WrnPasticcaTermicaLamp3",
+     "Q4_Kurex_WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4","WrnPasticcaTermicaLamp4",
+     "Q4_Kurex_WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5","WrnPasticcaTermicaLamp5",
+     "Q4_Kurex_WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6","WrnPasticcaTermicaLamp6",
+     "Q4_Kurex_WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7","WrnPasticcaTermicaLamp7",
+     "Q4_Kurex_WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8","WrnPasticcaTermicaLamp8",
+     "Q4_Kurex_WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9","WrnPasticcaTermicaLamp9",
+     "Q4_Kurex_WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10","WrnPasticcaTermicaLamp10",
+     "Q4_Kurex_WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0","WrnTentatAccensLamp0",
+     "Q4_Kurex_WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1","WrnTentatAccensLamp1",
+     "Q4_Kurex_WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2","WrnTentatAccensLamp2",
+     "Q4_Kurex_WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3","WrnTentatAccensLamp3",
+     "Q4_Kurex_WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4","WrnTentatAccensLamp4",
+     "Q4_Kurex_WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5","WrnTentatAccensLamp5",
+     "Q4_Kurex_WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6","WrnTentatAccensLamp6",
+     "Q4_Kurex_WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7","WrnTentatAccensLamp7",
+     "Q4_Kurex_WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8","WrnTentatAccensLamp8",
+     "Q4_Kurex_WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9","WrnTentatAccensLamp9",
+     "Q4_Kurex_WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10","WrnTentatAccensLamp10",
+     "WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0","WrnTempFuoriRangeBassaLamp0",
+     "WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1","WrnTempFuoriRangeBassaLamp1",
+     "WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2","WrnTempFuoriRangeBassaLamp2",
+     "WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3","WrnTempFuoriRangeBassaLamp3",
+     "WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4","WrnTempFuoriRangeBassaLamp4",
+     "WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5","WrnTempFuoriRangeBassaLamp5",
+     "WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6","WrnTempFuoriRangeBassaLamp6",
+     "WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7","WrnTempFuoriRangeBassaLamp7",
+     "WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8","WrnTempFuoriRangeBassaLamp8",
+     "WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9","WrnTempFuoriRangeBassaLamp9",
+     "WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10","WrnTempFuoriRangeBassaLamp10",
+     "WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0","WrnTempFuoriRangeAltaLamp0",
+     "WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1","WrnTempFuoriRangeAltaLamp1",
+     "WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2","WrnTempFuoriRangeAltaLamp2",
+     "WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3","WrnTempFuoriRangeAltaLamp3",
+     "WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4","WrnTempFuoriRangeAltaLamp4",
+     "WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5","WrnTempFuoriRangeAltaLamp5",
+     "WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6","WrnTempFuoriRangeAltaLamp6",
+     "WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7","WrnTempFuoriRangeAltaLamp7",
+     "WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8","WrnTempFuoriRangeAltaLamp8",
+     "WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9","WrnTempFuoriRangeAltaLamp9",
+     "WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10","WrnTempFuoriRangeAltaLamp10",
+     "WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0","WrnAnomRaffrLamp0",
+     "WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1","WrnAnomRaffrLamp1",
+     "WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2","WrnAnomRaffrLamp2",
+     "WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3","WrnAnomRaffrLamp3",
+     "WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4","WrnAnomRaffrLamp4",
+     "WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5","WrnAnomRaffrLamp5",
+     "WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6","WrnAnomRaffrLamp6",
+     "WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7","WrnAnomRaffrLamp7",
+     "WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8","WrnAnomRaffrLamp8",
+     "WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9","WrnAnomRaffrLamp9",
+     "WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10","WrnAnomRaffrLamp10",
+     "WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0","WrnAnomTempoMaxPreriscaldoLamp0",
+     "WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1","WrnAnomTempoMaxPreriscaldoLamp1",
+     "WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2","WrnAnomTempoMaxPreriscaldoLamp2",
+     "WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3","WrnAnomTempoMaxPreriscaldoLamp3",
+     "WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4","WrnAnomTempoMaxPreriscaldoLamp4",
+     "WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5","WrnAnomTempoMaxPreriscaldoLamp5",
+     "WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6","WrnAnomTempoMaxPreriscaldoLamp6",
+     "WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7","WrnAnomTempoMaxPreriscaldoLamp7",
+     "WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8","WrnAnomTempoMaxPreriscaldoLamp8",
+     "WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9","WrnAnomTempoMaxPreriscaldoLamp9",
+     "WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10","WrnAnomTempoMaxPreriscaldoLamp10",
+     "MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk","MsgGenConsMaccMonteNoOk",
+     "MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk","MsgGenConsMaccValleNoOk",
+     "MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0","MsgRaffredInCorsoLamp0",
+     "MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1","MsgRaffredInCorsoLamp1",
+     "MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2","MsgRaffredInCorsoLamp2",
+     "MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3","MsgRaffredInCorsoLamp3",
+     "MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4","MsgRaffredInCorsoLamp4",
+     "MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5","MsgRaffredInCorsoLamp5",
+     "MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6","MsgRaffredInCorsoLamp6",
+     "MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7","MsgRaffredInCorsoLamp7",
+     "MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8","MsgRaffredInCorsoLamp8",
+     "MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9","MsgRaffredInCorsoLamp9",
+     "MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10","MsgRaffredInCorsoLamp10",
+     "MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0","MsgTemperFreddaLamp0",
+     "MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1","MsgTemperFreddaLamp1",
+     "MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2","MsgTemperFreddaLamp2",
+     "MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3","MsgTemperFreddaLamp3",
+     "MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4","MsgTemperFreddaLamp4",
+     "MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5","MsgTemperFreddaLamp5",
+     "MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6","MsgTemperFreddaLamp6",
+     "MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7","MsgTemperFreddaLamp7",
+     "MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8","MsgTemperFreddaLamp8",
+     "MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9","MsgTemperFreddaLamp9",
+     "MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10","MsgTemperFreddaLamp10",
+     "MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea","MsgRichiestaPausaLinea",
+     "MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa","MsgArrestoLineaInPausa",
+     "AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet","AlmErrComunicEthernet",
+     "FlgTornaInHomeDopoFineTrk","Torna in Home fine Tracking","Back to Home end of Tracking","Zurück zur Startposition Ende der Verfolgung","","","Vissza Home-ba Tracking vége","revenire la origini  sfarsit urmarire ",
+     "AlmGenBattBassaPlc","PLC SUPERVISORE: BATTERIA SCARICA","SUPERVISOR PLC: BATTERY LOW","","","","","",
+     "AlmCommQeLev01","PLC SUPERVISORE: ERRORE COMUNICAZIONE Q1-LEV","SUPERVISOR PLC: Q1-LEV COMMUNICATION ERROR","","","","","",
+     "AlmCommQeStorm02","PLC SUPERVISORE: ERRORE COMUNICAZIONE Q2-STORM","SUPERVISOR PLC: Q2-STORM COMMUNICATION ERROR","","","","","",
+     "AlmCommQeFtt03","PLC SUPERVISORE: ERRORE COMUNICAZIONE Q3-FTT ","SUPERVISOR PLC: Q3-FTT COMMUNICATION ERROR","","","","","",
+     "MsgCommQeLev04","PLC SUPERVISORE: ERRORE COMUNICAZIONE Q4-LEV","SUPERVISOR PLC: Q4-LEV COMMUNICATION ERROR","","","","",""
+    ]
+   }
+- Name: Traduz_UsrPrj
+  Id: g=6371b8044effb7722b6233a1e0c3d92b
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [2,8],
+    "Body": [
+     "","it-IT","en-US","de-DE","fr-FR","es-ES","hu-HU","ru-RU",
+     "Piatra Attuale","Piatra Attuale","Current plate","Aktuelle Platte","Plaque Actuelle","Plancha actual","Aktuális lap",""
+    ]
+   }
+- Name: Traduz_UsrStandard
+  Id: g=332a83705024086f2a71f4b8d4294c94
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [171,8],
+    "Body": [
+     "","it-IT","en-US","de-DE","fr-FR","es-ES","hu-HU","ru-RU",
+     "ActiveState","Stato","ActiveState","Zustand","","","","",
+     "Actual","Corrente","Actual","Strom","","","","",
+     "ALLARMI","ALLARMI","ALARMS","ALARMEREIGNISSE","","","","",
+     "ApplicationFolder","Cartella dell'applicazione","Application folder","Anwendungsordner","","","","",
+     "ATTENZIONE !!!","ATTENZIONE !!!","CAUTION !!!","ACHTUNG!!!","","","","",
+     "ATTENZIONE !!! Errore apertura ricetta. Riprovare.","ATTENZIONE !!! Errore apertura ricetta. Riprovare.","CAUTION !!! Recipe open error. Try agian.","ACHTUNG!!! Fehler bei Öffnung von Rezept. Erneut versuchen.","","","","",
+     "ATTENZIONE !!! Errore salvataggio ricetta. Riprovare.","ATTENZIONE !!! Errore salvataggio ricetta. Riprovare.","CAUTION !!! Recipe save error. Try agian.","ACHTUNG!!! Fehler bei Speichern von Rezept. Erneut versuchen.","","","","",
+     "Avanti","Avanti","Forward","Weiter","","","","",
+     "Cancel","Annulla","Cancel","Abbrechen","","","","",
+     "Chiudere App ?","Vuoi chiudere l’applicazione ?","Do you want to close the application ?","Möchten Sie die Anwendung schließen?","","","","",
+     "COMANDI MANUALI","COMANDI MANUALI","MANUAL COMMANDS","MANUELLE STEUERUNG","","","","",
+     "Confirm","Conferma","Confirm","Bestätigen","","","","",
+     "Confirmation Dialog","Dialogo di conferma","Confirmation Dialog","Dialog zur Bestätigung","","","","",
+     "Contacts","Contatti","Contacts","Kontakt","","","","",
+     "CONTATORI MACCHINA","CONTATORI MACCHINA","MACHINE COUNTERS","GERÄTE-ZÄHLER","","","","",
+     "Contatti","Contatti","Contacts","Kontakt","","","","",
+     "Control Circuit Capacitor life","Vita circuito  capacitore  controllo","Control Circuit Capacitor life","Lebensdauer des Stromkreises Steuerung des Kondensators","","","","",
+     "DESCRIZIONE","DESCRIZIONE","DESCRIPTION","BESCHREIBUNG","","","","",
+     "DIAGNOSTICA INVERTER","DIAGNOSTICA INVERTER","INVERTER DIAGNOSTIC","INVERTER DIAGNOSTIK","","","","",
+     "Filename","Nome file","File name","Dateiname","","","","",
+     "FileNameInput","Nome file:","File name:","Dateiname:","","","","",
+     "Forward","Avanti","Forward","Weiter","","","","",
+     "GESTIONE RICETTE","GESTIONE RICETTE","RECIPES MANAGER","REZEPTVERWALTUNG","","","","",
+     "IMPORT/EXPORT","IMPORTA/ESPORTA","IMPORT/EXPORT","IMPORTIEREN/EXPORTIEREN","","","","",
+     "IMPORTAZIONE/ESPORTAZIONE DATABASE","IMPORTAZIONE/ESPORTAZIONE DATABASE","IMPORT/EXPORT DATABASE","IMPORTIEREN/EXPORTIEREN DER DATENBANK","","","","",
+     "INGRESSI / USCITE PLC SICUREZZA","INGRESSI / USCITE PLC SICUREZZA","SAFETY PLC IN/OUT","SICHERHEITS-SPS EIN-/AUSGÄNGE","","","","",
+     "INGRESSI PLC","INGRESSI PLC","PLC INPUTS","SPS-EINGÄNGE","","","","",
+     "Inrush Current limit Circ. Life","Vita circuito  corrente di spunto","Inrush Current limit Circ. Life","Lebensdauer des Stromkreises bei Einschaltstrom","","","","",
+     "Inverter Last Error","Ultimo errore inverter","Inverter Last Error","Letzter Umrichterfehler","","","","",
+     "Inverter Thermal Load","Carico termico inverter","Inverter Thermal Load","Thermische Ladung Umrichter","","","","",
+     "Libero","Libero","Free","Frei","","","","",
+     "Macchina In Linea","Macchina In Linea","Machine in line","Maschine in der Linie","","","","",
+     "Machine Control","Controllore Macchina","Machine Control","Geräte-Kontrolleur","","","","",
+     "Machine Interface","Interfaccia Macchina","Machine Interface","Benutzeroberfläche des Geräts","","","","",
+     "Main Circuit Capacitor life","Vita circuito  capacitore  main","Main Circuit Capacitor life","Lebensdauer des Stromkreises Hauptkondensator","","","","",
+     "Makor Technical Assistance manager","Manager Assistenza tecnica Makor","Makor Technical Assistance manager","Makor Kundendienstleiter","","","","",
+     "Message","Messaggio","Message","Meldung","","","","",
+     "MONITOR LINEA","MONITOR LINEA","LINE LAYOUT","LINIENMONITOR","","","","",
+     "Motor Thermal Load","Carico termico motore","Motor Thermal Load","Thermische Motorbelastung","","","","",
+     "Moving Direction","Direzione di movimento","Moving Direction","Richtung der Bewegung","","","","",
+     "Output Current","Corrente in Uscita","Output Current","Ausgangsstrom","","","","",
+     "Output Power","Potenza Uscita","Output Power","Ausgangsleistung","","","","",
+     "PARAMETRI GENERALI","PARAMETRI GENERALI","GENERIC PARAMETERS","ALLGEMEINE PARAMETER","","","","",
+     "PARAMETRI VENTILAZIONE","PARAMETRI VENTILAZIONE","AIR SYSTEM PARAMETRS","PARAMETER BELÜFTUNG","","","","",
+     "Passo","Passo","Step","Schritt","","","","",
+     "Password","Password","Password","Passwort","","","","",
+     "PERCORSO IMPORT/EXPORT","PERCORSO IMPORT/EXPORT","IMPORT/EXPORT PATH","VERLAUF IMPORT/EXPORT","","","","",
+     "ProjectFolder","Cartella di progetto","Project folder","Projekt-Ordner","","","","",
+     "Reverse","Indietro","Reverse","Zurück","","","","",
+     "SELEZIONE LINGUA","SELEZIONE LINGUA","LANGUAGE SELECTION","SPRACHAUSWAHL","","","","",
+     "Set Frequency","Frequenza impostata","Set Frequency","Eingestellte Frequenz","","","","",
+     "Setpoint Press. Aspirazione","Setpoint Press. Aspirazione","Suction setpoint press.","Sollwert drücken. Absaugung","","","","",
+     "Size","Dimensione","Size","Größe","","","","",
+     "Software Version","Versione Software","Software Version","Software-Version","","","","",
+     "Spare Parts","Parti di Ricambio","Spare Parts","Ersatzteile","","","","",
+     "Spegnere PC ?","Vuoi spegnere il computer ?","Do you want to turn off the computer?","Möchten Sie den PC ausschalten?","","","","",
+     "STORICO ALLARMI","STORICO ALLARMI","ARCHIEVED ALARMS","ALARMGESCHICHTE","","","","",
+     "SUPERFICE LAVORATA","SUPERFICIE LAVORATA","PROCESSED SURFACE","ARBEITSFLÄCHE","","","","",
+     "SUPERFICI","SUPERFICI","SURFACES","FLÄCHEN","","","","",
+     "Time","Time","Time","Time","","","","",
+     "Timestamp","Timestamp","Timestamp","Timestamp","","","","",
+     "USCITE PLC","USCITE PLC","PLC OUTPUTS","SPS-AUSGÄNGE","","","","",
+     "Velocità","Velocità","Speed","Geschwindigkeit","","","","",
+     "Velocità Ventilazione","Velocità Ventilazione","Fan speed","Belüftungsgeschwindigkeit","","","","",
+     "Work countdown","Countdown lavorazione","Work countdown","Countdown Verarbeitung","","","","",
+     "Pronto","Pronto","Ready","Bereit","","","","",
+     "Esportato","Esportato","Exported","Exportiert","","","","",
+     "Machine Supervisor :","Machine Supervisor :","Machine Supervisor :","Maschinenbetreuer:","","","","",
+     "Ricetta attuale","Ricetta attuale","Current recipe","Aktuelles rezept","","","","",
+     "Confermare la scelta.","Confermare la scelta.","Confirm the choice.","Bitte bestätigen Sie Ihre Wahl.","","","","",
+     "SETUP SUPERVISORE MACCHINA","SETUP SUPERVISORE MACCHINA","MACHINE SUPERVISOR SETUP","MACHINE SUPERVISOR SETUP","","","","",
+     "Abilita Carico","Abilita Carico","Enable loading","Laden aktivieren","","","","",
+     "Abilita scarico","Abilita scarico","Enable unloading","Entladen aktivieren","","","","",
+     "Commessa","Commessa","Job Order","Auftrag","","","","",
+     "Carico","Carico","Load","Ladung","","","","",
+     "Terminato","Terminato","Finished","Abgeschlossen","","","","",
+     "Stato","Stato","Status","Zustand","","","","",
+     "Basso","Basso","Low","Niedrig","","","","",
+     "Descrizione","Descrizione","Description","Beschreibung","","","","",
+     "Cliente","Cliente","Client","Kunde","","","","",
+     "GESTIONE COMMESSE","GESTIONE COMMESSE","ORDER MANAGEMENT","AUFTRAGSVERWALTUNG","","","","",
+     "Data/Ora","Data/Ora","Date/Time","Datum/Uhrzeit","","","","",
+     "Codice","Codice","Code","Code","","","","",
+     "IMPOSTAZIONE DI VELOCITA'","IMPOSTAZIONE DI VELOCITA'","SPEED SETTING","EINSTELLUNG GESCHWINDIGKEIT","","","","",
+     "MANUTENZIONE","MANUTENZIONE","MAINTENANCE","WARTUNG","","","","",
+     "Salvare i parametri di lavoro prima di uscire","Salvare i parametri di lavoro prima di uscire","Save the work parameters before exiting","Speichern Sie die Arbeitsparameter vor dem Beenden","","","","",
+     "Codice Commessa","Codice Commessa","Order code","Auftragscode","","","","",
+     "Larghezza pezzi","Larghezza pezzi","Piece width","Stückbreite","","","","",
+     "Altezza pezzi","Altezza pezzi","Pieces height","Stückhöhe","","","","",
+     "COMMESSA","COMMESSA","JOB ORDER","AUFTRAG","","","","",
+     "STATO","STATO","STATUS","STATUS","","","","",
+     "Carico abilitato","Carico abilitato","Loading enabled","Ladung aktiviert","","","","",
+     "application","application","application","Anwendung","","","","",
+     "Coppia motore","Coppia motore","Motor torque","Motordrehmoment","","","","",
+     "BACKUP DATABASE","BACKUP DATABASE","DATABASE BACKUP","DATENBANKSICHERUNG","","","","",
+     "Vuoi salvare le modifiche effettuate","Vuoi salvare le modifiche effettuate","Do you want to save the changes","Möchten Sie die Änderungen speichern","","","","",
+     "CREAZIONE COMMESSA","CREAZIONE COMMESSA","ORDER CREATION","BESTELLUNG ERSTELLEN","","","","",
+     "Bypass","BYPASS","BYPASS","BYPASS","","","","",
+     "RESTORE DATABASE","RESTORE DATABASE","RESTORE DATABASE","RESTORE DATABASE","","","","",
+     "Energia rigenerata","Energia rigenerata","Regenerated energy","Regenerierte Energie","","","","",
+     "Attivo","Attivo","Active","Aktiv","","","","",
+     "Attiva consensi linea","Attiva consensi linea","Enable line consents","Leitungsgenehmigungen aktivieren","","","","",
+     "Attiva Supevisore linea","Attiva Supevisore linea","Enable line Supervisor","Linie Supervisor","","","","",
+     "Attiva sincronismo linea","Attiva sincronismo linea","Line Speed Sync.","Leitungssynchronisation","","","","",
+     "Lotto","Lotto","Batch","Charge","","","","",
+     "Service da Remoto","Service da Remoto","Remote service","Remote-service","","","","",
+     "SISTEMA DI MISURA","SISTEMA DI MISURA","MEASUREMENT SYSTEM","MESS-SYSTEM","","","","",
+     "Password errata!","Password errata!","Wrong password!","Falsches Passwort!","","","","",
+     "Vuoi eseguire il reset?","Vuoi eseguire il reset?","Do you want to perform reset?","Möchten Sie einen Reset durchführen?","","","","",
+     "Operatori macchina","Operatori macchina","Machine operators","Maschinenführer","","","","",
+     "Manutentori","Manutentori","Maintainers","Maintainers","","","","",
+     "Utenti specializzati","Utenti specializzati","Specialized users","Spezialisierte Benutzer","","","","",
+     "Utenti Makor","Utenti Makor","Makor users","Makor-Benutzer","","","","",
+     "Nome utente","Nome utente","User name","Benutzer name","","","","",
+     "Indirizzo mail","Indirizzo mail","Mail address","Mail-Adresse","","","","",
+     "Lingua","Lingua","Language","Sprache","","","","",
+     "Sistema di misura","Sistema di misura","Measure system","Mess-system","","","","",
+     "Eliminare l'utente: {0}","Eliminare l'utente: {0}","Delete the user: {0}","Löschen Sie den Benutzer: {0}","","","","",
+     "Creare/modificare l'utente: {0}","Creare/modificare l'utente: {0}","Create/edit the user: {0}","Erstellen/Bearbeiten des Benutzers: {0}","","","","",
+     "Salvare la ricetta: {0}","Salvare la ricetta: {0}","Save the recipe: {0}","Speichern Sie das Rezept: {0}","","","","",
+     "Eliminare la ricetta: {0}","Eliminare la ricetta: {0}","Delete the recipe: {0}","Löschen Sie das Rezept: {0}","","","","",
+     "Aprire la ricetta: {0}","Aprire la ricetta: {0}","Open the recipe: {0}","Öffnen Sie das Rezept: {0}","","","","",
+     "Ricetta '{0}' non sovrascrivibile","Ricetta '{0}' non sovrascrivibile","Recipe '{0}' not overridable","Unveränderliches Rezept '{0}'","","","","",
+     "Ricetta '{0}' già presente nel database. Sovrascrivere?","Ricetta '{0}' già presente nel database. Sovrascrivere?","Recipe '{0}' already in the database. Overwrite?","Rezept '{0}' bereits in der Datenbank vorhanden. Überschreiben?","","","","",
+     "Durata accensione","Durata accensione","Machine power on time","Einschaltdauer","","","","",
+     "Durata lavoro macchina","Durata lavoro macchina","Machine work time","Maschinenlaufzeit","","","","",
+     "Filtro","Filtro","Filter","Filter","","","","",
+     "Errore apertura ricetta. Riprovare.","Errore apertura ricetta. Riprovare.","Error opening recipe. Try again.","Fehler beim Öffnen des Rezepts. Versuchen Sie es erneut.","","","","",
+     "Errore salvataggio ricetta. Riprovare.","Errore salvataggio ricetta. Riprovare.","Error saving recipe. Try again.","Fehler beim Speichern des Rezepts. Versuchen Sie es erneut.","","","","",
+     "SysMisuraBritannico","Britannico","British","Britisches","","","","",
+     "SysMisuraAmericano","Americano","American","Amerikanisches","","","","",
+     "SysMisuraInternazionale","Internazionale","International","Internationales","","","","",
+     "Contatori","Contatori","Counters","Zähler","","","","",
+     "Parziali:","Parziali:","Partial:","Teilweise:","","","","",
+     "Totali:","Totali:","Total:","Gesamt:","","","","",
+     "L'utente \"{0}\" è già presente nel gruppo \"{1}\". Riprovare con un nome differente.","L'utente '{0}' è già presente nel gruppo '{1}'. Riprovare con un nome differente.","The user '{0}' is already in the group '{1}'. Please try again with a different user name.","Der Benutzer '{0}' ist bereits in der Gruppe '{1}'. Versuchen Sie es mit einem anderen Benutzernamen.","","","","",
+     "Metri lavorati","Metri lavorati","Processed meters","","","","","",
+     "Metri quadri lavorati","Metri quadri lavorati","Processed square meters","","","","","",
+     "L'utente '{0}' è già presente nel gruppo '{1}'. Riprovare con un nome differente.","L'utente '{0}' è già presente nel gruppo '{1}'. Riprovare con un nome differente.","User '{0}' is already in group '{1}'. Please try again with a different name.","","","","","",
+     "Nome ricetta","Nome ricetta","Recipe name","Rezepts name ","","","","",
+     "Pezzi lavorati","Pezzi lavorati","Processed pieces","","","","","",
+     "GRAFICO PRODUZIONE PER UTENTE","GRAFICO PRODUZIONE PER UTENTE","PRODUTION TREND BY USER","","","","","",
+     "GRAFICO PRODUZIONE GIORNALIERA","GRAFICO PRODUZIONE GIORNALIERA","PRODUTION TREND BY DATE","","","","","",
+     "DATI PRODUZIONE UTENTE","DATI PRODUZIONE UTENTE","PRODUCTION DATA BY USER","","","","","",
+     "Filtro utente","Filtro per nome utente","Filter by user name","","","","","",
+     "Ieri","Ieri","Yesterday","","","","","",
+     "Oggi","Oggi","Today","","","","","",
+     "Mese scorso","Mese scorso","Last month","","","","","",
+     "Mese attuale","Mese attuale","Current month","","","","","",
+     "Per Data","Per Data","By date","","","","","",
+     "Fine","Fine","End","","","","","",
+     "Inizio","Inizio","Start","","","","","",
+     "PercentStopOn","% Stop","Stop %","","","","","",
+     "PercentAllarmeOn","% Allarme","Alarm %","","","","","",
+     "PercentCicloOn","% Ciclo","Cycle %","","","","","",
+     "PercentPausaOn","% Pausa","Pause %","","","","","",
+     "DATI PRODUZIONE GIORNALIERA","DATI PRODUZIONE GIORNALIERA","DAILY PRODUCTION DATA","","","","","",
+     "Data","Data","Date","","","","","",
+     "Da","Da","From","Von","","","","",
+     "A","A","To","Zu","","","","",
+     "Filtro allarmi per data","Filtro allarmi per data","Filter alarms by date","Alarme nach Datum filtern","","","","",
+     "Filtro allarmi per messaggio","Filtro allarmi per messaggio","Filter alarms by message","Alarme nach Meldung filtern","","","","",
+     "Nome allarme PLC","Nome allarme PLC","PLC Tag name","PLC Tag name","","","","",
+     "Giorno","Giorno","Day","Tag","","","","",
+     "Mese","Mese","Month","Monat","","","","",
+     "Anno","Anno","Year","Jahr","","","","",
+     "CLONAZIONE RICETTA","CLONAZIONE RICETTA","RECIPE CLONING","REZEPT-CLONING","","","","",
+     "Errore clonazione ricetta. Riprovare.","Errore clonazione ricetta. Riprovare.","Recipe cloning error. Try agian.","Fehler beim Klonen des Rezepts. Erneut versuchen.","","","","",
+     "Ora creazione","Ora creazione","Creation time","Erstellungszeit","","","","",
+     "Ultima modifica","Ultima modifica","Last edit","Letzte Bearbeitung","","","",""
+    ]
+   }
+- Name: Traduz_Oem
+  Id: g=202b7416369b550f406f9153647e3532
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [20,3],
+    "Body": [
+     "","it-IT","en-US",
+     "oem Abilita creazione report","Abilita creazione report","Enable report creation",
+     "oem Abilita invio e-mail","Abilita invio e-mail","Enable e-mail sender",
+     "oem Abilita salvataggio dati di produzione","Abilita salvataggio dati di produzione","Enable process data saving",
+     "oem Lingua report","Lingua report","Report language",
+     "oem Tempo aggiornamento dati sul database","Tempo aggiornamento dati sul database","Database update time",
+     "oem Percorso in cui viene creata la cartella 'Report' contenente i file .csv","Percorso in cui viene creata la cartella 'Report' contenente i file .csv","Path where the 'Report' folder containing the .csv files is created",
+     "oem Generale","Generale","General",
+     "oem Gestione statistiche di processo","Gestione statistiche di processo","Process statistics management",
+     "OEM PARAMETRI HMI","OEM PARAMETRI HMI","OEM HMI PARAMETERS",
+     "oem Parametri connessione database","Parametri connessione database","Database connection parameters",
+     "oem Nome utente database","Nome utente database","Database user name",
+     "oem Porta TCP","Porta TCP","TCP port",
+     "oem Nome database","Nome database","Database name",
+     "oem Nome server oppure indirizzo IP","Nome server oppure indirizzo IP","Server name or IP address",
+     "oem Nome istanza SQL","Nome istanza SQL","SQL istance name",
+     "oem Percorso salvataggio file di backup (.bak)","Percorso salvataggio file di backup (.bak)","Backup file (.bak) saving path",
+     "oem Abilita backup all'avvio","Abilita backup all'avvio","Enable backup at startup",
+     "oem Nome file di backup (.bat)","Nome file di backup (.bat)","Backup file name (.bat)",
+     "oem Nome file di restore (.bat)","Nome file di restore (.bat)","Restore file name (.bat)"
+    ]
+   }
+- Name: Traduz_LocaleID
+  Id: g=1acd12b3e1dc25e15b2d529bff1e946d
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [8,8],
+    "Body": [
+     "","it-IT","en-US","de-DE","fr-FR","es-ES","hu-HU","ru-RU",
+     "it-IT","Italiano","Italian","Italienische","Italien","Italiano","Olasz","Italiană",
+     "en-US","Inglese","English","Englische","Anglais","Inglés","Angol","Engleză",
+     "de-DE","Tedesco","Dutch","Deutsche","Allemand","Alemán","Német","Germană",
+     "fr-FR","Francese","French","","","","","",
+     "es-ES","Spagnolo","Spanish","","","","","",
+     "hu-HU","Ungherese","Hungarian","","","","","",
+     "ru-RU","Rumeno","Rumanian","","","","",""
+    ]
+   }
+- Name: ImportAndExportTranslations
+  Id: g=4619cd2d8b63685e865784144f49e978
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=ebe1a9893b70cfd87fcad7ed90a92b09
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVPath
+    Id: g=48c5619dc8a140326e37ddafee0635c0
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: "file:///C:/ALavori/Works/In Progress/Progetti template QStudio/Hmi_Template Full HD/ProjectFiles/Traduz_Alm.csv"
+  - Class: Method
+    Name: ExportTranslations
+    Id: g=62eddb72a96f600f16c2214ddfcfa65d
+  - Class: Method
+    Name: ImportTranslations
+    Id: g=475718d508cab3073707635d200fe963
+  - Name: CharacterSeparator
+    Id: g=4a4fa684da5303585d1caef92d0fedb0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Id: g=893a0e42584f46355349187ae3aa7b20
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: LocalizationDictionary
+    Id: g=87407d50d5900699c1d4260f10469d7a
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Hmi_Next/Translations/Traduz_Alm"
+    Children:
+    - Name: Kind
+      Id: g=fdfa855c1669f8130c1d8b4a4b8f40aa
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"

@@ -1,0 +1,24 @@
+Name: Variabili_HMI
+Id: g=6d5a521411279f9f4490ad054e5e2c30
+Type: FolderType
+Children:
+- File: Generiche/Generiche.yaml
+- File: Macchina/Macchina.yaml
+- File: Var_Ritentive/Var_Ritentive.yaml
+- Name: Variabile1
+  Id: g=3f778740b4dd4505f2efd2e9a7efe506
+  Type: BaseDataVariableType
+  DataType: DateTime
+  Value: "1601-01-01T00:00:00.0000000"
+  Children:
+  - Name: DynamicLink
+    Id: g=dc96c5218509b95f4df6a81137aefff3
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/DataUltimoSalvataggio"
+    Children:
+    - Name: Mode
+      Id: g=430ea5de80b844a9d779242ce47ed132
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

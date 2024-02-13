@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25mm"
+   height="25mm"
+   viewBox="0 0 25.000001 25.000002"
+   version="1.1"
+   id="svg11690"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="SimbNumEventi.svg">
+  <defs
+     id="defs11684">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5543"
+       id="linearGradient5622"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2074196,0,0,1.2074196,-9.706374,-322.13735)"
+       x1="314.97711"
+       y1="295.93094"
+       x2="334.62143"
+       y2="276.28662" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5543">
+      <stop
+         style="stop-color:#aaccff;stop-opacity:1"
+         offset="0"
+         id="stop5539" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop5541" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="42.604686"
+     inkscape:cy="65.300646"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata11687">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(44.324865,-85.172522)">
+    <g
+       transform="translate(-414.28757,74.356522)"
+       id="g5699"
+       inkscape:export-filename="X:\Librerie\Libreria Immagini\Immagini\Grafica 2019\Simboli per variabili\SimbNumEventi.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275">
+      <rect
+         inkscape:export-ydpi="275"
+         inkscape:export-xdpi="275"
+         inkscape:export-filename="X:\Librerie\Libreria Immagini\Immagini\Grafica 2019\Simboli per variabili\SimbTempoSpurgoPist.png"
+         y="11.456536"
+         x="370.60324"
+         height="23.718927"
+         width="23.718927"
+         id="rect4540-2"
+         style="display:inline;opacity:1;fill:url(#linearGradient5622);fill-opacity:1;stroke:#80b3ff;stroke-width:1.28107226;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <g
+         transform="translate(0.10089536,1.0330194)"
+         id="g5690">
+        <text
+           transform="scale(1.084808,0.92182212)"
+           id="text4703-1"
+           y="20.379658"
+           x="348.86877"
+           style="font-style:normal;font-weight:normal;font-size:6.95372963px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17384322"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.17384322"
+             y="20.379658"
+             x="348.86877"
+             id="tspan4701-1"
+             sodipodi:role="line">n°</tspan></text>
+        <g
+           id="g5682"
+           transform="translate(-3.4017857,0.47247024)">
+          <path
+             inkscape:connector-curvature="0"
+             id="path5673"
+             d="m 375.54297,29.68953 h 4.06323 v -6.52009 h 4.06324 v 6.521861 h 4.06323 v -6.52009 h 4.06325 V 29.6913 h 4.18831"
+             style="fill:none;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <path
+             style="fill:none;stroke:#ff6600;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 375.54296,29.68953 h 4.06323 v -6.52009 h 4.06325 v 6.521861 h 4.06323 v -6.52009 h 4.06325 V 29.6913 h 4.18831"
+             id="path5678"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

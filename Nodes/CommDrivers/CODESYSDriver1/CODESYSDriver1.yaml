@@ -1,0 +1,5 @@
+Name: CODESYSDriver1
+Id: g=c06e59a854127ae703725a5da5fcab69
+Type: CODESYSDriver
+Children:
+- File: PLC_Next/PLC_Next.yaml

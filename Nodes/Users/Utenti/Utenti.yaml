@@ -1,0 +1,266 @@
+Name: Utenti
+Id: g=62a03c2ae109c6b82b1b191ce685abde
+Type: FolderType
+Children:
+- Name: User
+  Id: g=5e862f70faf3a5597dd1daedf7cd6d9f
+  Type: MakorUserType
+  Children:
+  - Name: GruppoAppartenenza
+    Id: g=243d5cb446085096895bb8bd181f7646
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OperatoriMacchina"
+  - Name: Password
+    Id: g=5f1a6e9ac012c78811f08f8fdc22e758
+    Type: Password
+    DataType: Password
+    ReferenceType: HasProperty
+    AccessLevel: Read
+    Value: ""
+    Children:
+    - Name: Hash
+      Id: g=bbd15664fbc11ed0ff48875a63b9cd2b
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [201,131,117,19,167,70,215,120,237,234,119,6,172,221,32,231,81,3,127,118,63,148,151,86,90,116,145,133,254,174,90,189],
+         "Salt": [57,2,253,222,17,2,208,225,181,162,188,176,209,86,159,236,3,180,90,82,151,196,46,91,6,249,83,237,94,242,59,93]
+        }
+       }
+    - Name: ChangeTimestamp
+      Id: g=e938e89a674b7ce018add310d6bb25a6
+      Type: PropertyType
+      DataType: UtcTime
+      AccessLevel: Read
+      Value: "2024-02-07T10:13:05.9317861"
+    - Name: History
+      Id: g=3dc3bf6c08ab92141413afbc82723598
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+  - Name: LocaleId
+    Id: g=94948e4095adfc7534799e6fdca857ad
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Class: Reference
+    Type: HasGroup
+    Target: g=38516d21be2459d689030c16e3d73fac
+  - Name: MeasurementSystem
+    Id: g=db38a8798f7a03e41ec34b2503a51941
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 2
+- Name: Maintenance
+  Id: g=9f20ebecc4d63e69afe6cc14d062e8cf
+  Type: MakorUserType
+  Children:
+  - Name: GruppoAppartenenza
+    Id: g=37dfe892e472d0e33cf44ce12cf06f17
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "UtentiManutenzione"
+  - Name: Password
+    Id: g=af1092349100a313c25d1f0ef822d814
+    Type: Password
+    DataType: Password
+    ReferenceType: HasProperty
+    AccessLevel: Read
+    Value: ""
+    Children:
+    - Name: Hash
+      Id: g=b929a521732622007e60e4ccc7d287de
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [219,129,185,251,56,161,115,129,133,227,169,130,246,114,135,207,214,254,14,167,135,31,187,209,170,81,224,180,203,210,74,229],
+         "Salt": [221,140,234,101,252,108,174,103,114,154,207,68,131,47,48,62,143,81,208,219,49,14,249,178,38,44,208,121,70,56,113,159]
+        }
+       }
+    - Name: ChangeTimestamp
+      Id: g=c97c1a179b6528724353d93ab04ca301
+      Type: PropertyType
+      DataType: UtcTime
+      AccessLevel: Read
+      Value: "2024-02-06T15:46:21.0834973"
+    - Name: History
+      Id: g=520bc8dc453fe5876cf3726e1cef9d82
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+  - Name: LocaleId
+    Id: g=89e0c06b91b9c33ef4716b8c3480983d
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Class: Reference
+    Type: HasGroup
+    Target: g=38516d21be2459d689030c16e3d73fac
+  - Class: Reference
+    Type: HasGroup
+    Target: g=8628ec9a16637ec6799d8c9c4b59c6e0
+  - Name: MeasurementSystem
+    Id: g=c7eb99834daffc6bd8a8d89c9db16f0c
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1
+- Name: Manager
+  Id: g=f263f031595c181b4088bfa3f5f81d31
+  Type: MakorUserType
+  Children:
+  - Name: GruppoAppartenenza
+    Id: g=1e85a729b16306ab28559faa49e95b68
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "UtentiSpecializzati"
+  - Name: Password
+    Id: g=b196eebb796d28b689c87d09b61a3269
+    Type: Password
+    DataType: Password
+    ReferenceType: HasProperty
+    AccessLevel: Read
+    Value: ""
+    Children:
+    - Name: Hash
+      Id: g=4e625af616831f1b2ed5d50d52410212
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [40,83,196,239,148,38,138,43,206,138,251,34,8,11,2,101,20,105,228,81,74,127,26,213,218,54,200,60,39,133,215,49],
+         "Salt": [122,109,43,205,126,191,221,10,90,234,91,194,2,2,30,64,3,255,110,64,106,48,34,74,217,220,109,177,220,183,42,20]
+        }
+       }
+    - Name: ChangeTimestamp
+      Id: g=6f425a9947c0b208f5f6d829f8972bae
+      Type: PropertyType
+      DataType: UtcTime
+      AccessLevel: Read
+      Value: "2024-02-06T15:46:21.1073145"
+    - Name: History
+      Id: g=64531847f03ca9267fd35e1b56669a22
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+  - Name: LocaleId
+    Id: g=115849e3ea4dbe69a14bf627a1f9b793
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "en-US"
+  - Class: Reference
+    Type: HasGroup
+    Target: g=38516d21be2459d689030c16e3d73fac
+  - Class: Reference
+    Type: HasGroup
+    Target: g=dd1b555d5c77384cc9c25dfc76322b8f
+  - Class: Reference
+    Type: HasGroup
+    Target: g=8628ec9a16637ec6799d8c9c4b59c6e0
+  - Name: MeasurementSystem
+    Id: g=81843d78ace6f5346ebf7d63b03e3254
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1
+- Name: Makor
+  Id: g=d11069ea36b92aa1595c72b22343edc0
+  Type: MakorUserType
+  Children:
+  - Name: GruppoAppartenenza
+    Id: g=1e7618cb421581134873316b5f5aae6d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "UtentiMakor"
+  - Name: Password
+    Id: g=bfacfb6e31808c47de9f65904d440147
+    Type: Password
+    DataType: Password
+    ReferenceType: HasProperty
+    AccessLevel: Read
+    Value: ""
+    Children:
+    - Name: Hash
+      Id: g=019eda34d7137b200c388aee2f26cf25
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [167,203,126,185,198,221,245,153,59,136,2,147,165,203,66,7,193,184,146,112,90,90,66,142,151,109,161,23,16,130,139,207],
+         "Salt": [177,240,149,242,194,151,96,88,223,35,247,239,190,103,149,9,151,251,218,60,143,180,118,227,218,136,188,179,105,90,197,196]
+        }
+       }
+    - Name: ChangeTimestamp
+      Id: g=1a1e333ea18416e81ac465086c7d479a
+      Type: PropertyType
+      DataType: UtcTime
+      AccessLevel: Read
+      Value: "2024-02-06T15:46:21.1309285"
+    - Name: History
+      Id: g=51642413205ba8be2163e11e8c94b4fe
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+  - Name: LocaleId
+    Id: g=ac2a594506adab3d0c515e90749d14fe
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "it-IT"
+  - Class: Reference
+    Type: HasGroup
+    Target: g=38516d21be2459d689030c16e3d73fac
+  - Class: Reference
+    Type: HasGroup
+    Target: g=dd1b555d5c77384cc9c25dfc76322b8f
+  - Class: Reference
+    Type: HasGroup
+    Target: g=157ee34b7fb624744b7fca964f2f9e59
+  - Class: Reference
+    Type: HasGroup
+    Target: g=8628ec9a16637ec6799d8c9c4b59c6e0
+  - Name: MeasurementSystem
+    Id: g=f71fbc98805d43ccd85e0c603efd8e84
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    Value: 1

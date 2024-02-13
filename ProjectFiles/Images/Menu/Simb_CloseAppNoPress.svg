@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="25.889406mm"
+   height="25.889406mm"
+   viewBox="0 0 25.889406 25.889406"
+   version="1.1"
+   id="svg190"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Simb_CloseApp.svg">
+  <defs
+     id="defs184">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4870"
+       id="radialGradient4872"
+       cx="109.40259"
+       cy="241.6665"
+       fx="109.40259"
+       fy="241.6665"
+       r="13.144703"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.3507408,7.9797283e-8,-7.8295762e-8,1.3253243,178.96437,-296.33429)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4870">
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0"
+         id="stop4866" />
+      <stop
+         style="stop-color:#ff5555;stop-opacity:1"
+         offset="1"
+         id="stop4868" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="98.075411"
+     inkscape:cy="197.44993"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata187">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(24.145959,-37.425934)">
+    <g
+       transform="translate(-337.94015,26.418411)"
+       style="display:inline"
+       id="g6185"
+       inkscape:export-filename="X:\Librerie\Libreria GOT\Immagini\Menu\Sfumati\Simb_CloseApp.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         ry="5.2916665"
+         y="11.290023"
+         x="314.07669"
+         height="25.324406"
+         width="25.324406"
+         id="rect4786"
+         style="opacity:1;fill:url(#radialGradient4872);fill-opacity:1;stroke:#ffffff;stroke-width:0.565;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <g
+         id="g6176">
+        <rect
+           ry="0"
+           y="16.201414"
+           x="318.98807"
+           height="15.501633"
+           width="15.501633"
+           id="rect4788"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.76499999;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+        <rect
+           y="16.439096"
+           x="327.04477"
+           height="6.9400043"
+           width="7.2072744"
+           id="rect4790"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.24036837;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+        <g
+           transform="matrix(1.0175968,0,0,0.81144732,234.39559,-132.1245)"
+           id="g4796">
+          <path
+             sodipodi:nodetypes="cc"
+             style="fill:none;stroke:#ffffff;stroke-width:0.76499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 92.775935,184.84702 3.624842,5.01131"
+             id="path4792"
+             inkscape:connector-curvature="0" />
+          <path
+             sodipodi:nodetypes="cc"
+             style="fill:none;stroke:#ffffff;stroke-width:0.76499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 92.792639,189.87503 3.591434,-5.02801"
+             id="path4794"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

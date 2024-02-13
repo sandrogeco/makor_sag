@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26.289406mm"
+   height="26.289406mm"
+   viewBox="0 0 26.289406 26.289406"
+   version="1.1"
+   id="svg190"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Simb_CloseSystemPress.svg">
+  <defs
+     id="defs184">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5700"
+       id="radialGradient5862"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4273348,-2.2252957e-7,2.224779e-7,1.4270034,243.01233,-171.26486)"
+       cx="33.965763"
+       cy="240.37494"
+       fx="33.965763"
+       fy="240.37494"
+       r="13.144703" />
+    <linearGradient
+       id="linearGradient5700"
+       inkscape:collect="always">
+      <stop
+         id="stop5696"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1" />
+      <stop
+         id="stop5698"
+         offset="1"
+         style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="54.62412"
+     inkscape:cy="39.447333"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata187">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(12.649472,4.7789196)">
+    <g
+       transform="translate(-290.99766,-163.38518)"
+       style="display:inline"
+       id="g5949"
+       inkscape:export-filename="X:\Librerie\Libreria GOT\Immagini\Menu\Sfumati\Simb_CloseSystemPress.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         ry="5.2916665"
+         y="159.08876"
+         x="278.83069"
+         height="25.324406"
+         width="25.324406"
+         id="rect5860"
+         style="display:inline;opacity:1;fill:url(#radialGradient5862);fill-opacity:1;stroke:#ffffff;stroke-width:0.96499997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         inkscape:export-filename="X:\Librerie\Libreria GOT\Immagini\Menu\PulAlmNoPress.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <g
+         id="g4747-5"
+         transform="translate(246.61982,-33.719772)">
+        <rect
+           ry="0.41772744"
+           y="196.42715"
+           x="44.372452"
+           height="5.3707809"
+           width="0.83545488"
+           id="rect4743-9"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.39771903;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+        <path
+           sodipodi:nodetypes="ccc"
+           inkscape:connector-curvature="0"
+           id="path4745-2"
+           d="m 41.994723,199.3798 c -7.075898,2.20823 -6.691065,14.60392 2.83974,15.10073 7.247694,-0.0552 11.754155,-10.56373 2.906556,-15.06732"
+           style="fill:none;stroke:#ffffff;stroke-width:1.46500003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

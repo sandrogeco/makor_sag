@@ -1,0 +1,31 @@
+Name: SpieLed
+Id: g=c2ba3ce44c019e31b76a632b365bad67
+Type: FolderType
+Children:
+- Name: LedVerde_R0_0
+  Id: g=40803a900a0700d982c296b289af3f68
+  Supertype: Image
+  ReferenceType: HasComponent
+  Children:
+  - Name: Path
+    Id: g=e58f4d6489536445d405a7d28a392d96
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/Images/Spie/SimbSemafSpiaVerdeOff.svg"
+  - Name: Width
+    Id: g=f4af6b531ad25064ab867b73738ca64d
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 25.0
+  - Name: Height
+    Id: g=bd0856c0fccbc1b8583763e491f92d80
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 25.0
+  - Name: Attivo
+    Id: g=0195cc276a5e32bbb1630c666e7f106c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false

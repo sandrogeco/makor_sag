@@ -1,0 +1,234 @@
+Name: VariabiliRicetta
+Id: g=3e663b0a4087dc70dbdec651484229dc
+Type: FolderType
+Children:
+- Name: DsTime_ImportExportVarRicFromCSV
+  Id: g=57affb43ae567c47632cc808d5629197
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R2"}
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=39bde7e0f0c80bbc21f71e94b1526193
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ImportaTag
+    Id: g=9b868ec98c40357cd157eb5478556577
+  - Class: Method
+    Name: EsportaTag
+    Id: g=c2419703aca7cbbc4c6d556938b9c3f0
+  - Name: CSVPath
+    Id: g=af4660b0b78f4288a37c7c4628e2e99a
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/VarRicetta.csv"
+  - Name: CharacterSeparator
+    Id: g=826efeadc3deaa09ecac737d9526162f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Id: g=c3ab88ce9c234fa11885f8be0bfa0f93
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"it-IT","Text":"Se = vero allora tutti i campi del file devono essere delimitati da \"\""}
+    Value: false
+  - Name: CreaCollegamentiDinamici
+    Id: g=73a8235caef68edf9352d2ca9a5ab299
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Class: Method
+    Name: CreaObjectType
+    Id: g=2cd0c0419bb1247a5a7eb353fd253074
+- Name: TestLogic
+  Id: g=1804b47d796f8947a3beb4af6481ea76
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: Method1
+    Id: g=c8a79ff88c7fa38f80c40eabca376687
+  - Name: BehaviourStartPriority
+    Id: g=e0c125e2e0b6d9aed74c5820fe4810fd
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+- Name: Struct1
+  Id: g=762b47ea4f93bc7978def17acda468fe
+  Type: BaseObjectType
+  Children:
+  - Name: Par1
+    Id: g=b7bd99740b74ba2d0a1445851cda852a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Par2
+    Id: g=8c2d0515598333df2658eb7beeb83e38
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Par3
+    Id: g=bf020b3b6ddd98b95acd23478afc0ebf
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Oggetto1
+    Id: g=e10c89b4965eaee14dc073ab943ad529
+    Type: BaseObjectType
+    Children:
+    - Name: Par2
+      Id: g=ab8fba9545de7bc2d148eaf9bb33864e
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
+    - Name: Par1
+      Id: g=5094aea2df39c680769968e18bdcd8eb
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
+    - Name: TagStrutturata1
+      Id: g=38647164a5e7dac3fe0dfb0e98d11a31
+      Type: BaseObjectType
+      Children:
+      - Name: wOemInPaperStrtAdd
+        Id: g=823e74b41cf8f8d2ec3010f8dab566fd
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: wOemOutAuClnStrtAdd
+        Id: g=606899bd979ae5e1ac112c844e91ccaf
+        Type: BaseDataVariableType
+        DataType: Int16
+        Value: 0
+      - Name: wOemOutExhCmdStrtAdd
+        Id: g=0bc6b71e7e872d79c6294384426e8dcc
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 0
+      - Name: TagStrutturata1
+        Id: g=8580aa46d00d59e793839795f12fc3af
+        Type: BaseObjectType
+        Children:
+        - Name: wOemInPaperStrtAdd
+          Id: g=4010601b01c0515183f286cdbfac6690
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: wOemOutAuClnStrtAdd
+          Id: g=0192b123b457814c92ad0286c66796a3
+          Type: BaseDataVariableType
+          DataType: Int16
+          Value: 0
+        - Name: wOemOutExhCmdStrtAdd
+          Id: g=2b8baffea1121214f326a82c0ff560d4
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 0
+- Name: Par1
+  Id: g=4035b88db5fa103e51ebf24bbb6b6a43
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: DynamicLink
+    Id: g=ebd1d1071013c5b5f979141dec4c0b89
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/DriverMELSECFX3U/Q1/Tags/Alm/AlmErrComunicEthernet"
+    Children:
+    - Name: Mode
+      Id: g=16bd675d6dc7e700570035bd28984e0b
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+    - Name: EUMode
+      Id: g=0f3a9c9c12b2e02ec0c59398cf681a0e
+      Type: BaseVariableType
+      DataType: DynamicLinkEUMode
+      Value: 0
+    - Name: IsPull
+      Id: g=07063813d34058aaff10ef42e860ecb6
+      Type: BaseVariableType
+      DataType: Boolean
+      Value: false
+    - Name: ParentArrayIndex
+      Id: g=f5fedd4aacbe24db23986bbb43b79dde
+      Type: BaseVariableType
+      DataType: UInt32
+      ValueRank: ScalarOrOneDimension
+      Value: 0
+- Name: Par2
+  Id: g=046fb03c5efe2744fae77eb0b026ae8e
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+- Name: Par3
+  Id: g=d030eda1be27038362a8be29bdcfe8cd
+  Type: BaseDataVariableType
+  DataType: Int16
+  Value: 0
+- Name: Sone
+  Id: g=b28840a84d09464fb98b5d6c4bf5cec1
+  Type: BaseObjectType
+  Children:
+  - Name: TagStrutturata1
+    Id: g=f6e89a6b74664a14b71d825b5b8d298f
+    Type: BaseObjectType
+    Children:
+    - Name: wOemInPaperStrtAdd
+      Id: g=770bb5a127bc4fa693f5a6b9c8b4842f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+    - Name: wOemOutAuClnStrtAdd
+      Id: g=8845a7cfe2664368b4b102f2cf6305fc
+      Type: BaseDataVariableType
+      DataType: Int16
+      Value: 0
+    - Name: wOemOutExhCmdStrtAdd
+      Id: g=6fd3cfe080df4cbc974d05d039ba4b81
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
+- Name: Rotofast
+  Id: g=42f65d8a39f14c64a126b5dde13632b1
+  Type: BaseObjectType
+  Children:
+  - Name: wOemInExtFanSpdStrtAdd
+    Id: g=eaabd77b1ff2420b85756a86e694f2de
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: wOemInExtFanStatusStrtAdd
+    Id: g=004e98bf5da5455c8e55f78ec50f0be1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: wOemInJigEntryStrtAdd
+    Id: g=a14dbce341614b15ac9dd7959d881171
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: Forno
+  Id: g=0f5140c5bb3541aeb557be001b7ff975
+  Type: BaseObjectType
+  Children:
+  - Name: Oggetto10
+    Id: g=51afced322fd416c95ce77757a3f341c
+    Type: BaseObjectType
+    Children:
+    - Name: wOemInJigExitStrtAdd
+      Id: g=5b2d1c9555724361aee0512b1b23cb85
+      Type: BaseDataVariableType
+      DataType: Int16
+      Value: 0
+  - Name: Oggetto4
+    Id: g=b3f3c9971cc44b3aa428af06306c0bf9
+    Type: BaseObjectType
+    Children:
+    - Name: wOemInLatFtcStrtAdd
+      Id: g=0b63aa21121148ffb17da51c861fc85a
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0

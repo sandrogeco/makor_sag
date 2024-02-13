@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="36.117191mm"
+   height="40.840958mm"
+   viewBox="0 0 36.117193 40.840953"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="SimbProspFrecDx.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5611"
+       id="linearGradient3300"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,-1.9358373,-1.8627956,0,639.75242,851.38078)"
+       x1="383.93115"
+       y1="326.61133"
+       x2="383.93115"
+       y2="313.33945" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5611">
+      <stop
+         style="stop-color:#ffccaa;stop-opacity:1"
+         offset="0"
+         id="stop5607" />
+      <stop
+         style="stop-color:#ff6600;stop-opacity:1"
+         offset="1"
+         id="stop5609" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="82.565398"
+     inkscape:cy="24.544756"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.393761,-88.149277)">
+    <path
+       style="opacity:1;fill:url(#linearGradient3300);fill-opacity:1;stroke:#000000;stroke-width:1.23432744;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.37312746;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 60.89381,108.33576 -17.782795,20.03741 -0.12746,-10.6158 -8.58913,-1.33312 v -15.77281 l 8.60848,-1.290077 0.10811,-10.595018 z m -28.576235,7.20021 c 0,0.27868 -0.21824,0.53898 -0.48418,0.50318 l -1.24168,-0.16714 c -0.26595,-0.0358 -0.48418,-0.2245 -0.48418,-0.50318 v -13.79544 c 0,-0.27868 0.21823,-0.46739 0.48418,-0.50319 l 1.24168,-0.16714 c 0.26594,-0.0358 0.48418,0.22451 0.48418,0.50319 z m -4.12774,-0.60061 c 0,0.27869 -0.21737,0.53987 -0.48321,0.50319 l -1.2115,-0.16714 c -0.26584,-0.0367 -0.4842,-0.2245 -0.4842,-0.50318 v -12.7258 c 0,-0.27867 0.21793,-0.47009 0.4842,-0.50315 l 1.2115,-0.15043 c 0.26628,-0.033 0.48321,0.22448 0.48321,0.50316 z"
+       id="path3297"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccssssssssssssssssss"
+       inkscape:export-filename="X:\Librerie\Libreria Immagini\Immagini\Grafica 2019\Simboli vari\SimbFrecDw.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275" />
+  </g>
+</svg>

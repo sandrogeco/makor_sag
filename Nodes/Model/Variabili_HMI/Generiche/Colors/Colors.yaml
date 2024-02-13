@@ -1,0 +1,14 @@
+Name: Colors
+Id: g=dca6b679357c08e9051bcfd0c7b2488f
+Type: FolderType
+Children:
+- Name: PlcInputOff
+  Id: g=c0fcecb99abb0070eb46841a0cf1f922
+  Type: BaseDataVariableType
+  DataType: Color
+  Value: "#bcdbb8"
+- Name: PlcInputOn
+  Id: g=66f6abaca36e7475828760130e57a4b4
+  Type: BaseDataVariableType
+  DataType: Color
+  Value: "#80fa4c"

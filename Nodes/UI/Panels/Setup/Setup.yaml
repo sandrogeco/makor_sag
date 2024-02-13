@@ -1,0 +1,235 @@
+Name: Setup
+Id: g=06b6a222d52514e30a0120700f7f069b
+Type: FolderType
+Children:
+- Name: Setup_Usr
+  Id: g=62f945377f3acb12aaf3e2dac24393d5
+  Supertype: PagMainPanel_R0_0
+  ReferenceType: HasComponent
+  Children:
+  - Name: Header
+    Id: g=765735be843858872e24981e98ab096a
+    Type: Rectangle
+    Children:
+    - Name: Header
+      Id: g=d260b7400f6a271e33ec01fe103fd796
+      Type: RowLayout
+      Children:
+      - Name: HomeBtn
+        Id: g=f75cf332cac7c4c3e6104e6b5a6ff27b
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: Enabled
+          Id: g=8f13011dbe9bdd79ff8274c70fbc50c0
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+      - Name: Titolo
+        Id: g=a8723b93dad2ae26bee991d026840d0f
+        Type: Rectangle
+        Children:
+        - Name: Title
+          Id: g=c01c993903d81cfa2d2bbb71034e69ac
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=2d59edbaaffe615f0c38e863880726ce
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"it-IT","Text":"PAGE TITLE"}
+          - Name: Titolo
+            Id: g=8d0d20f4056256316eb30c8a3f2b3c22
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"it-IT","Text":""}
+      - Name: FwBtn
+        Id: g=638b545288d40e3784e4f99b57046d9f
+        Type: PulsRettConSimb_R0_0
+  - Name: Background
+    Id: g=e3e3b1eff328f4fd864859d22edc1086
+    Type: Rectangle
+  - Name: DisposizioneVerticale1
+    Id: g=28151d6bdc296b5726b0c246749362f8
+    Type: ColumnLayout
+    Children:
+    - Name: Width
+      Id: g=6aca0508fcfc71efded05adfb5358b87
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: Height
+      Id: g=ef8c7db8694543e3487df43f2b32ad57
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: TopMargin
+      Id: g=df9004430ffa9dbf78bc05799f4da09f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: LeftMargin
+      Id: g=b0c3b43a09ffe7bbac4b4379cd7a4e3c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: AbilitaModifiche
+      Id: g=92ca511b601b92ac257a118c77ab5732
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: CollegamentoDinamico
+        Id: g=e1987dc7d49ffc06ffe170de27db6f43
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Session}/Groups/UtenteEsperto"
+        Children:
+        - Name: Mode
+          Id: g=07a6b6b04fe526cc62e9fc7cc02dd92d
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+  - Name: Velocit__Offset
+    Id: g=24d1331453e4f0ddba7c157b965e1ce0
+    Type: ColumnLayout
+    Children:
+    - Name: Width
+      Id: g=dce7e2198fa2460dde032a06f6ec88d0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: Height
+      Id: g=6452b18c460a33106e4428e52480d5d4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: -1.0
+    - Name: TopMargin
+      Id: g=3315b0e0f5cec2ed211d38d698c26e8b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: LeftMargin
+      Id: g=cf4d1de2ae52c8b8a78ad3e2b7bfa29c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: AbilitaModifiche
+      Id: g=4e6ac5bf757d177227df9cef8d59024a
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: ValutatoreDiEspressioni1
+        Id: g=0a8f1b67b8ed39d85c223241244f31b1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=a696a1a768612b2098cd6288a93e74b4
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{0} & {1}"
+        - Name: ns=9;Source0
+          Id: g=a06cd21174ee63d13181c8fc4ea5ca31
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: CollegamentoDinamico
+            Id: g=8030bc1d65022c5e08dff154992c5d21
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/Groups/UtenteEsperto"
+        - Name: ns=9;Source1
+          Id: g=8eec15635c62e6108cdbe5722885d7bf
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: CollegamentoDinamico
+            Id: g=41f56b742df6cefd1708ba53c994b5d5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{NodeId:ns=46;g=bf4d18bb-fc38-2610-56f6-86426bd3bec1}"
+    - Name: Visible
+      Id: g=ca8e0c4ba100362d40657987fb96a657
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ValutatoreDiEspressioni1
+        Id: g=6325b53d92c41e67320b113bd0151a4c
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=93b6d4b1c0288ef407b5a00d104f4f9c
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{0}"
+        - Name: ns=9;Source0
+          Id: g=1088f5f3e5ba52b84c2b6ce1ebdd8b45
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: CollegamentoDinamico
+            Id: g=454a0cb9b2e2b9c5647c92ce4dc72b12
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{NodeId:ns=46;g=de6b5241-6c90-2a0d-3a1b-95099b77ac26}"
+  - Name: BrowserWeb1
+    Id: g=2752d573b6eabea5ce95f86a7118cea3
+    Type: WebBrowser
+    Children:
+    - Name: URL
+      Id: g=ea9991c6e865c3bb4a612464e9535e93
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "http://10.11.22.211:88/cgi-bin/CGIStream.cgi?cmd=GetMJStream&usr=MAKOR&pwd=makor7325"
+    - Class: Reference
+      Target: ns=11;i=354
+      Direction: Forward
+    - Class: Reference
+      Target: ns=11;i=356
+      Direction: Forward
+    - Class: Reference
+      Target: ns=11;i=358
+      Direction: Forward
+    - Name: Width
+      Id: g=654cdf8de3d1065a34f6f27fcd62b489
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1700.0
+    - Name: Height
+      Id: g=039076adfc5d4a8eeffe77b05848af53
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 880.0
+    - Name: LeftMargin
+      Id: g=cc0ce787f881ea226767c3dd09c2d043
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=bd5594420b0c815d1e0769582e8f1540
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+- File: Oem/Oem.yaml
+- File: IO/IO.yaml

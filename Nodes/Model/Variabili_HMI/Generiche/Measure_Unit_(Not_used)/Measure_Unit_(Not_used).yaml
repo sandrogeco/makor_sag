@@ -1,0 +1,163 @@
+Name: Measure Unit (Not used)
+Id: g=1028856abb0747e426cfc3d15365270f
+Type: FolderType
+Children:
+- Name: Cm_InchConvFactor
+  Id: g=6cadc72d5a46a4a6042b450239ff0830
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.0
+  Children:
+  - Name: KeyValueConverter1
+    Id: g=664baab64663e5be5e5ed2bcafebf64c
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Id: g=1d017d91c6cd40e7eca99adf1b5fa6a0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Id: g=a75fc234ab02fc1c55150667c0c933b5
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
+    - Name: Pairs
+      Id: g=38bce7379f84408bda5c4b59e0d734d2
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Id: g=2a57ad9444b8acc7b3bb6f6320d131d8
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=137945e3fc15f94f4740d271b7668bed
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: Value
+          Id: g=c716d5335c9432b96d54397043ec184b
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 1.0
+      - Name: Pair1
+        Id: g=e6abff66144de45b2be2cc6780927d1b
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=db8190bd0b2e33468e700678b4a63357
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Value
+          Id: g=bd6ce1b2c6a4ce15959f6f0630d522a8
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 2.559999942779541
+- Name: Mt_FtConvFactor
+  Id: g=2ae2184b643816aecd1b0175ce124238
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 0.0
+  Children:
+  - Name: KeyValueConverter1
+    Id: g=73a2eabe4f60cc74cbb20b275da889be
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Id: g=d670c46c7d8095a4f72721c9c824900c
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Id: g=8a165072a8ce0d9297038b525f7d2807
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
+    - Name: Pairs
+      Id: g=e6e9f9a395e3ce629ed051c423c24453
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Id: g=5d9b91ab07cd60cd81458ef71bc778e0
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=55bf1071deab2e5c8526c5c33108f0ef
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: Value
+          Id: g=f63df4ae43396ad45df7a6cb08c9bef5
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 1.0
+      - Name: Pair1
+        Id: g=83e85574902577a77a4e7b0bb729cdb2
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=0a3a2f8e67df01aa7a147e3dc865446c
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Value
+          Id: g=bad1496ea5fd6a9cc50c990af5f69139
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.30480000376701355
+- Name: Km_MiConvFactor
+  Id: g=52ffc928157b9c6777c86d0b43505b16
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+  Children:
+  - Name: KeyValueConverter1
+    Id: g=dd6b5730eed1113b8b9b4feb0ace5c31
+    Type: ValueMapConverter
+    Children:
+    - Name: Source
+      Id: g=ef70234fd0b96885b9bf617660b7957f
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Id: g=a5f0ec6a0bb8f76a53ef7156c3d8f1eb
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
+    - Name: Pairs
+      Id: g=d908689f056c0e17ff6f71b74797c813
+      Type: BaseObjectType
+      Children:
+      - Name: Pair
+        Id: g=13f6167dc87566a6fd237b7ea4c1292e
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=8ee04eddeb0bd6360affe114543c9e20
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: Value
+          Id: g=9b983519107e7b16b64fff4d5443c873
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 1000
+      - Name: Pair1
+        Id: g=714058ea8df6ab9038bcfc42148cded5
+        Type: ValueMapPair
+        Children:
+        - Name: Key
+          Id: g=7b8a6c0c0bbff8898a503dc94593fef9
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Value
+          Id: g=be817e63a56acf288e23aebf4c24d090
+          Type: BaseDataVariableType
+          DataType: Int32
+          Value: 1609

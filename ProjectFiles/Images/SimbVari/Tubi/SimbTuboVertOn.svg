@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.5254898mm"
+   height="68.035721mm"
+   viewBox="0 0 8.5254902 68.035712"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="SimbTuboVertOn.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2742"
+       id="linearGradient2699"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(364.58793,-47.935776)"
+       x1="258.04071"
+       y1="228.5863"
+       x2="266.59018"
+       y2="228.5863" />
+    <linearGradient
+       id="linearGradient2742"
+       inkscape:collect="always">
+      <stop
+         id="stop2736"
+         offset="0"
+         style="stop-color:#666666;stop-opacity:1" />
+      <stop
+         style="stop-color:#ffb380;stop-opacity:1"
+         offset="0.5000028"
+         id="stop2738" />
+      <stop
+         id="stop2740"
+         offset="1"
+         style="stop-color:#666666;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="43.948477"
+     inkscape:cy="10.084847"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-62.11229,-57.128669)">
+    <g
+       id="g2747"
+       transform="translate(-560.52835,-89.504001)"
+       inkscape:export-filename="X:\Librerie\Libreria Immagini\Immagini\Grafica 2019\Simboli vari\Tubi\SimbTuboVertOn.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275">
+      <rect
+         style="opacity:1;fill:url(#linearGradient2699);fill-opacity:1;stroke:none;stroke-width:0.234;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect2614"
+         width="8.3154755"
+         height="68.035713"
+         x="622.74567"
+         y="146.63268" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.20999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 622.74564,146.63267 v 68.0357"
+         id="path2616"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.20999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 631.06113,214.66837 v -68.0357"
+         id="path2618"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

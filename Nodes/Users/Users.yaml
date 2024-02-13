@@ -1,0 +1,29 @@
+Name: Users
+Id: g=312cb5b83bea73af42d1f83e65605b41
+Type: FolderType
+Children:
+- File: Groups/Groups.yaml
+- File: Utenti/Utenti.yaml
+- Name: MakorUserType
+  Id: g=4a310ce7479cb1f1877cd69aa2e78422
+  Supertype: UserType
+  Children:
+  - Name: GruppoAppartenenza
+    Id: g=4444bed8b589e1c351f08c767fd1e6ed
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: MeasurementSystem
+    Id: g=7c09b61f9c24961dad58a060942544c3
+    Type: BaseVariableType
+    DataType: MeasurementSystem
+    ReferenceType: HasProperty
+    ModellingRule: Optional
+    Value: 1
+  - Name: Domain
+    Id: g=878e81c4073b64f6d431f9194d4c1eb6
+    Type: BaseVariableType
+    DataType: String
+    ReferenceType: HasProperty
+    ModellingRule: Optional
+    Value: ""

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26.289406mm"
+   height="26.289406mm"
+   viewBox="0 0 26.289406 26.289406"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="PulPswNoPress.svg">
+  <defs
+     id="defs2">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5398"
+       id="radialGradient5385"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4273348,-2.2252957e-7,2.224779e-7,1.4270034,344.93291,-318.41367)"
+       cx="33.965763"
+       cy="240.37494"
+       fx="33.965763"
+       fy="240.37494"
+       r="13.144703" />
+    <linearGradient
+       id="linearGradient5398"
+       inkscape:collect="always">
+      <stop
+         id="stop5394"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1" />
+      <stop
+         id="stop5396"
+         offset="1"
+         style="stop-color:#ffff00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="88.639989"
+     inkscape:cy="71.641332"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-88.908872,-22.295774)">
+    <g
+       transform="translate(-291.35991,10.838315)"
+       style="display:inline"
+       id="g5432"
+       inkscape:export-filename="X:\Librerie\Libreria GOT\Immagini\Menu\Sfumati\PulPswNoPress.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="X:\Librerie\Libreria GOT\Immagini\Menu\PulAlmNoPress.png"
+         style="opacity:1;fill:url(#radialGradient5385);fill-opacity:1;stroke:#ffffff;stroke-width:0.96499997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect5373"
+         width="25.324406"
+         height="25.324406"
+         x="380.75128"
+         y="11.939959"
+         ry="5.2916665" />
+      <path
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:connector-curvature="0"
+         id="path5387"
+         d="m 401.28303,21.539754 c -2.1367,-2.050992 -6.00557,-1.1445 -6.96435,1.761645 l -8.94246,0.0076 -1.16453,1.2798 1.07326,1.27034 0.67191,-0.02172 0.82921,1.945388 1.03214,-1.837662 0.92033,1.857772 1.14544,-1.835934 0.87438,1.801441 1.05201,-1.87859 2.62089,-0.03062 c 0.78715,3.942315 7.97031,4.322838 8.19394,-1.577001 -0.19628,-1.20963 -0.68807,-2.114639 -1.34216,-2.742491 z m -1.55253,1.87018 c 0.67646,0.676452 0.67646,1.773198 0,2.449649 -0.67645,0.676461 -1.7732,0.676461 -2.44966,0 -0.67645,-0.676451 -0.67645,-1.773197 0,-2.449649 0.67646,-0.676462 1.77321,-0.676462 2.44966,0 z"
+         style="fill:#ffffff;stroke:#ffffff;stroke-width:0.06068623px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="ccccccccccccccccccccc" />
+    </g>
+  </g>
+</svg>

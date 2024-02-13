@@ -1,0 +1,497 @@
+Name: Generali
+Id: g=754ea721d21cd43283d078140a00eefb
+Type: FolderType
+Children:
+- Name: ParametriHMI_NotUsed
+  Id: g=4027d2f854d226fd94cf01048c6c2cce
+  Supertype: BaseObjectType
+  Children:
+  - Name: DbBackupBatFileName
+    Id: g=0eff885a9763aaeb8fc277a6e3f8b05b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: PathDbSavingFolder
+    Id: g=a8a5866cd909eee998355640d3f1d9bf
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: SqlInstanceName
+    Id: g=0fdedf3b25f6c12f82a8360ca2b1dc17
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: DbName
+    Id: g=b395324df8d9fd2400dfe91b4c0d523d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: DbRestoreBatFileName
+    Id: g=84c4d995b0535f63472e663583e5beeb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Debug
+    Id: g=e39c097b18b96bb207fafb7a404af3b8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: CsvReportSavingPath
+    Id: g=51b49252f725197eab6e99484c48829c
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: ParametriHMI_R1_NotUsed
+  Id: g=6a43492353c8fd26e2d290d1681db6df
+  Supertype: BaseObjectType
+  Children:
+  - Name: Debug
+    Id: g=eccb9594e2ce459b0a935987558a94b5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: CsvReportSavingPath
+    Id: g=735f20f6413a16ab31f26e6fe2e6b96e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: DbBackupBatFileName
+    Id: g=c0d44f70c13b09e726bf5505acf1cece
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: PathDbSavingFolder
+    Id: g=99e0af4994194604f02455e34f96cff7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: SqlInstanceName
+    Id: g=18478ae917153200b3066bcff8327525
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: DbName
+    Id: g=eeaaa1f98becee2374ff9132a2810c18
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: DbRestoreBatFileName
+    Id: g=106390576b94c158328c2a40a7b3d5e1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: FileEntry
+  Id: g=9e4ab67e6b2b1dfbe3911d67d90337ce
+  Supertype: BaseObjectType
+  Children:
+  - Name: FileName
+    Id: g=a6c29f737cb327175df7521f9ec879da
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: Size
+    Id: g=62f69bb81d3e7ec5bf3f5e691cf23a96
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.0
+  - Name: IsDirectory
+    Id: g=39890408a3f714b2a303c3a1b2c7d4a9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: ContextDialogConferma_R1
+  Id: g=c3121ad19b56cbdb8244c46d186a43a4
+  Supertype: BaseObjectType
+  Children:
+  - Name: OnConfirm
+    Id: g=0c8a9700b579270296f45785405acb9b
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+      Direction: Forward
+    - Name: ObjectPointer
+      Id: g=10bc9a4ac070ffd8ae21375a75352bbb
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=b1bba59422fddec2892c479f1378c42d
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=cb75cdc71ee005b095f77320d0b23a1d
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: OnCancel
+    Id: g=6125aaf646a256b3f777d22ba27f7c51
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+      Direction: Forward
+    - Name: ObjectPointer
+      Id: g=c95618762fe0bcf900f34547be3adfe1
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=69d60856163cb481ff9dce82c95c2d45
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=1cd83303af4ebcde287f92abd3ed46ad
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: Title
+    Id: g=c5a5542d80edbd0c5ff87284eb049485
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":""}
+  - Name: Message
+    Id: g=6ac36586dd0a50e02fd0528bc947fc77
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ErrorMessage
+    Id: g=2b14053620433bb7330b2e1bf1492148
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ShowErrorMsg
+    Id: g=277293820beefca00e4421ba1403593e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: ConfirmVisible
+    Id: g=cf7ce7c5d564268faeeb6ed8f51836a5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: CancelVisibile
+    Id: g=ba5bb7247763b19bfa6cee30b226825e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Image
+    Id: g=2b72a459d832c58dceb2c8b26ba8cfd2
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: ""
+- Name: ContextDialogConferma_R2
+  Id: g=fb2066b864798acc901491c495834794
+  Supertype: BaseObjectType
+  Children:
+  - Name: OnConfirm
+    Id: g=fcafcf116157b50e884dcb59e0402d1f
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+    - Name: ObjectPointer
+      Id: g=80ba1981865dbb5baca11d6b0874e9bf
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=02766d76b44b97de40d9e936c2974640
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=5bf37470c1f7ee995f1b072bf8811dac
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: OnCancel
+    Id: g=f1b8f9eb7c760bb17bff1bcd9c9f9795
+    Type: MethodInvocation
+    Children:
+    - Class: Reference
+      Target: ns=9;i=98
+    - Name: ObjectPointer
+      Id: g=a0ee340c2597bf56843987bcaf7b3e5a
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=36b474c6f2afda395a92fe7f4b0295e5
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType"
+    - Name: Method
+      Id: g=f9b3879eb11baca9353d51bbf1649f72
+      Type: BaseDataVariableType
+      DataType: String
+      Value: ""
+  - Name: Title
+    Id: g=bf88a62af92c69717455c44e183e2fb1
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":""}
+  - Name: Message
+    Id: g=8de0647487e28f99b7e6de37ca3c1be1
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ErrorMessage
+    Id: g=b3f5a6d31c962dfabcf3e6529ad79d0c
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: ShowErrorMsg
+    Id: g=6f446b861954be932dd63a94653a19c8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: ConfirmVisible
+    Id: g=e564d23c3bf3b1f45c79f34420322209
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: CancelVisibile
+    Id: g=7dc4422448c972ccd7f3d966d3513a15
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Image
+    Id: g=afa942831337726713fdf11068d4a130
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: ""
+  - Name: InProgress
+    Id: g=fb54841da1d8bdec11aef02f6f686508
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"it-IT","Text":"Indica che la procedura richiesta è in corso"}
+    Value: false
+- Name: TapioItem
+  Id: g=94eacee1f52ede5f84a833dd0ddf366f
+  Supertype: BaseObjectType
+  Children:
+  - Name: Visible
+    Id: g=5bbeb679c6c5f1bc5547541af9b72893
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: State
+    Id: g=95cb0c64b87a4b1fc0e5319a5e29b379
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: Value
+    Id: g=6416919482b8d3fa7a38aacaf2931441
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: Descrip
+    Id: g=7b32a250681a41bb16cab63f242fef70
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: CalibrazPassoEncoder
+  Id: g=88e87f5fdea1c09653ec0a08c28725a1
+  Supertype: BaseObjectType
+  Children:
+  - Name: Titolo
+    Id: g=5ea2d213f2e95c6a443e101aa4a48808
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":""}
+  - Name: JogAvanti
+    Id: g=d41866ce78bc63ff09d7505d4d75f373
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: JogIndietro
+    Id: g=921f0435edce7977ed21da9168cde288
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: StartStopCalibrazione
+    Id: g=2d12f95c2cb4eb3d5b7fd8de7a6f465b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: ValRif
+    Id: g=6b1ea6f3f6323dc0e8f96575a5d31485
+    Type: BaseDataVariableType
+    DataType: Float
+    Description: {"LocaleId":"it-IT","Text":"Valore di riferimento, in base al tipo di calib (in base alla veloc oppure in base alla distanzapercorsa) va indicata la velicità o la distanza"}
+    Value: 0.0
+  - Name: Passo
+    Id: g=c6328da5d237230820c5e9d689e074d5
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.0
+- Name: DiagInvSiemens
+  Id: g=fea19a60c0f566221616082a1b20609e
+  Supertype: BaseObjectType
+  Children:
+  - Name: Titolo
+    Id: g=b6750f420baf2a8f4cbc52e45561a7dd
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: MaxValInInv
+    Id: g=6c04ec70ad85ed0e32e926e7b3f2c082
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 16384
+  - Name: MaxScaledValInv
+    Id: g=0b8ce15a16361959395a95a64c91e433
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: ValRifCorrente
+    Id: g=bf5c1c61c69d389f88ee53408a127047
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ValRifVeloc
+    Id: g=39679960fd58e5d15dc63462d4ba4990
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ValRifPotenza
+    Id: g=d93da04a86397cb2becb895021d28381
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: PositiveDirection
+    Id: g=82d9333ec31b7e9496c4f5868a2a1483
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: NegativeDirection
+    Id: g=5d994c63239cc58f4b8e5c077eefb650
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: AlarmPresent
+    Id: g=2f4c92ef5fdfed78b2aa6954438086ff
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: FaultPresent
+    Id: g=34d9427a1f89683afedd8f7b1547ee4a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: LastWrnCode
+    Id: g=f1c6062a1eb83b59a8b1b15b53cdef58
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: LastAlmCode
+    Id: g=079f83e84408336b831bc212710e7d3c
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ActualSpeed
+    Id: g=f0e95b71eaeafbfcdb995f63f7ef9cf9
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ActualCurrent
+    Id: g=78322d355a6152f0b358b77712a17dfe
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ActualPower
+    Id: g=6cb26cd0715d0ebbea24842d3ec6720c
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: RegenratedEnergy
+    Id: g=ea2a84ce9417ef751ea157223fa957e7
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: RegerativeMotor
+    Id: g=03fac8dac9cc6fd3ba59d989ab45dffd
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: DiagInvSiemens1
+  Id: g=49bf410c792d3b37ed4f1fb731541766
+  Supertype: BaseObjectType
+  Children:
+  - Name: Titolo
+    Id: g=16a21d592d3b604d10ddc717988e5140
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: MaxValInInv
+    Id: g=45e384e031f09f305e8e4429a61cb49c
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 16384
+  - Name: MaxScaledValInv
+    Id: g=4730834c422b8c86707d9d5237b428b8
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
+  - Name: ValRifCorrente
+    Id: g=5cf63e27b5be1cf69d9cec546920e022
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ValRifVeloc
+    Id: g=c7219e0a530c9a801d68d322715115ea
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: ValRifPotenza
+    Id: g=b66fa5e21528e79037e5a5e7b3a92de7
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Telegram
+    Id: g=5482dbef8c5debe4a3a2a0228437eb76
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
+    Children:
+    - Name: Kind
+      Id: g=834c3854199cb095946121399238d97e
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"da185b66a5f9671a6dd643f86992736d","Namespace":46}
+- Name: SqlQuery_R0
+  Id: g=79a7ccb57cf670de39d14e14134e9a33
+  Supertype: BaseObjectType
+  Children:
+  - Name: Select
+    Id: g=910f8244d83762c3e4310a22eddf0dd8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: Where1
+    Id: g=5251452dddd4a931ded5085486490806
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: Where2
+    Id: g=0cfc4945f4dfffd099989a23ac7d8f41
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: Group
+    Id: g=e6389b283a8094b262106eb2ceb95a17
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: Order
+    Id: g=2ea627daafa2211aea493f81478d3efd
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""

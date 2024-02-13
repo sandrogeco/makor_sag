@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.999207mm"
+   height="11.112446mm"
+   viewBox="0 0 10.999209 11.112444"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="SimbTuboCurvaOn.svg">
+  <defs
+     id="defs2">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2941"
+       id="radialGradient2711"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.0582457,3.0582513,-3.1570832,3.1570774,-0.87436,-2012.631)"
+       cx="470.87549"
+       cy="259.4393"
+       fx="470.87549"
+       fy="259.4393"
+       r="5.4653149" />
+    <linearGradient
+       id="linearGradient2941"
+       inkscape:collect="always">
+      <stop
+         id="stop2931"
+         offset="0"
+         style="stop-color:#666666;stop-opacity:1;" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="0.11810786"
+         id="stop2933" />
+      <stop
+         style="stop-color:#ffb380;stop-opacity:1"
+         offset="0.28131437"
+         id="stop2935" />
+      <stop
+         id="stop2937"
+         offset="0.46520534"
+         style="stop-color:#666666;stop-opacity:1" />
+      <stop
+         id="stop2939"
+         offset="1"
+         style="stop-color:#666666;stop-opacity:0;" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="46.849113"
+     inkscape:cy="-10.573319"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="958"
+     inkscape:window-height="1008"
+     inkscape:window-x="953"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.34483,-108.58613)">
+    <g
+       id="g2946"
+       transform="translate(-558.78389,-137.86321)"
+       inkscape:export-filename="X:\Librerie\Libreria Immagini\Immagini\Grafica 2019\Simboli vari\Tubi\SimbTuboCurvaOn.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275">
+      <path
+         style="opacity:1;fill:url(#radialGradient2711);fill-opacity:1;stroke:none;stroke-width:0.16368492;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 622.74565,246.46771 c 0.0179,1.09391 -0.63505,2.67538 -2.61493,2.6727 l -0.002,8.31526 c 6.72559,0.0819 10.93299,-4.2648 10.93299,-11.00416 z"
+         id="path2667"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.20999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 620.13072,249.14041 c 1.69862,0 2.61511,-1.20549 2.61511,-2.68891"
+         id="path2669"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.20999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 620.13172,257.45566 c 4.00872,0.0494 10.69577,-1.50041 10.89123,-11.00416"
+         id="path2671"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+</svg>

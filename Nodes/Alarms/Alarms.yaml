@@ -1,0 +1,206 @@
+Name: Alarms
+Id: g=0eb96c0ba7cd5a9011dbadc501810a11
+Type: AlarmsCategoryFolder
+Children:
+- Name: DsTime_CreaAllarmiDaCSV
+  Id: g=d949ed1cfbd83776fa6ac32eb91c5ea8
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R6"}
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=bc8328ddd5faa1bacca09c65bf5bc593
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CSVPath
+    Id: g=c2f0d42af7e41a475beec704a8b35116
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/VarAlm&TraduzCompatileConR3.csv"
+  - Name: CharacterSeparator
+    Id: g=a1530a9c1c926ce9b538347affb37208
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Class: Method
+    Name: CreaAllarmi
+    Id: g=0a661073c3722d824f0d73570de23b54
+  - Name: CustomCategoryAlarmType
+    Id: g=64ecd26c5bd6a31eef255554724e5fe0
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/Hmi_Next/Alarms/CategoryDigitalAlarmType"
+  - Name: WrapFields
+    Id: g=0aa27c97b7e88d8f2f572b38ccebacc5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"it-IT","Text":"Indica se i campi sono racchiusi tra doppi apici"}
+    Value: true
+  - Name: LocalizationDictionary
+    Id: g=5a52fc9feb1a361697a800add59fa80e
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Hmi_Next/Translations/Traduz_Alm"
+    Children:
+    - Name: Kind
+      Id: g=a469d08aa78eca6037a64280cc5e4b98
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"
+  - Class: Method
+    Name: ExportAllarmi
+    Id: g=e3e0abd1ce9dc9ec00af941b749b9654
+- Name: CreaAllarmi
+  Id: g=f0269042b409966ec1c7cbeb9b040d26
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=f37f6e708203d3c36287ab9b0e7636c8
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CreaVarAllarmi
+    Id: g=9fcbcb98d4432de1d5d3b72720423ad6
+- Name: CategoryDigitalAlarmType
+  Id: g=3e3939fc1633491c089a6d656c3634a0
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=31;i=81
+  - Class: Reference
+    Target: ns=31;i=82
+  - Class: Reference
+    Target: ns=31;i=83
+  - Name: NormalStateValue
+    Id: g=e76b034592aa40f8fc53129748efd10c
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=25e2024aaff26eafd80269bfa1c6e2d5
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: LastEvent
+    Id: g=d4c69f1c221f61949cc94044b13803bf
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Category
+    Id: g=7a06cb43303c7752bf5c2e8ff6ac4b98
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: AutoAcknowledge
+    Id: g=2f84e26c370077e63d67a3a23762646c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=99dd7323f57c466008a88090be2eec6d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Enabled
+    Id: g=400eed6100e08e82103864a2a8e00088
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Message
+    Id: g=a9b69f386a97b13f9027d0bcaae8909a
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+  - Name: Severity
+    Id: g=3736556a4cc741f80512492309a20ead
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 1
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=ef4cbead9adafbd0ef322a76289054e1
+- Name: bAlmCommPlc
+  Id: g=33b863d39a537259573e789a75acc6d9
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=70532edda016ca6437a5638d68de16b3
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=07621db0b70d7ecc3ec12d4f40b79401
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: ValutatoreDiEspressioni1
+      Id: g=489846470263c1fc84d53818601cd8bf
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Id: g=028eb10f20ae8b1d96a45714fbca7f8d
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0} == 0"
+      - Name: ns=9;Source0
+        Id: g=765eed4368f76fd749350664c436d36b
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=90e7e97ef177e641a8feec04264bb469
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../CommDrivers/CODESYSDriver1/PLC_Next/OperationCode"
+  - Name: LastEvent
+    Id: g=511a3fcae073a9050c435c197d1e82c6
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=31;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=83
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=704f2998a97a90d84d509abf552e58be
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=2b1e101e8e97b08401e751605cf9686f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Id: g=a0408d32e52f2f62ea0e791dfc2f5f73
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":"Errore Comunicazione con PLC"}
+  - Name: Severity
+    Id: g=fe3016a116d23d5db92f4ddc6039d8fc
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+- File: GvCarta/GvCarta.yaml
+- File: GvGen/GvGen.yaml
+- File: GvOsc/GvOsc.yaml
+- File: GvRlyMon/GvRlyMon.yaml
+- File: GvRlyVal/GvRlyVal.yaml
+- File: GvTrasp/GvTrasp.yaml
+- File: GvVent/GvVent.yaml

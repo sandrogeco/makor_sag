@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.65163mm"
+   height="16.65163mm"
+   viewBox="0 0 16.651631 16.651631"
+   version="1.1"
+   id="svg5550"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="ButtonOff_Blu.svg">
+  <defs
+     id="defs5544">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10902"
+       id="radialGradient1650"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-13.02133,-12.339118)"
+       cx="91.488289"
+       cy="41.470036"
+       fx="91.488289"
+       fy="41.470036"
+       r="19.900242" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient10902">
+      <stop
+         style="stop-color:#4d4d4d;stop-opacity:1;"
+         offset="0"
+         id="stop10894" />
+      <stop
+         id="stop10896"
+         offset="0.84970248"
+         style="stop-color:#333333;stop-opacity:1" />
+      <stop
+         style="stop-color:#f9f9f9;stop-opacity:1"
+         offset="0.92217076"
+         id="stop10898" />
+      <stop
+         style="stop-color:#333333;stop-opacity:1"
+         offset="1"
+         id="stop10900" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10890"
+       id="radialGradient1652"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-13.02133,-12.339118)"
+       cx="91.488289"
+       cy="41.470036"
+       fx="91.488289"
+       fy="41.470036"
+       r="19.900242" />
+    <linearGradient
+       id="linearGradient10890"
+       inkscape:collect="always">
+      <stop
+         id="stop10882"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#333333;stop-opacity:1"
+         offset="0.89479232"
+         id="stop10884" />
+      <stop
+         id="stop10886"
+         offset="0.94649965"
+         style="stop-color:#ff0000;stop-opacity:1" />
+      <stop
+         id="stop10888"
+         offset="1"
+         style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1674"
+       id="radialGradient1664"
+       cx="78.466965"
+       cy="29.130919"
+       fx="78.466965"
+       fy="29.130919"
+       r="17.166925"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient1674"
+       inkscape:collect="always">
+      <stop
+         id="stop1666"
+         offset="0"
+         style="stop-color:#2c5aa0;stop-opacity:1" />
+      <stop
+         id="stop1672"
+         offset="1"
+         style="stop-color:#162d50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.919596"
+     inkscape:cx="22.412488"
+     inkscape:cy="33.850052"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1965"
+     inkscape:window-height="1171"
+     inkscape:window-x="380"
+     inkscape:window-y="380"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5547">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.36992905,-259.05749)">
+    <g
+       id="g1692"
+       transform="matrix(0.41837758,0,0,0.41837758,-24.872933,255.19558)"
+       inkscape:export-filename="X:\Librerie\Libreria Immagini\Grafica UNIQO\Pulsanti\PNG\ButtonOff_Blu.png"
+       inkscape:export-xdpi="275"
+       inkscape:export-ydpi="275">
+      <circle
+         style="opacity:1;fill:url(#radialGradient1650);fill-opacity:1;stroke:url(#radialGradient1652);stroke-width:0.068;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle1640"
+         cx="78.466965"
+         cy="29.130919"
+         r="19.866241" />
+      <circle
+         r="16.902925"
+         cy="29.130919"
+         cx="78.466965"
+         id="circle1642"
+         style="opacity:0.80039918;fill:url(#radialGradient1664);fill-opacity:1;stroke:#000000;stroke-width:0.528;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

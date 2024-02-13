@@ -1,0 +1,9 @@
+Name: Var_Ritentive
+Id: g=5cc89496a1ff43329d072ee8d500ea55
+Type: FolderType
+Children:
+- Name: sNomeRicAttuale
+  Id: g=af046e916943313ca80dc73ea91baa26
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""

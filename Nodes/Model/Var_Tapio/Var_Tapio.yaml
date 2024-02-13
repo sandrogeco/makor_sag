@@ -1,0 +1,154 @@
+Name: Var_Tapio
+Id: g=a79450dc6525120ae8ef311499a1bd4b
+Type: FolderType
+Children:
+- Name: StatoMacc
+  Id: g=8424057ffe792d9c301164b41b689326
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""
+  Children:
+  - Name: CollegamentoDinamico
+    Id: g=d857bf2c6eaa3a4dd18a1fc6979b30fa
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../UI/MainWindow/Menu_Panel/DisposizioneOrizzontale1/Semaforo_StatoMacchina/TapioInterfaceLogic_R0/MachState"
+- Name: DescrizStatoMacc
+  Id: g=e3682a07c4bb2d1a16f666eba502b907
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""
+  Children:
+  - Name: CollegamentoDinamico
+    Id: g=019bcc137e35d1939569952d9d0b200f
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../UI/MainWindow/Menu_Panel/DisposizioneOrizzontale1/Semaforo_StatoMacchina/TapioInterfaceLogic_R0/MachStateDescrip"
+- Name: VelocAspirazCabina
+  Id: g=0e1215f8c7d0c5f3601e34ccbf7638f3
+  Type: TapioItem
+  Children:
+  - Name: Visible
+    Id: g=e7650b71338b6f12f9679d0707a0a678
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 1
+    Children:
+    - Name: CollegamentoDinamico
+      Id: g=b76a7591117fbb4be072fd79aefa34a1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/MelsecQDriver1/SerieQ/Tags/Cartesiano/Oem/OemAddress/OemAbilitaAspirazione"
+      Children:
+      - Name: Mode
+        Id: g=8cd4056340f9ffcf18d3fdbb3ffb20fe
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: State
+    Id: g=0ddb5a01ced80aa6885d0fa3aef89bb5
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 1
+  - Name: Value
+    Id: g=b7dded9b49620d1ec85a34b5cdeebf48
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=bad4d80da1b50f1165f3ed90e78ff604
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=b97590c90b04128446826547988a3653
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"it-IT","Text":"{0:f0}"}
+      - Name: ns=9;Source0
+        Id: g=120fb2b125134376d12734f4e808d926
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: CollegamentoDinamico
+          Id: g=3936cbd343bae463c66d67a39ca60598
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../CommDrivers/MelsecQDriver1/SerieQ/Tags/Cartesiano/UserSettingsRobo/UsrVelocitàAspiratoreCabina"
+      - Name: Mode
+        Id: g=ca768ea1f72e5ba932dc24a022a5ff9d
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        Value: 0
+  - Name: Descrip
+    Id: g=c2cf3d3f65209b51d17a1f831b50f1bf
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Cabin exhaust speed [%]"
+- Name: VelocVentilazCabina
+  Id: g=31bf5fdb38c6b364c198658c29b389f8
+  Type: TapioItem
+  Children:
+  - Name: Visible
+    Id: g=955fa47fe07f53ce8f704a3627245970
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 1
+    Children:
+    - Name: CollegamentoDinamico
+      Id: g=3bb1ec0ba06b7904b18df6d7ac0319fe
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/MelsecQDriver1/SerieQ/Tags/Cartesiano/Oem/OemAddress/OemAbilitaVentilazione1"
+      Children:
+      - Name: Mode
+        Id: g=1f716ebd717cc9fb5f7415b965f9f3e3
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: State
+    Id: g=3f4e57dc5dd360c2d23a46ec4499614e
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 1
+  - Name: Value
+    Id: g=1e37753c906234c35ec5e3c7fedb2531
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=8bcda330104d3d4f414906a5c3d0e545
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=80161f2d9ac598ab022e455e889bf74a
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"it-IT","Text":"{0:f0}"}
+      - Name: ns=9;Source0
+        Id: g=0ce4aa0d3ec0dcb3b8839ac892506d19
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: CollegamentoDinamico
+          Id: g=086df6ac762459e9e7140a62d634ceee
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../../../CommDrivers/MelsecQDriver1/SerieQ/Tags/Cartesiano/UserSettingsRobo/UsrVelocitàVentilazione"
+      - Name: Mode
+        Id: g=9f7f1096913fee1521e1e0f193e203e8
+        Type: PropertyType
+        DataType: DynamicLinkMode
+        ReferenceType: HasComponent
+        Value: 0
+  - Name: Descrip
+    Id: g=d25917bf1769a5c8811c49e148c9596a
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Cabin pressurization speed [%]"
