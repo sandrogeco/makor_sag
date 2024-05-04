@@ -7,3 +7,8 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: ""
+- Name: sNomeRicAttualePiastra
+  Id: g=dbaeab01ada6086957cbf5dccfa1459c
+  Type: BaseDataVariableType
+  DataType: String
+  Value: ""

@@ -5,6 +5,7 @@ using FTOptix.SQLiteStore;
 using System;
 using System.IO;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class GestBackupSqlLite_R0 : BaseNetLogic

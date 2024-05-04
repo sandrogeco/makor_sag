@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FTOptix.CODESYS;
 using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class GestUtentiLogic : BaseNetLogic

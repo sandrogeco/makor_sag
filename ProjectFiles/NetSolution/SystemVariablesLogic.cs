@@ -7,6 +7,7 @@ using FTOptix.Core;
 using System.Net.Sockets;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class SystemVariablesLogic : BaseNetLogic

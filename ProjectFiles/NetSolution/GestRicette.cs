@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
+using FTOptix.Recipe;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 
@@ -281,7 +282,7 @@ public class GestRicette : BaseNetLogic
         //Aggiorna la lista con le RemoteChildeVariables
         void CreaListaTags(IUANode Nodo, ref string PercorsoTag, ref List<RemoteChildVariable> MyVar)
         {
-            string path = PercorsoTag + "/";
+            string path = PercorsoTag == "" ? "": PercorsoTag + "/";
 
             MyVar.AddRange(Nodo.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(path + Par.BrowseName)).ToList());     // popola la lista delle variabili di ricetta (tutte le variabili del singolo nodo)
 

@@ -1,4 +1,5 @@
 using UAManagedCore;
+using FTOptix.Recipe;
 
 public class TapioInterfaceLogic_R0 : FTOptix.NetLogic.BaseNetLogic
 {

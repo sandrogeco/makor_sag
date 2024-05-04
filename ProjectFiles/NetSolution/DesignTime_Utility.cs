@@ -4,6 +4,7 @@ using FTOptix.NetLogic;
 using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
+using FTOptix.Recipe;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 

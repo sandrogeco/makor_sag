@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using UAManagedCore;
 using FTOptix.WebUI;
+using FTOptix.Recipe;
 using OpcUa = UAManagedCore.OpcUa;
 public class DsTime_CreaAllarmiDaCSV : BaseNetLogic
 {
@@ -45,8 +46,12 @@ public class DsTime_CreaAllarmiDaCSV : BaseNetLogic
             Log.Error("Creazione allarmi", "Wrong CharacterSeparator configuration. Please insert a char");
             return;
         }
+		if(LogicObject.GetVariable("CharacterSeparator").Value == "tab")
+		{
+            characterSeparator = '\t';
+		}
 
-        try
+		try
         {
             bool wrapFields = LogicObject.GetVariable("WrapFields").Value;     //indica che le colonne non sono incapsulate tra doppi apici
 
@@ -230,7 +235,11 @@ public class DsTime_CreaAllarmiDaCSV : BaseNetLogic
 
         string csvPath = new ResourceUri(value: LogicObject.GetVariable("CSVPath").Value).Uri;
         char? characterSeparator = CheckCharacterSeparator(LogicObject.GetVariable("CharacterSeparator").Value);
-        bool WrapFieldsEnable = LogicObject.GetVariable("WrapFields").Value;
+		if (LogicObject.GetVariable("CharacterSeparator").Value == "tab")
+		{
+			characterSeparator = '\t';
+		}
+		bool WrapFieldsEnable = LogicObject.GetVariable("WrapFields").Value;
 
         int rowTot = 1;
         int rowCount = 1;                   // salto la prima riga

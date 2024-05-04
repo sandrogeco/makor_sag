@@ -22,6 +22,7 @@ using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
+using FTOptix.Recipe;
 #endregion
 
 public class CmbBoxAnnoLogic : BaseNetLogic

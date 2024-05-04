@@ -4,6 +4,7 @@ using FTOptix.NetLogic;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class StrobeBtnLogic : BaseNetLogic

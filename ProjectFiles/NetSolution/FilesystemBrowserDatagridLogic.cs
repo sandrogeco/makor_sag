@@ -13,6 +13,7 @@ using FTOptix.CODESYS;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 
 public class FilesystemBrowserDatagridLogic : BaseNetLogic
 {

@@ -132,3 +132,23 @@ Children:
   Id: g=d3cac29b84990d6cd7117325ce62b342
   Type: NetLogic
   Description: {"LocaleId":"it-IT","Text":"Revisione R3"}
+- Name: DBRicetteToCSV
+  Id: g=ca9ec9925391861b3233e6e4b86a2add
+  Type: NetLogic
+  Children:
+  - Name: DBToExport
+    Id: g=9f1419c895fad111cbedbaf20a93387f
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
+  - Name: CSVpath
+    Id: g=e73b8ae7b2dde63565da43f2317a2bc9
+    Type: BaseDataVariableType
+    DataType: AbsoluteResourceUri
+    Value: "file:///C:/Users/NRialti.MAKOR/Desktop/Test.csv"
+  - Class: Method
+    Name: ToCSV
+    Id: g=072a7958da790b275f9c349e805177cd
+  - Class: Method
+    Name: FromCSV
+    Id: g=8ec32dcd19d87a51dfdaa0294b555964

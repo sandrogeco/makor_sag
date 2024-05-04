@@ -1,0 +1,2935 @@
+Name: pdfReader
+Id: g=e8629934f3198363ea50b78fdef83c46
+Type: FolderType
+Children:
+- Name: PagMainPanel_R0_1
+  Id: g=7b66055e90236899bc9bd92b70e559aa
+  Supertype: PagMainPanel_R0_0
+  ReferenceType: HasComponent
+  Children:
+  - Name: Header
+    Id: g=e9719c0fcf6a02ef4626647a39cb3b43
+    Type: Rectangle
+    Children:
+    - Name: Header
+      Id: g=68dcfe819b0aa57ec1da1215486c335c
+      Type: RowLayout
+      Children:
+      - Name: HomeBtn
+        Id: g=818600f04961b0a6a30246fee57ed1e6
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: Enabled
+          Id: g=eae589ffed382304565b112e5561aa2a
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Visible
+          Id: g=ef125e31045c92c115baf2c8474d8e9f
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: false
+      - Name: Titolo
+        Id: g=4d84a20ff9d8ca0b38238e4452d10377
+        Type: Rectangle
+        Children:
+        - Name: Title
+          Id: g=724f9aa444af288a71d140d9ebf8f7d8
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=350fdd2506b167d313599223a3526903
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"it-IT","Text":"pdf"}
+            Children:
+            - Name: KeyValueConverter1
+              Id: g=2af840f09ce868727ab2131b3d991548
+              Type: ValueMapConverter
+              Children:
+              - Name: Source
+                Id: g=2363f19f51c005fd9f6e3e1c553cc22c
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=7ef428afce845a365890ad0c115c0d38
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+              - Name: Pairs
+                Id: g=b888aa92308e0b02bed83333592ff316
+                Type: BaseObjectType
+                Children:
+                - Name: Pair
+                  Id: g=a89a25d51f98344e594e152c09cde917
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=bd5c2bb7baad37b3be02be43adcfec71
+                    Type: BaseDataVariableType
+                    DataType: Int32
+                    Value: 1
+                  - Name: Value
+                    Id: g=e58a4888bf7ffe67877d9bb667ab56e3
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    Value: {"NamespaceIndex":46,"TextId":"Manuale Meccanico"}
+                - Name: Pair1
+                  Id: g=bf061fac7fb1351f8543f1a8c3d10c9e
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=ff1bf3d5e172cb5df7656b5b2a7d2234
+                    Type: BaseDataVariableType
+                    DataType: Int32
+                    Value: 0
+                  - Name: Value
+                    Id: g=ab4e2c5bba47514582cdcc872c391ea0
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    Value: {"NamespaceIndex":46,"TextId":"Manuale HMI"}
+                - Name: Pair2
+                  Id: g=77e435fedd81311059fb42a850706296
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=6874cd55c1e947ee7b27dde598351427
+                    Type: BaseDataVariableType
+                    DataType: Int32
+                    Value: 2
+                  - Name: Value
+                    Id: g=7937a78d766aab9d0cb355a824e54a16
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    Value: {"NamespaceIndex":46,"TextId":"Schema Elettrico"}
+                - Name: Pair3
+                  Id: g=b23f84017e72ba88a89a225e959ecc26
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=69e6fc6923504282eb72716b280f5c9d
+                    Type: BaseDataVariableType
+                    DataType: Int32
+                    Value: 3
+                  - Name: Value
+                    Id: g=84dfaf303324e0cb6c0a3df65f58f9eb
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    Value: {"NamespaceIndex":46,"TextId":"Schema Pneumatico"}
+          - Name: Titolo
+            Id: g=b912d0b127899a00142d15e22e27f7d6
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"it-IT","Text":""}
+      - Name: FwBtn
+        Id: g=f6ae94f5346c98d3050be1a2104b4b24
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: Visible
+          Id: g=92f5a7648b5bf6e8c871e3ab33c1108f
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: false
+  - Name: Rectangle1
+    Id: g=5e5e9385064aefd099294ba88c9ba3ea
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=ac8fdb4b5fb6401b8c75b7746018cf3d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: Height
+      Id: g=140c94d995fa87ed9b77c10a73c53c05
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: BorderThickness
+      Id: g=f5e3d6577a1f019333b8af186afe72a7
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: LeftMargin
+      Id: g=984c631c85c14a26901b71bb99727d25
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
+    - Name: TopMargin
+      Id: g=e498297d6cfb07b46361beb222de668b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 65.0
+    - Name: VerticalAlignment
+      Id: g=ecf5b9903b312d5d37803c7a19e675d8
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: FillColor
+      Id: g=4ef25685a4e10c61cf0a3dfb98be46bf
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#727374"
+    - Name: BorderColor
+      Id: g=ebe914e005d6e19de821332d0ea083a1
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#3b3b3b"
+    - Name: VerticalLayout1
+      Id: g=4376a1f302497b2fd892c27ca2c46291
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Id: g=0946caa1ba59cef975cb974aea840113
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Id: g=0c170ab1e41d62ffcd9eee1d43fe613e
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: HorizontalAlignment
+        Id: g=b70fec1d86e0ae6a2a21c799aa950374
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=117ff1ad8c986f2987808d53a26a375e
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: btnPdf1
+        Id: g=61ab49bd28797a4bfc1e0980350ccd1b
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=4288777f3e9adad62316bcf9d59ad693
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=5e4003ebd189d833b99a2f5dbb991169
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=4920d9903dae57b0591ae16c1a6e2a00
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: ImagePath
+          Id: g=c9a406682fe731d31fecacdc69007943
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=6f93b4cb4c6e45901df46d65a8c87399
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=819ab35a71c7cfa39623e943af92dbde
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=96124e99b86957481ddbadccab91992a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+            - Name: Pairs
+              Id: g=f4cca610dc4465bbc288224bec16299d
+              Type: BaseObjectType
+              ModellingRule: None
+              Children:
+              - Name: Pair
+                Id: g=ac79b3412a837a55efb537e0c64d473e
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Id: g=c6dc9d0a4faf4b32781e6acd9c4f225d
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 1
+                - Name: Value
+                  Id: g=f08f0635ca20d81206fe6f62d7292439
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  ModellingRule: None
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManHmiOff.svg"
+              - Name: Pair1
+                Id: g=af2b80460bd2ecce406f8615ab011c13
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Id: g=482898dcd8ec0eba70ee8f2ccb64abc0
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 0
+                - Name: Value
+                  Id: g=a0836b4b44b1be1e02ccf0c24bbecd62
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  ModellingRule: None
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManHmiSel.svg"
+              - Name: Pair2
+                Id: g=790b1955338764a53c2aee17a1ad40a1
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Id: g=031ad94610c0d8d0a86f95a7109a72d0
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 2
+                - Name: Value
+                  Id: g=94216c341b8a78a939230cf62d4d885b
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  ModellingRule: None
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManHmiOff.svg"
+              - Name: Pair3
+                Id: g=ca12e830bb1ebe57a381e7d9b681e696
+                Type: ValueMapPair
+                ModellingRule: None
+                Children:
+                - Name: Key
+                  Id: g=63233e001814fe69e333c98654846ca1
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  ModellingRule: None
+                  Value: 3
+                - Name: Value
+                  Id: g=89eee25a133944008e42f6eb14badee9
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  ModellingRule: None
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManHmiOff.svg"
+        - Name: Text
+          Id: g=ad89200fad288e760e0efe2fd6a57d32
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=86fb8cc9ba62b5e4e4b1b8fca136b9d6
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=03db3f83d88bbbdc685bebdbd789adbe
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=ff50876d077109c0765149840a34b082
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=fe5e6bd0c1dca9793b9159cde3e29106
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=f2095374ef9ce054cbdf198ec31ff5e1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=94dddb4c9e4f699ed204f189c2db0db8
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=a661f29e1512bed75e9b3bcad00c0f13
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=ce3b02315bdaa1437c33b159f05bff87
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=b4fb90122d8c8f918100f43b0f364be5
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=255307977d07349d03061036d96676a4
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=bab4f728f1c7d7aa2f36c1fc462abcc3
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=aba9e813164c30c77c1409c786eead35
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=2eff2e4fb6539fc8f7b23c6847103b89
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+                - Name: Value
+                  Id: g=82b52279951250a4a8d241df366d0edd
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 0
+                - Name: ArrayIndex
+                  Id: g=d74e1efd00860786ac7810c432feed89
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=0ef6acdf33162558283665d27f5828e5
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=8954a1d250fa234fe75b9eebdca0e213
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=41461c39f121c17527192d927b9de509
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=0924b355f014137a1b6a118a6d783e7f
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=b5b2ef61860a97df534543395ac26602
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=cc21a10a38d8e59018082c8db6814ceb
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=242a23787e16ec3432ac839263ef68e9
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=9b75ec97ee072046ca6bd61c3a6a3ecf
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=547189da81d5f043b03a544bdb035d0f
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: btnPdf2
+        Id: g=e45a728084f3003038e09afc5eed6669
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=fa1fc3458f53b31fa075a048dd44006d
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=d3be5f9fb74c4982ccd9460fbae09782
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=42c3c5e6cd15cd9e0bda1b30dadbc5fe
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: Text
+          Id: g=4df480848bd1266910d9d0797edcb7eb
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=c8b041f217995177922ed5d4d8184f5c
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=1a438cdca64735f12cdcbb1988c0a294
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=3ba28570e7b35a6c297b5008e5e931ae
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=31fbe447889a50f3fbda143c880b7d08
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=df9c27097416140a56f374d00b9f2515
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=af57b172d1e9200b457f6bf92c496803
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=b0026470f897a37ef165d83458373d64
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=d9f7c30e4e0585f18ecbb7944321a931
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=080ac811a553a9f6e9d3334f04b11869
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=ff5f7173b54175b5aa5a992caf1d6b88
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=7c52f1b4f7ddf988e59f455da892a62e
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=7618794d9ea7a07738603777e9e3709c
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=99176139ad2b68a628fcc2229441885f
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+                - Name: Value
+                  Id: g=81667940bc49149f0254e55346939e57
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 1
+                - Name: ArrayIndex
+                  Id: g=a52754cd0df28d457ac8976306c4e33e
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=c1fc85af4a1085fb04dd29b25c83cd4f
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=f0999308c7d0ee47770406334b3de853
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=5acc26225304f97e4fca4f14dcdc27f5
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=31a8377f5a5333bac9c5ba3dfce8fbd4
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=f0216f4d1407f68f1ab9af8b4a8762bc
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=79e08c8f4f1f3a3d05ad3ce8f49392f2
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=4e51c2a642a41e2c2745ff5be42630ba
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=9e4a6c651d469e36775b0a5c52120637
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=0c78eff51b09023278385a3bfe92e2b2
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+        - Name: ImagePath
+          Id: g=70c0491daced2bfb6b2d3cac25fead12
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: ""
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=d42e526240b236a0dfafbb029dcc4643
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=8f102f1104a6b22cf72c7891e3c947d8
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=ceb8fe6a1c36194b68a88cf01828e874
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+            - Name: Pairs
+              Id: g=eda3ee4bdff085788f97e68157317c81
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=5e7958f10e938baba683bacbcf686c73
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=b5b747150176870ea350b60254c2e79b
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 0
+                - Name: Value
+                  Id: g=2b4df6ca7f35ba3c9ab6276221a9b323
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManMeccOff.svg"
+              - Name: Pair1
+                Id: g=552d2a169bc3b72cd5250cf020e70dff
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=7e5c5d8f775ae5723e0f7b2e3f4ea92c
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=649a9436e37fb35fc051eacddcdc3720
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManMeccSel.svg"
+              - Name: Pair2
+                Id: g=5020228140d36ecab0dc5c4b7c6651f2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=7c7ca1bd6d3f95a7094ca8cda499b880
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=15ad84b008a4555560dabd6731e2b3f3
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManMeccOff.svg"
+              - Name: Pair3
+                Id: g=9010eab4775c134ad00aa402a5bb9197
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=9060d34607d7c0f35d1e72fb47b97ca9
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=0b22a77a9f011d961f4ee00785fd2de6
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsManMeccOff.svg"
+      - Name: btnPdf3
+        Id: g=f9ac11524fd1d88a6ad6c4297916b253
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=4dedb4bb66b5d46b88919f3f1b0227e9
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=3b129d433829d99319119cfdb0aa8a5e
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=17dafda7d13524f15d8fecf47c475e6d
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: ImagePath
+          Id: g=3edb53569128b75674525b2e6d18923e
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=c3abccde820a764b4ee871547956b8b9
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=881904e30fba79237e4da37b0b8f5648
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=4deb665a3e5541c8bc9df07937311be7
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+            - Name: Pairs
+              Id: g=ddb696e0bdf1514204b8097dd212187c
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=33a9cd0d4a871aca57d896cbe451abe1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=0a4144dfb4d89b5ff18c2955d3a1ec59
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=2970931b9856f7d1d37c75a4b8cd553f
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemEletOff.svg"
+              - Name: Pair1
+                Id: g=653e5f4b0ceb5b3416d615b3af5fd09f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=49c8455dcfe4a097ab0d5a7b0c2e78fb
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 0
+                - Name: Value
+                  Id: g=651fe3866230200e083a0363bc897122
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemEletOff.svg"
+              - Name: Pair2
+                Id: g=aaacb4f5aaaee284ee8bf2228ad5410f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=ac9e884564b48bb42f4c0d6c5fd60d44
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=9dfc77493d0a4f0aeb6a55ea884795d0
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemEletSel.svg"
+              - Name: Pair3
+                Id: g=e9f71ba9dcb335a01a58cb5bffb4bbe1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=7d3c7519e718db90197289dcc2306970
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=83fa32bf6cedac8941b5cb0dc5ecb964
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemEletOff.svg"
+        - Name: Text
+          Id: g=6df845efe3c24093a0083d151ad6fb21
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=7f897ba94084b07c5c81341751b4003e
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=4ad7cb1674d9854d890eec124f85e672
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=ee8817c5bb57702608503ecf09005b9e
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=3b68528623ee89e2e506bba8a7c92d51
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=d656795faf682c068af4604830e98e2d
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=2950bb77d7523ac24ac7e3a72880f191
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=3a3f2cf378597a1da9ff0e7fdeaf0775
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=b685338b8fd65ca9bd325068feb1c1a1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=85da87de14fa5ccac724630bba6ad18b
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=0d7fb98596de68fd2fef2593003fc78d
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=4f2a3a793677af19e26c7d6326d714b9
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=302c55b0831e899f7820b6dcfd831f05
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=6c5480aa0bffb60b8b9ef493f1a5775e
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+                - Name: Value
+                  Id: g=a9e631f361c25a0c7df5e69e7917f91c
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 2
+                - Name: ArrayIndex
+                  Id: g=ea2d81e28974cba7189c2da5fffd8ac9
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=696f7a38dd8997e9cea17a78116042cf
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=45655f1853dcc8570c7d0916891094e0
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=b6a69844a580d3e172f1fb2dbc453930
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=7e5a78e6d53aa0466e067691514e7537
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=94a43aa4d80ada724910c373187a0589
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=ca751f873365363c9bc6612f60f0dfb5
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=50bcc421a7adaed6fbf4a39bba208170
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=4b2e8344ed324499da7647ff62ad29ff
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=7d4fb95ce6e3f72a06cd1dcdb081e230
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: btnPdf4
+        Id: g=5c6c3c0421eda25a8b69fa910bdc281f
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=72eeb923be65f6f764352daeffff832b
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=4739e9b28a5f69b50f808ea8b8843414
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=476697ebb33ab1381e67e8cb09ea1723
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: Text
+          Id: g=604fff844924505807701c84d9f87964
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=174991827ea33e2d4c079d7ccfe93f02
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=751c9ffd1f5cdb17c5796ed7881eb05d
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=d0a55e9c035db56dbe0e8953fa8b63eb
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=5fea91f15e151efb9b26e363e10b71d8
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: ImagePath
+          Id: g=0bfcf0837e9eb31dab68afcf74b6c86e
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: ""
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=74666757a0f9cd32739c4973b9405977
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=c5ebd25b606e0e90ee5ec3df3cf8aed9
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=e88ae1206423c08d93cccef4e2a2049a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+            - Name: Pairs
+              Id: g=1a4a642a4e81b035d40f4282468a21f5
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=a744bbe0676c18c47b4e27edfd49890e
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=6d814bc26cef8d4aacaa5ede153ea1d5
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 0
+                - Name: Value
+                  Id: g=d941f64e1ed5e714ee276ea2ccacbe7d
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemPneuOff.svg"
+              - Name: Pair1
+                Id: g=d6552db6ba2f0d18317231bcac1c1c82
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=2e5fa92c9d49c60611cd19239a41bd52
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=6f504f353ebf03874284fc370b3adc64
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemPneuOff.svg"
+              - Name: Pair2
+                Id: g=18a88ed49d13f9a785b1ff7a3632d007
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=b8b9584747eccf2f03208ff14536f9b8
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=2bd4fb1e5ae45d43de91dbd615861c22
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemPneuOff.svg"
+              - Name: Pair3
+                Id: g=6f9301a82dfc68b28e878b08762087b3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=75efd36f8e274b9ebd72b6c214eac477
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=54a4bd394c097786a29f6789f52a1623
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPdfSchemPneuSel.svg"
+        - Name: MouseClickEventHandler1
+          Id: g=512fde7aa4435020f3dd202457c08dc7
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=08d24196770282c69e6696cc98717059
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=80db81caef76cb99f138aee5bcff06a4
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=1ec986bef49d2c3de7760c316e009b81
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=99b13af6ba56a98b159bb44c1417298e
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=1074ad7c2714ea12ee2b367e1dbdc820
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=28588d0b114a916ea0767d6a7342847f
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=2d678012f015c68ec27d420518d1e811
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=3486e3d95ae5b683d4797990cac594e8
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+                - Name: Value
+                  Id: g=c3a208ee9329e2a3f278eab63632b17f
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 3
+                - Name: ArrayIndex
+                  Id: g=00762d9b8367a516ed58ab15b8081dbb
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=e834ff27a8740693c5be95dddce1eb33
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=ee12bf12f634bea423c48752b185ce87
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=72178e53f059d63a1d4a8613c8dedced
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=c05c35a1375c6537660b637d6a1d20fc
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=659158376e7227d6fc5959862cb9519b
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=b368065e457f986b08118a6aa19244c9
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=5f05a7fe722f511c6b0d97bdd9f2b76e
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=beb22e299f9602e3fdc19e931da29191
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=28c083bd53c205c1014adf6c6d021131
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+  - Name: PDFViewer1
+    Id: g=87ad9876d4936d1061de78ea406f3308
+    Type: PdfViewer
+    Children:
+    - Name: Path
+      Id: g=f6fff351977612226c455e562bdea922
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: ""
+      Children:
+      - Name: KeyValueConverter1
+        Id: g=58dde041e7772c46d353b545a5a7dcbf
+        Type: ValueMapConverter
+        Children:
+        - Name: Source
+          Id: g=c8d3e18f1b9013bb1a518a11de6cbb40
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=caa4b26247b5312af6a50712473ebf83
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfSelector"
+        - Name: Pairs
+          Id: g=9244d97524d3f0741d4f36063817aeb7
+          Type: BaseObjectType
+          ModellingRule: None
+          Children:
+          - Name: Pair
+            Id: g=6feb1acb6dd40443a4b3ceb677471a86
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Id: g=f0962668c15575ec2c15ad63fc41fbff
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ModellingRule: None
+              Value: 0
+            - Name: Value
+              Id: g=85e670c4afad63e6010bdf9dd1abcf34
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: None
+              Value: "ns=46;%PROJECTDIR%/pdf/Manuale HMI_NEXT-ONE_ITA_Rev01.pdf"
+          - Name: Pair1
+            Id: g=5bcdfd41cfb64691c76b051617c64bce
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Id: g=39aa211d107f1bb685f7889337b89052
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ModellingRule: None
+              Value: 1
+            - Name: Value
+              Id: g=70d0ea3e2d7319b6e0d4234fc24fa80a
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: None
+              Value: "ns=46;%PROJECTDIR%/pdf/MnMec.pdf"
+          - Name: Pair2
+            Id: g=2f84de524eec01f8217088e4efdb2702
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Id: g=509c50acf667b61abc697401e058216f
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ModellingRule: None
+              Value: 2
+            - Name: Value
+              Id: g=a91db2dec478b81b1411be264867c569
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: None
+              Value: "ns=46;%PROJECTDIR%/pdf/SkEl.pdf"
+          - Name: Pair3
+            Id: g=d573412b871ce906d2fbac75d2c9e119
+            Type: ValueMapPair
+            ModellingRule: None
+            Children:
+            - Name: Key
+              Id: g=71d7df21fa62ad83014069026074eb25
+              Type: BaseDataVariableType
+              DataType: UInt32
+              ModellingRule: None
+              Value: 3
+            - Name: Value
+              Id: g=a640f44762753d79510df844101d838f
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: None
+              Value: "ns=46;%PROJECTDIR%/pdf/SkPn.pdf"
+    - Name: CurrentPage
+      Id: g=05642e26a565eb6bca961adf9f554bde
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 0
+      Children:
+      - Name: DynamicLink
+        Id: g=fc2ba46f8d83bf9b2ee5a624b9ab2194
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfCurrentPage"
+        Children:
+        - Name: Mode
+          Id: g=3b7920d1f3ed1dfed322560bc73475cb
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=3d0f849f3b59ac28e514c7967bde4da5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1449.0
+    - Name: Height
+      Id: g=611ba9bc0dfe51ae70467236cf23d1d1
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
+    - Name: LeftMargin
+      Id: g=06a08b255577df33ffccc9a9bb963aa4
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+    - Name: TopMargin
+      Id: g=a8246e4197e15c69a8867c5c55f838a2
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 75.0
+    - Name: VerticalAlignment
+      Id: g=91a892685326e4d8fc9bdde5d37397a0
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: HorizontalAlignment
+      Id: g=cd56832e414f06da137f4fe84ccd511b
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: RightMargin
+      Id: g=1b249883ef52c06a0c902839647fad5b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 145.0
+    - Name: BottomMargin
+      Id: g=774397b39f708cdaa1b30e8542412436
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: ZoomMode
+      Id: g=f845b12192210e5e861f10688c51a4a8
+      Type: BaseDataVariableType
+      DataType: PdfViewerZoomMode
+      ModellingRule: Optional
+      Value: 4
+    - Name: ZoomLevel
+      Id: g=7d9a44e11106e2e47058dc402fe5e5be
+      Type: BaseDataVariableType
+      DataType: UInt32
+      Value: 100
+      Children:
+      - Name: DynamicLink
+        Id: g=f1cb3c64f3371ca9990afaf744552b54
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+        Children:
+        - Name: Mode
+          Id: g=5f74aab7ee80d2d78c00501e09cc4923
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+  - Name: Rectangle2
+    Id: g=1891913df7aaa99baae7d7b6727fe283
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=c8be7598e309ea7b7ad87ce54462aa59
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: Height
+      Id: g=bb048e017e327c88754cadf6089d96d6
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: BorderThickness
+      Id: g=4f3426211967e24b332600c342402c4a
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: LeftMargin
+      Id: g=c9ce6fd2daf6b735b6e797b67c3e6f6b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=72f1bc02af2deaa30c41108eed6659f3
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 65.0
+    - Name: VerticalAlignment
+      Id: g=070be3d6272d046493fb002691bb4907
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: FillColor
+      Id: g=2804094316f6e846ef41260bb9a1a0f0
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#727374"
+    - Name: BorderColor
+      Id: g=86f2c652d583e1dccbe8ea73c1a46f75
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#3b3b3b"
+    - Name: VerticalLayout1
+      Id: g=95add0e2286f176f6fb8a696ebe7a605
+      Type: ColumnLayout
+      Children:
+      - Name: Width
+        Id: g=b038a7f58ae9e86c04f188cb2d754f00
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Id: g=3dead6be4ab0938504664529dc198fa0
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: HorizontalAlignment
+        Id: g=5b2af187a5c8c61d688eba018f0205c8
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=950e00c31fd4f07f97b4a08c0a30c8a8
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: 'btnPag-'
+        Id: g=d39338e2a46a311911f045c4159aef62
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=2bb6dbee2de11b4b64acb901d4cf5f7b
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=6cb7d7beda40dfaf2a3c85c8535245fe
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=5d5577a76afc1dd8decbf6d95e3aee4d
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 65.0
+        - Name: ImagePath
+          Id: g=cb8138b0a7a151071d03de2f25c1fa39
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPagePrecOff.svg"
+        - Name: Text
+          Id: g=b1e508c366eb2996bf3f052bbb99d53f
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=6416505478ab5b93879c3c9613b3f411
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=fcf82bb956a59c1060b50edf7ef5e690
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=a6abce8cc896e0f1afff18b95320fa9e
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=2d302d99bd7048c5031e6f8414bca382
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=bd9cb1548da608840442d56238523887
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=c3fdf7ed1928628c4b339ddaadcd0b78
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=412e75f3c842689dbd5330b2a0b1de4d
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=b2eed0bf4c293c19bf912d522dc5359e
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=5338f69ca7f06e13be74564c02151408
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=89ad9eb4c1c21e5a66649367a0c52b5e
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=dce564cfbb4a8cd852e3f916ffd656e9
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Increment"
+              - Name: InputArguments
+                Id: g=fbc5da0c9ebb0f696f77ef41e319bb59
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=06ede1023cb5a6c09870b0f54e5ebbe8
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfCurrentPage"
+                - Name: Delta
+                  Id: g=3b2882de7912f98d5c62f096c7316ca0
+                  Type: BaseDataVariableType
+                  DataType: Float
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementDeltaDescription"}
+                  Value: -1.0
+                - Name: ArrayIndex
+                  Id: g=4e5c6ea0d24a0a92052c9e5934398069
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=7784fab4a6addfbe529192573aa67bdd
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=4b192d1cc72d9ae19d032c308cfed99f
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=2fcb7e5eac6f30cd2c56b1ca5703b00c
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=4900727b595fe02a88463edd45c81d86
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=53df2e44a858afbafb5c428e4de492af
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=4b19482a244291d8eddbed2bb92a30b5
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=10c3dd3293cdb5ae0ebd75d7910fec3a
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=71961286f6e0378f02ab640799ca6ab9
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=33e8a2b2266e1f4f39a2e9c151a110aa
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+        - Name: Enabled
+          Id: g=df2a60aa7a5da27b6838440e69db343b
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: KeyValueConverter1
+            Id: g=bd4c6caf0d600d3d272bc1e7a7330d6b
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=6e88ccce8c9fe950215a5ddbd0401d7f
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: ExpressionEvaluator1
+                Id: g=eee10e9f1a410ff521ca5c722f01eae5
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Expression
+                  Id: g=c79ff0d1c58b3753b372340fca2e7db2
+                  Type: BaseDataVariableType
+                  DataType: String
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: "{0}==0"
+                - Name: ns=9;Source0
+                  Id: g=004cc8dd8ef6f68fb2e77c339849a2de
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=4fbc6e46b2ceaca39d729d81e0f831e5
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfCurrentPage"
+            - Name: Pairs
+              Id: g=e0163de8c140bc3715087927c8f7c2a5
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=402428637ecd48a7ddbd31e02cbe6e1b
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=56021438ccb4aaedefa86f2503366698
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+                - Name: Value
+                  Id: g=863e151e500e31743ed19870d2c407c4
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+              - Name: Pair1
+                Id: g=798bb35d51360d828543df0663fc070f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=d3c72b230b1aeb9519dd3b84a2ec6439
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                - Name: Value
+                  Id: g=0d402a64bea35b49d9ff337382563f84
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+      - Name: page
+        Id: g=17ab80e77f4d52c2aaa8f1a1a6ca7171
+        Type: TextBoxScaling_R0_0
+        Children:
+        - Name: FillColor
+          Id: g=981b332dbdda797f9d3dfa87574d291c
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+          Children:
+          - Name: ConvertitoreChiaveValore1
+            Id: g=5dacc3a49e69e9250ebae133d9f75787
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=526054ca9d15d40931a076220c9281d1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=62b489ee936919728f92bc99e27f7b63
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../TxtBox_Abilitato"
+            - Name: Pairs
+              Id: g=92aab6fb382e101453e002bb7caa088b
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=24de19d8f5479aeea1c33435ddfee7d4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=e16a494def17328895781e57073bd325
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                - Name: Value
+                  Id: g=10693910ccc790fab9e5659d2b10c2a1
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#bebebe"
+              - Name: Pair1
+                Id: g=498e72abf93ee9d2324a0c35226c5ce9
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=434cc8263ebe5068a82952792896e16b
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+                - Name: Value
+                  Id: g=5bf59193818c200b37a1cd0996399730
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#ffffff"
+        - Name: HorizontalLayout1
+          Id: g=53181516b16b9d8f7489e741776be9c8
+          Type: RowLayout
+          Children:
+          - Name: Val
+            Id: g=f17f3b51b1d3d3acd5de1f5ecc021d24
+            Type: TextBox
+            Children:
+            - Name: Text
+              Id: g=b0800f0a6b2bc9a62297669a1925812f
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Id: g=0e8cdf788fd8f8f16bab01a4b3a18faf
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar"
+                Children:
+                - Name: Mode
+                  Id: g=8a710a47f4a648441f21b579bad3af30
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Id: g=f79b39ed3c93cb6a0ba461e456ebc69d
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+              Children:
+              - Name: ExpressionEvaluator1
+                Id: g=2802aec4de7c17fb1ddd8812218005fd
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Id: g=82f52cc25a1ffa749eb3076f43832425
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=2d30bb4b917cdce101cffc1037c872a6
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../TxtBox_Abilitato"
+            - Name: TextChanged
+              Id: g=d6149b4aa444dd179b8cca4f0d8a1a8d
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Id: g=28668369a3f9e3cc06fbdcce217f6df4
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+            - Name: FontSize
+              Id: g=7f1a8638c9fb11b0301bde0dbc74b56e
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 30.0
+            - Name: TextHorizontalAlignment
+              Id: g=ed5c6a23060ab11bf027427fbf26fb97
+              Type: BaseVariableType
+              DataType: TextHorizontalAlignment
+              ModellingRule: Optional
+              Value: 1
+          - Name: Unit
+            Id: g=f069f497269f4f8275931de05646f033
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=19f9e726fb597256e56526bede35e961
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TxtBox_Abilitato
+          Id: g=c91ccf59173e1a228a84ac06b1bcf9cf
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Var
+          Id: g=2392c585275c212abeaedf7bd3c73f3e
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: DynamicLink
+            Id: g=4d0df1cbd6ae5aed380be0615fb9fcae
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfCurrentPage"
+            Children:
+            - Name: Mode
+              Id: g=bf25a20a1ca7993fb393579415dbaca3
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Id: g=129a6ff2e08891dcffeff6b4a392767b
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 1.0
+        - Name: DisplayVar
+          Id: g=470a27bf1093ea7aa9db4dcfb39937fe
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: EURange
+            Id: g=fe15413552668a776c6569b0f8e1a663
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Id: g=a89aa949523915fed6a46072e4b360da
+              Type: BaseVariableType
+              DataType: Double
+              ReferenceType: HasProperty
+              Value: 0.0
+            - Name: High
+              Id: g=3528a8a2d04519984bb75da1cc3267d6
+              Type: BaseVariableType
+              DataType: Double
+              ReferenceType: HasProperty
+              Value: 3000.0
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Id: g=a4a13789d248a2d4f6c04b7ebf83ef6b
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Id: g=4c62a6b22ff9b68ca8118bd5ea224cd2
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Id: g=a134fbc6ef65868188dd846fffdbabc2
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Id: g=a5cdb89d9f8afeb16f2a09688c0cf1bc
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Value: 0.0
+              Children:
+              - Name: DynamicLink
+                Id: g=eadb4fb24e3136afc7b729f628f11234
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+        - Name: HorizontalAlignment
+          Id: g=9cc14603cf0d29f7f6b1944d75a4cb57
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: LeftMargin
+          Id: g=912c1cfb9499d70f65e661ac064356be
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: RightMargin
+          Id: g=b46ae8f00ce114b2224154070bfef579
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: TopMargin
+          Id: g=b7776897da7f8a825ebc89d473786310
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+      - Name: btnPag+
+        Id: g=89ddff6bc4786970ac49bc2f20628ace
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=799b56977c57741ce206048a88e2c024
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=95764ed5d5281e30af061616e781dd56
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=56bed172461b8357c5b9fe897ba45d95
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: ImagePath
+          Id: g=e04ece3e3dd0c4228fc12bf8a0350dae
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsPageSuccOff.svg"
+        - Name: Text
+          Id: g=742194c74ecc8ec0ad8d707222430074
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=d6df201718608f8e2b3ebdc593d66df3
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=54f263ae2b4b2091e2df6966c57a09b5
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=fff9ddba05e76c780a837b60d2f8334c
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=3f5d0cf32b004489d1792e46b7f67e12
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=8244e3be48c4a1550ecfc49f311cc58f
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=203b50134e82dc6e9158db471203e8b0
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=f7e5bb8756fe03e211a43e5b10f13f87
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=e1303bde9a02e6dee6c5fc3f21061eff
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=73ef9b9460bb51d633555dbd304b0b0e
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=bd574b59594eefb981b5bf863418433b
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=9ceab5245d98c78033ad2514c7160ada
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Increment"
+              - Name: InputArguments
+                Id: g=13590d4004029c651e6999bf59f8d65c
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=fae70d77f1dfe7e1377fb498ac9b4d7b
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfCurrentPage"
+                - Name: Delta
+                  Id: g=cc44bf0118199e232b845f03d886e406
+                  Type: BaseDataVariableType
+                  DataType: Float
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementDeltaDescription"}
+                  Value: 1.0
+                - Name: ArrayIndex
+                  Id: g=16267b0b9aa904b7530e82d6c3e9569c
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=66eb659f0905b8ebc6c80a454364f62c
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=5de9509a8ea220f87d83a9b930ff150d
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=2e145a6f10d1fd47c50234d9bcc37b96
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=9d75c31fdf64faa202a8ae9421286b9c
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=f6d122f5a36869c6bc9d1d3cf7672530
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=e278e0bde6b1efbf9fe9d326024d519d
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=130875fe403123192098c2700176dcef
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=8a8cc75d1bf76bfa577fa50a78cf4c85
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=4dad7192075c76f31dbb7449520e8a94
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: btnZoom+
+        Id: g=98cb9771eb26e66f2fd0980273cc6517
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=c33c6725ae3c865848de167f48767cda
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=ce23a8ab5a5fa6623ffdf1b413fc3835
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=71bd093e6ee8c3d1d5db42d73370f202
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 65.0
+        - Name: ImagePath
+          Id: g=4579876c75e3ac21294cfdbdeb5cc541
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsZoomInOff.svg"
+        - Name: Text
+          Id: g=e44fa22c4870ad8d3a8ec477024ec61c
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=f30a29fc057e296da5309db08eda933f
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=16b48f34205a7fc3f0b6c09be950ceb5
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=35b221ec9e15ea72da0141dbedc0e972
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=38438afe0ff99d67f053d18023cee646
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=62dc31c92a872432de11f403b7bd5af8
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=b8fd36e2ad768c51e2489682f1ad7b8c
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=ea00aff17f2f74c7a9a68dcb2e2aed2d
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=617368505f792de4744eb8381c3a1a17
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=d52ba29c5a435bffd93456d3aea8b0d0
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=8fcf7007cca0d2be70adb44cfc18e968
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=c9af3cc7b34bd147dd702c0d5f4bd745
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Increment"
+              - Name: InputArguments
+                Id: g=ee5bd1df1efcded3459684dd6e788acf
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=99c1af871241ebd2a23cda1b252ca8b4
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+                - Name: Delta
+                  Id: g=ab8c9ed64930f9aa8ec0c334e8b2526c
+                  Type: BaseDataVariableType
+                  DataType: Float
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementDeltaDescription"}
+                  Value: 10.0
+                - Name: ArrayIndex
+                  Id: g=1b00f09dcf90a7cb163a9300da649715
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=b2eeea2ec9ded86a64384399fc1793ce
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=41c2eb54799844e6abc898e220a50ff9
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=f77a708b4f48bf19f9eff3e1eac740b3
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=766f398de70c9cea3dc146f3bacdd93e
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=40d38b7b5c9ae09e5326cbf7190d321a
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=2312ca2ae146c482b74c26c6d6696e64
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=3944c62a3b7678b56371948a9b82bfd3
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=a7916e88560f0600e0f6d901aef599c4
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=60581bf603513b11628a19d0c510fc1c
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: zoom
+        Id: g=c4715ce84ed9adc188ab8a55bce5d205
+        Type: TextBoxScaling_R0_0
+        Children:
+        - Name: FillColor
+          Id: g=d0468aab270740b2c497a6aca7c1147f
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+          Children:
+          - Name: ConvertitoreChiaveValore1
+            Id: g=454c5c6519c1b1548579d4206c0c7117
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Id: g=c2bd78d64687873545232628ef758807
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=078f4e1f8a15ca67417eff126faf6a02
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../TxtBox_Abilitato"
+            - Name: Pairs
+              Id: g=316c9f95578724091697163ec73e2b29
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Id: g=0b93f760746c8f725e578bdf3461fbaf
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=88c5be81c8576d45bb91b61beac3c100
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: false
+                - Name: Value
+                  Id: g=62ca63ec471a9d940df5e7169ffc4f69
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#bebebe"
+              - Name: Pair1
+                Id: g=fcf8295b7ce9c68d43f081f0a37e3d04
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=d4a0b953b721163a49e9ea9a90abd58f
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+                - Name: Value
+                  Id: g=004dd197527a97692c192e497387d60d
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#ffffff"
+        - Name: HorizontalLayout1
+          Id: g=41b38b9b3a079fa914dd16f0956242cc
+          Type: RowLayout
+          Children:
+          - Name: Val
+            Id: g=0ea8de260f0ef1120ee3f3c94669dda5
+            Type: TextBox
+            Children:
+            - Name: Text
+              Id: g=bbe73b4e806079e627968f7017c56a9d
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              Children:
+              - Name: DynamicLink
+                Id: g=0da501a52f3d361280ad3f69991308ca
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar"
+                Children:
+                - Name: Mode
+                  Id: g=9660a84e30167cf97fc5d51adda3d5d5
+                  Type: BaseVariableType
+                  DataType: DynamicLinkMode
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Id: g=a2b5d8f9a6b8f161d37e41aea1beefc0
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: false
+              Children:
+              - Name: ExpressionEvaluator1
+                Id: g=098d14a77ac14a4b8c342453662f9b53
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Id: g=d4df453a93801a30f5685abcaf89837a
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=31aaff6ef0e04316b5905e9431f032d2
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../TxtBox_Abilitato"
+            - Name: TextChanged
+              Id: g=112cb863c84268b5cef180ba87c1eacf
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Id: g=2b1bc23043677f22591767288868b171
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+            - Name: FontSize
+              Id: g=24daf161c1661afa77a909b0a8bd7619
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 30.0
+            - Name: TextVerticalAlignment
+              Id: g=ab5636b3ff160f33c422e6e192228774
+              Type: BaseVariableType
+              DataType: TextVerticalAlignment
+              ModellingRule: Optional
+              Value: 1
+            - Name: TextHorizontalAlignment
+              Id: g=5d059fa3a2d5e960aadaaea07b26d233
+              Type: BaseVariableType
+              DataType: TextHorizontalAlignment
+              ModellingRule: Optional
+              Value: 1
+          - Name: Unit
+            Id: g=8168c60c5a260695b1e6e7634ab9e30a
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=e41b51e6b86758d157251f500e617f4a
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TxtBox_Abilitato
+          Id: g=515492bf7f9f6622649d26fd7ba0e632
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: Var
+          Id: g=3ebfd2b42b9bf1b155c04863ea1cff1f
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: DynamicLink
+            Id: g=2f4cfee79016e64836d9ff929b1cbbb8
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+            Children:
+            - Name: Mode
+              Id: g=94d35530ec85ec271b3ee2d368673ac1
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Id: g=c78ddaedcb0305bd7ae6d0489e79a2a7
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 1.0
+        - Name: DisplayVar
+          Id: g=cb539449dd3b2111aaaddcd05dcd3bdb
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: EURange
+            Id: g=20b02108d7b3a86b3144087f8bc2f678
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Id: g=79b376899d405ce89d23f1b3eb8c4cdf
+              Type: BaseVariableType
+              DataType: Double
+              ReferenceType: HasProperty
+              Value: 0.0
+            - Name: High
+              Id: g=c2864f28797d1ab021ed71500144bf36
+              Type: BaseVariableType
+              DataType: Double
+              ReferenceType: HasProperty
+              Value: 3000.0
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Id: g=cc3613df620368e05e07d15a0fd809a9
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Id: g=71e109f2b6f5060d45056834fe666e9b
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Id: g=8669613432a892929e605e3b13ea9d79
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Id: g=aa2df430fdb2ea5b1301ea955d1a83d4
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Value: 0.0
+              Children:
+              - Name: DynamicLink
+                Id: g=5337e0be298cdbacbb0e41cad6820ceb
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+        - Name: HorizontalAlignment
+          Id: g=102cb9613503e8177783f9984b6d76bf
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: LeftMargin
+          Id: g=33ef283f3b04663ca5537a6cca629cf2
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: RightMargin
+          Id: g=16f6956d6fc72d988d9a38dbb285ad72
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: TopMargin
+          Id: g=cca0dead26ab4d1b0eb5d7939a22ec97
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+      - Name: 'btnZoom-'
+        Id: g=b6c858e5a181d9db93e587d168134b4e
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=153da3e387ce5423d5a858973cff18d6
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=db970d12c52bfcd7cbf946cb1e91bdf8
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=c9031f5d310ec10b51104f18cacdc0b9
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: ImagePath
+          Id: g=02194def83088bc5d11a7e1c11bff356
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsZoomOutOff.svg"
+        - Name: Text
+          Id: g=10565a285560a34b493f4315bdcc43c8
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=7439f7495056efb2320dff5c4088acf4
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=e43069935c573215ad46df732518ebb3
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=92702da045eab6260dc2a38325864e22
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=d8d4a23b65dc38f7e34b23c600448f81
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=a671e2b8dd8973786b3ac839090c71ba
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=1b1cf78ead4c33537bba315d85e167c8
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=d9d64cc3cb4f5783f9c797fee50540e7
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=28cf63e080ad1404bdedcf6fa412c6a0
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=e0ecdd892b06fb6aead01a02ac17da66
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=c59db7863f418c9e17ca8eb2fae3617d
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=c2d07df343894850ce1bcddb09f061a0
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Increment"
+              - Name: InputArguments
+                Id: g=169b71d06a0a53eac02a3241ff28a011
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=54b637f4dad0446c048251ada1f70d54
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+                - Name: Delta
+                  Id: g=37697f39c88cfc933884b375619b09db
+                  Type: BaseDataVariableType
+                  DataType: Float
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementDeltaDescription"}
+                  Value: -10.0
+                - Name: ArrayIndex
+                  Id: g=42084077197e7f6c06ce6fe676daccf6
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"IncrementArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=77f5833a4b4186e4e2283722d6bb13a3
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=a821f5001ca42877405a1cccb3bb5561
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=7d5e89d89919629a474cf1bfb899e112
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=939e4eceb6c34eee430277c3ecee0b5c
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=e12b452b127b3f41d49427a1a06c7fe2
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=e9c277ec102faa82620b29838ec5e4a8
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=35222668dc2dc5f53fecde592890fbd5
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=55304ad1e0382f0ae512f0afd6e5fd67
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=3fdd204636a0adcde3fafd95c4768bc9
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: btnAdattVert
+        Id: g=90f772eb116161cbbb936c3dc2e26958
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=39925320f3b6614fe6f0a50e36b3c7f4
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=3b018f3f8a1a2ea39646bdece67d93ad
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=7b755a3a0cd06972389a97514d716be0
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 65.0
+        - Name: ImagePath
+          Id: g=6b5dd57d8b0d569699fe3c9b93711208
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsAdatAltOff.svg"
+        - Name: Text
+          Id: g=2397bd409f6f46eb6eab0bd1625fd61d
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=6184d29223a8751f92aedc1c49ac6570
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=52c08d48fa8b6baf2d250c6bd3cace76
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=6446f054a02a054c45f383e040161806
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=bc211ceac3f2eafe47a848c3b73b4af6
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=008931ea67f7ad931ccc3e17a7ea8199
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=03adcde0185ad80271d1546cff5a963c
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=db12125650a68b29c4e85fcb142d62f2
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=05847c083beb136ceda7045acc42ba01
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=ed9d3d709b9f695f184e6b8a3bb28922
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=9c60c1e11f7d9cfd7ee0d0194a01878b
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=1100fe1664615718f3d8c7a773ac5901
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=6e70701328a6d329ae3122a8e7112075
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=2231580920179c2a7f33e406964f4967
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+                - Name: Value
+                  Id: g=4e09c974e8245ed8e3c35c7be2613f8b
+                  Type: BaseDataVariableType
+                  DataType: Int32
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 100
+                - Name: ArrayIndex
+                  Id: g=c26b3ba4eeca9c82cd16eabfc0b99ee0
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=590756a5c6a11459ab34d8abe5312f03
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=8af6c9e9c497c9769809093fcff8b201
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=a8f938641c9bb70be7fff6563b422c9e
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=0a1d9feb12692806b16e37bcd3003913
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=4b5730fa1e951a022e88bc26f9e56bc9
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=c1d5b19c824c62d30de19f25a5287408
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=476133905a7095660a2e99e83f942b5b
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=f4d6f6ef402c14a47d75bf7698ae60ab
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=18cf97ea162179b6dd2216dc70722f07
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+      - Name: btnAdattOriz
+        Id: g=cb3d447ffa5ecd9b2223db30ef9bbd4d
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: VerticalAlignment
+          Id: g=455cf93347f29acc85a8afde5e2b60e7
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 0
+        - Name: HorizontalAlignment
+          Id: g=70d2adc2355b78bb0f6246996f8a6681
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 2
+        - Name: TopMargin
+          Id: g=4739376b11186eaf77648a62bdcc52e7
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 15.0
+        - Name: ImagePath
+          Id: g=64727e19dbb71d8a785b2de9642d4c2a
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsAdatLargOff.svg"
+        - Name: Text
+          Id: g=9598c8d2b27fe67803d2af79b64d2aed
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"it-IT","Text":""}
+        - Name: TextColor
+          Id: g=db018efdf4905358d8540548e653a6ed
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#000000"
+        - Name: FontFamily
+          Id: g=946ca8ab148078f7db1e1a9f80cf1379
+          Type: BaseDataVariableType
+          DataType: Font
+          ModellingRule: Optional
+          Value: ""
+        - Name: Elide
+          Id: g=fbc8d5a478b327192bd8fead1ce6523d
+          Type: BaseDataVariableType
+          DataType: ElideEnum
+          ModellingRule: Optional
+          Value: 0
+        - Name: FontSize
+          Id: g=4d7a412033282239b73be72d52d5b6c2
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: MouseClickEventHandler1
+          Id: g=899223aa6d1d5e0b3165204091eb1f56
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=edc252f6729b8912c3438d4d630c1e0b
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=d48737132757af0354f08926603740e7
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=b00e5a3766513fb2a30819a8ee5378bd
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=7e1d5d4204fd218cc58479d8adfe917d
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Id: g=0febed06574cc44e9d33cdff43796b13
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=9;Method
+                Id: g=b96bdce0a930d973f87799ff054e228b
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Id: g=bb9e38f50d08bbaca38e9f5606cf8af3
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Id: g=6ce7c19ac86a9066c8d744295ea60a22
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+                  Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_pdfReader/pdfZoom"
+                - Name: Value
+                  Id: g=315154d234208b6de45ebf40bcc21f84
+                  Type: BaseDataVariableType
+                  DataType: Int32
+                  Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+                  Value: 230
+                - Name: ArrayIndex
+                  Id: g=e820bd5b2a3fe747e722b307ea388520
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Id: g=bef8c22aada2bfe47e9437f975055354
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=b32dc13c8e064095014f54b7bd43b854
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=f65cf17c9222d6b042feff3760c46a55
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=b054403b9fae239f54a50d1263040351
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=466b030a9288fc6656a13df2eaf8249d
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=7120081ec520ea4203ee3b564cfc5c7f
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=a5050b0374948f79bae632fdb855cdad
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=dfe5c4ea286094256c94e258b46ce627
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=4a1a6a0be5e703e24312d86735b315a9
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+    - Name: HorizontalAlignment
+      Id: g=0d46730bfbeee4e4c86672cb25749e8f
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 1

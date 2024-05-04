@@ -13,6 +13,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.DataLogger;
 using System.IO;
+using FTOptix.Recipe;
 #endregion
 
 public class CopySqliteLogic : BaseNetLogic

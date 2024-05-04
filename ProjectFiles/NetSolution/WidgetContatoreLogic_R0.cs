@@ -23,6 +23,7 @@ using FTOptix.Core;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class WidgetContatoreLogic_R0 : BaseNetLogic

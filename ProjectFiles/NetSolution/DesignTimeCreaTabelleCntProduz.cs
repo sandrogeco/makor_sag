@@ -4,6 +4,7 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System.Linq;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class DesignTimeCreaTabelleCntProduz : BaseNetLogic

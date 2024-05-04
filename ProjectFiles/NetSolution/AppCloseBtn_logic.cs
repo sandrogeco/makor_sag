@@ -3,6 +3,7 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using System.Diagnostics;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class AppCloseBtn_logic : BaseNetLogic
@@ -10,8 +11,8 @@ public class AppCloseBtn_logic : BaseNetLogic
     [ExportMethod]
     public void QApplicationClose()
     {
-        Project.Current.Get<NetLogicObject>("UI/Panels/GestStatistiche/GestStatisticheLogic").ExecuteMethod("TerminaSessione");    // serve per aggiornare le statistiche
-        var psi = new ProcessStartInfo("taskkill", "/F /IM QRuntime.exe")
+		//Project.Current.Get<NetLogicObject>("UI/Panels/GestStatistiche/GestStatisticheLogic").ExecuteMethod("TerminaSessione");    // serve per aggiornare le statistiche
+		var psi = new ProcessStartInfo("taskkill", "/F /IM FTOptixRuntime.exe")
         {
             CreateNoWindow = true,
             UseShellExecute = false

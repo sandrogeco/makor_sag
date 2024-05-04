@@ -22,6 +22,7 @@ using FTOptix.Alarm;
 using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
+using FTOptix.Recipe;
 #endregion
 
 public class GestEventi : BaseNetLogic

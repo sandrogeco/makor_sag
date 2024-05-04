@@ -16,12 +16,12 @@ Children:
     Id: g=c2f0d42af7e41a475beec704a8b35116
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: "ns=46;%PROJECTDIR%/VarAlm&TraduzCompatileConR3.csv"
+    Value: "ns=46;%PROJECTDIR%/VarAlm&Traduz_tab_Good.csv"
   - Name: CharacterSeparator
     Id: g=a1530a9c1c926ce9b538347affb37208
     Type: BaseDataVariableType
     DataType: String
-    Value: ","
+    Value: "tab"
   - Class: Method
     Name: CreaAllarmi
     Id: g=0a661073c3722d824f0d73570de23b54
@@ -35,7 +35,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"LocaleId":"it-IT","Text":"Indica se i campi sono racchiusi tra doppi apici"}
-    Value: true
+    Value: false
   - Name: LocalizationDictionary
     Id: g=5a52fc9feb1a361697a800add59fa80e
     Type: NodePointer
@@ -191,7 +191,7 @@ Children:
     Id: g=a0408d32e52f2f62ea0e791dfc2f5f73
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"LocaleId":"it-IT","Text":"Errore Comunicazione con PLC"}
+    Value: {"NamespaceIndex":46,"TextId":"Errore Comunicazione con PLC"}
   - Name: Severity
     Id: g=fe3016a116d23d5db92f4ddc6039d8fc
     Type: BaseDataVariableType

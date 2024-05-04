@@ -22,7 +22,7 @@ Children:
     Id: g=a02d37853b09f7116ae27d76d58a167d
     Type: BaseDataVariableType
     DataType: String
-    Value: "<NomeMacchina>"
+    Value: "Next"
   - Name: SwRev_MajorRelease
     Id: g=b08e165d158ce1eb93b0112aa4651cbf
     Type: BaseDataVariableType
@@ -32,12 +32,12 @@ Children:
     Id: g=a03452ab76f419054016e6e3aa2bd90b
     Type: BaseDataVariableType
     DataType: String
-    Value: "01"
+    Value: "0"
   - Name: SwRev_Build
     Id: g=9bc2b209e9416cbe8ed7fc0ca5ced542
     Type: BaseDataVariableType
     DataType: String
-    Value: "000"
+    Value: "003"
   - Name: RevHw
     Id: g=e64223d89fbcccf8b81d7c6336567db0
     Type: BaseDataVariableType
@@ -56,7 +56,7 @@ Children:
     Id: g=f8bcf4b887003cc29ba123c6c1e7bd45
     Type: BaseDataVariableType
     DataType: String
-    Value: "<NomeMacchina>"
+    Value: "Next"
   - Name: SwRev_MajorRelease
     Id: g=54ecb581671944940fcc13a58fb3f124
     Type: BaseDataVariableType

@@ -4,6 +4,7 @@ using System.Globalization;
 using FTOptix.NetLogic;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 
 public class LocalTime : BaseNetLogic
 {

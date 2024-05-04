@@ -13,11 +13,15 @@ using FTOptix.OPCUAServer;
 using FTOptix.NativeUI;
 using FTOptix.Alarm;
 using FTOptix.ODBCStore;
+using FTOptix.Recipe;
+using static System.Net.Mime.MediaTypeNames;
+
 #endregion
 
 public class GestMainWindows : BaseNetLogic
 {
-    public override void Start()
+
+	public override void Start()
     {
         //Controllo se eseiste la variabile che identifica il tipo di sessione
         var isNativeUI = Session.GetVariable("IsNativeUI");
@@ -27,9 +31,10 @@ public class GestMainWindows : BaseNetLogic
         var presentationEngine = FindPresentationEngine();
         if (presentationEngine != null)
             isNativeUI.Value = presentationEngine.IsInstanceOf(FTOptix.NativeUI.ObjectTypes.NativeUIPresentationEngine);
-    }
 
-    IUAObject FindPresentationEngine()
+	}
+
+	IUAObject FindPresentationEngine()
     {
         IUANode currentNode = Session;
         while (true)

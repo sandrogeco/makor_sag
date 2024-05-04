@@ -7,6 +7,7 @@ using System.Collections;
 using System.IO;
 using System.IO.Compression;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class Runtime_Utility : BaseNetLogic
@@ -175,7 +176,7 @@ public class Runtime_Utility : BaseNetLogic
     /// <param name="DialogBox">Opzionale. NodeId della finsetra di dialogo da aprire.</param>
     public static void ConfermaUser(IUANode UiSorce, IUANode AliasNode, IUANode DialogBox = null)
     {
-        DialogType DiallogConferma = DialogBox is null ? (DialogType)Project.Current.Get("UI/OggettiTemplate/Pannelli/ConfirmationDialog_R0_0_01") : (DialogType)DialogBox;
+        DialogType DiallogConferma = DialogBox is null ? (DialogType)Project.Current.Get("UI/OggettiTemplate/Pannelli/ConfirmationDialog_R0_1") : (DialogType)DialogBox;
         DiallogConferma.SetAlias("ConfirmationDialogContext", AliasNode);    // imposto l'alias       
         _ = UICommands.OpenDialog(UiSorce, DiallogConferma);
     }

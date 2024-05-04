@@ -5,7 +5,8 @@ Children:
 - File: Types_Var/Types_Var.yaml
 - File: StatoMacchina/StatoMacchina.yaml
 - File: Variabili_HMI/Variabili_HMI.yaml
-- File: VariabiliRicetta/VariabiliRicetta.yaml
+- File: VariabiliRicettaProduz/VariabiliRicettaProduz.yaml
+- File: VariabiliRicettaPiastra/VariabiliRicettaPiastra.yaml
 - File: Var_Tapio/Var_Tapio.yaml
 - File: Industry_40/Industry_40.yaml
 - Name: Variable1

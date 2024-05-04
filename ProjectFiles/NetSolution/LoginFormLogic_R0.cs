@@ -5,6 +5,7 @@ using FTOptix.NetLogic;
 using FTOptix.UI;
 using System;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class LoginFormLogic_R0 : BaseNetLogic

@@ -13,6 +13,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.System;
 using FTOptix.AuditSigning;
 using FTOptix.CODESYS;
+using FTOptix.Recipe;
 #endregion
 
 public class BackProvider1 : FTOptix.NetLogic.BaseNetLogic

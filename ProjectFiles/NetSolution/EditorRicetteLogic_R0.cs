@@ -5,6 +5,7 @@ using FTOptix.UI;
 using System;
 using UAManagedCore;
 using System.Collections.Generic;
+using FTOptix.Recipe;
 #endregion
 
 public class EditorRicetteLogic_R0 : BaseNetLogic
@@ -119,8 +120,9 @@ public class EditorRicetteLogic_R0 : BaseNetLogic
     public void ApriRic(string NomeRic)
     {
         Owner.GetVariable("DisabilitaTastiRicetta").Value = true;
-        try
-        {
+		Owner.GetVariable("RicAperta").Value = false;
+		try
+		{
             m_GestRicette.ApriRic(NomeRic);
             Owner.GetVariable("NomeRicAttuale").Value = NomeRic;
         }
@@ -131,14 +133,16 @@ public class EditorRicetteLogic_R0 : BaseNetLogic
             AliasNode.Message = InformationModel.LookupTranslation(new LocalizedText("Errore apertura ricetta. Riprovare."));
             Runtime_Utility.ConfermaUser(Owner, AliasNode);
         }
-        Owner.GetVariable("DisabilitaTastiRicetta").Value = true;
-    }
+        Owner.GetVariable("DisabilitaTastiRicetta").Value = false;
+		Owner.GetVariable("RicAperta").Value = true;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="NomeRic"></param>
-    [ExportMethod]
+	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <param name="NomeRic"></param>
+	[ExportMethod]
     public void CancRic(string NomeRic)
     {
         try

@@ -1,0 +1,570 @@
+Name: VariabiliRicettaProduz
+Id: g=3e663b0a4087dc70dbdec651484229dc
+Type: FolderType
+Children:
+- Name: DsTime_ImportExportVarRicFromCSV
+  Id: g=57affb43ae567c47632cc808d5629197
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R2"}
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=39bde7e0f0c80bbc21f71e94b1526193
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ImportaTag
+    Id: g=9b868ec98c40357cd157eb5478556577
+  - Class: Method
+    Name: EsportaTag
+    Id: g=c2419703aca7cbbc4c6d556938b9c3f0
+  - Name: CSVPath
+    Id: g=af4660b0b78f4288a37c7c4628e2e99a
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/VarRicetta.csv"
+  - Name: CharacterSeparator
+    Id: g=826efeadc3deaa09ecac737d9526162f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Id: g=c3ab88ce9c234fa11885f8be0bfa0f93
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"it-IT","Text":"Se = vero allora tutti i campi del file devono essere delimitati da \"\""}
+    Value: false
+  - Name: CreaCollegamentiDinamici
+    Id: g=73a8235caef68edf9352d2ca9a5ab299
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Class: Method
+    Name: CreaObjectType
+    Id: g=2cd0c0419bb1247a5a7eb353fd253074
+- Name: GvTrasp_dUsrSetSpd
+  Id: g=6052a21e07b17e227e412f612d9be279
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+  Children:
+  - Name: DynamicLink
+    Id: g=7ba72a4f16d7856d03684885c6d510e3
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/stInv/dUsrSetSpd"
+    Children:
+    - Name: Mode
+      Id: g=aea458e0344256d85761e0750e1cb244
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: GvOsc_dUsrSetSpd
+  Id: g=392702155d6b0968d13e72e89b8c9f64
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+  Children:
+  - Name: DynamicLink
+    Id: g=ebc838e79d8c43a30e75c1650d885aac
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stInv/dUsrSetSpd"
+    Children:
+    - Name: Mode
+      Id: g=d7f8295dfb92ae85154c437abf669179
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: ParPist1
+  Id: g=7f729fafc3baff990fba88ff9ef2565e
+  Type: BaseObjectType
+  Children:
+  - Name: bEnb
+    Id: g=4a058b8b65f52619958cc21eec96b44d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=f3ab546c4aada0d1bdee33408a0e6ef8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/bEnb"
+      Children:
+      - Name: Mode
+        Id: g=83fe56ccc0c01fa1bb36e1f03610214e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprBkd
+    Id: g=a91a6e2da5c0cf18b3d89de0275a60e6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=e5583380686418c6455af287a4102a73
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/bEnbSprBkd"
+      Children:
+      - Name: Mode
+        Id: g=dc4aada1f7ccb308f39c3ccec64f88aa
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprFwd
+    Id: g=8b97f8d1ab0c7f6f851841e4579eb731
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=2783ec2d8640a02d4696e7a945dc7f5a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/bEnbSprFwd"
+      Children:
+      - Name: Mode
+        Id: g=476fe2e8917b94721617ab7405bf3366
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompCodaGun
+    Id: g=4d85d4faef292f717ec378e253b3c0b0
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=34254796b491742ef263a9ceb142177f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dCompCodaGun"
+      Children:
+      - Name: Mode
+        Id: g=44d675dab29cebd65b22c8b8e90b51f3
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoHome
+    Id: g=531d1bdb5100560654e32df1ee12d269
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=a6eab89efe2575b3fe7453535aacd838
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dCompLatoHome"
+      Children:
+      - Name: Mode
+        Id: g=1f09ff0814cb591dcdff63c3addcf694
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoOppHome
+    Id: g=9561ec82834aa879a5442762cc0a7587
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=14aed4c69e6915d91afb17d0849298f9
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dCompLatoOppHome"
+      Children:
+      - Name: Mode
+        Id: g=738e257ebbfe1d99744efcd28894ad47
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompTestaGun
+    Id: g=9cc84b91d04fee630302510e6c3c2025
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=b11bd0e7778fc755cd6147e69136bc3f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dCompTestaGun"
+      Children:
+      - Name: Mode
+        Id: g=b53438195964f1ea1ceadd706f092393
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: ParPist2
+  Id: g=1ad1aa619f5e622b830afad9eeb432b4
+  Type: BaseObjectType
+  Children:
+  - Name: bEnb
+    Id: g=7f8476a647bbaec4d24fcee45098518c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=e0ab106e6501ff521b91bc1f85ce8746
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/bEnb"
+      Children:
+      - Name: Mode
+        Id: g=e3d549bad89c2c1c41a59adf59c1bd36
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprBkd
+    Id: g=7436514288d4849346aee2ea346fcab8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=31696bb69d44030036b4fe55bc82b2a1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/bEnbSprBkd"
+      Children:
+      - Name: Mode
+        Id: g=b818f77f528bc1d308ab7caeafe5af2f
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprFwd
+    Id: g=4c2498fdccb0d5b5a5f5b8087ccbf5a6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=5128ced2259d4228246f06a0bf059bb6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/bEnbSprFwd"
+      Children:
+      - Name: Mode
+        Id: g=c630a2518100b58b56a5c76e54ecaa7a
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompCodaGun
+    Id: g=b697f9c044b06ec45b9a1a4f12e1c99a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=e2ef09d2336290ef6270969a94c7df6f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dCompCodaGun"
+      Children:
+      - Name: Mode
+        Id: g=c8f568ceff74667c76c693b1b914cb4e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoHome
+    Id: g=8f8566d74effe715293bb8aeed33fef0
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=2881e4592baec7d3d63e439c963a3c1d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dCompLatoHome"
+      Children:
+      - Name: Mode
+        Id: g=40412cc9560ad9c3132fb569c426099a
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoOppHome
+    Id: g=022fc2bdd969288d90cc61d0d440f004
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=09fd69b023b0380604b89c22c457ea74
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dCompLatoOppHome"
+      Children:
+      - Name: Mode
+        Id: g=ca18b3705a5166b12b92551c1f5cb3d5
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompTestaGun
+    Id: g=665850df23c7c1e2070c681146d2b73b
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=0d290cc446d32f516d6229d66ee316e1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dCompTestaGun"
+      Children:
+      - Name: Mode
+        Id: g=ce85f0c45d4bf93980e8c0fc9120121a
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: ParPist3
+  Id: g=842eb3ba5d15170b1b3997d0220eef17
+  Type: BaseObjectType
+  Children:
+  - Name: bEnb
+    Id: g=08e23c60a7006cbe0e41f912b783db82
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=45d906496f014ef636ef78761290c161
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/bEnb"
+      Children:
+      - Name: Mode
+        Id: g=80097a1fcf2dd7163b7ddd3bb10e4e67
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprBkd
+    Id: g=9aa7b812532a690c8d46e08cb8b2dd6e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=67117d52cdb29339d13f7ebd860a9168
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/bEnbSprBkd"
+      Children:
+      - Name: Mode
+        Id: g=8bdaf583dce6137c8818ca0b85d1dd16
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprFwd
+    Id: g=341729a7781d13c40cabaa49692982bb
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=8b775dfb6e80528b649d13218f3b26f0
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/bEnbSprFwd"
+      Children:
+      - Name: Mode
+        Id: g=48e1999bb7ee417abaa83d8b5acd2995
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompCodaGun
+    Id: g=2b63cdde26c41c52b0e43e36ff4c46fd
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=6970464419dd91ed1c492eeea5eec6f5
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dCompCodaGun"
+      Children:
+      - Name: Mode
+        Id: g=897f36ac92c3ab1613f5ecdcc955fc8a
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoHome
+    Id: g=70d2d4b623d0cb2a099b4d0779d52acb
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=1bc41ad8d86583d45010356822cd595a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dCompLatoHome"
+      Children:
+      - Name: Mode
+        Id: g=b2d7958661b686232da48a991349005e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoOppHome
+    Id: g=d7ebbc602801c500d4f795a86f5506c7
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=a4502945d56e73ff4aae0b50ecb0886d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dCompLatoOppHome"
+      Children:
+      - Name: Mode
+        Id: g=f3ed91f7ce55251fe12f565473c72f6e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompTestaGun
+    Id: g=b04f79733601a3011247f7f78022f443
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=0640b0f751ea8aca9483a429c7408f77
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dCompTestaGun"
+      Children:
+      - Name: Mode
+        Id: g=f899e3b06bde141047b49de7959706e3
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: ParPist4
+  Id: g=5d0112135ba09e299772016b24b64cf4
+  Type: BaseObjectType
+  Children:
+  - Name: bEnb
+    Id: g=37652813b420f7ddc3e71bf29bb9de26
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=b5e6c94d2085009c65593ac42d2f8e4a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/bEnb"
+      Children:
+      - Name: Mode
+        Id: g=c5cab9ece0999d5676a93b1019e96221
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprBkd
+    Id: g=aa267a1596d87fed152bbb4edfe2b4a2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=ab47cc0122956e6b6f44b4449a9713d0
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/bEnbSprBkd"
+      Children:
+      - Name: Mode
+        Id: g=8077ec971716fc9b45eafbaff3740925
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: bEnbSprFwd
+    Id: g=d8145bfc8c8f6d71beff7d5014a2a712
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=a348f718c83ed1dd12673a7cbc1ad6bf
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/bEnbSprFwd"
+      Children:
+      - Name: Mode
+        Id: g=b0edd46fb81524d8da3d6622faa9f6b7
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompCodaGun
+    Id: g=36675f2b7031712cb02e59705123b661
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=b261abf0cfedfa690daa9ace0364b2c8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dCompCodaGun"
+      Children:
+      - Name: Mode
+        Id: g=72cf2414bb8b0fc8ae28a73b5d5bc116
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoHome
+    Id: g=0426ee37d91ce45bf17a8ed2ced5f80f
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=a14babd87850f857a8f676f75e18c588
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dCompLatoHome"
+      Children:
+      - Name: Mode
+        Id: g=d268014473eca9d40b4fbaab872963b7
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompLatoOppHome
+    Id: g=9ad1592bf6b3d40faffed0b28a30e4c3
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=64d1afd8b8984cc4ca2e33eae89f5f7e
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dCompLatoOppHome"
+      Children:
+      - Name: Mode
+        Id: g=24331cf4395c0e6fdf5e442a3e21a242
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dCompTestaGun
+    Id: g=27a69ac130560df3251737c2743fa3c1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+    Children:
+    - Name: DynamicLink
+      Id: g=ff7581270d730d2773f09ddd1c79b9e2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dCompTestaGun"
+      Children:
+      - Name: Mode
+        Id: g=e18ee53ddcf6a66b2bfee3636bfcf73b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2

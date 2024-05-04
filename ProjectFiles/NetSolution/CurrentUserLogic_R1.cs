@@ -4,6 +4,7 @@ using FTOptix.NetLogic;
 using FTOptix.Core;
 using FTOptix.UI;
 using FTOptix.HMIProject;
+using FTOptix.Recipe;
 #endregion
 
 public class CurrentUserLogic_R1 : BaseNetLogic

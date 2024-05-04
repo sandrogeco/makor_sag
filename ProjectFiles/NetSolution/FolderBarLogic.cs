@@ -13,6 +13,7 @@ using System.Linq;
 using FilesystemBrowser;
 using FTOptix.Modbus;
 using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 
 
 class Location

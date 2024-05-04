@@ -3,6 +3,7 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using System.Diagnostics;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class ShutdownBtn_logic : BaseNetLogic

@@ -5,6 +5,7 @@ using FTOptix.CoreBase;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using FTOptix.CommunicationDriver;
+using FTOptix.Recipe;
 #endregion
 
 public class CreaAllarmi : BaseNetLogic

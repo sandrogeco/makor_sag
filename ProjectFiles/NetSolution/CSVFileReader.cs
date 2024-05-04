@@ -6,6 +6,7 @@ using System.Linq;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 
 public class CSVFileReader : IDisposable
 {

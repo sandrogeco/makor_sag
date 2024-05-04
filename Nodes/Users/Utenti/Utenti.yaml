@@ -62,7 +62,7 @@ Children:
     Type: BaseVariableType
     DataType: MeasurementSystem
     ReferenceType: HasProperty
-    Value: 2
+    Value: 1
 - Name: Maintenance
   Id: g=9f20ebecc4d63e69afe6cc14d062e8cf
   Type: MakorUserType

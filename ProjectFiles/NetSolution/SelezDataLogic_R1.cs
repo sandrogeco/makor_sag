@@ -17,6 +17,7 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
+using FTOptix.Recipe;
 #endregion
 
 public class SelezDataLogic_R1 : BaseNetLogic
@@ -31,7 +32,14 @@ public class SelezDataLogic_R1 : BaseNetLogic
 
     [ExportMethod]
     public void GetDate()
-    {        
-        Owner.GetVariable("DataSelez").Value = new DateTime(Owner.GetVariable("Anno").Value, Owner.GetVariable("Mese").Value, Owner.GetVariable("Giorno").Value);
-    }
+    {
+		try
+		{
+			Owner.GetVariable("DataSelez").Value = new DateTime(Owner.GetVariable("Anno").Value, Owner.GetVariable("Mese").Value, Owner.GetVariable("Giorno").Value);
+		}
+		catch (Exception)
+		{
+			Owner.GetVariable("Giorno").Value = DateTime.Now.Day;
+		}
+	}
 }

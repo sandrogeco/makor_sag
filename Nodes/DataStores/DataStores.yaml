@@ -10,14 +10,14 @@ Children:
     Id: g=1184c6c307d770353175574e33e967a8
     Type: Alias
     DataType: NodeId
-    Value: "/Objects/Hmi_Next/DataStores/SqlLite_DbMacchina"
+    Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
     Children:
     - Name: Kind
       Id: g=d2903d07ab284ca546fc8af84b50904b
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store/SQLiteStore"
-- Name: SqlLite_DbMacchina
+- Name: DatabaseRicette
   Id: g=c97ce18827e116a542f4bf28d8971fad
   Type: MakorSqlLiteType
   Children:
@@ -249,6 +249,198 @@ Children:
           Type: StoreColumn
           DataType: Int32
           Value: 0
+    - Name: RicettePiastra
+      Id: g=95f4ad39f8e5a2a0997437ca46fb1a3d
+      Type: SQLiteStoreTable
+      Children:
+      - Name: Columns
+        Id: g=0d3b897c1e1897d6df98176941555e33
+        Type: BaseObjectType
+        Children:
+        - Name: ID_Ric
+          Id: g=1de8b432e72392dc3dfad57197165d17
+          Type: StoreColumn
+          DataType: Int64
+          Value: 0
+        - Name: Nome
+          Id: g=66c519256b539c88ab95ab674f295e87
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Descrizione
+          Id: g=fd24227f78a9890a76bd1c8c826b8e4e
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: TipoRicetta
+          Id: g=3019b522fe800929eb74c92e79bac1a9
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: DataOraCreazione
+          Id: g=610ebc38669b595d2022e3faa96e4228
+          Type: StoreColumn
+          DataType: DateTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: DataOraModifica
+          Id: g=edb93d5bdfd05821ed0bd2ce8b9a2b82
+          Type: StoreColumn
+          DataType: DateTime
+          Value: "1601-01-01T00:00:00.0000000"
+    - Name: RicettePiastraDettagli
+      Id: g=ab7850977fe813704f3fa018928e55c8
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=d28ca980821639d337571de73f773d8f
+        Type: BaseObjectType
+        Children:
+        - Name: ID_Ric
+          Id: g=7e4a8a045d7859858eb132cf8c67188d
+          Type: StoreColumn
+          DataType: Int64
+          Value: 0
+        - Name: PercorsoTag
+          Id: g=1c3af0576ea9f7177da6f7ae0b5160cb
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Valore
+          Id: g=6eadcce7e6f8801a4f600f7790b04ec9
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+    - Name: AlarmLogger
+      Id: g=7984fc7bcb35f5d3f696ae451a7189aa
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=10491ddf5f01e0afa203ef4da1e5fb2b
+        Type: BaseObjectType
+        Children:
+        - Name: LocalTime
+          Id: g=c97242942d0b7476ce05848e3aa874fa
+          Type: StoreColumn
+          DataType: TimeZoneDataType
+        - Name: 'ActiveState_it-IT'
+          Id: g=e1a1dbe245bdc22f1bfbc959c769eee2
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'ActiveState_en-US'
+          Id: g=fee515dfc87b98ec451c566e185af952
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'ActiveState_de-DE'
+          Id: g=115c86db9b4b7a8bfa4f96db9e23f519
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'ActiveState_fr-FR'
+          Id: g=a8c88ae6057b08549e5cbdd43281a5b9
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'ActiveState_es-ES'
+          Id: g=aa3cfafadf128c15d01a95e5368c7664
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: ConditionName
+          Id: g=da34b900178de43a3569d7281a8f4fd2
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_it-IT'
+          Id: g=f7f7f937be989515b398ec189293cb21
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_en-US'
+          Id: g=ad45ef66406a157ddd613f92507aef5b
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_de-DE'
+          Id: g=d345cea5c5808ff94c417cb08ac34dd5
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_fr-FR'
+          Id: g=4474ed7fb9c18ec406d213ed4e6a53a0
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'Message_es-ES'
+          Id: g=91507f64ea3c4355963a7d802b4baad5
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Time
+          Id: g=a901f0d3b24c60418f279ecb072a8cfb
+          Type: StoreColumn
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: 'AckedState_it-IT'
+          Id: g=65a7aafd7409c0103ef429f8d8f3b6de
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'AckedState_en-US'
+          Id: g=72ab4faacfc27029b300290bf9c3c358
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'AckedState_de-DE'
+          Id: g=18c1db7fe2503efbf1339da6055049e2
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'AckedState_fr-FR'
+          Id: g=d1eef992e22632a204aeb0cbdd7e51d4
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: 'AckedState_es-ES'
+          Id: g=15c777befc450ff469922ee914f3deda
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: SourceName
+          Id: g=decb528c5cbcafba20907516ef20d490
+          Type: StoreColumn
+          DataType: String
+          Value: ""
+        - Name: Severity
+          Id: g=c593cf3b3b1152a37fc24c1ffc1c8cc5
+          Type: StoreColumn
+          DataType: UInt16
+          Value: 0
   - Name: MaxColumnNameLength
     Id: g=bfda81c1516dec6e39a10a051332d18f
     Type: BaseDataVariableType
@@ -329,7 +521,7 @@ Children:
     Id: g=6ade6b1284d820edf8c5913cb3b9d8eb
     Type: BaseDataVariableType
     DataType: String
-    Value: "SqlLite_DbMacchina"
+    Value: "DatabaseRicette"
   - Name: TargetLinux
     Id: g=c3579ae8bc5042d40fa37cd8fd9519ba
     Type: BaseDataVariableType
@@ -341,451 +533,6 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/Scripts/SystemVariablesLogic/Linux"
-- Name: ODBC_DbMacchina
-  Id: g=335dec15b0d6d5ad5466575b3f75fd99
-  Type: MakorODBCType
-  Children:
-  - Class: Reference
-    Target: ns=15;i=22
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=6
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=8
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=25
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=38
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=41
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=44
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=53
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=55
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=57
-    Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=59
-    Direction: Forward
-  - Name: Type
-    Id: g=0657a04783acf649dd70ca4707b61ad6
-    Type: PropertyType
-    DataType: DBMSType
-    Value: 2
-  - Name: Username
-    Id: g=f09f49f0ff2ace8abc26f08c8beb58d6
-    Type: PropertyType
-    DataType: String
-    Value: "sa"
-  - Name: Password
-    Id: g=8a05648e1e33056c3c905a81e11652e8
-    Type: PropertyType
-    DataType: Password
-    Value: "makor7325"
-  - Name: Status
-    Id: g=aa10d2d9a42be62112bb7cac2c8edf9d
-    Type: PropertyType
-    DataType: StoreStatus
-    AccessLevel: Read
-    Value: 2
-  - Name: Tables
-    Id: g=df960d4727170bef554b6d2cf2be6935
-    Type: BaseObjectType
-    Children:
-    - Name: Ricette
-      Id: g=df81034d0552b919ff8d7af090140ea8
-      Type: ODBCStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=15;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=2483a2d922b532aa31243e3ab5fccf80
-        Type: BaseObjectType
-    - Name: RicetteDettagli
-      Id: g=5062a3be665b2837e362caf1c92a751a
-      Type: ODBCStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=15;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=55021d2a06066878b13337d7a2d8d694
-        Type: BaseObjectType
-    - Name: CntProduzione
-      Id: g=108b7c08befe3c1e68a616b8fda30dad
-      Type: ODBCStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=15;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=c1452926b338ed736f9be72878639241
-        Type: BaseObjectType
-    - Name: AlarmLogger
-      Id: g=4f00e86d79a468d6fcec88e8f90877e0
-      Type: ODBCStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=15;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=32c208443575b6bddec7398c2a24a5cb
-        Type: BaseObjectType
-        Children:
-        - Name: 'ConfirmedState_it-IT'
-          Id: g=c519d80be1a0d20e457c4332688eee17
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_en-US'
-          Id: g=05d460257c3bf4d2c86ed72e2c821fc1
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_de-DE'
-          Id: g=fa144d1f5ad5aec5160aa894a6615a26
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_fr-FR'
-          Id: g=50fad804111312a2733ba04769c714e3
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_es-ES'
-          Id: g=778b3f6ee670523ebfd8f84340306878
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_hu-HU'
-          Id: g=ced6b9422d4a811036d681e90cfdf5ca
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ConfirmedState_ru-RU'
-          Id: g=e783ac903bfb51fbdca2f6d8f31dc342
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: LocalTime
-          Id: g=12d10282dc877740fe93e4ef750eb11a
-          Type: StoreColumn
-          DataType: TimeZoneDataType
-        - Name: ConditionName
-          Id: g=0f0292b545a9e9e037186c1cf905fb47
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_it-IT'
-          Id: g=fdc0f14fe05c5bf2200857a592c3f1fb
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_en-US'
-          Id: g=30ecedc10dbfbcafce664ca2e745118d
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_de-DE'
-          Id: g=387d34a02b50f4c3c9d7ad9471877ba1
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_fr-FR'
-          Id: g=dfb4f15afc19fe211fe301fa66438b7e
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_es-ES'
-          Id: g=1eab0fd6a09bfca8611cb0e8d584746a
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_hu-HU'
-          Id: g=e290ad3855c15f46a9a5646b7f2d963a
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'AckedState_ru-RU'
-          Id: g=31ba3188cef370c7426753a4e99b1cdf
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_it-IT'
-          Id: g=fc33e4c2b96f2aa0ab100d9d5e6a558a
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_en-US'
-          Id: g=4e212e87b1ef2e0581fad922e280010b
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_de-DE'
-          Id: g=1480aaa070f76b326ba717ef2a7a8be9
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_fr-FR'
-          Id: g=acae03f569046142c768df33150fe2b2
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_es-ES'
-          Id: g=ed5523cf3b489fe230d9df4cfd6daef9
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_hu-HU'
-          Id: g=c0076e54192ecff2572e244ca1954645
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'ActiveState_ru-RU'
-          Id: g=4f38493eaa1783f2a086c42c5b856929
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_it-IT'
-          Id: g=cf51ccec9c2c98271fb28cd98c37afa9
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_en-US'
-          Id: g=b5a2a539beb94346c216cca0b4cf2bbf
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_de-DE'
-          Id: g=53a098552c8b44b27171eab48b0578ed
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_fr-FR'
-          Id: g=a904d95093b0993705983935ecd59be3
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_es-ES'
-          Id: g=129f00343a52a0c56eef51130379fbf6
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_hu-HU'
-          Id: g=3624771dbce540cd864b4d21c3c06c0e
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: 'Message_ru-RU'
-          Id: g=69dbea40d73ded80402062461562ff81
-          Type: StoreColumn
-          DataType: String
-          Value: ""
-        - Name: Severity
-          Id: g=21f804e05eed6245c29c2cee055b0faa
-          Type: StoreColumn
-          DataType: UInt16
-          Value: 0
-        - Name: Time
-          Id: g=154202aee709e6e04b22327bc8edb751
-          Type: StoreColumn
-          DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
-  - Name: MaxColumnNameLength
-    Id: g=bd617e47053a4d8b7e70b0ff6123f6cd
-    Type: BaseDataVariableType
-    DataType: UInt32
-    AccessLevel: Read
-    Value: 0
-  - Name: MaxColumnCount
-    Id: g=1bf5f719f5386366c0d36ed967af42ab
-    Type: BaseDataVariableType
-    DataType: UInt32
-    AccessLevel: Read
-    Value: 0
-  - Name: DataTypeCompatibilityMap
-    Id: g=b1a7ff803b9deed57735d70d5a5ec574
-    Type: BaseDataVariableType
-    DataType: NodeId
-    AccessLevel: Read
-    ValueRank: OneOrMoreDimensions
-    ArrayDimensions: [0,0]
-    Value: {"Type":12,"Dimensions":[0,0],"Body":[]}
-  - Name: EseguiBackupAvvio
-    Id: g=e4942b196c11b8a30759bc74ae12d11e
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
-  - Name: DbBackupBatFileName
-    Id: g=21062a3e4a9ac8c2d6a43a8f89f3a600
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "DB_BackupScript_R3.bat"
-  - Name: DbRestoreBatFileName
-    Id: g=a1e86922ad7b99837e51186df04de8ee
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "DB_RestoreScript.bat"
-  - Name: PathDbSavingFolder
-    Id: g=35a198676a47df59f6b83e153b7629d1
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "C:\\Makor\\RecipeBackUp"
-  - Name: NomeIstanzaSQL
-    Id: g=667394c0eae0b0092e39c06f08ae90fc
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "localhost"
-  - Name: DataUltimoSalvataggio
-    Id: g=12cc201bddb9fd2c8b80a16a47f59c3a
-    Type: BaseDataVariableType
-    DataType: DateTime
-    Value: "2022-01-10T00:00:00.0000000"
-  - Name: Port
-    Id: g=40ba802dc80de66a220915d729c46858
-    Type: PropertyType
-    DataType: UInt16
-    Value: 1433
-  - Name: Server
-    Id: g=6e284b60cc78ab825ec749b8d785fc63
-    Type: PropertyType
-    DataType: String
-    Value: "localhost"
-  - Name: Database
-    Id: g=ddd9be3c658dd8f4ef5bae9cb9269644
-    Type: PropertyType
-    DataType: String
-    Value: "SupervisLineaNeuhofer"
-  - Name: DSN
-    Id: g=e6c904ac9652194da7bd076e50a02ba3
-    Type: PropertyType
-    DataType: String
-    Value: ""
-  - Name: NumBackup
-    Id: g=cd1d71c53bb141530b860ff769e7cc7d
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 1
-  - Name: TargetLinux
-    Id: g=29cbaeea792176ff81ce752c4a793620
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
-    Children:
-    - Name: DynamicLink
-      Id: g=e5f19ff63348d47b9c1eda41bfba7c6c
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/Hmi_Next/Scripts/SystemVariablesLogic/Linux"
-  - Name: GestBackupODBCStore_R2
-    Id: g=fa2342d8d4546648691fadb9ce6e838b
-    Type: NetLogic
-    Children:
-    - Class: Method
-      Name: BackupDB
-      Id: g=d714337fe99a1f3c24d03f7ef5fae2f2
-    - Class: Method
-      Name: BackupManuale
-      Id: g=c104f98f6ce8ec166251b5977b4c95aa
-      Children:
-      - Name: InputArguments
-        Id: g=039df8c0058c9bba447e4f74079dce8c
-        Type: BaseVariableType
-        DataType: Argument
-        ReferenceType: HasProperty
-        ValueRank: OneDimension
-        ArrayDimensions: [0]
-        Value: [{"TypeId":{"Id":296},"Body":{"Name":"SavePath","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"FileName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-    - Class: Method
-      Name: RestoreManuale
-      Id: g=f79b4fba5dc1855133971d697f39e016
-      Children:
-      - Name: InputArguments
-        Id: g=dcf26116e9a29b66b268e2ab8a949fde
-        Type: BaseVariableType
-        DataType: Argument
-        ReferenceType: HasProperty
-        ValueRank: OneDimension
-        ArrayDimensions: [0]
-        Value: [{"TypeId":{"Id":296},"Body":{"Name":"RestoreFilePath","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-    - Class: Reference
-      Target: g=305688f947b8ee1cf02f9c8b1906ed52
-      Direction: Forward
-    - Class: Reference
-      Target: g=85ca74dc9bb1c0f861c2cd0c68681298
-      Direction: Forward
-    - Class: Reference
-      Target: g=a631df1457c22d68958ee8a8a880b80e
-      Direction: Forward
-  - Name: GestPuliziaDB_R2
-    Id: g=8d3ad2e1a350e7c047e581147d381838
-    Type: NetLogic
-    Children:
-    - Name: StoricoAlmNumGiorni
-      Id: g=2adeaf3e0c4d75ddaa753f62ceb80798
-      Type: BaseDataVariableType
-      DataType: Byte
-      Description: {"LocaleId":"it-IT","Text":"0 = Disabilitato. Indicare quanti giorni storico mantenere per gli allarmi"}
-      Value: 90
-    - Name: AbilitaGestStastiche
-      Id: g=a9ac8f2536e862dfe42d43961157c21d
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-      Children:
-      - Name: DynamicLink
-        Id: g=cc7aaa07f43b0b28c05586a3a3cc9f6b
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../../../UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaGestione"
 - Name: MakorODBCType
   Id: g=0d3f1744cfd98dc11070c821f314ca47
   Supertype: ODBCStore

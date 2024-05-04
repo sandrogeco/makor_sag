@@ -14,6 +14,56 @@ Children:
   - Name: NodesToPublish
     Id: g=3769e178340dbe63b015b7fb94f5e761
     Type: BaseObjectType
+    Children:
+    - Name: Configuration1
+      Id: g=f125db67e7277d7f54e73af1820256ec
+      Type: NodesToPublishConfigurationEntry
+      Children:
+      - Name: Nodes
+        Id: g=dd02b3c919bbc7d639714524753c60ea
+        Type: BaseObjectType
+        Children:
+        - Name: Node1
+          Id: g=10caf43c11a5a3f3a83ab8ef7c4e7e5a
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Hmi_Next"
+          Children:
+          - Name: Kind
+            Id: g=8e6643d00604136acb478860cf34336f
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"IdType":0,"Id":0,"Namespace":-1}
+          - Name: NodeClass
+            Id: g=9fdd3bbbd58f4d6c82b99d29d258f12f
+            Type: PropertyType
+            DataType: NodePointerNodeClass
+            Value: 2
+      - Name: Users
+        Id: g=916f1b03532665602a4c57d7d407e366
+        Type: BaseObjectType
+        Children:
+        - Name: User1
+          Id: g=97a890c39ca7f5865094c646aaabfbfe
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Hmi_Next/Users/Utenti/Makor"
+          Children:
+          - Name: Kind
+            Id: g=ec12c03dca10eeb3b107721c4d8c34fb
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+          - Name: NodeClass
+            Id: g=187aac523978a7dbcc16ee6822188c1e
+            Type: PropertyType
+            DataType: NodePointerNodeClass
+            Value: 0
+      - Name: PublishDynamicConfiguration
+        Id: g=bd490126e8a00ebc29cf070c7a7e73fe
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
   - Name: SamplingInterval
     Id: g=202c6b440454ac96bf3e53894cdb5ad5
     Type: PropertyType

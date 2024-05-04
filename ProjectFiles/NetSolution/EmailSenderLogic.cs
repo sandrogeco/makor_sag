@@ -6,6 +6,7 @@ using System.Net.Mail;
 using UAManagedCore;
 using System.Collections.Generic;
 using System.Linq;
+using FTOptix.Recipe;
 #endregion
 
 public class EmailSenderLogic : BaseNetLogic

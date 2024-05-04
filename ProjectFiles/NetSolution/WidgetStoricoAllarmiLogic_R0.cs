@@ -22,6 +22,7 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
+using FTOptix.Recipe;
 #endregion
 
 public class WidgetStoricoAllarmiLogic_R0 : BaseNetLogic
@@ -49,7 +50,10 @@ public class WidgetStoricoAllarmiLogic_R0 : BaseNetLogic
     {
         //Attenzione: mettere la variabile datetime racchiusa tra apici altrimenti non funziona
         DateTime End = Owner.GetVariable("Filtri/SelezDataStartEnd/DataFine").Value;
-        ((SqlQuery_R0)Owner.GetObject("SqlQuery")).Where2 = " AND Time >'" + Owner.GetVariable("Filtri/SelezDataStartEnd/DataInizio").Value + "' AND Time <'" + End.AddDays(1) + "'";
+		DateTime Start = Owner.GetVariable("Filtri/SelezDataStartEnd/DataInizio").Value;
+		String query = $" AND Time >'{Start:yyyy-MM-dd}' AND Time <'{End.AddDays(1):yyyy-MM-dd}'";
+		((SqlQuery_R0)Owner.GetObject("SqlQuery")).Where2 = query;
+		//((SqlQuery_R0)Owner.GetObject("SqlQuery")).Where2 = " AND Time >'" + Owner.GetVariable("Filtri/SelezDataStartEnd/DataInizio").Value + "' AND Time <'" + End.AddDays(1) + "'";
     }
 
     [ExportMethod]

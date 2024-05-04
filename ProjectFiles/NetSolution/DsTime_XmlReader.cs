@@ -14,6 +14,7 @@ using System.Linq;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class DsTime_XmlReader : BaseNetLogic

@@ -17,6 +17,7 @@ using FTOptix.CODESYS;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class ImportAndExportTranslations : BaseNetLogic
@@ -147,30 +148,21 @@ public class ImportAndExportTranslations : BaseNetLogic
         return new ResourceUri(csvPathVariable.Value).Uri;
     }
 
-    private char? GetCharacterSeparator()
-    {
-        var separatorVariable = LogicObject.GetVariable("CharacterSeparator");
-        if (separatorVariable == null)
-        {
-            Log.Error("ImportAndExportTranslations", "CharacterSeparator variable not found");
-            return null;
-        }
+	private char? GetCharacterSeparator()
+	{
+		var separatorVariable = LogicObject.GetVariable("CharacterSeparator");
+		if (separatorVariable == null)
+		{
+			Log.Error("ImportAndExportTranslations", "CharacterSeparator variable not found");
+			return null;
+		}
 
-        string separator = separatorVariable.Value;
+		string separator = separatorVariable.Value;
 
-        if (separator.Length != 1 || separator == string.Empty)
-        {
-            Log.Error("ImportAndExportTranslations", "Wrong CharacterSeparator configuration. Please insert a char");
-            return null;
-        }
+		return separator == string.Empty ? null : separator == "tab" ? '\t' : char.TryParse(separator, out char result) ? result : null;
+	}
 
-        if (char.TryParse(separator, out char result))
-            return result;
-
-        return null;
-    }
-
-    private bool GetWrapFields()
+	private bool GetWrapFields()
     {
         var wrapFieldsVariable = LogicObject.GetVariable("WrapFields");
         if (wrapFieldsVariable == null)

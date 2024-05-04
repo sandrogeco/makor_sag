@@ -23,6 +23,7 @@ using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class SystemVariablesLogic3 : BaseNetLogic

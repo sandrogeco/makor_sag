@@ -5,6 +5,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class GestBackupODBCStore_R2 : BaseNetLogic

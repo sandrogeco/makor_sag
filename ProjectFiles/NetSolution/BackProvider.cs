@@ -18,6 +18,7 @@ using FTOptix.MelsecQ;
 using FTOptix.CODESYS;
 using FTOptix.SQLiteStore;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class BackProvider : FTOptix.NetLogic.BaseNetLogic

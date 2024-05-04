@@ -10,6 +10,7 @@ using OpcUa = UAManagedCore.OpcUa;
 using System.Text;
 using FTOptix.Core;
 using System.IO;
+using FTOptix.Recipe;
 #endregion
 
 #region Internal classes

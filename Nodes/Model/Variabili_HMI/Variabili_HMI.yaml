@@ -5,20 +5,33 @@ Children:
 - File: Generiche/Generiche.yaml
 - File: Macchina/Macchina.yaml
 - File: Var_Ritentive/Var_Ritentive.yaml
-- Name: Variabile1
-  Id: g=3f778740b4dd4505f2efd2e9a7efe506
+- File: Var_pdfReader/Var_pdfReader.yaml
+- Name: InverterSelezionato
+  Id: g=fe4d5e75e73129348f7eb7592dab7069
   Type: BaseDataVariableType
-  DataType: DateTime
-  Value: "1601-01-01T00:00:00.0000000"
+  DataType: Int16
+  Value: 0
+- Name: OggSelezionata
+  Id: g=a180cb1a4986e68f43995f4f8c2250e7
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+- Name: ObjInverter
+  Id: g=dc421270b063674f7cc1618addc3c55e
+  Type: BaseObjectType
   Children:
-  - Name: DynamicLink
-    Id: g=dc96c5218509b95f4df6a81137aefff3
-    Type: DynamicLink
-    DataType: NodePath
-    Value: "../../../UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/DataUltimoSalvataggio"
-    Children:
-    - Name: Mode
-      Id: g=430ea5de80b844a9d779242ce47ed132
-      Type: BaseVariableType
-      DataType: DynamicLinkMode
-      Value: 2
+  - Name: Default
+    Id: g=79358ae15f64d02b9f6407f4d9673f30
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: 8888
+    Id: g=aa6d031cbc03bdd3cb903e399a71ac26
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 65520
+  - Name: 9999
+    Id: g=1adedc6392f3a8bf642620f53fe8f832
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 65521

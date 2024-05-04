@@ -3,9 +3,10 @@ Id: g=4c4c4496d9c5c8b2d9f0bffbe79e2220
 Type: FolderType
 Children:
 - File: User/User.yaml
-- File: Prj_DialogBox/Prj_DialogBox.yaml
 - File: Setup/Setup.yaml
+- File: Prj_DialogBox/Prj_DialogBox.yaml
 - File: Contatori/Contatori.yaml
 - File: Allarmi_Diagnostica/Allarmi_Diagnostica.yaml
 - File: Softkeys/Softkeys.yaml
 - File: GestStatistiche/GestStatistiche.yaml
+- File: pdfReader/pdfReader.yaml

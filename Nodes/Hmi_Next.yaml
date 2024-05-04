@@ -70,7 +70,7 @@ Children:
     ReferenceType: HasProperty
     ValueRank: OneDimension
     ArrayDimensions: [0]
-    Value: ["it-IT","en-US","de-DE","fr-FR","es-ES","hu-HU","ru-RU"]
+    Value: ["it-IT","en-US","de-DE","fr-FR","es-ES"]
   - Name: LocaleFallbackList
     Id: g=72da06e200f7d3a538bdbc8ebca90a3c
     Type: BaseDataVariableType

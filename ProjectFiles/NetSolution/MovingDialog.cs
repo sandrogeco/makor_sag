@@ -8,6 +8,7 @@ using FTOptix.HMIProject;
 using FTOptix.UI;
 using FTOptix.CoreBase;
 using FTOptix.Core;
+using FTOptix.Recipe;
 #endregion
 
 public class MovingDialog : BaseNetLogic

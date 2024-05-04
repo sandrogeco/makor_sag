@@ -7,6 +7,18 @@ Children:
   Type: BaseDataVariableType
   DataType: Boolean
   Value: false
+  Children:
+  - Name: DynamicLink
+    Id: g=974c737ffc63bf6c4fec68ca4655bea5
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiRstAlm"
+    Children:
+    - Name: Mode
+      Id: g=de3b085ff7bbfeda1fb197ff4cd0793b
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: bManoLavMacchSx_Dx
   Id: g=e685e9a840a4aa1caa7f77f80b68fd3d
   Type: BaseDataVariableType

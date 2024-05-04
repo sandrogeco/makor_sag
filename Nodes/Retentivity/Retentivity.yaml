@@ -78,7 +78,7 @@ Children:
       Id: g=be44f36f17f1a2a81bf25b19fca7c5d9
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Id: g=eeb7ed125f45c077d5c8f093fe0e2123
@@ -94,7 +94,7 @@ Children:
       Id: g=c6f74b35973f8b092fd9047b25544a32
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/SqlLite_DbMacchina"
+      Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
       Children:
       - Name: Kind
         Id: g=8e0007bd2df0a2e59393cf2d310ce1b1

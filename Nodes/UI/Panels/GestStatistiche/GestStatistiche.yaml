@@ -11,7 +11,7 @@ Children:
   - Name: ImpostazOem
     Id: g=27d8b7c6cb2ccce5229ea880d69b425c
     Type: BaseObjectType
-    Description: {"LocaleId":"it-IT","Text":"Collegare l'oggeto al database di ritentività. Rendere disponibili le abilitazioni nell'OEM"}
+    Description: {"NamespaceIndex":46,"TextId":"Collegare l'oggeto al database di ritentività. Rendere disponibili le abilitazioni nell'OEM"}
     Children:
     - Name: AbilitaGestione
       Id: g=5b57bc99d53eb12fa44e75d077f1b75c
@@ -47,13 +47,13 @@ Children:
       Id: g=5fa99f8d43c090a9d4ff907897ae1f6e
       Type: BaseDataVariableType
       DataType: String
-      Description: {"LocaleId":"it-IT","Text":"Path dove viene creata la cartella 'Report' che contiene i file di report"}
+      Description: {"NamespaceIndex":46,"TextId":"Path dove viene creata la cartella 'Report' che contiene i file di report"}
       Value: "C:\\ALavori\\Works\\In Progress\\Progetti template QStudio"
   - Name: DataStore
     Id: g=0e56fb4e1766e6ec0721a2e7a153397f
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+    Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
     Children:
     - Name: Kind
       Id: g=133db2c3521699da263381398a999cd4
@@ -64,7 +64,7 @@ Children:
     Id: g=a7617ab3423655fcbaf984566ffb6cc0
     Type: NodePointer
     DataType: NodeId
-    Description: {"LocaleId":"it-IT","Text":"Indicare il nodeid di modello dove si trovano i contatori da salvare nel database"}
+    Description: {"NamespaceIndex":46,"TextId":"Indicare il nodeid di modello dove si trovano i contatori da salvare nel database"}
     Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Macchina/CntProduzPlc"
     Children:
     - Name: Kind
@@ -731,7 +731,7 @@ Children:
       Id: g=b617c24ff058a356a70d1be871fefaee
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
       Children:
       - Name: Kind
         Id: g=e64449329aea04cb0cbc243ef49a6afd
@@ -8686,7 +8686,7 @@ Children:
       Id: g=090b79486f1a41f64461f791c0b175e3
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
       Children:
       - Name: ItemKind
         Id: g=e30d32d50a07e4a291dcae477d47ea5f
@@ -8930,7 +8930,7 @@ Children:
       Id: g=e20e22cdc121e85417ae6898c97259df
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
       Children:
       - Name: ItemKind
         Id: g=56d2b60c0b90ce905254938d04d9efe2
@@ -9313,7 +9313,7 @@ Children:
       Id: g=2fd6104fc4f491595c966b4fae1af10b
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
       Children:
       - Name: ItemKind
         Id: g=3b2ddafc38219a1b1920af36cb4c5cb7
@@ -9613,7 +9613,7 @@ Children:
       Id: g=2a563421472ca9ffb6b5edf1c6ab75a4
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/Hmi_Next/DataStores/ODBC_DbMacchina"
+      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
       Children:
       - Name: ItemKind
         Id: g=032afab5a619daa06d797be17cf5a875

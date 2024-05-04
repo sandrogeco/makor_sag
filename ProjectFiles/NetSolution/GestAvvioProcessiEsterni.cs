@@ -2,6 +2,7 @@
 using FTOptix.Core;
 using FTOptix.NetLogic;
 using System.Diagnostics;
+using FTOptix.Recipe;
 #endregion
 
 public class GestAvvioProcessiEsterni : BaseNetLogic

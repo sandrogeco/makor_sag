@@ -15,6 +15,7 @@ using FTOptix.CODESYS;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 #endregion
 
 public class MailingListLogic_R0 : BaseNetLogic

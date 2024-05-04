@@ -4,6 +4,7 @@ using System.IO;
 using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
 
 public class CSVFileWriter : IDisposable
 {

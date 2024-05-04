@@ -3,6 +3,7 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System;
 using UAManagedCore;
+using FTOptix.Recipe;
 #endregion
 
 public class GestPuliziaDB_R2 : BaseNetLogic
