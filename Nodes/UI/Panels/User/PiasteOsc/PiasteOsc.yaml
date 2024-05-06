@@ -1181,7 +1181,7 @@ Children:
               Id: g=4d1c75e64289d8b679075e8e1746c404
               Type: DynamicLink
               DataType: NodePath
-              Value: "../../../Enabled"
+              Value: "../../../ObjAbilitato"
           - Name: TrueValue
             Id: g=e171263ee5e2be38671b0da302ae4ee3
             Type: BaseDataVariableType
@@ -1198,7 +1198,7 @@ Children:
         Id: g=133f91874a882d32ba83758ee5abc551
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
+        Value: true
       - Name: ReadOnly
         Id: g=7fb3898f4df1c395343e98fd4258260b
         Type: BaseDataVariableType
@@ -1219,7 +1219,7 @@ Children:
               Id: g=10d6277000e328dcdac7bd8136c89190
               Type: DynamicLink
               DataType: NodePath
-              Value: "../../../Enabled"
+              Value: "../../../ObjAbilitato"
       - Name: LeftMargin
         Id: g=5b1a5c7529abd323e509bdc2fa5b56ac
         Type: BaseVariableType
@@ -1244,6 +1244,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 500.0
+      - Name: ObjAbilitato
+        Id: g=e9d468725b3e627beb287fbc778e99c5
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
     - Name: HorizontalGap
       Id: g=16d381fe57336309a59be5661938ac10
       Type: BaseDataVariableType
@@ -19542,410 +19547,522 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 5.0
-        - Name: TextBoxScalingConImm_R1_3
-          Id: g=937c95ca9fffa4f97cbafb32e39ad9a9
-          Type: TextBoxScalingConImm_R1_0
+        - Name: TextBoxEuConverterConImm_R1_1
+          Id: g=8af553aa15af466c4fba032448aff3ac
+          Type: TextBoxEuConverterConImm_R1_0
           Children:
           - Name: Valore
-            Id: g=c7c0b4035bc77611c21b113f6741bd96
+            Id: g=a23cd0f456de7cbc8d45db87dd78ddad
             Type: RowLayout
             Children:
             - Name: ValorePar
-              Id: g=ca320d21ef24cfabb03ce5b7ef29271c
+              Id: g=3b38a6767567bf8e0facf0b40ab266b0
               Type: TextBox
               Children:
               - Name: Text
-                Id: g=110cbd028026de3c6fa0e99924ba48b5
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: FormattatoreStringa1
-                  Id: g=9e26e0178357c783313c1803bab6aa67
-                  Type: StringFormatter
-                  Children:
-                  - Name: Format
-                    Id: g=ad9ae3788ef2fddc3c55cdd9cc8f51e1
-                    Type: BaseDataVariableType
-                    DataType: LocalizedText
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: {"LocaleId":"","Text":"{0:f2}"}
-                  - Name: ns=9;Source0
-                    Id: g=a0573df3b882ef0686a971dc00d594fe
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=35e4961f65330d4ede803a933eb2fb88
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../DisplayVar"
-                      Children:
-                      - Name: Mode
-                        Id: g=e246209de32a9e1685c2e307a88eef26
-                        Type: BaseVariableType
-                        DataType: DynamicLinkMode
-                        ModellingRule: Optional
-                        Value: 2
-                  - Name: Mode
-                    Id: g=f84fb0f975fa336d0c186ef258d34a0e
-                    Type: PropertyType
-                    DataType: DynamicLinkMode
-                    ReferenceType: HasComponent
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ReadOnly
-                Id: g=9ee70cf8e6af727708be4972d4536c2e
-                Type: BaseDataVariableType
-                DataType: Boolean
-                Value: false
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=e4bd29057bb3fa77a683163e5c206e45
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=2cc937ba0444cf79023beff0e67e1505
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=de118aaa94b8df5bb800caf2f7ccc1db
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../ObjAbilitato"
-              - Name: TextChanged
-                Id: g=6a234e87c71b6112edf423ad9c7bea94
-                Type: VariableChangedEventDispatcher
-                Children:
-                - Name: VariableNodePath
-                  Id: g=57a42e3cf1a7c898b9f12d54574c8edc
-                  Type: BaseVariableType
-                  DataType: NodePath
-                  Value: "../Text"
-            - Name: Unit
-              Id: g=173fbb2af44e4814bc8440b8858a8272
-              Type: Label
-              Children:
-              - Name: Text
-                Id: g=5c658b357ff5779ac7d9dc1aed4c4547
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"g"}
-          - Name: IconaPar
-            Id: g=1f97543eb226246c8f68c571da93c5fb
-            Type: Image
-            Children:
-            - Name: Path
-              Id: g=ac2514ecc29a041dcab4c64ff58a1037
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
-          - Name: ObjAbilitato
-            Id: g=cd980ee61d60b802f8bce2e081dd3ed1
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: FillColor
-            Id: g=c97bc8474aa607b8c8f8be1e97565a7d
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#fff2bd"
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=ea68cb0df86ece71aebab67f68fbbe78
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=fc4fd79ddea8fa85a36b1ce40a226bcd
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Value: false
-                Children:
-                - Name: DynamicLink
-                  Id: g=9ba650b2e4f0fec3e8b42dcb7d920db3
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ObjAbilitato"
-          - Name: DescrizPar
-            Id: g=77a3d3df9b041d66afe58eaf9c5bf187
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=567e7ed9949430b7aa2ea8f9b4483cbf
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
-          - Name: Var
-            Id: g=93e2ecc1c9e3d1727fa89f53358ba15b
-            Type: BaseDataVariableType
-            DataType: Float
-            Value: 0.0
-            Children:
-            - Name: DynamicLink
-              Id: g=b9041e31a6ccae0d9d732ed68aa7380f
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[1]"
-              Children:
-              - Name: Mode
-                Id: g=fe366f78b42e2a7b6bb2c6523c5ec189
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: ScaleFactor
-            Id: g=42b9bf13caef58a0a843b43efdf11bd2
-            Type: BaseDataVariableType
-            DataType: Float
-            Value: 100.0
-          - Name: DisplayVar
-            Id: g=69618cb01260b5ab0d7b29a82d20de7f
-            Type: BaseDataVariableType
-            DataType: Float
-            Value: 0.0
-            Children:
-            - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=8ace97ba51e438413ad822287c6fbc45
-              Type: EUConverter
-              Children:
-              - Name: Source
-                Id: g=bd6f927ea5e5d939a466d7b5aba74966
-                Type: BaseDataVariableType
-                DataType: Number
-                ReferenceType: HasSource
-                Value: {"Type":11,"Body":0.0}
-                Children:
-                - Name: CollegamentoDinamico
-                  Id: g=fb06d6bad054b720de2795f774d54354
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../Var"
-              - Name: RawMax
-                Id: g=621cf969a733dce8198d8eb25fa9483b
-                Type: BaseDataVariableType
-                DataType: Double
-                ReferenceType: HasParameter
-                Value: 0.0
-                Children:
-                - Name: DynamicLink
-                  Id: g=3c8d24b2aecf0b1e4a096b9a8351f0f4
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ScaleFactor"
-            - Name: EURange
-              Id: g=ef0af285f91253b0b6075c927f32f6d2
-              Type: RangeType
-              DataType: Range
-              Children:
-              - Name: Low
-                Id: g=5decee86ac6a64f869b2757c265cf417
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 0.0
-              - Name: High
-                Id: g=9217f44e6a81d2539337ecd989b97c1d
-                Type: BaseVariableType
-                DataType: Double
-                ReferenceType: HasProperty
-                Value: 30000.0
-        - Name: TextBoxScalingConImm_R1_2
-          Id: g=6286d57a455160541777e46174adc86c
-          Type: TextBoxScalingConImm_R1_0
-          Children:
-          - Name: Valore
-            Id: g=b0d8a25f50428fe4169d23184099b1ba
-            Type: RowLayout
-            Children:
-            - Name: ValorePar
-              Id: g=7542806e9ad184fb1c5def2340d789db
-              Type: TextBox
-              Children:
-              - Name: Text
-                Id: g=0f6b0b71517deac8256950581b5b0bf5
+                Id: g=43e808a54b61e98e2c245cdce7413b47
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
                 - Name: DynamicLink
-                  Id: g=9a47248cfcf6000fac64273c15f66752
+                  Id: g=4787e683f7d5372d71340f62bf4e2105
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../DisplayVar"
                   Children:
                   - Name: Mode
-                    Id: g=92c0c400df0fc48bfa9c86cc11ef72f3
+                    Id: g=fa49360134f3694c18f8e7d8cafc809a
                     Type: BaseVariableType
                     DataType: DynamicLinkMode
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
-                Id: g=faa54aaf0ca7590630bbb105a0b9e095
+                Id: g=ad599e8c510099eb35a925f9c5b5759a
                 Type: BaseDataVariableType
                 DataType: Boolean
                 Value: false
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=2d2b4f91489dd59f562059cb24f1f124
+                  Id: g=c15213c347afb5f245973a3baae3c0c1
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Source0
-                    Id: g=8f6e793c1d617e66543e7ec8b019b0ca
+                    Id: g=1516fba6bc57a1aeef59b6114aca184f
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=84dbdb789840516ee94ef1ef7c7bca24
+                      Id: g=eefcc2c6e991972b344bd14952360044
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../ObjAbilitato"
               - Name: TextChanged
-                Id: g=1dbea45c97930f75b98668000fdba765
+                Id: g=47fee17bb7438642befe7e897406a6d6
                 Type: VariableChangedEventDispatcher
                 Children:
                 - Name: VariableNodePath
-                  Id: g=6ef678e2a64aa46c1df6403781c09ce7
+                  Id: g=75bb2e0df15dbf21106d3ee9cbe4667e
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
             - Name: Unit
-              Id: g=d126ed0256b45e655c9ec33a2b7ce8f4
+              Id: g=7b0a28ca923d79f26df186964fa0de19
               Type: Label
               Children:
               - Name: Text
-                Id: g=9ff8ead896767857aa7bfe829f871e77
+                Id: g=823175b5db66ccb2b4d7efbefd3ba946
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"cl"}
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=bff5f6b91092a6143609fe90f8d9a6df
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
           - Name: IconaPar
-            Id: g=abad6e971f92fe86fd4e72f3076511d4
+            Id: g=bb65765bdcf94f5af20306ef09cd4337
             Type: Image
             Children:
             - Name: Path
-              Id: g=f7a315ccc82441e7c5ba2ad97342fb5d
+              Id: g=5577045f6ac3df31cb21cbbf51e84adb
               Type: BaseDataVariableType
               DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVolume.svg"
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
           - Name: ObjAbilitato
-            Id: g=cf7976a9508bad0497421b15e3c632c8
+            Id: g=1beb025948523cd24374337be4d14d03
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: FillColor
-            Id: g=a117cfb48fce4aac6673e114cc6e632b
+            Id: g=a8f052d0a7bf64f2a31d47c7942ef54c
             Type: BaseDataVariableType
             DataType: Color
             Value: "#fff2bd"
             Children:
             - Name: ConditionalConverter1
-              Id: g=3eeade22a818bde033baa13cdb59fd79
+              Id: g=3ef5b2c433c13128c3a89ee27ee243d8
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=cc9eeb7aa498e23e56652d9d27db9d0c
+                Id: g=5ab21cbfc695f0a0356805c76d25a357
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Value: false
                 Children:
                 - Name: DynamicLink
-                  Id: g=d65bcf876177b9c7dce30c95e3a4bf4d
+                  Id: g=e6a96bab8a032936ca02edca5c8f25de
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ObjAbilitato"
           - Name: DescrizPar
-            Id: g=50e4f601f69ef09b74686049692879ee
+            Id: g=0ca217114f1a0b5c9afe86145eb62839
             Type: Label
             Children:
             - Name: Text
-              Id: g=cde033466faf81be12dd340584965bfb
+              Id: g=cdffa344fda0ed1a5fcdfb4d3f6c074d
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
-              Value: {"LocaleId":"it-IT","Text":"Quantità Prodotto"}
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
           - Name: Var
-            Id: g=169a4df837d60ff471265c0083255da4
+            Id: g=1fc7d10eb57262ee8ab1e8e2f22b1c89
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=9145c6da294049bad057135993d3d7ea
+              Id: g=e56deb28848f4caa799bfa751b672bd4
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[1]"
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[1]"
               Children:
               - Name: Mode
-                Id: g=cb15b36b58db354365120981f1a8c188
+                Id: g=448aac5069a79480ada5a0f8656411a1
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=7b1c6e60fb252b86ecbec19b5d3b5930
+            Id: g=4143767ae478658975ad3f378c87e24b
             Type: BaseDataVariableType
             DataType: Float
-            Value: 1000.0
-          - Name: DisplayVar
-            Id: g=9588df170d1704f98eb46d6d168de0a1
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=ba4a8e09ac72aeac6e33f305a450f0c5
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=525dd07f8feb755120d190a10b7f8059
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=faf189775038dbb51aa4864be8507e8b
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 4674125
+              - Name: DisplayName
+                Id: g=3776a095290a4f87f79830a38ef7f65b
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=09592180cdc888bbcc280d7d2eb6c4e7
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=7abb04b89cee14fa20448f0f728c986f
+              Id: g=7da8d861ff0fd291179fe0d82543a0aa
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=4e43e800208eb5773185009dafc36706
+                Id: g=f0b13d40f1278e9fd89b1e230fd76e18
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=eedec5981d7b3d897ecb1f6573a28630
+                  Id: g=678ecc3c57da9c54d53e2e1671685754
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=2315a54af761fd0c0dcb1f6280ef76e6
+                Id: g=d99e7a70a70912c88045f9156f1b11d4
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=c644de0bc2e946265b05668917cfff01
+                  Id: g=3b1439523a2a272c672e2c4a4616d226
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=3538aadc5f2042e2a0336d69f6d5e3d4
+              Id: g=1665ec809ad390a35da86780e7787012
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=0408a6e064e98a1c11aa2445992977ad
+                Id: g=0b85a31f50dbec3e87e957ae1934f147
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=00a08c0f77c9ba736cf27a7113a653d1
+                Id: g=81c215e2683ea066b07e3e8eb8a0e6ed
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=724b37327df8e18ddfdaacc6530fe73f
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=9592c6c8df596530a2e3b128dd404ecd
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=38e20178a1a75ee4492523c84e194910
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=215d70dda4807efba580357e74495e52
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=ea7f01c289d77191aaffb8cf0ae69996
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=1fb1abca68da8082c7a8696373a317cd
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=60d18ba8b6fb4a8ab9822903c3526b7d
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: TextBoxEuConverterConImm_R1_2
+          Id: g=2d60a7b4a02de50e437ecced81024689
+          Type: TextBoxEuConverterConImm_R1_0
+          Children:
+          - Name: Valore
+            Id: g=c3c4a262704eb78311b01912c8dea1d7
+            Type: RowLayout
+            Children:
+            - Name: ValorePar
+              Id: g=f712aff5a61e574ce7ce80b15fce0e79
+              Type: TextBox
+              Children:
+              - Name: Text
+                Id: g=1e5c16536c7b1b0295a2cd6c86cf8924
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=785b690d2271804839127b32f0fa8c33
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar"
+                  Children:
+                  - Name: Mode
+                    Id: g=312cd4fd65eed5a3b3462041762db596
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ReadOnly
+                Id: g=b81c882a4461236929cdca974302bc16
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=5122f88531a48f25791a00805228d566
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=366dd07e80467f87cc00590601ce26a7
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=ef0bdc429d6e808e7bcfa5d2a70354bd
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../ObjAbilitato"
+              - Name: TextChanged
+                Id: g=e994cd5458c3b6abb09daba7876ca235
+                Type: VariableChangedEventDispatcher
+                Children:
+                - Name: VariableNodePath
+                  Id: g=e1e105d449e94596211adb2c42436291
+                  Type: BaseVariableType
+                  DataType: NodePath
+                  Value: "../Text"
+            - Name: Unit
+              Id: g=63a04e6fcb17082b65a8d15299234ba3
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=45ec2e29e6dd3b336e3fa115699e3d95
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=70d9142403ed9abb083403a80f2c94c8
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+          - Name: IconaPar
+            Id: g=596669b9d99307d7071781d9cce70cbb
+            Type: Image
+            Children:
+            - Name: Path
+              Id: g=b32259c273e3b0d8b98877ee866eb0e4
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
+          - Name: ObjAbilitato
+            Id: g=241a345675dc16cde63268f2c8a518aa
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: FillColor
+            Id: g=af6dd1dcaaba4d5aee8d1a50bc4c024d
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#fff2bd"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=6437a25fa3d091650de56458a7331ba7
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=35176d6012bbcb2694ceec16f7fca9ba
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=45eca4cf4786ed263d5528101ce3ef99
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ObjAbilitato"
+          - Name: DescrizPar
+            Id: g=63a9ec6cc9582a9bb6bb8970f624b5ca
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=7dba93eb4c2ae0d0ed6b7c4ec82dc9b9
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
+          - Name: Var
+            Id: g=304b523a45e9927e723d0f6e77c1e925
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=c6974fee9a010726fc2cd8d21fda94d3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[1]"
+              Children:
+              - Name: Mode
+                Id: g=cfb147818cb73aa89609a3d6debfcbc7
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ScaleFactor
+            Id: g=0fad2b6797dbfe44be745a71ba5706b6
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=9c13513df63e78399447459abb94c663
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: EngineeringUnits
+              Id: g=55f1312cf748e477daf2c1eb30994ec3
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=17c7fda28c3e86ec36b3913dfb987803
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 5065812
+              - Name: DisplayName
+                Id: g=05a006625bb52c8f37109e4db63d09aa
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=3b4172daa2a9b84f614326e3b0100cfd
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: ConvertitoreDiUnit__Ingegneristica1
+              Id: g=c8ab28acb032d631aeb0d7016206593f
+              Type: EUConverter
+              Children:
+              - Name: Source
+                Id: g=09623184a5635aac32e1afd6f431b3b4
+                Type: BaseDataVariableType
+                DataType: Number
+                ReferenceType: HasSource
+                Value: {"Type":11,"Body":0.0}
+                Children:
+                - Name: CollegamentoDinamico
+                  Id: g=3be6580d9c4c235f2525ffff460379bd
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../Var"
+              - Name: RawMax
+                Id: g=2751d1825e9dce3148e4e44235009560
+                Type: BaseDataVariableType
+                DataType: Double
+                ReferenceType: HasParameter
+                Value: 0.0
+                Children:
+                - Name: DynamicLink
+                  Id: g=d45e3260f7aec7890897b36c2c7191d5
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ScaleFactor"
+            - Name: EURange
+              Id: g=6581301d0696dc7dcdf808e3ffe63353
+              Type: RangeType
+              DataType: Range
+              Children:
+              - Name: Low
+                Id: g=788964fe127f64fec55340c3b1bcae50
+                Type: BaseVariableType
+                DataType: Double
+                ReferenceType: HasProperty
+                Value: 0.0
+              - Name: High
+                Id: g=dbb345addc26825d645379051b624932
+                Type: BaseVariableType
+                DataType: Double
+                ReferenceType: HasProperty
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=a0f0d15b6a63a12dada8df66a4421583
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=4c40030705ae4bd8b942b39ff4141a80
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=a6b349e453fd725ccaafbb6f46de90bb
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=557d9e912b0a954be3d26f966424a6ef
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=7c3892c1c972879a4eadceeaac7c7583
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=51502611e72b7a15d64b7397cacb9d1c
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=b3689002cdbd2e8fb24f5edee797a321
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Visible
         Id: g=344a24d1bd52c91adc1579f400698cf7
         Type: BaseDataVariableType
@@ -20421,386 +20538,522 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 5.0
-        - Name: TextBoxScalingConImm_R1_3
-          Id: g=9b9d0520b4b341ee3ccb553914f58124
-          Type: TextBoxScalingConImm_R1_0
+        - Name: TextBoxEuConverterConImm_R1_1
+          Id: g=401a6a8151796780d0dd4a487fa6c1f6
+          Type: TextBoxEuConverterConImm_R1_0
           Children:
           - Name: Valore
-            Id: g=cdc20625b0a09e6e170006f0927bf3f8
+            Id: g=42682219d9089941b5e7191de3269dcc
             Type: RowLayout
             Children:
             - Name: ValorePar
-              Id: g=d495a0463ec26e7b2c61e02507276f8a
+              Id: g=a27f8c63a6d6265db2f7d238da606b84
               Type: TextBox
               Children:
               - Name: Text
-                Id: g=ce5a56b7865370b33a45f725d5a7864b
+                Id: g=7edfa31d530629a3f66c944420d5656c
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
                 - Name: DynamicLink
-                  Id: g=d23b09502003b557e5ac787379e5a451
+                  Id: g=894796792674474bca12e71a158878e7
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../DisplayVar"
                   Children:
                   - Name: Mode
-                    Id: g=effedeaff85a410a52b86928b9b405ec
+                    Id: g=29a461c2e1fd9a278fa19494743ad319
                     Type: BaseVariableType
                     DataType: DynamicLinkMode
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
-                Id: g=63a7b4acd87e955a0de5013f6502990f
+                Id: g=0c98f283c29b0f86e43f710623b41604
                 Type: BaseDataVariableType
                 DataType: Boolean
                 Value: false
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=e3b7903f58d63bf7f46c1b1d164e0dac
+                  Id: g=db6e82337b96d1cee0b799bc3af2a2ed
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Source0
-                    Id: g=3adf1a1cb8a7488b733dcaa6b925207c
+                    Id: g=a2c7e6ddd73fd9f2bab2c0d3c0934e34
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=93c3b3dfb753fb93c1d3c8812e7f1c03
+                      Id: g=367813dbc31e1f24011f3bb9ec2c1d96
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../ObjAbilitato"
               - Name: TextChanged
-                Id: g=19338f9ab52a222b6a704c4bc6c83c07
+                Id: g=63e16cba474e08828b80cae8de640ffa
                 Type: VariableChangedEventDispatcher
                 Children:
                 - Name: VariableNodePath
-                  Id: g=cd22d5447131dfc9fb280b7c9f1c4795
+                  Id: g=8689d849101c8b603a93f388b93f58eb
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
             - Name: Unit
-              Id: g=2d7acbb845ce2d9856b701a6f3df32bf
+              Id: g=8adc81ccfaadb1f4a070ffe95fb65b6f
               Type: Label
               Children:
               - Name: Text
-                Id: g=77b3b21b58789d645b6633e9cd83964b
+                Id: g=494ff7bf1fccf230cb2b6fcab11d0cdb
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"g"}
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=9874434670fbccd34e276b268f0edc06
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
           - Name: IconaPar
-            Id: g=94c0a1c5c4bbc9821d72fa511cd45c99
+            Id: g=24da64681ed1ceadc2702f38ec1a4b8c
             Type: Image
             Children:
             - Name: Path
-              Id: g=53b850c1f29006315d951c5be4fc6b2f
+              Id: g=ec4af7314a00027f4ebb0b20962c2b32
               Type: BaseDataVariableType
               DataType: ResourceUri
               Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
           - Name: ObjAbilitato
-            Id: g=14a7fbf4137866f2955c6bb6abd1e118
+            Id: g=05a080ca33d745a4e7401035458de680
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: FillColor
-            Id: g=4552d2466907d48c640dcbfe8dfff84d
+            Id: g=81c528fd7933b466302a1413f9adb63f
             Type: BaseDataVariableType
             DataType: Color
             Value: "#fff2bd"
             Children:
             - Name: ConditionalConverter1
-              Id: g=0d3a0dd59e395535da91a8e562bb4a8f
+              Id: g=5811b99507924b1c994509f34a658fa0
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=9de8392a6427103c80ceb4d4706a8303
+                Id: g=1ed2c4c031cb714a51b92e8b7239d5f7
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Value: false
                 Children:
                 - Name: DynamicLink
-                  Id: g=db793cf3fbb51c984d2cf814de5226c8
+                  Id: g=c7e0cf345e7fb7d11eafbf8600866670
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ObjAbilitato"
           - Name: DescrizPar
-            Id: g=d6647ba4c595c08722256e4731ef8b36
+            Id: g=96f3e2138afc0afd00e4059982a62655
             Type: Label
             Children:
             - Name: Text
-              Id: g=2f950bdd1096affc2498203ae636c708
+              Id: g=658b806131595420963bf8e125b811fb
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
               Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
           - Name: Var
-            Id: g=cd9284952ba2c6ba82d02e7524dfa1c3
+            Id: g=d43d3b3445ac87a5dcb98f3518149c5b
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=ed38085f0e33cb74d73ea2862a89cc5e
+              Id: g=7785ab34edaf283173c255af0e9a835e
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[2]"
               Children:
               - Name: Mode
-                Id: g=9139ebb428cdafcd0511a65e617f22da
+                Id: g=aa8fa49e38c24ff8e6e36e5276ce99d0
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=35c0be2f635fb8996335677faaab128c
+            Id: g=f8cfdfa7c25104c448ddf47ab2063e82
             Type: BaseDataVariableType
             DataType: Float
             Value: 100.0
-          - Name: DisplayVar
-            Id: g=3c8993af84fdfc5a51fbf104f859f33b
+          - Name: VarAnalog
+            Id: g=3e8b7556553d5a5a6e4b68e9bef2ded7
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=d2874920caa602d7dc303e52bd3f41af
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=55576df12440688b1210e8a5fe924a27
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 4674125
+              - Name: DisplayName
+                Id: g=6fd4a8dd6c6564e75decfe6a57b96df8
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=e426c54dfa0ccb21c3b96547ac3ed7bc
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=ba012eac882c7302d41f6ea421eb6bf9
+              Id: g=1232a26e4a13865ae3adef221a648e36
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=d62ece438d7f11cf1e400194a6f4c474
+                Id: g=4b59e8fe581e67e3db3e4d6f430df743
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=939a5313cf0ec4cf735569c7ee58df32
+                  Id: g=e88ddf086fbd9ff02015af853549ddc6
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=dc6cdb4e44527774bcecdeb5ad1ff56d
+                Id: g=fa89d6051165f085147a9cfa51f5ad77
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=382c0378ff1892801cf909932efa39b4
+                  Id: g=8ede85c4ad22111f5d8bed5d71d6c7eb
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=6f6fd6aa32309045bb7e468af9ca8114
+              Id: g=82dcaef0d09c75c55a83a3cff1af0f97
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=11b696eee3e757c839083b10d1de7d83
+                Id: g=ad7e6f71bdacf06a2740a2e4889282c2
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=009c2307e5130458b34ef7619c88e058
+                Id: g=c62f424b1f65c2ec286527eaaebbbdd9
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
-        - Name: TextBoxScalingConImm_R1_2
-          Id: g=acfbf23e1fb0fd3a80a727295ad4dd2b
-          Type: TextBoxScalingConImm_R1_0
-          Children:
-          - Name: Valore
-            Id: g=576d82080c1dba8177fd7ae92eea1c52
-            Type: RowLayout
-            Children:
-            - Name: ValorePar
-              Id: g=2b5763b97e18696e127ee33df8a753fe
-              Type: TextBox
-              Children:
-              - Name: Text
-                Id: g=9bdb2f01c84d27b5eb09736662dd2d00
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: DynamicLink
-                  Id: g=33d2109c60a220e5d646811f45e7d115
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
-                  Children:
-                  - Name: Mode
-                    Id: g=8650775d6e93336a1d25cc6a2187275b
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ReadOnly
-                Id: g=b3d4efd89977e432a9b85a549a5743e8
-                Type: BaseDataVariableType
-                DataType: Boolean
-                Value: false
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=afca26dacbb26c4b78a8a56ac9f7c13f
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=2b028318dfe84d10f492a6e68fe89dfe
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=70cc668692bc684a172183974dea7f4c
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../ObjAbilitato"
-              - Name: TextChanged
-                Id: g=ba35ce610e8c4d5881bd96782a3b5b97
-                Type: VariableChangedEventDispatcher
-                Children:
-                - Name: VariableNodePath
-                  Id: g=3b01f855474709dbc32798564c3c599c
-                  Type: BaseVariableType
-                  DataType: NodePath
-                  Value: "../Text"
-            - Name: Unit
-              Id: g=1e45cfbd5b181fe8b2657ce223fc1ddf
-              Type: Label
-              Children:
-              - Name: Text
-                Id: g=40fc4cf7568f114f781b8278d6699895
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"cl"}
-          - Name: IconaPar
-            Id: g=9ee17bb65aec2576d188ef60c35599b0
-            Type: Image
-            Children:
-            - Name: Path
-              Id: g=2eb0a6586170f33dcb57d5c3cd835126
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVolume.svg"
-          - Name: ObjAbilitato
-            Id: g=0c8029d790fb6ffbcd16d041484a4753
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: FillColor
-            Id: g=871fee304d9d901bf0f458b3fadb2045
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#fff2bd"
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=dd550c8ae127bd0756e82c3e544f3191
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=494afe6e62c8e042c4791174bd2aa2d0
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Value: false
-                Children:
-                - Name: DynamicLink
-                  Id: g=99269598f16cfe4e5740afb531a423a8
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ObjAbilitato"
-          - Name: DescrizPar
-            Id: g=38d9d4c969155ff0fd4c42eae53d068b
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=fe1dc21f111be698078eb151d2041ffc
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
-          - Name: Var
-            Id: g=c4158062f88b629ea9f46ccdff4550bc
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=318fcc987163a42475950dbe65552fa2
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=62d7e020d1043aab01aa870da402e406
+              Id: g=d5285fd1a5b110aa665f0c92be673f90
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=9054d3831f9fb7ddc487e87d0c44198e
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=ac75aa454ea19d587ec2bd7d557b3a62
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=66d4cff8613171a5728d778a55e9fae5
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=931bf56b39863eb4acd9c9872159f44e
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=b503787c09c2c32c8d65574bb4324d83
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: TextBoxEuConverterConImm_R1_2
+          Id: g=102c25e54f6694e0c051a9cea26e6fa1
+          Type: TextBoxEuConverterConImm_R1_0
+          Children:
+          - Name: Valore
+            Id: g=06decb28c21e672673c2e585f86601b3
+            Type: RowLayout
+            Children:
+            - Name: ValorePar
+              Id: g=7c9102b788b0724eef493d5aa021164d
+              Type: TextBox
+              Children:
+              - Name: Text
+                Id: g=55d1099f0531930ff52ba4d73d8451cb
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=737f76674283dcfc8fd2eac55f283417
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar"
+                  Children:
+                  - Name: Mode
+                    Id: g=12bbace86ee899a46532ccf0b4fea822
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ReadOnly
+                Id: g=32c7375c969ebdc7b1df4089be75b87b
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=8a00ab7b9e674f29675197bc29d3717b
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=263fc65a07fbf70badda6ed90c55f66e
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=29be5d1bd412a5f39c0bd57d4e672eba
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../ObjAbilitato"
+              - Name: TextChanged
+                Id: g=91abab2e8867bb69cdffd8b54f67b0f1
+                Type: VariableChangedEventDispatcher
+                Children:
+                - Name: VariableNodePath
+                  Id: g=ff78e910f5a0a0a0b2021a948e05600d
+                  Type: BaseVariableType
+                  DataType: NodePath
+                  Value: "../Text"
+            - Name: Unit
+              Id: g=8de0dcadc5f306bf783ae8017c128857
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=6fb6cd8e8761d3bff02fb2652a7698d7
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=58aa05a708927b158c2e6ad715eb114e
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+          - Name: IconaPar
+            Id: g=eb9ef80f9eb00363ecec8e44cddb196d
+            Type: Image
+            Children:
+            - Name: Path
+              Id: g=e3c5da300223c65dfc912ddecbe6569e
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
+          - Name: ObjAbilitato
+            Id: g=be5ba6df2bc374af7a4cb3ab9073d73e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: FillColor
+            Id: g=9de6fabbd5af3e9851998663211392d0
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#fff2bd"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=edb7523ab7e74f9d360abb0af999c4a1
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=dfa6c579537b52f8a665522b99aec8ec
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=0856c77cb39cacde3315602ba68186e0
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ObjAbilitato"
+          - Name: DescrizPar
+            Id: g=b8aa0fe23570de1eae2b239a1ee4c923
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=a97d875e4522185bd575543799bcbed1
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
+          - Name: Var
+            Id: g=f4c3a83ad301197967d25327382f2b91
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=532269b326a7bdef6a1d768ac65588fa
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[2]"
               Children:
               - Name: Mode
-                Id: g=2a43599b280e21c6980f75f4d7a67ee2
+                Id: g=c7c652b3b8dbca055cf1c01baf9c5d9a
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=f42b9e2c89f75055d0a6431d4cdb82a7
+            Id: g=e4765e83586e6ec13b1bb6ff87b36d5a
             Type: BaseDataVariableType
             DataType: Float
-            Value: 1000.0
-          - Name: DisplayVar
-            Id: g=d30343430d02539c4e09e7caa206b84a
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=e72799323be303f4ff9faf509c3fa005
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=50cd6e57466d32087a3a0298ca7ad930
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=1be947f243a97087595fa1ad7555d721
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 5065812
+              - Name: DisplayName
+                Id: g=57305a98ee7ec6c4de9d26bde3cb809b
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=2ab4073d76a8ea388803691227b316ac
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=5e75c7f240e652167b160f579cef8200
+              Id: g=438cbb9cb0f33394af1dcb98569e56ff
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=b7b1cbbb11141834cb2aabb4598c6a9e
+                Id: g=2f015ed4a6bad42b1f0337e3f16926c6
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=58ce1aae50891984a0bcaea3051b34e7
+                  Id: g=7adfcbe8c72de1de1ce2064bafd68a61
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=a93a6dd5fe7ea5bfbe9308e3e0423683
+                Id: g=94b5a4fcd460534ae374f7a140e2b407
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=3a69fced6f35dca369c15d7d0e796b24
+                  Id: g=17ec5bd61df3109569eafa93df7c4cce
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=6c4f85b0c189abd68eca42c870b2496d
+              Id: g=356d862c45138401093357e8e6d8a685
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=8d8329ffbcb7466823f74a7faa421932
+                Id: g=63bf3bb1cfa64ef797b4a288ba0ef600
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=489bb55b0710b3a53829d7fd05c1558e
+                Id: g=c7328d900aa6acde7d5fcf73adc6bd72
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=2fe5c40c99a59372f88668287d6a2a64
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=f4c6698e89a74245d26e405d3bfe9399
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=bab4844187298336902f2342df73980c
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=e22ff0307a29bd259420b85db61065cc
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=ca63b904c2efa95a2d8d7ba73560b46d
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=a0a007db9269f9610ccda8400cbabcae
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=fc0847b6b1144813c3b8a6cfdecbd482
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: VerticalGap
       Id: g=f5852b066a5ec3da6beb7728837ff7ca
       Type: BaseDataVariableType
@@ -21020,386 +21273,522 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 5.0
-        - Name: TextBoxScalingConImm_R1_3
-          Id: g=75c168ae827b61ff7cc2d5ffbbbabf08
-          Type: TextBoxScalingConImm_R1_0
+        - Name: TextBoxEuConverterConImm_R1_1
+          Id: g=072ee63ecf1598551937a647d844b339
+          Type: TextBoxEuConverterConImm_R1_0
           Children:
           - Name: Valore
-            Id: g=f19456d141dd30e5d02cdb830ab89dc5
+            Id: g=366984d12a3bbb511509e05036553b75
             Type: RowLayout
             Children:
             - Name: ValorePar
-              Id: g=e059cc7107c04a0c4eaff93c70ddb1ed
+              Id: g=40f463930071ee5bdaf46b34fb465c72
               Type: TextBox
               Children:
               - Name: Text
-                Id: g=c029ca76119569f909b5c23ea792d38f
+                Id: g=f82cecc64582adcebbc0b1a462d5d1ba
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
                 - Name: DynamicLink
-                  Id: g=c9eb2afab97338f0ec937c861b03ed18
+                  Id: g=2e008353591f5d8e694367e724e47663
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../DisplayVar"
                   Children:
                   - Name: Mode
-                    Id: g=c2c3506560c226d82b165ed187ad5db6
+                    Id: g=d3025a6e6e33b8b1fd4a8b64dc57658c
                     Type: BaseVariableType
                     DataType: DynamicLinkMode
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
-                Id: g=5f34e6fec13086a2669664626d5ae9fd
+                Id: g=a81ba0d6de8f15e88118251e0679b4af
                 Type: BaseDataVariableType
                 DataType: Boolean
                 Value: false
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=5bacdb73af4c2c696b8c91ce264f1235
+                  Id: g=05ffe698593f111126f3c85097c0515b
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Source0
-                    Id: g=f27e1ad0baaf21774da32a34c83b634a
+                    Id: g=3d20f58c443c67758ffe9dca4167ef72
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=fdce2a407477756aca8708439ac1f46e
+                      Id: g=4f2e91720aca05f41ec894db4c8a8002
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../ObjAbilitato"
               - Name: TextChanged
-                Id: g=eba49769128505f494c907b123a5e53d
+                Id: g=b6d403a8d209faadb8c50a2fa173e79c
                 Type: VariableChangedEventDispatcher
                 Children:
                 - Name: VariableNodePath
-                  Id: g=076f6e141d4dcfb374c92e0a999ea3d3
+                  Id: g=4aacec18d31837de5bbd8b8768b60ce1
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
             - Name: Unit
-              Id: g=97b8ce4c8a95736d30a43fc7042366aa
+              Id: g=8b810d0500b89d44e0d4822cd3663fe8
               Type: Label
               Children:
               - Name: Text
-                Id: g=bfee8bedd531f0340a9563cb36dce26b
+                Id: g=1f54f3a27354eb7e4efbefd1eb002859
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"g"}
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=4fec7478a24c69826ebc1e61168b10bd
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
           - Name: IconaPar
-            Id: g=d0db951af43c94c956bdc484840a7e90
+            Id: g=9b514168bb6a1071a90ee62c0fd1411c
             Type: Image
             Children:
             - Name: Path
-              Id: g=17d676577bfcb070e83ca0ec60da945e
+              Id: g=bfacf7160f2505700d47d6b7ee81cd16
               Type: BaseDataVariableType
               DataType: ResourceUri
               Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
           - Name: ObjAbilitato
-            Id: g=806e5624a1173b341c251fa27731f26c
+            Id: g=2cd6a39d44aba37bf52482b59fc0ecf3
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: FillColor
-            Id: g=4e80323cc4d64df93a5512638e29a658
+            Id: g=fd858fa6e3461a253137808067f887e3
             Type: BaseDataVariableType
             DataType: Color
             Value: "#fff2bd"
             Children:
             - Name: ConditionalConverter1
-              Id: g=0b455677659aecd2178338a7f3aa5afb
+              Id: g=6a20d2cedba6eeb14e8f9500f4636bb1
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=7721921b658ff70bccca7e6535f3f50f
+                Id: g=f1dca7f03568f19eaa6e05eec8325d2e
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Value: false
                 Children:
                 - Name: DynamicLink
-                  Id: g=c297e948dfd47a68d8636c0c66389f49
+                  Id: g=4a64d423a50401461b9a809694b032b2
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ObjAbilitato"
           - Name: DescrizPar
-            Id: g=d4cc61b102de2ae1324c21d042bcd7e4
+            Id: g=c7889d29c830938e248cd90084a71f4b
             Type: Label
             Children:
             - Name: Text
-              Id: g=b701e05a45983e9532e73b4a484e677c
+              Id: g=e1183e4020fb5c8ee4752556ea88f301
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
               Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
           - Name: Var
-            Id: g=de2c49006ba62e6b1a3141a2333ccc61
+            Id: g=880aea9ffe5daf0be881aac893b4c608
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=83329d066ab1bfd195370c836f49e952
+              Id: g=6dfc8ca7ed545163f57614e580071dcb
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[5]"
               Children:
               - Name: Mode
-                Id: g=4521b1926450c48c4138ba25e10c95cc
+                Id: g=e18f25147a1fdab091a7f62a85ece5fb
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=5a5626399508da8ddc43e7943dba230a
+            Id: g=9a5d759e8c93740047ee1490ca883770
             Type: BaseDataVariableType
             DataType: Float
             Value: 100.0
-          - Name: DisplayVar
-            Id: g=3440f368ea70e2bd50b2ec9d173a4f15
+          - Name: VarAnalog
+            Id: g=5eb92b43adb64819b0e7a31e9f669950
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=a7fff548d5359db3f63b7268e153f606
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=b4f0cf317a7a634990185958f74d5b9d
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 4674125
+              - Name: DisplayName
+                Id: g=bfb95f487f96f5152ea410e20136521c
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=166783bd3c6793fa5b578ccb697137b4
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=77996e50bc0becfaa48888dc37bcc463
+              Id: g=920874912bbd80b9de22343f4849ff46
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=0cea0f798d69a8bcdbb6c6895406e7a3
+                Id: g=14af40a9102a484fa1aaa26ee7deb992
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=759085b5477b12c009b0716448fe994e
+                  Id: g=09c6ede3a61db257e561b8bf0f1bb803
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=2e0ba9ce9eb95f7368e55619228ed537
+                Id: g=8f5132c59324a50e260cfdf3a780a2e1
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=f2c291ea3c96dc062e21e33bff1f894f
+                  Id: g=a944b4d71f155fbee441c05f598ab5f3
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=4be202a67f5211b0750ca4cb0cc44f72
+              Id: g=755e5ac1683d2b4871fb4f392138d240
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=25515674883d1c940b71d766815c6fdb
+                Id: g=837dc3e236ad208282746dd571b7a419
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=9b2f1a60d0eb32b3c32fc27cd890ecb5
+                Id: g=6b9505dd458d01b01106f44047b6579a
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
-        - Name: TextBoxScalingConImm_R1_2
-          Id: g=e15cbeccafa8b12c494dd19b678dc202
-          Type: TextBoxScalingConImm_R1_0
-          Children:
-          - Name: Valore
-            Id: g=1108ea545511a1e1f87116d865454e67
-            Type: RowLayout
-            Children:
-            - Name: ValorePar
-              Id: g=5c3d1988dd4710b8fb366f404566841a
-              Type: TextBox
-              Children:
-              - Name: Text
-                Id: g=d27ea961afb80500f4202540ec5c970c
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: DynamicLink
-                  Id: g=8ac2fd018136ae5a9f9a00025912ba5f
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
-                  Children:
-                  - Name: Mode
-                    Id: g=af18a9b350b07df71caf169ad666d113
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ReadOnly
-                Id: g=18f28e655cb389ce14338506271099e5
-                Type: BaseDataVariableType
-                DataType: Boolean
-                Value: false
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=abb45342e51b82a248714d1a50101707
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=ce75d6aa315e36fc6eb1a71c5abb1cde
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=924ff0c4e560633c825fec8afdcc190c
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../ObjAbilitato"
-              - Name: TextChanged
-                Id: g=850d34b0e515b38d37c0976f0d08a3e3
-                Type: VariableChangedEventDispatcher
-                Children:
-                - Name: VariableNodePath
-                  Id: g=06c1dc231fd57212ffb7ed06693a41b4
-                  Type: BaseVariableType
-                  DataType: NodePath
-                  Value: "../Text"
-            - Name: Unit
-              Id: g=696cbb563c642f426f81c18df14f4e13
-              Type: Label
-              Children:
-              - Name: Text
-                Id: g=f32051ea07bf68dd6662003b6c81eb0b
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"cl"}
-          - Name: IconaPar
-            Id: g=f311a1ed8b6fa3c7dea83db0a1bdd065
-            Type: Image
-            Children:
-            - Name: Path
-              Id: g=8a561596d4c43e84d3179ebb288e36cf
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVolume.svg"
-          - Name: ObjAbilitato
-            Id: g=f0659b0e5d4c8181f7b243c9caf05720
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: FillColor
-            Id: g=2f8e3ef2802ce126ecc75ed8cf58c475
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#fff2bd"
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=a0041f01f8a2f69ff59e557a4101f9e4
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=7c57d07a80993e9bc2e4e6e89b4c3931
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Value: false
-                Children:
-                - Name: DynamicLink
-                  Id: g=7b165b2b77c1da204f6378f4ac2fe94e
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ObjAbilitato"
-          - Name: DescrizPar
-            Id: g=4b13eef51c843d345a58d8435be8804e
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=d1e521e6bfd4003334906847716f6a7a
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
-          - Name: Var
-            Id: g=5accc94ede76e689622ba295e13e0230
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=d20fab4f8e6dc552c93632b5112ce076
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=a1eb0ee22ab656dadc45cd80683b8cb9
+              Id: g=fde5e852df2ccff056996a05de799b0d
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=b1a02ed9126579b8b6f5387bc40ba076
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=e118acb018213cafec4a904b857e1105
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=66c92eebf2bc828f70c587a67fbebcfc
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=45cf5885e4bed1a4a5cf442fdf3e2d81
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=3d98978c7fcc326dc0de70a6e3ced1ed
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: TextBoxEuConverterConImm_R1_2
+          Id: g=5021147a3c10b418aaec847bb55d0f8c
+          Type: TextBoxEuConverterConImm_R1_0
+          Children:
+          - Name: Valore
+            Id: g=bde79cdea93bd6bdf063df5a46de9514
+            Type: RowLayout
+            Children:
+            - Name: ValorePar
+              Id: g=966c146da8427bd40be03feb42079773
+              Type: TextBox
+              Children:
+              - Name: Text
+                Id: g=bec4b95ea868f6a356bbc6c27712598f
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=6dce972c929e2297faee19305cc56796
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar"
+                  Children:
+                  - Name: Mode
+                    Id: g=4f107c80e540987b3c713844ef667254
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ReadOnly
+                Id: g=e80f3148af394e0814e365d049abbb8a
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=683bb0a87f27469e611730c82e318abe
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=83052aa9f5c3bd41c2435d56c7ee777e
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=0d33b9e1495caa58e8adccfb6b3c96a2
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../ObjAbilitato"
+              - Name: TextChanged
+                Id: g=7ac7a5f50d107853032c6fecf0eaf30d
+                Type: VariableChangedEventDispatcher
+                Children:
+                - Name: VariableNodePath
+                  Id: g=ea594099322c0ef769a352fec2a9fcfd
+                  Type: BaseVariableType
+                  DataType: NodePath
+                  Value: "../Text"
+            - Name: Unit
+              Id: g=c7e0d4663f3380924556a311d8bafe05
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=65321466ef15420c3bf50d417749b369
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=134123c0ffce458f38a9542238c0a029
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+          - Name: IconaPar
+            Id: g=6385d77db62398f27b23f7657b2b9e60
+            Type: Image
+            Children:
+            - Name: Path
+              Id: g=f106d5f6c7e30fe4f3333c2f3d079ed4
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
+          - Name: ObjAbilitato
+            Id: g=c406750b4b2f43b516ca10456e0ae65f
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: FillColor
+            Id: g=42b8608a4c5c75e12e2508fe43fa1610
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#fff2bd"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=241140c6a58bf2fadc046d5d2c1d72b6
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=4d5cbbc9aa74eea2c54e835e5e8fab80
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=d59dd4b279d70fb812e1bced3dbf545c
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ObjAbilitato"
+          - Name: DescrizPar
+            Id: g=1d0bd2bc8224c27046f493ef7841c5fe
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=efb242336f1dc1d5796e0c0ad2166361
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
+          - Name: Var
+            Id: g=4acec77a9430387e1654544a4279d294
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=cf5528ca6c49e59f8e24bdfe1ebdb595
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[5]"
               Children:
               - Name: Mode
-                Id: g=c97b3062eca09b4bab258173d57e057f
+                Id: g=351aabdd12df6aa23e93b6b60b795a1a
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=d473969d873faca567c4c9d7fa2b8773
+            Id: g=a87704bd11778c5f32a790891e53869b
             Type: BaseDataVariableType
             DataType: Float
-            Value: 1000.0
-          - Name: DisplayVar
-            Id: g=1d7d5dd62bf43e79c5387655547f25a1
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=509b7086c96c43b92d1b12e75ed25d0b
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=5963230ad089ed72fb2d632b8eae1317
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=409bf29c7265ed36dce1b959e691b37d
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 5065812
+              - Name: DisplayName
+                Id: g=43f8d3c273cfe38714b90504addb27a5
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=511cd3698cf6afa7c6962ad09da37515
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=1352fc17c97998cb980a5093a51a934e
+              Id: g=fc6dee9a74b8acb3936865f381ee5d8d
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=0d3ac13da5c0ff6db5206886cd3afd21
+                Id: g=75392c8bbb868d89b6865b3b45128d3b
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=2658d0b02391fbb60484baa4e2a20b14
+                  Id: g=63c5fb9c4d2bac02b7ab700ead22f372
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=201107672e0f5780d40a8b5af57264f9
+                Id: g=2e5a576d947e126ab48342ab9f39bf60
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=53aeaedc2a0176e180b8aa89b1ff2a0a
+                  Id: g=445446b1906ada57fe14234e015338b6
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=2e7d636ac0f9f524ead75ab2d2c8cdc0
+              Id: g=f227ec8909f27aacd4e77e34121a4a0f
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=387012cc1a3f2a92c9406da02f7eb639
+                Id: g=a48ff31101d00f60a59ffda42425de6e
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=a061d3370685c1a5db756bffdcbe1e6e
+                Id: g=a7fed8a432d33a99a2480efae4e0c94c
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=7c78487932e227a468a580e50a566ec2
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=0b7d8db453a96490768961c7b5041edc
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=ede9ea048ec7987619770e8cedc76e6f
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=4330a64cb33c3df7686808c828874efd
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=164fd47bb321b87df184545c2ce43c93
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=c2b253f042bb1e270a96a0f37cbbb0ed
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=84e164601affecae5b20288fc2acfde7
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: LeftMargin
       Id: g=9c3b42ddcca2f3cc6c4ef818918beb9a
       Type: BaseVariableType
@@ -21713,386 +22102,522 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 5.0
-        - Name: TextBoxScalingConImm_R1_3
-          Id: g=c57a592d71519bb46610f5a1b682de76
-          Type: TextBoxScalingConImm_R1_0
+        - Name: TextBoxEuConverterConImm_R1_1
+          Id: g=ae9113b43db5f74eb3414f4337471476
+          Type: TextBoxEuConverterConImm_R1_0
           Children:
           - Name: Valore
-            Id: g=6e990bd481b8fa8ce66ef04dd64b722e
+            Id: g=e90aef603c904f3ae76cc1de975daea9
             Type: RowLayout
             Children:
             - Name: ValorePar
-              Id: g=b79514727d95d192621f13dea712d1ad
+              Id: g=93fe40937d2367115e20c09da98a3710
               Type: TextBox
               Children:
               - Name: Text
-                Id: g=44306d5bec8337e63cda112ee581971b
+                Id: g=28f2957d2fa124c7aacf71a1c4ad1b55
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
                 - Name: DynamicLink
-                  Id: g=a815be3816675e7e415a7e2463056383
+                  Id: g=b5b8aebb0349bdf3abda78667b550583
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../DisplayVar"
                   Children:
                   - Name: Mode
-                    Id: g=f76c32fa0e5bcd718cb272c491af4fc9
+                    Id: g=8907a8bc1a0213cfc3ac98837c120049
                     Type: BaseVariableType
                     DataType: DynamicLinkMode
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
-                Id: g=086f030e63b637b058a881ad309dc32a
+                Id: g=e6821d549971ec1c73d17dc412dbc258
                 Type: BaseDataVariableType
                 DataType: Boolean
                 Value: false
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=654e2838572254a26556dff7b0c81f6e
+                  Id: g=dfca308723f3488d157a1e145d5e73af
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Source0
-                    Id: g=8df0bcde8494187be892cc93dd0666de
+                    Id: g=e670bdcec32242b6c915cd1dc9f626ae
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=07d1ff2c03946103c18fbe4722eb0834
+                      Id: g=3310cd28b93252ddcb60f167d11d21bc
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../ObjAbilitato"
               - Name: TextChanged
-                Id: g=a0760e524204224dd54b9660fbc3881d
+                Id: g=d89d0fe2455d769b39e1ce31d5b882dd
                 Type: VariableChangedEventDispatcher
                 Children:
                 - Name: VariableNodePath
-                  Id: g=d3253b40a6bf6352a9313e0e68704cb5
+                  Id: g=5902637959c1c0fd90edfee22703cf06
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
             - Name: Unit
-              Id: g=a763f7461ddd6a5e02ed4adfb1ff1207
+              Id: g=dbceb61333efc07ba0f22953104cd215
               Type: Label
               Children:
               - Name: Text
-                Id: g=ac32598db05acd5ebdeb88c9f35aee75
+                Id: g=053ccf75e8a87ef45086f35aa69ac9b6
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"g"}
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=5316049ab119cd1576a054ba9549ece1
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
           - Name: IconaPar
-            Id: g=22373afe87bea65339f3a43fa8557bf5
+            Id: g=c68a086e53e13f932c933d8566f3a0a3
             Type: Image
             Children:
             - Name: Path
-              Id: g=9c4974aa63b355e7d94bd76e54760913
+              Id: g=1ec07e33fd4e07b359734ea27b5a04ba
               Type: BaseDataVariableType
               DataType: ResourceUri
               Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
           - Name: ObjAbilitato
-            Id: g=77e97ea239a0b1df8148dfe8b95fa853
+            Id: g=4963a1877c63dd6777569fa8d566b1d4
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: FillColor
-            Id: g=407aba31d1b95170ab4df85a8c856b71
+            Id: g=fe8d492836a97e2f0e85920cbd7a5ff0
             Type: BaseDataVariableType
             DataType: Color
             Value: "#fff2bd"
             Children:
             - Name: ConditionalConverter1
-              Id: g=331f4cd7d4bfdaf684b436db3e2a7bb8
+              Id: g=71b9b7b7b0091f756602b4d265e9b61f
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=4d2dae5f8d81f09dfd482d771610bc60
+                Id: g=c9cb886ee895c96cdef2074ea9971034
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Value: false
                 Children:
                 - Name: DynamicLink
-                  Id: g=706ccbbadf7e8212d5714bc0f3ee1b0b
+                  Id: g=62497121575f725961ef66098f58d124
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ObjAbilitato"
           - Name: DescrizPar
-            Id: g=fd93901927257c9181392629efa4cb69
+            Id: g=d2fc1c8d528f463aee3f889da216891a
             Type: Label
             Children:
             - Name: Text
-              Id: g=104a62e95817be1d835df9ecbee555fb
+              Id: g=d6465ee334b71be958c23c7862ab972e
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
               Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
           - Name: Var
-            Id: g=ecbd3770ed58f3db2fa2defd0daf801c
+            Id: g=45e2a443d7b96baa7fa33f835488c2d4
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=fa34df79b83546b1b8eee3ecc218b116
+              Id: g=522f175093d584173bea7630bd16a963
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[3]"
               Children:
               - Name: Mode
-                Id: g=8b01e287645c034cdeffe39c0cee48ee
+                Id: g=84cedfc9e53cd07117e75e8664d0c227
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=81dd3bc77fb45781bf9fe6ff025d1025
+            Id: g=a8a563dc466977e57627565a56514fcb
             Type: BaseDataVariableType
             DataType: Float
             Value: 100.0
-          - Name: DisplayVar
-            Id: g=5c6207576aa75e528e7657ddada1e758
+          - Name: VarAnalog
+            Id: g=74747a4f50f850f36dec1ff2cafbc4ea
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=3dfe0d68ba8af219770dd040a788c39d
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=35ec38335c8a921afd8cd99a84146005
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 4674125
+              - Name: DisplayName
+                Id: g=b5efc9b879c788dc975a12b16ed2d158
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=dca65271ba6e0ef8110cf7051fc5219b
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=79a3d52ce840abc9022e8c3a22190a27
+              Id: g=9fc793f2b7d0a58cbce6bcd45b26244f
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=85c6b613f030cc4487697d92002b1a01
+                Id: g=6bde71e90707780cbbb98391dd0beff0
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=2332fbec728489ca200e78ed09a7560a
+                  Id: g=6838f079c21d10f2ad8ab70b1bc4b132
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=d74dd237038e86c7e2bde437eb1871bf
+                Id: g=b381010c8f6462d0addb8c40c7812d96
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=21a493795ffe4877761da06d7d4d6c40
+                  Id: g=913133f55eda0d825c8e0570eac97eb0
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=58569d1e7bf87c31006f3cdeaf05c495
+              Id: g=7b55e3700534c3943eb0bef5cc092835
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=77944b62b6e419d55fb8cd0e18d0aec9
+                Id: g=8d5c415ea523881c4d935304e771d7e4
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=dc3322ff23565ffdd42f31f701b6ef53
+                Id: g=33a09d1c9c28bae6febe619ec6ab9d91
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
-        - Name: TextBoxScalingConImm_R1_2
-          Id: g=f424fd23de5f5edbd6bcd3304389ce83
-          Type: TextBoxScalingConImm_R1_0
-          Children:
-          - Name: Valore
-            Id: g=256c873d3ee3f895e6919c8cc77eb724
-            Type: RowLayout
-            Children:
-            - Name: ValorePar
-              Id: g=cca0bad4fad4c77a41b7012bfe2de0bc
-              Type: TextBox
-              Children:
-              - Name: Text
-                Id: g=1a6f37ef2d17ac0c0d7fedb925468b62
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: DynamicLink
-                  Id: g=febcdd942e24c48fac8ba93dfe8c8afb
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
-                  Children:
-                  - Name: Mode
-                    Id: g=2d91d0822c3526207070678a1bd812d8
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ReadOnly
-                Id: g=de866f846972ea97c8308d99e857e065
-                Type: BaseDataVariableType
-                DataType: Boolean
-                Value: false
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=d155418c54bada548caf2b8385840b9e
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=05e4d78c751baa7eed21b7ecc25aba3c
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=9e2b10de654fa7402bd98bd63d7fc685
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../ObjAbilitato"
-              - Name: TextChanged
-                Id: g=9006afe7ea74236ebb81345763ddcdc0
-                Type: VariableChangedEventDispatcher
-                Children:
-                - Name: VariableNodePath
-                  Id: g=006cefbb9f0b08bd5d9ea07f00979956
-                  Type: BaseVariableType
-                  DataType: NodePath
-                  Value: "../Text"
-            - Name: Unit
-              Id: g=367f38b5d84890f01610f6d56479212f
-              Type: Label
-              Children:
-              - Name: Text
-                Id: g=0d12a8d51371b134330f7179d1705e07
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"cl"}
-          - Name: IconaPar
-            Id: g=4bd2d8dace0b2ba7f8d5284f5716c67d
-            Type: Image
-            Children:
-            - Name: Path
-              Id: g=7aa61cf3472257795361aa383e2b6bc1
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVolume.svg"
-          - Name: ObjAbilitato
-            Id: g=91cdcc430a761aea91f7da39d1b87b65
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: FillColor
-            Id: g=0a0637accc8f2fd63193bdf5059dea66
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#fff2bd"
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=d5825be02f303634cf08034a6d268a31
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=038b6e997fa6294246d7048391ccc3e6
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Value: false
-                Children:
-                - Name: DynamicLink
-                  Id: g=dd255a1b4e4d1dcb8354d1fab306062c
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ObjAbilitato"
-          - Name: DescrizPar
-            Id: g=d1ca62b9fb0698d427c496653af67bd2
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=1767c2904422e8b21c491d25400cbf09
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
-          - Name: Var
-            Id: g=c7a0f6af72bba773ac08df96139f5c90
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=541e62f1e1b207f0facc0214bc58ebc5
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=a5676c0c01bb7e073bea8f5b341017f5
+              Id: g=9b07df07d5aafaa8ebfb990ec4f9f7da
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=80c9a185baf5ce43b10034338b853c19
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=f26f06754a9b4362002910c4bc973059
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=ca5432d6151efe059ead42922f820fee
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=46f8d6e9bb6de3db4d5977f03e4aeeee
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=45e04deac8064a614d94c3cfb246c20a
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: TextBoxEuConverterConImm_R1_2
+          Id: g=b0f4da4ec089cc1c29c53c7e2c183cd1
+          Type: TextBoxEuConverterConImm_R1_0
+          Children:
+          - Name: Valore
+            Id: g=2e69cbc2e10d0c0ddb097a58a83c6e74
+            Type: RowLayout
+            Children:
+            - Name: ValorePar
+              Id: g=d9cc8633c74a3e223dd301179c7db64e
+              Type: TextBox
+              Children:
+              - Name: Text
+                Id: g=4ca9ac656856f34d0eee28117c5e1fd8
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=fa37c51728c8fc89b32541e4965ca436
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar"
+                  Children:
+                  - Name: Mode
+                    Id: g=7bceef7312719dbe2ca5e0dc49793893
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ReadOnly
+                Id: g=a8bc8c6595877af926c5e25cfb9cb395
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=ed8949645f96b04d462143921b0d6616
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=d4cfa7fc959d01698adf07d1d28c2e54
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=b70899568d40ff1debd0748912a22d11
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../ObjAbilitato"
+              - Name: TextChanged
+                Id: g=e47925c60f1134b68f59a3facfccedbd
+                Type: VariableChangedEventDispatcher
+                Children:
+                - Name: VariableNodePath
+                  Id: g=acb14b7c19a764cebbebcd1794554860
+                  Type: BaseVariableType
+                  DataType: NodePath
+                  Value: "../Text"
+            - Name: Unit
+              Id: g=2baf0e1bcc522838e211c89f8a158c2c
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=014544d5639ce414ab86fd16259139bc
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=6db9c358aefe45fb295b2c765cf7418f
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+          - Name: IconaPar
+            Id: g=2cfd78bf737904f5d6225dcc31a6d41a
+            Type: Image
+            Children:
+            - Name: Path
+              Id: g=1533525a169fe20b7fa60a43b766acde
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
+          - Name: ObjAbilitato
+            Id: g=4813b9b3474b10f178b9ee15bff48a8d
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: FillColor
+            Id: g=aabb2234248211af7f0adcd76ce0b28d
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#fff2bd"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=781a943dacf4ac4dbea50725c1e339a3
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=8400f8dcc28302adc9c9f7ca289595da
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=7eb584e283c22bc7ce6baac7e8a7901e
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ObjAbilitato"
+          - Name: DescrizPar
+            Id: g=8bc69d9d8e6636933254a380a409f9d6
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=d11369f27cd1eae0ae7476cba40c73f7
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
+          - Name: Var
+            Id: g=96e4462a6e0a5e09bb9cfdc60c8107fd
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=c74343bcdfaec60e7725d403979b7da9
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[3]"
               Children:
               - Name: Mode
-                Id: g=f8d61836b61fbd34e701a9fc3878d552
+                Id: g=22d25f08bd48d912ab28b690dcf2b765
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=cc24ab5cc42acba0556ca166127e4230
+            Id: g=f8ddddb3c0972b262ecb50dca4751e2d
             Type: BaseDataVariableType
             DataType: Float
-            Value: 1000.0
-          - Name: DisplayVar
-            Id: g=aa9d5f247e594d518accd3e9943ada34
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=6255d1fb2d291dccaddb1ced5ec04c24
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=e2428a73e083c08db98bb8071d569abf
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=39490b82ff0435cd91dd388f379b869a
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 5065812
+              - Name: DisplayName
+                Id: g=e6a59bc73a57b8394b84403219818c39
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=e38e0d9e66eb027cddad0740626aa959
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=604b8983cd39bf0c13d5d217faad81f6
+              Id: g=d117718cc375efa1bd6d865e86213e9e
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=de6fc399dc7d976dacae59e6e3249209
+                Id: g=d73752b197ed4187218c70ee024eba31
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=b96c2b9b161647af08783aa24031b85f
+                  Id: g=7c1d7a4420c5f774eb52c965d9ec4699
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=f5549476ac67959a8b04a045e9c4577e
+                Id: g=f0fbbc0bcbbd7f569b01781f99aa07d0
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=b6da8de367b085467e897b6d8333fd4d
+                  Id: g=eb64a993cac9f4dd3f15d4b4c768cb45
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=a45a69282c233a76e6f53a71ca14ce84
+              Id: g=21d13fef7702217320222539407bb08b
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=bdd83d2a3c6dbf2e765bbd94246559cb
+                Id: g=9aa2dd17be5f0f948677a591d75191bf
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=a94e76ab251dd507a34f5e44daaecc22
+                Id: g=12576eaf6fbfce49686612073ff1d4bd
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=c30bcfbb9ea4c405aa4dbb311c4b931d
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=ad8c02f63b4395773cde9aa128bc7753
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=dfbd954ee3be46858a99653590f316f7
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=50678c04a1acd372c5bbec3bfda4eeb3
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=4ef63b3bf539c50f39859e6184cfe046
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=ab1f33503dc8ace757eb496a4e9d25ce
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=d964dd66aca0ceab741eac7f0f6f965d
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: GroupBox_R1_4
       Id: g=de435ca9919f53a683ebf14750ca65d4
       Type: GroupBox_R1_0
@@ -22378,386 +22903,522 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 5.0
-        - Name: TextBoxScalingConImm_R1_3
-          Id: g=7758dec9acdffe8b04985c8156d07d6c
-          Type: TextBoxScalingConImm_R1_0
+        - Name: TextBoxEuConverterConImm_R1_1
+          Id: g=26fe7e4723a437b1bc8e129e3cdd7b92
+          Type: TextBoxEuConverterConImm_R1_0
           Children:
           - Name: Valore
-            Id: g=4ae9b3f83595186b21804012ea3a8602
+            Id: g=f1fe6add8f738ecc4a4bc171ad26ff53
             Type: RowLayout
             Children:
             - Name: ValorePar
-              Id: g=9890507c6a9636c53e3ea0b932b3be5d
+              Id: g=568e997a1361c919a5efebaaa767c332
               Type: TextBox
               Children:
               - Name: Text
-                Id: g=93b80b0a4393e0b764de0dc5043bdb06
+                Id: g=f5bcd7055a07df792ca07f11fd1ec522
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
                 - Name: DynamicLink
-                  Id: g=655f0d2b5675dfd1839ce1b020d6b9f4
+                  Id: g=75ab8f52c35be445bfd2c57cf1f31fe4
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../DisplayVar"
                   Children:
                   - Name: Mode
-                    Id: g=8d4ba067bbe273576d90c569b03c28bc
+                    Id: g=aa2b6953554a9217be7b5c4339a252f6
                     Type: BaseVariableType
                     DataType: DynamicLinkMode
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
-                Id: g=167daf03848ac28864cfbdc14ae72958
+                Id: g=b36c653929287a733cb3e11a0e7b61c1
                 Type: BaseDataVariableType
                 DataType: Boolean
                 Value: false
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=8372f1786c3d2a08fab60afe2c8615b9
+                  Id: g=1f9cc233f9afa325878e46dc8f3dbb4c
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Source0
-                    Id: g=9bed09958fc04df7696150389beb38fc
+                    Id: g=4e27ad811e4fbe7785b6efaecf87dfd1
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=a051b274dc5c5cde2b0f704e2678152c
+                      Id: g=b2da0edd170f57adf0627f2f83aec91f
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../ObjAbilitato"
               - Name: TextChanged
-                Id: g=828b0586891d10fe70315b3991061d84
+                Id: g=b5eb051fe7254741c8589fb6f9be9ef4
                 Type: VariableChangedEventDispatcher
                 Children:
                 - Name: VariableNodePath
-                  Id: g=7b28c41aa0c94088a305b7168ebab402
+                  Id: g=82942887cc62a137c540a35f5af40cb6
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
             - Name: Unit
-              Id: g=36e20fcaa5f875b6cad69e5448def115
+              Id: g=bceaebaa0a5dbc90fd664bd65f2b69a6
               Type: Label
               Children:
               - Name: Text
-                Id: g=53e3674cc4cdfcdd29f7283960d49b5f
+                Id: g=a59398c5f31d8ce8c22e126ac0cd4659
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"g"}
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=6408c96e20d61f718336c938d0f84bd3
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
           - Name: IconaPar
-            Id: g=0481b49cb9b7944682206e268bccf509
+            Id: g=353ab70a276af99aebc08743a97a3692
             Type: Image
             Children:
             - Name: Path
-              Id: g=650d0fae34eb1feb7062ab2fdf01d6b2
+              Id: g=1e96b3951eca9ec13e431dadf0ba2b79
               Type: BaseDataVariableType
               DataType: ResourceUri
               Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
           - Name: ObjAbilitato
-            Id: g=74fa63f673abb7538d682b524b1aa9c3
+            Id: g=0bd389ea277d1daa99a22eee6ddca3d0
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: FillColor
-            Id: g=28a5284ecb3828b533a45db7d7685678
+            Id: g=f5c43b2057ad172ad84fccfee0b04622
             Type: BaseDataVariableType
             DataType: Color
             Value: "#fff2bd"
             Children:
             - Name: ConditionalConverter1
-              Id: g=653d24f02b8cb8e8a345e66dc9cbc101
+              Id: g=bc329f7cd6b550a38947f717ba7d5681
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=ddb1ee9b8eeee837ddf703f14e2b99aa
+                Id: g=c75f75feb2dc190234e377f2e8b5a020
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Value: false
                 Children:
                 - Name: DynamicLink
-                  Id: g=68eb2dd8c494bd9e54bbe6811fca68c1
+                  Id: g=bdcd5d408b57d4ceea7bced184c91918
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ObjAbilitato"
           - Name: DescrizPar
-            Id: g=a733d52153ca072f78253a2c80d0a275
+            Id: g=729a0ef28b263232f578fea92bc9b69c
             Type: Label
             Children:
             - Name: Text
-              Id: g=78fff4c86060e3f679ef7e772b071e43
+              Id: g=1bf117174a2b54051c815352fa950626
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
               Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
           - Name: Var
-            Id: g=c816cabce57db7fa133e0aaf79b56c3f
+            Id: g=fe215827b0ee513f178d96289dc7997b
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=d7411a554b93c6e882a5a376f11718ec
+              Id: g=027e200ef0e6a3a1d047d01ecfdc9c00
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrPesoMisTest[4]"
               Children:
               - Name: Mode
-                Id: g=41b729736b7247bacb552ef6e4f20f0a
+                Id: g=7b79a8dc63a23b00596146e4fde9fe7a
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=239b9ef26892255f4c1fb6f00703d576
+            Id: g=d7b392c1641fef0962b57c89ba68ef20
             Type: BaseDataVariableType
             DataType: Float
             Value: 100.0
-          - Name: DisplayVar
-            Id: g=4270cf095ac79d7d5a1fbb759931a95e
+          - Name: VarAnalog
+            Id: g=d2bc0c34903676b73b7f458509f55cf1
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=f8879dd1d0b73f3dac81a47c871f3672
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=a9835878b10ede6cb21d1291a4f84408
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 4674125
+              - Name: DisplayName
+                Id: g=521b3c1dcafef55c6f79fc8f57a10fb9
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=aeb0da660b6a1b7d1a8839db23af728c
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=99c0441001eee169e8ca6bee01123b21
+              Id: g=bae04b71c1ffe18a5e2a5ad6bed3f12c
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=b42fa190210aa64cf6324fe78d5abeab
+                Id: g=4ec66690f9a017ceadc97489a7a66314
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=cbe28f0f7ee764052312973d301b04a8
+                  Id: g=d727c4a7de2b861122c2dbc07e74800f
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=ed242f6e1f8bf05a06a27b057e3196c1
+                Id: g=45785e1b29a46476c4e770ab5693f48e
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=cc0ba27d4aed5abd7b6870d1566acb75
+                  Id: g=7df04a56df335bbee06ab8e5e62e74f5
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=3470783505a66fdbec376c690de364e4
+              Id: g=e595939da3a579d70427b11a7015cee7
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=77a6c99e1798b7bb7ddcf424fad38625
+                Id: g=ad3f5ef52e27911e7ec91b63c593a853
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=7e2a77e976cedd66e11e3aa23e727f29
+                Id: g=00c1e5de67416dd7b5c921e631d62026
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
-        - Name: TextBoxScalingConImm_R1_2
-          Id: g=26ccdd28be3cb9aa6673680245cb6d02
-          Type: TextBoxScalingConImm_R1_0
-          Children:
-          - Name: Valore
-            Id: g=c706a3d931f6fe642582984a59818664
-            Type: RowLayout
-            Children:
-            - Name: ValorePar
-              Id: g=239c1995c37dadf79fc8cefe955efa12
-              Type: TextBox
-              Children:
-              - Name: Text
-                Id: g=592e7bdd694e22d66c845442a31608e5
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: DynamicLink
-                  Id: g=1cd665084e16701ce511b8d0643d620d
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
-                  Children:
-                  - Name: Mode
-                    Id: g=b90bd957f05f5d450dd39e59126138b4
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ReadOnly
-                Id: g=c36e294595a05e5025bda455f6db5c43
-                Type: BaseDataVariableType
-                DataType: Boolean
-                Value: false
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=19a7870ab6a5c33c3fb1bf168207621b
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=0c81e8cc4a27f948cca2cdbd8c100188
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=bb8ada030bb42b3cb158667538e334ce
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../ObjAbilitato"
-              - Name: TextChanged
-                Id: g=b06180d8316cc14c20f4662a88ec1b26
-                Type: VariableChangedEventDispatcher
-                Children:
-                - Name: VariableNodePath
-                  Id: g=075637bf636b6a0f699a13169a33435c
-                  Type: BaseVariableType
-                  DataType: NodePath
-                  Value: "../Text"
-            - Name: Unit
-              Id: g=f123efc668354bebfc3633d196474599
-              Type: Label
-              Children:
-              - Name: Text
-                Id: g=430de6948d46f171a6ea02b0dfa5af68
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"cl"}
-          - Name: IconaPar
-            Id: g=09db2db170f2fac5e79f58a2f56fe753
-            Type: Image
-            Children:
-            - Name: Path
-              Id: g=35da1d8cf3622ec876051fedf559eedc
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVolume.svg"
-          - Name: ObjAbilitato
-            Id: g=a90cdedebf42e8afd104725fda5a8116
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: FillColor
-            Id: g=e379fd519efc10af6f9005c5db0767c1
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#fff2bd"
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=ae294cf82531c57d4913f5b42dd3db9b
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=f529257f0d43ae07b9f7ab2bd95df28f
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Value: false
-                Children:
-                - Name: DynamicLink
-                  Id: g=67f43842dc82a9324ac722e2401fff09
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../ObjAbilitato"
-          - Name: DescrizPar
-            Id: g=81679ee9957eb2ec0e8a41f6456d8331
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=f2fd368e86aab3bd4cda3fc1ae469e5e
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
-          - Name: Var
-            Id: g=658b85f857ed7efb8b0a7ddfe256de9a
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=bf5b32d13f6b5e407743b1b30f0e2639
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
             - Name: DynamicLink
-              Id: g=6f3118269201fadf3aac335ad91f57de
+              Id: g=d7261e0a652eb5c14cdd9deb207de82c
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=90124c4bb3ddb1a56b7f99685f313a49
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=5aa319ba2cb72549b4f535f61765a57a
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=0f7ac800e6044133f905015c6cdce740
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=edec2c4c3eae6b629c4bcf635ec21228
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=ab6cda7ed81f99a244d0d8f9f2650510
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: TextBoxEuConverterConImm_R1_2
+          Id: g=c1b082dfea2ded787683c6ae592f17e5
+          Type: TextBoxEuConverterConImm_R1_0
+          Children:
+          - Name: Valore
+            Id: g=6a11ac5ead0d72020c22d4b6c5065c5a
+            Type: RowLayout
+            Children:
+            - Name: ValorePar
+              Id: g=1493c46574e9b89dcda69d9f5b16546f
+              Type: TextBox
+              Children:
+              - Name: Text
+                Id: g=2465364e36cda70db3e09cabe283ae81
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=a1fa959b097b698d8fa2b9ee1af07172
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar"
+                  Children:
+                  - Name: Mode
+                    Id: g=baa850575977520ab475fe22df8e4eb4
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ReadOnly
+                Id: g=d1265d345fe4a518af2c47817587bf01
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: false
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=b76c12af1f959b6ddd08364a5920e53f
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=20a2d5a1d703ad086ddc1bc340523f4d
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=78e8660d0e6bd2fd4dcd5c6d53acbd93
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../ObjAbilitato"
+              - Name: TextChanged
+                Id: g=de3404a729fb871751fe68bb6125df2f
+                Type: VariableChangedEventDispatcher
+                Children:
+                - Name: VariableNodePath
+                  Id: g=e762e0e33c1783e2aea8f061d744e242
+                  Type: BaseVariableType
+                  DataType: NodePath
+                  Value: "../Text"
+            - Name: Unit
+              Id: g=3e7052cec0976ec0a274fffdf1d86050
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=f287b8326b32e646e4bb5167d924a76f
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+                Children:
+                - Name: DynamicLink
+                  Id: g=b628207e9608119ac6a6ccb6907d047f
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+          - Name: IconaPar
+            Id: g=30fb321cd56ca98cd6805f190542cf30
+            Type: Image
+            Children:
+            - Name: Path
+              Id: g=d20a0c3b74b0bfbded4060c7dceeef7c
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPeso.svg"
+          - Name: ObjAbilitato
+            Id: g=af805c8d8a19902aaa1a3ad7573bef24
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: FillColor
+            Id: g=03e02c542e0d2e7faf63f8198f5285ab
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#fff2bd"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=b7c065bc8ee89126c4bf590af26ddbfc
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=0be60944a8fb20bb83c55b23cb86091c
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=a4b69ba0d6ce503c30c1c263e426e009
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../ObjAbilitato"
+          - Name: DescrizPar
+            Id: g=995e54f81d784c1383df330c4b9a8276
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=ae27e8be8419674a997597b1b3516e5d
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              ModellingRule: Optional
+              Value: {"NamespaceIndex":46,"TextId":"Quantità Prodotto"}
+          - Name: Var
+            Id: g=9dea7c7b4f2ffb1299c07fc72d100925
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=6d92482d7b001f3509391da796901c02
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/adUsrVolumeMisTest[4]"
               Children:
               - Name: Mode
-                Id: g=82f6d7c0175091e65a211559308e2eda
+                Id: g=1420cc62129bd98dd65a4c74e8031b82
                 Type: BaseVariableType
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
           - Name: ScaleFactor
-            Id: g=a95708f00b3ba23e69fd1d9a727edf9e
+            Id: g=341d41cdb904b0d14547bd8a0173dce6
             Type: BaseDataVariableType
             DataType: Float
-            Value: 1000.0
-          - Name: DisplayVar
-            Id: g=81fb16a32730312c2cdbf38322dc835e
+            Value: 100.0
+          - Name: VarAnalog
+            Id: g=7a72c77a795c24ff83af3b727460ea53
             Type: BaseDataVariableType
             DataType: Float
             Value: 0.0
             Children:
+            - Name: EngineeringUnits
+              Id: g=93b5c673d31eb9994ef694c38e85ad47
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=1b6cdf44355e505d5f219b5422a11f6d
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: 5065812
+              - Name: DisplayName
+                Id: g=46cd43248322dae5e3c85ab0083246a2
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=1cb4ba18922eae91bf3d69b8addc3789
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: ConvertitoreDiUnit__Ingegneristica1
-              Id: g=803ec89d216e4ce512659d4154af55ff
+              Id: g=db1bc93e91ebe923ee5d74d7473ff4fe
               Type: EUConverter
               Children:
               - Name: Source
-                Id: g=1b8401be031765be0dce0a06f7f217be
+                Id: g=d7b0811080ef3bc3841b74e530d1bc26
                 Type: BaseDataVariableType
                 DataType: Number
                 ReferenceType: HasSource
                 Value: {"Type":11,"Body":0.0}
                 Children:
                 - Name: CollegamentoDinamico
-                  Id: g=5723ffc365fd910097e4a9e34f3f90f5
+                  Id: g=8864f5a8cb6e7a67ec27f05eb7aad4d2
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../Var"
               - Name: RawMax
-                Id: g=b8445d3409e4226d003c7cb688225b08
+                Id: g=3c5977a1a20d8d20cf973d01cdc87655
                 Type: BaseDataVariableType
                 DataType: Double
                 ReferenceType: HasParameter
                 Value: 0.0
                 Children:
                 - Name: DynamicLink
-                  Id: g=921b6b6b96f45ac09d822bc8595cc9ae
+                  Id: g=f56061a7292a17f42b6366e23e754cef
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../ScaleFactor"
             - Name: EURange
-              Id: g=7794bd4a217028d20887da30f1bd418e
+              Id: g=45e78639c254256ba8f5dcd9e83f798d
               Type: RangeType
               DataType: Range
               Children:
               - Name: Low
-                Id: g=c7856c62a50c083b1b802b4726c1201d
+                Id: g=f2ea5a7f7e8724ffd17ba9171b59d2e1
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
                 Value: 0.0
               - Name: High
-                Id: g=f13101ecc5c60a546cbb555363eb512a
+                Id: g=5b460e8f152ff21b4c6eceee613a66f7
                 Type: BaseVariableType
                 DataType: Double
                 ReferenceType: HasProperty
-                Value: 30000.0
+                Value: 3000.0
+          - Name: DisplayVar
+            Id: g=ddc26c754bfd00f6d8869ad76261bc5a
+            Type: BaseDataVariableType
+            DataType: Float
+            Value: 0.0
+            Children:
+            - Name: DynamicLink
+              Id: g=a572ae7ff6878a5469477a8635d8da33
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../VarAnalog"
+              Children:
+              - Name: EUMode
+                Id: g=fd812eaaff315c91dc377355103ac8be
+                Type: BaseVariableType
+                DataType: DynamicLinkEUMode
+                Value: 0
+            - Name: EngineeringUnits
+              Id: g=ce94f2976a1df99092e2023acfbc9f8f
+              Type: EUInformationType
+              DataType: EUInformation
+              Children:
+              - Name: UnitId
+                Id: g=7ce050bdb1ff3028b156878d54f54df4
+                Type: BaseVariableType
+                DataType: Int32
+                ReferenceType: HasProperty
+                Value: -1
+              - Name: DisplayName
+                Id: g=520ccd145752a40c7f6c26a5cd0a73b1
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+              - Name: Description
+                Id: g=ca659ecffcc2c1698a3923dee52bc84c
+                Type: BaseVariableType
+                DataType: LocalizedText
+                ReferenceType: HasProperty
+                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: VerticalGap
       Id: g=a60f878bb62ab7357cbb28bad9c829a9
       Type: BaseDataVariableType

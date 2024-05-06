@@ -16,6 +16,11 @@ Children:
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
+- Name: RicPiastra
+  Id: g=281781acff3d582b99d78c4d02794cce
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
 - Name: ObjInverter
   Id: g=dc421270b063674f7cc1618addc3c55e
   Type: BaseObjectType

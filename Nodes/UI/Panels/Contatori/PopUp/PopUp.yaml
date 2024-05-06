@@ -210,6 +210,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=494be0556510b52f4c0d8fadf9e3f2ba
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: stCntAccPist01
     Id: g=92c27d782d074c924b66cbb109e81326
     Type: Alias
@@ -1637,6 +1642,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=597f9da9eba2e8f6f8937921031cf26e
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: HorizontalLayout1
     Id: g=6dbfe6c17d23c71cc6237bc9aaf9e15c
     Type: RowLayout

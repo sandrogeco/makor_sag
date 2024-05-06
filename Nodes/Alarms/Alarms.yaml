@@ -16,7 +16,7 @@ Children:
     Id: g=c2f0d42af7e41a475beec704a8b35116
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: "ns=46;%PROJECTDIR%/VarAlm&Traduz_tab_Good.csv"
+    Value: "ns=46;%PROJECTDIR%/Test.csv"
   - Name: CharacterSeparator
     Id: g=a1530a9c1c926ce9b538347affb37208
     Type: BaseDataVariableType
@@ -50,6 +50,29 @@ Children:
   - Class: Method
     Name: ExportAllarmi
     Id: g=e3e0abd1ce9dc9ec00af941b749b9654
+- Name: CreaFileCSV_DaTagCommDrivers
+  Id: g=f89dffcdf7911aec804aba744937132f
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Lo script rileva tutti i tag che iniziano per bAlm, bWrn, bMsg (Anche gli array di tag e i tag dentro strutture)"}
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=6d19876a463eda4e6ec5b6012dbf9050
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: CreaFileCSV
+    Id: g=6a5d83bc3d80bea4c2fa764a25f56711
+  - Name: CSVpath
+    Id: g=8a70de73d260957dd1152c5891249439
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/VarAlm&Traduz_tab_Good_new.csv"
+  - Name: nomeMacchina
+    Id: g=f08c94a11e775cc03bfbdc8df355b34b
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Next"
 - Name: CreaAllarmi
   Id: g=f0269042b409966ec1c7cbeb9b040d26
   Type: NetLogic
@@ -198,6 +221,7 @@ Children:
     DataType: UInt16
     Value: 1000
 - File: GvCarta/GvCarta.yaml
+- File: GvCirc/GvCirc.yaml
 - File: GvGen/GvGen.yaml
 - File: GvOsc/GvOsc.yaml
 - File: GvRlyMon/GvRlyMon.yaml

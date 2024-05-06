@@ -78,7 +78,7 @@ Children:
       Id: g=be44f36f17f1a2a81bf25b19fca7c5d9
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Value: "/Objects/Hmi_Next/Model/Industry_40"
       Children:
       - Name: Kind
         Id: g=eeb7ed125f45c077d5c8f093fe0e2123

@@ -1,23 +1,23 @@
-Name: TagImporter
-Id: g=a794ee25577ed4cdabc3a3bbe0405ec3
-Type: CODESYSTagImporter
-OwnerId: ns=2;g=59a7102789c8d63a0f3898fc3e1bda79
+Name: OPCUATagImporter
+Id: g=b2171f8a86251cfa4b85040160c41a03
+Type: OPCUAImporter
+OwnerId: ns=2;g=42d17b6bf3137439feecde27ef6f44ec
 Children:
 - Name: IgnoredPLCItems
-  Id: g=c540aea217fe2e242dc4f6fce078135e
+  Id: g=3b581ee5b216f6638657f8725a2377b7
   Type: BaseDataVariableType
   DataType: BaseDataType
   ValueRank: OneDimension
   ArrayDimensions: [0]
 - Name: IgnoredHMIItems
-  Id: g=d0efde62d886dd3cf4ab3efbda75dd90
+  Id: g=b072785ff9dfec187affc48e3515fb17
   Type: BaseDataVariableType
   DataType: NodeId
   ValueRank: OneDimension
   ArrayDimensions: [0]
   Value: []
 - Name: Mode
-  Id: g=4cccbf8eb7cca0ad89d99f2d11594a63
+  Id: g=9ed04c60fc47a6635a1b6cbb435c8466
   Type: BaseDataVariableType
-  DataType: ns=11;FetchProviderModes
+  DataType: ns=18;FetchProviderModes
   Value: 1

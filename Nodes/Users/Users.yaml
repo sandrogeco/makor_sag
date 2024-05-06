@@ -27,3 +27,44 @@ Children:
     ReferenceType: HasProperty
     ModellingRule: Optional
     Value: ""
+- Name: ClientOpc
+  Id: g=bfb67522d8cfac8e91124cf8d08fdcf5
+  Type: UserType
+  Children:
+  - Name: Password
+    Id: g=24299e045b936b99346965259af61441
+    Type: Password
+    DataType: Password
+    ReferenceType: HasProperty
+    AccessLevel: Read
+    Value: ""
+    Children:
+    - Name: Hash
+      Id: g=7e2a8fc0e8c228caf133b4b55377c13a
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      Value: 
+       {
+        "TypeId": {
+         "Id": 252,
+         "Namespace": 1
+        },
+        "Body": {
+         "Hash": [133,197,43,190,12,254,25,83,235,73,28,29,115,86,182,175,55,2,246,21,93,11,34,5,166,28,118,91,249,167,59,234],
+         "Salt": [210,254,117,146,171,189,105,5,207,160,167,90,72,199,59,242,111,10,141,237,118,253,136,43,2,51,238,175,2,10,237,233]
+        }
+       }
+    - Name: ChangeTimestamp
+      Id: g=d5f0bda386b0dc1da425f6bbd4f90732
+      Type: PropertyType
+      DataType: UtcTime
+      AccessLevel: Read
+      Value: "2024-05-04T09:03:56.0411752"
+    - Name: History
+      Id: g=b8cd190f65f8e4ff664acc4626769bb9
+      Type: PropertyType
+      DataType: PasswordHash
+      AccessLevel: Read
+      ValueRank: OneDimension
+      ArrayDimensions: [0]

@@ -696,7 +696,7 @@ Children:
           Id: g=6575c2294688ffaf6ebed49235a758ca
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../Enabled"
+          Value: "../../../ObjAbilitato"
       - Name: TrueValue
         Id: g=131b7b253a085e31a25210a1cc18bd41
         Type: BaseDataVariableType
@@ -741,7 +741,7 @@ Children:
           Id: g=0ccf9b23649664de0e6013e121a9ddda
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../Enabled"
+          Value: "../../../ObjAbilitato"
   - Name: FontSize
     Id: g=f8581fabea49cd9b983f7b9d2b028cd7
     Type: BaseDataVariableType
@@ -772,6 +772,11 @@ Children:
     DataType: TextVerticalAlignment
     ModellingRule: Optional
     Value: 1
+  - Name: ObjAbilitato
+    Id: g=2e8fc56aaf8921c59e5e335b7ed9c7c8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
 - Name: TextBoxScaling_R1_0
   Id: g=f222fea4e566d313a3761afb700e591b
   Supertype: RowLayout

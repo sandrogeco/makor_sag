@@ -1,0 +1,70 @@
+Name: GvCirc
+Id: g=5783f8cdc6524040a62c035d6829cedd
+Type: FolderType
+Children:
+- Name: bMsgMaintOscInCorso
+  Id: g=11ad57f692244e9593a49af5be78e3f3
+  Type: CategoryDigitalAlarmType
+  Children:
+  - Class: Reference
+    Target: ns=31;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=83
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=148fc07647ee6764a3d85edf7d40b073
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=f1ee00dee3bb6e76f1ea2f46fac022ec
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=80722a9c05d74049b32e85f32238425d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/bMsgMaintOscInCorso"
+      Children:
+      - Name: Mode
+        Id: g=d25af5b23cd14c8391a78c79947cbc52
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=dfa5ea9c39822b51e2e4e4f80bd45c44
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Category
+    Id: g=7dbb7cfdacf254f840674943103f88dc
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Next"
+  - Name: AutoAcknowledge
+    Id: g=53f4c203c7d9f12665ea2a16549becca
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=8619c5f1b11db1bf8dfac245c5595acf
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=9c78622a7d940cf82bde4dbd937e0f65
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+  - Name: Message
+    Id: g=e8310ef5aa095617537b25528acf0c2e
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":46,"TextId":"bMsgMaintOscInCorso"}

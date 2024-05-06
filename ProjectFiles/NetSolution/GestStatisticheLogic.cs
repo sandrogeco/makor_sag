@@ -10,7 +10,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UAManagedCore;
-using FTOptix.Recipe;
 #endregion
 
 public class GestStatisticheLogic : BaseNetLogic
@@ -25,7 +24,7 @@ public class GestStatisticheLogic : BaseNetLogic
     private bool GetDatiProduzPerUtente(DateTime GiornoRicerca, out string[] header, out string[,] Risultati)
     {
         string sqlQuery = $"SELECT * FROM CntProduzione" +
-                          $" WHERE LoginTime BETWEEN '{GiornoRicerca.Date:s}' AND '{GiornoRicerca.Date.AddSeconds(86399):s}'" +    //Considero l'arco di tutta la giornata 8il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
+                          $" WHERE LoginTime BETWEEN '{GiornoRicerca.Date:s}' AND '{GiornoRicerca.Date.AddSeconds(86399):s}'" +    //Considero l'arco di tutta la giornata, il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
                           $" ORDER BY LoginTime ASC";
 
         myStore.Query(sqlQuery, out _, out object[,] QueryResult);
@@ -77,7 +76,7 @@ public class GestStatisticheLogic : BaseNetLogic
     /// <returns></returns>
     private bool GetDatiProduzGiornaliera(DateTime GiornoRicerca, out string[] header, out string[,] Risultati)
     {
-        //Creazione Query estrapolare i dati da visualizzare sulla griglia
+        //Creazione Query per estrapolare i dati da visualizzare sulla griglia
         //Nota: a causa delle limitazioni dovute allo Standard ANSI Sql92 e della mancanza di istruzioni(es 'CAST') non supportate da QStudio, la progettazione della query è stata molto complicata. 
         //Per estrapolare i dati necessari è stata utilizzata una tabella di appoggio perchè i dati finali devono essere raggruppati per data ma su QStudio la funzione EXTRACT non è supportata nella clausola GROUP BY. Prima sono stati tirati su i dati convertendo il logintime in giorno, mese e anno
         //Poi sono stati fatti i raggruppamenti.
@@ -249,10 +248,6 @@ public class GestStatisticheLogic : BaseNetLogic
             return;     //ritorno il controllo al chiamante
         }
 
-        ////Controllo se devo aggiornare i dati
-        //if (string.Compare(UtenteAttuale.Value, "Anonymous") == 0)
-        //    return;
-
         try
         {
             // creo la stringa per aggiornare la tabella CntProduzione            
@@ -334,15 +329,12 @@ public class GestStatisticheLogic : BaseNetLogic
 
     private void LogoutUtente(string Utente, DateTime LogoutTime)
     {
-        var myVariables = (CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName))).ToList();
-
         try
         {
             // creo la stringa per aggiornare la tabella ricette            
             StringBuilder query = new("UPDATE CntProduzione SET Attivo = false, LogoutTime = '" + LogoutTime.ToString("s") + "'");
 
-            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
-            foreach (var Par in reads)
+            foreach (var Par in CntProduzPlc.ChildrenRemoteRead(CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList()))
             {
                 query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
             }
@@ -362,11 +354,12 @@ public class GestStatisticheLogic : BaseNetLogic
 
     private void ResetCnt()
     {
-        var ListParam = (from Filgio in CntProduzPlc.GetNodesByType<IUAVariable>()
-                         select new RemoteChildVariableValue(Filgio.BrowseName, 0)).ToList();
         try
         {
-            CntProduzPlc.ChildrenRemoteWrite(ListParam);
+            var remoteRead = (from Figlio in CntProduzPlc.GetNodesByType<IUAVariable>()
+                              select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
+
+            CntProduzPlc.ChildrenRemoteWrite(remoteRead);
         }
         catch (Exception ex)
         {
@@ -378,11 +371,9 @@ public class GestStatisticheLogic : BaseNetLogic
     private void CreaReport()
     {
         //Controlla se la directory Report esiste nel percorso indicato altrimenti la crea
-        string CsvReportSavingPath;
-        if (LogicObject.GetVariable("TargetLinux").Value)
-            CsvReportSavingPath = new ResourceUri("%USB1%").Uri;
-        else
-            CsvReportSavingPath = Impostazioni.GetVariable("CsvReportSavingPath").Value;
+        string CsvReportSavingPath = LogicObject.GetVariable("TargetLinux").Value
+            ? new ResourceUri("%USB1%").Uri
+            : (string)Impostazioni.GetVariable("CsvReportSavingPath").Value;
 
         string Folder = $"{CsvReportSavingPath}/Report";
         if (!Directory.Exists(Folder))
@@ -392,10 +383,9 @@ public class GestStatisticheLogic : BaseNetLogic
         foreach (var elemento in new DirectoryInfo(Folder).GetFiles("*.*").Where(elemento => elemento.CreationTime < DateTime.Now.AddDays(-31)))
             elemento.Delete();// Elimina il file
 
-        //var cultureInfo = new CultureInfo(LogicObject.Context.Sessions.CurrentSessionInfo.ActualLocaleIds[0]);      //tiro su il cultrue info dell'utente attualmente loggato
         var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
 
-        string Data = ((DateTime)GiornoRicerca).ToString("d", cultureInfo).Replace("/", "_");         //creo stringa per la data e ora nel formato dd_MM_yyyy in base al culture info dell'utente loggato
+        string Data = GiornoRicerca.ToString("d", cultureInfo).Replace("/", "_");         //creo stringa per la data e ora nel formato dd_MM_yyyy in base al culture info dell'utente loggato
 
         string CSVPath = @"" + Folder + "/MakorLineProcessDataReport_" + Data + ".csv";        //Storicizzo il nome dell'ultimo file salvato per l'invio della mail
 

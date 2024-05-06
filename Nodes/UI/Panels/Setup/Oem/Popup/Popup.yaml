@@ -122,6 +122,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=7a679a9c4cf850c08e860e60998576e8
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Width
     Id: g=efa0a1f36e9048b5e720e6b9af56e0ec
     Type: BaseVariableType

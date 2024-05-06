@@ -6,21 +6,35 @@ using FTOptix.Store;
 using System;
 using System.IO;
 using UAManagedCore;
-using FTOptix.Recipe;
+
+
 
 #endregion
 
 public class DBRicetteToCSV : BaseNetLogic
 {
+	/* 
+	* Script che esporta/importa ricette su/da un file cvs
+	* viene salvato: NomeRic, Desrcizione	per la tabella Ricette/RicettePiastra
+	* viene salvato: PercorsoTag, Valore	per la tabella RicetteDettagli/RicettePiastraDettagli
+	* Nel caso di importazione di ricette gia esistenti le sovrascive con i nuovi valori
+	*/
 	[ExportMethod]
 	public void ToCSV()
 	{
-		NodeId DBToExport = LogicObject.GetVariable("DBToExport").Value;
-		Store MyStore = InformationModel.Get<Store>(DBToExport);
+		Store MyStore = InformationModel.Get<Store>(LogicObject.GetVariable("DBToExport").Value);
 		String path = new ResourceUri(LogicObject.GetVariable("CSVpath").Value).Uri;
+		String tableName = LogicObject.GetVariable("tableName").Value;
+		String tableNameDetails = tableName + "Dettagli";
 
-		String query = "SELECT Nome, PercorsoTag, Valore FROM RicettePiastraDettagli INNER JOIN RicettePiastra ON RicettePiastra.ID_Ric = RicettePiastraDettagli.ID_Ric";
-		String intestazioneColonne = "Nome\tPercorsoTag\tValore";
+
+		if (!path.Contains(".csv"))
+		{
+			path += ".csv";
+		}
+
+		String query = $"SELECT Nome, Descrizione, PercorsoTag, Valore FROM {tableName} INNER JOIN {tableNameDetails} ON {tableName}.ID_Ric = {tableNameDetails}.ID_Ric";
+		String intestazioneColonne = "Name\tDescription\tTagPath\tValue";
 
 		MyStore.Query(query, out string[] header, out object[,] resultSet);
 
@@ -46,67 +60,74 @@ public class DBRicetteToCSV : BaseNetLogic
 			}
 		}
 	}
+
 	[ExportMethod]
 	public void FromCSV()
 	{
-		NodeId DBToExport = LogicObject.GetVariable("DBToExport").Value;
-		Store MyStore = InformationModel.Get<Store>(DBToExport);
+		Store MyStore = InformationModel.Get<Store>(LogicObject.GetVariable("DBToExport").Value);
 		String path = new ResourceUri(LogicObject.GetVariable("CSVpath").Value).Uri;
+		String tableName = LogicObject.GetVariable("tableName").Value;
+		String tableNameDetails = tableName + "Dettagli";
+
+		//MyStore.Query("DELETE FROM " + tableName, out string[] a, out object[,] a1);
+		//MyStore.Query("DELETE FROM " + tableNameDetails, out string[] b, out object[,] b1);
 
 		String[] lines = File.ReadAllLines(path);
 		String[,] fileContent = new String[lines.GetLength(0), lines[0].Split('\t').GetLength(0)];      //Creo l'array con le dimensioni giuste dove verrà salvato il contenuto del file
 
 
-		for (int i = 0; i < fileContent.GetLength(0); i++)                         //Ciclo che scorre tutte le linee del csv
-		{                                                                          //salvando tutto dentro a l'array bidimensionale fileContent
+		for (int i = 0; i < fileContent.GetLength(0); i++)			                //Ciclo che scorre tutte le linee del csv
+		{														                    //salvando tutto dentro a l'array bidimensionale fileContent
 			for (int j = 0; j < fileContent.GetLength(1); j++)
-			{
-				fileContent[i, j] = lines[i].Split('\t')[j];
-			}
+				if (lines[i].Split('\t').GetLength(0)>0)							//Controllo che la riga non sia vuota
+					fileContent[i, j] = lines[i].Split('\t')[j];
 		}
 
-		int idRicetta = 0;
-		for (int i = 1; i < fileContent.GetLength(0); i++)       //Salto la prima riga perche è l'intestazione
-		{
-			String prepQuery = "";
-			for (int j = 1; j < fileContent.GetLength(1); j++)		//Salto la prima colonna perche è il nome
-			{
-				if (j < fileContent.GetLength(1) - 1)
-				{
-					prepQuery += fileContent[i, j] + ',';
-				}
-				else
-				{
-					prepQuery += fileContent[i, j];
-				}
-			}
-			if (i == 1)
-			{
-				String query1 = $"INSERT INTO RicettePiastra (Nome) VALUES ({fileContent[i,0]});";
+		string[] ColonneRic = { "Nome", "Descrizione", "DataOraCreazione" };
+		string[] ColonneRicDettagli = { "ID_Ric", "PercorsoTag", "Valore" };
+		var tempRic = new String[1, 3];
+		var tempRicDettagli = new String[fileContent.GetLength(0) - 1, 3];
 
-				String query = $"SELECT ID_Ric FROM RicettePiastra WHERE Nome = '{fileContent[i, 0]}'";
-				MyStore.Query(query, out string[] header, out object[,] resultSet);
-				idRicetta = (int)resultSet[0,0];
-
-				String query2 = $"INSERT INTO RicettePiastraDettagli (ID_Ric, PercorsoTag, Valore) VALUES ({idRicetta +","+prepQuery});";
-			}
-			else { 
-				if (fileContent[i, 0] != fileContent[i - 1, 0])
-				{
-					String query1 = $"INSERT INTO RicettePiastra (Nome) VALUES ({fileContent[i, 0]});";
-
-					String query = $"SELECT ID_Ric FROM RicettePiastra WHERE Nome = '{fileContent[i, 0]}'";
-					MyStore.Query(query, out string[] header, out object[,] resultSet);
-					idRicetta = (int)resultSet[0, 0];
-
-					String query2 = $"INSERT INTO RicettePiastraDettagli (ID_Ric, PercorsoTag, Valore) VALUES ({idRicetta + "," + prepQuery});";
-				}
-				else
-				{
-					String query2 = $"INSERT INTO RicettePiastraDettagli (ID_Ric, PercorsoTag, Valore) VALUES ({idRicetta + "," + prepQuery});";
-				}
-			}
-		}
+		var tempName = "";
+		String idRic = "";
 		
+		 /*
+		 *	Scorro tutto il contenuto del file, quando trovo un nome(ricetta) diverso (anche all'inizio visto che la variabile tempName è vuota)
+		 *	Controllo se esiste nel database, se si lo sovrascivo, altrimenti lo creo, salvandomi l'ID_Ric in entrambi i casi
+		 *	Durante tutto il ciclo mi salvo nell'array bidimensionale i record per la tabella dei dettagli con l'ID_Ric giusto
+		 *	E alla fine li inserisco tutti insieme con una sola query nel database
+		 */	
+
+		for (int i = 1; i < fileContent.GetLength(0); i++)   //Salto la prima riga perche è l'instestazione
+		{
+			if (fileContent[i, 0] != tempName)
+			{
+				MyStore.Query($"SELECT ID_Ric FROM {tableName} WHERE Nome = '{fileContent[i, 0]}'", out string[] header1, out object[,] resultSet1);
+				if (resultSet1.GetLength(0) < 1)
+				{
+					tempRic[0, 0] = fileContent[i, 0];
+					tempRic[0, 1] = fileContent[i, 1];
+					tempRic[0, 2] = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+					MyStore.Insert(tableName, ColonneRic, tempRic);
+					tempName = tempRic[0, 0];
+					MyStore.Query($"SELECT ID_Ric FROM {tableName} WHERE Nome = '{tempName}'", out string[] header2, out object[,] resultSet2);
+					idRic = resultSet2[0, 0].ToString();
+				}
+				else
+				{
+					idRic = resultSet1[0, 0].ToString();
+					var date = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");
+					String query = $"UPDATE {tableName} SET Nome = '{fileContent[i, 0]}', Descrizione = '{fileContent[i, 1]}', DataOraCreazione = '{date}' WHERE ID_Ric = {idRic}";
+					MyStore.Query(query, out string[] c, out object[,] c1);
+					tempName = fileContent[i, 0];
+					MyStore.Query($"DELETE FROM {tableNameDetails} WHERE ID_Ric = {idRic}", out string[] d, out object[,] d1);
+				}
+			}
+			tempRicDettagli[i - 1, 0] = idRic;
+			tempRicDettagli[i - 1, 1] = fileContent[i, 2];
+			tempRicDettagli[i - 1, 2] = fileContent[i, 3];
+		}
+
+		MyStore.Insert(tableNameDetails, ColonneRicDettagli, tempRicDettagli);
 	}
 }

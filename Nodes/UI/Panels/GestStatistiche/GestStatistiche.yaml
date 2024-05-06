@@ -8678,6 +8678,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=6f1e24f3b6b1e6fc2842dfed18e0a9a4
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: GraficoABarre_PezziProdotti
     Id: g=7dd1e718469046e8ddb11ed162a4e55a
     Type: HistogramChart
@@ -9305,6 +9310,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=f4c5067aea8f9a3d7b54efa5c950e96c
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: GraficoABarre_PezziProdotti
     Id: g=fa6f289e5610f2ae9f65f7ce1e34b714
     Type: HistogramChart
@@ -10032,6 +10042,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=93ca565f17d663f88b600d0b267fdcee
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: WidgetGestMailingList_R0_0_1
     Id: g=84d4622d5896aee9c46ad9acb9197ab2
     Type: WidgetGestMailingList_R0_0

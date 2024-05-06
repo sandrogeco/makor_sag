@@ -150,15 +150,15 @@ Project:
    Module: FTOptix.CODESYS.Net
    Version: 2.0
  Statistics:
-  TotalNodeCount: 72666
-  Objects: 15206
-  ObjectTypes: 169
-  Variables: 57184
+  TotalNodeCount: 74497
+  Objects: 15506
+  ObjectTypes: 173
+  Variables: 58700
   VariableTypes: 0
-  DataTypes: 0
-  Methods: 107
-  References: 787
+  DataTypes: 1
+  Methods: 117
+  References: 800
   ReferenceTypes: 0
-  Files: 75
+  Files: 78
  Nodes:
  - File: Nodes/Hmi_Next.yaml

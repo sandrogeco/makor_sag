@@ -122,6 +122,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=85f55a807ba0aa08216ffd69a4a93597
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Width
     Id: g=70c0c8d1b41a7b055f17f52b14312004
     Type: BaseVariableType
@@ -2171,7 +2176,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"NamespaceIndex":46,"TextId":"Cappa Aspirazione"}
+          Value: {"NamespaceIndex":46,"TextId":"Cappa Soffiatura"}
     - Name: CloseBtn
       Id: g=5c4a1ccae7fe450ba438d74d10dbe690
       Type: Button
@@ -2258,6 +2263,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=b905d72bb92fdcf91ae67497a6ba1122
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: VerticalLayout1
     Id: g=041acb89fb8d4f93c2adad6bdfc392ad
     Type: ColumnLayout

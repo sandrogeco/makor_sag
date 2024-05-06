@@ -18,7 +18,7 @@ public class EditorRicetteLogic_R0 : BaseNetLogic
                                           Owner.GetVariable("NomeTabellaDettagli").Value,
                                           Owner.GetVariable("TipologiaRicetta").Value,
                                           Owner.GetVariable("MyStore").Value,
-                                          Owner.GetVariable("SourceVarRicetta").Value);   //creo l'istanza della classe gestioen ricette
+                                          Owner.GetVariable("SourceVarRicetta").Value);   //creo l'istanza della classe gestione ricette
     }
 
     /// <summary>
@@ -159,4 +159,11 @@ public class EditorRicetteLogic_R0 : BaseNetLogic
         Node_RecipeList.Refresh();
         //Node_RecipeList.SelectedItem = NomeRicDaSelez;
     }
+
+	[ExportMethod]
+	public void publicAggiornaLista()
+	{
+		var dataGrid = Owner.Children.Get("ListBox").Children.Get<DataGrid>("RecipesList");
+		dataGrid.Refresh();	
+	}
 }

@@ -1,9 +1,9 @@
 Name: GvRlyVal
-Id: g=c6d7f8fe7e4a4562bb7ff64a1702d8bf
+Id: g=cc3ed755871f4bb39dd3c8d04d146105
 Type: FolderType
 Children:
 - Name: bAlmEmrg
-  Id: g=85ac8186ff3944f789674781c6b9c07c
+  Id: g=54e9f49bf3354301925b180611eebe2a
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -16,60 +16,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=358195e45fb0d9f3db8819fa6e75b6c8
+    Id: g=a7d3097d91f036724741d1e951fb75f1
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=da8bd6c6b7617ff6712d5267c99b24e1
+    Id: g=b2e101e7cc96d84bef87e9d60a8ba35c
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=9e22c98b4eea4b8399de82360b07058b
+      Id: g=e31d6c2ac1aa4228aadf0a6c8bf41334
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvRlyVal/bAlmEmrg"
       Children:
       - Name: Mode
-        Id: g=5afe0b564eec438dacb7ddf305b7b1ca
+        Id: g=9310f2ad0f274ee6be54f8d138b970bc
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=91983ec9cf2b5f43d7957d57b7d27305
+    Id: g=7304ab53ef3003db6e7c0cab37dc0954
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=e6130d3e337b4d343f96da7c9e22f18c
+    Id: g=2f44a7ac350ef1368e8ab889362fd1ac
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=82e7a046a796ecf62988d117ac8cc1d0
+    Id: g=387e5cfc0f411d065860e24d334ccb2b
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=a3ad3a8eba95d0e28469f45bda855d84
+    Id: g=c398ca7d78fbee36d5038beaba0b5d66
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=a43c822d9f58a8097bc497b6cb173419
+    Id: g=0ac8b87c5251a7ba3e3caecc05c972cb
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=59560e463f6595956a59cfa7ccc84ed6
+    Id: g=58a6c90d868c90773291dfaa874e6fae
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"bAlmEmrg"}
 - Name: stRlyAlm_bAlmErrComInv
-  Id: g=640a6fdf9c894414be8119c4a802806a
+  Id: g=fb687975729b4a7580629e9e6ccf6314
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -82,60 +82,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=7a6ccb4ceffedc0c0ba5914661be6215
+    Id: g=19cdf862961ed4ec0bdd6eeb7b35bb96
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=d221f333ec9f1e3d2b06cc4cac7c69d5
+    Id: g=d3da8a382abf554caee59ff86d157756
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=cc47fb74734c4e298a64bc481032f8fc
+      Id: g=d87ec82b1ad74a1fb117594f1a777568
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvRlyVal/stRlyAlm/bAlmErrComInv"
       Children:
       - Name: Mode
-        Id: g=68deebe8f8eb4f1db92994c262973165
+        Id: g=014f0ff0492144528d2d4603beec3118
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=b411ca4494af9bc008a702dc96049696
+    Id: g=d3810ef6286de27aec714dc4e09099b0
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=84b729432ef1d80121790676179007b6
+    Id: g=3fdb9cfde0f2913bd3c0567b85c7563d
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=da7aaf3e9f83a6e81f48fc1bfd439c26
+    Id: g=71a9d417ed87ff769fdb3c1fb447738c
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=822fa11c1bbe69cb1a82b2aba1ddb24e
+    Id: g=585401f685f6d1b0846e40184a97ddb8
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=778bf6efd6bdbdddbcea87b49ec5280d
+    Id: g=5b69048f2a1c20d2c9c39c9394b9ee43
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=6aabc060066aa1bab6827ff1059bcb50
+    Id: g=80d1934767f827b9d220270e362b3aca
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"StRlyAlm.bAlmErrComInv"}
+    Value: {"NamespaceIndex":46,"TextId":"stRlyAlm.bAlmErrComInv"}
 - Name: stRlyAlm_bAlmInv
-  Id: g=af7d9f052b474bb0abbb34304daf474f
+  Id: g=0e6a528d7c1e4067bd9f548d8758b27b
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -148,60 +148,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=2a4b38d7cdbdb094716cc67de8156b9a
+    Id: g=c0ddff2ac432699e34cf6dbfe5872bd8
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=d1819ee14be26a5078768fe33f3b7535
+    Id: g=a7d559e16bfb7b8e70e122d4de9c4b0c
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=5b9844fb44c74a68b0bef727f924cb45
+      Id: g=4ee99cfcfb744ac0814dea9d2bf7a7de
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvRlyVal/stRlyAlm/bAlmInv"
       Children:
       - Name: Mode
-        Id: g=365a9ed03abf40f3959ead5e3dcb1894
+        Id: g=d9e7c25e4d604f0295b56e39f506013e
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=0177ce77dbd36afe8f3d1329d6ab5ed3
+    Id: g=576813502b9c3441561b775874d56039
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=4798ff23343a2b8c3552f54af60dae2a
+    Id: g=ea7f5fecd47262cc7fa4eccb73b62e82
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=74f4d0dc9d4e905078f6519a9c56c77a
+    Id: g=b37b32cf850d31b14f36f4aaa75f16cd
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=a63346fb3b9d1a01a0df11a6440d4148
+    Id: g=5e92e39e9ce643bd1d23e1f42ec36187
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=31cfbf159d40a14a8908e394792a4b57
+    Id: g=81a34abc40b87c5be748e48607daef34
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=ea47f07b70bf5da0c1ecfd5342111f56
+    Id: g=53e1f30e07977a784901913ef5db50b3
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"StRlyAlm.bAlmInv"}
+    Value: {"NamespaceIndex":46,"TextId":"stRlyAlm.bAlmInv"}
 - Name: stRlyAlm_bAlmPto
-  Id: g=4f817da21e2f4691a8048aba6ba1de74
+  Id: g=bda5551dd9e64f7696acf049937e2673
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -214,55 +214,55 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=a41280c3aedb4af1b189fd00a0476a18
+    Id: g=24a8a1b666b3c901391d9417ee5b776d
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=6aad2d439d4f2d0eee03f0bc115b02f5
+    Id: g=8cd6daefff40d3be77d5876428debcb8
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=1a5a9e9102c24ee398f7abdc296ac3f0
+      Id: g=900d33bdf8b242a6998190f96f0231b2
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvRlyVal/stRlyAlm/bAlmPto"
       Children:
       - Name: Mode
-        Id: g=f9d8585a99154dc6a81a91db7200b7b3
+        Id: g=ff992b3f1e5b4a8b89769292f9c212f0
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=96c8759ed3aaccadb303b99fb9ca1395
+    Id: g=7a53431ea41899d5d04563330eb96c22
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=c402b994a3a7b47d12f2ca15cf8ed235
+    Id: g=e5cbda0c5e8f39fbf91835b485baa0c5
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=7be9522279043119d8d5788be2099abc
+    Id: g=961dfc828065fb3ef13bae4cb7572ae1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=a11a491255e07e88e271254c70d0fd8b
+    Id: g=d22cca4f59a61874fa25c25894c86928
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=c18a66d6e55dce1b67a82ba5d4de9d3e
+    Id: g=63c13b02d2b1e96913ae6f65d398fd71
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=06c18edb192e677ea59a1782dd59a1d9
+    Id: g=116b94477d12152b1f89bc539f7087fa
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"StRlyAlm.bAlmPto"}
+    Value: {"NamespaceIndex":46,"TextId":"stRlyAlm.bAlmPto"}

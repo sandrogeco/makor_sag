@@ -1013,28 +1013,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmComm
-        Id: g=1e668cbb8b5a6960a72b8f35ef0a21cc
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=84efd3a60de3508d3d64e3757ceaf07f
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvCarta.stEncDiag.bAlmComm"
-      - Name: bAlmDevice
-        Id: g=d978a3742c1390ca629b6a9e6144c194
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=bea75c53ab768696ea5fbe1d1b7eab32
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvCarta.stEncDiag.bAlmDevice"
       - Name: bConfigNoOk
         Id: g=6a8189661c14ed92f26e96b7bcd5423f
         Type: CODESYSTag
@@ -1057,6 +1035,28 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvCarta.stEncDiag.bDeviceOk"
+      - Name: bDiagAlmComm
+        Id: g=c866cc121acd71babf061c29ad39a9b9
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=359a12aa5ea90abc1651475511f8663e
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvCarta.stEncDiag.bDiagAlmComm"
+      - Name: bDiagAlmDevice
+        Id: g=a2d14100bd79ea44c6230a8c4bd0690e
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=34f0b984d0efcf4400fa327db1bc3417
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvCarta.stEncDiag.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=11b764b5a259e743ef82191e7dd6ef5c
         Type: CODESYSTag
@@ -1198,28 +1198,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=70475b8e2268a072e7bd1f394eed2fb3
+        - Name: bDiagAlmErCom
+          Id: g=61e1d91290ad1c8b6f9e375d5892b2c4
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=f5cbaad2fed0e5b902e823d395b5c15b
+            Id: g=213b5be48003643ec5944b63bc392345
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvCarta.stInv.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=c0caca88d26ff80066096ba60f3dfa18
+            Value: "Next.GvCarta.stInv.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=a71d79d5dfa565ad2f81a6e65bcb86d1
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=f178670022fc3660a2db7a1f56d4db92
+            Id: g=1e8e591d699094832da0b2ed384df5c1
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvCarta.stInv.stDiag.bAlmInv"
+            Value: "Next.GvCarta.stInv.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=45c63ee97b3d7055b15eec4fc05760ae
           Type: CODESYSTag
@@ -2999,6 +2999,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvCirc.bMaintInCorso"
+    - Name: bMsgMaintOscInCorso
+      Id: g=2b96375b60767d06060698dc578f3e2b
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=2c395dfbc9b470f7d79a592b18faf23c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvCirc.bMsgMaintOscInCorso"
     - Name: bOemPresBarattolino
       Id: g=c04a4868039b8aa3ad021a9b439fd508
       Type: CODESYSTag
@@ -4213,6 +4224,136 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntPezziTot.dCntPcs"
+    - Name: stCntProcessedMt
+      Id: g=b78337e7e88ebaf949c486040a294bb0
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "Id": 22
+         }
+        }
+       }
+      Children:
+      - Name: bRstCnt
+        Id: g=746aef7ce1ccd967b903a330f07ed5bb
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=4902655854ae7fd9765fcc531fff1212
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProcessedMt.bRstCnt"
+      - Name: dCntMt
+        Id: g=cc17c5b0b7fc9c44de0d13c1d165d204
+        Type: CODESYSTag
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: SymbolName
+          Id: g=33ed9e16ce6ad42b16f24ae8a9678d42
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProcessedMt.dCntMt"
+    - Name: stCntProcessedPcs
+      Id: g=45ea69c0c83304694592c6bdfd42aa95
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "Id": 22
+         }
+        }
+       }
+      Children:
+      - Name: bRstCnt
+        Id: g=11984bc0d87651940d040a13b83a8294
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=116bf086e07b6badbc892232cf7486ba
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProcessedPcs.bRstCnt"
+      - Name: dCntAppPcs
+        Id: g=525ffe8f9752c5d4f1279ac577995c78
+        Type: CODESYSTag
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: SymbolName
+          Id: g=9b700d9fdb324a141e87f31475684590
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProcessedPcs.dCntAppPcs"
+      - Name: dCntPcs
+        Id: g=b121f7c41af5a5428bb76d1560ffe25b
+        Type: CODESYSTag
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: SymbolName
+          Id: g=d28f411468e2f1a0a4433ace1874c744
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProcessedPcs.dCntPcs"
+    - Name: stCntProducHour
+      Id: g=cd928e9277286b3f00f193ab218b8559
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "Id": 22
+         }
+        }
+       }
+      Children:
+      - Name: bRstCnt
+        Id: g=27c9024f3c2f949c7625d5dd09f548cc
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=6313be9b829b5f67c4340223ed871547
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProducHour.bRstCnt"
+      - Name: dCntMin
+        Id: g=712af80afa7d8f9ed22c25b648c095b8
+        Type: CODESYSTag
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: SymbolName
+          Id: g=ad7dce72719a607f7b33c2a3fe0d97f9
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProducHour.dCntMin"
+      - Name: dCntOre
+        Id: g=62a31310d603d3d5ddb908bc81dc3486
+        Type: CODESYSTag
+        DataType: Int32
+        Value: 0
+        Children:
+        - Name: SymbolName
+          Id: g=4cb2c915c8bfb534a22390d9a9d1b9c9
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stCntProducHour.dCntOre"
     - Name: stDiagIolEv
       Id: g=bfa17251b74e45d5efd22b6db5b4116e
       Type: TagStructure
@@ -4227,17 +4368,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmDevice
-        Id: g=57448caea7d5386f110f35360a09637c
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=123d49414391d88105aac70f8a9a3e57
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stDiagIolEv.bAlmDevice"
       - Name: bDeviceOk
         Id: g=a8e55917f5cdc2f4f60b712c97c1e144
         Type: CODESYSTag
@@ -4249,6 +4379,17 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stDiagIolEv.bDeviceOk"
+      - Name: bDiagAlmDevice
+        Id: g=2573876a8e95bbb163b88189153483c5
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=b30524e1c300dfd74b749635580289fc
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stDiagIolEv.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=784c2c4b24f72e4ba371964a03777048
         Type: CODESYSTag
@@ -4296,17 +4437,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmDevice
-        Id: g=81f6b8f55f97b5f5443728c98e4137fc
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=bd31fb1b689adf54cb079c4f7cf89352
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stDiagIolIoDgt.bAlmDevice"
       - Name: bDeviceOk
         Id: g=4197106c69d217a41adc38fd572c385d
         Type: CODESYSTag
@@ -4318,6 +4448,17 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stDiagIolIoDgt.bDeviceOk"
+      - Name: bDiagAlmDevice
+        Id: g=40f5c1ec53d5663b2ed0c59c43072618
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=e5f5d2562a69fcc0639344163c6deece
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stDiagIolIoDgt.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=f6ed72774da01e991cd3b4f7f11fdfb5
         Type: CODESYSTag
@@ -4365,17 +4506,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmDevice
-        Id: g=600c00d00afd1f9149a715752cf1cd3f
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=2166c83ffda8efa5cd4076d775d190d4
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stDiagPressLinea.bAlmDevice"
       - Name: bDeviceOk
         Id: g=6963e5f9e63a3e684ec51d86560b9518
         Type: CODESYSTag
@@ -4387,6 +4517,17 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stDiagPressLinea.bDeviceOk"
+      - Name: bDiagAlmDevice
+        Id: g=bbaf926e8fbe3acb00bbea9993496d47
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=c933248ea1f5a13b6f739a1b218fa1dc
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stDiagPressLinea.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=8e7583395c1f20926815fe9b90e278b0
         Type: CODESYSTag
@@ -4434,17 +4575,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmDevice
-        Id: g=521568e21fcf70c0ef97d76f3685e6bb
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=4e908377c2ce7ae38d04eb29c4212af3
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stDiagTorretta.bAlmDevice"
       - Name: bDeviceOk
         Id: g=26069a0636c2395502def0c0998236b4
         Type: CODESYSTag
@@ -4456,6 +4586,17 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stDiagTorretta.bDeviceOk"
+      - Name: bDiagAlmDevice
+        Id: g=ad8bd2d0b0f728c3a2b0be2573321780
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=204a05d6001dfc695aee1ea6a362f914
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvGen.stDiagTorretta.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=a6bf7ab5268dd511638a9035885bf5ec
         Type: CODESYSTag
@@ -5225,6 +5366,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvOsc.bMsgNecesLubrif"
+    - Name: bMsgVernDisabled
+      Id: g=d20f1fb80dfaa41eeba8075f9281bfc8
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=f7c0ec9eae86cfe0e42443b752776ba2
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvOsc.bMsgVernDisabled"
     - Name: bOemCmdDoPosRst
       Id: g=dcae2c75a908587377bf6c65ba2c465c
       Type: CODESYSTag
@@ -5946,17 +6098,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmComm
-        Id: g=d533f73e6437d9514939ebdf7a94512b
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=631f94ae2708acd1e73b69c6a637d1ee
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvOsc.stBarrOttDiag.bAlmComm"
       - Name: bConfigNoOk
         Id: g=cbf5c3198bf5ba1e91a40cf5dc0507eb
         Type: CODESYSTag
@@ -5968,6 +6109,17 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvOsc.stBarrOttDiag.bConfigNoOk"
+      - Name: bDiagAlmComm
+        Id: g=59c7aff923db611d16450ff26a472b1f
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=420c7b1e3c801dfc22e5c2f3db889610
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvOsc.stBarrOttDiag.bDiagAlmComm"
       - Name: bRichSdo
         Id: g=54a43bd94ac5f4736b85457b20dafaed
         Type: CODESYSTag
@@ -6195,17 +6347,6 @@ Children:
           }
          }
         Children:
-        - Name: bAlmDevice
-          Id: g=a6b6eb52c242c19368129e78357f23f3
-          Type: CODESYSTag
-          DataType: Boolean
-          Value: false
-          Children:
-          - Name: SymbolName
-            Id: g=1b27991f5aa55ab9c8e1fe94ff3e5180
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Next.GvOsc.stBarrOttDiag.stDiagStd.bAlmDevice"
         - Name: bDeviceOk
           Id: g=d4ecdf2f1c6533ca26626643def16255
           Type: CODESYSTag
@@ -6217,6 +6358,17 @@ Children:
             Type: BaseDataVariableType
             DataType: String
             Value: "Next.GvOsc.stBarrOttDiag.stDiagStd.bDeviceOk"
+        - Name: bDiagAlmDevice
+          Id: g=c059098ae7d7691f37d7276116d64bfa
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=4668960f1bb0fcec260896ec78749939
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvOsc.stBarrOttDiag.stDiagStd.bDiagAlmDevice"
         - Name: bRichCfg
           Id: g=ccdfe8d2b39fc87db253d1c200495651
           Type: CODESYSTag
@@ -6773,28 +6925,6 @@ Children:
         }
        }
       Children:
-      - Name: bAlmComm
-        Id: g=6d8b4aea9ce2d5c83af7b0e4219d8c2d
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=2d8b15f375c716a6202194a0d8ff9b42
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvOsc.stEncDiag.bAlmComm"
-      - Name: bAlmDevice
-        Id: g=036c32018adaeeee0788080d8e63eb2b
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=1f286d70ce1a3cacaba86623ad7338ff
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvOsc.stEncDiag.bAlmDevice"
       - Name: bConfigNoOk
         Id: g=629865a26637a40d85e8be748bb54e4c
         Type: CODESYSTag
@@ -6817,6 +6947,28 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvOsc.stEncDiag.bDeviceOk"
+      - Name: bDiagAlmComm
+        Id: g=924b29d24c34fce8168ae0474cab7d96
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=cb183ee1acee9a3a5994078d22f8d853
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvOsc.stEncDiag.bDiagAlmComm"
+      - Name: bDiagAlmDevice
+        Id: g=aeea1c57277c174c2b943fca13e0865c
+        Type: CODESYSTag
+        DataType: Boolean
+        Value: false
+        Children:
+        - Name: SymbolName
+          Id: g=99c5443dc8236aad86d95844f14b5f69
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Next.GvOsc.stEncDiag.bDiagAlmDevice"
       - Name: bRichCfg
         Id: g=09018c260fc647895b402f5a6442558d
         Type: CODESYSTag
@@ -7049,28 +7201,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=2bfe223d66f141a88d9e22392d122e7d
+        - Name: bDiagAlmErCom
+          Id: g=4269d117c810a400f90f6c1eb3ecd792
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=ca4756db8f8790594053a39ecf9570d4
+            Id: g=4ceb8eaa22c934d5948ebd7e4f58efc7
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvOsc.stInv.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=4d24497f3ad019cf49bef7b0254502d5
+            Value: "Next.GvOsc.stInv.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=c10fb17ae05b36801fa199ed7af6cf1d
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=e58c9b88511860fe1fb30e422b088a2a
+            Id: g=dbf0bbf41b28b1140a2777e2b71c4e05
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvOsc.stInv.stDiag.bAlmInv"
+            Value: "Next.GvOsc.stInv.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=1eb8ec90b79424176fb15b534c45f68b
           Type: CODESYSTag
@@ -10589,28 +10741,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=71aee9e4b2bb3d318cb8e919e37426b3
+        - Name: bDiagAlmErCom
+          Id: g=ecd4736599190c430e1633a2e6bb51c9
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=a23376b4ebca1b5579fde2999e6571af
+            Id: g=d4890080ddfbb5b77dae9503af8a902f
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvRlyMon.stInv.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=eeab960fb11b0a7d5f5a93baee2f7bf5
+            Value: "Next.GvRlyMon.stInv.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=0ee60ea39db60b26b8b4b24f48a27baf
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=c229f644ae61a3d132697897a2ae07c3
+            Id: g=6d4833e51dab27098dab231e34102bff
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvRlyMon.stInv.stDiag.bAlmInv"
+            Value: "Next.GvRlyMon.stInv.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=2725e0036e08cddfeb056eb434d4fe7e
           Type: CODESYSTag
@@ -11659,28 +11811,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=62c6ef08b3e9d75d711ad94f7160282d
+        - Name: bDiagAlmErCom
+          Id: g=89094f9e23a117ffe58cd6dac418fd79
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=7ed7f7a45a49857c550d6f9030c2300f
+            Id: g=1802c8ebfc5d6fcdd441363cca88dfc2
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvRlyVal.stInv.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=7bcc5a14a355728f460a249223093eb6
+            Value: "Next.GvRlyVal.stInv.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=41697060d9dc7210f2b1edb1d2fafd5f
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=2f6ba0a233b35dc0f0e73e29c3245a8f
+            Id: g=c9b201e852ddf930f71c040edb3b14c7
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvRlyVal.stInv.stDiag.bAlmInv"
+            Value: "Next.GvRlyVal.stInv.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=09161653873bedaf7b72ac2ea3d4d35b
           Type: CODESYSTag
@@ -13546,28 +13698,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=286c0e4059536a99b864f1297ba8d991
+        - Name: bDiagAlmErCom
+          Id: g=f07877a064f298cd26857e07ab9c0bff
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=f3cadaf5634f725d3394fd31f5b3c9ab
+            Id: g=57512ef69e0ea35623e3abad911e45fd
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvTrasp.stInv.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=e82f1d6ad02ead81b2a400b1e69d225d
+            Value: "Next.GvTrasp.stInv.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=24b550d3c5bbded70c49700f572774ea
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=642fe9732aa993cf4ca9018986c4e16b
+            Id: g=2c0211cedb3cb0215d6294f4b99c36bd
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvTrasp.stInv.stDiag.bAlmInv"
+            Value: "Next.GvTrasp.stInv.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=a1b2145b987741f956d26efc688887e1
           Type: CODESYSTag
@@ -14295,6 +14447,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvVent.bHmiCheckFitriImm"
+    - Name: bMsgAvviareVentil
+      Id: g=00a8fc2daeb92cadc2d8f14a9b157140
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=33b33f44025f503ef91cbc96a07424a6
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvVent.bMsgAvviareVentil"
     - Name: bMsgCalibFiltri
       Id: g=d3e3612df0defed2329051c9b667be7a
       Type: CODESYSTag
@@ -15181,28 +15344,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=84f6bfffdc639330eb2af3f0379d942c
+        - Name: bDiagAlmErCom
+          Id: g=2c6c029157e3f552bed1cda7fb9f0da9
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=fcf355a401d247dc317d4025a55f4dfa
+            Id: g=b3bac41b2397543227f488d92c077643
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvVent.stInvAsp.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=30537a6777249f398340fde77562dd70
+            Value: "Next.GvVent.stInvAsp.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=d588ee50a5ce62d7bec44910a360d704
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=f7efc0b9f82d5790fc6006fb7b2729f6
+            Id: g=bbfc8f93b68a7a6265dfffb9d85c6ce1
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvVent.stInvAsp.stDiag.bAlmInv"
+            Value: "Next.GvVent.stInvAsp.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=3133f176bfd4f09d8435e286cdea3e5f
           Type: CODESYSTag
@@ -15878,28 +16041,28 @@ Children:
           }
          }
         Children:
-        - Name: bAlmErCom
-          Id: g=57e5c350d991691ba30b002df4fbf888
+        - Name: bDiagAlmErCom
+          Id: g=f024054c1ae440ba7ce0ccffa792172e
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=1c3b12f123731ec830d11904561e0678
+            Id: g=8b509877a447278b872bbad535da0b18
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvVent.stInvImm.stDiag.bAlmErCom"
-        - Name: bAlmInv
-          Id: g=1fc11926a5e00171d6917898db470cdc
+            Value: "Next.GvVent.stInvImm.stDiag.bDiagAlmErCom"
+        - Name: bDiagAlmInv
+          Id: g=7df21d5c474dc002c954fcabfb0c76c7
           Type: CODESYSTag
           DataType: Boolean
           Value: false
           Children:
           - Name: SymbolName
-            Id: g=b09d55b09f37586baea0727544971d19
+            Id: g=ae62111bcb8ecdfb6a2043e0ad619187
             Type: BaseDataVariableType
             DataType: String
-            Value: "Next.GvVent.stInvImm.stDiag.bAlmInv"
+            Value: "Next.GvVent.stInvImm.stDiag.bDiagAlmInv"
         - Name: bInvBwd
           Id: g=11349dff18896129dfa52a295fcc4db3
           Type: CODESYSTag

@@ -140,15 +140,30 @@ Children:
     Id: g=9f1419c895fad111cbedbaf20a93387f
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
+    Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: CSVpath
     Id: g=e73b8ae7b2dde63565da43f2317a2bc9
     Type: BaseDataVariableType
     DataType: AbsoluteResourceUri
-    Value: "file:///C:/Users/NRialti.MAKOR/Desktop/Test.csv"
+    Value: ""
   - Class: Method
     Name: ToCSV
     Id: g=072a7958da790b275f9c349e805177cd
   - Class: Method
     Name: FromCSV
     Id: g=8ec32dcd19d87a51dfdaa0294b555964
+  - Name: tableName
+    Id: g=74f17325eaff29f97361578d54536ca2
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: GestIndustry_40Logic
+  Id: g=05536f24d1adc4ca854285ea74174199
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: EndLavoraz
+    Id: g=e692ae915a256b6a7369d8b95eb04e0d
+  - Class: Method
+    Name: StartLavoraz
+    Id: g=d624996b6f82e3900a945c97b8e317ec

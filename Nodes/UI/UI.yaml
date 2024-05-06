@@ -1823,9 +1823,97 @@ Children:
   - Name: GestMainWindows
     Id: g=5be24054f97e781ba13be0b507122b95
     Type: NetLogic
-  - Name: GestEventi
-    Id: g=c69ab36f093d026907f7a8f327dcf8ae
-    Type: NetLogic
+    Children:
+    - Name: RicettaMesNonCorretta
+      Id: g=33e75dd27d17a904532ddc1683bb885e
+      Type: ContextDialogConferma_R2
+      Children:
+      - Name: OnConfirm
+        Id: g=21b62cb5e86512cab06f69f012acd2bf
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=9d2a88ec9421cdf7ceac9056808b9e42
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=adf991fb38882e243f14a7564636d3ed
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=f28b2c3a87b02aba3b820ff847f8d45f
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: OnCancel
+        Id: g=60ad6156314843e4c53eee9cf7a02932
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=5466809f4ba3f31af25e1611f41541d9
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=c0cccd8425eed5d4520ce70673765999
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=240f08b2eb68224da51cfe84fe80e217
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: Title
+        Id: g=00db6440e19357b17f07224f71297c08
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"INDUSTRY 4.0"}
+      - Name: Message
+        Id: g=c3470fbbb403e1f69255465f04ea75b0
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":46,"TextId":"La ricetta richiesta dal MES non esiste nel database della macchina"}
+      - Name: ErrorMessage
+        Id: g=082c06c74fb6e43bc05b6e58f9491552
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: ShowErrorMsg
+        Id: g=981a6da4c20253f929f72ed94ef87f4b
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: ConfirmVisible
+        Id: g=4d1b11c379e4538b22e421df5c50eef9
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: CancelVisibile
+        Id: g=6ed0cf30a64383f361c772f77c3fde7f
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Image
+        Id: g=527c4c23a854f22d7c228dc927a16525
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbErrore.svg"
+      - Name: InProgress
+        Id: g=07a39d718fa8e3ca435d536e9ab379ab
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
   - Name: HmiBackground
     Id: g=c370b07891b12c7c08309ac7ae8fb96f
     Type: Rectangle
@@ -3399,7 +3487,7 @@ Children:
             Id: g=1fca4604366be6ae10ff9607f50d4bfa
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/Hmi_Next/Model/StatoMacchina/CycOn"
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
             Children:
             - Name: Mode
               Id: g=3f6140eb1b7908f396ddee87e155b54e
@@ -3490,6 +3578,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: false
+          Children:
+          - Name: CollegamentoDinamico
+            Id: g=6d4a979f935265d67a5ad156b0eda8e9
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bGenWrnOn"
+            Children:
+            - Name: Mode
+              Id: g=404c0ac4e465ffd5d0d7234edaa756e3
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: MachChangeOver
           Id: g=f7379fd927124026bcda4822b9031101
           Type: BaseDataVariableType

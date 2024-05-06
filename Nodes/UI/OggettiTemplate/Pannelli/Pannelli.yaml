@@ -887,6 +887,17 @@ Children:
       DataType: ContentHorizontalAlignment
       ModellingRule: Optional
       Value: 2
+    - Name: MoveTarget
+      Id: g=79563ad659dac673cdf84b5948350067
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Id: g=0f2b08175d9918a40ab2066bddf15298
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
 - Name: ConfirmationDialog_R0_0
   Id: g=0850e67d2be6c598a1cb5e539e1f9d1f
   Supertype: PopUp_R0_0
@@ -1144,6 +1155,11 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: false
+    - Name: MoveTarget
+      Id: g=54d843049e472523cc16e2d6f8a5baca
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: ConfirmationDialogContext
     Id: g=5eda6944473d0402ca05e66ba6ee3129
     Type: Alias
@@ -2040,6 +2056,11 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: false
+    - Name: MoveTarget
+      Id: g=25d1ac0398882678d2bfdc9683c5f288
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: ConfirmationDialogContext
     Id: g=585c08e4ff57221808f450f10476aede
     Type: Alias
@@ -25463,6 +25484,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=a8840e31bdb512450bbf3e84411a7352
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: HorizontalAlignment
     Id: g=88e62cfa350fa093896887fdc0cf7bdb
     Type: BaseVariableType

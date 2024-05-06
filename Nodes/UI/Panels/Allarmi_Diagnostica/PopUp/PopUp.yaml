@@ -261,6 +261,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=b0929cfc6401f68bb2e63aa46034d950
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Inverter
     Id: g=620605abd2d6d154fde4dd9f7959aff5
     Type: Alias
@@ -6209,6 +6214,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=d7aaae19a969bf4a06895122f700ae27
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Label1
     Id: g=685a002b0f9e8568dfe71cbac65ead3c
     Type: Label
@@ -19458,6 +19468,11 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
+    - Name: MoveTarget
+      Id: g=a234f5a3ba9385317cda8624729a8c8d
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: Label1
     Id: g=2371b298a46fbdfbfd79856cf71038eb
     Type: Label

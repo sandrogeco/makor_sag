@@ -26,6 +26,13 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class Creazione_Ottiche : BaseNetLogic
 {
+	 /*
+	 *	Script per creare n rettangoli per rappresentare ogni singola ottica presente
+	 *	n viene ottenuto in base al tag presente sul plc
+	 *	Quando il bit va off il rettangolo collegato ad esso diventa invisibile per far notare il problema sull'ottica in questione
+	 */
+
+
     [ExportMethod]
     public void CreaRettOttiche()
     {

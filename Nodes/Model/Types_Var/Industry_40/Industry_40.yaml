@@ -1,0 +1,107 @@
+Name: Industry_40
+Id: g=0ee3c8c629a13ff953dc0f8954e339a9
+Type: FolderType
+Children:
+- Name: stNewJobType
+  Id: g=b0366df398cae23d69e0761a33367036
+  Supertype: BaseObjectType
+  Children:
+  - Name: sNextJobID
+    Id: g=4d88e090af91ad599515bbe9a54ca2fb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: sNextRecipeName
+    Id: g=e3c12735320996389b2e400a5e169f14
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: bLoadNewJobID
+    Id: g=bea22dd16cef9d3d4a5294b66ad856b1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: wLoadNewJobErrCode
+    Id: g=7ca9a92f27ed80a5e4641d2a054f4008
+    Type: BaseDataVariableType
+    DataType: Int32
+    Description: {"LocaleId":"it-IT","Text":"0 = No Err; 1 = Recipe not updated;  2 = Recipe not found;"}
+    Value: 0
+- Name: stJobInfoType
+  Id: g=3ea53110bb995dfcf56cf46cc288effe
+  Supertype: BaseObjectType
+  Children:
+  - Name: sJobID
+    Id: g=38d9a49aa621538819c29742901ae3df
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: sRecipeName
+    Id: g=de1e1b86716404a8ca67beb47f29a74f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+  - Name: dtStartDateTime
+    Id: g=4ea461a26a11c90be6271dd79b683c37
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "1601-01-01T00:00:00.0000000"
+  - Name: dtEndDateTime
+    Id: g=ca9a2f3d1cf16f5ad7996950fda4e104
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "1601-01-01T00:00:00.0000000"
+  - Name: dwProcessedSqareMt
+    Id: g=a27e3c77a93310ee01c838a5b962b7a5
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: dwProcessedMt
+    Id: g=476aad421b5cb1a29aa651e17c9541d4
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: dwProcessedPcs
+    Id: g=f26fdc18d703ed543c46929241b8b659
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: dwProducHour
+    Id: g=4a00f4e0b00d0e7c7c8bceb711c69c2b
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: dwProducMin
+    Id: g=445de2fa822895c058bb82a1fa605684
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: stMachineStatusType
+  Id: g=6d2781769f2476a7c1db1b0c4e95832e
+  Supertype: BaseObjectType
+  Children:
+  - Name: dwProcessedJobsAmount
+    Id: g=5259be25266146e01f599643fff85124
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: bJobInProduc
+    Id: g=bce0cc78de8c784f5426b2853c1a2e67
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: bCycleOn
+    Id: g=1e542618194d112a087d17ac996721fd
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: bStopOn
+    Id: g=2e3823f7509401c3e1b1ff707f7a8995
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: bAlarmOn
+    Id: g=576cf768b1cf976d9a5b570f42700b40
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
