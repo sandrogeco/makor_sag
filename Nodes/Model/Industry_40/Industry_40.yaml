@@ -129,23 +129,23 @@ Children:
     Type: BaseDataVariableType
     DataType: Int32
     Value: 0
-  - Name: dwProcessedMt
-    Id: g=289f7df9e9c0222e2c360027d372e21a
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
     Children:
     - Name: DynamicLink
-      Id: g=177fff7256247df407deacd8d4354bd9
+      Id: g=185c9c7044f848fbbd845e42fe53c5a0
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntProcessedMt/dCntMt"
       Children:
       - Name: Mode
-        Id: g=6f545b53e014069ae97ba7c2556867a4
+        Id: g=00b7151e03fff1fabc72f12674834167
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
+  - Name: dwProcessedMt
+    Id: g=289f7df9e9c0222e2c360027d372e21a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
   - Name: dwProcessedPcs
     Id: g=a43f881f98cebaa9d6befb43d8a4b457
     Type: BaseDataVariableType

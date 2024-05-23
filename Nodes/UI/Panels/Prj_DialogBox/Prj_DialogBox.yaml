@@ -31134,6 +31134,366 @@ Children:
     - Class: Method
       Name: StartLavoraz
       Id: g=2d7e3f81b81b4d8336e0816b25d19318
+    - Name: GestIndustria4_0_Err
+      Id: g=1d89715684e4cc90c85cb18e08e47649
+      Type: ContextDialogConferma_R2
+      Children:
+      - Name: OnConfirm
+        Id: g=1e9f266ee8c7b8e84e30d19ccba50b52
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=7cbac97d55e80fe3534e29704d67e314
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=97619f2e5dfc1443ae1d041e4a9a01e9
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=01594777fe203cce2f11074321fad35d
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: OnCancel
+        Id: g=ac201b8181fe6a4a65e2a3cd7f54a3a3
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=9c18d7ad724c6e04c290c4c2734c53dd
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=e294755a4cdfdb959a21a56714e83545
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=136525e0b8055ce5c8224b38d9fb6a78
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: Title
+        Id: g=7e21d6c2d0a90d2b33ca8a43ece14a54
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"INDUSTRY 4.0"}
+      - Name: Message
+        Id: g=7f25d4cf64cea93910741507b3c9b7a1
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+      - Name: ErrorMessage
+        Id: g=5ae755975f2e99acf7c2923a5f0e8dc9
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: ShowErrorMsg
+        Id: g=262e03c892b1257746a42936e841859a
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: ConfirmVisible
+        Id: g=f873c46ddf8721c03c0138f296a01a83
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: CancelVisibile
+        Id: g=b441599fb5dd1f9d53e75d68b90bd606
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Image
+        Id: g=f893f47a68450cf74238454330648623
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbErrore.svg"
+      - Name: InProgress
+        Id: g=97d15646235d3c6996fb86dfcfd9afb8
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+    - Name: GestIndustria4_0_NoPlcConn
+      Id: g=7155137e710787ed48751898bb24956b
+      Type: ContextDialogConferma_R2
+      Children:
+      - Name: OnConfirm
+        Id: g=1587712d7b317d6f9add36c5e4ad5fa2
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=23410769a91967cfffcf305f5f00010e
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=f32909d26b1a6917e0874e952720f622
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=4a573b1b8c670598a4c8a52e05a6d2f7
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: OnCancel
+        Id: g=4e7f79c1aba341de0f81d3c96a7e5377
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=2f85446ce49fb1cafccb4800b48454df
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=08b0714dda2245565a22af18912f7954
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=963369b2fdd09fa44cfd4f359a249044
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: Title
+        Id: g=589d66a6ff936000876c296ca27b40f1
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"INDUSTRY 4.0"}
+      - Name: Message
+        Id: g=555a5ae9e9bbc9de446383cb8385772e
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+      - Name: ErrorMessage
+        Id: g=f64e6b3fd985174679d53f382c74ef8b
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"NoPlcConnection"}
+      - Name: ShowErrorMsg
+        Id: g=3848ae136dbafdd2b8eea648cb4a4fb1
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: ConfirmVisible
+        Id: g=2c2ced549caac3b47c4070df4ec498ff
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: CancelVisibile
+        Id: g=653aee113d7d623b0e58cfb180327683
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Image
+        Id: g=52dacd8c7815d1b251012bc9a38fd6c4
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbErrore.svg"
+      - Name: InProgress
+        Id: g=a3f279276c9c8537996b357673c45c81
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+    - Name: GestIndustria4_0_RecipeNotFound
+      Id: g=d34dfd8961fca239ed87e8e9928e4a7b
+      Type: ContextDialogConferma_R2
+      Children:
+      - Name: OnConfirm
+        Id: g=4a298645e0df7e280fd335c0dabcc741
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=4c806a19ed242353f8d8ee2b19f8cc62
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=722bae07557fc515be9800d3d4d9821f
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=26ad169b38a9ab48ad23265ea5838d68
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: OnCancel
+        Id: g=859b2a38b23d02a92f4b8af2732a7caf
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=340c9cb4b9ac4e85273aeca1c63665a4
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=bbe5a177a6f999cf0012634051aa57ab
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=fb2b0b6dde166f87070f7fb4dfb556ed
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: Title
+        Id: g=25b22f6613db31dd2da8c2e1e8bf58b4
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"INDUSTRY 4.0"}
+      - Name: Message
+        Id: g=6c6c4e7da510f7dbfd999f9ea921a3e6
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+      - Name: ErrorMessage
+        Id: g=a44731c36300b4d9ef5ed75975a0c58d
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":46,"TextId":"La ricetta richiesta dal MES non esiste nel database della macchina"}
+      - Name: ShowErrorMsg
+        Id: g=d0786902fda22e5facc2bab6fd231023
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: ConfirmVisible
+        Id: g=2e300418e8fb9fca2a1eb207599fcbe8
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: CancelVisibile
+        Id: g=273aced3d5d9f874a30b1f0490d4b91c
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Image
+        Id: g=493f9503aa9c153f8958e050388b8be0
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbErrore.svg"
+      - Name: InProgress
+        Id: g=e92a4849cef2d03773aa44bb4bc1a9bc
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+    - Name: GestIndustria4_0_JobClosingErr
+      Id: g=a2a8ea12582f90f0594396d508871fbe
+      Type: ContextDialogConferma_R2
+      Children:
+      - Name: OnConfirm
+        Id: g=e6937a88d93fc2b8978f339d6ca34f73
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=25fd59fc7ab3690885f011f38efdaa17
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=b67cd43f107a95007c1a0b4c158ea633
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=9391c5b2b8f5151ab633076722df7cdc
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: OnCancel
+        Id: g=467e7b087f8e418437f8e794d1ffaf8b
+        Type: MethodInvocation
+        Children:
+        - Class: Reference
+          Target: ns=9;i=98
+          Direction: Forward
+        - Name: ObjectPointer
+          Id: g=9f789aed858edeb65efa54e251a719d2
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Id: g=8fdb00d3fae5be3b078592eafc71741b
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+        - Name: Method
+          Id: g=8a9c7a0961f66dfe2cf26fbe187112d7
+          Type: BaseDataVariableType
+          DataType: String
+          Value: ""
+      - Name: Title
+        Id: g=fe7ca42a714718845002274bae1ab8ef
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"INDUSTRY 4.0"}
+      - Name: Message
+        Id: g=36549973fbdf7784635ecc33f3b8cb86
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"it-IT","Text":"Errore chiusura JOB"}
+      - Name: ErrorMessage
+        Id: g=c4548c6e388bfd06bf0693b269226392
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: ShowErrorMsg
+        Id: g=ffec66003c4baeea387b7647a0cac8c7
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: ConfirmVisible
+        Id: g=d587c73dd1ff6ef0ed660f2bdd709f26
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
+      - Name: CancelVisibile
+        Id: g=470bf511f6295fd9806705b71e57a0ae
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Image
+        Id: g=45ddeacd01df77eb64860fe6bdbab473
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbErrore.svg"
+      - Name: InProgress
+        Id: g=07ccfb47653fecab258d356bc459a06d
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: false
   - Name: Background
     Id: g=829aefde37c5021ea15c1f22899aeab5
     Type: Rectangle

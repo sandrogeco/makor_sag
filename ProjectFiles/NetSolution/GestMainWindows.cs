@@ -1,4 +1,5 @@
 #region Using directives
+using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
@@ -6,6 +7,7 @@ using FTOptix.Store;
 using System;
 using System.IO;
 using UAManagedCore;
+using static GestIndustry_40Logic;
 
 #endregion
 
@@ -55,32 +57,71 @@ public class GestMainWindows : BaseNetLogic
     {
         if (e.NewValue)
         {
-            var NewRic = Project.Current.GetVariable("Model/Industry_40/i_NewJob/sNextRecipeName").Value.Value.ToString();
-
-            //Controllo se la ricetta è nel databse della macchina
-            using GestRicette m_GestRicette = new("Ricette", "RicetteDettagli", "RicettaProduzione", ((Store)Project.Current.Get("DataStores/DatabaseRicette")).NodeId, Project.Current.Get("Model/VariabiliRicettaProduz").NodeId);
-            if (string.IsNullOrEmpty(NewRic) || m_GestRicette.IsRecipePresent(NewRic))
+            short ErrCode = 0;
+            string Err = "";
+            try
             {
-                try
+                //Se sono connesso al PLC allora entro nella gestione altrimenti salto
+                if (Project.Current.Get<CommunicationStation>("CommDrivers/CODESYSDriver1/PLC_Next").OperationCode == CommunicationOperationCode.Connected)
                 {
-                    //var Metodo = Project.Current.Get<NetLogicObject>("Scripts/GestIndustry_40Logic");
-                    //Metodo.ExecuteMethod("StartLavoraz");
-                    GestIndustry_40Logic.StartLavoraz();
+                    var NewRic = Project.Current.GetVariable("Model/Industry_40/i_NewJob/sNextRecipeName").Value.Value.ToString();
+
+                    //Per avviare il Job controllo se la ricetta è nel databse della macchina oppure è stata passata una ricetta vuota
+                    using GestRicette m_GestRicette = new("Ricette", "RicetteDettagli", "RicettaProduzione", ((Store)Project.Current.Get("DataStores/DatabaseRicette")).NodeId, Project.Current.Get("Model/VariabiliRicettaProduz").NodeId);
+                    if (string.IsNullOrEmpty(NewRic) || m_GestRicette.IsRecipePresent(NewRic))
+                    {
+                        GestIndustry_40Logic.StartLavoraz(ref ErrCode);
+                    }
+                    else
+                    {
+                        ErrCode = (short)Industry_40_ErrCode.RecipeNotFound;
+                    }
                 }
-                catch (Exception)
+                else
                 {
-                    Log.Warning("Industry 4.0", "Errore gestione");
-                }                
+                    ErrCode = (short)Industry_40_ErrCode.PlcCommErr;
+                }
             }
-            else
+            catch (Exception Ex)
             {
-                Log.Warning("Industry 4.0", "La ricetta richiesta dal MES non esiste nel database della macchina");
-                var AlisNode = LogicObject.Children.Get("RicettaMesNonCorretta");
-                Runtime_Utility.ConfermaUser(Owner, AlisNode);
-                Project.Current.GetVariable("Model/Industry_40/wLoadNewJobErrCode").Value = 2;
+                ErrCode = (short)Industry_40_ErrCode.Err;
+                Err = Ex.Message;
             }
+            finally
+            {
+                //Se ho un errore lo porto all'attenzione dell'operatore
+                if (ErrCode >= 2)
+                {
+                    //var AliasNode = ErrCode switch
+                    //{
+                    //    (short)Industry_40_ErrCode.PlcCommErr => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_RecipeNotFound"),
+                    //    (short)Industry_40_ErrCode.RecipeNotFound => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_RecipeNotFound"),
+                    //    _ => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_Err"),
+                    //};
 
-            bLoadNewJobID.Value = false;
+                    ContextDialogConferma_R2 AliasNode;
+                    switch (ErrCode)
+                    {
+                        case (short)Industry_40_ErrCode.PlcCommErr:
+                            AliasNode = LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_NoPlcConn");
+                            Log.Warning("Industry 4.0", "PLC non Connesso");
+                            break;
+                        case (short)Industry_40_ErrCode.RecipeNotFound:
+                            AliasNode = LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_RecipeNotFound");
+                            Log.Warning("Industry 4.0", "La ricetta richiesta dal MES non esiste nel database della macchina");
+                            break;
+                        default:
+                            AliasNode = LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_Err");
+                            Log.Warning("Industry 4.0", "Errore: " + Err);
+                            break;
+                    }
+
+                    Runtime_Utility.ConfermaUser(Owner, AliasNode);
+                }
+
+                Project.Current.GetVariable("Model/Industry_40/wLoadNewJobErrCode").Value = ErrCode;
+                bLoadNewJobID.Value = false;
+            }
         }
     }
 }
