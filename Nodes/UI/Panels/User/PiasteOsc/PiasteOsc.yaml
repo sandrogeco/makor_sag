@@ -19565,16 +19565,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=4787e683f7d5372d71340f62bf4e2105
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=9bb98e2563b35f63f0f27cbf6ae88f02
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=576bfe5f182d8f5e2386a678385195d4
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=38a4a493cde2fcd2025763510a2cc3b0
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=3694369c0530f2446eaa9a74c983a8e2
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=14c82f56c87aa7afec77b9f3b19305fb
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=fa49360134f3694c18f8e7d8cafc809a
-                    Type: BaseVariableType
+                    Id: g=64551b16a88b56fb11afee8a8f18630e
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -19823,16 +19847,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=785b690d2271804839127b32f0fa8c33
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=d815ad28eb33d1c519ffc80857dce9d1
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=a42b998ab198a18d12b6651cf93c0780
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=412a0fa510f986c7a2e48d76badc42ba
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=880737a8d3b5c49506c04a0cddb563f9
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=0a77a8913b39f32cf87e95748fc60dde
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=312cd4fd65eed5a3b3462041762db596
-                    Type: BaseVariableType
+                    Id: g=d8db803964a88b80304bf8a650759961
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -20556,16 +20604,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=894796792674474bca12e71a158878e7
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=a1ef6653ad739c1b4f186f2d4a69ee35
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=4e5262ac99ef012036e21be0f88a33b0
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=c42f01bf06b3e66724357d291ebec10a
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=2c5ce436b853b79efec75307c0680de9
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=2f25a206bfbd4e1289c21eab31cc6653
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=29a461c2e1fd9a278fa19494743ad319
-                    Type: BaseVariableType
+                    Id: g=992c71d5d5e5b4766caceaa598bd0b48
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -20814,16 +20886,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=737f76674283dcfc8fd2eac55f283417
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=23a04349229d1228f5b2980aee6d075c
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=cc3c4cc880fe7cfee3fb0bce0e6fa49c
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=fbcbed363e645f841040458b9776c010
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=237310447e125fecdd7732082ae5a572
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=f02e362474fe475d65de802283d76c7c
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=12bbace86ee899a46532ccf0b4fea822
-                    Type: BaseVariableType
+                    Id: g=eca95fa982507bd4eae0bc4e8271761b
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -21291,16 +21387,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=2e008353591f5d8e694367e724e47663
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=c31b60622b00ca2f00342efe2e85a1a8
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=c5511c59f1875a1a589928821b6f9b53
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=1fc7a20969f78e8dab68421ea9ad85d9
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=81512578148fa3afbebe29f3208e1973
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=4e3d33e684aa111fbdc31666e19a0702
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=d3025a6e6e33b8b1fd4a8b64dc57658c
-                    Type: BaseVariableType
+                    Id: g=9d9f3c0b49f1a65586ab4eadc6035696
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -21549,16 +21669,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=6dce972c929e2297faee19305cc56796
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=50f8805d0f22a3d0501304df9f7092c6
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=86eb4c8d36b33f090fccfa2886987740
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=c6407f3d10edb923515b7da3cf47d346
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=7a496271fa19b6b9c7dcc29ce5dee35a
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=acedb9b7d5f581dcd5d64afa0720da7c
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=4f107c80e540987b3c713844ef667254
-                    Type: BaseVariableType
+                    Id: g=a97030de266dc61babe7ce6f31607590
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -22120,16 +22264,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=b5b8aebb0349bdf3abda78667b550583
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=e51668d02d82e571fc36d2ae3bee1dda
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=fdf808528b9e903ad97bd8b653cc7fe6
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=34cf275588640296c9ef2f36bf62f98c
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=0acc0a3838b53c15bd25f13c7145d084
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=cdc6d2c67baef2b524a56149e0c07a28
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=8907a8bc1a0213cfc3ac98837c120049
-                    Type: BaseVariableType
+                    Id: g=74dba38ab1f920585617ebebcb3fadf9
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -22378,16 +22546,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=fa37c51728c8fc89b32541e4965ca436
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=27c3da3e516337903cc0a2487277c7e0
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=0babc00123e56e6bcea5eec2058db1c4
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=941d3cb2923eaa1a410671bfbed21011
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=30f7ba65f4eed5973567383c86c207d2
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=da961e846b33b781550f9111f7f9402b
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=7bceef7312719dbe2ca5e0dc49793893
-                    Type: BaseVariableType
+                    Id: g=ace5586caac7969dd9b07f1a8a303284
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -22921,16 +23113,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=75ab8f52c35be445bfd2c57cf1f31fe4
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=9c668e5b03ce6a9786fa7db16fd7a4ea
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=62c6f38f4ccffc085adad89760d234c4
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=aad19a90fe6a30ede5ecc6373caf4f41
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=e41f25b5313a5e6685abfd66428d74bc
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=2ea6fe3e1a8a56552f607d089a1f2e4b
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=aa2b6953554a9217be7b5c4339a252f6
-                    Type: BaseVariableType
+                    Id: g=f23544f4d94c81ebdeefcc9898f0ad16
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
@@ -23179,16 +23395,40 @@ Children:
                 DataType: LocalizedText
                 Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
                 Children:
-                - Name: DynamicLink
-                  Id: g=a1fa959b097b698d8fa2b9ee1af07172
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../DisplayVar"
+                - Name: FormattatoreStringa1
+                  Id: g=0ce037b128f603ccbf319b7daa123ee1
+                  Type: StringFormatter
                   Children:
+                  - Name: Format
+                    Id: g=ea34a3ec50e6ed5607b1aa75281a3faf
+                    Type: BaseDataVariableType
+                    DataType: LocalizedText
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: {"LocaleId":"","Text":"{0:n1}"}
+                  - Name: ns=9;Source0
+                    Id: g=649ecbd5dc23d242605b78349b9cb8b1
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=67fd3751f972585b6e48cd2792c3a3ae
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../DisplayVar"
+                      Children:
+                      - Name: Mode
+                        Id: g=864c745f78dc79108c6fe81003337b26
+                        Type: BaseVariableType
+                        DataType: DynamicLinkMode
+                        ModellingRule: Optional
+                        Value: 2
                   - Name: Mode
-                    Id: g=baa850575977520ab475fe22df8e4eb4
-                    Type: BaseVariableType
+                    Id: g=52cbd7f1e786d29680b0fdc5b0d4d384
+                    Type: PropertyType
                     DataType: DynamicLinkMode
+                    ReferenceType: HasComponent
                     ModellingRule: Optional
                     Value: 2
               - Name: ReadOnly
