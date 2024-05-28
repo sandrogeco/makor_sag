@@ -27,8 +27,12 @@ public class GestMainWindows : BaseNetLogic
 
         if (isNativeUI.Value)
         {
+            //Gest indutria 4.0
             bLoadNewJobID = Project.Current.GetVariable("Model/Industry_40/i_NewJob/bLoadNewJobID");
             bLoadNewJobID.VariableChange += CaricaNuovaCommessa_VariableChange;
+
+            //Avvio Gestione Statistiche
+            Project.Current.Get<NetLogicObject>("UI/Panels/GestStatistiche/GestStatisticheLogic").ExecuteMethod("AvviaSessione");            
         }
     }
 

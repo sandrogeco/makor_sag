@@ -6,7 +6,7 @@ Children:
 - Name: GestStatisticheLogic
   Id: g=75612f1643e6fb964c94313bada90c5f
   Type: NetLogic
-  Description: {"LocaleId":"it-IT","Text":"Revisione R6"}
+  Description: {"LocaleId":"it-IT","Text":"Revisione R1_0"}
   Children:
   - Name: ImpostazOem
     Id: g=27d8b7c6cb2ccce5229ea880d69b425c
@@ -53,7 +53,7 @@ Children:
     Id: g=0e56fb4e1766e6ec0721a2e7a153397f
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
+    Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
     Children:
     - Name: Kind
       Id: g=133db2c3521699da263381398a999cd4
@@ -65,7 +65,7 @@ Children:
     Type: NodePointer
     DataType: NodeId
     Description: {"NamespaceIndex":46,"TextId":"Indicare il nodeid di modello dove si trovano i contatori da salvare nel database"}
-    Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Macchina/CntProduzPlc"
+    Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Macchina/CntProduzPlc_R1"
     Children:
     - Name: Kind
       Id: g=a2622576a666a2f844d32d4a96e2bec6
@@ -109,11 +109,17 @@ Children:
   - Class: Method
     Name: TerminaSessione
     Id: g=746042f19dec46d3094cfd78e3f9e390
+  - Class: Method
+    Name: AvviaSessione
+    Id: g=be8790e90496916c427e676d924e3936
 - Name: FrameDatiProduz
   Id: g=b48d2ba70a2c51343ccb1d97976bf76c
   Supertype: PagMainPanel_R0_0
   ReferenceType: HasComponent
   Children:
+  - Name: FrameDatiProduzLogic
+    Id: g=97b789f5f12983e4562e529531aa3ace
+    Type: NetLogic
   - Name: Header
     Id: g=45951e6b9f5b733663128b30e7b2fd20
     Type: Rectangle
@@ -122,6 +128,104 @@ Children:
       Id: g=2d4b871c0fd7d1b8dae677455006bd43
       Type: RowLayout
       Children:
+      - Name: HomeBtn
+        Id: g=968e976c1dd48a7499e491aa59f6b198
+        Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: Enabled
+          Id: g=f1ed7e86d12dcb5a3d7a259b6f28e01e
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: EventoMouseClickHandler1
+          Id: g=5876a585a23059e36092c53bf866dd55
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=2e16e91c13ce8bda662c591c3d109f82
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=b49a0d4a79cda5ba8cf2b263f8b3b4b0
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=21e965606610ca997ec2b43439417377
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=3c2ad1e2f59da4737cad4dbf016c91bb
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"IdType":0,"Id":0,"Namespace":-1}
+                Children:
+                - Name: Kind
+                  Id: g=9a7d356739f0a0fcc73ad4b8ca2be38a
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Id: g=b8e8f97a5fbc2a5116b0bdda5464a7d1
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{MainPanelLoader}/BackProvider@NodeId"
+                  Children:
+                  - Name: Mode
+                    Id: g=ee7184f42844f5fd8ca753cca729092d
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=9;Method
+                Id: g=dfc55f12f7fd3d69a9468a6d1e6f8705
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Back"
+          - Name: EventArguments
+            Id: g=ea86a2c58be46b5719e49ac019aeb550
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=9d18058f2cf47bed204b5279443a7250
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Id: g=dd8c0d5331da44e81cc858691b09273d
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Id: g=cbcd88045045b1ce11c2f02ee430aea1
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Id: g=d1b28d59b49fdf6d15a11088003e5d38
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Id: g=cb53f3c67c654d28061e6dd2c5048eb6
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Id: g=7654717d8fb53f0b870d4200514b7f35
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Id: g=42ac3dd5ed34e42c0c8200f39b99ad92
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Id: g=3225f9fe2ddc9789866d5764dcdc7dde
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
       - Name: ProduzMensileBtn
         Id: g=fee69a15bd792edee0cd5cb3b28e7391
         Type: PulsRettConSimb_R0_0
@@ -148,7 +252,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 7.0
+          Value: 0.0
         - Name: BottomMargin
           Id: g=7b8b4253884fef97c1b45e8ef7231b07
           Type: BaseVariableType
@@ -295,12 +399,6 @@ Children:
           Value: 2
         - Name: LeftMargin
           Id: g=46712e25499a0039a12299e7d094b393
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 7.0
-        - Name: BottomMargin
-          Id: g=eaa842c5756e82ab335a4a0c985a0be0
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
@@ -454,12 +552,6 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 7.0
-        - Name: BottomMargin
-          Id: g=1d299f80dcb513ec57d765841e5ef5fc
-          Type: BaseVariableType
-          DataType: Size
-          ModellingRule: Optional
           Value: 0.0
         - Name: ImagePosition
           Id: g=125169255e203716de1220aa1ff300a2
@@ -595,104 +687,6 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-      - Name: HomeBtn
-        Id: g=968e976c1dd48a7499e491aa59f6b198
-        Type: PulsRettConSimb_R0_0
-        Children:
-        - Name: Enabled
-          Id: g=f1ed7e86d12dcb5a3d7a259b6f28e01e
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-        - Name: EventoMouseClickHandler1
-          Id: g=5876a585a23059e36092c53bf866dd55
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Id: g=2e16e91c13ce8bda662c591c3d109f82
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Id: g=b49a0d4a79cda5ba8cf2b263f8b3b4b0
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Id: g=21e965606610ca997ec2b43439417377
-              Type: BaseObjectType
-              Children:
-              - Name: ns=9;ObjectPointer
-                Id: g=3c2ad1e2f59da4737cad4dbf016c91bb
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
-                Children:
-                - Name: Kind
-                  Id: g=9a7d356739f0a0fcc73ad4b8ca2be38a
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Id: g=b8e8f97a5fbc2a5116b0bdda5464a7d1
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{MainPanelLoader}/BackProvider@NodeId"
-                  Children:
-                  - Name: Mode
-                    Id: g=ee7184f42844f5fd8ca753cca729092d
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ns=9;Method
-                Id: g=dfc55f12f7fd3d69a9468a6d1e6f8705
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "Back"
-          - Name: EventArguments
-            Id: g=ea86a2c58be46b5719e49ac019aeb550
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Id: g=9d18058f2cf47bed204b5279443a7250
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Id: g=dd8c0d5331da44e81cc858691b09273d
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Id: g=cbcd88045045b1ce11c2f02ee430aea1
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Id: g=d1b28d59b49fdf6d15a11088003e5d38
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Id: g=cb53f3c67c654d28061e6dd2c5048eb6
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Id: g=7654717d8fb53f0b870d4200514b7f35
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Id: g=42ac3dd5ed34e42c0c8200f39b99ad92
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Id: g=3225f9fe2ddc9789866d5764dcdc7dde
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
       - Name: Titolo
         Id: g=1eb771d3a6c25b4d157c1110d24aca91
         Type: Rectangle
@@ -720,9 +714,6 @@ Children:
       - Name: FwBtn
         Id: g=0ad3609ef3d928bc6202ac1c810a5abb
         Type: PulsRettConSimb_R0_0
-  - Name: FrameDatiProduzLogic
-    Id: g=cf1deaac3c952f59b659f5e34cf2183a
-    Type: NetLogic
   - Name: FilterObject
     Id: g=2482d74188707f958c87e6e6fd628161
     Type: BaseObjectType
@@ -731,7 +722,7 @@ Children:
       Id: g=b617c24ff058a356a70d1be871fefaee
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":2,"Id":"335dec15b0d6d5ad5466575b3f75fd99","Namespace":46}
+      Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
       Children:
       - Name: Kind
         Id: g=e64449329aea04cb0cbc243ef49a6afd
@@ -1107,67 +1098,122 @@ Children:
             DataType: LocalizedText
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
+            - Name: DynamicLink
+              Id: g=13d44b287d26e877e4eb5955683e805c
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Item}/LoginDate"
+      - Name: ColonnaDiGrigliaDati7
+        Id: g=3d0879b5aa6eeee8e4309785a1148791
+        Type: DataGridColumn
+        Children:
+        - Name: Title
+          Id: g=ec2f75088b15ab0da18788037fcfcfbe
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"it-IT","Text":"Durata ciclo On"}
+        - Name: Width
+          Id: g=e0e4c95729c200348a5f7d7f25580609
+          Type: BaseDataVariableType
+          DataType: Size
+          Value: 200.0
+        - Name: HeaderAlignment
+          Id: g=b056e9e0a5636c9a1c1eb718faccbb52
+          Type: BaseDataVariableType
+          DataType: TextHorizontalAlignment
+          Value: 1
+        - Name: ContentAlignment
+          Id: g=c7dc6bd8b92eb753edec404f412fd61b
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          Value: 2
+        - Name: OrderBy
+          Id: g=3df1822ce5b0a99e985994021ba66e7f
+          Type: BaseDataVariableType
+          DataType: NodePath
+          Value: ""
+        - Name: DataItemTemplate
+          Id: g=7945119cd1d885ed79bee598ca5375dd
+          Type: DataGridLabelItemTemplate
+          Children:
+          - Name: Text
+            Id: g=d295a4b974bf64ad5d23378e8adddb70
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
             - Name: FormattatoreDiStringhe1
-              Id: g=28e6f0a046ade7332718f7105edd427c
+              Id: g=bbee4cd8a59510fe5a0ca52147efb0d8
               Type: StringFormatter
               Children:
               - Name: Format
-                Id: g=211db341066905eb88e8fa6a47266a16
+                Id: g=7124a67f548cfe31fb3366673f2aa22a
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0}/{1}/{2}"}
+                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
               - Name: ns=9;Source0
-                Id: g=226f86ec7cd45b07c097e80f7740189a
+                Id: g=bb874607967052d4c524f249c991f95e
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
-                - Name: DynamicLink
-                  Id: g=b9f3c2268a32a3a53e156b72e6924e99
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Item}/Giorno"
-              - Name: ns=9;Source1
-                Id: g=a957f72c073c02b16616dea3f42c969a
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Id: g=d7ab48e486f7418ba2c4a9943912715f
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Item}/Mese"
-              - Name: ns=9;Source2
-                Id: g=67fb6f78afc39c082e6afafaefd77c3d
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: FormattatoreDiStringhe1
-                  Id: g=2631a3c7c4a44579e3338c282af95833
-                  Type: StringFormatter
+                - Name: ValutatoreDiEspressioni1
+                  Id: g=d3d2f97b6f206f03925a3709ff5fad4e
+                  Type: ExpressionEvaluator
                   Children:
-                  - Name: Format
-                    Id: g=bd9ef9496d1303e012bcc5148913ec7e
+                  - Name: Expression
+                    Id: g=70bc68686930d771a2050249b1481921
                     Type: BaseDataVariableType
-                    DataType: LocalizedText
+                    DataType: String
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: {"LocaleId":"it-IT","Text":"{0:d}"}
+                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
                   - Name: ns=9;Source0
-                    Id: g=2c3453bf64ea55c7ed3e77a0cbd15c63
+                    Id: g=3eaaf197a0e0427b580468ca23de2d52
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=8271b8c6c45a2e6239ca305934b60816
+                      Id: g=876d7c18ee3e9d9c2743fae816917c52
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "{Item}/Anno"
+                      Value: "{Item}/CntMinutiCicloOn"
+                  - Name: ns=9;Source1
+                    Id: g=3740088493b6278f5df731671d741a1c
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=f52082ee209e9653080b9bf18572abcd
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Item}/CntOreCicloOn"
+                  - Name: ns=9;Source2
+                    Id: g=a8563a5e759982ca01d6390a204463e2
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=12f96c87f11d560719a19dcc10517f6c
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Item}/CntMinutiAccensQuadro"
+                  - Name: ns=9;Source3
+                    Id: g=bcd2301ab23cd0f25a1caac6475a56bb
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=4d37942edf2e42dede27da63571567e7
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Item}/CntOreAccensQuadro"
       - Name: ColonnaDiGrigliaDati4
         Id: g=80801e0b0dd5c3f7e198b1f56b55af9e
         Type: DataGridColumn
@@ -1211,7 +1257,7 @@ Children:
               Id: g=9d1309883584ca00b55755a2112e0fad
               Type: DynamicLink
               DataType: NodePath
-              Value: "{Item}/NPezzi_Prodotti"
+              Value: "{Item}/CntMetriQLav"
       - Name: ColonnaDiGrigliaDati5
         Id: g=6fc78e7493d74044e6fe19b489ea59e1
         Type: DataGridColumn
@@ -1328,450 +1374,6 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{Item}/CntMinutiAccensQuadro"
-      - Name: ColonnaDiGrigliaDati7
-        Id: g=3d0879b5aa6eeee8e4309785a1148791
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=ec2f75088b15ab0da18788037fcfcfbe
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentCicloOn"}
-        - Name: Width
-          Id: g=e0e4c95729c200348a5f7d7f25580609
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 110.0
-        - Name: HeaderAlignment
-          Id: g=b056e9e0a5636c9a1c1eb718faccbb52
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=c7dc6bd8b92eb753edec404f412fd61b
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=3df1822ce5b0a99e985994021ba66e7f
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=7945119cd1d885ed79bee598ca5375dd
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=d295a4b974bf64ad5d23378e8adddb70
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=bbee4cd8a59510fe5a0ca52147efb0d8
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=7124a67f548cfe31fb3366673f2aa22a
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
-              - Name: ns=9;Source0
-                Id: g=bb874607967052d4c524f249c991f95e
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ValutatoreDiEspressioni1
-                  Id: g=d3d2f97b6f206f03925a3709ff5fad4e
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Id: g=70bc68686930d771a2050249b1481921
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
-                  - Name: ns=9;Source0
-                    Id: g=3eaaf197a0e0427b580468ca23de2d52
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=876d7c18ee3e9d9c2743fae816917c52
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiCicloOn"
-                  - Name: ns=9;Source1
-                    Id: g=3740088493b6278f5df731671d741a1c
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=f52082ee209e9653080b9bf18572abcd
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreCicloOn"
-                  - Name: ns=9;Source2
-                    Id: g=a8563a5e759982ca01d6390a204463e2
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=12f96c87f11d560719a19dcc10517f6c
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAccensQuadro"
-                  - Name: ns=9;Source3
-                    Id: g=bcd2301ab23cd0f25a1caac6475a56bb
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=4d37942edf2e42dede27da63571567e7
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAccensQuadro"
-      - Name: ColonnaDiGrigliaDati8
-        Id: g=03d57b145c647f1d7e81a2887bdcbf57
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=ac4d1c31af1b20ae3437fddd2669cdf5
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentAllarmeOn"}
-        - Name: Width
-          Id: g=3cee6cb601a8aa32e8eee3851a39ac3d
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 110.0
-        - Name: HeaderAlignment
-          Id: g=f70bac90a323f853c891d748c9984b67
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=62d5f08a8cedaf8ed3d32b97d6b76c1a
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=6166c612fd72c06fe75abf019ec4dc05
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=466ae2022c5e095f38122f57db7c6cc6
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=9b456679c045e7c5ad0d422341ed49e7
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=25217026b050cb5cb35158de504f3a1d
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=fb711736eb3809ed7294e4df4fc08b76
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
-              - Name: ns=9;Source0
-                Id: g=9444b92610a409094a54250333c8dba7
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ValutatoreDiEspressioni1
-                  Id: g=5ff66f5d428a1d3cc8204871f36edf95
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Id: g=f4375241a61c8f05db58161a9d9113a9
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
-                  - Name: ns=9;Source0
-                    Id: g=b32bdd2a9b0c289f2458b9970cf7859f
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=f5e704bd7aec5a41a950359c4fec00e8
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAllarmeOn"
-                  - Name: ns=9;Source1
-                    Id: g=54c0eeab072e1f715173ba851cb01e6c
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=2c7c83f843f26f7de81a0490fa1e9f3f
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAllarmeOn"
-                  - Name: ns=9;Source2
-                    Id: g=7695a7c3c6eab97c588950c7682bcdd0
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=67c3b0efb442ec187cb84b73eb0136ab
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAccensQuadro"
-                  - Name: ns=9;Source3
-                    Id: g=45758cd3acc2a034475abf7b50c470d9
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=23a7ee0bd56afdb3cd5709831d7deacd
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAccensQuadro"
-      - Name: ColonnaDiGrigliaDati9
-        Id: g=f10c9839600e191233f600869972426d
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=9d62f6191cb645e4e5cf7971218aafe8
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentStopOn"}
-        - Name: Width
-          Id: g=210aea1bc940a34548021a2407485eac
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 110.0
-        - Name: HeaderAlignment
-          Id: g=991231f13177666b886b54a17a48f1c3
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=99d8def6343f6f2aba49bcf90a807894
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=e28f4e96beba6d155b13758831a94797
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=5a004bdf92347806a890c63371c0fff4
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=ab01db1234bdb98eb55bc3d200e9302f
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=56d8a7f753682f13792e470dce9a19ac
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=d7d4172599c526e7355b9483fd47177f
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
-              - Name: ns=9;Source0
-                Id: g=81248a6e857c75a7fcf6d78f4acc62c1
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ValutatoreDiEspressioni1
-                  Id: g=78699e5cf38933705aed3510b4aca883
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Id: g=9e762a638115d8bf20f6130434a22b30
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
-                  - Name: ns=9;Source0
-                    Id: g=d79ca58fdaa6a888ef8961e02787534a
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=9a1133f0f15e81f75608f9f57160dafb
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiStopOn"
-                  - Name: ns=9;Source1
-                    Id: g=4ee475c27bfbcbf3f2fab8f840d4e9a2
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=9a304678e1bf70a9fff0182b0cde0dd5
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreStopOn"
-                  - Name: ns=9;Source2
-                    Id: g=697d5c61454c57b76c4d984f87c4bd9b
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=cff93f9bcbb628b27a4231e8cfab3287
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAccensQuadro"
-                  - Name: ns=9;Source3
-                    Id: g=fc2a14c40620c03039f03ce12ac8810c
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=8f28fe4c93d049dad03e77cb67f2673b
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAccensQuadro"
-      - Name: ColonnaDiGrigliaDati11
-        Id: g=873fb3f4b6c9418f5b1e839471fbf6c7
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=59ca07d7be495df36f221ce4c089d012
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentPausaOn"}
-        - Name: Width
-          Id: g=3454a347929311303d0a2b2d9eefe5e9
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 110.0
-        - Name: HeaderAlignment
-          Id: g=834eb2e2a75649e1858b4a8eb8e6155a
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=5ba403bebd54c23d5a647ec556b41ad5
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=bcf46710fcb281d8e923ac394a176ebb
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=a677c3586cee4ed32b7b46ab8c28c8e6
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=17adad28a3b66b48daf7b0162c075db4
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=a9193443730d39b831c30a6837d39935
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=2d65b2c8d32a93104cad00363e9812bc
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
-              - Name: ns=9;Source0
-                Id: g=0c7b9915d5ca4b9439546d99680e88a0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ValutatoreDiEspressioni1
-                  Id: g=a7d4a2b0a071a836afde5348db4df4e2
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Id: g=394c60acd4e859e68eb3a911f49dc260
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
-                  - Name: ns=9;Source0
-                    Id: g=4e9c562f7fcb85dd01d0a71a4ab7a9a8
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=2163806d7cd565c1bf750bdeb09cdff3
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiPausaOn"
-                  - Name: ns=9;Source1
-                    Id: g=bee8a298a6fd48fa7750115e8fc9722d
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=acb5e332b9952675f8b8c24ed58ef0e9
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOrePausaOn"
-                  - Name: ns=9;Source2
-                    Id: g=5d51d78feb9a42fbf97ba8ebb0a207f8
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=f60439693bd42c4b58ea5d460fb09c61
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAccensQuadro"
-                  - Name: ns=9;Source3
-                    Id: g=0abcb518f170f3c11152249a599032c0
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=fed11aa354b0bc40b621aabf3753efee
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAccensQuadro"
     - Name: SelectedItem
       Id: g=fedd4f5d729fb3534dc201f390db3200
       Type: NodePointer
@@ -1850,7 +1452,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 5.0
+      Value: 6.0
   - Name: GrpBox_Filtro
     Id: g=8727b8457a637ff4dd58b1e6c7de7c25
     Type: GroupBox_R0_0
@@ -4409,6 +4011,206 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+  - Name: TextBox1
+    Id: g=29d48f31b8abecb8db6c7ee6fc8d9b6a
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=77aca0a6db8cff1b7cfc6c4c8c7b0bc5
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=f7ea5b97ee88c22d14bbc2ef7e54da90
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../SqlQuery/Select"
+        Children:
+        - Name: Mode
+          Id: g=5d2d671782b0ff4eef2c61ea08eacfd6
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=023193fa7fb3d476b90d904d3e469c9e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1150.0
+    - Name: LeftMargin
+      Id: g=c351ee3d8270adcc2d9fa79f6016e78e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=c629232864a636da665e0b882b334b24
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 571.0
+  - Name: TextBox2
+    Id: g=bd4069b5cb327bb152dd714f53079077
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=5acc60abb39b7fcb80bf16fbffa0df4b
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=19ba86048bd375f4c8c713fb28ea7779
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../SqlQuery/Where1"
+        Children:
+        - Name: Mode
+          Id: g=9dcc9fa0c1dea81882e6104758abf860
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=9104628df24fc4785ea5357c5e355941
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1150.0
+    - Name: LeftMargin
+      Id: g=d5b18c848cb0eba05183e8e9ec7917fd
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=23b1609fd944c37f6ca0f871c2e64423
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 630.0
+  - Name: TextBox3
+    Id: g=1cbfed4674703cb44151003dcc81c644
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=ed4152b66a634efcdda89ceb7d823c28
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=65be109e31cb130cb30d31094ae4d076
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../SqlQuery/Where2"
+        Children:
+        - Name: Mode
+          Id: g=48f770fc76058844f35487203d5a8e89
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=ea8485e5699974dfc77af9354337bdd7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1150.0
+    - Name: LeftMargin
+      Id: g=bceef18f96ac4b82623d8b9e839ff964
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=121eb01aa3c3b98051c664df05883fea
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 690.0
+  - Name: TextBox4
+    Id: g=4c42d780c9bf4154450cbe500eb8677a
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=62bd207acade27c5de932699d22f4f4f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=329999769f6809c58e8d9298a138faef
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../SqlQuery/Group"
+        Children:
+        - Name: Mode
+          Id: g=8c871b8d3f198ff6db5ac62e93ac5e7f
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=f860c6129b7fa61737441da7d7718117
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1150.0
+    - Name: LeftMargin
+      Id: g=734cbdbca441d546e9c09173d430ce1e
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=46961a3914c140f1dc14fc4881bbc8fc
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 750.0
+  - Name: TextBox5
+    Id: g=ff05643ef11d65597cc1ccf0a07541b5
+    Type: TextBox
+    Children:
+    - Name: Text
+      Id: g=b4596433f9e02732f349e9d326a1e68f
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      Children:
+      - Name: DynamicLink
+        Id: g=57163554242e3e38bc23867f92468ef3
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../SqlQuery/Order"
+        Children:
+        - Name: Mode
+          Id: g=6a746388d6f6e4cbdd8a239926995fca
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Width
+      Id: g=275fce4c96fb421d8209986d94cf2998
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1150.0
+    - Name: LeftMargin
+      Id: g=aee747b442db37a53d242a99dd28c718
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=cc3f8cd53ecdf84e52a3671c453c9216
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 801.0
 - Name: ProduzUtente
   Id: g=bf28bddbe73a1c8b1af5c4e095e81b43
   Supertype: SubMainPanel_R0_0
@@ -4922,55 +4724,39 @@ Children:
             DataType: LocalizedText
             Value: {"LocaleId":"it-IT","Text":"{Item}/NPezzi_Prodotti"}
             Children:
-            - Name: DynamicLink
-              Id: g=f6f5f71255fdfb911a1aef7c0bb96798
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{Item}/NPezzi_Prodotti"
-      - Name: ColonnaDiGrigliaDati5
-        Id: g=4f395692b179d1183023ebc7c96dc728
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=7770e6058aa401d0a37ffeae2f846b11
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"Metri lavorati"}
-        - Name: Width
-          Id: g=4d2a98994d68ebb297eb638115aed336
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 180.0
-        - Name: HeaderAlignment
-          Id: g=1acbfe7ee3aadcd4b40011a1cc02e365
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=740cd66a53f083d55ddc66509b42bb1f
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=eda64bf45357f8b41808fe287d763fe1
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=082299ac5e8e4f737f97ad7c4e1f0fd1
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=e1a7a0ce716749b85f7d45e4c1e45502
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: DynamicLink
-              Id: g=2fbabc3a56f036b54f549e3b6f433cc8
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{Item}/NMetri_Prodotti"
+            - Name: ExpressionEvaluator1
+              Id: g=88f8b385f8ab2d804ccc3d14fd63bb7d
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Expression
+                Id: g=bda89896809d56cf2ccfc3d62867d10c
+                Type: BaseDataVariableType
+                DataType: String
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: "{0} - {1}"
+              - Name: ns=9;Source0
+                Id: g=87705d86d7a77fd43ac2cedeadf38e44
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=f6f5f71255fdfb911a1aef7c0bb96798
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/CntPezziLav_Stop"
+              - Name: ns=9;Source1
+                Id: g=ae863adb87b7be5a2144ebb2168c022c
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=33862311758619d31c2151046d29b595
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/CntPezziLav_Start"
       - Name: ColonnaDiGrigliaDati6
         Id: g=519b91ac2a4266865830f9cac751cea6
         Type: DataGridColumn
@@ -5010,39 +4796,56 @@ Children:
             DataType: LocalizedText
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=4d3a8427b65155b29869321228ba3fc5
+            - Name: StringFormatter1
+              Id: g=4ff383d5044281376fb79b2468317f5c
               Type: StringFormatter
               Children:
               - Name: Format
-                Id: g=a67159ab9f9ab03aa68e0128fb380cb4
+                Id: g=be40e000d7e264c3bc06351a79479f8b
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: {"LocaleId":"it-IT","Text":"{0}h : {1}min"}
               - Name: ns=9;Source0
-                Id: g=63f058558e16c68ac76df1fce308be01
+                Id: g=57c6bc7c78177003a64a57bbaf2807bb
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
-                - Name: DynamicLink
-                  Id: g=0a6cbac9a62f13d9e2ff3a5ac2b1dd1d
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Item}/CntOreAccensQuadro"
+                - Name: ExpressionEvaluator1
+                  Id: g=48dd7fe81f545f0b4423d29d0e08e0b0
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Expression
+                    Id: g=c188af5b04ff8059905f8839f2b41de7
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ReferenceType: HasParameter
+                    ModellingRule: Optional
+                    Value: "{0} "
+                  - Name: ns=9;Source0
+                    Id: g=47de156dcd461c1a13d7a7bdf640690b
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=bcf9439f8de85d9d1b820940de2bffc6
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: ""
               - Name: ns=9;Source1
-                Id: g=2b064ec33953fe2ad22b216ca7d97376
+                Id: g=a0e9849a8a63df344056f47eed3a7997
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=659b07dee5fac81a2c67f420776a874b
+                  Id: g=17b967d27239d4a0a5aa6ca7473c96d5
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "{Item}/CntMinutiAccensQuadro"
+                  Value: ""
       - Name: ColonnaDiGrigliaDati7
         Id: g=5616b7cfe5097ccfa14285b21f44976f
         Type: DataGridColumn
@@ -5051,7 +4854,7 @@ Children:
           Id: g=399504b9fa3ef6208101a22bec572c5b
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentCicloOn"}
+          Value: {"LocaleId":"it-IT","Text":"Durata ciclo ON"}
         - Name: Width
           Id: g=02150dc1f1fb20d3c72c55ae20d91817
           Type: BaseDataVariableType
@@ -5373,117 +5176,6 @@ Children:
                     Children:
                     - Name: DynamicLink
                       Id: g=f31e480ffd078f2d7c5715526a0211e2
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOreAccensQuadro"
-      - Name: ColonnaDiGrigliaDati11
-        Id: g=96f2d4421cf05e06b4de8f95438dae0d
-        Type: DataGridColumn
-        Children:
-        - Name: Title
-          Id: g=d6a3a5747b62d5b8dc91158378a08b06
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":46,"TextId":"PercentPausaOn"}
-        - Name: Width
-          Id: g=b4f3bc242abe051eae1263f312e7fb3d
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 110.0
-        - Name: HeaderAlignment
-          Id: g=b07b75539867f7e6ea401a157117f021
-          Type: BaseDataVariableType
-          DataType: TextHorizontalAlignment
-          Value: 1
-        - Name: ContentAlignment
-          Id: g=0421aca1af4e970910ccbff57d67eedd
-          Type: BaseVariableType
-          DataType: HorizontalAlignment
-          Value: 2
-        - Name: OrderBy
-          Id: g=95d10f502a7ffe50d0672558730f828f
-          Type: BaseDataVariableType
-          DataType: NodePath
-          Value: ""
-        - Name: DataItemTemplate
-          Id: g=6948add4add5b20bcb73315cdfa87c2d
-          Type: DataGridLabelItemTemplate
-          Children:
-          - Name: Text
-            Id: g=bede19c48730858e28a241b66e21a51e
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            Children:
-            - Name: FormattatoreDiStringhe1
-              Id: g=c8398a1724a9dea380de075d7310ad22
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=5cd42499bb763e3fcce3b567358f3c48
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"it-IT","Text":"{0:f1}%"}
-              - Name: ns=9;Source0
-                Id: g=39db9222839001308dcacdf1e007a97b
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ValutatoreDiEspressioni1
-                  Id: g=0b110d1643893ae3da2c4aae0728f9bb
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Id: g=ffda94b5dffa02a9695201edf6d7b921
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "({0}+{1}*60)/({2}+{3}*60)*100"
-                  - Name: ns=9;Source0
-                    Id: g=804f15e918f0a68fb4d014e01151a2a6
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=053f6a4bb9bbac19c4b6e84f2eafc677
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiPausaOn"
-                  - Name: ns=9;Source1
-                    Id: g=25de51031b9474fe1f1d8bfaea7a10b6
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=eda7bc02608a535dea06fcbf437cc330
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntOrePausaOn"
-                  - Name: ns=9;Source2
-                    Id: g=53c0fc60e6441cb78fd4c44142dd0c0c
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=1e177d0bc63c591918bfa427292ff021
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/CntMinutiAccensQuadro"
-                  - Name: ns=9;Source3
-                    Id: g=fce6699735400b78be2f0b1b52dc884a
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=759bd2e9d4c30c322d807f27806e3d56
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "{Item}/CntOreAccensQuadro"

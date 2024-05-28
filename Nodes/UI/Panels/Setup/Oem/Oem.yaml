@@ -6307,6 +6307,19 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             Value: false
+            Children:
+            - Name: DynamicLink
+              Id: g=50f4bad687c9a27be6986ec5e493bbac
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaGestione"
+              Children:
+              - Name: Mode
+                Id: g=e99c528bd7ea1b232bae1ab7aee2d49b
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
           - Name: Appearance
             Id: g=a13a2f9afd0cd197b98c057faf72e283
             Type: BaseVariableType
@@ -6400,6 +6413,19 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             Value: false
+            Children:
+            - Name: DynamicLink
+              Id: g=caaebce0989a77e1137c7f72a4b9a20e
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaCreazReport"
+              Children:
+              - Name: Mode
+                Id: g=3c2ca7a8771b545acdcb07fd2831d13d
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
           - Name: Appearance
             Id: g=19ff5ddcac5c85b98e88e413810d8968
             Type: BaseVariableType
@@ -6493,6 +6519,19 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             Value: false
+            Children:
+            - Name: DynamicLink
+              Id: g=1014c9b298e5e8b7e8c452ef9fb6f663
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaInvioMail"
+              Children:
+              - Name: Mode
+                Id: g=2f6c7d9556bca264eedfbde13a75800e
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
           - Name: Appearance
             Id: g=6254aff81d835fa05890094d24729a2e
             Type: BaseVariableType

@@ -1,10 +1,10 @@
 #region Using directives
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
+using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using System.Linq;
 using UAManagedCore;
-using FTOptix.Recipe;
 #endregion
 
 public class DesignTimeCreaTabelleCntProduz : BaseNetLogic
@@ -14,14 +14,24 @@ public class DesignTimeCreaTabelleCntProduz : BaseNetLogic
     {
         NodeId NodeCntProduzPlc = LogicObject.GetVariable("CntProduzPlc").Value;
         var CntProduzPlc = LogicObject.Context.GetNode(NodeCntProduzPlc);
+        System.Collections.Generic.IEnumerable<(Table Tbl, StoreColumn MyCol)> enumerable()
+        {
+            foreach (var Tbl in ((SQLiteStoreType)Owner).Tables)
+            {
+                if (Tbl.BrowseName == "CntProduzione")
+                    foreach (var Cnt in CntProduzPlc.GetNodesByType<IUAVariable>())
+                    {
+                        if (Tbl.Columns.Get(Cnt.BrowseName) is null)
+                        {
+                            var MyCol = InformationModel.MakeVariable<StoreColumn>(Cnt.BrowseName, ((UAVariable)Cnt).DataType);
+                            yield return (Tbl, MyCol);
+                        }
+                    }
+            }
+        }
 
         //Eseguo un ciclo for sulle tabelle del database ed estraggo la tabella dei contatori.
-        foreach (var (Tbl, MyCol) in from Tbl in ((Store)Owner).Tables
-                                     where Tbl.BrowseName == "CntProduzione"
-                                     from Cnt in CntProduzPlc.GetNodesByType<IUAVariable>()
-                                     where Tbl.Columns.Get(Cnt.BrowseName) is null
-                                     let MyCol = InformationModel.MakeVariable<StoreColumn>(Cnt.BrowseName, ((UAVariable)Cnt).DataType)
-                                     select (Tbl, MyCol))
+        foreach (var (Tbl, MyCol) in enumerable())
         {
             Tbl.Columns.Add(MyCol);
         }

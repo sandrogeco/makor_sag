@@ -4616,12 +4616,6 @@ Children:
             DataType: NodePath
             Value: "../VarAnalog"
             Children:
-            - Name: Mode
-              Id: g=8e3e0edd656e3f6e3fb71e418b8b66ae
-              Type: BaseVariableType
-              DataType: DynamicLinkMode
-              ModellingRule: Optional
-              Value: 2
             - Name: EUMode
               Id: g=17946730dd1eeb6a2ea37689f0410277
               Type: BaseVariableType
@@ -11944,12 +11938,6 @@ Children:
             DataType: NodePath
             Value: "../VarAnalog"
             Children:
-            - Name: Mode
-              Id: g=384f6e7b166ac037018e4c4264b08cc5
-              Type: BaseVariableType
-              DataType: DynamicLinkMode
-              ModellingRule: Optional
-              Value: 2
             - Name: EUMode
               Id: g=5214726c61979b4de5e46c9e0b4e9a06
               Type: BaseVariableType

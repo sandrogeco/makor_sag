@@ -1,4 +1,5 @@
 #region Using directives
+using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
@@ -14,35 +15,403 @@ using UAManagedCore;
 
 public class GestStatisticheLogic : BaseNetLogic
 {
+    private IUAVariable AbiltaGestione, DataUltimoSalvataggio, UtenteAttuale;
+    private DelayedTask ActionCreaReport;
+    private PeriodicTask ActionCheckCambioGiornoAndAgiornaDati;
+    private IUAObject Impostazioni;
+    private IUANode CntProduzPlc;
+    private Store myStore;
+    private bool CreaCsvReport, AvvioApp;
+    private DateTime GiornoRicerca;
+    
+
+    [ExportMethod]
+    public void AvviaSessione()
+    {
+        Impostazioni = LogicObject.GetObject("ImpostazOem");
+        AbiltaGestione = Impostazioni.GetVariable("AbilitaGestione");
+
+        if (AbiltaGestione.Value)
+        {
+            CntProduzPlc = LogicObject.Context.GetNode(LogicObject.GetVariable("CntProduzPlc").Value);  // tiro su il nodo dove si trovano le variabili PLC
+
+            myStore = (Store)LogicObject.Context.GetNode(LogicObject.GetVariable("DataStore").Value);  // Tiro su il nodeId dello store
+            
+            DataUltimoSalvataggio = Impostazioni.GetVariable("DataUltimoSalvataggio");
+
+            UtenteAttuale = LogicObject.GetVariable("UtenteAttuale");
+            UtenteAttuale.VariableChange += UtenteAttuale_VariableChange;       //Sottoscrivo il cambiamento dell'utente
+
+            //ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 60000, LogicObject);      //for production
+            ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 5000, LogicObject);         //for debug
+            ActionCheckCambioGiornoAndAgiornaDati.Start();          //Sottoscrivo il task a tempo e lo avvio per l'aggiornamento dei dati sul DB e controllo se deve essere fatto il report
+
+            AvvioApp = true;          //Creo una Riga per l'utente all'avvio
+        }
+    }
+
+    [ExportMethod]
+    public void TerminaSessione()
+    {
+        if (AbiltaGestione.Value)
+        {
+            LogoutUtente(UtenteAttuale.Value, DateTime.Now);
+            DisabilitaGestione();
+        }        
+    }
+
+    private void DisabilitaGestione()
+    {
+        UtenteAttuale.VariableChange -= UtenteAttuale_VariableChange;
+        ActionCheckCambioGiornoAndAgiornaDati?.Dispose();
+        ActionCheckCambioGiornoAndAgiornaDati = null;
+    }    
+    
+    private void UtenteAttuale_VariableChange(object sender, VariableChangeEventArgs e)
+    {
+        if (!string.IsNullOrWhiteSpace(e.OldValue))
+            LogoutUtente(e.OldValue, DateTime.Now);
+
+        if (!string.IsNullOrWhiteSpace(e.NewValue))
+            LoginUtente();
+    }
+
+    private void CheckCambioGiornoAndAgiornaDati()
+    {
+        //Verifico la connessione con PLC
+        //if (Project.Current.Get<CommunicationStation>("CommDrivers/CODESYSDriver1/PLC_Next").OperationCode != CommunicationOperationCode.Connected)
+        //    return;
+
+        //Controllo se è cambiato il giorno         
+        if ((DateTime.Now.Date - ((DateTime)DataUltimoSalvataggio.Value).Date).Days != 0)
+        {
+            try
+            {
+                //Verifico se c'è qualche utente loggato per eseguire le operazioni sul database                                
+                if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value))
+                {
+                    if (!AvvioApp)
+                    { 
+                        LogoutUtente(UtenteAttuale.Value, DateTime.Now.Date.AddSeconds(-1));        //Come logout time passo la mezzanotte meno 1 secondo del giorno precedente
+                    }
+
+                    LoginUtente();      //Apro una nuova riga per lo User loggato
+                    AvvioApp = false;
+                }
+
+                //Se la creazione del report è abilitata allora avvio il task che crerà il report
+                if (!CreaCsvReport && Impostazioni.GetVariable("AbilitaCreazReport").Value)
+                {
+                    CreaCsvReport = true;
+                    GiornoRicerca = DataUltimoSalvataggio.Value;
+                    //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 5, 0), LogicObject);      // creo il report dopo 5 minuti
+                    ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
+                    ActionCreaReport.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Gestione statistiche", "Errore gestione. Errore: " + ex.Message);
+                return;
+            }
+            
+            DataUltimoSalvataggio.Value = DateTime.Now;
+            return;     //ritorno il controllo al chiamante                        
+        }
+        else if(AvvioApp)
+        {
+            LoginUtente();
+            AvvioApp = false;
+            return;
+        }
+
+        try
+        {
+            // creo la stringa per aggiornare la tabella CntProduzione            
+            UpdateUtente(UtenteAttuale.Value.Value.ToString());
+        }
+        catch (Exception ex)
+        {
+            Log.Error("CheckCambioGiornoAndAgiornaDati", "Errore lettura variabili di campo: " + ex.ToString());
+            throw;
+        }
+        
+    }
+
+    private void LoginUtente()
+    {
+        //Disattivo eventuali utenti attivi nel DB
+        myStore.Query("UPDATE CntProduzione SET Attivo = false ", out _, out _);
+                
+        int len = myStore.Tables.Get("CntProduzione").Columns.Count;
+
+        string[] NomiColonne = new string[len]; //header
+        var MatrixValori = new object[1, len];  //valori
+
+        NomiColonne[0] = "Utente";
+        NomiColonne[1] = "Attivo";
+        NomiColonne[2] = "LoginTime";
+        NomiColonne[3] = "LogoutTime";
+        NomiColonne[4] = "LoginDate";
+        NomiColonne[5] = "LarghTrasp";
+        NomiColonne[6] = "CntPezziLav_Start";
+        NomiColonne[7] = "CntPezziLav_Stop";
+        NomiColonne[8] = "CntMetriLav_Start";
+        NomiColonne[9] =  "CntMetriLav_Stop";
+        NomiColonne[10] = "CntMetriQLav_Start";
+        NomiColonne[11] = "CntMetriQLav_Stop";
+        NomiColonne[12] = "CntMetriTrasp_Start";
+        NomiColonne[13] = "CntMetriTrasp_Stop";
+        NomiColonne[14] = "CntOreCiclo_Start";
+        NomiColonne[15] = "CntOreCiclo_Stop";
+        NomiColonne[16] = "CntMinCiclo_Start";
+        NomiColonne[17] = "CntMinCiclo_Stop";
+        NomiColonne[18] = "CntKwOra_Start";
+        NomiColonne[19] = "CntKwOra_Stop";
+
+        var reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+
+        MatrixValori[0, 0] = UtenteAttuale.Value.Value;
+        MatrixValori[0, 1] = 1;
+        MatrixValori[0, 2] = DateTime.Now;
+        MatrixValori[0, 3] = DateTime.Now;
+        MatrixValori[0, 4] = DateTime.Now.Date;
+        MatrixValori[0, 5] = reads[0].Value.Value;  //LarghTrasp 
+        MatrixValori[0, 6] = reads[1].Value.Value;  //CntPezziLav_Start 
+        MatrixValori[0, 7] = reads[1].Value.Value;  //CntPezziLav_Stop 
+        MatrixValori[0, 8] = reads[2].Value.Value;   //CntMetriLav_Start";
+        MatrixValori[0, 9] =  reads[2].Value.Value;  //CntMetriLav_Stop";
+        MatrixValori[0, 10] = reads[3].Value.Value;  //CntMetriQLav_Start";
+        MatrixValori[0, 11] = reads[3].Value.Value;  //CntMetriQLav_Stop";
+        MatrixValori[0, 12] = reads[4].Value.Value;  //CntMetriTrasp_Start";
+        MatrixValori[0, 13] = reads[4].Value.Value;  //CntMetriTrasp_Stop";
+        MatrixValori[0, 14] = reads[5].Value.Value;  //CntOreCiclo_Start";
+        MatrixValori[0, 15] = reads[5].Value.Value;  //CntOreCiclo_Stop";
+        MatrixValori[0, 16] = reads[6].Value.Value;  //CntMinCiclo_Start";
+        MatrixValori[0, 17] = reads[6].Value.Value;  //CntMinCiclo_Stop";
+        MatrixValori[0, 18] = reads[7].Value.Value;  //CntKwOra_Start";
+        MatrixValori[0, 19] = reads[7].Value.Value;  //CntKwOra_Stop";
+
+        myStore.Insert("CntProduzione", NomiColonne, MatrixValori);              // aggiornamento database        
+    }
+
+    private void UpdateUtente(string Utente)
+    {
+        try
+        {
+            var Reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+
+            // creo la stringa per aggiornare la tabella ricette            
+            StringBuilder query = new("UPDATE CntProduzione SET " +
+                         "  CntPezziLav_Stop ='" + Reads[1].Value.Value +  "'" +
+                         ", CntMetriLav_Stop ='" + Reads[2].Value.Value + "'" +
+                         ", CntMetriQLav_Stop ='" + Reads[3].Value.Value + "'" +
+                         ", CntMetriTrasp_Stop ='" + Reads[4].Value.Value + "'" +
+                         ", CntOreCiclo_Stop ='" + Reads[5].Value.Value + "'" +
+                         ", CntMinCiclo_Stop ='" + Reads[6].Value.Value + "'" +
+                         ", CntKwOra_Stop ='" + Reads[7].Value.Value + "'");            
+
+            query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");
+
+            myStore.Query(query.ToString(), out string[] header, out object[,] resultSet);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("UpdateUtente", "Errore lettura variabili di campo oppure aggiornamento database: " + ex.ToString());
+            throw;
+        }
+    }
+
+    private void LogoutUtente(string Utente, DateTime LogoutTime)
+    {
+        try
+        {
+            var Reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+
+            // creo la stringa per aggiornare la tabella ricette            
+            string query = "UPDATE CntProduzione SET Attivo = false, LogoutTime = '" + LogoutTime.ToString("s") + "'" +
+                         ", CntMetriLav_Stop ='" + Reads[1].Value.Value + "'" +
+                         ", CntMetriQLav_Stop ='" + Reads[2].Value.Value + "'" +
+                         ", CntMetriTrasp_Stop ='" + Reads[3].Value.Value + "'" +
+                         ", CntOreCiclo_Stop ='" + Reads[4].Value.Value + "'" +
+                         ", CntMinCiclo_Stop ='" + Reads[5].Value.Value + "'" +
+                         ", CntKwOra_Stop ='" + Reads[6].Value.Value + "'" +
+                         " WHERE Utente = '" + Utente + "' AND Attivo = true";
+
+            //foreach (var Par in CntProduzPlc.ChildrenRemoteRead(CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList()))
+            //{
+            //    query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
+            //}           
+
+            myStore.Query(query, out string[] header, out object[,] resultSet);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("LogoutUtente", "Errore lettura variabili di campo oppure aggiornamento database: " + ex.ToString());
+            throw;
+        }
+
+        //ResetCnt();     //Faccio il reset dei contatori
+    }
+
+    private void ResetCnt()
+    {
+        try
+        {
+            List<RemoteChildVariableValue> remoteRead = (from Figlio in CntProduzPlc.GetNodesByType<IUAVariable>()
+                              select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
+
+            CntProduzPlc.ChildrenRemoteWrite(remoteRead);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("ChildrenRemoteWrite failed: " + ex.ToString());
+            throw;
+        }
+    }
+
+    private void CreaReport()
+    {
+        //Controlla se la directory Report esiste nel percorso indicato altrimenti la crea
+        string CsvReportSavingPath = LogicObject.GetVariable("TargetLinux").Value
+            ? new ResourceUri("%USB1%").Uri
+            : (string)Impostazioni.GetVariable("CsvReportSavingPath").Value;
+
+        string Folder = $"{CsvReportSavingPath}/Report";
+        if (!Directory.Exists(Folder))
+            Directory.CreateDirectory(Folder);
+
+        //Cancella i file vecchi più di 31 giorni per liberare memoria
+        foreach (var elemento in new DirectoryInfo(Folder).GetFiles("*.*").Where(elemento => elemento.CreationTime < DateTime.Now.AddDays(-31)))
+            elemento.Delete();// Elimina il file
+
+        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
+
+        string Data = GiornoRicerca.ToString("d", cultureInfo).Replace("/", "_");         //creo stringa per la data e ora nel formato dd_MM_yyyy in base al culture info dell'utente loggato
+
+        string CSVPath = @"" + Folder + "/MakorLineProcessDataReport_" + Data + ".csv";        //Storicizzo il nome dell'ultimo file salvato per l'invio della mail
+
+        string csvPath = new ResourceUri(value: CSVPath).Uri;
+
+        if (string.IsNullOrEmpty(csvPath))
+        {
+            Log.Error("Production report creation", "No CSV file found");
+            return;
+        }
+
+        //controllo se il carattere separatore è valdo oppure no
+        char? characterSeparator = Runtime_Utility.CheckCharacterSeparator(",");
+        if (characterSeparator == null || characterSeparator == '\0')
+        {
+            Log.Error("Production report creation", "Wrong CharacterSeparator configuration. Please insert a char");
+            return;
+        }
+
+        bool wrapFields = true;     //indica che le colonne devono essere incapsualte tra doppi apici
+        bool ReportCreated = false;
+
+        try
+        {
+            //Apro lo stream verso il file 
+            using (CSVFileWriter csvWriter = new(csvPath) { FieldDelimiter = characterSeparator.Value, WrapFields = wrapFields })
+            {
+                //Tiro su i dati della produzione giornaliera da scrivere sul file csv                
+                if (GetDatiProduzGiornaliera(GiornoRicerca, out string[] header, out string[,] resultSet))
+                {
+                    string[] EmptyLine = new string[header.Length];
+                    //for (int i = 0; i < header.Length; i++)
+                    //    EmptyLine[i] = "";
+
+                    //Creo l'intestazione della prima riga
+                    var row = new string[header.Length];
+                    for (var c = 0; c < header.Length; ++c)
+                    {
+                        row[c] = header[c];
+                    }
+                    csvWriter.WriteLine(row);
+
+                    //scrivo la riga dei risultati
+                    for (var c = 0; c < header.Length; ++c)
+                    {
+                        row[c] = resultSet[0, c];
+                    }
+                    csvWriter.WriteLine(row);
+
+                    csvWriter.WriteLine(EmptyLine);
+                    csvWriter.WriteLine(EmptyLine);
+
+                    //Tiro su i dati della produzione giornaliera per utente
+                    if (GetDatiProduzPerUtente(GiornoRicerca, out header, out resultSet))
+                    {
+                        int rowCount = resultSet.GetLength(0);
+                        int columnCount = header.Length;
+                        row = new string[columnCount];
+
+                        //creo la riga di intestazione
+                        for (var c = 0; c < header.Length; ++c)
+                        {
+                            row[c] = header[c];
+                        }
+                        csvWriter.WriteLine(row);
+
+                        //Creo le righe con i risultati
+                        for (var r = 0; r < rowCount; ++r)      //ciclo per le righe
+                        {
+                            for (var c = 0; c < columnCount; ++c)  //ciclo per le colonne
+                            {
+                                row[c] = resultSet[r, c];
+                            }
+                            csvWriter.WriteLine(row);
+                        }
+                    }
+                    Log.Info("Production report creation", $"CSV successfully created to {csvPath}");
+                    ReportCreated = true;
+                }
+            }
+
+            //Eseguo il codice per l'invio della mail se abilitato. 
+            if (ReportCreated & Impostazioni.GetVariable("AbilitaInvioMail").Value)
+            {
+                var InvioMail = Project.Current.Get<NetLogicObject>("Scripts/EmailSenderLogic");
+                InvioMail.ExecuteMethod("SendEmail_LongRunningTask", args: new object[] { "Makor line production report", "This is an automatically generated email please do not reply", CSVPath, null });
+            }
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Production report creation", $"Unable to create CSV file: {ex}");
+        }
+
+        CreaCsvReport = false;
+        ActionCreaReport.Dispose();
+        ActionCreaReport = null;
+    }
+
     /// <summary>
     /// Questo metodo estrae dal DB i dati di produzione di tutti gli utenti filtrati in base al giorno. 
     /// </summary>
     /// <param name="GiornoRicerca"></param>
-    /// <param name="header">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
-    /// <param name="Risultati">Matrice di stringhe con i risultati</param>
+    /// <param name="CsvHeader">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
+    /// <param name="ResultMatrix">Matrice di stringhe con i risultati</param>
     /// <returns></returns>
-    private bool GetDatiProduzPerUtente(DateTime GiornoRicerca, out string[] header, out string[,] Risultati)
+    private bool GetDatiProduzPerUtente(DateTime GiornoRicerca, out string[] CsvHeader, out string[,] ResultMatrix)
     {
         string sqlQuery = $"SELECT * FROM CntProduzione" +
-                          $" WHERE LoginTime BETWEEN '{GiornoRicerca.Date:s}' AND '{GiornoRicerca.Date.AddSeconds(86399):s}'" +    //Considero l'arco di tutta la giornata, il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
+                          $" WHERE LoginDate = '{GiornoRicerca.Date:s}'" +    //Considero l'arco di tutta la giornata, il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
                           $" ORDER BY LoginTime ASC";
 
-        myStore.Query(sqlQuery, out _, out object[,] QueryResult);
+        myStore.Query(sqlQuery, out string[] Header, out object[,] QueryResult);
 
         var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
 
         //Creazione riga intestazione con i nomi delle colonne tradotte in base alla lingua selezionata per il report
-        header = new string[10] { "User", "LoginTime", "LogoutTime"
-                                  , InformationModel.LookupTranslation(new LocalizedText("Pezzi lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("Metri lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentCicloOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentAllarmeOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentStopOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentPausaOn"), new List<string>(){ cultureInfo.ToString() }).Text
+        CsvHeader = new string[] { "User", "LoginTime", "LogoutTime"
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo ON"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Metri quadri lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Efficienza di carico"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Produttività relativa"), new List<string>(){ cultureInfo.ToString() }).Text
                                 };
 
-        Risultati = new string[QueryResult.GetLength(0), 10];      //Ridefinisco la matrice con le dimensioni effettive
+        ResultMatrix = new string[QueryResult.GetLength(0), CsvHeader.Length];      //Ridefinisco la matrice con le dimensioni effettive
 
         if (QueryResult.Rank != 2 || QueryResult.GetLength(0) <= 0)      //l'operatore || valuta l'exp a sx se è vera valuta anche quella a destra altrimenti non la valuta per niente.
             return false;
@@ -50,19 +419,23 @@ public class GestStatisticheLogic : BaseNetLogic
         //Preparo la matrice di risultati della query
         for (int row = 0; row < QueryResult.GetLength(0); row++)
         {
-            Risultati[row, 0] = QueryResult[row, 0].ToString();      //Nome utente
-            //resultSet[row, 1] = QueryResult[row, 1].ToString();      //Utente attivo
-            Risultati[row, 1] = ((DateTime)QueryResult[row, 2]).ToString("G", cultureInfo);      //LoginTime
-            Risultati[row, 2] = QueryResult[row, 3] is null ? "" : ((DateTime)QueryResult[row, 3]).ToString("G", cultureInfo);      //LogoutTime
-            Risultati[row, 3] = QueryResult[row, 4].ToString();      //NPezzi_Prodotti
-            Risultati[row, 4] = QueryResult[row, 5].ToString();      //NMetri_Prodotti
-            Risultati[row, 5] = QueryResult[row, 6] + "h : " + QueryResult[row, 7] + "min";      //Durata accensione quadro
+            float MqProcessati = (float)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav_Stop")] - (float)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav_Start")];  //Metri quadri prodotti
+            float MtTrasp = (float)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp_Stop")] - (float)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp_Start")];  //Metri trasporto percorsi
+            float LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
+            int OreCicloOn = ((int)QueryResult[row, Array.IndexOf(Header, "CntOreCiclo_Stop")] - (int)QueryResult[row, Array.IndexOf(Header, "CntOreCiclo_Start")]);  //Ore ciclo ON
+            int MinCicloOn = ((int)QueryResult[row, Array.IndexOf(Header, "CntMinCiclo_Stop")] - (int)QueryResult[row, Array.IndexOf(Header, "CntMinCiclo_Start")]);  //Minuti ciclo ON
+            int MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
 
-            var DurataAccMin = (Convert.ToDouble(QueryResult[row, 6]) * 60) + Convert.ToDouble(QueryResult[row, 7]);
-            Risultati[row, 6] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 8]) * 60) + Convert.ToDouble(QueryResult[row, 9])) / DurataAccMin).ToString("P1", cultureInfo);      //% In ciclo. Il metodo ToString() crea una stringa simile 13,5%
-            Risultati[row, 7] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 10]) * 60) + Convert.ToDouble(QueryResult[row, 11])) / DurataAccMin).ToString("P1", cultureInfo);    //% In allarme
-            Risultati[row, 8] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 12]) * 60) + Convert.ToDouble(QueryResult[row, 13])) / DurataAccMin).ToString("P1", cultureInfo);    //% In stop
-            Risultati[row, 9] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 14]) * 60) + Convert.ToDouble(QueryResult[row, 15])) / DurataAccMin).ToString("P1", cultureInfo);   //% In pausa       
+            float ProdutRelativa = (MqProcessati / MinTotCicloOn) / 60;         //Mq/OreCiclo
+
+
+            ResultMatrix[row, 0] = QueryResult[row, 0].ToString();      //Nome utente            
+            ResultMatrix[row, 1] = ((DateTime)QueryResult[row, 2]).ToString("G", cultureInfo);      //LoginTime
+            ResultMatrix[row, 2] = QueryResult[row, 3] is null ? "" : ((DateTime)QueryResult[row, 3]).ToString("G", cultureInfo);      //LogoutTime
+            ResultMatrix[row, 3] = OreCicloOn + " h : " + MinCicloOn + " min";      //Durata tempo ciclo
+            ResultMatrix[row, 4] = MqProcessati.ToString();  //Metri quadri prodotti
+            ResultMatrix[row, 5] = LoadEfficiency.ToString("P1", cultureInfo);
+            ResultMatrix[row, 6] = ProdutRelativa.ToString();
         }
         return true;
     }
@@ -153,343 +526,4 @@ public class GestStatisticheLogic : BaseNetLogic
         }
         return true;
     }
-
-    public override void Start()
-    {
-        Impostazioni = LogicObject.GetObject("ImpostazOem");
-        AbiltaGestione = Impostazioni.GetVariable("AbilitaGestione");
-
-        AbiltaGestione.VariableChange += AbiltaGestione_VariableChange;    //Sottoscrivo l'evento cambiamento variabile
-
-        if (AbiltaGestione.Value)
-            AbilitaGestione();
-    }
-
-    [ExportMethod]
-    public void TerminaSessione()
-    {
-        if (AbiltaGestione.Value)
-        {
-            LogoutUtente(UtenteAttuale.Value, DateTime.Now);
-            DisabilitaGestione();
-        }
-
-        AbiltaGestione.VariableChange -= AbiltaGestione_VariableChange;    //Tolgo sottoscrizione cambiamento variabile per liberare risorse
-    }
-
-    private void AbiltaGestione_VariableChange(object sender, VariableChangeEventArgs e)
-    {
-        if (e.NewValue)
-            AbilitaGestione();
-        else
-            DisabilitaGestione();
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    private void AbilitaGestione()
-    {
-        CntProduzPlc = LogicObject.Context.GetNode(LogicObject.GetVariable("CntProduzPlc").Value);  // tiro su il nodo dove si trovano le variabili PLC
-
-        myStore = (Store)LogicObject.Context.GetNode(LogicObject.GetVariable("DataStore").Value);  // Tiro su il nodeId dello store
-
-        AbilitaCreazReport = Impostazioni.GetVariable("AbilitaCreazReport");
-        DataUltimoSalvataggio = Impostazioni.GetVariable("DataUltimoSalvataggio");
-
-        UtenteAttuale = LogicObject.GetVariable("UtenteAttuale");
-        UtenteAttuale.VariableChange += UtenteAttuale_VariableChange;       //Sottoscrivo il cambiamento dell'utente
-
-        ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 60000, LogicObject);
-        //ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 5000, LogicObject);
-        ActionCheckCambioGiornoAndAgiornaDati.Start();          //Sottoscrivo il task a tempo e lo avvio per l'aggiornamento dei dati sul DB e controllo se deve essere fatto il report
-
-        LoginUtente();      //Creo una Riga per l'utente all'avvio
-    }
-
-    private void DisabilitaGestione()
-    {
-        UtenteAttuale.VariableChange -= UtenteAttuale_VariableChange;
-        ActionCheckCambioGiornoAndAgiornaDati.Dispose();
-        ActionCheckCambioGiornoAndAgiornaDati = null;
-    }
-
-    private void CheckCambioGiornoAndAgiornaDati()
-    {
-        //Controllo se è cambiato il giorno         
-        if ((DateTime.Now.Date - ((DateTime)DataUltimoSalvataggio.Value).Date).Days != 0)
-        {
-            try
-            {
-                //Verifico se c'è qualche utente loggato per eseguire le operazioni sul database
-                //if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value) && string.Compare(UtenteAttuale.Value, "Anonymous") != 0)                
-                if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value))
-                {
-                    LogoutUtente(UtenteAttuale.Value, DateTime.Now.Date.AddSeconds(-1));        //Come logout time passo la mezzanotte meno 1 secondo del giorno precedente
-                    LoginUtente();      //Apro una nuova riga per lo User loggato
-                }
-
-                //Se la creazione del report è abilitata allora avvio il task che crerà il report
-                if (!CreaCsvReport && AbilitaCreazReport.Value)
-                {
-                    CreaCsvReport = true;
-                    GiornoRicerca = DataUltimoSalvataggio.Value;
-                    ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 5, 0), LogicObject);      // creo il report dopo 5 minuti
-                    //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
-                    ActionCreaReport.Start();
-                }
-            }
-            catch
-            {
-                return;
-            }
-
-            DataUltimoSalvataggio.Value = DateTime.Now;
-            return;     //ritorno il controllo al chiamante
-        }
-
-        try
-        {
-            // creo la stringa per aggiornare la tabella CntProduzione            
-            StringBuilder query = new("UPDATE CntProduzione SET Attivo = true");
-
-            var myVariables = CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList();  //Creo la lista per leggere le var dal campo.
-            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
-            foreach (var Par in reads)
-                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
-
-            query.Append($" WHERE Utente = '{UtenteAttuale.Value.Value}' AND Attivo = true");
-
-            myStore.Query(query.ToString(), out string[] header, out object[,] resultSet);
-        }
-        catch (Exception ex)
-        {
-            Log.Error("CheckCambioGiornoAndAgiornaDati", "Errore lettura variabili di campo: " + ex.ToString());
-            throw;
-        }
-    }
-
-    private void UtenteAttuale_VariableChange(object sender, VariableChangeEventArgs e)
-    {
-        if (!string.IsNullOrWhiteSpace(e.OldValue))
-            LogoutUtente(e.OldValue, DateTime.Now);
-
-        if (!string.IsNullOrWhiteSpace(e.NewValue))
-            LoginUtente();
-    }
-
-    private void LoginUtente()
-    {
-        //Disattivo eventuali utenti attivi nel DB
-        myStore.Query("UPDATE CntProduzione SET Attivo = false ", out _, out _);
-
-        ResetCnt();
-        int len = 3 + CntProduzPlc.Children.Count;
-
-        string[] NomiColonne = new string[len];
-        NomiColonne[0] = "Utente";
-        NomiColonne[1] = "Attivo";
-        NomiColonne[2] = "LoginTime";
-
-        var MatrixValori = new object[1, len];
-
-        int i = 3;
-
-        var myVariables = new List<RemoteChildVariable>();
-        foreach (var Par in CntProduzPlc.GetNodesByType<IUAVariable>())
-        {
-            myVariables.Add(new RemoteChildVariable(Par.BrowseName));
-            NomiColonne[i] = Par.BrowseName;
-            i++;
-        }
-
-        try
-        {
-            MatrixValori[0, 0] = UtenteAttuale.Value.Value;
-            MatrixValori[0, 1] = true;
-            MatrixValori[0, 2] = DateTime.Now;
-
-            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
-            i = 3;
-            foreach (var Par in reads)
-            {
-                MatrixValori[0, i] = Par.Value.Value.ToString();
-                i++;
-            }
-
-            myStore.Insert("CntProduzione", NomiColonne, MatrixValori);              // aggiornamento database
-        }
-        catch (Exception ex)
-        {
-            Log.Error("LoginUtente", "Errore lettura varibili di campo: " + ex.ToString());
-            throw;
-        }
-    }
-
-
-    private void LogoutUtente(string Utente, DateTime LogoutTime)
-    {
-        try
-        {
-            // creo la stringa per aggiornare la tabella ricette            
-            StringBuilder query = new("UPDATE CntProduzione SET Attivo = false, LogoutTime = '" + LogoutTime.ToString("s") + "'");
-
-            foreach (var Par in CntProduzPlc.ChildrenRemoteRead(CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList()))
-            {
-                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
-            }
-
-            query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");
-
-            myStore.Query(query.ToString(), out string[] header, out object[,] resultSet);
-        }
-        catch (Exception ex)
-        {
-            Log.Error("LogoutUtente", "Errore lettura variabili di campo oppure aggiornamento database: " + ex.ToString());
-            throw;
-        }
-
-        ResetCnt();     //Faccio il reset dei contatori
-    }
-
-    private void ResetCnt()
-    {
-        try
-        {
-            var remoteRead = (from Figlio in CntProduzPlc.GetNodesByType<IUAVariable>()
-                              select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
-
-            CntProduzPlc.ChildrenRemoteWrite(remoteRead);
-        }
-        catch (Exception ex)
-        {
-            Log.Error("ChildrenRemoteWrite failed: " + ex.ToString());
-            throw;
-        }
-    }
-
-    private void CreaReport()
-    {
-        //Controlla se la directory Report esiste nel percorso indicato altrimenti la crea
-        string CsvReportSavingPath = LogicObject.GetVariable("TargetLinux").Value
-            ? new ResourceUri("%USB1%").Uri
-            : (string)Impostazioni.GetVariable("CsvReportSavingPath").Value;
-
-        string Folder = $"{CsvReportSavingPath}/Report";
-        if (!Directory.Exists(Folder))
-            Directory.CreateDirectory(Folder);
-
-        //Cancella i file vecchi più di 31 giorni per liberare memoria
-        foreach (var elemento in new DirectoryInfo(Folder).GetFiles("*.*").Where(elemento => elemento.CreationTime < DateTime.Now.AddDays(-31)))
-            elemento.Delete();// Elimina il file
-
-        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
-
-        string Data = GiornoRicerca.ToString("d", cultureInfo).Replace("/", "_");         //creo stringa per la data e ora nel formato dd_MM_yyyy in base al culture info dell'utente loggato
-
-        string CSVPath = @"" + Folder + "/MakorLineProcessDataReport_" + Data + ".csv";        //Storicizzo il nome dell'ultimo file salvato per l'invio della mail
-
-        string csvPath = new ResourceUri(value: CSVPath).Uri;
-
-        if (string.IsNullOrEmpty(csvPath))
-        {
-            Log.Error("Production report creation", "No CSV file found");
-            return;
-        }
-
-        //controllo se il carattere separatore è valdo oppure no
-        char? characterSeparator = Runtime_Utility.CheckCharacterSeparator(",");
-        if (characterSeparator == null || characterSeparator == '\0')
-        {
-            Log.Error("Production report creation", "Wrong CharacterSeparator configuration. Please insert a char");
-            return;
-        }
-
-        bool wrapFields = true;     //indica che le colonne devono essere incapsualte tra doppi apici
-        bool ReportCreated = false;
-
-        try
-        {
-            //Apro lo stream verso il file 
-            using (var csvWriter = new CSVFileWriter(csvPath) { FieldDelimiter = characterSeparator.Value, WrapFields = wrapFields })
-            {
-                //Tiro su i dati della produzione giornaliera da scrivere sul file csv                
-                if (GetDatiProduzGiornaliera(GiornoRicerca, out string[] header, out string[,] resultSet))
-                {
-                    var EmptyLine = new string[header.Length];
-                    for (int i = 0; i < header.Length; i++)
-                        EmptyLine[i] = "";
-
-                    //Creo l'intestazione della prima riga
-                    var row = new string[header.Length];
-                    for (var c = 0; c < header.Length; ++c)
-                    {
-                        row[c] = header[c];
-                    }
-                    csvWriter.WriteLine(row);
-
-                    //scrivo la riga dei risultati
-                    for (var c = 0; c < header.Length; ++c)
-                    {
-                        row[c] = resultSet[0, c];
-                    }
-                    csvWriter.WriteLine(row);
-
-                    csvWriter.WriteLine(EmptyLine);
-                    csvWriter.WriteLine(EmptyLine);
-
-                    //Tiro su i dati della produzione giornaliera per utente
-                    if (GetDatiProduzPerUtente(GiornoRicerca, out header, out resultSet))
-                    {
-                        int rowCount = resultSet.GetLength(0);
-                        int columnCount = header.Length;
-                        row = new string[columnCount];
-
-                        //creo la riga di intestazione
-                        for (var c = 0; c < header.Length; ++c)
-                        {
-                            row[c] = header[c];
-                        }
-                        csvWriter.WriteLine(row);
-
-                        //Creo le righe con i risultati
-                        for (var r = 0; r < rowCount; ++r)      //ciclo per le righe
-                        {
-                            for (var c = 0; c < columnCount; ++c)  //ciclo per le colonne
-                            {
-                                row[c] = resultSet[r, c];
-                            }
-                            csvWriter.WriteLine(row);
-                        }
-                    }
-                    Log.Info("Production report creation", $"CSV successfully created to {csvPath}");
-                    ReportCreated = true;
-                }
-            }
-
-            //Eseguo il codice per l'invio della mail se abilitato. 
-            if (ReportCreated & Impostazioni.GetVariable("AbilitaInvioMail").Value)
-            {
-                var InvioMail = Project.Current.Get<NetLogicObject>("Scripts/EmailSenderLogic");
-                InvioMail.ExecuteMethod("SendEmail_LongRunningTask", args: new object[] { "Makor line production report", "This is an automatically generated email please do not reply", CSVPath, null });
-            }
-        }
-        catch (Exception ex)
-        {
-            Log.Error("Production report creation", $"Unable to create CSV file: {ex}");
-        }
-
-        CreaCsvReport = false;
-        ActionCreaReport.Dispose();
-        ActionCreaReport = null;
-    }
-
-    private IUAVariable AbiltaGestione, AbilitaCreazReport, DataUltimoSalvataggio, UtenteAttuale;
-    private DelayedTask ActionCreaReport;
-    private PeriodicTask ActionCheckCambioGiornoAndAgiornaDati;
-    private IUAObject Impostazioni;
-    private IUANode CntProduzPlc;
-    private Store myStore;
-    private bool CreaCsvReport;
-    private DateTime GiornoRicerca;
 }
