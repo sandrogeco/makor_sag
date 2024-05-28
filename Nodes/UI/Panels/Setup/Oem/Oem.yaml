@@ -7551,7 +7551,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Industria 4.0"}
+        Value: {"NamespaceIndex":46,"TextId":"Industria 4.0"}
     - Name: LeftMargin
       Id: g=fc7125e5117531952a6fa3e5d522cc31
       Type: BaseVariableType
@@ -41951,7 +41951,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"stOemEnc"}
+          Value: {"NamespaceIndex":46,"TextId":"stOemEnc"}
     - Name: LeftMargin
       Id: g=c96377b3914fd78c675b80556b731e09
       Type: BaseVariableType
@@ -42683,12 +42683,12 @@ Children:
               Id: g=1feaf56903ac5289e16ed3084ddc9c33
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 0
+              Value: 1
             - Name: Disabled
               Id: g=26f1df10dede12a2bf2495ae83374200
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 1
+              Value: 0
           - Name: DisplayValuePath
             Id: g=70b049f77f810152804be8a4c78449c7
             Type: BaseDataVariableType
@@ -43797,12 +43797,12 @@ Children:
               Id: g=44c0ccaff0223ee903a1b31b60392833
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 0
+              Value: 1
             - Name: Disabled
               Id: g=a899c3d7f9561b9c6c6326e42b4ef227
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 1
+              Value: 0
           - Name: DisplayValuePath
             Id: g=1c9f426db62dd721e6d1a2e8b0f03121
             Type: BaseDataVariableType
@@ -85209,12 +85209,12 @@ Children:
               Id: g=7b179f159af8a439f1e61cb25dd82300
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 0
+              Value: 1
             - Name: Disabled
               Id: g=2f7edd8bebf4c936d69ea54d07183862
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 1
+              Value: 0
           - Name: DisplayValuePath
             Id: g=52921d7e040399cc802f04a45ccc06f7
             Type: BaseDataVariableType
@@ -86323,12 +86323,12 @@ Children:
               Id: g=0cdcff2215757293e8927e9edb55cfa3
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 0
+              Value: 1
             - Name: Disabled
               Id: g=f3264c51869f0a3f1a1a7c3fbdee3e85
               Type: BaseDataVariableType
               DataType: Int32
-              Value: 1
+              Value: 0
           - Name: DisplayValuePath
             Id: g=3e55b04844b15dc10108783573774437
             Type: BaseDataVariableType

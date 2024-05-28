@@ -5213,7 +5213,7 @@ Children:
                 Id: g=d8662d95a1245b613b1ba76b514c3abf
                 Type: BaseDataVariableType
                 DataType: NodeId
-                Value: "/Objects/Hmi_Next/UI/Panels/User/PiasteOsc/Frame_PiastreOsc"
+                Value: "/Objects/Hmi_Next/UI/Panels/User/PiastreOsc/Frame_PiastreOsc"
               - Name: AliasNode
                 Id: g=025e41964dc96ff079e58628eacaab3d
                 Type: BaseDataVariableType
@@ -8146,7 +8146,7 @@ Children:
                 Type: BaseDataVariableType
                 DataType: NodeId
                 Description: {"NamespaceIndex":11,"TextId":"ChangePanelNewPanelDescription"}
-                Value: "/Objects/Hmi_Next/UI/Panels/User/PiasteOsc/Frame_PiastreOsc"
+                Value: "/Objects/Hmi_Next/UI/Panels/User/PiastreOsc/Frame_PiastreOsc"
               - Name: AliasNode
                 Id: g=7099c2ce7e11dd9d1b3149664c1e021c
                 Type: BaseDataVariableType
@@ -13408,7 +13408,7 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/Hmi_Next/Model/Industry_40/EnbIndustry_40"
-- File: PiasteOsc/PiasteOsc.yaml
+- File: PiastreOsc/PiastreOsc.yaml
 - File: PopUps/PopUps.yaml
 - Name: Pag_Comandi_Manuali_sx
   Id: g=c0a11889ef071ca87684a6f1994181c9

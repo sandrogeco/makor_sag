@@ -1,0 +1,172 @@
+#region Using directives
+using System;
+using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+using FTOptix.HMIProject;
+using FTOptix.NetLogic;
+using FTOptix.Alarm;
+using FTOptix.UI;
+using FTOptix.NativeUI;
+using FTOptix.WebUI;
+using FTOptix.CODESYS;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.ODBCStore;
+using FTOptix.OPCUAServer;
+using FTOptix.OPCUAClient;
+using FTOptix.Retentivity;
+using FTOptix.EventLogger;
+using FTOptix.CoreBase;
+using FTOptix.CommunicationDriver;
+using FTOptix.Core;
+using System.IO;
+
+#endregion
+
+public class Import_Tab_Wrap : BaseNetLogic
+{
+	[ExportMethod]
+	public void ImportTranslations()
+	{
+		var csvPath = GetCSVFilePath();
+
+		if (string.IsNullOrEmpty(csvPath))
+		{
+			Log.Error("ImportAndExportTranslations", "No CSV file chosen, please fill the CSVPath variable");
+			return;
+		}
+
+		var localizationDictionary = GetDictionary();
+		if (localizationDictionary == null)
+		{
+			Log.Error("ImportAndExportTranslations", "No translation table found");
+			return;
+		}
+
+		if (!File.Exists(csvPath))
+		{
+			Log.Error("ImportAndExportTranslations", $"The file {csvPath} does not exist");
+			return;
+		}
+
+		try
+		{
+			using (var csvReader = new StreamReader(csvPath))
+			{
+				var fileLines = csvReader.ReadToEnd();
+
+				string line1 = fileLines.Split("\r\n")[0];
+				int nColonne = fileLines.Split("\r\n")[0].Split("\t").Length;
+
+				fileLines = fileLines.Remove(0, line1.Length + 2);
+				fileLines = fileLines.Replace("\t", "");
+				//fileLines = fileLines.Replace("\r\n", "");
+
+				string[] cells = fileLines.Split(new string[] { "\"", "\"" }, StringSplitOptions.RemoveEmptyEntries);
+
+				int nRow = 0;
+				foreach (var cell in cells)
+					if (cell == "\r\n")
+						nRow++;
+
+				var importedTranslations = new string[nRow, nColonne];
+
+				importedTranslations[0, 0] = "";
+				int cnt = 1;
+				foreach (string lingua in line1.Replace("\t", "").Split(new string[] { "\"", "\"" }, StringSplitOptions.RemoveEmptyEntries))
+				{
+					importedTranslations[0, cnt] = lingua;
+					cnt++;
+				}
+
+
+				cnt = 0;
+				for (var r = 1; r < nRow; ++r)
+					for (var c = 0; c < nColonne; ++c)
+						if (cells[cnt] == "\r\n")
+						{
+							if (c == 0)
+							{
+								cnt++;
+								c--;
+								continue;
+							}
+							importedTranslations[r, c] = "";
+							if (c == nColonne - 1)
+							{
+								cnt++;
+							}
+						}
+						else
+						{
+							importedTranslations[r, c] = cells[cnt];
+							cnt++;
+						}
+
+				localizationDictionary.Value = new UAValue(importedTranslations);
+			}
+
+			Log.Info("ImportAndExportTranslations", $"Translations successfully imported into {localizationDictionary.BrowseName} localization dictionary");
+		}
+		catch (Exception ex)
+		{
+			Log.Error("ImportAndExportTranslations", $"Unable to import the translations: {ex}");
+		}
+	}
+
+	private string GetCSVFilePath()
+	{
+		var csvPathVariable = LogicObject.GetVariable("CSVPath");
+		if (csvPathVariable == null)
+		{
+			Log.Error("ImportAndExportTranslations", "CSVPath variable not found");
+			return "";
+		}
+
+		return new ResourceUri(csvPathVariable.Value).Uri;
+	}
+
+	private IUAVariable GetDictionary()
+	{
+		var dictionaryVariable = LogicObject.GetVariable("LocalizationDictionary");
+		if (dictionaryVariable == null)
+		{
+			Log.Info("ImportAndExportTranslations", "The first localization dictionary found will be used since the LocalizationDictionary variable cannot be not found");
+			return GetDefaultDictionary();
+		}
+
+		NodeId nodeIdDictionaryValue = dictionaryVariable.Value;
+		if (nodeIdDictionaryValue == null)
+		{
+			Log.Info("ImportAndExportTranslations", "The first localization dictionary found will be used since the LocalizationDictionary variable is not set");
+			return GetDefaultDictionary();
+		}
+
+		var dictionaryNode = InformationModel.Get(nodeIdDictionaryValue);
+		if (dictionaryNode == null)
+		{
+			Log.Error("ImportAndExportTranslations", "The node pointed by the LocalizationDictionary variable cannot be found");
+			return null;
+		}
+
+		var resultDictionaryVariable = dictionaryNode as IUAVariable;
+		if (resultDictionaryVariable == null || !resultDictionaryVariable.IsInstanceOf(FTOptix.Core.VariableTypes.LocalizationDictionary))
+			Log.Error("ImportAndExportTranslations", "The node pointed by the LocalizationDictionary variable is not a localization dictionary");
+
+		return resultDictionaryVariable;
+	}
+
+	private IUAVariable GetDefaultDictionary()
+	{
+		var localizationDictionaryType = Project.Current.Context.GetNode(FTOptix.Core.VariableTypes.LocalizationDictionary);
+		var localizationDictionaries = localizationDictionaryType.InverseRefs.GetNodes(OpcUa.ReferenceTypes.HasTypeDefinition);
+
+		foreach (var dictionaryNode in localizationDictionaries)
+		{
+			if (dictionaryNode.NodeId.NamespaceIndex == Project.Current.NodeId.NamespaceIndex)
+				return (IUAVariable)dictionaryNode;
+		}
+
+		return null;
+	}
+}

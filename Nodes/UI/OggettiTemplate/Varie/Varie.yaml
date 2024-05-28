@@ -7818,7 +7818,7 @@ Children:
                   DataType: LocalizedText
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: {"LocaleId":"it-IT","Text":"{0:n1}"}
+                  Value: {"LocaleId":"","Text":"{0:f2}"}
                 - Name: ns=9;Source0
                   Id: g=a224bd908fbec87f4189b4d875d0207a
                   Type: BaseDataVariableType
@@ -11398,7 +11398,7 @@ Children:
                   DataType: LocalizedText
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: {"LocaleId":"it-IT","Text":"{0:n1}"}
+                  Value: {"LocaleId":"","Text":"{0:f2}"}
                 - Name: ns=9;Source0
                   Id: g=e6b330668d646d7fdc2309649910cea7
                   Type: BaseDataVariableType
