@@ -102,48 +102,52 @@ Children:
   Id: g=936fd9a5941af42807105d14fc5e2804
   Type: BaseObjectType
   Children:
-  - Name: LarghTrasp
-    Id: g=9f65365f50ff27a35661557d98cc8b80
+  - Name: CntPezziLav
+    Id: g=10378c50e96d4d9d32dd9c532cbfbc18
     Type: BaseDataVariableType
-    DataType: Float
-    Description: {"LocaleId":"it-IT","Text":"Larghezza trasporto in mm"}
-    Value: 1.0
+    DataType: Int32
+    Value: 0
   - Name: CntMetriLav
     Id: g=6d65de915ce86d81f093185c5d19ce38
     Type: BaseDataVariableType
     DataType: Float
-    Value: 2.0
+    Value: 0.0
   - Name: CntMetriQLav
     Id: g=39a8fa77312c7cc5bdfe05ecbd35ff23
     Type: BaseDataVariableType
     DataType: Float
-    Value: 3.0
+    Value: 0.0
+  - Name: CntOreCicloOn
+    Id: g=ad259be65971e6076df1e76f67b7efa2
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinCicloOn
+    Id: g=ea54133555a0f95ed33ba4e10d502c8b
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: CntOrePowerOn
+    Id: g=c087a7c51bc235440aa257bcdb66935e
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinPowerOn
+    Id: g=2336ded0c9ea8b9567eca9fb8a6ac94c
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: CntKwOra
+    Id: g=4d043123ddb02058e092852e882a3712
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
   - Name: CntMetriTrasp
     Id: g=7cd81fff9174b98f26938c192ac7ed0a
     Type: BaseDataVariableType
     DataType: Float
     Description: {"LocaleId":"it-IT","Text":"Metri percorsi dal trasporto"}
-    Value: 4.0
-  - Name: CntOreCiclo
-    Id: g=ad259be65971e6076df1e76f67b7efa2
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 5
-  - Name: CntMinCiclo
-    Id: g=ea54133555a0f95ed33ba4e10d502c8b
-    Type: BaseDataVariableType
-    DataType: Int16
-    Value: 6
-  - Name: CntKwOra
-    Id: g=4d043123ddb02058e092852e882a3712
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 7
-  - Name: CntPezziLav
-    Id: g=10378c50e96d4d9d32dd9c532cbfbc18
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 2
+    Value: 0.0
 - Name: FattoreConverVelocTrasp
   Id: g=bdee94dcacc9693774b96b2434dde339
   Type: BaseDataVariableType
@@ -156,3 +160,8 @@ Children:
   DataType: Float
   Description: {"LocaleId":"it-IT","Text":"Converte da decimi mt/min in decimi di mm/sec"}
   Value: 16.66670036315918
+- Name: LarghTraspMacchina
+  Id: g=8e93b74038b24bbe1747d4ade971b823
+  Type: BaseDataVariableType
+  DataType: Float
+  Value: 1.2999999523162842

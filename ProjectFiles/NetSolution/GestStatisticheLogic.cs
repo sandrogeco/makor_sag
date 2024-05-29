@@ -85,8 +85,8 @@ public class GestStatisticheLogic : BaseNetLogic
         //Controllo se è cambiato il giorno         
         if ((DateTime.Now.Date - ((DateTime)DataUltimoSalvataggio.Value).Date).Days != 0)
         {
-            try
-            {
+            //try
+            //{
                 //Verifico se c'è qualche utente loggato per eseguire le operazioni sul database                                
                 if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value))
                 {
@@ -108,108 +108,92 @@ public class GestStatisticheLogic : BaseNetLogic
                     ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
                     ActionCreaReport.Start();
                 }
-            }
-            catch (Exception ex)
-            {
-                Log.Error("Gestione statistiche", "Errore gestione. Errore: " + ex.Message);
-                return;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Log.Error("Gestione statistiche", "Errore gestione. Errore: " + ex.Message);
+            //    return;
+            //}
             
             DataUltimoSalvataggio.Value = DateTime.Now;
             return;     //ritorno il controllo al chiamante                        
         }
         else if(AvvioApp)
-        {
+        {            
             LoginUtente();
             AvvioApp = false;
-            return;
+            return;            
         }
 
-        try
-        {
-            // creo la stringa per aggiornare la tabella CntProduzione            
-            UpdateUtente(UtenteAttuale.Value.Value.ToString());
-        }
-        catch (Exception ex)
-        {
-            Log.Error("CheckCambioGiornoAndAgiornaDati", "Errore lettura variabili di campo: " + ex.ToString());
-            throw;
-        }
         
+        // creo la stringa per aggiornare la tabella CntProduzione            
+        UpdateUtente(UtenteAttuale.Value.Value.ToString());        
     }
 
     private void LoginUtente()
     {
-        //Disattivo eventuali utenti attivi nel DB
-        myStore.Query("UPDATE CntProduzione SET Attivo = false ", out _, out _);
+        try
+        {
+            //Disattivo eventuali utenti attivi nel DB
+            myStore.Query("UPDATE CntProduzione SET Attivo = false ", out _, out _);
                 
-        int len = myStore.Tables.Get("CntProduzione").Columns.Count;
+            int len = myStore.Tables.Get("CntProduzione").Columns.Count;
 
-        string[] NomiColonne = new string[len]; //header
-        var MatrixValori = new object[1, len];  //valori
+            string[] NomiColonne = new string[len]; //header
+            var MatrixValori = new object[1, len];
 
-        NomiColonne[0] = "Utente";
-        NomiColonne[1] = "Attivo";
-        NomiColonne[2] = "LoginTime";
-        NomiColonne[3] = "LogoutTime";
-        NomiColonne[4] = "LoginDate";
-        NomiColonne[5] = "LarghTrasp";
-        NomiColonne[6] = "CntPezziLav_Start";
-        NomiColonne[7] = "CntPezziLav_Stop";
-        NomiColonne[8] = "CntMetriLav_Start";
-        NomiColonne[9] =  "CntMetriLav_Stop";
-        NomiColonne[10] = "CntMetriQLav_Start";
-        NomiColonne[11] = "CntMetriQLav_Stop";
-        NomiColonne[12] = "CntMetriTrasp_Start";
-        NomiColonne[13] = "CntMetriTrasp_Stop";
-        NomiColonne[14] = "CntOreCiclo_Start";
-        NomiColonne[15] = "CntOreCiclo_Stop";
-        NomiColonne[16] = "CntMinCiclo_Start";
-        NomiColonne[17] = "CntMinCiclo_Stop";
-        NomiColonne[18] = "CntKwOra_Start";
-        NomiColonne[19] = "CntKwOra_Stop";
+            NomiColonne[0] = "Utente";
+            NomiColonne[1] = "Attivo";
+            NomiColonne[2] = "LoginDate";
+            NomiColonne[3] = "LoginTime";
+            NomiColonne[4] = "LogoutTime";
 
-        var reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+            int i = 5;
 
-        MatrixValori[0, 0] = UtenteAttuale.Value.Value;
-        MatrixValori[0, 1] = 1;
-        MatrixValori[0, 2] = DateTime.Now;
-        MatrixValori[0, 3] = DateTime.Now;
-        MatrixValori[0, 4] = DateTime.Now.Date;
-        MatrixValori[0, 5] = reads[0].Value.Value;  //LarghTrasp 
-        MatrixValori[0, 6] = reads[1].Value.Value;  //CntPezziLav_Start 
-        MatrixValori[0, 7] = reads[1].Value.Value;  //CntPezziLav_Stop 
-        MatrixValori[0, 8] = reads[2].Value.Value;   //CntMetriLav_Start";
-        MatrixValori[0, 9] =  reads[2].Value.Value;  //CntMetriLav_Stop";
-        MatrixValori[0, 10] = reads[3].Value.Value;  //CntMetriQLav_Start";
-        MatrixValori[0, 11] = reads[3].Value.Value;  //CntMetriQLav_Stop";
-        MatrixValori[0, 12] = reads[4].Value.Value;  //CntMetriTrasp_Start";
-        MatrixValori[0, 13] = reads[4].Value.Value;  //CntMetriTrasp_Stop";
-        MatrixValori[0, 14] = reads[5].Value.Value;  //CntOreCiclo_Start";
-        MatrixValori[0, 15] = reads[5].Value.Value;  //CntOreCiclo_Stop";
-        MatrixValori[0, 16] = reads[6].Value.Value;  //CntMinCiclo_Start";
-        MatrixValori[0, 17] = reads[6].Value.Value;  //CntMinCiclo_Stop";
-        MatrixValori[0, 18] = reads[7].Value.Value;  //CntKwOra_Start";
-        MatrixValori[0, 19] = reads[7].Value.Value;  //CntKwOra_Stop";
+            var myVariables = new List<RemoteChildVariable>();
+            foreach (var Par in CntProduzPlc.GetNodesByType<IUAVariable>())
+            {
+                myVariables.Add(new RemoteChildVariable(Par.BrowseName));
+                NomiColonne[i] = Par.BrowseName;
+                i++;
+            }
+        
+            MatrixValori[0, 0] = UtenteAttuale.Value.Value;
+            MatrixValori[0, 1] = true;
+            MatrixValori[0, 2] = DateTime.Now.ToString("yyyy-MM-dd");
+            MatrixValori[0, 3] = DateTime.Now;
 
-        myStore.Insert("CntProduzione", NomiColonne, MatrixValori);              // aggiornamento database        
+            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
+            i = 5;
+            foreach (var Par in reads)
+            {
+                MatrixValori[0, i] = Par.Value.Value.ToString();
+                i++;
+            }
+
+            myStore.Insert("CntProduzione", NomiColonne, MatrixValori);              // aggiornamento database
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Gestione statistiche", "Errore login utente. Errore: " + ex.ToString());
+            throw;
+        }
     }
 
     private void UpdateUtente(string Utente)
     {
         try
         {
-            var Reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+            var myVariables = CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList();
 
             // creo la stringa per aggiornare la tabella ricette            
-            StringBuilder query = new("UPDATE CntProduzione SET " +
-                         "  CntPezziLav_Stop ='" + Reads[1].Value.Value +  "'" +
-                         ", CntMetriLav_Stop ='" + Reads[2].Value.Value + "'" +
-                         ", CntMetriQLav_Stop ='" + Reads[3].Value.Value + "'" +
-                         ", CntMetriTrasp_Stop ='" + Reads[4].Value.Value + "'" +
-                         ", CntOreCiclo_Stop ='" + Reads[5].Value.Value + "'" +
-                         ", CntMinCiclo_Stop ='" + Reads[6].Value.Value + "'" +
-                         ", CntKwOra_Stop ='" + Reads[7].Value.Value + "'");            
+            StringBuilder query = new("UPDATE CntProduzione SET Attivo = true");
+
+            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
+            foreach (var Par in reads)
+            {
+                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
+            }
 
             query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");
 
@@ -217,41 +201,37 @@ public class GestStatisticheLogic : BaseNetLogic
         }
         catch (Exception ex)
         {
-            Log.Error("UpdateUtente", "Errore lettura variabili di campo oppure aggiornamento database: " + ex.ToString());
+            Log.Error("Gestione statistiche", "Errore update contatori utente . Errore: " + ex.ToString());
             throw;
         }
     }
 
     private void LogoutUtente(string Utente, DateTime LogoutTime)
-    {
+    {        
         try
         {
-            var Reads = CntProduzPlc.ChildrenRemoteRead().ToList();
+            var myVariables = CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList();
 
             // creo la stringa per aggiornare la tabella ricette            
-            string query = "UPDATE CntProduzione SET Attivo = false, LogoutTime = '" + LogoutTime.ToString("s") + "'" +
-                         ", CntMetriLav_Stop ='" + Reads[1].Value.Value + "'" +
-                         ", CntMetriQLav_Stop ='" + Reads[2].Value.Value + "'" +
-                         ", CntMetriTrasp_Stop ='" + Reads[3].Value.Value + "'" +
-                         ", CntOreCiclo_Stop ='" + Reads[4].Value.Value + "'" +
-                         ", CntMinCiclo_Stop ='" + Reads[5].Value.Value + "'" +
-                         ", CntKwOra_Stop ='" + Reads[6].Value.Value + "'" +
-                         " WHERE Utente = '" + Utente + "' AND Attivo = true";
+            StringBuilder query = new("UPDATE CntProduzione SET Attivo = false, LogoutTime = '" + LogoutTime.ToString("s") + "'");
 
-            //foreach (var Par in CntProduzPlc.ChildrenRemoteRead(CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList()))
-            //{
-            //    query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
-            //}           
+            var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
+            foreach (var Par in reads)
+            {
+                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
+            }
 
-            myStore.Query(query, out string[] header, out object[,] resultSet);
+            query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");
+
+            myStore.Query(query.ToString(), out string[] header, out object[,] resultSet);
+
+            ResetCnt();     //Faccio il reset dei contatori
         }
         catch (Exception ex)
         {
-            Log.Error("LogoutUtente", "Errore lettura variabili di campo oppure aggiornamento database: " + ex.ToString());
+            Log.Error("Gestione statistiche", "Errore logout utente. Errore: " + ex.ToString());
             throw;
-        }
-
-        //ResetCnt();     //Faccio il reset dei contatori
+        }        
     }
 
     private void ResetCnt()

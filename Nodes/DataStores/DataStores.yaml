@@ -243,106 +243,106 @@ Children:
         Type: BaseObjectType
         Children:
         - Name: LocalTime
-          Id: g=4d0ef28533e50cd40421ec01893fd9ad
+          Id: g=1bdb78e1e4914d2b5011230e69270182
           Type: StoreColumn
           DataType: TimeZoneDataType
         - Name: 'ActiveState_it-IT'
-          Id: g=2032eeb2878b73f142f235ada1738df4
+          Id: g=a2b2dc3c59928c6f1e377230707e19ab
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_en-US'
-          Id: g=ffe8056be1fbf8bdb91aa0f979a54785
+          Id: g=94a773a42a6778c1d5b4b6ffe12c68e3
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_de-DE'
-          Id: g=9a4b61617ed9da574cf2a1f7728c295e
+          Id: g=49ece089270e181ca6b3a323bbb13e46
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_fr-FR'
-          Id: g=12fc074c8960a0ddc85b7124898e6649
+          Id: g=aa45f01398123e256dbacd6f706f4954
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_es-ES'
-          Id: g=f47e17074e20d26d696eafd78cbdca38
+          Id: g=b1f5df6f0023b40d209fe333ca3a5a4e
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: ConditionName
-          Id: g=5c6068ae6de6107832e32c4764fd8ba4
+          Id: g=05d5f992b5c8ebaa2ccfd515712d73da
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_it-IT'
-          Id: g=fb387c6a0f309f6df911fea71d117960
+          Id: g=05d22a83bbbf2cff4429343ab5dbc663
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_en-US'
-          Id: g=b446755590bcca06f404c9cd2f786ce5
+          Id: g=ce4f469e854db958d40768e99164bb6b
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_de-DE'
-          Id: g=795de6dffdbd0a990a9a28bc5ce9f53b
+          Id: g=fa9f3922290d1a2bc74318c41a8801e8
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_fr-FR'
-          Id: g=2fabcb54e87f22a9f04f583cd61cd0bb
+          Id: g=7586656189a45ee8b8e5d9fc52fb0c7a
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_es-ES'
-          Id: g=e3c8186aeb086db793cb804eece06588
+          Id: g=eb5af7e16455b6c2bfb476ddd6126183
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Time
-          Id: g=4d5340819e8022946e503d735edd221d
+          Id: g=f0fe3d21ba04b3bf91b1e8c0f7ed77b9
           Type: StoreColumn
           DataType: UtcTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: 'AckedState_it-IT'
-          Id: g=ad549024c8ea5276841b81d16846d962
+          Id: g=be5e833f080ae31b0443f8cc6700e63a
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_en-US'
-          Id: g=860a2ab0d568b88121c05b5a08f17fb1
+          Id: g=19a8f7de7d7e41560e03db5baa25fecb
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_de-DE'
-          Id: g=d08d7132bb7d319ff02fa14d3ce66393
+          Id: g=bf50cc7ef9e8c74ed62559fa2509dd93
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_fr-FR'
-          Id: g=ed0fd50502311eb299d7b4c8d1e68f56
+          Id: g=b416115279fae9913cbb81e74a025607
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_es-ES'
-          Id: g=63d54f37dd4efe3941fecd2d0744f641
+          Id: g=cff5c45ccf51277373a19cbe21fd64d6
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: SourceName
-          Id: g=143fc8e6ba979c51dc5c5b2786e6df7e
+          Id: g=bfac8dcd1fb2a690823bc84c152922ab
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Severity
-          Id: g=0dd51b0d25be0bba2f1b840df6e9c2a2
+          Id: g=ad7809cbb19f46ef71a9229606478314
           Type: StoreColumn
           DataType: UInt16
           Value: 0
     - Name: CntProduzione
-      Id: g=6b7576f1683c211ddf63580c29c704d8
+      Id: g=8faa6bdc17327c08e45b82c40daef2ce
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -358,109 +358,79 @@ Children:
         Target: ns=15;i=20
         Direction: Forward
       - Name: Columns
-        Id: g=2952f708eeffc01986747b4e657de4b2
+        Id: g=5b45f892d363c033aec4a85471f17353
         Type: BaseObjectType
         Children:
         - Name: Utente
-          Id: g=a2118b07ce4d10c1162a4674e9353f12
+          Id: g=b39a2589018e45ba3d39163086773994
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Attivo
-          Id: g=0e40c212596e23daf5b7d56c2bba5002
+          Id: g=769b415e07dad3b05ff3302f34a1eab4
           Type: StoreColumn
           DataType: Boolean
           Value: false
+        - Name: LoginDate
+          Id: g=81dbf82d5d69da79d20a0248b7502e06
+          Type: StoreColumn
+          DataType: String
+          Value: "1990-01-08"
         - Name: LoginTime
-          Id: g=7fd8c10bb6d4a7693afc228fec786048
+          Id: g=9f8716a4ca63b93674c47852a5de00ed
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: LogoutTime
-          Id: g=bafd09008c4144457033b59ba9412516
+          Id: g=013d61074e12b2a76ae212c15a46669d
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
-        - Name: LoginDate
-          Id: g=c3cd1943327b36944fff293d193b55da
-          Type: StoreColumn
-          DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
-        - Name: LarghTrasp
-          Id: g=376c0e2f943821bd30c3acd35ab4bf32
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntPezziLav_Start
-          Id: g=2a519458da5df29327f0f9951c0f43a7
+        - Name: CntPezziLav
+          Id: g=c0f962878af4255b3d4b6dd82da6a8a0
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntPezziLav_Stop
-          Id: g=ae7230cae11b744aa781efc0926c303b
+        - Name: CntMetriLav
+          Id: g=d700fb72b2bee9fa6af862ff38b92198
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: CntMetriQLav
+          Id: g=2c2c0f817bff70036e7e2bfb3d36847c
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: CntOreCicloOn
+          Id: g=b54aba06cd3c7278d7e1f93db314d51e
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntMetriLav_Start
-          Id: g=baf8ecdd0c79ff3574a9bccf5d5fbe40
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriLav_Stop
-          Id: g=88b3cf2b6ceb1e8a06a3193be6894a49
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriQLav_Start
-          Id: g=c45c4895c6da5f6c029544671b7bb1d1
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriQLav_Stop
-          Id: g=32384bb973c0d60e13d3965cf54288c4
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriTrasp_Start
-          Id: g=7f9864552aa199603d4d8d8e78d461b4
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriTrasp_Stop
-          Id: g=dad4cec421806d1a9577e2db2ed01dba
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntOreCiclo_Start
-          Id: g=090e7d16a4d2989b157823e698351208
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: CntOreCiclo_Stop
-          Id: g=a239b7203f80b7600f558c6ab1a4c070
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: CntMinCiclo_Start
-          Id: g=e1b042847fd2cf95cb34829b2b9745df
+        - Name: CntMinCicloOn
+          Id: g=7b5c1d895aea2c4ca818e1d5388cbfd5
           Type: StoreColumn
           DataType: Int16
           Value: 0
-        - Name: CntMinCiclo_Stop
-          Id: g=b88d3d11c534d0cac26cdc8a16c7006e
+        - Name: CntOrePowerOn
+          Id: g=467ae67a62d26ad0c34a5b16a5775f70
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
+        - Name: CntMinPowerOn
+          Id: g=e8111c45ff8dfeeed4e8665b387ebca1
           Type: StoreColumn
           DataType: Int16
           Value: 0
-        - Name: CntKwOra_Start
-          Id: g=e122b4f831f02168a6df49378013839a
+        - Name: CntKwOra
+          Id: g=0f959673c1a32ea5175bb5d7daf2ba5f
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntKwOra_Stop
-          Id: g=8d932d93789ddaba0cfb7d5dd77c24fe
+        - Name: CntMetriTrasp
+          Id: g=7ef45b9da4c198395996209cd4830810
           Type: StoreColumn
-          DataType: Int32
-          Value: 0
+          DataType: Float
+          Value: 0.0
   - Name: MaxColumnNameLength
     Id: g=bfda81c1516dec6e39a10a051332d18f
     Type: BaseDataVariableType
@@ -952,7 +922,7 @@ Children:
           DataType: String
           Value: ""
     - Name: CntProduzione
-      Id: g=6b474b3befbc3d08dfb1f85d109cd1f6
+      Id: g=320d73c8c361d18abab0cd7d8ea28cf0
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -968,111 +938,81 @@ Children:
         Target: ns=15;i=20
         Direction: Forward
       - Name: Columns
-        Id: g=a977c223d0409d881facf5e01ea68bab
+        Id: g=9ac2a7b3a725ed57b507c1e786fe534d
         Type: BaseObjectType
         Children:
         - Name: Utente
-          Id: g=dd450a135ac1a0dfdde274fee372e334
+          Id: g=d7aff96b6c7de773a2d1e25f97957f06
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Attivo
-          Id: g=1df19e4437dfd66d97645bbc0f602f3c
+          Id: g=d3c76bfcc690006366d580cf5d75d09e
           Type: StoreColumn
           DataType: Boolean
           Value: false
+        - Name: LoginDate
+          Id: g=cb6000c62cb6ed0962d0e67473103f8b
+          Type: StoreColumn
+          DataType: String
+          Value: "1990-01-08"
         - Name: LoginTime
-          Id: g=91fc897ba97b24d6b7909ee90fd66454
+          Id: g=34b08ce0d3f23f6534d2c0aac67ca211
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: LogoutTime
-          Id: g=e82cad9dd07caa027d16bcd85c04e312
+          Id: g=d946f6e2e55e88d6a27d323fe435f716
           Type: StoreColumn
           DataType: DateTime
           Value: "1601-01-01T00:00:00.0000000"
-        - Name: LoginDate
-          Id: g=9f095c9bffe2f30eb59973f8d5771aaa
-          Type: StoreColumn
-          DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
-        - Name: LarghTrasp
-          Id: g=33d2e3efbd89c29d442dd2171d62b59d
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntPezziLav_Start
-          Id: g=20780fd51da22d063310914ebdcbffb0
+        - Name: CntPezziLav
+          Id: g=395c1454469d7ed290ce20bfcc4bf594
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntPezziLav_Stop
-          Id: g=b4cc66e7abde5ada8c1ca1518c3ab91e
+        - Name: CntMetriLav
+          Id: g=e1512cdc1fe6921ba2d8bcbea5851b6e
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: CntMetriQLav
+          Id: g=cb4cfb4c12f1ee0cf92e94a9c49c8b6a
+          Type: StoreColumn
+          DataType: Float
+          Value: 0.0
+        - Name: CntOreCicloOn
+          Id: g=d270f301db0fb6e63cb2163d2f6fbe6f
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntMetriLav_Start
-          Id: g=b38fe8e4a25950bd712485365a3026c9
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriLav_Stop
-          Id: g=103972f4556f97844fc37e4ffa59f85d
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriQLav_Start
-          Id: g=80bdd1a69546167a8961f6bc326b7de9
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriQLav_Stop
-          Id: g=d17657e2b0b271d67709d2d5c8ceb7e8
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriTrasp_Start
-          Id: g=747c8635b4443227ff93fe8e02069131
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntMetriTrasp_Stop
-          Id: g=5c620069ad5271895ef7f09f83e457db
-          Type: StoreColumn
-          DataType: Float
-          Value: 0.0
-        - Name: CntOreCiclo_Start
-          Id: g=6b11aeb32f2ba9d4f5b369b29e429585
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: CntOreCiclo_Stop
-          Id: g=76f130928aa5292b67fd4c0eec127fbe
-          Type: StoreColumn
-          DataType: Int32
-          Value: 0
-        - Name: CntMinCiclo_Start
-          Id: g=00ee2e6046ecb05cec6ffb3c53a0b8cf
+        - Name: CntMinCicloOn
+          Id: g=989b0a002843410e90a23b4759bfff43
           Type: StoreColumn
           DataType: Int16
           Value: 0
-        - Name: CntMinCiclo_Stop
-          Id: g=e2ea073d6b5e14a6312d6e5c39a5c5f8
+        - Name: CntOrePowerOn
+          Id: g=18ec37c0c5c827eb02b3e3c542154818
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
+        - Name: CntMinPowerOn
+          Id: g=ee5a1e3c3ccea62dde470133ba4c7b5f
           Type: StoreColumn
           DataType: Int16
           Value: 0
-        - Name: CntKwOra_Start
-          Id: g=e4ab9610b67668a67ffff5a35b8cf0b3
+        - Name: CntKwOra
+          Id: g=311c19a2c2855446cd6fbced736d6dff
           Type: StoreColumn
           DataType: Int32
           Value: 0
-        - Name: CntKwOra_Stop
-          Id: g=d5a1bb26591ddeccd2fdef03a0e7f619
+        - Name: CntMetriTrasp
+          Id: g=a40de5bf9b1849e8148e3eed540d0d70
           Type: StoreColumn
-          DataType: Int32
-          Value: 0
+          DataType: Float
+          Value: 0.0
       - Name: RecordLimit
-        Id: g=aa6f5a23c389e5bad2c24775fb06b586
+        Id: g=811d2f0c995e5f854e07ca4ab0a0c319
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: Optional
