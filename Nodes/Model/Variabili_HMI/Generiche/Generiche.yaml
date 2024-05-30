@@ -27,17 +27,17 @@ Children:
     Id: g=b08e165d158ce1eb93b0112aa4651cbf
     Type: BaseDataVariableType
     DataType: String
-    Value: "00"
+    Value: "01"
   - Name: SwRev_MinorRelease
     Id: g=a03452ab76f419054016e6e3aa2bd90b
     Type: BaseDataVariableType
     DataType: String
-    Value: "01"
+    Value: "00"
   - Name: SwRev_Build
     Id: g=9bc2b209e9416cbe8ed7fc0ca5ced542
     Type: BaseDataVariableType
     DataType: String
-    Value: "002"
+    Value: "000"
   - Name: RevHw
     Id: g=e64223d89fbcccf8b81d7c6336567db0
     Type: BaseDataVariableType
