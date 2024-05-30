@@ -13,12 +13,13 @@ using UAManagedCore;
 
 public class DBRicetteToCSV : BaseNetLogic
 {
-	/* 
-	* Script che esporta/importa ricette su/da un file cvs
-	* viene salvato: NomeRic, Desrcizione	per la tabella Ricette/RicettePiastra
-	* viene salvato: PercorsoTag, Valore	per la tabella RicetteDettagli/RicettePiastraDettagli
-	* Nel caso di importazione di ricette gia esistenti le sovrascive con i nuovi valori
-	*/
+
+	/// <summary>
+	/// Script che esporta/importa ricette su/da un file cvs
+	///	viene salvato: NomeRic, Desrcizione per la tabella Ricette/RicettePiastra
+	/// viene salvato: PercorsoTag, Valore per la tabella RicetteDettagli/RicettePiastraDettagli
+	/// Nel caso di importazione di ricette gia esistenti le sovrascive con i nuovi valori
+	/// </summary>
 	[ExportMethod]
 	public void ToCSV()
 	{
@@ -76,10 +77,10 @@ public class DBRicetteToCSV : BaseNetLogic
 		String[,] fileContent = new String[lines.GetLength(0), lines[0].Split('\t').GetLength(0)];      //Creo l'array con le dimensioni giuste dove verrà salvato il contenuto del file
 
 
-		for (int i = 0; i < fileContent.GetLength(0); i++)			                //Ciclo che scorre tutte le linee del csv
-		{														                    //salvando tutto dentro a l'array bidimensionale fileContent
+		for (int i = 0; i < fileContent.GetLength(0); i++)                          //Ciclo che scorre tutte le linee del csv
+		{                                                                           //salvando tutto dentro a l'array bidimensionale fileContent
 			for (int j = 0; j < fileContent.GetLength(1); j++)
-				if (lines[i].Split('\t').GetLength(0)>0)							//Controllo che la riga non sia vuota
+				if (lines[i].Split('\t').GetLength(0) > 0)                          //Controllo che la riga non sia vuota
 					fileContent[i, j] = lines[i].Split('\t')[j];
 		}
 
@@ -90,20 +91,20 @@ public class DBRicetteToCSV : BaseNetLogic
 
 		var tempName = "";
 		String idRic = "";
-		
-		 /*
-		 *	Scorro tutto il contenuto del file, quando trovo un nome(ricetta) diverso (anche all'inizio visto che la variabile tempName è vuota)
-		 *	Controllo se esiste nel database, se si lo sovrascivo, altrimenti lo creo, salvandomi l'ID_Ric in entrambi i casi
-		 *	Durante tutto il ciclo mi salvo nell'array bidimensionale i record per la tabella dei dettagli con l'ID_Ric giusto
-		 *	E alla fine li inserisco tutti insieme con una sola query nel database
-		 */	
+
+
+		//	Scorro tutto il contenuto del file, quando trovo un nome(ricetta) diverso (anche all'inizio visto che la variabile tempName è vuota)
+		//	Controllo se esiste nel database, se si lo sovrascrivo, altrimenti lo creo, salvandomi l'ID_Ric in entrambi i casi
+		//	Durante tutto il ciclo mi salvo nell'array bidimensionale i record per la tabella dei dettagli con l'ID_Ric giusto
+		//	E alla fine li inserisco tutti insieme con una sola query nel database
+
 
 		for (int i = 1; i < fileContent.GetLength(0); i++)   //Salto la prima riga perche è l'instestazione
 		{
 			if (fileContent[i, 0] != tempName)
 			{
 				MyStore.Query($"SELECT ID_Ric FROM {tableName} WHERE Nome = '{fileContent[i, 0]}'", out string[] header1, out object[,] resultSet1);
-				if (resultSet1.GetLength(0) < 1)
+				if (resultSet1.GetLength(0) < 1)  //La ricetta non esiste
 				{
 					tempRic[0, 0] = fileContent[i, 0];
 					tempRic[0, 1] = fileContent[i, 1];
@@ -113,7 +114,7 @@ public class DBRicetteToCSV : BaseNetLogic
 					MyStore.Query($"SELECT ID_Ric FROM {tableName} WHERE Nome = '{tempName}'", out string[] header2, out object[,] resultSet2);
 					idRic = resultSet2[0, 0].ToString();
 				}
-				else
+				else   //La ricetta è gia presente sul DB
 				{
 					idRic = resultSet1[0, 0].ToString();
 					var date = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss");

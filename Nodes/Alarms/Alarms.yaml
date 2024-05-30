@@ -16,7 +16,7 @@ Children:
     Id: g=c2f0d42af7e41a475beec704a8b35116
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: "ns=46;%PROJECTDIR%/Test.csv"
+    Value: "ns=46;%PROJECTDIR%/VarAlm&Traduz_tab_Good_new.csv"
   - Name: CharacterSeparator
     Id: g=a1530a9c1c926ce9b538347affb37208
     Type: BaseDataVariableType
@@ -214,7 +214,7 @@ Children:
     Id: g=a0408d32e52f2f62ea0e791dfc2f5f73
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"Errore Comunicazione con PLC"}
+    Value: {"LocaleId":"it-IT","Text":"Errore Comunicazione con PLC"}
   - Name: Severity
     Id: g=fe3016a116d23d5db92f4ddc6039d8fc
     Type: BaseDataVariableType

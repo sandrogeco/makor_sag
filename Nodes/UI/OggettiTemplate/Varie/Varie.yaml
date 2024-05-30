@@ -7883,7 +7883,7 @@ Children:
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
-              Value: {"NamespaceIndex":46,"TextId":"A_1"}
+              Value: {"LocaleId":"it-IT","Text":"A"}
         - Name: TxtBox_Abilitato
           Id: g=56f7912c7abbd716d37ffa0cadeb090f
           Type: BaseDataVariableType

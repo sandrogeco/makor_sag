@@ -8837,7 +8837,7 @@ Children:
         Id: g=15a8c17f22eaec1164a66e47936dcf66
         Type: BaseDataVariableType
         DataType: ResourceUri
-        Value: "file:///Z:/SW PLC/Pannello/Next/2024/HMI - FTOptix/Hmi_Next_R00A_00_003/ProjectFiles/Images/SimbVari/SimbVentEstr.svg"
+        Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbVentEstr.svg"
       - Name: Width
         Id: g=209902990798888f558cd2c265e010a4
         Type: BaseVariableType
@@ -9091,6 +9091,12 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: ImagePath
+          Id: g=c08aa707ca173ce19d62ddbe0fc21c01
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ModellingRule: Optional
+          Value: ""
       - Name: LeftMargin
         Id: g=1e5c8c1a017eb9f13bea2817b83da0e2
         Type: BaseVariableType

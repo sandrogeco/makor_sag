@@ -1,9 +1,9 @@
 Name: GvCarta
-Id: g=6306e2e5e4164def8bb70510dab631a8
+Id: g=0334c3ee98284571be3367826a7dd64d
 Type: FolderType
 Children:
-- Name: bAlmConnCarta
-  Id: g=db1c04710f114748b60dbb4b8aa237f0
+- Name: GvCarta_bAlmConnCarta
+  Id: g=8181ff9227fa470abe2e5ced3f4efa19
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -16,60 +16,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=ff8f8589bb4869f6fdc5650cc0e553f2
+    Id: g=3ca91b778b06e9a69da24a19b7eee292
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=5352d35190e601ef92c81753cf05e26b
+    Id: g=b9aee408934a8960ac89790ba0bf85dd
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=81460f8cb6c14951a5277616bedf95f8
+      Id: g=324fcdb5de3649119ed47703f93ba8c5
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmConnCarta"
       Children:
       - Name: Mode
-        Id: g=b425ac374ee34578a8fb1c3867caf1a9
+        Id: g=f3669225c29d406ea490ea32e2b44500
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=feabc13a386c07adcb7d7452cdf8b5cb
+    Id: g=fff04d165175239eafb6db3ebc829381
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=e3089ad4bd323c25a2bc6e3cf3eba3f3
+    Id: g=a5ca127a40366e6ef78627f05c35bd89
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=a20bb1e0cb36fb8396702fa1a5b0cbb1
+    Id: g=65fe0bdb2dbc350eb898455d28fd18e1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=d9f27e4cbcf9c62bdf596e7d83de1f33
+    Id: g=0e5da5c814e6c3e1c84337f41ec2f029
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=f1af215d84a95a46d80d4695ee093855
+    Id: g=b27d830580d549d2d19737f2e6d3e000
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=bfde35de4b98d9490f8e29aaab6f6ea2
+    Id: g=ad358aec476e09498826cbfcacb299f1
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmConnCarta"}
-- Name: bAlmEnc
-  Id: g=339530fb43ed4973877cf9a635c04fe1
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmConnCarta"}
+- Name: GvCarta_bAlmEnc
+  Id: g=de95d6a546c742a6a0f2dff2399cb87f
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -82,60 +82,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=46e64bc71e69ddf78aff05f7b4d89b98
+    Id: g=c1c8d9039e19455dbd9c7f3fe766b2f1
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=e2c104163b8a048d020fb963eff5fccc
+    Id: g=6652e152e9f606decb2824f5bfccbc35
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=24dfea465a954b7e8809ef3dde6f82b2
+      Id: g=3e37f6a21ac745a8966f34d2c822e5c8
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmEnc"
       Children:
       - Name: Mode
-        Id: g=be26bcfc8c8e4386962cc975315e6957
+        Id: g=9a3ead48d4214c26877a281549269256
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=214d8a20cdf43984a03800f9f9dde274
+    Id: g=fd97615515c7f7f7f890dca189f22845
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=c50b2e63804c2227b3df4294aae27050
+    Id: g=da3030051c0fa3466dc6756bee5ad9a9
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=962e4b097c297646c023da048c76b218
+    Id: g=c5b1a7cc6932545931de5884ca54919f
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=508d0bf8b71c92cb1f7aa2ca553d42df
+    Id: g=89ace97778b891d93b8b9f7108cfada1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=4cfa97eeca920a298577a622cbca38d3
+    Id: g=943ba5d224632936f21e34f1e388ff8c
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=176d50248da34425b152f9587dec730c
+    Id: g=6374f1afbc9dd13482ffcb2902c3d724
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmEnc"}
-- Name: bAlmErrComEnc
-  Id: g=ed46fac13c17477e89a86100bb20173a
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmEnc"}
+- Name: GvCarta_bAlmErrComEnc
+  Id: g=ecdf67372e8c48788da907dc5e2ad7ce
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -148,60 +148,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=2af9a3780445761cb315b466202d2d57
+    Id: g=b5326c8ca69c49c6e87ab4c8589a2570
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=f5300629e2780da2bf189d3643347a9f
+    Id: g=b2fda6015caa5562eda28b15b85f8530
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=445710632ab94b08b9edb9fe8d2d2bb6
+      Id: g=a63422bfd6f84ef2b79636d0e5318d34
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmErrComEnc"
       Children:
       - Name: Mode
-        Id: g=b9b6900ab12b46fb8bd7ef487255a692
+        Id: g=44a2dd612648449d9e5f2c111d83254d
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=236da84856a34f0a78c5f3c8d4bf605c
+    Id: g=a09313dad4856fe236033b79e397ea04
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=3aaf32be263c83be4bdd8cfcc987bcbe
+    Id: g=51e4a8fbe892684de3c9b9155ea197c5
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=845d7d236d583635550ce4011aa08bcf
+    Id: g=164f6955d6f74bc8ec602183f6096af9
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=0dc56d517e3d3068dcf4cc0a3a998451
+    Id: g=a64678a5e37c8bfd178f0f3d80f0e945
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=f1315f6ca760f4a1b51c6b10d8405eda
+    Id: g=781db1d5da916dcfebb92a6d2700c18f
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=17d04cc2d9ed782456eb6f2097743230
+    Id: g=02c6a435bef9f8c7561202ce49db200f
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmErrComEnc"}
-- Name: bAlmFcSportCarta
-  Id: g=7a357a59718b46719740103627e2fd77
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmErrComEnc"}
+- Name: GvCarta_bAlmFcSportCarta
+  Id: g=0988c0da359e4709bf70b8d3b428ca58
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -214,60 +214,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=5a7beb5e7ec2ccc5a158fd8048651a09
+    Id: g=2d03f1042df76fb093300a7a8c352d35
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=18085bdc686849c1da5d63305a3e6931
+    Id: g=ecc4f2552e2753c491077d910c91aef8
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=73619709bf8a4140afedfcd1e74ca998
+      Id: g=e8c940ae721a48b798301f2282ef1a90
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmFcSportCarta"
       Children:
       - Name: Mode
-        Id: g=8bb4dd2071134118b4c4c789fb92681b
+        Id: g=799f250c09fc494bb3dfeb6d9176a0ce
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=7915537b8ea8768d3cec7d688b9f5e4e
+    Id: g=9cf3269b6257fac771a188a02f48b333
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=268b8195b0d69a51dfa448cab2095cfc
+    Id: g=13cd2bb4fda865fb52e5cb9c59ad017b
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=aad6621bb5997e43055b815411025902
+    Id: g=5a84e1451cac6f3da68f1124c96f0351
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=3303770e0d87c21f8772c6bb3ab76d6d
+    Id: g=8ff4695ec06c7980c51c4eb80f5f1a9e
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=d6b2b0ae7b16044ac5bb55a768e0e44a
+    Id: g=034ea575b5c84de08dea58869ab78a7c
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=de550655f234a269c9d8234cfd4a29ab
+    Id: g=734bd3b4f618eafa79be8dda6cd41dbb
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmFcSportCarta"}
-- Name: bAlmFltConnCarta
-  Id: g=3fc902122be64478a2921e7a07a2b6de
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFcSportCarta"}
+- Name: GvCarta_bAlmFltConnCarta
+  Id: g=ce9d0d95c44b40d5a0a478d894cdb247
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -280,60 +280,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=9d3464c1ab7626e922eb4d23381a1ff7
+    Id: g=e7b257306f5e8bcee187e3bfaff4eee8
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=3f708f7152360b9368ea5b006a9ee10a
+    Id: g=788e35090b3adfdaf4686ad2406a68b2
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=c8f517b5277845f29b46dcc131c317c4
+      Id: g=7b14b44a907e4aa995c963522a86629c
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmFltConnCarta"
       Children:
       - Name: Mode
-        Id: g=a5eade67224946aa9109d59c50790951
+        Id: g=755337bc04d54943a1516afff6811f84
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=e6b6624c808a182ddacfecad2c74dccf
+    Id: g=85cc31317b79d0483d66eeff891b6c8c
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=b1323ac6657a286c9da53878bd8b1bd6
+    Id: g=a3ec145b6e88fb6b2700f3c2c10e69d5
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=a8fc85197e2ed81ffd12f174c42ce11d
+    Id: g=7f72af5432d908a106ce5883887ed915
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=250db7cebcf023181e59c59cc4bb46fd
+    Id: g=2bd00fae66dc7fa38631fb1ca11d3b15
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=7b15531269c43785063004791cb1ddf7
+    Id: g=3aa73c0635a51dba12469918cb7710b8
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=2a48a75720f9c7b47e4232fe63ace8a8
+    Id: g=99a14527f07e94f9653d3f7c061dff9f
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmFltConnCarta"}
-- Name: bAlmFltFcSportCarta
-  Id: g=ab393179fc5f4de6a280700a74c05c75
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFltConnCarta"}
+- Name: GvCarta_bAlmFltFcSportCarta
+  Id: g=a11c7026756b4f8d90766543d43dadd0
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -346,60 +346,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=1547c9590c629393a25159f5bf9bb052
+    Id: g=e7163e1c5019ee5b968dd4940e3c554d
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=56e50153dce5aeca69e4624e210f0522
+    Id: g=36338ce21ed4e158e1e6adf944592e48
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=7551cd18607a4ecd85393a6e0139efa7
+      Id: g=d0cb057a7eda4461a838373ae755cd2f
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bAlmFltFcSportCarta"
       Children:
       - Name: Mode
-        Id: g=000b3eced25e4b8b94b5377df732f509
+        Id: g=a41f95f3092b4e0e9e29be984596ff5b
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=6fc4d9a9d3d37144aabdf034664f5aa4
+    Id: g=8cd0f8526ff1ba7ff454810270922522
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=62a959580e279e901be5c9befdee384f
+    Id: g=299482173bb067be47276e34b482ebb3
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=efef0f713218c46e0bc013c2eba7dc2c
+    Id: g=293e7d3ac3f99dbd8c7fdce12996f737
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=5ecbb7d9338d8e1d48f3a922424d0bec
+    Id: g=9a30a9677afb24e05f36fb39b65625a7
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=242fb37fe8b543421675732b1294c1b0
+    Id: g=316c7927319880e0db8db436025bfd24
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=8a4bd949e9d6d1e8dcd8949cf2250e75
+    Id: g=ff48d738348808f01bb1f192b9242633
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bAlmFltFcSportCarta"}
-- Name: bMsgCambCartInCorso
-  Id: g=88fd321ad3664c9ca28e5985ef91fe6b
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFltFcSportCarta"}
+- Name: GvCarta_bMsgCambCartInCorso
+  Id: g=bd8b663ab4d947c296dc91e28ad9d938
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -412,60 +412,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=6c8afc22233d2c213b44e9acaa7a14bb
+    Id: g=29b0874341c1e0811c0d391ae18b99aa
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=4d720a88a7ce904d035d7f8b809d8f65
+    Id: g=417c50397359589bab6846de1b31f40e
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=1021b25230dd41c180954fea75d61cf7
+      Id: g=4cfc3a7a9c674b008c8fafb37b1d622f
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bMsgCambCartInCorso"
       Children:
       - Name: Mode
-        Id: g=9c6b6811a4f9417b95bdc607a2f5804f
+        Id: g=7c022205a59a4470ad0252c19673c7c2
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=63c55a5e56525b64101d0ac0f85ff831
+    Id: g=5a7c263a9f32ffe9dc9300b7a0d9c092
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=3602fc1a708f123f4b10aafdb880bc6f
+    Id: g=278a847fbd97f78473b34d661d03d095
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=345ef11553609bc5e89f2270f310dc39
+    Id: g=5c0bdc132934ac3fcaae574525d5774f
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=a260f16547a638cf23e72f67254f5f48
+    Id: g=fd0bf0dd80b51b0c6bbb0b6bf3e5f1ae
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=9463e9df76b3c4fc814fbadb3710efae
+    Id: g=0e664da2b87d2a4ef5d23a2f91044dca
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1
   - Name: Message
-    Id: g=e650dc27fc999c0233c334e32db57eff
+    Id: g=3e3f4836a4a8accd820f3da7bbd412af
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bMsgCambCartInCorso"}
-- Name: bMsgCartaInEsaurimento
-  Id: g=3c0cd3efb63a44e7a3287af65d79b85c
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgCambCartInCorso"}
+- Name: GvCarta_bMsgCartaInEsaurimento
+  Id: g=b2883c0973b94bacae8dc2f1f6b6e7ad
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -478,60 +478,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=e04e825ea5c0ba59070d096c6d439b61
+    Id: g=510b68822d73dcb1a457ce0bb208dd92
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=1239e57ec0e8265016013621479d931d
+    Id: g=84e016379f57e476b84edb3a9f9f0174
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=8b60e46f144342f088f2a42d6d3c8c83
+      Id: g=b511edad4efb488da42eacebb409b821
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bMsgCartaInEsaurimento"
       Children:
       - Name: Mode
-        Id: g=321415ac38c3491d80034b1d2c842e90
+        Id: g=5cdcfbf285a54743a2a2fdc886f30d5a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=70efec716b20f452a6e79ef2c99605db
+    Id: g=e5d5ea8e9b46b62fa20faedb607969c5
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=ef9cfb76bea257bc45418b5d6d8ed311
+    Id: g=2225a932877cccc79353250b90d2c86d
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=dfd1367b3398424898d504cf474fd3a0
+    Id: g=add6f17a57ec42848e6852fd83c6a3cf
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=fe4ae3624ab256b858155194e312451e
+    Id: g=2b9eaa83b07ebaa61240dfc413dad592
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=6e5d48dc6e2c2740a06767b9bbf7383a
+    Id: g=f1344c3f10bf2f25f5b059b479249669
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1
   - Name: Message
-    Id: g=ec42d1dd5aec9ba24badb53ce1e8399e
+    Id: g=a4edc9a4f7154b2e4b378fe67e7c5f57
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bMsgCartaInEsaurimento"}
-- Name: bMsgSvuotareRecupero
-  Id: g=9883a8bc19e3486ea96a68389916c00c
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgCartaInEsaurimento"}
+- Name: GvCarta_bMsgSvuotareRecupero
+  Id: g=9dec8cafc8314e2eb4b8dbffe5669423
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -544,60 +544,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=3637fe60f6a5ba6cc4d74466417b4eed
+    Id: g=eed45d838672a253c0e15bcfa7b4d2fd
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=28abbb59473b87be52bdc8232a66d2a9
+    Id: g=a6cca154211c99e5c565f6db51b92777
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=1c2658be612b45b0a14858ab5422f8e3
+      Id: g=aaa610450bd2471c93d094df2c0e6265
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bMsgSvuotareRecupero"
       Children:
       - Name: Mode
-        Id: g=40354535f91c44aa88f2fc652553f2bf
+        Id: g=feddbfdd144a4e9682864c6dee8ba62f
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=ece787234c21991caf193724ef07d463
+    Id: g=9707b9bd05dde32930147b0f437c81f6
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=8378686e4e10813165cf3a27e10721bd
+    Id: g=812328fce1a6e83dc843ce2b2518c872
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=795418df5966af5c2957b9e539d3e56e
+    Id: g=b6629b009a88273d2ca5cf886651aa37
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=40e231796d9385519ba9714193c96b9f
+    Id: g=4ecdf9362962a2ae9f55d7a72a7e3f1d
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=c66a11c25a857a7d17ede5a59c7bb97e
+    Id: g=f633d965b4b677a537bdcdeefcb0bee6
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1
   - Name: Message
-    Id: g=73b70205a505dcac81e30ca72ffab1fc
+    Id: g=88ff49840a99fdab8d1818aa8cec8526
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bMsgSvuotareRecupero"}
-- Name: bWrnCartaEsaurita
-  Id: g=ece4b8af72f94490b4f945907dfbeef8
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgSvuotareRecupero"}
+- Name: GvCarta_bWrnCartaEsaurita
+  Id: g=8e71674a395b4fee9f349207755bfe24
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -610,60 +610,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=e330d04bbdca791cab31a5fd43e8343a
+    Id: g=7826a1e6bf19b3fbc9bba9b172265a29
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=f18b970676331f20fd84562b8bba8e33
+    Id: g=6a9de1438492f09d3092c386844d0421
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=9b8c46a18ebe4af3814cb2ba5bcae817
+      Id: g=2fedbd39f09e47aaa49a434d5c50545c
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bWrnCartaEsaurita"
       Children:
       - Name: Mode
-        Id: g=e45f57a07ccf4bd89b304963d6628f64
+        Id: g=3342c6f057db4c8cb81ddc7787cab424
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=26ccb78662e8ff89d18de2e4f37ca247
+    Id: g=98a30d2284aec6b608e61cab43a0d4dd
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=e1b5d86c66d7cf814bc2c81a3fc737e9
+    Id: g=7d6b3003a0d2af01caccb51713d54f9d
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=fb3b21ddeef443c74869b1c7d9283fe8
+    Id: g=6829e421e994fc66a38a2281e6998835
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=1ab502dd154ca4e42de04d1409d9f121
+    Id: g=d6d64be11b01a1e737f76ee7f48f5d12
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=df7412403ff2e2f24c3c5d31596ea8fb
+    Id: g=dda2d61bf65a2adb1b9664d744038b54
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 500
   - Name: Message
-    Id: g=73c988a6b0d3d80abb0e4c3c9c26d911
+    Id: g=a48dc59ed88fa675d3bdf7ffbec72988
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bWrnCartaEsaurita"}
-- Name: bWrnCfgEncNoOK
-  Id: g=8c7ccbc5e0fb49668f2d5fa5daf025c9
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnCartaEsaurita"}
+- Name: GvCarta_bWrnCfgEncNoOK
+  Id: g=397e8679553645e99cd347f2da39255b
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -676,60 +676,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=5d13dec31f8415b97353b37f8f6c1207
+    Id: g=5043aec1c78df0eedbef564600772086
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=98294e4860db03921267908453003c6f
+    Id: g=0e298b74b57182f50ecb372c75189f09
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=ed0f8855c73845c5b28fa1482b584a96
+      Id: g=1b8481ce92e74c0485f7b04b817febf5
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bWrnCfgEncNoOK"
       Children:
       - Name: Mode
-        Id: g=f7000ed924b54a42843500a9e56f0b34
+        Id: g=e75cee651c3a49fca0000b35b222d86b
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=f10107939f2628558a4559308698f526
+    Id: g=aafa2cf708fed0d10a8bb23ffa882e55
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=dead1e612fc78cde80372a3eb91759f7
+    Id: g=5530f85210ef1de04eb3a160b61dd374
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=76e11ec35ec6bfbce654ef7a96e7f9c1
+    Id: g=73d4576e046fd2358ce60fa8419a92e4
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=69f5c6bfa7c6f75d96f3767c08a2f428
+    Id: g=d8e01682e3c1be1ad7950eea99d54eb1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=ebb2b9267f418c9d1efd464dd8bcf552
+    Id: g=40acb716c5e4b42e79a3bab8e297983b
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 500
   - Name: Message
-    Id: g=4b971250bb2b5803771f37147a327489
+    Id: g=18626556be42ef964fa78b6d00e5ec0e
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bWrnCfgEncNoOK"}
-- Name: bWrnRecuperoPieno
-  Id: g=a5b4fe7b3f0b4e69a213e7937d643a33
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnCfgEncNoOK"}
+- Name: GvCarta_bWrnRecuperoPieno
+  Id: g=ce466b7d0edf477dadf42d51cdbb1dff
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -742,60 +742,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=38b49d64c0bfa232258e294c2473d2fe
+    Id: g=b6243bf37fbbaf04ec8aa84f5ab7e174
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=1bb0bee3a793ecd5f810fb9b509e4fef
+    Id: g=244ef64200cc2992eb6104dec4b050e8
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=84a6558b78ba442da2f3ccb0e739d852
+      Id: g=d62a7224111448159f7c0f05cf1549fa
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bWrnRecuperoPieno"
       Children:
       - Name: Mode
-        Id: g=4e62130b346d47f7a306a7a158daf41b
+        Id: g=aa180e417c114fb290671b2c8d9a0926
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=ef115e14018025b815e9128250db72a5
+    Id: g=99db9c6b5a413a6faf7b4c1894e6e841
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=971f8b20536ddae5f8a3eb80a1959519
+    Id: g=ab603f8929c181c6b563966ef9a7a333
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=314771b32189359ce020a459818ba482
+    Id: g=60b1b62bc97cd2187f93aac67f2fced0
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=3d59415b6051a02228af8cb4779f9b55
+    Id: g=9803571c8e874a10f0198e0c8fe9fd73
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=b3d9a4017029959b824ee24487571f24
+    Id: g=5bce255fc2d097cdd3f6482f7609cb6e
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 500
   - Name: Message
-    Id: g=4636915775417e5c17a380c9081324a4
+    Id: g=c9d536a7c2bc754c25cd0e5dd5a51f80
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bWrnRecuperoPieno"}
-- Name: bWrnStrappoCartaIn
-  Id: g=df46d2bf92844df5a21c42f559942e77
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnRecuperoPieno"}
+- Name: GvCarta_bWrnStrappoCartaIn
+  Id: g=63bdca0f64d9468b90c810a7c2d5641d
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -808,60 +808,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=8ae38e8c11f7a17c1459f91fef4d4511
+    Id: g=da41eeb86eaf7fed496a5376863db6ca
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=9b1cd0425980a3cc3f8fc71b936bcf74
+    Id: g=d9a407d5570df2605478e58743659a72
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=969e1269ccdc4385859768579088b455
+      Id: g=c92f7841d596418ea9cb2fc38b8ecad1
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bWrnStrappoCartaIn"
       Children:
       - Name: Mode
-        Id: g=bf36c3bc3751461b8d371207fd0f88e5
+        Id: g=f12f671a3db442689dd823245f0b834c
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=9e545937d25cd2cb0c52883e6c983d42
+    Id: g=ec35148d3fec5b831eba08029867364e
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=2955b197da3aeebb9be958f263fc9892
+    Id: g=7313833478ea95f698553556d0a0451a
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=370a5b0cf8ada6614b52429154edecbb
+    Id: g=23e56871e3f52ac0022cd8745d227e9b
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=910992cd96e7cd735a07e3d91cf4c113
+    Id: g=20f44c83964d24e3f545261cb3114aef
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=e9459e287ad0b8f8ed4f92cfe43a0f38
+    Id: g=e1549f932802cead630e50413f34478d
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 500
   - Name: Message
-    Id: g=d00df4bca585ce63f5a7176eae655920
+    Id: g=dce2cf732480c08114b6ef507265fbb2
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bWrnStrappoCartaIn"}
-- Name: bWrnStrappoCartaOut
-  Id: g=b49ee8e770ff4d0c92f4cc7ab72870d1
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnStrappoCartaIn"}
+- Name: GvCarta_bWrnStrappoCartaOut
+  Id: g=314f8bc540c54b849c66d918a8e66316
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -874,60 +874,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=96b292b155c6c325f5b8aa6b21f33c86
+    Id: g=c175a5223c1b0e281932eaf3e0164d68
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=f7b19a9a10581a755b8e8bf3a33e0991
+    Id: g=a93fe820dde367bf9ab2507ddb53285b
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=6253315d957a474ea49e94b67394d2dc
+      Id: g=657c8ad3d7fd4e69aad67182e808e0a4
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bWrnStrappoCartaOut"
       Children:
       - Name: Mode
-        Id: g=3d0b8b91ebbc47b190e641b6721f8a7c
+        Id: g=4f7eb8d8ca7a4459bfdd0ed67035ef41
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=add3403b0ac4591783969c5ad8eeabcd
+    Id: g=bb46c8ed1f973dc14b3d91be954c9f7c
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=fafb03c503fd48d360980f004686edb9
+    Id: g=746ebcd14e2e574b44aabebe83b2199b
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=cdfbe3a4bfcf6890742817b85a95dbc5
+    Id: g=12aca3891f13e29b6407f9af7ff865a5
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=6fd5cca8dda456d7a3ac5832a02a6ba9
+    Id: g=38b7791c4ad4a5b9b7e6c599116da6a0
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=1e1810325e93e4edc6feab7fe87e75ab
+    Id: g=ac0d52b69b2ccb6a4dbdbe3ffd1ec7cd
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 500
   - Name: Message
-    Id: g=10349b845f946808e99dd5d424b8adbb
+    Id: g=536cdcda9ab5d931d142d6609eb3184e
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"bWrnStrappoCartaOut"}
-- Name: stAspTappAlm_bAlmErrComInv
-  Id: g=b4905ab5ba2945c3ae96ce803a609c31
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnStrappoCartaOut"}
+- Name: GvCarta_stAspTappAlm_bAlmErrComInv
+  Id: g=0a8823a2570e4b499a1b0418ec5145d4
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -940,60 +940,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=548602d5fdbd609124724184064b749a
+    Id: g=4c2b4e2876462ded406606317054d77b
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=552705abfb5996a213b3588263be12c2
+    Id: g=f0701e3221bf63c5e561f1acb3699df6
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=ffa8427375d44da3bdf920daba8244ec
+      Id: g=c3e30f0f90de4209aa50f911aeb64530
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stAspTappAlm/bAlmErrComInv"
       Children:
       - Name: Mode
-        Id: g=d62e7b8817b34443a8d39a8f9554290f
+        Id: g=1e660c1baa6f4358a35b1c73855dc964
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=7141646d56417df290094f345add3217
+    Id: g=cb8f3f61dfe4f9d7a2e24ae6155e0ca1
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=2f65c9a843e352b8280cd67d00ecb442
+    Id: g=e43c0cc4c86f2d45511666988d214411
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=6a03d1a881e53fe2fb74fe5f3ef957fb
+    Id: g=e584b1e5f7dbb0f58a7ab520ef1cc834
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=d970b26a1d924bdb89bf6e6493160cad
+    Id: g=9bb861b22ded5806a348a3b483bc98cc
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=5780358a08bef0313845fd971fed7a70
+    Id: g=9e5d9ba459725a6a59f6bc8a739b6338
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=7305db5e9ea9da53286f507993818b34
+    Id: g=d5b5203288d634955f4f311f9c4db34f
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stAspTappAlm.bAlmErrComInv"}
-- Name: stAspTappAlm_bAlmInv
-  Id: g=45bd3607704b476b8e642a0ded421f83
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmErrComInv"}
+- Name: GvCarta_stAspTappAlm_bAlmInv
+  Id: g=cd32b86a53da4433907579d1d91bf63e
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -1006,60 +1006,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=a918453894b62403b821fd33cbe73d6e
+    Id: g=6dba2819df27cca3eacd41e6119bd7b7
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=7964d01a94c8f2411979f48415c36564
+    Id: g=ec0f1d3f3cbbf628108f9a652ef6915e
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=f2fcf54138eb414f83745d4ff82234ff
+      Id: g=6af81ccf8c09452b9901ddbaac63ed78
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stAspTappAlm/bAlmInv"
       Children:
       - Name: Mode
-        Id: g=3295253868404b7f9ebfb088ea8a47f2
+        Id: g=a08335965714431a9b8b760769b0e841
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=a187c483c81cada47c3064c86d36d1c6
+    Id: g=c420ede32c6bb7808d854e421eaff773
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=393d13a1022f3600c2880c6fe2e9df30
+    Id: g=464e3ffda5fd0ab78f32c4bbd882765d
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=2d17139859e8870866394f5750dcd90d
+    Id: g=7b20c6cd02cebe99918db31d54d780b3
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=11fc5428bbd1839878017c40b9896003
+    Id: g=ae276a28722480842a3e41ae6b742626
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=5de8aa73b7ec718abb17e229b256a23c
+    Id: g=c6a08397865953ed91317aa02053c7e4
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=07d609bbebd6f1650e4ece518816fab1
+    Id: g=f5c339ce819807b250b8dceddda9bfe8
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stAspTappAlm.bAlmInv"}
-- Name: stAspTappAlm_bAlmPto
-  Id: g=64e4a4422e994856966e516290f7c14c
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmInv"}
+- Name: GvCarta_stAspTappAlm_bAlmPto
+  Id: g=585946d031204a70b398de27220067f8
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -1072,60 +1072,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=5bb12fcaf2f569dcfec9a4e44a61a866
+    Id: g=d1724d90561b0eb4f836f5e061f8c428
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=26daa386209752d811a6e8981c99ef0e
+    Id: g=97db3a2d858c91adab74ba1799efdca5
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=b1ab172aae1a40bcbbac1de33cd272c6
+      Id: g=1767132c35fc4d6b920bd6f1a6552d37
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stAspTappAlm/bAlmPto"
       Children:
       - Name: Mode
-        Id: g=7d5257be8a8b45f3822a4ce15ca44e10
+        Id: g=9a91523322a043bf975954dae4c64d03
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=0dbe16f1c53097ce04180bddb275155c
+    Id: g=a398a255f4b7f3edcdaa1be1167cc2c6
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=07ae75d92fcefd6ad52ef8074717ee4a
+    Id: g=59cbc19dbc04eeb127c5e6b30e5964fd
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=7d1668188b409027a6ce9454ab482168
+    Id: g=dcb2109f9e1effc16d607d6014373c73
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=be6232e9b2776b0b4140f2dce524a406
+    Id: g=16e85a6e9e0fcee25b092c1c50b74d06
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=688814e258dbdb9e75e0f931f6559e88
+    Id: g=32b0cef785bed4d54f627728dcccff87
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=24b889c57eb13175182459374eae2373
+    Id: g=2c198e77e8c3bb266b3566486c9b7042
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stAspTappAlm.bAlmPto"}
-- Name: stCartaAlm_bAlmErrComInv
-  Id: g=1ba0d1fd93e448d1a6c530bfc56be2e3
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmPto"}
+- Name: GvCarta_stCartaAlm_bAlmErrComInv
+  Id: g=cb484df1d38142c7a36de78309ca6113
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -1138,60 +1138,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=d18bc5aa8d7af38f0292ebc0ad94fe3f
+    Id: g=c2eb9e2195ae13161bcf48de2009d51e
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=33b25c39d5e7fc8f5a78900468da5241
+    Id: g=537f086dbebd166fce44036d86f0bc80
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=477e7613bf034504ad33c94e21d0fba5
+      Id: g=215d55dbc7854406b0aa448ffb16add8
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stCartaAlm/bAlmErrComInv"
       Children:
       - Name: Mode
-        Id: g=2478954ce23141798b56ac43ba360ec6
+        Id: g=66c41b576aea406fb6788886bce5f014
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=0c3c915fd744306fc644d7f805ccf5d7
+    Id: g=0b60b2086fdcb83010ba5db6a0a063d2
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=a2c45bb47f074bfad076a1ff74c2b10f
+    Id: g=ce8fd6f56cb406da198153d89876631a
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=4a97f4a87f34acc2a752077157d663fb
+    Id: g=47c38dbf39ca424846b7a478a3a57c61
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=7b7c9db73841f598f12088f43999d2b0
+    Id: g=8e3c40b1668fb55129cd9e646dcf12b1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=cd9b9666f79aeaa46fa0551405cb6b7a
+    Id: g=56401f9ab245fb8dafb3b7b54165c0b4
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=6d9d55b9037e68643effa28d2857f620
+    Id: g=03dedae5c29d7835745b717ad6926c2a
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stCartaAlm.bAlmErrComInv"}
-- Name: stCartaAlm_bAlmInv
-  Id: g=be612fa3d5a44713b75a8aaac52d71ac
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmErrComInv"}
+- Name: GvCarta_stCartaAlm_bAlmInv
+  Id: g=d03f39cdb7cb4e77a9f8a77dfa723db2
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -1204,60 +1204,60 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=76e3493c7939a879140cb64699860f06
+    Id: g=ad386ce6ecc756373ae03c8e5a818393
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=8493ac17ebc79b59e4981c5ec33c4d82
+    Id: g=6a54c1650e18028846306342ddd556f1
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=495bd1702ec04e2297908818dfde5e5b
+      Id: g=0f48eaf27b9d405d8b781d955f10c1e2
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stCartaAlm/bAlmInv"
       Children:
       - Name: Mode
-        Id: g=bf377dfcd11b4d9fa73975313698c771
+        Id: g=71d76d3a9579432a97636304a23b84ac
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=236b3751f46921c53dd98cf94e5f7ab3
+    Id: g=b851bc5dd9679486d4d0d7902e529d56
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=06be679dff80571585ca503b6e80dad3
+    Id: g=85bbf0d7edbff30231d9a45133dad0c5
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=53edbd81f99f0ec79761a4d4a3f1dbec
+    Id: g=8f7331e884700480094893b85f6dbc6a
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=ef73e772f4afc461a447a042e14ba907
+    Id: g=970550a0cbc9852389efa818c3073671
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=9ecc48e6d9ea5e8a3be3e68fa8a1a499
+    Id: g=214b13cd6f31cfdc799bbd1ac755d9d9
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=748ae056af4c42fcb4f6533e99532dba
+    Id: g=4fa8eea479fe116bc3289522c59e7f20
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stCartaAlm.bAlmInv"}
-- Name: stCartaAlm_bAlmPto
-  Id: g=20b7797689a8400ab7318bbae66f025b
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmInv"}
+- Name: GvCarta_stCartaAlm_bAlmPto
+  Id: g=48efefaa241e4bc28f1fc518171caec9
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -1270,55 +1270,55 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=b29ba45adcb9e42d4263bcf81048246e
+    Id: g=39d2c92a0397557235099995ad458695
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=7a887569bede6374f75b1ea2143590e0
+    Id: g=92eea6965eac42e507882d99eef0e03e
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=2bd5fb20dd5946ef9881e8d5f4e4e16b
+      Id: g=da14ca628ecc4da3adb2b5ae29b64619
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/stCartaAlm/bAlmPto"
       Children:
       - Name: Mode
-        Id: g=b30cca3268eb4efba7cc950236c2ee9d
+        Id: g=f22a581452ce4608896e14c6b1e5403a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=c0fd07a0ddde5cc0846bd5a065d325bf
+    Id: g=b01f655cbff60fa9e054c8223e06e37b
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=e53d29f343e504b74a1ae3e2de0c0844
+    Id: g=a0aa91602468262f74b00adfc28284c1
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=ec2c997284d70b15e78f72dac42bf534
+    Id: g=6ea0dcc685b7134b957a09bf12156150
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=bcc1f0b99b987cc43088d8fbd2ea961d
+    Id: g=45ccfea7427e7a5245fee61272957823
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=5f4128854d2a9aed869a343abe413ed4
+    Id: g=654c3728fc485667fafbb6f00762089e
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=a9e38242fc9a31c0eb78abf7d44f2c5b
+    Id: g=8399aae921441ee411d16887f033253a
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"stCartaAlm.bAlmPto"}
+    Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmPto"}
