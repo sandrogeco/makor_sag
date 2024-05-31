@@ -3,19 +3,10 @@ Id: g=5afd1b5f3f9764890efba0646dbe1ee2
 Type: ModelCategoryFolder
 Children:
 - File: Types_Var/Types_Var.yaml
+- File: Var_Tapio/Var_Tapio.yaml
 - File: StatoMacchina/StatoMacchina.yaml
 - File: Variabili_HMI/Variabili_HMI.yaml
 - File: VariabiliRicettaProduz/VariabiliRicettaProduz.yaml
 - File: VariabiliRicettaPiastra/VariabiliRicettaPiastra.yaml
-- File: Var_Tapio/Var_Tapio.yaml
 - File: Industry_40/Industry_40.yaml
-- Name: Variable1
-  Id: g=37ba33b0628dc99f0d0100d15f6a2b8f
-  Type: BaseDataVariableType
-  DataType: Boolean
-  Value: false
-- Name: Variable2
-  Id: g=9061435a1b84093a5b98617daf75cb2f
-  Type: BaseDataVariableType
-  DataType: Float
-  Value: 0.0
+- File: GestStatistiche/GestStatistiche.yaml

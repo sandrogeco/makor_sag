@@ -271,7 +271,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [182,6],
+    "Dimensions": [185,6],
     "Body": [
      "","it-IT","en-US","de-DE","fr-FR","es-ES",
      "ActiveState","Stato","Status","Zustand","État","Estado",
@@ -454,7 +454,10 @@ Children:
      "Lavorazione attuale","Lavorazione attuale","Current processing","Aktuelle Bearbeitung","Traitement actuel","Procesamiento actual",
      "La ricetta richiesta dal MES non esiste nel database della macchina","La ricetta richiesta dal MES non esiste nel database della macchina","The recipe required by the MES is not in the machine's database","Das vom MES angeforderte Rezept ist nicht in der Datenbank der Maschine vorhanden","La recette requise par le MES n’existe pas dans la base de données de la machine","La receta requerida por el MES no existe en la base de datos de la máquina",
      "Terminare la lavorazione del n° ordine: {0}","Terminare la lavorazione del n° ordine: {0}","Finish processing the order No.: {0}","Bearbeitung der Auftragsnummer beenden: {0}","Terminer le traitement du n° commande : {0}","Terminar de procesar el Núm. de pedido: {0}",
-     "Avviare lavorazione del n° ordine: {0}","Avviare lavorazione del n° ordine: {0}","Start processing order No.: {0}","Bearbeitung der Auftragsnummer starten: {0}","Lancer traitement du n° commande : {0}","Iniciar a procesar el Núm. de pedido: {0}"
+     "Avviare lavorazione del n° ordine: {0}","Avviare lavorazione del n° ordine: {0}","Start processing order No.: {0}","Bearbeitung der Auftragsnummer starten: {0}","Lancer traitement du n° commande : {0}","Iniciar a procesar el Núm. de pedido: {0}",
+     "Errore attivazione nuovo JOB","Errore attivazione nuovo JOB","Job activation error","","","",
+     "Errore chiusura JOB","Errore chiusura JOB","Job end error","","","",
+     "NoPlcConnection","Connessione PLC assente","PLC connection missing","","",""
     ]
    }
 - Name: Traduz_Oem

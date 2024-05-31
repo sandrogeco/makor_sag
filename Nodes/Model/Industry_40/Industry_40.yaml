@@ -18,64 +18,8 @@ Children:
   Id: g=7e1d7592f3f99e91d717ee1090d1e30b
   Type: BaseDataVariableType
   DataType: Int32
-  Description: {"LocaleId":"it-IT","Text":"0 = No Err; 1 = Recipe not updated;  2 = Recipe not found;"}
+  Description: {"LocaleId":"it-IT","Text":"0 = No Err; 1 = Recipe not updated;  2 = GenericErr;  3 = PlcCommErr; 4 = Recipe not found;"}
   Value: 0
-- Class: DataType
-  Name: LoadNewJobErrCode
-  Id: g=bb6494635ff59761bf33e023ecf459f8
-  Supertype: Enumeration
-  EnumDefinition: 
-   {
-    "Name": "LoadNewJobErrCode",
-    "DataType": {
-     "IdType": 2,
-     "Id": "bb6494635ff59761bf33e023ecf459f8",
-     "Namespace": 46
-    },
-    "Fields": [{
-      "Name": "Value0",
-      "Value": 0,
-      "DisplayName": {
-       "LocaleId": "it-IT",
-       "Text": "NoErr"
-      },
-      "Description": {
-       "LocaleId": "it-IT",
-       "Text": "Nessun errore"
-      }
-     },{
-      "Name": "Value1",
-      "Value": 1,
-      "DisplayName": {
-       "LocaleId": "it-IT",
-       "Text": "RecipeNotUpdated"
-      },
-      "Description": {
-       "LocaleId": "it-IT",
-       "Text": "Ricetta non aggiornata sulla macchina"
-      }
-     },{
-      "Name": "Value2",
-      "Value": 2,
-      "DisplayName": {
-       "LocaleId": "it-IT",
-       "Text": "RecipeNotFound"
-      },
-      "Description": {
-       "LocaleId": "it-IT",
-       "Text": "Ricetta non trovata nel DB"
-      }
-     }]
-   }
-  Children:
-  - Name: ns=0;EnumValues
-    Id: g=22a90880b6f2000ddf44533b88b56511
-    Type: BaseDataVariableType
-    DataType: EnumValueType
-    ModellingRule: None
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"it-IT","Text":"NoErr"},"Description":{"LocaleId":"it-IT","Text":"Nessun errore"}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"it-IT","Text":"RecipeNotUpdated"},"Description":{"LocaleId":"it-IT","Text":"Ricetta non aggiornata sulla macchina"}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"it-IT","Text":"RecipeNotFound"},"Description":{"LocaleId":"it-IT","Text":"Ricetta non trovata nel DB"}}}]
 - Name: i_NewJob
   Id: g=a3521ca6805c9befddba3e4b289d5f83
   Type: stNewJobType
@@ -95,11 +39,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: false
-  - Name: wLoadNewJobErrCode
-    Id: g=9809e9d889cf290d97f396d72c187bad
-    Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
 - Name: o_CurrentJob
   Id: g=a61237f44295f519b3dd4dc7f7a7f266
   Type: stJobInfoType
@@ -124,28 +63,28 @@ Children:
     Type: BaseDataVariableType
     DataType: DateTime
     Value: "1601-01-01T00:00:00.0000000"
-  - Name: dwProcessedSqareMt
+  - Name: rProcessedSqareMt
     Id: g=a253269b9025bb11f69a062cc72f200e
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Float
+    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=185c9c7044f848fbbd845e42fe53c5a0
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntProcessedMt/dCntMt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedMt/rCntMt"
       Children:
       - Name: Mode
         Id: g=00b7151e03fff1fabc72f12674834167
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-  - Name: dwProcessedMt
+  - Name: rProcessedMt
     Id: g=289f7df9e9c0222e2c360027d372e21a
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Float
+    Value: 0.0
   - Name: dwProcessedPcs
     Id: g=a43f881f98cebaa9d6befb43d8a4b457
     Type: BaseDataVariableType
@@ -156,7 +95,7 @@ Children:
       Id: g=132088b130130cc5182fe7820c17728e
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntProcessedPcs/dCntPcs"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedPcs/dCntPcs"
       Children:
       - Name: Mode
         Id: g=9ce33360f49652a5eee9139725958a42
@@ -173,7 +112,7 @@ Children:
       Id: g=74ac5695c2dbb29b7b8ca2d42da92921
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntProducHour/dCntOre"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/dCntOre"
       Children:
       - Name: Mode
         Id: g=e7cc5acc7300f0796d2ddc370514e156
@@ -190,7 +129,7 @@ Children:
       Id: g=c5e6bd0aa772f50607a8397c4e8df0fc
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntProducHour/dCntMin"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/dCntMin"
       Children:
       - Name: Mode
         Id: g=277f0ce49e18bed2965b5027a993eb1c
@@ -221,16 +160,16 @@ Children:
     Type: BaseDataVariableType
     DataType: DateTime
     Value: "1601-01-01T00:00:00.0000000"
-  - Name: dwProcessedSqareMt
+  - Name: rProcessedSqareMt
     Id: g=ab5e198a441870fc22b98efadbeaffe3
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
-  - Name: dwProcessedMt
+    DataType: Float
+    Value: 0.0
+  - Name: rProcessedMt
     Id: g=b8f9ad0c45b3ddd21e18efe1315304a5
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Float
+    Value: 0.0
   - Name: dwProcessedPcs
     Id: g=149e4f2b092f4d4fde21bcaca68226f2
     Type: BaseDataVariableType
@@ -275,3 +214,80 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: false
+- Name: PlcCntRst
+  Id: g=5d64ebdf54fc956868ff0490452c8f06
+  Type: BaseObjectType
+  Children:
+  - Name: RstSquareMtCnt
+    Id: g=83d50009f7085c925bfec7192b5c61a3
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=1c22f976e0b6e346061b2e9fdd3e333f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedMt/bRstCnt"
+      Children:
+      - Name: Mode
+        Id: g=581a7216ebdf391ff12797d40d5b5587
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: RstMtCnt
+    Id: g=1647fb617994e6d193b4bcc120e571da
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: RstPcsCnt
+    Id: g=f3f22dd67d283a79873ab1335bfe3319
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=9c84ee5bda04a9127a7894f9379c4fd1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedPcs/bRstCnt"
+      Children:
+      - Name: Mode
+        Id: g=c5318e43f43e0a2aefa65a2907872788
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: RstProducHourCnt
+    Id: g=cb0c40a4ffceae854138218f782d7aa6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=eb67516c5bd523a76f2ab298efc01725
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
+      Children:
+      - Name: Mode
+        Id: g=5e618f1022401d3efab0434737a7211e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: RstProducMinCnt
+    Id: g=1978d0b2d72986c5f362137486546e99
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Id: g=4e470759d1f4373735f81afdd65a8e82
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
+      Children:
+      - Name: Mode
+        Id: g=fb303e7f1d6e06b9bc652e0aa561c7c6
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2

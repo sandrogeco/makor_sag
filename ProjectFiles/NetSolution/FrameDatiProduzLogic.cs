@@ -1,24 +1,9 @@
 #region Using directives
-using System;
-using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
-using FTOptix.Alarm;
-using FTOptix.UI;
-using FTOptix.NativeUI;
-using FTOptix.WebUI;
-using FTOptix.CODESYS;
-using FTOptix.SQLiteStore;
 using FTOptix.Store;
-using FTOptix.ODBCStore;
-using FTOptix.OPCUAServer;
-using FTOptix.OPCUAClient;
-using FTOptix.Retentivity;
-using FTOptix.EventLogger;
-using FTOptix.CoreBase;
-using FTOptix.CommunicationDriver;
-using FTOptix.Core;
+using System;
+using UAManagedCore;
 #endregion
 
 public class FrameDatiProduzLogic : BaseNetLogic
@@ -43,5 +28,15 @@ public class FrameDatiProduzLogic : BaseNetLogic
         FilterObject.GetVariable("MeseStop").Value = DateTime.Now.Month;
         FilterObject.GetVariable("GiornoStart").Value = DateTime.Now.Day;
         FilterObject.GetVariable("GiornoStop").Value = DateTime.Now.Day;
+    }
+
+
+    [ExportMethod]
+    public void ResetCnt()
+    {
+        NodeId DataBaseNode = Owner.GetVariable("FilterObject/DataBase").Value;
+        var DataBase = InformationModel.Get<Store>(DataBaseNode);
+
+        DataBase.Query("DELETE FROM CntProduzione", out _, out _);
     }
 }

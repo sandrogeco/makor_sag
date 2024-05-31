@@ -3947,42 +3947,6 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCiclo.bSafetyOk"
-    - Name: stCntMtLinStat
-      Id: g=3cedd4bab2ce9755165ac9126346d8c1
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
-         }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=08831e28bba646fabf081dd8aa0fb2b2
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=1c9d08c4d4908ce122f27bd983983411
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntMtLinStat.bRstCnt"
-      - Name: rCntMt
-        Id: g=8f6508884ff50dacb3baedaf3b49f9fb
-        Type: CODESYSTag
-        DataType: Float
-        Value: 0.0
-        Children:
-        - Name: SymbolName
-          Id: g=f647de421c29381b292cf74141ce65cc
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntMtLinStat.rCntMt"
     - Name: stCntMtQuadPar
       Id: g=5e3d7c414163862967245e844cfd3460
       Type: TagStructure
@@ -4019,42 +3983,6 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntMtQuadPar.rCntMt"
-    - Name: stCntMtQuadStat
-      Id: g=86f6049a451e5f7da1a70105f8e3ec7b
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
-         }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=48c8d3ac4fb06d182e0059060960439a
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=4d6d4c77d1210662a91894cdd70e3250
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntMtQuadStat.bRstCnt"
-      - Name: rCntMt
-        Id: g=302fe6d2625bf51f13f423ecf2860874
-        Type: CODESYSTag
-        DataType: Float
-        Value: 0.0
-        Children:
-        - Name: SymbolName
-          Id: g=e48c2cb249d92d3ae6ad57fbad851b75
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntMtQuadStat.rCntMt"
     - Name: stCntMtQuadTot
       Id: g=3ba8b8eefe2b34541b4165e1d987f3e6
       Type: TagStructure
@@ -4138,53 +4066,6 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntOreAccPar.dCntOre"
-    - Name: stCntOreAccStat
-      Id: g=5d1e226dcec2e263110cdd0207187be8
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
-         }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=56b3bb719d77c7389c691f8f8b0674fa
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=806d36b43701165eda3ac4c1886e3cb9
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreAccStat.bRstCnt"
-      - Name: dCntMin
-        Id: g=a8a83c85fd2c4007e42b835884731280
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=d0c04fda49d305a44dc9cd1835757907
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreAccStat.dCntMin"
-      - Name: dCntOre
-        Id: g=7c8210251f6c86013e18cd09ecb17980
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=5123de36ca2e6743b0870a30b64c5169
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreAccStat.dCntOre"
     - Name: stCntOreAccTot
       Id: g=654bb8c611056699185e555a68c8232f
       Type: TagStructure
@@ -4279,53 +4160,6 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntOreProdPar.dCntOre"
-    - Name: stCntOreProdStat
-      Id: g=e9dc3cf1575e3f06f8afc230b44e9509
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
-         }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=0f2bb49e2cf5b51cf8468dc99276983b
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=5bfcd90c19ea7981593d673158a81c61
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreProdStat.bRstCnt"
-      - Name: dCntMin
-        Id: g=312c648fb438d0140d8a268e9d2de934
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=acd2826e73698663768118c713cb603a
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreProdStat.dCntMin"
-      - Name: dCntOre
-        Id: g=67e4900ca1130163fbabdd0fd65b3835
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=a2aedb623657df73d164a356215271a2
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntOreProdStat.dCntOre"
     - Name: stCntOreprodTot
       Id: g=18fd80e6f8184dd215d7154ca41e724a
       Type: TagStructure
@@ -4420,53 +4254,6 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntPezziPar.dCntPcs"
-    - Name: stCntPezziStat
-      Id: g=48927b79903b6f696c94510244203657
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
-         }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=0fe26bb129ffb79a8bb6ce80ad8bb388
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=8487fb89e6433a5e9a158d60a2f214f8
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntPezziStat.bRstCnt"
-      - Name: dCntAppPcs
-        Id: g=f9a4a858cb353026a6adc91432d7fb19
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=74d04b4b1c25884c3379f9de5e815318
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntPezziStat.dCntAppPcs"
-      - Name: dCntPcs
-        Id: g=13c12f101b75084b9e9ef6dc4779d376
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=b75a90e5a38a590666f5766d0ec47293
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntPezziStat.dCntPcs"
     - Name: stCntPezziTot
       Id: g=756267530254d5dc84336c72c646ac4f
       Type: TagStructure
@@ -4514,8 +4301,8 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "Next.GvGen.stCntPezziTot.dCntPcs"
-    - Name: stCntProcessedMt
-      Id: g=b78337e7e88ebaf949c486040a294bb0
+    - Name: stCntSmartFactory
+      Id: g=a1fc75f937aea3f56ad018b9e0d720b8
       Type: TagStructure
       DataType: Structure
       Value: 
@@ -4528,30 +4315,138 @@ Children:
         }
        }
       Children:
-      - Name: bRstCnt
-        Id: g=746aef7ce1ccd967b903a330f07ed5bb
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
+      - Name: stCntProcessedMt
+        Id: g=4dd562190811f6d4557db43c9702a284
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
         Children:
-        - Name: SymbolName
-          Id: g=4902655854ae7fd9765fcc531fff1212
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProcessedMt.bRstCnt"
-      - Name: rCntMt
-        Id: g=4ad3ece28bd174bcf22802f2b9b994a0
-        Type: CODESYSTag
-        DataType: Float
-        Value: 0.0
+        - Name: bRstCnt
+          Id: g=f2b28801c59a176bae74b195c6c95b53
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=858c94a7eb1d1f58e96077d41c1b1439
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProcessedMt.bRstCnt"
+        - Name: rCntMt
+          Id: g=adbe34e9d8bbfd313d779c26925bdee6
+          Type: CODESYSTag
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: SymbolName
+            Id: g=b65605587c82a127e12347f30cbfb25c
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProcessedMt.rCntMt"
+      - Name: stCntProcessedPcs
+        Id: g=8afc2fafa8e58b71cdc9ca44865af98b
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
         Children:
-        - Name: SymbolName
-          Id: g=76a179a09a36406f4a067bc15e2a0836
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProcessedMt.rCntMt"
-    - Name: stCntProcessedPcs
-      Id: g=45ea69c0c83304694592c6bdfd42aa95
+        - Name: bRstCnt
+          Id: g=d7157452a7c26ba40bb452dd0d2f34f5
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=c0806e991e0d8cd0ec992b810b36a3f2
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProcessedPcs.bRstCnt"
+        - Name: dCntAppPcs
+          Id: g=6fdb47d9d5ec2c91cb97359d6ca0789f
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=8ceff6120b83f21c64136ac3e7db05e4
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProcessedPcs.dCntAppPcs"
+        - Name: dCntPcs
+          Id: g=49b6d8a31fbefa8573efcaf556e5ded6
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=77a6290dddeb56920f3ec1ec665d2a40
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProcessedPcs.dCntPcs"
+      - Name: stCntProducHour
+        Id: g=5915e9314591622d577e0fd4469143ba
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: bRstCnt
+          Id: g=3d1f4fd84690d1c5781eb98571a70f42
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=8d15476aa92e792193de00a441f9bb51
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProducHour.bRstCnt"
+        - Name: dCntMin
+          Id: g=f52a61f676683ed00bb91527c3fd0418
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=8a849ce0be7e60d74b08ffc41ece3393
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProducHour.dCntMin"
+        - Name: dCntOre
+          Id: g=7c7ba9ee295ef9ce70402e7e48077fba
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=38c33f0e96bb2f20455ee23ed49aa3fc
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntSmartFactory.stCntProducHour.dCntOre"
+    - Name: stCntStatistic
+      Id: g=2fca4098a81e1bb9949ff49a2d9185c0
       Type: TagStructure
       DataType: Structure
       Value: 
@@ -4564,86 +4459,255 @@ Children:
         }
        }
       Children:
-      - Name: bRstCnt
-        Id: g=11984bc0d87651940d040a13b83a8294
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
-        Children:
-        - Name: SymbolName
-          Id: g=116bf086e07b6badbc892232cf7486ba
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProcessedPcs.bRstCnt"
-      - Name: dCntAppPcs
-        Id: g=525ffe8f9752c5d4f1279ac577995c78
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=9b700d9fdb324a141e87f31475684590
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProcessedPcs.dCntAppPcs"
-      - Name: dCntPcs
-        Id: g=b121f7c41af5a5428bb76d1560ffe25b
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
-        Children:
-        - Name: SymbolName
-          Id: g=d28f411468e2f1a0a4433ace1874c744
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProcessedPcs.dCntPcs"
-    - Name: stCntProducHour
-      Id: g=cd928e9277286b3f00f193ab218b8559
-      Type: TagStructure
-      DataType: Structure
-      Value: 
-       {
-        "Type": 22,
-        "Body": {
-         "TypeId": {
-          "Id": 22
+      - Name: stCntMtLinStat
+        Id: g=3a07bc59d1a3979c9a6bc2f73fe1c8df
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
          }
-        }
-       }
-      Children:
-      - Name: bRstCnt
-        Id: g=27c9024f3c2f949c7625d5dd09f548cc
-        Type: CODESYSTag
-        DataType: Boolean
-        Value: false
         Children:
-        - Name: SymbolName
-          Id: g=6313be9b829b5f67c4340223ed871547
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProducHour.bRstCnt"
-      - Name: dCntMin
-        Id: g=712af80afa7d8f9ed22c25b648c095b8
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
+        - Name: bRstCnt
+          Id: g=e2dbabb9d9e0409bc1c11a3031aff173
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=b74f6e446a1e2125f7c55b7b3e6e923d
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntMtLinStat.bRstCnt"
+        - Name: rCntMt
+          Id: g=ce0e4f1956c622f58698e0f4bda9b025
+          Type: CODESYSTag
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: SymbolName
+            Id: g=59ede9c07ff22926efce11261db827c2
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntMtLinStat.rCntMt"
+      - Name: stCntMtQuadStat
+        Id: g=ec6764cd52b896702135de6411c11e46
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
         Children:
-        - Name: SymbolName
-          Id: g=ad7dce72719a607f7b33c2a3fe0d97f9
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProducHour.dCntMin"
-      - Name: dCntOre
-        Id: g=62a31310d603d3d5ddb908bc81dc3486
-        Type: CODESYSTag
-        DataType: Int32
-        Value: 0
+        - Name: bRstCnt
+          Id: g=526a122a94577404860006db95629cb1
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=ca88cf9b0bf074fd533a9585b0a3da2f
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntMtQuadStat.bRstCnt"
+        - Name: rCntMt
+          Id: g=3aee140e551c790fb0a5136c28f053a3
+          Type: CODESYSTag
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: SymbolName
+            Id: g=0d194d4793563fd7ef420a6f3cd26d5b
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntMtQuadStat.rCntMt"
+      - Name: stCntOreAccStat
+        Id: g=94bb54690a0a1f3f669202356f1b3b24
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
         Children:
-        - Name: SymbolName
-          Id: g=4cb2c915c8bfb534a22390d9a9d1b9c9
-          Type: BaseDataVariableType
-          DataType: String
-          Value: "Next.GvGen.stCntProducHour.dCntOre"
+        - Name: bRstCnt
+          Id: g=c4debab0321c93e45282a8153d3289c1
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=c8dc4178a5f6594a8ec8af021b619293
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreAccStat.bRstCnt"
+        - Name: dCntMin
+          Id: g=120da7521f00731db756923ef75bed55
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=ab2518307b63e6336f591104cd88f482
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreAccStat.dCntMin"
+        - Name: dCntOre
+          Id: g=45115fb3444f0887ebc071de9f8885f2
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=4393594cd45d2ddd05fd6b94c6d69299
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreAccStat.dCntOre"
+      - Name: stCntOreProdStat
+        Id: g=b0a3f89fc1f33035dce29a8b7f39dda0
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: bRstCnt
+          Id: g=faa8fe73896d9d360f825e3fa9905e79
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=9d6c98bfdffbd2f37d3fbeb4524a836b
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreProdStat.bRstCnt"
+        - Name: dCntMin
+          Id: g=35142383a3311d6b4db41f2bfe1cdb7a
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=66181f2570b8f765ed29332310da535a
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreProdStat.dCntMin"
+        - Name: dCntOre
+          Id: g=3524fd6eb52e892c62118b03d62cda6f
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=14424f49a1af8f91ced5d0975967f7e9
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntOreProdStat.dCntOre"
+      - Name: stCntPezziStat
+        Id: g=930efb565e4a04166d707e6c87355b55
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: bRstCnt
+          Id: g=7307db72779515c154bab9702eab6393
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=82b6088427f9fc7c89ce9098f7b8e422
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntPezziStat.bRstCnt"
+        - Name: dCntAppPcs
+          Id: g=670e72e0b098b6bb266d3f0e287dc2f8
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=d09de5629d449ab6145ac14eab8f7740
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntPezziStat.dCntAppPcs"
+        - Name: dCntPcs
+          Id: g=406acc80c30936b0f074a39ced430ba6
+          Type: CODESYSTag
+          DataType: Int32
+          Value: 0
+          Children:
+          - Name: SymbolName
+            Id: g=9cc2364ebd46423cc3e24cdda7e6849c
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntPezziStat.dCntPcs"
+      - Name: stCntPowerCons
+        Id: g=bbfddef98021d7fc8cbbdefef5b80b9b
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "Id": 22
+           }
+          }
+         }
+        Children:
+        - Name: bRstCnt
+          Id: g=2f47a89649b10c857ba8e42355184154
+          Type: CODESYSTag
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: SymbolName
+            Id: g=bb8540ce9d78c6e8208641779d5d58fe
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntPowerCons.bRstCnt"
+        - Name: rCnt
+          Id: g=9ffbef7d28f9881c776bc225a62eb21e
+          Type: CODESYSTag
+          DataType: Float
+          Value: 0.0
+          Children:
+          - Name: SymbolName
+            Id: g=cd90b74934f680d0a22374844ec212aa
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Next.GvGen.stCntStatistic.stCntPowerCons.rCnt"
     - Name: stDiagIolEv
       Id: g=bfa17251b74e45d5efd22b6db5b4116e
       Type: TagStructure
@@ -5425,6 +5489,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvOsc.bAlmBarrOtt"
+    - Name: bAlmCappeAsp
+      Id: g=d26caf6961d4c82c2cfde6ffa56ff616
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=0162768a1cfdef733fd003fbd8f84ad6
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvOsc.bAlmCappeAsp"
     - Name: bAlmCntEnc
       Id: g=6bfa249a0c33ed1815e37724e3c2e793
       Type: CODESYSTag
@@ -5491,6 +5566,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvOsc.bAlmFcBraccioRls"
+    - Name: bAlmFltCappeAsp
+      Id: g=99a63c341940faf3dfee6d8401e33db7
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=ced056177bdd085e7b997cfbc390c1f7
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvOsc.bAlmFltCappeAsp"
     - Name: bAlmFltSporOpen
       Id: g=802dc7f81ce1c3d75943f8a957537c3e
       Type: CODESYSTag
@@ -6050,6 +6136,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvOsc.i_bFaultFcCabina"
+    - Name: i_bFaultFcCappeAsp
+      Id: g=d54dca69910a8e028d129c4930c284e3
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=c0359791a9d1ea498ba7052fb6e2f882
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvOsc.i_bFaultFcCappeAsp"
     - Name: i_bFcCabinaOk
       Id: g=f2cba43c8264a9bc3991d00fc196c196
       Type: CODESYSTag
@@ -6061,6 +6158,17 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Next.GvOsc.i_bFcCabinaOk"
+    - Name: i_bFcCappeAspOk
+      Id: g=e5d5c71bf4f0ad2efc90f60d1ce02899
+      Type: CODESYSTag
+      DataType: Boolean
+      Value: false
+      Children:
+      - Name: SymbolName
+        Id: g=a9ffb752c650a92470f11b28616bae1f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Next.GvOsc.i_bFcCappeAspOk"
     - Name: i_bFtcPezzi
       Id: g=e02fcf3a2d1fcd27ea82565d2d93dd52
       Type: CODESYSTag

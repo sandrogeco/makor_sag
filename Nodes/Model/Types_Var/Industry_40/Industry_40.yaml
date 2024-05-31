@@ -21,12 +21,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: false
-  - Name: wLoadNewJobErrCode
-    Id: g=7ca9a92f27ed80a5e4641d2a054f4008
-    Type: BaseDataVariableType
-    DataType: Int32
-    Description: {"LocaleId":"it-IT","Text":"0 = No Err; 1 = Recipe not updated;  2 = Recipe not found;"}
-    Value: 0
 - Name: stJobInfoType
   Id: g=3ea53110bb995dfcf56cf46cc288effe
   Supertype: BaseObjectType
@@ -51,16 +45,16 @@ Children:
     Type: BaseDataVariableType
     DataType: DateTime
     Value: "1601-01-01T00:00:00.0000000"
-  - Name: dwProcessedSqareMt
+  - Name: rProcessedSqareMt
     Id: g=a27e3c77a93310ee01c838a5b962b7a5
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
-  - Name: dwProcessedMt
+    DataType: Float
+    Value: 0.0
+  - Name: rProcessedMt
     Id: g=476aad421b5cb1a29aa651e17c9541d4
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Float
+    Value: 0.0
   - Name: dwProcessedPcs
     Id: g=f26fdc18d703ed543c46929241b8b659
     Type: BaseDataVariableType

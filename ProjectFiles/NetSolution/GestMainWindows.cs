@@ -88,7 +88,7 @@ public class GestMainWindows : BaseNetLogic
             }
             catch (Exception Ex)
             {
-                ErrCode = (short)Industry_40_ErrCode.Err;
+                ErrCode = (short)Industry_40_ErrCode.GenericErr;
                 Err = Ex.Message;
             }
             finally
@@ -96,13 +96,6 @@ public class GestMainWindows : BaseNetLogic
                 //Se ho un errore lo porto all'attenzione dell'operatore
                 if (ErrCode >= 2)
                 {
-                    //var AliasNode = ErrCode switch
-                    //{
-                    //    (short)Industry_40_ErrCode.PlcCommErr => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_RecipeNotFound"),
-                    //    (short)Industry_40_ErrCode.RecipeNotFound => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_RecipeNotFound"),
-                    //    _ => LogicObject.Children.Get<ContextDialogConferma_R2>("GestIndustria4_0_Err"),
-                    //};
-
                     ContextDialogConferma_R2 AliasNode;
                     switch (ErrCode)
                     {

@@ -13,33 +13,43 @@ public class GestIndustry_40Logic : BaseNetLogic
     {
         NoErr,
         RecipeNotUpdated,
-        Err,
+        GenericErr,
         PlcCommErr,
         RecipeNotFound
     }
-            
+
     public static void StartLavoraz(ref short ErrCode)
     {
         var o_MachineStatus = Project.Current.Get<stMachineStatusType>("Model/Industry_40/o_MachineStatus");
         var i_NewJob = Project.Current.Get<stNewJobType>("Model/Industry_40/i_NewJob");
         var o_CurrentJob = Project.Current.Get<stJobInfoType>("Model/Industry_40/o_CurrentJob");
         var o_LastJob = Project.Current.Get<stJobInfoType>("Model/Industry_40/o_LastJob");
+        var PlcCntRst = Project.Current.Get("Model/Industry_40/PlcCntRst");
 
         //Se c'è una lavorazione in corso la chiudo
         if (o_MachineStatus.bJobInProduc)
             EndLavoraz();
 
         //Inializzo i contatori della nuova lavorazione
-        o_CurrentJob.ChildrenRemoteWrite(new List<RemoteChildVariableValue>()
+        o_CurrentJob.sJobID = i_NewJob.sNextJobID;
+        o_CurrentJob.dtStartDateTime = DateTime.Now;
+
+        try
         {
-            new("sJobID",i_NewJob.sNextJobID),
-            new("dwProcessedMt", 0),
-            new("dwProcessedSqareMt", 0),
-            new("dwProcessedPcs", 0),
-            new("dwProducHour", 0),
-            new("dwProducMin", 0),
-            new("dtStartDateTime", DateTime.Now)
-        });
+            PlcCntRst.ChildrenRemoteWrite(new List<RemoteChildVariableValue>()
+            {
+                new("RstSquareMtCnt", true),
+                new("RstMtCnt", true),
+                new("RstPcsCnt", true),
+                new("RstProducHourCnt", true),
+                new("RstProducMinCnt", true)
+            });
+        }
+        catch (Exception)
+        {
+            ErrCode = (short)Industry_40_ErrCode.PlcCommErr;
+            throw;
+        }
 
         //Resetto i bit di handshaking
         i_NewJob.bLoadNewJobID = false;
@@ -83,8 +93,16 @@ public class GestIndustry_40Logic : BaseNetLogic
         //aggiorno l'ora di fine lavorazione
         o_CurrentJob.dtEndDateTime = DateTime.Now;
 
-        //Sposto i contatori dalla lav attuale alla lav precedente
-        o_LastJob.ChildrenRemoteWrite(o_CurrentJob.ChildrenRemoteRead());
+        try
+        {
+            //Sposto i contatori dalla lav attuale alla lav precedente
+            o_LastJob.ChildrenRemoteWrite(o_CurrentJob.ChildrenRemoteRead());
+        }
+        catch (Exception Ex)
+        {
+            Log.Error("Industria 4.0", "Errore chiusura JOB. Errore: " + Ex.Message);
+            throw;
+        }
 
         Project.Current.GetVariable("Model/Industry_40/o_MachineStatus/dwProcessedJobsAmount").Value++;
         Project.Current.GetVariable("Model/Industry_40/o_MachineStatus/bJobInProduc").Value = false;

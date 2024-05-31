@@ -776,7 +776,7 @@ Children:
     Id: g=2e8fc56aaf8921c59e5e335b7ed9c7c8
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
+    Value: true
 - Name: TextBoxScaling_R1_0
   Id: g=f222fea4e566d313a3761afb700e591b
   Supertype: RowLayout

@@ -45,9 +45,10 @@ public class CurrentUserLogic_R1 : BaseNetLogic
 
     private void Session_UserChange(object sender, UserChangeEventArgs e)
     {
-        if (e.newUser.BrowseName == "Makor")
+        var TimeOut = LogicObject.GetVariable("OemUserLogutTimeout").Value;
+        if (TimeOut > 0 && e.newUser.BrowseName == "Makor")
         {
-            LogoutTask = new DelayedTask(PerformLogout, LogicObject.GetVariable("Timeout").Value, LogicObject);
+            LogoutTask = new DelayedTask(PerformLogout, TimeOut, LogicObject);
             LogoutTask.Start();
         }
     }

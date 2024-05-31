@@ -1,0 +1,147 @@
+Name: GestStatistiche
+Id: g=780a1ce40d6f416b6774e32f32052c75
+Type: FolderType
+Children:
+- Name: CntProduzPlc
+  Id: g=4fa9e7c9c6e7e5bf44782c3458f442ec
+  Type: BaseObjectType
+  Children:
+  - Name: NPezzi_Prodotti
+    Id: g=4eee01010832298937109453a71f7a68
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: NMetri_Prodotti
+    Id: g=1c902e14a73e3488fab24832e05e8c5a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntOreAccensQuadro
+    Id: g=cdb8f7a333af465fe801fd902d7ad35a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinutiAccensQuadro
+    Id: g=354939caf632a05e2adbfe4616a4cb21
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntOreCicloOn
+    Id: g=449438c746b16d5dc154ee121dec8d7f
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinutiCicloOn
+    Id: g=fb9f732d19c8213e33578dde8826a24c
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntOreAllarmeOn
+    Id: g=2043d669d2de02bd5369463ddcbfc287
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinutiAllarmeOn
+    Id: g=f412c6e0d6c76ff54e29fe54049a6953
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntOreStopOn
+    Id: g=1b192586f6d698b99b5f9fad7f4f886c
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinutiStopOn
+    Id: g=39155d7d7d78046f43706da8b1099016
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntOrePausaOn
+    Id: g=bc20852c6a27371e0c3b3ee9b270dcbd
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinutiPausaOn
+    Id: g=5cb74873149f519d76ffce64e4ba015a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: CntProduzPlc_R1
+  Id: g=936fd9a5941af42807105d14fc5e2804
+  Type: BaseObjectType
+  Children:
+  - Name: CntPezziLav
+    Id: g=10378c50e96d4d9d32dd9c532cbfbc18
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMetriLav
+    Id: g=6d65de915ce86d81f093185c5d19ce38
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.0
+  - Name: CntMetriQLav
+    Id: g=39a8fa77312c7cc5bdfe05ecbd35ff23
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 0.0
+  - Name: CntOreCicloOn
+    Id: g=ad259be65971e6076df1e76f67b7efa2
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinCicloOn
+    Id: g=ea54133555a0f95ed33ba4e10d502c8b
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: CntOrePowerOn
+    Id: g=c087a7c51bc235440aa257bcdb66935e
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMinPowerOn
+    Id: g=2336ded0c9ea8b9567eca9fb8a6ac94c
+    Type: BaseDataVariableType
+    DataType: Int16
+    Value: 0
+  - Name: CntKwOra
+    Id: g=4d043123ddb02058e092852e882a3712
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: CntMetriTrasp
+    Id: g=7cd81fff9174b98f26938c192ac7ed0a
+    Type: BaseDataVariableType
+    DataType: Float
+    Description: {"LocaleId":"it-IT","Text":"Metri percorsi dal trasporto"}
+    Value: 0.0
+- Name: PlcCntRst
+  Id: g=033d3fe9ec45bb371bda9b4f68ad2a7d
+  Type: BaseObjectType
+  Children:
+  - Name: RstSquareMtCnt
+    Id: g=8c14681755b971991c32c9761c4f7b13
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: RstMtCnt
+    Id: g=55edaabd505955afee56687adcebb065
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: RstPcsCnt
+    Id: g=72b17aa9bee5a914cb96a0f031425706
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: RstProducHourCnt
+    Id: g=ca353a82f1b5376d0e38b198fc1736c8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: RstProducMinCnt
+    Id: g=4361b620c9775f6d0da9f0533e86c6cd
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false

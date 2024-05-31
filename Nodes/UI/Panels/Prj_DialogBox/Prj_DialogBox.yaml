@@ -1531,7 +1531,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.png"
+          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.svg"
         - Name: TextPosition
           Id: g=22080ebd610f417f68e4befa667bfa5f
           Type: BaseDataVariableType
@@ -1708,7 +1708,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.png"
+          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.svg"
         - Name: TextPosition
           Id: g=ed15111ef1123e2b70cf6935f9c7daab
           Type: BaseDataVariableType
@@ -2450,60 +2450,36 @@ Children:
           DataType: ResourceUri
           Value: "ns=46;%PROJECTDIR%/Images/Menu/PulsReportNoPress.svg"
           Children:
-          - Name: ConvertitoreChiaveValore1
-            Id: g=19c4815eb6d1891df698e43d89170414
-            Type: ValueMapConverter
+          - Name: ConditionalConverter1
+            Id: g=c01f947c72126f2c055878a3d9f4f12a
+            Type: ConditionalConverter
             Children:
-            - Name: Source
-              Id: g=6eee2784a4b73eb792788848a0ec83eb
+            - Name: Condition
+              Id: g=73c8cbba2a7622926f0a2d48b38bfbca
               Type: BaseDataVariableType
-              DataType: BaseDataType
+              DataType: Boolean
               ReferenceType: HasSource
+              Value: false
               Children:
               - Name: DynamicLink
-                Id: g=c51765d76b79da41905c2f9c7da30b81
+                Id: g=61e9c7a8d2c22824f2c56d7f215229e7
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaGestione"
-            - Name: Pairs
-              Id: g=1f0922288dd52b8a8e189bde5b25b235
-              Type: BaseObjectType
-              ModellingRule: None
-              Children:
-              - Name: Pair
-                Id: g=ab0b76496a7d876c4a3b49a0db043d83
-                Type: ValueMapPair
-                ModellingRule: None
-                Children:
-                - Name: Key
-                  Id: g=a0fd04b6bef7c5dc95ba44ea578dbc4e
-                  Type: BaseDataVariableType
-                  DataType: Boolean
-                  ModellingRule: None
-                  Value: false
-                - Name: Value
-                  Id: g=4d84d7cbcece499047eebdedcafb11e9
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  ModellingRule: None
-                  Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.png"
-              - Name: Pair1
-                Id: g=398bfbcca624a31abd40faa722831aa0
-                Type: ValueMapPair
-                ModellingRule: None
-                Children:
-                - Name: Key
-                  Id: g=96b8a6ce56dd2647477ab9f0368ff9cc
-                  Type: BaseDataVariableType
-                  DataType: Boolean
-                  ModellingRule: None
-                  Value: true
-                - Name: Value
-                  Id: g=40833b8249452cfc5549ac45296c24fb
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  ModellingRule: None
-                  Value: "ns=46;%PROJECTDIR%/Images/Menu/PulsReportNoPress.svg"
+            - Name: TrueValue
+              Id: g=7b999a6182553a09a9eb00b22de7aeaf
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "ns=46;%PROJECTDIR%/Images/Menu/PulsReportNoPress.svg"
+            - Name: FalseValue
+              Id: g=634de8b0284ce945f95d576a74c60d2c
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.svg"
         - Name: TextPosition
           Id: g=ab8b7739f5835b50bca3c237fe4b75ec
           Type: BaseDataVariableType
@@ -3583,7 +3559,7 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: true
-      - Name: EmptyBtn1
+      - Name: PulsMaki
         Id: g=39a80ad6018f4775017cab8d2a2de005
         Type: Button
         Children:
@@ -3616,7 +3592,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulNotEnable.png"
+          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAssVirtNoPress.svg"
         - Name: TextPosition
           Id: g=28b361a5d56ea76aec56495f69d1023c
           Type: BaseDataVariableType
@@ -3654,6 +3630,38 @@ Children:
             Id: g=cf78f491720df75944d2b48d227e0472
             Type: BaseObjectType
             Children:
+            - Name: MethodContainer2
+              Id: g=a31eb9f92eac478aa4618835f232e65e
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=f0d95c29457c007088d03f2258f638f2
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"IdType":0,"Id":0,"Namespace":-1}
+                Children:
+                - Name: Kind
+                  Id: g=6e1440c69b323f4932c860a105e1efb9
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Id: g=db5723e5904659e271b7ba380d532a75
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../PulsMakiLogic@NodeId"
+                  Children:
+                  - Name: Mode
+                    Id: g=59f14b6ae2aba6496b6b3caa63ff9bba
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=9;Method
+                Id: g=d631f1bc7a1c3aef0f3cf7cf96b89105
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "ApriBrowser"
             - Name: MethodContainer1
               Id: g=ae8df2c057349c16537a217c427fc851
               Type: BaseObjectType
@@ -3753,13 +3761,20 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
+          Value: true
         - Name: BottomMargin
           Id: g=c1cccf96c435c9bb65f2d5d57b952392
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
+        - Name: PulsMakiLogic
+          Id: g=fdd2ab4c1787ad0cb41275211f26dc65
+          Type: NetLogic
+          Children:
+          - Class: Method
+            Name: ApriBrowser
+            Id: g=bc4c61ff873a225d3ff4327036818ae4
       - Name: DiagnosticBtn
         Id: g=e1a252eebf36eda869096b876fc04889
         Type: Button
@@ -27745,7 +27760,7 @@ Children:
         Id: g=6b9307db3310e1f9772e3b76335ef7f5
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
+        Value: true
     - Name: ListBox
       Id: g=42990cfc7f8d25334289dd79c1322863
       Type: Rectangle
@@ -31193,7 +31208,7 @@ Children:
         Id: g=7f25d4cf64cea93910741507b3c9b7a1
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=5ae755975f2e99acf7c2923a5f0e8dc9
         Type: BaseDataVariableType
@@ -31283,12 +31298,12 @@ Children:
         Id: g=555a5ae9e9bbc9de446383cb8385772e
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=f64e6b3fd985174679d53f382c74ef8b
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"NoPlcConnection"}
+        Value: {"NamespaceIndex":46,"TextId":"NoPlcConnection"}
       - Name: ShowErrorMsg
         Id: g=3848ae136dbafdd2b8eea648cb4a4fb1
         Type: BaseDataVariableType
@@ -31373,7 +31388,7 @@ Children:
         Id: g=6c6c4e7da510f7dbfd999f9ea921a3e6
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=a44731c36300b4d9ef5ed75975a0c58d
         Type: BaseDataVariableType
@@ -31463,7 +31478,7 @@ Children:
         Id: g=36549973fbdf7784635ecc33f3b8cb86
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore chiusura JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore chiusura JOB"}
       - Name: ErrorMessage
         Id: g=c4548c6e388bfd06bf0693b269226392
         Type: BaseDataVariableType
@@ -32292,7 +32307,7 @@ Children:
             Id: g=528af1a95e33ac8e6c8355486ae4f9d0
             Type: DynamicLink
             DataType: NodePath
-            Value: "{Ordine}/dwProcessedSqareMt"
+            Value: "{Ordine}/rProcessedSqareMt"
             Children:
             - Name: Mode
               Id: g=253ba4ef70fdb7065bd0598d60546b66
@@ -32773,16 +32788,40 @@ Children:
               DataType: LocalizedText
               Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               Children:
-              - Name: DynamicLink
-                Id: g=b855a5c253bd3b61e65f32663ad9e081
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Ordine}/dtStartDateTime"
+              - Name: FormattatoreStringa1
+                Id: g=ceb6dad70b894d0fd76d3bab049cdb83
+                Type: StringFormatter
                 Children:
+                - Name: Format
+                  Id: g=0082e600c5cb76a6848c980293b2f704
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"","Text":"{0:g}"}
+                - Name: ns=9;Source0
+                  Id: g=71020e6e7a2fdde4c4eb721fa63dbf5e
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=26d08212ac0b56d2325764a1afb08505
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Ordine}/dtStartDateTime"
+                    Children:
+                    - Name: Mode
+                      Id: g=41c53d23bd461bdb636f99143e1d26ce
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
                 - Name: Mode
-                  Id: g=0978510337c358c32d57d7807a065701
-                  Type: BaseVariableType
+                  Id: g=45e48c7ef35127b0a4ff186bb8e262cb
+                  Type: PropertyType
                   DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
                   ModellingRule: Optional
                   Value: 2
             - Name: ReadOnly
@@ -32906,16 +32945,40 @@ Children:
               DataType: LocalizedText
               Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               Children:
-              - Name: DynamicLink
-                Id: g=a0d98294ad8a4f9f7270e276ee5705b1
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Ordine}/dtEndDateTime"
+              - Name: FormattatoreStringa1
+                Id: g=9989aa703818240df1384ba1fa2df312
+                Type: StringFormatter
                 Children:
+                - Name: Format
+                  Id: g=c85a1d1593566fd9aaface544681bab3
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"","Text":"{0:g}"}
+                - Name: ns=9;Source0
+                  Id: g=640397408c7063d75d9992e20c334564
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=df9b0722767e4fcef5697780066000c4
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Ordine}/dtEndDateTime"
+                    Children:
+                    - Name: Mode
+                      Id: g=c8ed50d37e27ff1d98c98346a4ab0ced
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
                 - Name: Mode
-                  Id: g=580b2093ed999834df03f355f422d15f
-                  Type: BaseVariableType
+                  Id: g=95012b58ef1c03d898e41a62a912f979
+                  Type: PropertyType
                   DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
                   ModellingRule: Optional
                   Value: 2
             - Name: ReadOnly
@@ -33743,7 +33806,7 @@ Children:
             Id: g=d32f1efcb56dc1d8cb2190df5247466b
             Type: DynamicLink
             DataType: NodePath
-            Value: "{Ordine}/dwProcessedSqareMt"
+            Value: "{Ordine}/rProcessedSqareMt"
             Children:
             - Name: Mode
               Id: g=b40186567735110016165bd97888866d
@@ -34224,16 +34287,40 @@ Children:
               DataType: LocalizedText
               Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               Children:
-              - Name: DynamicLink
-                Id: g=e947d179250d76157020ff755edacef4
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Ordine}/dtStartDateTime"
+              - Name: FormattatoreStringa1
+                Id: g=2f8ec60704091b1c2c4ab81a49bb8278
+                Type: StringFormatter
                 Children:
+                - Name: Format
+                  Id: g=22cad391f54a66f9fa8c4fe2a8def098
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"","Text":"{0:g}"}
+                - Name: ns=9;Source0
+                  Id: g=daf5f2b50d3e753c107629ed59941960
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=a4b2da4826b1998b5c0314670c903603
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Ordine}/dtStartDateTime"
+                    Children:
+                    - Name: Mode
+                      Id: g=4288c97a101d49420d8958068e5d7e82
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
                 - Name: Mode
-                  Id: g=99fc378322dcf82497ca3656f048f8d1
-                  Type: BaseVariableType
+                  Id: g=4b652ed80b37abcf5dc0e2187d8519c2
+                  Type: PropertyType
                   DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
                   ModellingRule: Optional
                   Value: 2
             - Name: ReadOnly

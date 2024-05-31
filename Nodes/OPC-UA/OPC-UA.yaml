@@ -133,4 +133,9 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
+  - Name: MaxNumberOfConnections
+    Id: g=42184d8572ace2dfd1eb1b197b3d89b2
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 3
 - File: OPCUAClient1/OPCUAClient1.yaml

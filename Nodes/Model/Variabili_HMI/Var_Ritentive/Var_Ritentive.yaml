@@ -12,3 +12,9 @@ Children:
   Type: BaseDataVariableType
   DataType: String
   Value: ""
+- Name: OemUserLogoutTime
+  Id: g=ee9f05a1d8b736ab6faf4202d3f5ee14
+  Type: BaseDataVariableType
+  DataType: Duration
+  Description: {"LocaleId":"it-IT","Text":"Tempo dopo il quale viene fatto il logout di un utente Oem"}
+  Value: "0:00:10:0.0000000"

@@ -2,3 +2,6 @@
 
 # CA1707: Gli identificatori non devono contenere caratteri di sottolineatura
 dotnet_diagnostic.CA1707.severity = none
+
+# CA1822: Contrassegnare i membri come static
+dotnet_diagnostic.CA1822.severity = silent

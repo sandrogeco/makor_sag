@@ -731,7 +731,7 @@ Children:
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: Optional
-        Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.png"
+        Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.svg"
       - Name: ImageWidth
         Id: g=4994ea7e69e5d150bf074a4f6614edac
         Type: BaseDataVariableType

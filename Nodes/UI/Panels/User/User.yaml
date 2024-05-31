@@ -3330,42 +3330,28 @@ Children:
               DataType: LocalizedText
               Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               Children:
-              - Name: FormattatoreStringa1
-                Id: g=b4c6a3d40181481682eac2668750faef
-                Type: StringFormatter
+              - Name: ExpressionEvaluator1
+                Id: g=fd5c19f2a41eea1f24376371057eef93
+                Type: ExpressionEvaluator
                 Children:
-                - Name: Format
-                  Id: g=763b30f66cf5c75d38f81af84ee9b672
+                - Name: Expression
+                  Id: g=ab178fe9a4659ae789698a780aa91f94
                   Type: BaseDataVariableType
-                  DataType: LocalizedText
+                  DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: {"LocaleId":"","Text":"{0:n1}"}
+                  Value: "round({0})"
                 - Name: ns=9;Source0
-                  Id: g=df4bd1c53172a4d4c35b571737782e05
+                  Id: g=ae1aaf42be78ec171c436938db1e2f94
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=594ecac8fa8a91bc78fe3cb1872a181a
+                    Id: g=a39aa95fa3e76ed3422cc419e711d03d
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../DisplayVar"
-                    Children:
-                    - Name: Mode
-                      Id: g=9d7fea1a19d280d4364aff0604d510de
-                      Type: BaseVariableType
-                      DataType: DynamicLinkMode
-                      ModellingRule: Optional
-                      Value: 2
-                - Name: Mode
-                  Id: g=1076887e5fbb08c7f3b82a9848bd2903
-                  Type: PropertyType
-                  DataType: DynamicLinkMode
-                  ReferenceType: HasComponent
-                  ModellingRule: Optional
-                  Value: 2
             - Name: ReadOnly
               Id: g=02194bba6f8c385658b5919ed91417e1
               Type: BaseDataVariableType

@@ -1039,7 +1039,7 @@ Children:
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: "!{0} & {1} & {2}"
+            Value: "!{0} & {1} & {2} & !{3}"
           - Name: ns=9;Source0
             Id: g=58273ed9917ee87467fbe756c107e37d
             Type: BaseDataVariableType
@@ -1073,6 +1073,17 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bPotBmOk"
+          - Name: ns=9;Source3
+            Id: g=613f77e6d279bf7601a8ac9eb712b138
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=e6d702b531a9de8e5f2776a828baa129
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/bUsrModoTransfer"
       - Name: Abilita_Visibil
         Id: g=439c8bfb91a61b5e850e5a9fa693de8c
         Type: BaseDataVariableType
@@ -1668,6 +1679,29 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=8a3279b7488abf62d964209a0811b11b
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=9bcdd41297a2425d954b48047908b4c4
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "!{0}"
+          - Name: ns=9;Source0
+            Id: g=dcd6563c7f1f4d818eb50098fe4ad4db
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: CollegamentoDinamico
+              Id: g=d9c60e28f037358a726c8a3b32eacfb6
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
       - Name: Abilita_Visibil
         Id: g=f0274f247321409c05faffc9c4a70b07
         Type: BaseDataVariableType

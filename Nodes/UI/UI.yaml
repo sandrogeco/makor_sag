@@ -1034,7 +1034,7 @@ Children:
     Id: g=ac9910b5a4628aec3790c6488efbaa46
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
+    Value: true
   - Class: Reference
     Target: ns=1;i=266
     Direction: Forward
@@ -1883,7 +1883,7 @@ Children:
         Id: g=62524847faed817fc2440581695ee4e1
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=017e62ff406dc8ccd94b412cc2f0f975
         Type: BaseDataVariableType
@@ -1973,12 +1973,12 @@ Children:
         Id: g=5d1c3d9884cb2aea136f4e1601bb839f
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=b9be1cb49e78e97ebfd89959f57b540e
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"NoPlcConnection"}
+        Value: {"NamespaceIndex":46,"TextId":"NoPlcConnection"}
       - Name: ShowErrorMsg
         Id: g=4615aed2caf5b69f9cc7f6619b8ee146
         Type: BaseDataVariableType
@@ -2063,7 +2063,7 @@ Children:
         Id: g=e3cbe0e4a7be4af884e8360348d93ed9
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"it-IT","Text":"Errore attivazione nuovo JOB"}
+        Value: {"NamespaceIndex":46,"TextId":"Errore attivazione nuovo JOB"}
       - Name: ErrorMessage
         Id: g=0654ba567db3ed9094618a35ebe7da30
         Type: BaseDataVariableType
@@ -3154,11 +3154,24 @@ Children:
               DataType: DynamicLinkMode
               ModellingRule: Optional
               Value: 2
-        - Name: Timeout
+        - Name: OemUserLogutTimeout
           Id: g=4b0ad6b44c02597e379b82cf5fcdbc55
           Type: BaseDataVariableType
           DataType: Duration
           Value: "0:00:10:0.0000000"
+          Children:
+          - Name: DynamicLink
+            Id: g=1f8ac05e7485f4d893a45b6eaba637ab
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_Ritentive/OemUserLogoutTime"
+            Children:
+            - Name: Mode
+              Id: g=c6076c9c56fef0be65f176f43bdefe6e
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
     - Name: Logo
       Id: g=2d2606c47602f6fd0913ec8613203cc3
       Type: Image

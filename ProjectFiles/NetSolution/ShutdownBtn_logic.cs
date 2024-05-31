@@ -11,7 +11,15 @@ public class ShutdownBtn_logic : BaseNetLogic
     [ExportMethod]
     public void PcShutdown()
     {
-        Project.Current.Get<NetLogicObject>("UI/Panels/GestStatistiche/GestStatisticheLogic").ExecuteMethod("TerminaSessione");    // serve per aggiornare le statistiche
+        try
+        {
+            AppCloseBtn_logic.UnloadApp();
+        }
+        catch (System.Exception ex)
+        {
+            Log.Error("Chiusura applicazione", "Errore durante la chiusura dell'applicazione. Errore :" + ex.Message);
+        }
+
         var psi = new ProcessStartInfo("shutdown", "/s /t 0")
         {
             CreateNoWindow = true,

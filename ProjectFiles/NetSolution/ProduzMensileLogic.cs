@@ -22,14 +22,10 @@ public class ProduzMensileLogic : BaseNetLogic
         IUAVariable Order = Owner.GetObject("SqlQuery").GetVariable("Order");
         IUANode OggettoFiltro = Owner.GetAlias("OggettoFiltro");
 
-        //Creazione Query estrapolare i dati da visualizzare sulla griglia
-        //Nota: a causa delle limitazioni dovute allo Standard ANSI Sql92 e della mancanza di istruzioni(es 'CAST') non supportate dal QStudio, la progettazione della query è stata molto complicata. 
-        //Per estrapolare i dati necessari è stata utilizzata una tabella di appoggio perchè i dati finali devono essere raggruppati per data ma su QStudio la funzione EXTRACT non è supportata nella clausola GROUP BY. Prima sono stati tirati su i dati convertendo il logintime in giorno, mese e anno
-        //Poi sono stati fatti i raggruppamenti.
+        var TipoFiltro = (byte)OggettoFiltro.GetVariable("TipoFiltro").Value.Value;
 
-        var pippo = (byte)OggettoFiltro.GetVariable("TipoFiltro").Value.Value;
         string Where = "";
-        switch ((TipoFiltroGestStat)pippo)
+        switch ((TipoFiltroGestStat)TipoFiltro)
         {
             case TipoFiltroGestStat.SettimanaCorrente:
             case TipoFiltroGestStat.SettimanaPrec:
@@ -41,16 +37,16 @@ public class ProduzMensileLogic : BaseNetLogic
                 Where = $"WHERE LoginDate = '{DateTime.Now.AddDays(-1):yyyy-MM-dd}'";
                 break;
             case TipoFiltroGestStat.MeseCorrente:
-                Where = $"WHERE EXTRACT(MONTH FROM LoginTime) = '{DateTime.Now.Month}' AND EXTRACT(YEAR FROM LoginTime) = '{DateTime.Now.Year}'";
+                Where = $"WHERE EXTRACT(MONTH FROM LoginTime) = '{DateTime.Now.Month:D2}' AND EXTRACT(YEAR FROM LoginTime) = '{DateTime.Now.Year:D2}'";
                 break;
             case TipoFiltroGestStat.MeseScorso:
                 var Mesescorso = DateTime.Now.AddMonths(-1);
-                Where = $"WHERE EXTRACT(MONTH FROM LoginTime) = '{Mesescorso.Month}' AND EXTRACT(YEAR FROM LoginTime) = '{Mesescorso.Year}'";
+                Where = $"WHERE EXTRACT(MONTH FROM LoginTime) = '{Mesescorso.Month:D2}' AND EXTRACT(YEAR FROM LoginTime) = '{Mesescorso.Year:D2}'";
                 break;
             case TipoFiltroGestStat.PerData:
                 var DataStart = new DateTime(OggettoFiltro.GetVariable("AnnoStart").Value, OggettoFiltro.GetVariable("MeseStart").Value, OggettoFiltro.GetVariable("GiornoStart").Value);
                 var DataStop = new DateTime(OggettoFiltro.GetVariable("AnnoStop").Value, OggettoFiltro.GetVariable("MeseStop").Value, OggettoFiltro.GetVariable("GiornoStop").Value);
-                Where = $"WHERE LoginTime BETWEEN '{DataStart}' AND '{DataStop.AddSeconds(86399)}'";
+                Where = $"WHERE LoginTime BETWEEN '{DataStart:s}' AND '{DataStop.AddSeconds(86399):s}'";
                 break;
         }
 
@@ -65,7 +61,7 @@ public class ProduzMensileLogic : BaseNetLogic
                        $", SUM(CntKwOra) AS CntKwOra" +
                        $", SUM(CntMetriTrasp) AS CntMetriTrasp" +
                        $" FROM CntProduzione";   //la sorgente è la tbl di appoggio
-        
+
         Where1.Value = Where;
         Group.Value = "GROUP BY LoginDate";
         Order.Value = "ORDER BY LoginDate ASC";

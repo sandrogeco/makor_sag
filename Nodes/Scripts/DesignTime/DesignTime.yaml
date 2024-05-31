@@ -21,7 +21,7 @@ Children:
     Id: g=cdf40b327d83b67ca68f798929e2c6f6
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Macchina/CntProduzPlc_R1/CntKwOra"
+    Value: "/Objects/Hmi_Next/Model/GestStatistiche/CntProduzPlc_R1/CntKwOra"
     Children:
     - Name: Kind
       Id: g=7460870ee64075130b44053fd2677e04
