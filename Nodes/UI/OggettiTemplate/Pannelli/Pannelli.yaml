@@ -4446,7 +4446,7 @@ Children:
       Id: g=1b68500dcf2792ab137af9f5fecd928f
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":2,"Id":"4f00e86d79a468d6fcec88e8f90877e0","Namespace":46}
+      Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette/Tables/AlarmLogger"
       Children:
       - Name: Kind
         Id: g=8fe04ca1cb95fef2e086e7ad04874ab9

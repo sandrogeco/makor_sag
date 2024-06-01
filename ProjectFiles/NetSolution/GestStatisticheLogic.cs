@@ -1,5 +1,4 @@
-#region Using directives
-using FTOptix.CommunicationDriver;
+Ôªø#region Using directives
 using FTOptix.Core;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
@@ -23,7 +22,171 @@ public class GestStatisticheLogic : BaseNetLogic
     private Store myStore;
     private bool CreaCsvReport, AvvioApp;
     private DateTime GiornoRicerca;
-    
+
+    /// <summary>
+    /// Questo metodo estrae dal DB i dati di produzione di tutti gli utenti filtrati in base al giorno. 
+    /// </summary>
+    /// <param name="GiornoRicerca"></param>
+    /// <param name="CsvHeader">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
+    /// <param name="ResultMatrix">Matrice di stringhe con i risultati</param>
+    /// <returns></returns>
+    private bool GetDatiProduzPerUtente(DateTime GiornoRicerca, out string[] CsvHeader, out string[,] ResultMatrix)
+    {
+        string sqlQuery = $"SELECT * FROM CntProduzione" +
+                          $" WHERE LoginDate = '{GiornoRicerca:yyyy-MM-dd}'" +    //Considero l'arco di tutta la giornata, il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
+                          $" ORDER BY LoginTime ASC";
+
+        string[] Header;
+        object[,] QueryResult;
+
+        try
+        {
+            myStore.Query(sqlQuery, out Header, out QueryResult);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Creazione report statistiche", "GetDatiProduzPerUtente. Errore durante esecuzione query. Errore: " + ex.Message);
+            throw;
+        }
+
+        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
+
+        //Creazione riga intestazione con i nomi delle colonne tradotte in base alla lingua selezionata per il report
+        CsvHeader = new string[] { "User", "LoginTime", "LogoutTime"
+                                   , InformationModel.LookupTranslation(new LocalizedText("Pezzi"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , "m¬≤"
+                                   , "m¬≤/m¬≤‚Çò‚Çê‚Çì (%)"
+                                   , "m¬≤/h"
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo On"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("% Ciclo"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Consumo (Kw)"), new List<string>(){ cultureInfo.ToString() }).Text
+                                };
+
+        ResultMatrix = new string[QueryResult.GetLength(0), CsvHeader.Length];      //Ridefinisco la matrice con le dimensioni effettive
+
+        if (QueryResult.Rank != 2 || QueryResult.GetLength(0) <= 0)      //l'operatore || valuta l'exp a sx se √® vera valuta anche quella a destra altrimenti non la valuta per niente.
+            return false;
+
+        //Preparo la matrice di risultati della query
+        for (int row = 0; row < QueryResult.GetLength(0); row++)
+        {
+            double MqProcessati = QueryResult[row, Array.IndexOf(Header, "CntMetriQLav")] is not null ? (double)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav")] : 0;  //Metri quadri prodotti
+            double MtTrasp = QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp")] is not null ? (double)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp")] : 0;  //Metri quadri prodotti;  //Metri trasporto percorsi
+            long OreCicloOn = QueryResult[row, Array.IndexOf(Header, "CntOreCicloOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOreCicloOn")] : 0; //Ore ciclo ON
+            long MinCicloOn = QueryResult[row, Array.IndexOf(Header, "CntMinCicloOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinCicloOn")] : 0; //Minuti ciclo ON
+            long OrePowerOn = QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] : 0;  //Ore accensione ON
+            long MinPowerOn = QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] : 0;  //Minuti ciclo ON
+
+            long MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
+            long MinTotPowerOn = OrePowerOn * 60 + MinPowerOn;
+            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / MinTotPowerOn * 100 : 0;
+            double LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
+
+            double ProdutRelativa = MinTotCicloOn != 0 ? (MqProcessati / MinTotCicloOn) / 60 : 0;         //Mq/OreCiclo
+
+            ResultMatrix[row, 0] = QueryResult[row, Array.IndexOf(Header, "Utente")] is not null ? QueryResult[row, Array.IndexOf(Header, "Utente")].ToString() : "";      //Nome utente            
+            ResultMatrix[row, 1] = QueryResult[row, Array.IndexOf(Header, "LoginTime")] is not null ? ((DateTime)QueryResult[row, Array.IndexOf(Header, "LoginTime")]).ToString("G", cultureInfo) : "";       //LoginTime
+            ResultMatrix[row, 2] = QueryResult[row, Array.IndexOf(Header, "LogoutTime")] is not null ? ((DateTime)QueryResult[row, Array.IndexOf(Header, "LogoutTime")]).ToString("G", cultureInfo) : "";      //LogoutTime
+            ResultMatrix[row, 3] = QueryResult[row, Array.IndexOf(Header, "CntPezziLav")] is not null ? QueryResult[row, Array.IndexOf(Header, "CntPezziLav")].ToString() : "0";   //Conta pezzi
+            //ResultMatrix[row, 4] = QueryResult[row, Array.IndexOf(Header, "CntMetriLav")] != null ? QueryResult[row, Array.IndexOf(Header, "CntMetriLav")].ToString() : "0";  //Metri lineari prodotti
+            ResultMatrix[row, 4] = MqProcessati.ToString("f1");  //Metri quadri prodotti
+            ResultMatrix[row, 5] = LoadEfficiency.ToString("P1", cultureInfo);
+            ResultMatrix[row, 6] = ProdutRelativa.ToString();
+            ResultMatrix[row, 7] = OreCicloOn + " h : " + MinCicloOn + " min";      //Durata tempo ciclo
+            ResultMatrix[row, 8] = OrePowerOn + " h : " + MinPowerOn + " min";      //Durata tempo accensione
+            ResultMatrix[row, 9] = PercCiclo.ToString("P1", cultureInfo);       //Percentuale ciclo
+            ResultMatrix[row, 10] = QueryResult[row, Array.IndexOf(Header, "CntKwOra")] is not null ? ((double)QueryResult[row, Array.IndexOf(Header, "CntKwOra")]).ToString("f1") : "0";   //Potenza assosribta                                  
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// Questo metodo estrae dal DB la sommatoria dei dati di produzione riferita a un particolare giorno
+    /// </summary>
+    /// <param name="GiornoRicerca"></param>
+    /// <param name="header">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
+    /// <param name="Risultati">Matrice di stringhe con i risultati</param>
+    /// <returns></returns>
+    private bool GetDatiProduzGiornaliera(DateTime GiornoRicerca, out string[] CsvHeader, out string[,] ResultMatrix)
+    {
+        string sqlQuery = $"SELECT LoginDate " +
+                            $", SUM(CntPezziLav) AS CntPezziLav" +
+                            $", SUM(CntMetriLav) AS CntMetriLav" +
+                            $", SUM(CntMetriQLav) AS CntMetriQLav" +
+                            $", SUM(CntOreCicloOn) AS CntOreCicloOn" +
+                            $", SUM(CntMinCicloOn) AS CntMinCicloOn" +
+                            $", SUM(CntOrePowerOn) AS CntOrePowerOn" +
+                            $", SUM(CntMinPowerOn) AS CntMinPowerOn" +
+                            $", SUM(CntKwOra) AS CntKwOra" +
+                            $", SUM(CntMetriTrasp) AS CntMetriTrasp" +
+                            $" FROM CntProduzione WHERE LoginDate = '{GiornoRicerca:yyyy-MM-dd}'" +
+                            $" GROUP BY LoginDate" +
+                            $" ORDER BY LoginDate ASC";
+
+        string[] Header;
+        object[,] QueryResult;
+
+        try
+        {
+            myStore.Query(sqlQuery, out Header, out QueryResult);
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Creazione report statistiche", "GetDatiProduzPerUtente. Errore durante esecuzione query. Errore: " + ex.Message);
+            throw;
+        }
+
+        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
+
+        //Creazione riga intestazione con i nomi delle colonne tradotte in base alla lingua selezionata per il report
+        CsvHeader = new string[] { "LoginDate"
+                                   , InformationModel.LookupTranslation(new LocalizedText("Pezzi"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , "m¬≤"
+                                   , "m¬≤/m¬≤‚Çò‚Çê‚Çì (%)"
+                                   , "m¬≤/h"
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo On"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("% Ciclo"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Consumo (Kw)"), new List<string>(){ cultureInfo.ToString() }).Text
+        };
+
+        ResultMatrix = new string[QueryResult.GetLength(0), CsvHeader.Length];      //Ridefinisco la matrice con le dimensioni effettive
+
+        if (QueryResult.Rank != 2 || QueryResult.GetLength(0) <= 0)      //l'operatore || valuta l'exp a sx se √® vera valuta anche quella a destra altrimenti non la valuta per niente.
+            return false;
+
+        //Preparo la matrice di risultati della query
+        for (int row = 0; row < QueryResult.GetLength(0); row++)
+        {
+            double MqProcessati = QueryResult[row, Array.IndexOf(Header, "CntMetriQLav")] is not null ? (double)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav")] : 0;  //Metri quadri prodotti
+            double MtTrasp = QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp")] is not null ? (double)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp")] : 0;  //Metri quadri prodotti;  //Metri trasporto percorsi
+            long OreCicloOn = QueryResult[row, Array.IndexOf(Header, "CntOreCicloOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOreCicloOn")] : 0; //Ore ciclo ON
+            long MinCicloOn = QueryResult[row, Array.IndexOf(Header, "CntMinCicloOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinCicloOn")] : 0; //Minuti ciclo ON
+            long OrePowerOn = QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] : 0;  //Ore accensione ON
+            long MinPowerOn = QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] : 0;  //Minuti ciclo ON
+
+            long MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
+            long MinTotPowerOn = OrePowerOn * 60 + MinPowerOn;
+            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / MinTotPowerOn * 100 : 0;
+            double LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
+
+            double ProdutRelativa = MinTotCicloOn != 0 ? (MqProcessati / MinTotCicloOn) / 60 : 0;         //Mq/OreCiclo
+
+            ResultMatrix[row, 0] = QueryResult[row, Array.IndexOf(Header, "LoginDate")] is not null ? QueryResult[row, Array.IndexOf(Header, "LoginDate")].ToString() : "";      //Nome utente            
+            ResultMatrix[row, 1] = QueryResult[row, Array.IndexOf(Header, "CntPezziLav")] is not null ? QueryResult[row, Array.IndexOf(Header, "CntPezziLav")].ToString() : "0";   //Conta pezzi
+                                                                                                                                                                                   //ResultMatrix[row, 2] = QueryResult[row, Array.IndexOf(Header, "CntMetriLav")] != null ? QueryResult[row, Array.IndexOf(Header, "CntMetriLav")].ToString() : "0";  //Metri lineari prodotti
+            ResultMatrix[row, 2] = MqProcessati.ToString("f1");  //Metri quadri prodotti
+            ResultMatrix[row, 3] = LoadEfficiency.ToString("P1", cultureInfo);
+            ResultMatrix[row, 4] = ProdutRelativa.ToString();
+            ResultMatrix[row, 5] = OreCicloOn + " h : " + MinCicloOn + " min";      //Durata tempo ciclo
+            ResultMatrix[row, 6] = OrePowerOn + " h : " + MinPowerOn + " min";      //Durata tempo accensione
+            ResultMatrix[row, 7] = PercCiclo.ToString("P1", cultureInfo);       //Percentuale ciclo
+            ResultMatrix[row, 8] = QueryResult[row, Array.IndexOf(Header, "CntKwOra")] is not null ? ((double)QueryResult[row, Array.IndexOf(Header, "CntKwOra")]).ToString("f1") : "0";   //Potenza assosribta
+
+        }
+        return true;
+    }
 
     [ExportMethod]
     public void AvviaSessione()
@@ -36,7 +199,7 @@ public class GestStatisticheLogic : BaseNetLogic
             CntProduzPlc = LogicObject.Context.GetNode(LogicObject.GetVariable("CntProduzPlc").Value);  // tiro su il nodo dove si trovano le variabili PLC
 
             myStore = (Store)LogicObject.Context.GetNode(LogicObject.GetVariable("DataStore").Value);  // Tiro su il nodeId dello store
-            
+
             DataUltimoSalvataggio = Impostazioni.GetVariable("DataUltimoSalvataggio");
 
             UtenteAttuale = LogicObject.GetVariable("UtenteAttuale");
@@ -57,7 +220,7 @@ public class GestStatisticheLogic : BaseNetLogic
         {
             LogoutUtente(UtenteAttuale.Value, DateTime.Now);
             DisabilitaGestione();
-        }        
+        }
     }
 
     private void DisabilitaGestione()
@@ -65,8 +228,8 @@ public class GestStatisticheLogic : BaseNetLogic
         UtenteAttuale.VariableChange -= UtenteAttuale_VariableChange;
         ActionCheckCambioGiornoAndAgiornaDati?.Dispose();
         ActionCheckCambioGiornoAndAgiornaDati = null;
-    }    
-    
+    }
+
     private void UtenteAttuale_VariableChange(object sender, VariableChangeEventArgs e)
     {
         if (!string.IsNullOrWhiteSpace(e.OldValue))
@@ -82,52 +245,42 @@ public class GestStatisticheLogic : BaseNetLogic
         //if (Project.Current.Get<CommunicationStation>("CommDrivers/CODESYSDriver1/PLC_Next").OperationCode != CommunicationOperationCode.Connected)
         //    return;
 
-        //Controllo se Ë cambiato il giorno         
+        //Controllo se √® cambiato il giorno         
         if ((DateTime.Now.Date - ((DateTime)DataUltimoSalvataggio.Value).Date).Days != 0)
         {
-            //try
-            //{
-                //Verifico se c'Ë qualche utente loggato per eseguire le operazioni sul database                                
-                if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value))
+            if (!string.IsNullOrWhiteSpace(UtenteAttuale.Value))
+            {
+                if (!AvvioApp)
                 {
-                    if (!AvvioApp)
-                    { 
-                        LogoutUtente(UtenteAttuale.Value, DateTime.Now.Date.AddSeconds(-1));        //Come logout time passo la mezzanotte meno 1 secondo del giorno precedente
-                    }
-
-                    LoginUtente();      //Apro una nuova riga per lo User loggato
-                    AvvioApp = false;
+                    LogoutUtente(UtenteAttuale.Value, DateTime.Now.Date.AddSeconds(-1));        //Come logout time passo la mezzanotte meno 1 secondo del giorno precedente
                 }
 
-                //Se la creazione del report Ë abilitata allora avvio il task che crer‡ il report
-                if (!CreaCsvReport && Impostazioni.GetVariable("AbilitaCreazReport").Value)
-                {
-                    CreaCsvReport = true;
-                    GiornoRicerca = DataUltimoSalvataggio.Value;
-                    //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 5, 0), LogicObject);      // creo il report dopo 5 minuti
-                    ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
-                    ActionCreaReport.Start();
-                }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Log.Error("Gestione statistiche", "Errore gestione. Errore: " + ex.Message);
-            //    return;
-            //}
-            
+                LoginUtente();      //Apro una nuova riga per lo User loggato
+                AvvioApp = false;
+            }
+
+            //Se la creazione del report √® abilitata allora avvio il task che crer√† il report
+            if (!CreaCsvReport && Impostazioni.GetVariable("AbilitaCreazReport").Value)
+            {
+                CreaCsvReport = true;
+                GiornoRicerca = DataUltimoSalvataggio.Value;
+                //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 5, 0), LogicObject);      // creo il report dopo 5 minuti
+                ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
+                ActionCreaReport.Start();
+            }
+
             DataUltimoSalvataggio.Value = DateTime.Now;
             return;     //ritorno il controllo al chiamante                        
         }
-        else if(AvvioApp)
-        {            
+        else if (AvvioApp)
+        {
             LoginUtente();
             AvvioApp = false;
-            return;            
+            return;
         }
 
-        
         // creo la stringa per aggiornare la tabella CntProduzione            
-        UpdateUtente(UtenteAttuale.Value.Value.ToString());        
+        UpdateUtente(UtenteAttuale.Value.Value.ToString());
     }
 
     private void LoginUtente()
@@ -136,7 +289,7 @@ public class GestStatisticheLogic : BaseNetLogic
         {
             //Disattivo eventuali utenti attivi nel DB
             myStore.Query("UPDATE CntProduzione SET Attivo = false ", out _, out _);
-                
+
             int len = myStore.Tables.Get("CntProduzione").Columns.Count;
 
             string[] NomiColonne = new string[len]; //header
@@ -157,7 +310,7 @@ public class GestStatisticheLogic : BaseNetLogic
                 NomiColonne[i] = Par.BrowseName;
                 i++;
             }
-        
+
             MatrixValori[0, 0] = UtenteAttuale.Value.Value;
             MatrixValori[0, 1] = true;
             MatrixValori[0, 2] = DateTime.Now.ToString("yyyy-MM-dd");
@@ -207,7 +360,7 @@ public class GestStatisticheLogic : BaseNetLogic
     }
 
     private void LogoutUtente(string Utente, DateTime LogoutTime)
-    {        
+    {
         try
         {
             var myVariables = CntProduzPlc.GetNodesByType<IUAVariable>().Select(Par => new RemoteChildVariable(Par.BrowseName)).ToList();
@@ -231,7 +384,7 @@ public class GestStatisticheLogic : BaseNetLogic
         {
             Log.Error("Gestione statistiche", "Errore logout utente. Errore: " + ex.ToString());
             throw;
-        }        
+        }
     }
 
     private void ResetCnt()
@@ -239,7 +392,7 @@ public class GestStatisticheLogic : BaseNetLogic
         try
         {
             List<RemoteChildVariableValue> remoteRead = (from Figlio in CntProduzPlc.GetNodesByType<IUAVariable>()
-                              select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
+                                                         select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
 
             CntProduzPlc.ChildrenRemoteWrite(remoteRead);
         }
@@ -261,7 +414,7 @@ public class GestStatisticheLogic : BaseNetLogic
         if (!Directory.Exists(Folder))
             Directory.CreateDirectory(Folder);
 
-        //Cancella i file vecchi pi˘ di 31 giorni per liberare memoria
+        //Cancella i file vecchi pi√π di 31 giorni per liberare memoria
         foreach (var elemento in new DirectoryInfo(Folder).GetFiles("*.*").Where(elemento => elemento.CreationTime < DateTime.Now.AddDays(-31)))
             elemento.Delete();// Elimina il file
 
@@ -279,7 +432,7 @@ public class GestStatisticheLogic : BaseNetLogic
             return;
         }
 
-        //controllo se il carattere separatore Ë valdo oppure no
+        //controllo se il carattere separatore √® valdo oppure no
         char? characterSeparator = Runtime_Utility.CheckCharacterSeparator(",");
         if (characterSeparator == null || characterSeparator == '\0')
         {
@@ -366,144 +519,5 @@ public class GestStatisticheLogic : BaseNetLogic
         ActionCreaReport = null;
     }
 
-    /// <summary>
-    /// Questo metodo estrae dal DB i dati di produzione di tutti gli utenti filtrati in base al giorno. 
-    /// </summary>
-    /// <param name="GiornoRicerca"></param>
-    /// <param name="CsvHeader">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
-    /// <param name="ResultMatrix">Matrice di stringhe con i risultati</param>
-    /// <returns></returns>
-    private bool GetDatiProduzPerUtente(DateTime GiornoRicerca, out string[] CsvHeader, out string[,] ResultMatrix)
-    {
-        string sqlQuery = $"SELECT * FROM CntProduzione" +
-                          $" WHERE LoginDate = '{GiornoRicerca.Date:s}'" +    //Considero l'arco di tutta la giornata, il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59))
-                          $" ORDER BY LoginTime ASC";
 
-        myStore.Query(sqlQuery, out string[] Header, out object[,] QueryResult);
-
-        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
-
-        //Creazione riga intestazione con i nomi delle colonne tradotte in base alla lingua selezionata per il report
-        CsvHeader = new string[] { "User", "LoginTime", "LogoutTime"
-                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo ON"), new List<string>(){ cultureInfo.ToString() }).Text
-                                   , InformationModel.LookupTranslation(new LocalizedText("Metri quadri lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
-                                   , InformationModel.LookupTranslation(new LocalizedText("Efficienza di carico"), new List<string>(){ cultureInfo.ToString() }).Text
-                                   , InformationModel.LookupTranslation(new LocalizedText("Produttivit‡ relativa"), new List<string>(){ cultureInfo.ToString() }).Text
-                                };
-
-        ResultMatrix = new string[QueryResult.GetLength(0), CsvHeader.Length];      //Ridefinisco la matrice con le dimensioni effettive
-
-        if (QueryResult.Rank != 2 || QueryResult.GetLength(0) <= 0)      //l'operatore || valuta l'exp a sx se Ë vera valuta anche quella a destra altrimenti non la valuta per niente.
-            return false;
-
-        //Preparo la matrice di risultati della query
-        for (int row = 0; row < QueryResult.GetLength(0); row++)
-        {
-            float MqProcessati = (float)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav_Stop")] - (float)QueryResult[row, Array.IndexOf(Header, "CntMetriQLav_Start")];  //Metri quadri prodotti
-            float MtTrasp = (float)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp_Stop")] - (float)QueryResult[row, Array.IndexOf(Header, "CntMetriTrasp_Start")];  //Metri trasporto percorsi
-            float LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
-            int OreCicloOn = ((int)QueryResult[row, Array.IndexOf(Header, "CntOreCiclo_Stop")] - (int)QueryResult[row, Array.IndexOf(Header, "CntOreCiclo_Start")]);  //Ore ciclo ON
-            int MinCicloOn = ((int)QueryResult[row, Array.IndexOf(Header, "CntMinCiclo_Stop")] - (int)QueryResult[row, Array.IndexOf(Header, "CntMinCiclo_Start")]);  //Minuti ciclo ON
-            int MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
-
-            float ProdutRelativa = (MqProcessati / MinTotCicloOn) / 60;         //Mq/OreCiclo
-
-
-            ResultMatrix[row, 0] = QueryResult[row, 0].ToString();      //Nome utente            
-            ResultMatrix[row, 1] = ((DateTime)QueryResult[row, 2]).ToString("G", cultureInfo);      //LoginTime
-            ResultMatrix[row, 2] = QueryResult[row, 3] is null ? "" : ((DateTime)QueryResult[row, 3]).ToString("G", cultureInfo);      //LogoutTime
-            ResultMatrix[row, 3] = OreCicloOn + " h : " + MinCicloOn + " min";      //Durata tempo ciclo
-            ResultMatrix[row, 4] = MqProcessati.ToString();  //Metri quadri prodotti
-            ResultMatrix[row, 5] = LoadEfficiency.ToString("P1", cultureInfo);
-            ResultMatrix[row, 6] = ProdutRelativa.ToString();
-        }
-        return true;
-    }
-
-    /// <summary>
-    /// Questo metodo estrae dal DB la sommatoria dei dati di produzione riferita a un particolare giorno
-    /// </summary>
-    /// <param name="GiornoRicerca"></param>
-    /// <param name="header">Array di stringhe tradotte in base alla lingua selezionata per il report</param>
-    /// <param name="Risultati">Matrice di stringhe con i risultati</param>
-    /// <returns></returns>
-    private bool GetDatiProduzGiornaliera(DateTime GiornoRicerca, out string[] header, out string[,] Risultati)
-    {
-        //Creazione Query per estrapolare i dati da visualizzare sulla griglia
-        //Nota: a causa delle limitazioni dovute allo Standard ANSI Sql92 e della mancanza di istruzioni(es 'CAST') non supportate da QStudio, la progettazione della query Ë stata molto complicata. 
-        //Per estrapolare i dati necessari Ë stata utilizzata una tabella di appoggio perchË i dati finali devono essere raggruppati per data ma su QStudio la funzione EXTRACT non Ë supportata nella clausola GROUP BY. Prima sono stati tirati su i dati convertendo il logintime in giorno, mese e anno
-        //Poi sono stati fatti i raggruppamenti.
-
-        //Creazione tabella di appoggio        
-        string tblAppoggio = $"(SELECT EXTRACT(DAY FROM LoginTime) AS Giorno, EXTRACT(MONTH FROM LoginTime) AS Mese, EXTRACT(YEAR FROM LoginTime) AS Anno" +
-                             $", NPezzi_Prodotti" +
-                             $", NMetri_Prodotti" +
-                             $", CntOreAccensQuadro" +
-                             $", CntMinutiAccensQuadro" +
-                             $", CntOreCicloOn" +
-                             $", CntMinutiCicloOn" +
-                             $", CntOreAllarmeOn" +
-                             $", CntMinutiAllarmeOn" +
-                             $", CntOreStopOn" +
-                             $", CntMinutiStopOn" +
-                             $", CntOrePausaOn" +
-                             $", CntMinutiPausaOn" +
-                             $" FROM CntProduzione" +
-                             $" WHERE LoginTime BETWEEN '{GiornoRicerca.Date:s}' AND '{GiornoRicerca.Date.AddSeconds(86399):s}') AS TblAppoggio";  //il formattatore 's' serve per recuperare la data in formato ISO (2022-09-15T23:59:59)
-
-        //Creazione query finale
-        string sqlQuery = $"SELECT Giorno, Mese, Anno" +
-                          $", SUM(NPezzi_Prodotti) AS NPezzi_Prodotti" +
-                          $", SUM(NMetri_Prodotti) AS NMetri_Prodotti" +
-                          $", SUM(CntOreAccensQuadro) AS CntOreAccensQuadro" +
-                          $", SUM(CntMinutiAccensQuadro) AS CntMinutiAccensQuadro" +
-                          $", SUM(CntOreCicloOn) AS CntOreCicloOn" +
-                          $", SUM(CntMinutiCicloOn) AS CntMinutiCicloOn" +
-                          $", SUM(CntOreAllarmeOn) AS CntOreAllarmeOn" +
-                          $", SUM(CntMinutiAllarmeOn) AS CntMinutiAllarmeOn " +
-                          $", SUM(CntOreStopOn) AS CntOreStopOn" +
-                          $", SUM(CntMinutiStopOn) AS CntMinutiStopOn" +
-                          $", SUM(CntOrePausaOn) AS CntOrePausaOn" +
-                          $", SUM(CntMinutiPausaOn) AS CntMinutiPausaOn" +
-                          $" FROM {tblAppoggio}" +  //la sorgente Ë la tbl di appoggio
-                          $" GROUP BY Anno, Mese, Giorno" +
-                          $" ORDER BY Anno ASC, Mese ASC, Giorno ASC";
-
-        myStore.Query(sqlQuery, out _, out object[,] QueryResult);
-
-        var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
-
-        //Creazione riga intestazione con i nomi delle colonne tradotte in base alla lingua selezionata per il report
-        header = new string[8] {    InformationModel.LookupTranslation(new LocalizedText("Data"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("Pezzi lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("Metri lavorati"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentCicloOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentAllarmeOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentStopOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                  , InformationModel.LookupTranslation(new LocalizedText("PercentPausaOn"), new List<string>(){ cultureInfo.ToString() }).Text
-                                };
-
-        Risultati = new string[QueryResult.GetLength(0), 8];      //Ridefinisco la matrice con le dimensioni effettive
-
-        if (QueryResult.Rank != 2 || QueryResult.GetLength(0) <= 0)      //l'operatore || valuta l'exp a sx se Ë vera valuta anche quella a destra altrimenti non la valuta per niente.
-            return false;
-
-        //Preparo la matrice di risultati della query
-        for (int row = 0; row < QueryResult.GetLength(0); row++)
-        {
-            Risultati[row, 0] = new DateTime(Convert.ToInt32(QueryResult[row, 2]), Convert.ToInt32(QueryResult[row, 1]), Convert.ToInt32(QueryResult[row, 0])).ToString("d", cultureInfo);      //Data
-            //resultSet[row, 1] = QueryResult[row, 1].ToString();      //Utente attivo
-            Risultati[row, 1] = QueryResult[row, 3].ToString();      //NPezzi_Prodotti
-            Risultati[row, 2] = QueryResult[row, 4].ToString();      //NMetri_Prodotti
-            Risultati[row, 3] = QueryResult[row, 5] + "h : " + QueryResult[row, 6] + "min";      //Durata accensione quadro      
-
-            var DurataAccMin = (Convert.ToDouble(QueryResult[row, 5]) * 60) + Convert.ToDouble(QueryResult[row, 6]);
-            Risultati[row, 4] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 7]) * 60) + Convert.ToDouble(QueryResult[row, 8])) / DurataAccMin).ToString("P1", cultureInfo);      //% In ciclo. Il metodo ToString() crea una stringa es. 13,5%
-            Risultati[row, 5] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 9]) * 60) + Convert.ToDouble(QueryResult[row, 10])) / DurataAccMin).ToString("P1", cultureInfo);    //% In allarme
-            Risultati[row, 6] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 11]) * 60) + Convert.ToDouble(QueryResult[row, 12])) / DurataAccMin).ToString("P1", cultureInfo);    //% In stop
-            Risultati[row, 7] = DurataAccMin <= 0 ? "0%" : (((Convert.ToDouble(QueryResult[row, 13]) * 60) + Convert.ToDouble(QueryResult[row, 14])) / DurataAccMin).ToString("P1", cultureInfo);   //% In pausa        
-        }
-        return true;
-    }
 }

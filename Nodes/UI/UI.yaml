@@ -1034,7 +1034,7 @@ Children:
     Id: g=ac9910b5a4628aec3790c6488efbaa46
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: true
+    Value: false
   - Class: Reference
     Target: ns=1;i=266
     Direction: Forward
@@ -5734,5 +5734,17 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+    - Name: Visible
+      Id: g=eb639722830c9fac2bd2f15a931afc4b
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: false
+    - Name: Enabled
+      Id: g=ee585bb2f0e33d82c029e70967fd6427
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: false
 - File: Panels/Panels.yaml
 - File: OggettiTemplate/OggettiTemplate.yaml

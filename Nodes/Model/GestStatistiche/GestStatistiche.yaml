@@ -108,8 +108,8 @@ Children:
   - Name: CntKwOra
     Id: g=4d043123ddb02058e092852e882a3712
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Float
+    Value: 0.0
   - Name: CntMetriTrasp
     Id: g=7cd81fff9174b98f26938c192ac7ed0a
     Type: BaseDataVariableType

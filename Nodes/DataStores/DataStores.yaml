@@ -243,101 +243,101 @@ Children:
         Type: BaseObjectType
         Children:
         - Name: LocalTime
-          Id: g=aa13e5e22f583212b457ef7696bb9f1c
+          Id: g=8a344588635887df74b2854ca1650ad8
           Type: StoreColumn
           DataType: TimeZoneDataType
         - Name: 'ActiveState_it-IT'
-          Id: g=8910a79d94aca80f9aa06f0cd702105f
+          Id: g=45d58613a2b78ea589f5a7eb999db8cb
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_en-US'
-          Id: g=351eeb2c0b122b170f8d4ab860fc764e
+          Id: g=a6fc2178d60ffc6f23ef0554b532960c
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_de-DE'
-          Id: g=8dbb511f22bf13c14e28213614c84eb7
+          Id: g=6e57db7a8d2185443074c2aec436366f
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_fr-FR'
-          Id: g=7c0991ecb9429f9b4add1d24b12885aa
+          Id: g=bdc3ee5cadb2cb4bdd0d26aaad5ca71c
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'ActiveState_es-ES'
-          Id: g=a2954ab853500b2277b07eaa95e67a28
+          Id: g=2a4a66d4b09e8225957dc6ab379e0856
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: ConditionName
-          Id: g=a6650f6b8bc27df369ef7b66566e9673
+          Id: g=8b0695fc24d2a51f0ad95840458d2370
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_it-IT'
-          Id: g=3c47cf0414a35c70740a8ba8439d8b36
+          Id: g=2ffc3204c755a06f72b83956d8ecdb2a
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_en-US'
-          Id: g=4ace2ce48c5e46378cebe0a8267c7043
+          Id: g=921dde8124ea388a2b98bb2c924d8340
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_de-DE'
-          Id: g=e8324cfc34dfc057d4b89ebc2c51aef7
+          Id: g=98bd8e37b4cb254c0e8cfcaa79a07081
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_fr-FR'
-          Id: g=0549f829017b418a61a4353f5fa524c0
+          Id: g=08d7e6c6b28c058e452e61d69f207a61
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'Message_es-ES'
-          Id: g=432943f7fe207cc629eaad8f23e11e77
+          Id: g=b09a5459346a8391cfff027be288aa45
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Time
-          Id: g=e994f11064e25b177c29cb064a3e08b3
+          Id: g=a250b35d735a046962ba9af09f3c09de
           Type: StoreColumn
           DataType: UtcTime
           Value: "1601-01-01T00:00:00.0000000"
         - Name: 'AckedState_it-IT'
-          Id: g=086ce8cb0bc184e282b99e5ad51180b9
+          Id: g=4281dd0a9c72a0a668f6f003cfd5860a
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_en-US'
-          Id: g=9005029d936cf45a0a04f643e170ff00
+          Id: g=7955443ee8b50a2ab6dcff9a963cbabf
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_de-DE'
-          Id: g=a042461b393855f1d59684853b2598ac
+          Id: g=d259fddf00270b4e086839844a5f615b
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_fr-FR'
-          Id: g=165f60a5200e2afa26eed15979e066b7
+          Id: g=5208576bf8300ab4e8aea130f31f473b
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: 'AckedState_es-ES'
-          Id: g=521e2b151f45cbfae28d93be51f10c16
+          Id: g=56c044e9e85829bf6588ee8c6885f486
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: SourceName
-          Id: g=958d7988ed3dfdfc60a4b467bbb6a483
+          Id: g=4d6bb7b65bf482f2712092df6a2b7ea2
           Type: StoreColumn
           DataType: String
           Value: ""
         - Name: Severity
-          Id: g=89d69a53fe74e615181b008ab6232ae3
+          Id: g=9efb53b022df82378af77a9677ef6d78
           Type: StoreColumn
           DataType: UInt16
           Value: 0
@@ -424,8 +424,8 @@ Children:
         - Name: CntKwOra
           Id: g=0f959673c1a32ea5175bb5d7daf2ba5f
           Type: StoreColumn
-          DataType: Int32
-          Value: 0
+          DataType: Float
+          Value: 0.0
         - Name: CntMetriTrasp
           Id: g=7ef45b9da4c198395996209cd4830810
           Type: StoreColumn
@@ -1004,8 +1004,8 @@ Children:
         - Name: CntKwOra
           Id: g=311c19a2c2855446cd6fbced736d6dff
           Type: StoreColumn
-          DataType: Int32
-          Value: 0
+          DataType: Float
+          Value: 0.0
         - Name: CntMetriTrasp
           Id: g=a40de5bf9b1849e8148e3eed540d0d70
           Type: StoreColumn
@@ -1016,7 +1016,7 @@ Children:
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: Optional
-        Value: 1000
+        Value: 0
   - Name: MaxColumnNameLength
     Id: g=5b378526713906fa17b217a27fa14908
     Type: BaseDataVariableType

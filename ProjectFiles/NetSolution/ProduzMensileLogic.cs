@@ -60,7 +60,7 @@ public class ProduzMensileLogic : BaseNetLogic
                        $", SUM(CntMinPowerOn) AS CntMinPowerOn " +
                        $", SUM(CntKwOra) AS CntKwOra" +
                        $", SUM(CntMetriTrasp) AS CntMetriTrasp" +
-                       $" FROM CntProduzione";   //la sorgente è la tbl di appoggio
+                       $" FROM CntProduzione";   
 
         Where1.Value = Where;
         Group.Value = "GROUP BY LoginDate";

@@ -24,6 +24,40 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=59359c1047c79fa108d0c7f6f2fb3bad
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Id: g=165efa39b9fb2d67ad821a8fa85fd69b
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{0}!={1}"
+            - Name: ns=9;Source0
+              Id: g=ba36e8f920aa22c4374e1524c2622e1f
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=aefcf1dd6b648b27fa58ea35f86a8e9a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../Titolo/Title/Titolo"
+            - Name: ns=9;Source1
+              Id: g=609a19427838dcef4833fec1aa47c840
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=b7fa59ef28a1d7f96fc86b9b7a911ed1
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../Titolo/Title/Title1st"
         - Name: MouseClickEventHandler1
           Id: g=4993c640d9ecf47d424d71d52be80f11
           Type: EventHandler
@@ -184,40 +218,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
-          Children:
-          - Name: ExpressionEvaluator1
-            Id: g=018b32457e27f1cbc86263ea1c618c20
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Expression
-              Id: g=5a3d82f2f20d8ac753594dcd652c0e26
-              Type: BaseDataVariableType
-              DataType: String
-              ReferenceType: HasParameter
-              ModellingRule: Optional
-              Value: "{0}!={1}"
-            - Name: ns=9;Source0
-              Id: g=cf75159dfbd05e3bfabe2ee8d304b6bc
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Id: g=5f752c4eeabcea94a13cb565906bbd50
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Titolo/Title/Titolo"
-            - Name: ns=9;Source1
-              Id: g=017a9f3d55486404488a307774c3e3c7
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Id: g=80d19233679917fb28479e87efb400da
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Titolo/Title/Title1st"
       - Name: PulsAbiltazPistole
         Id: g=0d4e980c02f386b614d9f9b221f10259
         Type: PulsRettConSimb_R0_0
@@ -1431,6 +1431,29 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Id: g=375252e3766fdbfdc96202b09416e13f
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Id: g=aed992a31c214bd296d4e7babf26c6ee
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "!{0}"
+        - Name: ns=9;Source0
+          Id: g=042a213c36941a6f7c0911e08efcb8f8
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: CollegamentoDinamico
+            Id: g=60b1ab3ce4eeeb7f6c7dd74da08c4302
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
     - Name: Comando_StatoPuls
       Id: g=77e3ae490933253f2a087e6c07103783
       Type: BaseDataVariableType

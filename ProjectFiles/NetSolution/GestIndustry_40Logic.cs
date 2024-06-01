@@ -72,6 +72,7 @@ public class GestIndustry_40Logic : BaseNetLogic
             {
                 //Aggiorno Nome Ricetta
                 o_CurrentJob.sRecipeName = NewRic;
+                Project.Current.GetVariable("/Model/Variabili_HMI/Var_Ritentive/sNomeRicAttualesNomeRicAttuale").Value = NewRic;
                 ErrCode = (short)Industry_40_ErrCode.NoErr;
             }
         }

@@ -13693,6 +13693,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: DynamicLink
+          Id: g=79f71b5b075eeb10814adc68b548f7ee
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+          Children:
+          - Name: Mode
+            Id: g=738ee6cb58396321416330d37cfe2a8c
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
       - Name: Comando_StatoPuls
         Id: g=4f926bab564dcab8a3fe4c41585e8bdd
         Type: BaseDataVariableType
@@ -13853,6 +13866,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=d83a6687fff135e590fc00c8cd031898
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=14e2e14ddb09497cd3fabee3c408bb0e
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=9bc97a136f49637c6416757c38a4d0bb
           Type: BaseDataVariableType
@@ -14042,6 +14068,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: DynamicLink
+          Id: g=56d7640fbcbd1e1b301292038f5bab04
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+          Children:
+          - Name: Mode
+            Id: g=f72b5b127e9e5af0b31eb63ea502ebba
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
       - Name: Comando_StatoPuls
         Id: g=b05378205a5294d65046ec85315c3b70
         Type: BaseDataVariableType
@@ -14214,6 +14253,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=f1392cd81cae956597ec4daa6d507797
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=bef3b521775ec3eacf64812223d912ab
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=5a900f9da7c7a1f059c894afeea790f1
           Type: BaseDataVariableType
@@ -14668,6 +14720,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=4d4e959b574a95e02c30b4507c17db56
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=c56e8a6d3cb66a02a7bcaef2330eaa57
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=fc0ba3758ded299625b01246fb12b9b4
           Type: BaseDataVariableType
@@ -15230,6 +15295,19 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+      Children:
+      - Name: DynamicLink
+        Id: g=648a134fbe449c7a07ce61d68161fe1c
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+        Children:
+        - Name: Mode
+          Id: g=a16049af6fe177e9bb3000facfb25ae1
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
     - Name: Comando_StatoPuls
       Id: g=b553d34481dfd8b8f56af94f0a505ecd
       Type: BaseDataVariableType
@@ -15370,6 +15448,19 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+      Children:
+      - Name: DynamicLink
+        Id: g=178d61727c50622e8e8ee537264370df
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+        Children:
+        - Name: Mode
+          Id: g=637fd115c60247a24166efb217162296
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
     - Name: Comando_StatoPuls
       Id: g=33151a7716e1e11535a201b4c66c0913
       Type: BaseDataVariableType
@@ -15721,6 +15812,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: DynamicLink
+          Id: g=66dde2d2028b59addeffaf7fbbc3df34
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+          Children:
+          - Name: Mode
+            Id: g=24a3e788a1371850a4c55fb3b85d0af6
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
       - Name: Comando_StatoPuls
         Id: g=a7b05ade9c777ce48fe6dad098c3449d
         Type: BaseDataVariableType
@@ -15892,6 +15996,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: DynamicLink
+          Id: g=40f21ddb91b83de3f5e5cc33eaa46c3a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+          Children:
+          - Name: Mode
+            Id: g=3591bc213cdae34bf0284b242bc3f212
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
       - Name: Comando_StatoPuls
         Id: g=d1378e208228295f84e6ff144948b4d1
         Type: BaseDataVariableType
@@ -16076,6 +16193,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=ce4156c130d6b11b3e5aec6b6cc4f798
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=11d166274ef4262ee58208de04405920
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=5181094fc75cb3d1618332f6869506cc
           Type: BaseDataVariableType
@@ -16203,6 +16333,19 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+      Children:
+      - Name: DynamicLink
+        Id: g=928d5809c7be7ed3141fcc4d6e2b5dbd
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+        Children:
+        - Name: Mode
+          Id: g=994c3159c89d03706718527d273ec74e
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
     - Name: Comando_StatoPuls
       Id: g=c5fd00baca6cc0b692cbaaf7856cd882
       Type: BaseDataVariableType
@@ -16331,6 +16474,19 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
+      Children:
+      - Name: DynamicLink
+        Id: g=a9bf001dc7ca9c814335a4cd00f4c6be
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+        Children:
+        - Name: Mode
+          Id: g=32b05468318360a4b1203195e14fd8df
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
     - Name: Comando_StatoPuls
       Id: g=ebbf1a0c6b6f7dc908dbdf578e70d5af
       Type: BaseDataVariableType
@@ -16503,6 +16659,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=b913cc298978d972c7e3f6a734cf8706
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=2af6288853caf375d8c79700e3f215e4
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=7ed8abd5c1346cbf176ae07c0ff720ed
           Type: BaseDataVariableType
@@ -16957,6 +17126,19 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=ce6fc6d88ea5413b9b4fd1cb5d7201c5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/bHmiManualOn"
+            Children:
+            - Name: Mode
+              Id: g=bdc9c5cce2871ec41258e6d202523f0c
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
         - Name: Comando_StatoPuls
           Id: g=e5513feb70fbcd6fb3dcf3c8fc807af2
           Type: BaseDataVariableType

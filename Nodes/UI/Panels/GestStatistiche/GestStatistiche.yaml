@@ -140,7 +140,7 @@ Children:
           Id: g=f1ed7e86d12dcb5a3d7a259b6f28e01e
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
+          Value: false
         - Name: EventoMouseClickHandler1
           Id: g=5876a585a23059e36092c53bf866dd55
           Type: EventHandler
@@ -230,6 +230,12 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+        - Name: Visible
+          Id: g=38fa81b9bb94504a5b0cc528f258722f
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: true
       - Name: ProduzMensileBtn
         Id: g=fee69a15bd792edee0cd5cb3b28e7391
         Type: PulsRettConSimb_R0_0
@@ -852,6 +858,13 @@ Children:
       - Name: FwBtn
         Id: g=0ad3609ef3d928bc6202ac1c810a5abb
         Type: PulsRettConSimb_R0_0
+        Children:
+        - Name: Enabled
+          Id: g=8ab03922b8a7c33068906f83dec2b43e
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: false
   - Name: FilterObject
     Id: g=2482d74188707f958c87e6e6fd628161
     Type: BaseObjectType
@@ -4270,7 +4283,7 @@ Children:
             Id: g=3302da84ff84b790455e8b4731f60f1b
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":46,"TextId":"Durata accensione"}
+            Value: {"LocaleId":"it-IT","Text":"Durata accensione"}
           - Name: Width
             Id: g=aa5e1e4ad465291a190e8c371aad981f
             Type: BaseDataVariableType
@@ -4487,7 +4500,7 @@ Children:
             Id: g=8a5cc59af83d048deb27f073983fa746
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"Consumo (w)"}
+            Value: {"LocaleId":"it-IT","Text":"Consumo (Kw)"}
           - Name: Width
             Id: g=e80a3fa5b23896dab1c587e0c7680c90
             Type: BaseDataVariableType
@@ -5964,7 +5977,7 @@ Children:
             Id: g=0d2ff58c45d288bae4fca22504c3426a
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"Consumo (w)"}
+            Value: {"LocaleId":"it-IT","Text":"Consumo (Kw)"}
           - Name: Width
             Id: g=9d7bf06d1414eb2a9d4d975b96a6beab
             Type: BaseDataVariableType

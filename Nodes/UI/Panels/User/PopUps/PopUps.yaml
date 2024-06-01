@@ -1842,6 +1842,29 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=b457e670bc7de89abefb2cf24333b8f8
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Id: g=e684ad43c2e8944efabfe0aed7169960
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "!{0}"
+            - Name: ns=9;Source0
+              Id: g=e68bc3cec94cea65206271f22bb8b08a
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: CollegamentoDinamico
+                Id: g=e3cebd252feb4eec61c6329c6aad64b9
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
         - Name: Comando_StatoPuls
           Id: g=7c913dc1439374367a5d27249f3b056f
           Type: BaseDataVariableType
@@ -1957,6 +1980,29 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=80350a5c8d17524aabd8f748c6304759
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Id: g=9b55525fdb266a20488283ac14e9206d
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "!{0}"
+            - Name: ns=9;Source0
+              Id: g=6f303f890a5297e32cc5695d1c8c96dc
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: CollegamentoDinamico
+                Id: g=faae6fea8e5ff1d281687fd8d2135ba6
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
         - Name: Comando_StatoPuls
           Id: g=bd166866634829afad469e1c7c80453f
           Type: BaseDataVariableType
@@ -2078,6 +2124,29 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=06668310ee5d3822f9e10910f6943fe9
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Id: g=a8f15049f5431d12cfcf3bf7bb3c0d5e
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "!{0}"
+            - Name: ns=9;Source0
+              Id: g=60d7cbcebb88c94385aa9380e46e8a9c
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: CollegamentoDinamico
+                Id: g=2b1e6021d297c2f0cdf7eae87796caeb
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
         - Name: Comando_StatoPuls
           Id: g=fe5eb6bf9f53429fe988b3fbce808b96
           Type: BaseDataVariableType
