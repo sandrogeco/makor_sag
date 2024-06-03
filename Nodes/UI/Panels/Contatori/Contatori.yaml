@@ -90,7 +90,7 @@ Children:
           Id: g=b6c3e490940bc8fa76a2166d8087d008
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
+          Value: true
         - Name: RightMargin
           Id: g=abddd913e24ebf4e9cbc66480df1ea64
           Type: BaseVariableType
@@ -429,7 +429,7 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
+          Value: true
         - Name: RightMargin
           Id: g=fdefe2092355dffc22bf276990864957
           Type: BaseVariableType
@@ -9720,41 +9720,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Float
         Value: 0.0
-  - Name: HorizontalLayout2
-    Id: g=4123fcb35876ad1ef1a953ad9fa8abda
-    Type: RowLayout
-    Children:
-    - Name: Width
-      Id: g=9fae075a9db39506476648ed190562d8
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -1.0
-    - Name: Height
-      Id: g=37fa81ed3d12a5d1ae4a94d3b0def4f5
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -1.0
-    - Name: LeftMargin
-      Id: g=a5937de197447595da9954ab12f0140e
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
-    - Name: TopMargin
-      Id: g=bc8c4f7f96177a9353702b9793824bd6
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 440.0
-    - Name: HorizontalGap
-      Id: g=4812eeb8a18fd0dd76906de03c91af5a
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: WidgetContatore_R0_1
+    - Name: WidgetContatore_R0_2
       Id: g=eaf9fe71a954a80b01fa5821f45c45ea
       Type: WidgetContatore_R0_0
       Children:
@@ -10305,7 +10271,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Float
         Value: 0.0
-    - Name: WidgetContatore_R0_3
+    - Name: WidgetContatore_R0_4
       Id: g=af0171ee3f95b3dc5d34d5fdd3600f16
       Type: WidgetContatoreEUConverter_R0_0
       Children:

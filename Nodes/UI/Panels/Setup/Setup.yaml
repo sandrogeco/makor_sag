@@ -1451,7 +1451,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"NamespaceIndex":46,"TextId":"Velocità di linea"}
+          Value: {"NamespaceIndex":46,"TextId":"dUsrVelocLinea"}
       - Name: Var
         Id: g=7ef6c4aa07448225652b82046c869181
         Type: BaseDataVariableType
@@ -3681,7 +3681,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"NamespaceIndex":46,"TextId":"Velocità di linea"}
+          Value: {"NamespaceIndex":46,"TextId":"dUsrVelocLinea"}
       - Name: Var
         Id: g=21ebabb6f278496a7bca1487507bb80f
         Type: BaseDataVariableType
@@ -3806,6 +3806,18 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasProperty
             Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: LeftMargin
+        Id: g=c49cd83f2a133510d8cf9780703729f8
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: TopMargin
+        Id: g=19f279f3563045754d2feb8f91ae385d
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
     - Name: VerticalLayout2
       Id: g=1552ce38caf6f41d52ce0f4afd70ae52
       Type: ColumnLayout

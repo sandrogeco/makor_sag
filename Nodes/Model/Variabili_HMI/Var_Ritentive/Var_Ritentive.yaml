@@ -2,6 +2,11 @@ Name: Var_Ritentive
 Id: g=5cc89496a1ff43329d072ee8d500ea55
 Type: FolderType
 Children:
+- Name: sNomeMacchAndMatr
+  Id: g=e3a9ce29ab4fb8d1eeae7993fcec6652
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "Next_18642"
 - Name: sNomeRicAttuale
   Id: g=af046e916943313ca80dc73ea91baa26
   Type: BaseDataVariableType
@@ -18,3 +23,8 @@ Children:
   DataType: Duration
   Description: {"LocaleId":"it-IT","Text":"Tempo dopo il quale viene fatto il logout di un utente Oem"}
   Value: "0:00:10:0.0000000"
+- Name: OemAbilitaModoTransfert
+  Id: g=656ff937b3f96dfb5183063dafa64d1e
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false

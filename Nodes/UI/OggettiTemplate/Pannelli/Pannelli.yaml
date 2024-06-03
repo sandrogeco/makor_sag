@@ -3015,7 +3015,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.png"
+          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.svg"
         - Name: HorizontalAlignment
           Id: g=ba00f19b6d6156f60d2a734dffa68c61
           Type: BaseVariableType
@@ -25151,7 +25151,7 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsExportOff.svg"
+      Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsBackupDataOff.svg"
     - Name: Appearance
       Id: g=93b2b74a726acbe2dd04e224faca3900
       Type: BaseVariableType
@@ -25357,7 +25357,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Export"}
+      Value: {"LocaleId":"it-IT","Text":""}
 - Name: Calendario_R0_0
   Id: g=0c07a2190b36ed6d2b5f6a4de44c3c62
   Supertype: PopUp_R0_0

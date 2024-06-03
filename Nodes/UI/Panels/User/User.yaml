@@ -3340,7 +3340,7 @@ Children:
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: "round({0})"
+                  Value: "{0:f1}"
                 - Name: ns=9;Source0
                   Id: g=ae1aaf42be78ec171c436938db1e2f94
                   Type: BaseDataVariableType
@@ -12085,7 +12085,7 @@ Children:
                   DataType: LocalizedText
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: {"LocaleId":"","Text":"{0:n1}"}
+                  Value: {"LocaleId":"it-IT","Text":"{0:f1}"}
                 - Name: ns=9;Source0
                   Id: g=859f74f7f4837bfd901b83f8c8a7ea4b
                   Type: BaseDataVariableType

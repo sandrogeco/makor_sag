@@ -707,7 +707,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsRicetteOff.svg"
+          Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsRicPiastrPistOff.svg"
         - Name: MouseClickEventHandler1
           Id: g=6ef912d5125140d2c7af7ecde32d08d9
           Type: EventHandler

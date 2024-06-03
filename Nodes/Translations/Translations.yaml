@@ -271,7 +271,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [185,6],
+    "Dimensions": [188,6],
     "Body": [
      "","it-IT","en-US","de-DE","fr-FR","es-ES",
      "ActiveState","Stato","Status","Zustand","État","Estado",
@@ -421,7 +421,7 @@ Children:
      "Filtro utente","Filtro per nome utente","Filter by user name","Filter nach Benutzernamen","Filtre pour nom utilisateur","Filtrar por nombre usuario",
      "Ieri","Ieri","Yesterday","Gestern","Hier","Ayer",
      "Oggi","Oggi","Today","Heute","Aujourd’hui","Hoy",
-     "Mese scorso","Mese scorso","Last month","Letzter Monat","Mois dernier","Mes pasado",
+     "Mese precedente","Mese precedente","Last month","Letzter Monat","Mois dernier","Mes pasado",
      "Mese attuale","Mese attuale","Current month","Aktueller Monat","Mois actuel","Mes actual",
      "Per Data","Per Data","By Date","Nach Datum","Par date","Por fecha",
      "Fine","Fine","End","Ende","Fin","Fin",
@@ -444,20 +444,23 @@ Children:
      "Errore clonazione ricetta. Riprovare.","Errore clonazione ricetta. Riprovare.","Recipe cloning error. Try again.","Fehler bei Klonierung des Rezepts. Erneut versuchen.","Erreur clonage recette. Essayez de nouveau.","Error clonación receta. Inténtalo de nuevo.",
      "Ora creazione","Ora creazione","Creation time","Erstellungszeit","Heure création","Hora creación",
      "Ultima modifica","Ultima modifica","Last change","Letzte Änderung","Dernière modification","Última modificación",
-     "Lavorazione successiva","Lavorazione successiva","Subsequent processing","Nächste Bearbeitung","Traitement suivant","Procesamiento siguiente",
+     "Lavorazione successiva","Lavorazione successiva","Subsequent Job","","","",
      "N° ordine","N° ordine","Order No.","Auftragsnummer","N° commande","Núm. de pedido",
-     "Lavorazione precedente","Lavorazione precedente","Previous processing","Vorhergehende Bearbeitung","Traitement précédent","Procesamiento anterior",
+     "Lavorazione precedente","Lavorazione precedente","Previous Job","","","",
      "Ora fine lavorazione","Ora fine lavorazione","Processing end time","Uhrzeit Arbeitsende","Heure fin traitement","Tiempo de finalización procesamiento",
      "Ora inizio lavorazione","Ora inizio lavorazione","Processing start time","Uhrzeit Arbeitsbeginn","Heure début traitement","Hora de inicio procesamiento",
      "Durata lavorazione","Durata lavorazione","Processing duration","Bearbeitungsdauer","Durée traitement","Duración procesamiento",
      "N° di pezzi lavorati","N° di pezzi lavorati","No. of pieces processed","Anzahl der bearbeiteten Werkstücke","Nbre pièces travaillées","N.° de piezas mecanizadas",
-     "Lavorazione attuale","Lavorazione attuale","Current processing","Aktuelle Bearbeitung","Traitement actuel","Procesamiento actual",
+     "Lavorazione attuale","Lavorazione attuale","Current processing","","","",
      "La ricetta richiesta dal MES non esiste nel database della macchina","La ricetta richiesta dal MES non esiste nel database della macchina","The recipe required by the MES is not in the machine's database","Das vom MES angeforderte Rezept ist nicht in der Datenbank der Maschine vorhanden","La recette requise par le MES n’existe pas dans la base de données de la machine","La receta requerida por el MES no existe en la base de datos de la máquina",
      "Terminare la lavorazione del n° ordine: {0}","Terminare la lavorazione del n° ordine: {0}","Finish processing the order No.: {0}","Bearbeitung der Auftragsnummer beenden: {0}","Terminer le traitement du n° commande : {0}","Terminar de procesar el Núm. de pedido: {0}",
      "Avviare lavorazione del n° ordine: {0}","Avviare lavorazione del n° ordine: {0}","Start processing order No.: {0}","Bearbeitung der Auftragsnummer starten: {0}","Lancer traitement du n° commande : {0}","Iniciar a procesar el Núm. de pedido: {0}",
      "Errore attivazione nuovo JOB","Errore attivazione nuovo JOB","Job activation error","","","",
      "Errore chiusura JOB","Errore chiusura JOB","Job end error","","","",
-     "NoPlcConnection","Connessione PLC assente","PLC connection missing","","",""
+     "NoPlcConnection","Connessione PLC assente","PLC connection missing","","","",
+     "Pezzi","Pezzi","Pieces","","","",
+     "Durata ciclo ON","Durata ciclo ON","Cycle On duration","","","",
+     "Consumo (Kw)","Consumo (Kw)","Consumption (Kw)","","",""
     ]
    }
 - Name: Traduz_Oem

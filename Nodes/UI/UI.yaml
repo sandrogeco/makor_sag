@@ -5666,30 +5666,18 @@ Children:
             Id: g=6848342570fde83c82477ec107776256
             Type: NodePointer
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
+            Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic"
             Children:
             - Name: Kind
               Id: g=48a3d1d5a2f659d9df855a7bfcc76bff
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/ObjectTypes/BaseObjectType"
-            - Name: DynamicLink
-              Id: g=65683be2b7dce1c94bf11a8f64e3cd7f
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../TestBtn_Logic@NodeId"
-              Children:
-              - Name: Mode
-                Id: g=0b5ef50cfd3f968e2c56b4bfa7a29ea9
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
           - Name: ns=9;Method
             Id: g=43f811c9ec3b73f199adf697ad905dc4
             Type: BaseDataVariableType
             DataType: String
-            Value: "Query"
+            Value: "Crea"
       - Name: EventArguments
         Id: g=a6ca9aa929989c166278f031bead6eaf
         Type: MouseClickEvent
@@ -5738,13 +5726,18 @@ Children:
       Id: g=eb639722830c9fac2bd2f15a931afc4b
       Type: BaseDataVariableType
       DataType: Boolean
-      ModellingRule: Optional
-      Value: false
+      Value: true
+      Children:
+      - Name: DynamicLink
+        Id: g=7cd0674516d97f06a25a00b6a21e5094
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Generiche/DebugMode"
     - Name: Enabled
       Id: g=ee585bb2f0e33d82c029e70967fd6427
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
+      Value: true
 - File: Panels/Panels.yaml
 - File: OggettiTemplate/OggettiTemplate.yaml

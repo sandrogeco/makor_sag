@@ -3384,6 +3384,12 @@ Children:
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
+      - Name: Style
+        Id: g=be8a26d4e4ff681e807acdbee4db99a0
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "InputBoxMakorStyle"
     - Name: Unit
       Id: g=9ffc418b8564c3002a7c72efc8d38c89
       Type: Label
@@ -3826,6 +3832,12 @@ Children:
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
+      - Name: Style
+        Id: g=100761507d8177059be23e8ba39b3792
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "InputBoxMakorStyle"
     - Name: Unit
       Id: g=a49331a5040799f849efe69c727b484b
       Type: Label

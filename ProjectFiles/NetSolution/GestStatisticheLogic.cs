@@ -5,6 +5,7 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -55,11 +56,11 @@ public class GestStatisticheLogic : BaseNetLogic
         CsvHeader = new string[] { "User", "LoginTime", "LogoutTime"
                                    , InformationModel.LookupTranslation(new LocalizedText("Pezzi"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , "m²"
-                                   , "m²/m²ₘₐₓ (%)"
+                                   , "m²/m²ₘₐₓ"
                                    , "m²/h"
-                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo On"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo ON"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
-                                   , InformationModel.LookupTranslation(new LocalizedText("% Ciclo"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("PercentCicloOn"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , InformationModel.LookupTranslation(new LocalizedText("Consumo (Kw)"), new List<string>(){ cultureInfo.ToString() }).Text
                                 };
 
@@ -78,12 +79,12 @@ public class GestStatisticheLogic : BaseNetLogic
             long OrePowerOn = QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] : 0;  //Ore accensione ON
             long MinPowerOn = QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] : 0;  //Minuti ciclo ON
 
-            long MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
-            long MinTotPowerOn = OrePowerOn * 60 + MinPowerOn;
-            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / MinTotPowerOn * 100 : 0;
-            double LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
+            long MinTotCicloOn = (OreCicloOn * 60) + MinCicloOn;
+            long MinTotPowerOn = (OrePowerOn * 60) + MinPowerOn;
+            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / (double)MinTotPowerOn : 0;
+            double LoadEfficiency = MqProcessati / (MtTrasp * Project.Current.GetVariable("Model/Variabili_HMI/Macchina/LarghTraspMacchina").Value);
 
-            double ProdutRelativa = MinTotCicloOn != 0 ? (MqProcessati / MinTotCicloOn) / 60 : 0;         //Mq/OreCiclo
+            double ProdutRelativa = MinTotCicloOn != 0 ? MqProcessati * 60 / MinTotCicloOn : 0;         //Mq/OreCiclo
 
             ResultMatrix[row, 0] = QueryResult[row, Array.IndexOf(Header, "Utente")] is not null ? QueryResult[row, Array.IndexOf(Header, "Utente")].ToString() : "";      //Nome utente            
             ResultMatrix[row, 1] = QueryResult[row, Array.IndexOf(Header, "LoginTime")] is not null ? ((DateTime)QueryResult[row, Array.IndexOf(Header, "LoginTime")]).ToString("G", cultureInfo) : "";       //LoginTime
@@ -92,7 +93,7 @@ public class GestStatisticheLogic : BaseNetLogic
             //ResultMatrix[row, 4] = QueryResult[row, Array.IndexOf(Header, "CntMetriLav")] != null ? QueryResult[row, Array.IndexOf(Header, "CntMetriLav")].ToString() : "0";  //Metri lineari prodotti
             ResultMatrix[row, 4] = MqProcessati.ToString("f1");  //Metri quadri prodotti
             ResultMatrix[row, 5] = LoadEfficiency.ToString("P1", cultureInfo);
-            ResultMatrix[row, 6] = ProdutRelativa.ToString();
+            ResultMatrix[row, 6] = ProdutRelativa.ToString("f1");
             ResultMatrix[row, 7] = OreCicloOn + " h : " + MinCicloOn + " min";      //Durata tempo ciclo
             ResultMatrix[row, 8] = OrePowerOn + " h : " + MinPowerOn + " min";      //Durata tempo accensione
             ResultMatrix[row, 9] = PercCiclo.ToString("P1", cultureInfo);       //Percentuale ciclo
@@ -143,11 +144,11 @@ public class GestStatisticheLogic : BaseNetLogic
         CsvHeader = new string[] { "LoginDate"
                                    , InformationModel.LookupTranslation(new LocalizedText("Pezzi"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , "m²"
-                                   , "m²/m²ₘₐₓ (%)"
+                                   , "m²/m²ₘₐₓ"
                                    , "m²/h"
-                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo On"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("Durata ciclo ON"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , InformationModel.LookupTranslation(new LocalizedText("Durata accensione"), new List<string>(){ cultureInfo.ToString() }).Text
-                                   , InformationModel.LookupTranslation(new LocalizedText("% Ciclo"), new List<string>(){ cultureInfo.ToString() }).Text
+                                   , InformationModel.LookupTranslation(new LocalizedText("PercentCicloOn"), new List<string>(){ cultureInfo.ToString() }).Text
                                    , InformationModel.LookupTranslation(new LocalizedText("Consumo (Kw)"), new List<string>(){ cultureInfo.ToString() }).Text
         };
 
@@ -166,14 +167,18 @@ public class GestStatisticheLogic : BaseNetLogic
             long OrePowerOn = QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntOrePowerOn")] : 0;  //Ore accensione ON
             long MinPowerOn = QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] is not null ? (long)QueryResult[row, Array.IndexOf(Header, "CntMinPowerOn")] : 0;  //Minuti ciclo ON
 
-            long MinTotCicloOn = OreCicloOn * 60 + MinCicloOn;
-            long MinTotPowerOn = OrePowerOn * 60 + MinPowerOn;
-            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / MinTotPowerOn * 100 : 0;
-            double LoadEfficiency = MqProcessati / (MtTrasp * 1) * 100;
+            long MinTotCicloOn = (OreCicloOn * 60) + MinCicloOn;
+            long MinTotPowerOn = (OrePowerOn * 60) + MinPowerOn;
+            double PercCiclo = MinTotPowerOn != 0 ? MinTotCicloOn / (double)MinTotPowerOn : 0;
+            double LoadEfficiency = MqProcessati / (MtTrasp * Project.Current.GetVariable("Model/Variabili_HMI/Macchina/LarghTraspMacchina").Value);
 
-            double ProdutRelativa = MinTotCicloOn != 0 ? (MqProcessati / MinTotCicloOn) / 60 : 0;         //Mq/OreCiclo
+            double ProdutRelativa = MinTotCicloOn != 0 ? MqProcessati * 60 / MinTotCicloOn : 0;         //Mq/OreCiclo
 
-            ResultMatrix[row, 0] = QueryResult[row, Array.IndexOf(Header, "LoginDate")] is not null ? QueryResult[row, Array.IndexOf(Header, "LoginDate")].ToString() : "";      //Nome utente            
+            DateTime DataLogin = QueryResult[row, Array.IndexOf(Header, "LoginDate")] is not null
+                ? DateTime.Parse(QueryResult[row, Array.IndexOf(Header, "LoginDate")].ToString())
+                : DateTime.Now;
+
+            ResultMatrix[row, 0] = QueryResult[row, Array.IndexOf(Header, "LoginDate")] is not null ? DataLogin.ToString("d", cultureInfo) : "";      //Nome utente            
             ResultMatrix[row, 1] = QueryResult[row, Array.IndexOf(Header, "CntPezziLav")] is not null ? QueryResult[row, Array.IndexOf(Header, "CntPezziLav")].ToString() : "0";   //Conta pezzi
                                                                                                                                                                                    //ResultMatrix[row, 2] = QueryResult[row, Array.IndexOf(Header, "CntMetriLav")] != null ? QueryResult[row, Array.IndexOf(Header, "CntMetriLav")].ToString() : "0";  //Metri lineari prodotti
             ResultMatrix[row, 2] = MqProcessati.ToString("f1");  //Metri quadri prodotti
@@ -205,8 +210,8 @@ public class GestStatisticheLogic : BaseNetLogic
             UtenteAttuale = LogicObject.GetVariable("UtenteAttuale");
             UtenteAttuale.VariableChange += UtenteAttuale_VariableChange;       //Sottoscrivo il cambiamento dell'utente
 
-            //ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 60000, LogicObject);      //for production
-            ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 5000, LogicObject);         //for debug
+            ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 60000, LogicObject);      //for production
+            //ActionCheckCambioGiornoAndAgiornaDati = new PeriodicTask(CheckCambioGiornoAndAgiornaDati, Impostazioni.GetVariable("TempoAggiornaDati_min").Value * 5000, LogicObject);         //for debug
             ActionCheckCambioGiornoAndAgiornaDati.Start();          //Sottoscrivo il task a tempo e lo avvio per l'aggiornamento dei dati sul DB e controllo se deve essere fatto il report
 
             AvvioApp = true;          //Creo una Riga per l'utente all'avvio
@@ -242,8 +247,8 @@ public class GestStatisticheLogic : BaseNetLogic
     private void CheckCambioGiornoAndAgiornaDati()
     {
         //Verifico la connessione con PLC
-        //if (Project.Current.Get<CommunicationStation>("CommDrivers/CODESYSDriver1/PLC_Next").OperationCode != CommunicationOperationCode.Connected)
-        //    return;
+        if (Project.Current.Get<FTOptix.CommunicationDriver.CommunicationStation>("CommDrivers/CODESYSDriver1/PLC_Next").OperationCode != FTOptix.CommunicationDriver.CommunicationOperationCode.Connected)
+            return;
 
         //Controllo se è cambiato il giorno         
         if ((DateTime.Now.Date - ((DateTime)DataUltimoSalvataggio.Value).Date).Days != 0)
@@ -264,8 +269,8 @@ public class GestStatisticheLogic : BaseNetLogic
             {
                 CreaCsvReport = true;
                 GiornoRicerca = DataUltimoSalvataggio.Value;
-                //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 5, 0), LogicObject);      // creo il report dopo 5 minuti
-                ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
+                ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 1, 0), LogicObject);      // creo il report dopo 1 minuto
+                //ActionCreaReport = new DelayedTask(CreaReport, new TimeSpan(0, 0, 0, 30), LogicObject);      // creo il report dopo 30s
                 ActionCreaReport.Start();
             }
 
@@ -389,16 +394,17 @@ public class GestStatisticheLogic : BaseNetLogic
 
     private void ResetCnt()
     {
+        var PlcCntRst = Project.Current.GetObject("Model/GestStatistiche/PlcCntRst");
         try
         {
-            List<RemoteChildVariableValue> remoteRead = (from Figlio in CntProduzPlc.GetNodesByType<IUAVariable>()
-                                                         select new RemoteChildVariableValue(Figlio.BrowseName, 0)).ToList();
+            List<RemoteChildVariableValue> remoteRead = (from Figlio in PlcCntRst.GetNodesByType<IUAVariable>()
+                                                         select new RemoteChildVariableValue(Figlio.BrowseName, true)).ToList();
 
-            CntProduzPlc.ChildrenRemoteWrite(remoteRead);
+            PlcCntRst.ChildrenRemoteWrite(remoteRead);
         }
         catch (Exception ex)
         {
-            Log.Error("ChildrenRemoteWrite failed: " + ex.ToString());
+            Log.Error("Gestione statistiche", "Errore reset contatori per logout utente: " + ex.ToString());
             throw;
         }
     }
@@ -420,9 +426,11 @@ public class GestStatisticheLogic : BaseNetLogic
 
         var cultureInfo = new CultureInfo(LogicObject.GetVariable("ImpostazOem/LinguaReport").Value.Value.ToString());
 
+        string Macchina = Project.Current.GetVariable("Model/Variabili_HMI/Var_Ritentive/sNomeMacchAndMatr").Value.Value.ToString();        //Es. Next_18000
+
         string Data = GiornoRicerca.ToString("d", cultureInfo).Replace("/", "_");         //creo stringa per la data e ora nel formato dd_MM_yyyy in base al culture info dell'utente loggato
 
-        string CSVPath = @"" + Folder + "/MakorLineProcessDataReport_" + Data + ".csv";        //Storicizzo il nome dell'ultimo file salvato per l'invio della mail
+        string CSVPath = @"" + Folder + "/" + Macchina + "_ProcessData_" + Data + ".csv";        //Storicizzo il nome dell'ultimo file salvato per l'invio della mail
 
         string csvPath = new ResourceUri(value: CSVPath).Uri;
 
@@ -451,12 +459,18 @@ public class GestStatisticheLogic : BaseNetLogic
                 //Tiro su i dati della produzione giornaliera da scrivere sul file csv                
                 if (GetDatiProduzGiornaliera(GiornoRicerca, out string[] header, out string[,] resultSet))
                 {
-                    string[] EmptyLine = new string[header.Length];
-                    //for (int i = 0; i < header.Length; i++)
-                    //    EmptyLine[i] = "";
 
-                    //Creo l'intestazione della prima riga
+                    //Creo la prima riga con il nome della macchina
                     var row = new string[header.Length];
+                    row[0] = Macchina;
+                    for (var c = 1; c < header.Length; ++c)
+                    {
+                        row[c] = "";
+                    }
+                    csvWriter.WriteLine(row);
+
+
+                    //Creo l'intestazione per la produzione giornaliera
                     for (var c = 0; c < header.Length; ++c)
                     {
                         row[c] = header[c];
@@ -470,6 +484,11 @@ public class GestStatisticheLogic : BaseNetLogic
                     }
                     csvWriter.WriteLine(row);
 
+                    //inserisco 2 righe vuote
+                    string[] EmptyLine = new string[header.Length];
+                    for (int i = 0; i < header.Length; i++)
+                        EmptyLine[i] = "";
+
                     csvWriter.WriteLine(EmptyLine);
                     csvWriter.WriteLine(EmptyLine);
 
@@ -480,7 +499,7 @@ public class GestStatisticheLogic : BaseNetLogic
                         int columnCount = header.Length;
                         row = new string[columnCount];
 
-                        //creo la riga di intestazione
+                        //Creo la riga di intestazione
                         for (var c = 0; c < header.Length; ++c)
                         {
                             row[c] = header[c];
@@ -506,7 +525,7 @@ public class GestStatisticheLogic : BaseNetLogic
             if (ReportCreated & Impostazioni.GetVariable("AbilitaInvioMail").Value)
             {
                 var InvioMail = Project.Current.Get<NetLogicObject>("Scripts/EmailSenderLogic");
-                InvioMail.ExecuteMethod("SendEmail_LongRunningTask", args: new object[] { "Makor line production report", "This is an automatically generated email please do not reply", CSVPath, null });
+                InvioMail.ExecuteMethod("SendEmail_LongRunningTask", args: new object[] { Macchina + " production report", "This is an automatically generated email please do not reply", CSVPath, null });
             }
         }
         catch (Exception ex)
@@ -515,9 +534,7 @@ public class GestStatisticheLogic : BaseNetLogic
         }
 
         CreaCsvReport = false;
-        ActionCreaReport.Dispose();
+        ActionCreaReport?.Dispose();
         ActionCreaReport = null;
     }
-
-
 }

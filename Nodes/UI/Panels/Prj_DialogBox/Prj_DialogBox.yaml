@@ -2690,38 +2690,11 @@ Children:
           DataType: Boolean
           Value: true
           Children:
-          - Name: ValutatoreDiEspressioni1
-            Id: g=6aaa6dd25912e5b0bdcf0e5abcef627e
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Expression
-              Id: g=257871ead93ad78bb5ee0b0813ecc5fd
-              Type: BaseDataVariableType
-              DataType: String
-              ReferenceType: HasParameter
-              Value: "{0} & {1}"
-            - Name: ns=9;Source0
-              Id: g=0e70197bd778444c67d8ad02d95c4442
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Id: g=9fa128e00ef2944cb27f727c399be9c5
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Session}/Groups/UtentiSpecializzati"
-            - Name: ns=9;Source1
-              Id: g=29380982a1f7b54c97b6e740b4c5af68
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Id: g=d5ed6121589a358fa030bfeabf3f5c6e
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaGestione"
+          - Name: DynamicLink
+            Id: g=c35b6e7d02a490a4fd0460ccfeae1d05
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/AbilitaGestione"
       - Name: BottomMargin
         Id: g=69321b4e3702b063bc8848e4fd1ca983
         Type: BaseVariableType
@@ -35580,10 +35553,10 @@ Children:
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=c2a82e52806884416e604bafcd1290a9
+          Id: g=9c313e5d6dc10d66cf8ae8194235044d
           Type: DynamicLink
           DataType: NodePath
-          Value: "{Session}/Groups/UtentiMakor"
+          Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Generiche/DebugMode"
     - Name: Switch1
       Id: g=074f818a2fbabba042c4997c6b8df7ca
       Type: Switch
@@ -35631,10 +35604,10 @@ Children:
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=308c0b3d526bdd8293e94737f5297fc7
+          Id: g=e73b21c7d8cc29f18998ef8feb6ef226
           Type: DynamicLink
           DataType: NodePath
-          Value: "{Session}/Groups/UtentiMakor"
+          Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Generiche/DebugMode"
 - Name: FileSelectorDialog_CSV_Ricette
   Id: g=cdb4abdb998b2db05be819a4aa4c044e
   Supertype: Dialog
@@ -35883,7 +35856,7 @@ Children:
           Type: BaseDataVariableType
           DataType: ResourceUri
           ModellingRule: Optional
-          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.png"
+          Value: "ns=46;%PROJECTDIR%/Images/Menu/PulAnnullaNoPress.svg"
         - Name: HorizontalAlignment
           Id: g=b2d8a8c40306cefc8145e659012c46d1
           Type: BaseVariableType
@@ -37332,7 +37305,7 @@ Children:
     Id: g=eb71b52b1d3b2aa0db8bc6624aeec7ea
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Value: "%PROJECTDIR%\\"
+    Value: "file:///C:/"
   - Name: FullPath
     Id: g=8cf76536b5c70e3265d7ef7ff815abc0
     Type: BaseDataVariableType
@@ -37365,7 +37338,7 @@ Children:
     Id: g=70bea48fba4ba4998fd84f564eac5eae
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
+    Value: true
   - Name: ShowHiddenFiles
     Id: g=5a420c74132dea9b3319836d66a6bd4f
     Type: BaseDataVariableType

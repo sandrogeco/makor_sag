@@ -1707,6 +1707,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: DynamicLink
+          Id: g=634568f9e6e1d1887604fbdde19cadb5
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_Ritentive/OemAbilitaModoTransfert"
+          Children:
+          - Name: Mode
+            Id: g=ffa63f453c36f938d1b9341f5d416eec
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
       - Name: VarDaModif
         Id: g=d52e7d86ff5fb6fe7cb65dadfcfc95fe
         Type: BaseDataVariableType

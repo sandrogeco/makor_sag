@@ -37,7 +37,7 @@ Children:
     Id: g=9bc2b209e9416cbe8ed7fc0ca5ced542
     Type: BaseDataVariableType
     DataType: String
-    Value: "000"
+    Value: "001"
   - Name: RevHw
     Id: g=e64223d89fbcccf8b81d7c6336567db0
     Type: BaseDataVariableType
@@ -82,3 +82,8 @@ Children:
     Type: BaseDataVariableType
     DataType: Int16
     Value: 0
+- Name: DebugMode
+  Id: g=485d9d206d2eca8190d8062f0cc347ff
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false

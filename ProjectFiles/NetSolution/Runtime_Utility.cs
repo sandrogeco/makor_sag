@@ -188,12 +188,14 @@ public class Runtime_Utility : BaseNetLogic
     /// <returns>null se la separator è di lunghezza diversa da 1 altrimenti ritorna il carattere</returns>
     public static char? CheckCharacterSeparator(string separator)
     {
-        if (separator.Length != 1 || separator == string.Empty)
-            return null;
+        //if (separator.Length != 1 || separator == string.Empty)
+        //    return null;
 
-        if (char.TryParse(separator, out char result))
-            return result;
+        //if (char.TryParse(separator, out char result))
+        //    return result;
 
-        return null;
+        //return null;
+
+        return separator == string.Empty ? null : separator == "tab" ? '\t' : char.TryParse(separator, out char result) ? result : null;
     }
 }

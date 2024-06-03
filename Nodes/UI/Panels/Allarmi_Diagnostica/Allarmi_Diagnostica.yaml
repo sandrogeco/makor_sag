@@ -5086,7 +5086,7 @@ Children:
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: Optional
-        Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsExportOff.svg"
+        Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsBackupDataOff.svg"
       - Name: Appearance
         Id: g=f1fc9c3e585703022a1f47e9c5684d87
         Type: BaseVariableType

@@ -624,6 +624,12 @@ Children:
                   Type: BaseVariableType
                   DataType: NodePath
                   Value: "../Text"
+              - Name: Style
+                Id: g=18620509314a6c9e0c1a6819defcd4b1
+                Type: BaseDataVariableType
+                DataType: String
+                ModellingRule: Optional
+                Value: "InputBoxMakorStyle"
             - Name: Unit
               Id: g=5af3f15359c1219f8864f22f1e05ad29
               Type: Label

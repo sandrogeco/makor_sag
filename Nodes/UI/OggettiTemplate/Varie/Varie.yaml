@@ -542,7 +542,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Giorno"}
+      Value: {"NamespaceIndex":46,"TextId":"Giorno"}
     - Name: LeftMargin
       Id: g=42bb81ab8ab8c1b007b399eeb7c758f6
       Type: BaseVariableType
@@ -687,7 +687,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Mese"}
+      Value: {"NamespaceIndex":46,"TextId":"Mese"}
     - Name: LeftMargin
       Id: g=33dcf42f912b2d077e4e00a66b395b5c
       Type: BaseVariableType
@@ -832,7 +832,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Anno"}
+      Value: {"NamespaceIndex":46,"TextId":"Anno"}
     - Name: LeftMargin
       Id: g=8a348a095335628f6712878187c3b790
       Type: BaseVariableType
