@@ -42,6 +42,23 @@ Children:
   - Class: Method
     Name: CreaObjectType
     Id: g=de19df2cda1ba9169c4a5aec712479dc
+- Name: GvOsc_dUsrLarghVentaglio
+  Id: g=ba0083e4f10ea2005f20b90a2e96e4bf
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+  Children:
+  - Name: DynamicLink
+    Id: g=86773ba3c82cbfdb5d65671b13b15bb1
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/dUsrLarghVentaglio"
+    Children:
+    - Name: Mode
+      Id: g=96ce53c4a734f8a776b0499cd86ad87e
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: ParPist1
   Id: g=fdb688b0312fd7f1dbcd1e6b25b54fa0
   Type: BaseObjectType

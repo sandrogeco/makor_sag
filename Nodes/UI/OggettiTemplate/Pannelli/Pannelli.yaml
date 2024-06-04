@@ -24350,7 +24350,7 @@ Children:
                 Id: g=817f86d0d85ab17db33b107f421927c5
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroAlmOff.svg"
             - Name: Pair1
               Id: g=e195e9775b2566ca013aba0475acff39
               Type: ValueMapPair
@@ -24364,7 +24364,7 @@ Children:
                 Id: g=543c6009bc169698120d5bb747bfd1a6
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroAlmSel.svg"
       - Name: EventoMouseClickHandler1
         Id: g=a66a5f2e1954f90339e490115a715139
         Type: EventHandler
@@ -24504,12 +24504,6 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-      - Name: Text
-        Id: g=0a7e7c46105d6095c01a0574cc56cdb1
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Alm"}
       - Name: RightMargin
         Id: g=4eb717a16ea8f7a098b78b5da6b91d50
         Type: BaseVariableType
@@ -24558,7 +24552,7 @@ Children:
                 Id: g=ce1f42d0e06d4c7e0237d95941996f52
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroWrnOn.svg"
             - Name: Pair1
               Id: g=efdcf7451bc3ddd2593ea3c95b85828b
               Type: ValueMapPair
@@ -24572,7 +24566,7 @@ Children:
                 Id: g=f5fc33cc608bdee859c7057ae5cfec1f
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroWrnSel.svg"
       - Name: EventoMouseClickHandler1
         Id: g=54e62c0b9bf1b3578260f75d877c9a12
         Type: EventHandler
@@ -24712,12 +24706,6 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-      - Name: Text
-        Id: g=ab2d344171107e259ec78923acc8b728
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Wrn"}
       - Name: RightMargin
         Id: g=3b20c4948dedc207006cbf4efdf23ec9
         Type: BaseVariableType
@@ -24772,7 +24760,7 @@ Children:
                 Id: g=9f4c3ef457535daa19648b4d492634aa
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroMsgOn.svg"
             - Name: Pair1
               Id: g=a4d5b2cd0c29a94254bad8c54c3ef7fa
               Type: ValueMapPair
@@ -24786,7 +24774,7 @@ Children:
                 Id: g=8be1ebbac0b4b8c3d3b98bff7e45cc98
                 Type: BaseDataVariableType
                 DataType: ResourceUri
-                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroMsgSel.svg"
       - Name: EventoMouseClickHandler1
         Id: g=b3d0bd71890ab24dea5d224ebe54600a
         Type: EventHandler
@@ -24926,12 +24914,6 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-      - Name: Text
-        Id: g=46aa618f6511540ce7a1ee68fd2e77ea
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Msg"}
       - Name: RightMargin
         Id: g=9f1ec5cf09b9b717bc92ea0e6c44016f
         Type: BaseVariableType

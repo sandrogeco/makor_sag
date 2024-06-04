@@ -1,9 +1,9 @@
 Name: GvCirc
-Id: g=8aaf080c561c426dac330870d99f94f1
+Id: g=1731d9bfbcaa4bdbbcb5482095880994
 Type: FolderType
 Children:
 - Name: GvCirc_bMsgMaintOscInCorso
-  Id: g=e3d14e95bde8453ea8a69876952b282c
+  Id: g=5d8ac2415ba649a69e839920b09c35cf
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -16,55 +16,55 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=41c51865c2f05e23d5027931f8833cd0
+    Id: g=8463b5a579006ed21c6f51c61a3d8ac0
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
   - Name: InputValue
-    Id: g=d0c29bc1228967c50262f2d834a301a9
+    Id: g=425ead6edd238a40c9c1436669cc5172
     Type: BaseDataVariableType
     DataType: Double
     Value: 0.0
     Children:
     - Name: DynamicLink
-      Id: g=f6a8960779194f8aa7e8b542caa2d52e
+      Id: g=382e7cce6f4e4dda9accfaa7c66794f3
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/bMsgMaintOscInCorso"
       Children:
       - Name: Mode
-        Id: g=25f23cb05b2444e3a063ea5ef27479f7
+        Id: g=06961fd21f5b466ba69dfae4a25186af
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=36783c846f9be4d643d918f0f7cbde64
+    Id: g=1f6717816bbf4dd264a3762f01814a77
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=10f6e668a6a90b8d686e86be68c507fb
+    Id: g=1697431c12d0bf674b8e21b00de48f1e
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: AutoAcknowledge
-    Id: g=148721ba2a9fc20c3a78e7958e67ceb6
+    Id: g=8639c67fff0b75f16931d70da68f729a
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=0a97a9ff6e55a12082d818595c25ab2a
+    Id: g=727ca89fcb0871f183d4a36f63cddd14
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=dc64718610fb52b83194a99726817880
+    Id: g=36cb981746ac10770022bb6c93c14c93
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1
   - Name: Message
-    Id: g=8aaecf783205b8142e059e9116022c56
+    Id: g=e76d171917dad15c3a34ba7d54a8176c
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCirc_bMsgMaintOscInCorso"}

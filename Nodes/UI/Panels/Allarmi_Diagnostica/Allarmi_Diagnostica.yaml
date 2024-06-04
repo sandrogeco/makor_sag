@@ -4421,7 +4421,7 @@ Children:
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   ModellingRule: None
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroAlmOff.svg"
               - Name: Pair1
                 Id: g=d0f6c428231679ce445a849137ed4da7
                 Type: ValueMapPair
@@ -4438,7 +4438,7 @@ Children:
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   ModellingRule: None
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroAlmSel.svg"
         - Name: EventoMouseClickHandler1
           Id: g=b9d8b1fc5c4a84ef4ccc596351060f71
           Type: EventHandler
@@ -4564,12 +4564,6 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: Text
-          Id: g=2c7563617208b0ce7860648bcf790bd5
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"Alm"}
         - Name: RightMargin
           Id: g=59083d23ca4635c5ae6bd7b60d150348
           Type: BaseVariableType
@@ -4618,7 +4612,7 @@ Children:
                   Id: g=75ef0dba9f1b7ce04d42dcc587a822fa
                   Type: BaseDataVariableType
                   DataType: ResourceUri
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroWrnOn.svg"
               - Name: Pair1
                 Id: g=f2c7b8933f35ebbd6b831939db6c5a72
                 Type: ValueMapPair
@@ -4632,7 +4626,7 @@ Children:
                   Id: g=fdf60d8bc344cde9e62297daf791dbc8
                   Type: BaseDataVariableType
                   DataType: ResourceUri
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroWrnSel.svg"
         - Name: EventoMouseClickHandler1
           Id: g=e92605ba7b0a9e087b583d293ae21641
           Type: EventHandler
@@ -4758,12 +4752,6 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: Text
-          Id: g=9ef595b3a081a371620555b9f2d295f0
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"Wrn"}
         - Name: RightMargin
           Id: g=b57ecf3365f22ee311b3734530feb7a4
           Type: BaseVariableType
@@ -4812,7 +4800,7 @@ Children:
                   Id: g=e9951b7fbbf620f7652580d87fb77cd7
                   Type: BaseDataVariableType
                   DataType: ResourceUri
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoOff.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroMsgOn.svg"
               - Name: Pair1
                 Id: g=54e9ee5c2a36368653dc6367189a5ef1
                 Type: ValueMapPair
@@ -4826,7 +4814,7 @@ Children:
                   Id: g=debf7402a294a13be9d218c431cd88e1
                   Type: BaseDataVariableType
                   DataType: ResourceUri
-                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsVuotoSel.svg"
+                  Value: "ns=46;%PROJECTDIR%/Images/PulsConSimboli/PulsFiltroMsgSel.svg"
         - Name: EventoMouseClickHandler1
           Id: g=876694c9698a16f9c4ce25ba41b5674e
           Type: EventHandler
@@ -4952,12 +4940,6 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-        - Name: Text
-          Id: g=1d3d581521a284794a55a004678925e6
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"Msg"}
         - Name: RightMargin
           Id: g=540ba876f5644aac6ef28355d5773a82
           Type: BaseVariableType

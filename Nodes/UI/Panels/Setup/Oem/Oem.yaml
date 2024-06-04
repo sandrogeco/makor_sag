@@ -69386,7 +69386,7 @@ Children:
               Id: g=c137224a3e194651f777ddc081976545
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_Ritentive/OemAbilitaModoTransfert"
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/bOemEnbModoTrans"
               Children:
               - Name: Mode
                 Id: g=75fb3f99846dabc354a5bf003723eaa2
@@ -85437,7 +85437,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 584.0
+      Value: 620.0
     - Name: TitleBackground
       Id: g=f8e5f9937a7612e1698251a46f7ba84e
       Type: Rectangle
@@ -89606,6 +89606,208 @@ Children:
             Value: 0.0
         - Name: Enabled
           Id: g=db28ada25bbd73be81e1226b2968fa0c
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+          Value: true
+      - Name: HorizontalLayout13
+        Id: g=a2d2567972e01743e5a8a05d72fd520d
+        Type: RowLayout
+        Children:
+        - Name: Width
+          Id: g=c9950ecffbe8e182d1c6084520df2be1
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 310.0
+        - Name: Height
+          Id: g=c45d619616cedbbd99e76a275e625c3f
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+        - Name: Descriz
+          Id: g=2ae53030c2f532e5c13a67b92082e551
+          Type: Label
+          Children:
+          - Name: TopMargin
+            Id: g=6dddd6d62e9d73d4a09c710755e3ee16
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 0.0
+          - Name: TextVerticalAlignment
+            Id: g=1afa971f613e15840163f3fc20d2dacd
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Width
+            Id: g=2e2367876f2a0b5a20f91bb70b29a88c
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 330.0
+          - Name: WordWrap
+            Id: g=51f1ad2b3c728e8996bd5e151ddee456
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ModellingRule: Optional
+            Value: true
+          - Name: VerticalAlignment
+            Id: g=c6b5e5f38af624538ce36f77f263ba77
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: HorizontalAlignment
+            Id: g=532fb2d51bbf23b3d87f1800e11dd3cd
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: BottomMargin
+            Id: g=0c3a0e247a5bf7a5753ac15bc9f682a1
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 0.0
+          - Name: LeftMargin
+            Id: g=5bdf772fb03b616cbe80042669bc145b
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 0.0
+          - Name: Text
+            Id: g=bbc120d87fa66001251879d98188d1e9
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"NamespaceIndex":46,"TextId":"Set posizione zero"}
+          - Name: Height
+            Id: g=8dcc6c12dbce31cf0451ddfe71d34abf
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 40.0
+          - Name: FontWeight
+            Id: g=6a962d815eb1c48eb56e0d4e44bb56b3
+            Type: BaseDataVariableType
+            DataType: FontWeightEnum
+            ModellingRule: Optional
+            Value: 600
+          - Name: RightMargin
+            Id: g=f118a0d66f322878b5938c765bbfa063
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+        - Name: HorizontalAlignment
+          Id: g=de708559ce9556cb27eb2116b6a66b64
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: CheckBox2
+          Id: g=4aed47f642d57b8b14e4c6bf66c7e7b4
+          Type: CheckBoxToggle_R0_0
+          Children:
+          - Name: Active
+            Id: g=82331edd7ff579e077fb3e2b13830be6
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Id: g=5f32883bd09536c9af62b6a966ae86c1
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCarta/bHmiSetZero"
+              Children:
+              - Name: Mode
+                Id: g=ff25dcec8fe57741c067c0a773ead08b
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: ImagePath
+            Id: g=7941550e55ec5d69af4a484e6d81341a
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=46;%PROJECTDIR%/Images/SimbVari/SimbCheckBoxOn.svg"
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=fc6dad238b196af449fc55c03d6c9c76
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=5180f6e5881869df1dd7d762304b87ae
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Value: false
+                Children:
+                - Name: DynamicLink
+                  Id: g=42ee933a2abe34bc2051b896257632b8
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../Active"
+          - Name: ImageWidth
+            Id: g=c80c05d228722c789fd6899ef934a9ad
+            Type: BaseDataVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 40.0
+          - Name: ImageHeight
+            Id: g=29d6fc0fcdf7e831bc0508a4c32264ee
+            Type: BaseDataVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 40.0
+          - Name: Width
+            Id: g=4f8753ca4bbede405771676b90b8a802
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 40.0
+          - Name: Height
+            Id: g=1c1210e539b6f872cf8f608ea20a95dd
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 40.0
+          - Name: RightMargin
+            Id: g=790cc550e9823fdce0ccb3f8c2c8655b
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: VerticalAlignment
+            Id: g=7b3f27fdd66c27da019a4e4efd070850
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: HorizontalAlignment
+            Id: g=4f9eae43690831108a9eda230b9cdba7
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: TopMargin
+            Id: g=ec93149aca40fc8401c38846aaecdfc1
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 1.0
+          - Name: BottomMargin
+            Id: g=54665ac47d8523c60f5ead3de58f2d6f
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 0.0
+        - Name: Enabled
+          Id: g=238fbe2683195fadb04bd588f18ac892
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional

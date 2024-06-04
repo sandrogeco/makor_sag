@@ -2390,7 +2390,7 @@ Children:
             Id: g=2d59edbaaffe615f0c38e863880726ce
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"it-IT","Text":"Velocità di linea"}
+            Value: {"NamespaceIndex":46,"TextId":"Velocità di linea"}
           - Name: Titolo
             Id: g=8d0d20f4056256316eb30c8a3f2b3c22
             Type: BaseDataVariableType

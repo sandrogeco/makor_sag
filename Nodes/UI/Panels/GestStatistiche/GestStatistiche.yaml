@@ -4511,7 +4511,7 @@ Children:
             Id: g=8a5cc59af83d048deb27f073983fa746
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":46,"TextId":"Consumo (Kw)"}
+            Value: {"NamespaceIndex":46,"TextId":"Consumo (kWh)"}
           - Name: Width
             Id: g=e80a3fa5b23896dab1c587e0c7680c90
             Type: BaseDataVariableType
@@ -6027,7 +6027,7 @@ Children:
             Id: g=0d2ff58c45d288bae4fca22504c3426a
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":46,"TextId":"Consumo (Kw)"}
+            Value: {"NamespaceIndex":46,"TextId":"Consumo (kWh)"}
           - Name: Width
             Id: g=9d7bf06d1414eb2a9d4d975b96a6beab
             Type: BaseDataVariableType

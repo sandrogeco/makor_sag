@@ -1680,28 +1680,18 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: ExpressionEvaluator1
-          Id: g=8a3279b7488abf62d964209a0811b11b
-          Type: ExpressionEvaluator
+        - Name: DynamicLink
+          Id: g=9a057f08c4505b9751292a3954128fbc
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleStop"
           Children:
-          - Name: Expression
-            Id: g=9bcdd41297a2425d954b48047908b4c4
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
+          - Name: Mode
+            Id: g=14f2b7d692e02f2803460232222b3750
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
             ModellingRule: Optional
-            Value: "!{0}"
-          - Name: ns=9;Source0
-            Id: g=dcd6563c7f1f4d818eb50098fe4ad4db
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: CollegamentoDinamico
-              Id: g=d9c60e28f037358a726c8a3b32eacfb6
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCiclo/bCycleRun"
+            Value: 2
       - Name: Abilita_Visibil
         Id: g=f0274f247321409c05faffc9c4a70b07
         Type: BaseDataVariableType
@@ -1712,7 +1702,7 @@ Children:
           Id: g=634568f9e6e1d1887604fbdde19cadb5
           Type: DynamicLink
           DataType: NodePath
-          Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_Ritentive/OemAbilitaModoTransfert"
+          Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/bOemEnbModoTrans"
           Children:
           - Name: Mode
             Id: g=ffa63f453c36f938d1b9341f5d416eec

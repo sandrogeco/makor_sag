@@ -76,6 +76,23 @@ Children:
       Type: BaseVariableType
       DataType: DynamicLinkMode
       Value: 2
+- Name: GvOsc_bUsrEnbCnctVel
+  Id: g=ede937cfa64ef6ac7aa1e220513c9638
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+  Children:
+  - Name: DynamicLink
+    Id: g=dc58965ec919383e6426d290217eb72f
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/bUsrEnbCnctVel"
+    Children:
+    - Name: Mode
+      Id: g=b8f608adf945281d767fb89d62cc9d51
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: ParPist1
   Id: g=7f729fafc3baff990fba88ff9ef2565e
   Type: BaseObjectType
