@@ -40,6 +40,6 @@ public class CmbBoxMeseLogic : BaseNetLogic
         }
 
         LogicObject.Add(ModelMesi);
-        ((ComboBox)Owner).Model = ModelMesi.NodeId;
+        ((ComboBox)Owner).Model = ModelMesi.NodeId;        
     }
 }

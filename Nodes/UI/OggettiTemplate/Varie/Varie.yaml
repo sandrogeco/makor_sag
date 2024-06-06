@@ -598,13 +598,13 @@ Children:
       DataType: BaseDataType
       Children:
       - Name: DynamicLink
-        Id: g=1b9290535de332febbc944fa11578051
+        Id: g=4e2b895e138675ce7aae03523df854fa
         Type: DynamicLink
         DataType: NodePath
         Value: "../../Giorno"
         Children:
         - Name: Mode
-          Id: g=446406919567771a5e33758b38d1490d
+          Id: g=35646645c7629bc0bae3473aa850c29b
           Type: BaseVariableType
           DataType: DynamicLinkMode
           ModellingRule: Optional
@@ -678,6 +678,10 @@ Children:
       DataType: ComboBoxModeEnum
       ModellingRule: Optional
       Value: 2
+    - Name: SelectedValuePath
+      Id: g=a947cadcd5745edcb02f41bf5806eb4d
+      Type: BaseDataVariableType
+      DataType: BaseDataType
   - Name: lblMese
     Id: g=f3c88df52c6cdc1aaba6339e6e15fec8
     Type: Label
@@ -888,13 +892,13 @@ Children:
       DataType: BaseDataType
       Children:
       - Name: DynamicLink
-        Id: g=4b0b8097ba66c868709690996fc23e10
+        Id: g=26b2e5c1d1cd1693b5780a09c8d6ade2
         Type: DynamicLink
         DataType: NodePath
         Value: "../../Anno"
         Children:
         - Name: Mode
-          Id: g=71993baf35f44dd696c8ac3557aa8ae3
+          Id: g=6110b43be1de5598950de6f50bdeb513
           Type: BaseVariableType
           DataType: DynamicLinkMode
           ModellingRule: Optional
@@ -968,6 +972,10 @@ Children:
       DataType: ComboBoxModeEnum
       ModellingRule: Optional
       Value: 2
+    - Name: SelectedValuePath
+      Id: g=c7393704a509538e0bc97187374090c0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
   - Name: Anno
     Id: g=5769f7e2298eba6a0812a4650c52f32b
     Type: BaseDataVariableType

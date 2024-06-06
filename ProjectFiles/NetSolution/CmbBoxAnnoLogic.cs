@@ -42,6 +42,6 @@ public class CmbBoxAnnoLogic : BaseNetLogic
         }
 
         LogicObject.Add(ModelAnni);
-        ((ComboBox)Owner).Model = ModelAnni.NodeId;
+        ((ComboBox)Owner).Model = ModelAnni.NodeId;        
     }
 }

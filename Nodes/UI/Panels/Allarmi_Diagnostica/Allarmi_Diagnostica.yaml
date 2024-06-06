@@ -1645,7 +1645,7 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: true
+          Value: false
         - Name: RightMargin
           Id: g=9ccd34c7f66580017e908f86f8a5c5b9
           Type: BaseVariableType
@@ -1729,7 +1729,7 @@ Children:
                   Id: g=a3fa88de22d012caf6d1be3ffd3f1675
                   Type: BaseDataVariableType
                   DataType: NodeId
-                  Value: {"IdType":2,"Id":"466b0e714db7aaada30cfb145af0b817","Namespace":46}
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
                 - Name: AliasNode
                   Id: g=8ed2fb891302e311d36d4b3148b80021
                   Type: BaseDataVariableType

@@ -40,6 +40,6 @@ public class CmbBoxGiornoLogic : BaseNetLogic
         }
 
         LogicObject.Add(ModelGiorni);
-        ((ComboBox)Owner).Model = ModelGiorni.NodeId;
+        ((ComboBox)Owner).Model = ModelGiorni.NodeId;        
     }
 }

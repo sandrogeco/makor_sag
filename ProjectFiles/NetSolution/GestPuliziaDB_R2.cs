@@ -13,8 +13,8 @@ public class GestPuliziaDB_R2 : BaseNetLogic
         if (LogicObject.GetVariable("StoricoAlmNumGiorni").Value > 0)
         {
             PulisciStoricoAllarmi();
-            if (LogicObject.GetVariable("AbilitaGestStastiche").Value)
-                PulisciCntProduz();
+            //if (LogicObject.GetVariable("AbilitaGestStastiche").Value)
+            //    PulisciCntProduz();
         }
     }
 
