@@ -10,17 +10,14 @@ Children:
   Id: g=fe4d5e75e73129348f7eb7592dab7069
   Type: BaseDataVariableType
   DataType: Int16
-  Value: 0
 - Name: OggSelezionata
   Id: g=a180cb1a4986e68f43995f4f8c2250e7
   Type: BaseDataVariableType
   DataType: Int32
-  Value: 0
 - Name: RicPiastra
   Id: g=281781acff3d582b99d78c4d02794cce
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
 - Name: ObjInverter
   Id: g=dc421270b063674f7cc1618addc3c55e
   Type: BaseObjectType
@@ -29,7 +26,6 @@ Children:
     Id: g=79358ae15f64d02b9f6407f4d9673f30
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: 8888
     Id: g=aa6d031cbc03bdd3cb903e399a71ac26
     Type: BaseDataVariableType

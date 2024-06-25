@@ -35,7 +35,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"LocaleId":"it-IT","Text":"Indica se i campi sono racchiusi tra doppi apici"}
-    Value: false
   - Name: LocalizationDictionary
     Id: g=5a52fc9feb1a361697a800add59fa80e
     Type: NodePointer
@@ -99,12 +98,10 @@ Children:
     Id: g=e76b034592aa40f8fc53129748efd10c
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=25e2024aaff26eafd80269bfa1c6e2d5
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: LastEvent
     Id: g=d4c69f1c221f61949cc94044b13803bf
     Type: BaseDataVariableType
@@ -115,7 +112,6 @@ Children:
     Id: g=7a06cb43303c7752bf5c2e8ff6ac4b98
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
   - Name: AutoAcknowledge
     Id: g=2f84e26c370077e63d67a3a23762646c
     Type: BaseDataVariableType
@@ -139,7 +135,6 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     ModellingRule: Optional
-    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
   - Name: Severity
     Id: g=3736556a4cc741f80512492309a20ead
     Type: BaseDataVariableType
@@ -149,6 +144,15 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: g=ef4cbead9adafbd0ef322a76289054e1
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: bAlmCommPlc
   Id: g=33b863d39a537259573e789a75acc6d9
   Type: OffNormalAlarmController
@@ -157,12 +161,10 @@ Children:
     Id: g=70532edda016ca6437a5638d68de16b3
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=07621db0b70d7ecc3ec12d4f40b79401
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: ValutatoreDiEspressioni1
       Id: g=489846470263c1fc84d53818601cd8bf
@@ -220,6 +222,15 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - File: GvCarta/GvCarta.yaml
 - File: GvCirc/GvCirc.yaml
 - File: GvGen/GvGen.yaml

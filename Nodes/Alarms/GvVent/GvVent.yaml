@@ -19,12 +19,10 @@ Children:
     Id: g=f8aae2e788a408b97d8aff95fd13d901
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=d71e8181b0e2265dc992ef4de95474cf
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=7bda9fe1e28c4d4fbd5598c888136bb7
@@ -68,6 +66,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bAlmVentExt"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bMsgAvviareVentil
   Id: g=6bc7addb541b4d69a188b5c31c974741
   Type: CategoryDigitalAlarmType
@@ -85,12 +92,10 @@ Children:
     Id: g=8d783fb0b65c581e4f821b312538af1c
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=bd16977653884868dca8340bf25b40aa
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=62197aa10475421da2bffd5d0c79485b
@@ -134,6 +139,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bMsgAvviareVentil"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bMsgCalibFiltri
   Id: g=54995f67c57c4598893b95eeb0cc03c7
   Type: CategoryDigitalAlarmType
@@ -151,12 +165,10 @@ Children:
     Id: g=8afd7b956e7e666bf5e3bea03e5a294d
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=dae63c61dbe5ccfe6d9c31845618a973
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=3e4947a52fc242a6b35d9b11ca76dd2d
@@ -200,6 +212,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bMsgCalibFiltri"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bMsgCntrFiltriAsp
   Id: g=5f1449fe26a94e3185ed8be72c5fc160
   Type: CategoryDigitalAlarmType
@@ -217,12 +238,10 @@ Children:
     Id: g=5ba1ed07a3a475fd2e9aa119a3a479b4
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=642133037cc8c13d619655ad2b154d86
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=83bd5792bb9e43f6844138581c68eb38
@@ -266,6 +285,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bMsgCntrFiltriAsp"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bMsgCntrFiltriImm
   Id: g=b23b9d2fd045486c8e2ada59e00658d1
   Type: CategoryDigitalAlarmType
@@ -283,12 +311,10 @@ Children:
     Id: g=4a7effbac51f60ba2bb0c6291809966e
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=96e46b3d7c0cc1b7932536706837e41d
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=5cdf300adee942b09d5e75702f972566
@@ -332,6 +358,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bMsgCntrFiltriImm"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bMsgFiltriIntasati
   Id: g=7383ff1a37d2473781536d2ad10d0863
   Type: CategoryDigitalAlarmType
@@ -349,12 +384,10 @@ Children:
     Id: g=1f5e96b6517f3099ca71aeb481d4c935
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=2b7a8b3fbce07a296bdfeb148b59c529
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=b7e96e1c2e9d414cb72d3df4df509028
@@ -398,6 +431,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bMsgFiltriIntasati"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bWrnCambioFiltri
   Id: g=c633d515da984a9e93c0a23030eb85e6
   Type: CategoryDigitalAlarmType
@@ -415,12 +457,10 @@ Children:
     Id: g=94cbb923b629bf78fa832214e5cbfbc9
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=7f8ed9e89ef46e7150fe578c573c05c9
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=1951425d944342b38d527cabeeacfb6a
@@ -464,6 +504,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bWrnCambioFiltri"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bWrnPressAsp
   Id: g=2c502bdca0e643609a82139cc5a0d581
   Type: CategoryDigitalAlarmType
@@ -481,12 +530,10 @@ Children:
     Id: g=54c9d46cbb0e5bb190d362aafd851504
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=e7a15b184e4c5a1cd27d9b94dfdcb14b
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=58bd1acb06af45fd818e3209ecfb2e1f
@@ -530,6 +577,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bWrnPressAsp"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_bWrnPressImm
   Id: g=c977cd53cd5341c38a69913a8eddcc49
   Type: CategoryDigitalAlarmType
@@ -547,12 +603,10 @@ Children:
     Id: g=652327a08485315bcb64f4f3829cf893
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=98bd865fa1d1517c4ced6b852f7294d1
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=8757e9bce308447baf1f2842aa168617
@@ -596,6 +650,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_bWrnPressImm"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stAspAlm_bAlmErrComInv
   Id: g=4fe597eebee94190ac9a52c1722ea184
   Type: CategoryDigitalAlarmType
@@ -613,12 +676,10 @@ Children:
     Id: g=120e141a766e4b8c269f99100239d23b
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=a086ae33b46a22e6cbee47dac4b7e317
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=dac47e3372d84f4b986f4a388768f807
@@ -662,6 +723,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stAspAlm_bAlmErrComInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stAspAlm_bAlmInv
   Id: g=bbe2c9f72cba4289b9c69aca72b8853e
   Type: CategoryDigitalAlarmType
@@ -679,12 +749,10 @@ Children:
     Id: g=7702510ffc501ef4ac4942b260e8b7db
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=fffe716d297654454d23b328fff7990b
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=b6acb43e2bc642c7b0845b13c87f86d4
@@ -728,6 +796,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stAspAlm_bAlmInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stAspAlm_bAlmPto
   Id: g=cc5926c85574444e8bb35e7aeefe2303
   Type: CategoryDigitalAlarmType
@@ -745,12 +822,10 @@ Children:
     Id: g=7451da6dbba64e4f24e2c84c6c0c5cc5
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=8b4d06774a804c81f559bf850de96a36
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=6868d774d79549bca3d161ef9689fbeb
@@ -794,6 +869,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stAspAlm_bAlmPto"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImm2Alm_bAlmErrComInv
   Id: g=f30d815e2c994759a88961568cf9c3f3
   Type: CategoryDigitalAlarmType
@@ -811,12 +895,10 @@ Children:
     Id: g=84007ad6fd81c8991798597c1184ae09
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=cb08a23fe73cafc4516dfc54a342e8ed
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=8cdcbf3620004a12bde40d5816e79047
@@ -860,6 +942,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImm2Alm_bAlmErrComInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImm2Alm_bAlmInv
   Id: g=eb52b887801c4f7c871cad17a517d3a1
   Type: CategoryDigitalAlarmType
@@ -877,12 +968,10 @@ Children:
     Id: g=a773410b40609f5448737162516b25d7
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=f35f0e103191acfc6023d7eaa4af8145
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=44a98fc50501436e9bfe6d9b86a2a869
@@ -926,6 +1015,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImm2Alm_bAlmInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImm2Alm_bAlmPto
   Id: g=6a1cbb40ac134097b6a73d776aea1ed9
   Type: CategoryDigitalAlarmType
@@ -943,12 +1041,10 @@ Children:
     Id: g=5e327f100d0dd51c51a63c48ee5a6a7a
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=d8ecac71fe8ed49a5e22947f2ba9dc8d
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=0298680d049548ceafabab3bf3b2d194
@@ -992,6 +1088,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImm2Alm_bAlmPto"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImmAlm_bAlmErrComInv
   Id: g=6ee23659575d4358b6b704bc82d7c175
   Type: CategoryDigitalAlarmType
@@ -1009,12 +1114,10 @@ Children:
     Id: g=759106681b4421755977725a436646e4
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=1e26b012d0af194ad5a355fb6bd0d9ad
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=0758543d346447f18b95b7700a101fb1
@@ -1058,6 +1161,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImmAlm_bAlmErrComInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImmAlm_bAlmInv
   Id: g=46e501ee1b2345d59241238f0013666c
   Type: CategoryDigitalAlarmType
@@ -1075,12 +1187,10 @@ Children:
     Id: g=c432961aa173a8d30f2376aea0fc2cc3
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=ed8a3d7da0d6df267b526a0b7b7f5e2f
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=be06c9c57c5e4bd1a9a93460ef0594db
@@ -1124,6 +1234,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImmAlm_bAlmInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvVent_stImmAlm_bAlmPto
   Id: g=798804f93aa846faa483402ef76fb7d4
   Type: CategoryDigitalAlarmType
@@ -1141,12 +1260,10 @@ Children:
     Id: g=46067a0ecb2725296b206d1fc36f5220
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=f3609c1099379a5c3b4fd03e6d54bbbd
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=bbfb1c28726946da878352cf44f802cd
@@ -1190,3 +1307,12 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvVent_stImmAlm_bAlmPto"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward

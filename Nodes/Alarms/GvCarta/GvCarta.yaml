@@ -19,12 +19,10 @@ Children:
     Id: g=1deca80353013173acf043e3f389be61
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=16de816324cabbdf3ff75e1cb759f3af
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=9c05e2283864452799d146368a0fc228
@@ -68,6 +66,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmConnCarta"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bAlmEnc
   Id: g=9c06b7313228406599cdc2d133618825
   Type: CategoryDigitalAlarmType
@@ -85,12 +92,10 @@ Children:
     Id: g=39c44dddcb677bf73226ec5df554097d
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=2e629a50122f03ab747e505bf0550de3
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=df35b3783c7643cdb1ff6cc1b29b9ba6
@@ -134,6 +139,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmEnc"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bAlmErrComEnc
   Id: g=1fd61198a819415e834a07365bce3c2c
   Type: CategoryDigitalAlarmType
@@ -151,12 +165,10 @@ Children:
     Id: g=41f5c4d580313349b0b8ac4aecc86bf0
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=b35535f728e084bc7b2a474b8234b993
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=11d42548077a43528265a41e3b57bd91
@@ -200,6 +212,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmErrComEnc"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bAlmFcSportCarta
   Id: g=df9be47dac754e748c514f44801b245e
   Type: CategoryDigitalAlarmType
@@ -217,12 +238,10 @@ Children:
     Id: g=1a7d4758f21c8220a22f1435889b44fa
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=acc049574f8926e632022339a5403262
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=085e050012e84e398c0d8c89a0f27647
@@ -266,6 +285,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFcSportCarta"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bAlmFltConnCarta
   Id: g=8173022cfcf9409dac4959af81afd36c
   Type: CategoryDigitalAlarmType
@@ -283,12 +311,10 @@ Children:
     Id: g=12ab1bcf03a227ddd998eeb39fa4f509
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=84e556b0962bd2d89d670a327343777c
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=7718e5e153cf48db90c32eb7f5909e36
@@ -332,6 +358,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFltConnCarta"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bAlmFltFcSportCarta
   Id: g=35b181cea4c24c52934ccd8226c5c944
   Type: CategoryDigitalAlarmType
@@ -349,12 +384,10 @@ Children:
     Id: g=1a391f3ad673eca5674e62696e4d3934
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=e88c4873ae491fbf80045cae6d3e75c0
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=43ae2618ed4049d6a9ec4706a30f9014
@@ -398,6 +431,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bAlmFltFcSportCarta"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bMsgCambCartInCorso
   Id: g=0937709fc02f46c7a183e357fe4e86ea
   Type: CategoryDigitalAlarmType
@@ -415,12 +457,10 @@ Children:
     Id: g=156237dcb4043019582928b3ab6f8a47
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=5649a57c45177be461b385b9fa00b754
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=72e8d81bdb334fc691ff0e32d4b9ea74
@@ -464,6 +504,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgCambCartInCorso"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bMsgCartaInEsaurimento
   Id: g=e2051a1d52294447ad17d4682330fb9b
   Type: CategoryDigitalAlarmType
@@ -481,12 +530,10 @@ Children:
     Id: g=1b43920d3353e4c9b8f8f544afcbc9b9
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=50351dd48ed9470f600a18be46aff29f
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=ebb8a7c9902d46c4b0eae37d9ffd3d56
@@ -530,6 +577,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgCartaInEsaurimento"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bMsgSvuotareRecupero
   Id: g=38988c0dcaf946a2a825cc5c790151b9
   Type: CategoryDigitalAlarmType
@@ -547,12 +603,10 @@ Children:
     Id: g=855573f46d4cb905ec4b9ae47b9a5332
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=501171cb119003662a7b8341a99e9782
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=3e6dd8bfc12a4b25baee4b02d7667c2d
@@ -596,6 +650,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bMsgSvuotareRecupero"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnCartaEsaurita
   Id: g=8df83fe7c5934261b28a24cad9e0369e
   Type: CategoryDigitalAlarmType
@@ -613,12 +676,10 @@ Children:
     Id: g=a2dac4191034cf6a1c7c85eeae1f83b5
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=949833df2e0fea9b884de4de82029c04
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=c115453bf1d44c5b84eafb4ea3629f2f
@@ -662,6 +723,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnCartaEsaurita"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnCfgEncNoOK
   Id: g=4684352aef194e3fb9da1294c58e9fb9
   Type: CategoryDigitalAlarmType
@@ -679,12 +749,10 @@ Children:
     Id: g=95638b1ac978b4ca7c3f2db7d23186fd
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=9d81311213e9727deec08a91f92d094a
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=e2c0264e6eb549f78a5641deba9f4ef9
@@ -728,6 +796,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnCfgEncNoOK"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnPresenzaCarta
   Id: g=36bc8f83e4cb4e86875b89813a2da21f
   Type: CategoryDigitalAlarmType
@@ -745,12 +822,10 @@ Children:
     Id: g=0fdac1bef424427cbe0d57e82551abc9
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=a2a08af481b3cbd4338a9322fbd2e047
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=144b78e9f4a64c2db4df01eedb0bf1ee
@@ -794,6 +869,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnPresenzaCarta"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnRecuperoPieno
   Id: g=7713835875834ac98fdbff03adab9b7b
   Type: CategoryDigitalAlarmType
@@ -811,12 +895,10 @@ Children:
     Id: g=68e5a825f86a78df25210a43ef12c0ae
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=a7b1b7a096fd4e3fd459b94dc8b2c73f
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=8ef30e8febce41fd9518605b27a49bb8
@@ -860,6 +942,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnRecuperoPieno"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnStrappoCartaIn
   Id: g=304edd4d41674ad38c13e2afa1efe5c2
   Type: CategoryDigitalAlarmType
@@ -877,12 +968,10 @@ Children:
     Id: g=013b180008d23be5b26932a7dc66becb
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=522fdc1c0065fb4604b9c612b081c1c8
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=7607eda527cc481eadb02876da4d0506
@@ -926,6 +1015,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnStrappoCartaIn"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_bWrnStrappoCartaOut
   Id: g=969e3063f9f041daa4562ee60619906d
   Type: CategoryDigitalAlarmType
@@ -943,12 +1041,10 @@ Children:
     Id: g=662941eda15d91b058653fd2a621bcd3
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=99b8063f9d21291243362b95aa4967dd
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=8b22abe81afb4b5b8262229169092b72
@@ -992,6 +1088,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_bWrnStrappoCartaOut"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stAspTappAlm_bAlmErrComInv
   Id: g=c418165952f14f4db8383f099f181011
   Type: CategoryDigitalAlarmType
@@ -1009,12 +1114,10 @@ Children:
     Id: g=3460aa2df5f1fc98fff407f77b6781b4
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=28379246302157c7d55385424cfccc39
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=7d33bd88e8e14124b6546677243774e8
@@ -1058,6 +1161,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmErrComInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stAspTappAlm_bAlmInv
   Id: g=5d2b4bb4ee444b29b31137b6979d77b1
   Type: CategoryDigitalAlarmType
@@ -1075,12 +1187,10 @@ Children:
     Id: g=49f34a8128d7871955b156c1dddc438a
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=8ea6ae586c2672e7c69b57aec0991f93
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=72be22d7eb59400385c3121c729680c7
@@ -1124,6 +1234,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stAspTappAlm_bAlmPto
   Id: g=d6e0a4a05221429889b2000ae7f30689
   Type: CategoryDigitalAlarmType
@@ -1141,12 +1260,10 @@ Children:
     Id: g=41ef787b13e6c763b8dd99663876d305
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=9a50bfedb0f05366a1b985a9aa34217c
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=f0a2fe11e1c9455b94e0bc5453c481ad
@@ -1190,6 +1307,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stAspTappAlm_bAlmPto"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stCartaAlm_bAlmErrComInv
   Id: g=51f9831bf3cb461b858f456471a4399f
   Type: CategoryDigitalAlarmType
@@ -1207,12 +1333,10 @@ Children:
     Id: g=3472ad8e7ecf53cc36f84d86f109e018
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=0a705d2a1216db7e81277b6b6cd6c82c
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=5ae9fbdc015e41079bbab62d099b47ce
@@ -1256,6 +1380,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmErrComInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stCartaAlm_bAlmInv
   Id: g=174f3cd3a3cd4ed6bcb49e0b256bc60e
   Type: CategoryDigitalAlarmType
@@ -1273,12 +1406,10 @@ Children:
     Id: g=96f61dfebb10a48b572793fc0597335b
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=c83971613ccac5c893c52adf832b4f47
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=75937d569c664312b4e4f21741e9f5a5
@@ -1322,6 +1453,15 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmInv"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
 - Name: GvCarta_stCartaAlm_bAlmPto
   Id: g=3c125378d18f412b9e2295758b3cf4a6
   Type: CategoryDigitalAlarmType
@@ -1339,12 +1479,10 @@ Children:
     Id: g=687d3d584028754d85bbe1112e2e6260
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=69381db316abfdfe966abef73a1ec8fd
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=447fc6fc58be436a839f8508c863e003
@@ -1388,3 +1526,12 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCarta_stCartaAlm_bAlmPto"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward

@@ -6,7 +6,6 @@ Children:
   Id: g=1e60bfce080ef7c457bbd9e76c26fb68
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
   Children:
   - Name: DynamicLink
     Id: g=974c737ffc63bf6c4fec68ca4655bea5
@@ -24,7 +23,6 @@ Children:
   Type: BaseDataVariableType
   DataType: Boolean
   Description: {"LocaleId":"it-IT","Text":"OFF = uscita pezzi sul lato sx. ON = Usicta pezzi sul lato destro "}
-  Value: false
 - Name: FattoreConverVelocTrasp
   Id: g=bdee94dcacc9693774b96b2434dde339
   Type: BaseDataVariableType

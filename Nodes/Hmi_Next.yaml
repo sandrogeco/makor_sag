@@ -24,22 +24,18 @@ Children:
     Id: g=c58a12a2dcd8cf8aeb8ea467b3b25dcf
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: EnforcePasswordHistory
     Id: g=760449e2f18162c345a61807339dd8d6
     Type: BaseDataVariableType
     DataType: Byte
-    Value: 0
   - Name: MinimumPasswordAge
     Id: g=cab47471043c0e6735dc7d7a9a656588
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: MinimumPasswordLength
     Id: g=fef1bf707fcc5a8f3f8f879976347122
     Type: BaseDataVariableType
     DataType: Byte
-    Value: 0
 - Name: Authentication
   Id: g=c190299088193172fde438fdeba163da
   Type: PropertyGroup
@@ -48,7 +44,6 @@ Children:
     Id: g=92bedb24f97ad0a4e92ed6a91f5c6223
     Type: PropertyType
     DataType: AuthenticationMode
-    Value: 0
 - Name: AlarmConfiguration
   Id: g=2820a877c667626d041d591cf4003b31
   Type: PropertyGroup
@@ -58,7 +53,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     ReferenceType: HasProperty
-    Value: false
 - Name: Localization
   Id: g=991eef8236f49eb7afb189bb7d29268e
   Type: PropertyGroup

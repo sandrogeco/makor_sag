@@ -33,7 +33,6 @@ Children:
             Id: g=8e6643d00604136acb478860cf34336f
             Type: PropertyType
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: NodeClass
             Id: g=9fdd3bbbd58f4d6c82b99d29d258f12f
             Type: PropertyType
@@ -58,12 +57,10 @@ Children:
             Id: g=187aac523978a7dbcc16ee6822188c1e
             Type: PropertyType
             DataType: NodePointerNodeClass
-            Value: 0
       - Name: PublishDynamicConfiguration
         Id: g=bd490126e8a00ebc29cf070c7a7e73fe
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
     - Name: Configuration2
       Id: g=f821ada4c8975afaeed71813dc8d20b3
       Type: NodesToPublishConfigurationEntry
@@ -82,7 +79,6 @@ Children:
             Id: g=859eb28d8e0af552a49d045583e9891d
             Type: PropertyType
             DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: NodeClass
             Id: g=0816ae8a1b08e99e9e6d957528407270
             Type: PropertyType
@@ -107,12 +103,10 @@ Children:
             Id: g=e0d676bbf45d6ea3ab7df369bc5a1caf
             Type: PropertyType
             DataType: NodePointerNodeClass
-            Value: 0
       - Name: PublishDynamicConfiguration
         Id: g=4971822faee24a04111542eab7d1daa1
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
   - Name: SamplingInterval
     Id: g=202c6b440454ac96bf3e53894cdb5ad5
     Type: PropertyType
@@ -122,12 +116,10 @@ Children:
     Id: g=785dd679fbb7449734c9ee3d4415d684
     Type: BaseDataVariableType
     DataType: ns=7;SecurityPolicyEnum
-    Value: 0
   - Name: MinimumMessageSecurityMode
     Id: g=100e50ed0b3c384206b48cd76fb26880
     Type: BaseDataVariableType
     DataType: ns=7;MessageSecurityModeEnum
-    Value: 0
   - Name: AllowMultipleConnection
     Id: g=ee19823ff910995bf04eb8f917e4fcb8
     Type: BaseDataVariableType

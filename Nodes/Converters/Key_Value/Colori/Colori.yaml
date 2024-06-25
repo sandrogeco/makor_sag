@@ -7,7 +7,7 @@ Children:
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
   Children:
-  - Name: Pairs
+  - Name: ns=9;Pairs
     Id: g=1828deb9cb4d025935d828ce05f116fe
     Type: BaseObjectType
     ModellingRule: None
@@ -68,7 +68,7 @@ Children:
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
   Children:
-  - Name: Pairs
+  - Name: ns=9;Pairs
     Id: g=59772a9daeecbf6aab6a18625c492909
     Type: BaseObjectType
     ModellingRule: None

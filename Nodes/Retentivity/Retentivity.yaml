@@ -20,7 +20,6 @@ Children:
         Id: g=f71ef4d03684de08ccdf420a79b54260
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=1b3091ce58306456590a1ba7dfca6726
         Type: PropertyType
@@ -36,7 +35,6 @@ Children:
         Id: g=8cfb60dce3119383f830fdaefbd1ccdb
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=82bbd6821881649af62ff0c1919dc384
         Type: PropertyType
@@ -52,7 +50,6 @@ Children:
         Id: g=542c94f45714228854df0b3a07e38b42
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=aaa9d0225a183a9b313e593d2d3d065e
         Type: PropertyType
@@ -68,7 +65,6 @@ Children:
         Id: g=259b59013085c7685f46e18aeb1797f6
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=00905b2127862fe07938f723d0e93687
         Type: PropertyType
@@ -84,7 +80,6 @@ Children:
         Id: g=eeb7ed125f45c077d5c8f093fe0e2123
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=a54924a1c2958558326fa6ed64579602
         Type: PropertyType
@@ -100,7 +95,6 @@ Children:
         Id: g=8e0007bd2df0a2e59393cf2d310ce1b1
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: NodeClass
         Id: g=632fbafdd9e0e46c505f3ef7cd5e1d9d
         Type: PropertyType
@@ -111,7 +105,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Duration
     ReferenceType: HasProperty
-    Value: "0:00:00:0.0000000"
   - Name: DeltaObserverEnabled
     Id: g=4f47df35a68867675af663005daba7fb
     Type: BaseDataVariableType

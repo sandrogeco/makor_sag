@@ -27,7 +27,6 @@ Children:
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
   AccessLevel: Read
-  Value: 0
 - Class: Reference
   Target: ns=21;i=29
   Direction: Forward

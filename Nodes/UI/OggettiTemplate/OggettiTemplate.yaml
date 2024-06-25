@@ -87,13 +87,11 @@ Children:
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TopMargin
       Id: g=7b8df5f77165158d3cc7d272f64f7d2f
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: LeftMargin
       Id: g=2a2dde95621cc29d3e946fe53ea40933
       Type: BaseVariableType
@@ -163,7 +161,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
-        Value: false
       - Name: Text
         Id: g=331461f166a80e19d2415296d46bb140
         Type: BaseDataVariableType
@@ -175,13 +172,11 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
-        Value: false
       - Name: BottomMargin
         Id: g=1f9a52cf9c651be975b70595437f973e
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: FontSize
         Id: g=875eccc531a461ee08b90aaa63767b70
         Type: BaseDataVariableType
@@ -219,13 +214,11 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: TopMargin
     Id: g=356fb65a3e5aaf8f5380c6c6d7a928ba
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: FillColor
     Id: g=4b0e8dfc39220028e8d6b30d99f398bd
     Type: BaseDataVariableType
@@ -241,7 +234,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=0a0e28fd5bc14d9652c0b3bd4bac371a
@@ -310,13 +302,11 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: TopMargin
     Id: g=f7fd3e65bdc4cece7295ca632b2dacda
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: FillColor
     Id: g=ea2818d8c9b53ccb3638ec7e3af76fb4
     Type: BaseDataVariableType
@@ -332,7 +322,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=2dee28489726444f5c2bbf543d1274e2
@@ -380,7 +369,6 @@ Children:
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: TextHorizontalAlignment
       Id: g=ae0a5fcce1a6d70c38e89ea7f59b88c7
       Type: BaseVariableType
@@ -404,7 +392,6 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
     - Name: Text
       Id: g=8352d4f0bef47e41e98453cb0b7bfbb4
       Type: BaseDataVariableType
@@ -416,13 +403,11 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
     - Name: BottomMargin
       Id: g=3c883e34ae07d61b38f0630376ed43b6
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: FontSize
       Id: g=5599477d1d9ddb3f5ded78181a6e251b
       Type: BaseDataVariableType

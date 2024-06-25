@@ -13,7 +13,6 @@ Children:
   Id: g=3ac35c65303a6124c0f9ddae32d3f36b
   Type: BaseDataVariableType
   DataType: Int16
-  Value: 0
 - Name: InfoProgettoHmi
   Id: g=b6555bcfe97167d8bed9659ea92a5a27
   Type: BaseObjectType
@@ -47,7 +46,6 @@ Children:
     Id: g=418818db0540f485630f84952e1c500d
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
 - Name: InfoProgettoPLC
   Id: g=9c020e781e4165f3636c19833f7ad483
   Type: BaseObjectType
@@ -61,29 +59,23 @@ Children:
     Id: g=54ecb581671944940fcc13a58fb3f124
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
   - Name: SwRev_MinorRelease
     Id: g=3ccdf81312dbade3f7a97e7c402b8cd6
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
   - Name: SwRev_Build
     Id: g=efb4efbe06965999e0f762768fa7b579
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
   - Name: RevHw
     Id: g=3ac748799f529ff69344bba7ee3174ab
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
   - Name: MatricolaSpec
     Id: g=f790aeb762b0c5c1bd6453ebe7f6ae85
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
 - Name: DebugMode
   Id: g=485d9d206d2eca8190d8062f0cc347ff
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false

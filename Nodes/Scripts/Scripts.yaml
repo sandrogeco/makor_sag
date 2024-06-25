@@ -11,52 +11,42 @@ Children:
     Id: g=c899402b063592d66686eb155d7275df
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Linux
     Id: g=a9fe3b6a93c438001af3feac972607ac
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: WindowsIP1
     Id: g=1195f9b45339ae5944fa6fe2208d08b6
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
   - Name: WindowsIP2
     Id: g=088ad806c2c12d970b9dc691d90c8caf
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
   - Name: UsbPresent
     Id: g=25c9a353ef68c1d3895b20cc48a6b7e8
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Blink_500ms
     Id: g=26829b66b8fccb632b651c8c17a4d3d9
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Blink_1s
     Id: g=4c4e6996de62c0ac37617b18b5aac7fe
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Blink_2s
     Id: g=db81c26e95f67a3d5fcce7cea464dd53
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Blink_5s
     Id: g=31960138fcbf60e1b8baf54beaa6e90f
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: Blink_10s
     Id: g=e9138a4ce85213dfbbae4690c85c61a9
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
 - Name: GestAvvioProcessiEsterni
   Id: g=0fbe698278e1326578e5a70776ce2be4
   Type: NetLogic
@@ -100,17 +90,14 @@ Children:
     Id: g=bbd65bfd2a46e919fd5d91c327f8979d
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: EmailSendingStatus
     Id: g=2503102e5c63ad0c2e12d9d0177c3425
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: MaxRetriesOnFailure
     Id: g=8cf50e57b34f08bf28e4820a34bf3b17
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: DelayBeforeRetry
     Id: g=363b78ff12fa30234569bfab183f2dec
     Type: BaseDataVariableType
@@ -140,12 +127,10 @@ Children:
     Id: g=9f1419c895fad111cbedbaf20a93387f
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: CSVpath
     Id: g=e73b8ae7b2dde63565da43f2317a2bc9
     Type: BaseDataVariableType
     DataType: AbsoluteResourceUri
-    Value: ""
   - Class: Method
     Name: ToCSV
     Id: g=072a7958da790b275f9c349e805177cd

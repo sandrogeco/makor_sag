@@ -27,7 +27,6 @@ Children:
       Id: g=7460870ee64075130b44053fd2677e04
       Type: PropertyType
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
 - Name: DesignTime_Utility
   Id: g=815383357dd2aae8f17cf25f7b0a560c
   Type: NetLogic

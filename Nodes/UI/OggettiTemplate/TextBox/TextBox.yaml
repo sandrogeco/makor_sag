@@ -13,13 +13,11 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: TopMargin
     Id: g=2229e8a7606b2aff3d1ea3a2ea3116b9
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: Width
     Id: g=49bdd2072023a3e6b559df5533d8ba82
     Type: BaseVariableType
@@ -36,7 +34,6 @@ Children:
     Id: g=84ae28e59478482b9c2cd27acd2c444f
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=d7a9122aff874d7f522cbe37a21964f3
     Type: BaseDataVariableType
@@ -46,7 +43,6 @@ Children:
     Id: g=e368b4bdd32345dbed8daf2ded327009
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EngineeringUnits
       Id: g=25e21fce6ee66b3c0e83135f9fe1ed76
@@ -64,13 +60,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=bdc54b100dbead17ba7cc04f6ea2328a
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=ed62de15f22c69dbbf8781a798fcaa6d
       Type: EUConverter
@@ -93,13 +87,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=1cebe78b02eebf63430e554006b9117f
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=81bd6bdbcda00e2803740fe8f4678ab0
@@ -112,7 +104,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=6289bf45a7856edf00ff975ae0558692
         Type: BaseDataVariableType
@@ -124,7 +115,6 @@ Children:
     Id: g=af0b5ed270c5e678dbdd67ea112d57a5
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=ab009b75ea64b009eff9a9e23188297a
@@ -142,7 +132,6 @@ Children:
         Id: g=b8e59774950d9b2ab4f7b781aab4f2ed
         Type: BaseVariableType
         DataType: DynamicLinkEUMode
-        Value: 0
     - Name: ns=0;EngineeringUnits
       Id: g=d7369a20c4046b65928d8337f01d00a8
       Type: EUInformationType
@@ -159,13 +148,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=2703b9aedee039e240504fcafe0e05e3
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
   - Name: ValorePar
     Id: g=8a7f01a490ea1b6607a188689befd471
     Type: Label
@@ -174,7 +161,6 @@ Children:
       Id: g=d1c8c32b0c5dad0c863bf526bf22fcc1
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: TextHorizontalAlignment
       Id: g=702577c9b90b07c17d09f2983ead81da
       Type: BaseVariableType
@@ -204,13 +190,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TopMargin
       Id: g=b4c67091eb16ff7f761e4e146e2c2f37
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: RightMargin
       Id: g=50e839a074978ed5948cbc8afcbeb830
       Type: BaseVariableType
@@ -222,7 +206,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Width
       Id: g=605bf12bcc1c247ddd8ed27c2bb77f96
       Type: BaseVariableType
@@ -277,13 +260,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TextHorizontalAlignment
       Id: g=c9e694e0476bcb88ee0080671c446b39
       Type: BaseVariableType
       DataType: TextHorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: TextVerticalAlignment
       Id: g=dbd2bd0a3c7c8d863a31fe729c9a3375
       Type: BaseVariableType
@@ -306,7 +287,6 @@ Children:
       Id: g=c1934b50a83b047e9c50b8d6d5dbb35e
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=06f4d09498615219988e411005d9b5be
@@ -323,13 +303,11 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: TopMargin
     Id: g=54ec1901255f5df09325a4f81499c658
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: Width
     Id: g=39fc64e19578ff600fb2a229dd301cf1
     Type: BaseVariableType
@@ -346,7 +324,6 @@ Children:
     Id: g=68aa79de37077ff31afcce9d37460548
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=b7c4d0a5f87f3e1e9849d40ad09e3bf2
     Type: BaseDataVariableType
@@ -356,7 +333,6 @@ Children:
     Id: g=52b0a98b658e790eae7cb1a585d455d8
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EngineeringUnits
       Id: g=7db22ff2ec1a0e7d8601160037da87e3
@@ -374,13 +350,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=bbc0433218bcb7297506e83da3b5846e
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=bf4cc332fc9125da6f59340b11044369
       Type: EUConverter
@@ -403,13 +377,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=cb273ed22de592f10c5ee65dd7dce440
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=10ea8f7192963b9b3a73d11a3ea2e923
@@ -422,7 +394,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=3d185d5eabb247aa470de5ecf806cfd4
         Type: BaseDataVariableType
@@ -440,7 +411,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=581f6f12e09b41fa12c460f3a7cc214f
         Type: BaseVariableType
@@ -458,7 +428,6 @@ Children:
     Id: g=4e3a7fdf5766ceb0f0dbf3f9ffa1c90a
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=b96bcb52396dc3656bc6979b8a2c8c4b
@@ -476,7 +445,6 @@ Children:
         Id: g=caae77b3484c4b0dd0a972ceb4279504
         Type: BaseVariableType
         DataType: DynamicLinkEUMode
-        Value: 0
     - Name: ns=0;EngineeringUnits
       Id: g=1671d5c82b330ae03c4e5fef83313b24
       Type: EUInformationType
@@ -493,13 +461,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=7d9a6e5e65d67b8b7801f8b2ada4f27c
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
   - Name: ValorePar
     Id: g=237990e77eaa8431426ecba58fe34052
     Type: Label
@@ -508,7 +474,6 @@ Children:
       Id: g=92e3694dcc7b6bd1dfa0e9f48e59deb8
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: TextHorizontalAlignment
       Id: g=e065004d1ede70582cc9318d647fedd2
       Type: BaseVariableType
@@ -538,13 +503,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TopMargin
       Id: g=156af8b3d02a13d583d7f8c0959310bc
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: RightMargin
       Id: g=ac2980a3e93148a1366f439f9cb891d5
       Type: BaseVariableType
@@ -556,7 +519,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Width
       Id: g=0a57403067eb645db6261c5bcb033236
       Type: BaseVariableType
@@ -617,13 +579,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: TextHorizontalAlignment
       Id: g=81afe9a5a775cc9c80877ab0648981b4
       Type: BaseVariableType
       DataType: TextHorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: TextVerticalAlignment
       Id: g=72a1cffe99829763c5d9842279a6e4f5
       Type: BaseVariableType
@@ -646,7 +606,6 @@ Children:
       Id: g=b1dec7db301c815ebd68161ffc4f6000
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=d28b148cc411f22db73c02df1374cded
@@ -668,7 +627,6 @@ Children:
     Id: g=76dc9c03b731fa4ca410645042e6ae84
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
   - Name: Width
     Id: g=717793e3cc7eeb23b54b09084cd15a02
     Type: BaseVariableType
@@ -690,7 +648,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=6575c2294688ffaf6ebed49235a758ca
@@ -718,7 +675,6 @@ Children:
     Id: g=127b8bf0870437090895d6a369ac2960
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: ExpressionEvaluator1
       Id: g=bc97b25f7760e130069bf6b5ad7061db
@@ -802,7 +758,6 @@ Children:
       Id: g=ee40016cc56ba3a7700ab508cc92b3be
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: Width
       Id: g=52895ea919208a35048286f20532a7d4
       Type: BaseVariableType
@@ -837,19 +792,16 @@ Children:
       Id: g=9518e24826b10da58aa6b14c13757c4a
       Type: BaseVariableType
       DataType: Size
-      Value: 0.0
     - Name: TopMargin
       Id: g=715d68c61e4f465f3b750b4f6b16362b
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: BottomMargin
       Id: g=5fb5fb7914d0122f6bd012db1adcac22
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Opacity
       Id: g=2cc7c649024d15cb79104bfa0915c269
       Type: BaseVariableType
@@ -872,7 +824,6 @@ Children:
       Id: g=c193c697354c8c40de8e9ad8aa6d0715
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
       Children:
       - Name: ExpressionEvaluator1
         Id: g=8f52a9748362965df4702e780bac8ef8
@@ -932,7 +883,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
-          Value: false
           Children:
           - Name: DynamicLink
             Id: g=f766855430ab4f58b089e1f5a6eeb6e1
@@ -971,7 +921,6 @@ Children:
       Type: BaseVariableType
       DataType: TextHorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: TextVerticalAlignment
       Id: g=7784fc93f9fd1cad53443e47a1e95a9b
       Type: BaseVariableType
@@ -1007,13 +956,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: BottomMargin
       Id: g=ba6567bd115e9b7287ff1a8037c471d4
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Text
       Id: g=c411faa3a67c79748fdddb6f81664a2f
       Type: BaseDataVariableType
@@ -1040,7 +987,6 @@ Children:
     Id: g=98e46f366719362f3041c8937b08d58b
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=1f925304d05f0d7e3146dfd722d5821f
     Type: BaseDataVariableType
@@ -1050,7 +996,6 @@ Children:
     Id: g=787f7bfa441fa6d2f3ff14f9efa250bd
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EURange
       Id: g=1676d4d705f65995fb0c3869bbc9e4a3
@@ -1062,7 +1007,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=1227026b9a78d9df2db76051a503a0dd
         Type: BaseVariableType
@@ -1105,13 +1049,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=999c237e3ccd8ac6b3b1c3c78a6fbb2e
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=837fcf54e8d5cef8f7b2042a582d091a
@@ -1124,7 +1066,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=a3a7746fb641e227733a55fdf40ee2a4
         Type: BaseDataVariableType
@@ -1164,7 +1105,6 @@ Children:
       Id: g=ad7a56c63f746b7e905d43bcc696a809
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: Width
       Id: g=891ba27f5692ed524a05d2efde8cb519
       Type: BaseVariableType
@@ -1199,19 +1139,16 @@ Children:
       Id: g=d4c767737484af5c86ddd26158d9bea8
       Type: BaseVariableType
       DataType: Size
-      Value: 0.0
     - Name: TopMargin
       Id: g=119de68397585acf57808d4ef19dd08f
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: BottomMargin
       Id: g=2877a16c0a7e7e3ac7b874859bcd896f
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Opacity
       Id: g=062d10e0b2c7def1d3cf92f4daff02d8
       Type: BaseVariableType
@@ -1234,7 +1171,6 @@ Children:
       Id: g=8834f35439f73ad78ce467dae0da6d91
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
       Children:
       - Name: ExpressionEvaluator1
         Id: g=c88e1dddabf0adb20c039d9ddb348ac2
@@ -1294,7 +1230,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
-          Value: false
           Children:
           - Name: DynamicLink
             Id: g=3dcfa4ea68edc59774cbda2cd2b7d856
@@ -1333,7 +1268,6 @@ Children:
       Type: BaseVariableType
       DataType: TextHorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: TextVerticalAlignment
       Id: g=7df0b1e1f4a57cd424cafec25053d185
       Type: BaseVariableType
@@ -1369,18 +1303,15 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: BottomMargin
       Id: g=92e43e2d433a4856621ed364e032d91b
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: Text
       Id: g=6c3d3478ad2cc39a2d2b6a0bfe65b2b1
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=1d2050c009a8c35fa43bd5550ecdc629
@@ -1392,7 +1323,6 @@ Children:
           Id: g=3f122b60e88b591edfc35f46e0a4fc09
           Type: BaseVariableType
           DataType: DynamicLinkEUMode
-          Value: 0
     - Name: Width
       Id: g=fe8229d2cdc6e8f00fc4be6298bec504
       Type: BaseVariableType
@@ -1413,7 +1343,6 @@ Children:
     Id: g=6a800b95760d3d03b3f4e86293a088d6
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=97a80f36774eac0d70b27e7bd321324f
     Type: BaseDataVariableType
@@ -1423,7 +1352,6 @@ Children:
     Id: g=0fc03f2a28b32a467d7f11cef532fc31
     Type: AnalogItemType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: EURange
       Id: g=0bea84d95094a9653a89a9244235cc52
@@ -1435,7 +1363,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=23c55e65df0dfc8b875115656dc744f2
         Type: BaseVariableType
@@ -1458,13 +1385,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=0f889eae53f244d8b5971b45b3fdcca7
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=901efa5c334af446149c6c0fd10bad08
       Type: EUConverter
@@ -1494,13 +1419,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=c4159502f5901acd06360987d25376ae
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=ad0de715ad541c525460e640db1caace
@@ -1513,7 +1436,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=ac8bc11c09afccfb8704e146ed3a580a
         Type: BaseDataVariableType
@@ -1532,7 +1454,6 @@ Children:
     Id: g=a0a35b87c05e7acc50fdb433e3326477
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=391fa97015c3ea67586a8346c573b692
@@ -1550,7 +1471,6 @@ Children:
         Id: g=78b21916ae435d3ba3cf0139954a3f57
         Type: BaseVariableType
         DataType: DynamicLinkEUMode
-        Value: 0
     - Name: ns=0;EngineeringUnits
       Id: g=06b1b8186e058e43d5ac26f8de9575ec
       Type: EUInformationType
@@ -1567,13 +1487,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=f649b5de3675a313fd620be7ea7797ae
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
 - Name: TextBoxBaseConImm_R1_0
   Id: g=39139263893a33c92eeed7e3c4135ce9
   Supertype: FrameTextBoxConImm_R1_0
@@ -1657,7 +1575,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: RightMargin
         Id: g=017129d776e90443f498f71718a0d907
         Type: BaseVariableType
@@ -1669,13 +1586,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BottomMargin
         Id: g=80a3aa07ebfe5a974a07892a1717b5c5
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Opacity
         Id: g=6d54e65bf1a43fad23f302c7871029b5
         Type: BaseVariableType
@@ -1698,7 +1613,6 @@ Children:
         Id: g=589d1c198b8e1b021737ddac1ed35e8d
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ExpressionEvaluator1
           Id: g=4204770dc31c71fa6b2b19387a79b445
@@ -1748,7 +1662,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#00000000"
       - Name: Style
         Id: g=47c8f0e2daf405af19bd3a615f5c3ac3
         Type: BaseDataVariableType
@@ -1776,13 +1689,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TextHorizontalAlignment
         Id: g=73d4fbd3015ea842971bc5ca5132125f
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: TextVerticalAlignment
         Id: g=6ce7bac781c40277e741538dbd87ab55
         Type: BaseVariableType
@@ -1836,7 +1747,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=5b4c90e2f8b700b362986f2aced9fdfb
@@ -1850,7 +1760,6 @@ Children:
     Id: g=4e2dd5ce16dce161021f7a444d8c7b01
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
 - Name: TextBoxScalingConImm_R1_0
   Id: g=75d7a8abadc0bcf7e46880b87d8d07a1
   Supertype: FrameTextBoxConImm_R1_0
@@ -1934,7 +1843,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: RightMargin
         Id: g=b737ed3a08e5ee6afa45cf94929a2db6
         Type: BaseVariableType
@@ -1946,13 +1854,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BottomMargin
         Id: g=2e8a3abf687a8f2c9f6bee37d4d21593
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Opacity
         Id: g=0190ce1542b8cf0a1194b43a79514298
         Type: BaseVariableType
@@ -1975,7 +1881,6 @@ Children:
         Id: g=0e87a8eed15a9195f83c0aa447b52007
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ExpressionEvaluator1
           Id: g=9b96914dab44571f6d0186348fe5374c
@@ -2025,7 +1930,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#00000000"
       - Name: Style
         Id: g=54923e5326f3bb485fa8ccae8f2a68c6
         Type: BaseDataVariableType
@@ -2053,13 +1957,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TextHorizontalAlignment
         Id: g=800e8c543d7edf507d27d76d2094b0dd
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: TextVerticalAlignment
         Id: g=5318a473a956ca6f483e6ceabf9e698a
         Type: BaseVariableType
@@ -2113,7 +2015,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=88e9934c124ab2ddc532b132bc3148b5
@@ -2127,7 +2028,6 @@ Children:
     Id: g=3170b2874939c42b8f75777465ec14d9
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=134f055105a91a71c3c210ca7fce3bff
     Type: BaseDataVariableType
@@ -2137,7 +2037,6 @@ Children:
     Id: g=27e7f07a0ecb9106feda1d62f6d585af
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=3051da90cc7f61e27fc574a28bd0bd41
@@ -2168,13 +2067,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=38b9725cb5c99d18e55b4b27460dffb2
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=3da6fa18b6f111427fff5c7af9ec86b0
@@ -2187,7 +2084,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=249ac0242a2f1a26314e97009ced06c7
         Type: BaseDataVariableType
@@ -2212,7 +2108,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=0458af4a9c117ff6b6924366a307b290
         Type: BaseVariableType
@@ -2279,7 +2174,6 @@ Children:
         Id: g=12c2fbc9598d6cebf3a993ffdd18015e
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Width
         Id: g=62ba1de58747aecf9b25a88e984f6b88
         Type: BaseVariableType
@@ -2309,7 +2203,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: RightMargin
         Id: g=1c93925ffdceffa77efa11052bf8bb7a
         Type: BaseVariableType
@@ -2321,13 +2214,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BottomMargin
         Id: g=e983ce42333cc88c42c416ed4c38fbb7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Opacity
         Id: g=6a85e95b3b8814c3767680b30e0dac53
         Type: BaseVariableType
@@ -2350,7 +2241,6 @@ Children:
         Id: g=3af7a39ec47196928376d980b4e44ecd
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ExpressionEvaluator1
           Id: g=e21dbdb6d5432be89aedf5ca2a2cb1a3
@@ -2400,7 +2290,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#00000000"
       - Name: Style
         Id: g=6147c0266f7ca9025ed95897fb43801f
         Type: BaseDataVariableType
@@ -2428,13 +2317,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TextHorizontalAlignment
         Id: g=27e643bc4d2f7ca0dfe58f36d014ad9f
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: TextVerticalAlignment
         Id: g=97d556153beebe5320562aea9de2a47c
         Type: BaseVariableType
@@ -2463,7 +2350,6 @@ Children:
         Id: g=23b6cc50072757093fb4f189e97e3657
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         Children:
         - Name: DynamicLink
           Id: g=adace42ad05a0730db8f37b2262327d0
@@ -2499,7 +2385,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=58c4ea1ebec7d525279b89b6c7c038fb
@@ -2513,7 +2398,6 @@ Children:
     Id: g=aa5b6382ad7b4e0f69456777ce4e83ad
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=5bdfb1b837a7fff600ed74ea2307832a
     Type: BaseDataVariableType
@@ -2523,7 +2407,6 @@ Children:
     Id: g=0a04dbe018b1654d938ef07a8eba9794
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EngineeringUnits
       Id: g=b2f420d38c36c0fb3b8d7c877818a972
@@ -2541,13 +2424,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=7c9ad0a33021171dac7ff26f86c87cf5
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=52ff5f5916f2145ddf43908e40b96b1c
       Type: EUConverter
@@ -2577,13 +2458,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=768ee1bc924a8d26bd4265852020b09e
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=38c51b97b57203c13bf4809c94c4b5b3
@@ -2596,7 +2475,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=7806122129648228aa4ea391bb217aa3
         Type: BaseDataVariableType
@@ -2621,7 +2499,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=fa4155b9124bf638d2eb340fa5a6067e
         Type: BaseVariableType
@@ -2639,7 +2516,6 @@ Children:
     Id: g=0fe72d86f960afd66e22ce6dbd9fc962
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=5e6f2ea8e23d55257f95200b05769249
@@ -2657,7 +2533,6 @@ Children:
         Id: g=57b17ee63c6035ab6477ac8991966b12
         Type: BaseVariableType
         DataType: DynamicLinkEUMode
-        Value: 0
     - Name: ns=0;EngineeringUnits
       Id: g=1d152a3323dbc058552a14d24c3a9efe
       Type: EUInformationType
@@ -2674,13 +2549,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=82dddf3d390ac732062a7b4648adbca4
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
 - Name: ComboBoxConImm_R1_0
   Id: g=b623b8a5aec9d96fbdef73b032a19029
   Supertype: FrameTextBoxConImm_R1_0
@@ -2694,23 +2567,19 @@ Children:
       Id: g=d3b2c94fdf20a00221ab596f71d9160b
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: Model
       Id: g=ea415518096bae0f4373f4ed786f8887
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: ItemKind
         Id: g=932261bdd4fca9e36406745265b93c23
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: Kind
         Id: g=82ad85df656850a535d444f5de833623
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Name: SelectedValue
       Id: g=f2060a4cb60efb29ac776892a5c18a4c
       Type: BaseDataVariableType
@@ -2719,19 +2588,16 @@ Children:
       Id: g=33a387c82d05650ddb40d1bb04e4ecd5
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Id: g=0ef5c28e1a25e35a009db7d4d444aa7e
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Name: UISelectedItem
       Id: g=7771a92b21ffd044f0a98605ded0a81a
       Type: BaseDataVariableType
       DataType: NodeId
       AccessLevel: Read
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Name: UISelectedValue
       Id: g=f61fbdb5e23a1e8900db48534bd6d715
       Type: BaseDataVariableType
@@ -2750,13 +2616,11 @@ Children:
       Id: g=62796846db3327a73ea9fc88623ef06e
       Type: Alias
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
       Children:
       - Name: Kind
         Id: g=d6c9004fc2ab2f70b33da70d8d5c12e2
         Type: PropertyType
         DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Name: BottomMargin
       Id: g=71646945427c67fb6a9ec161ba845aa1
       Type: BaseVariableType
@@ -2827,7 +2691,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=0f9bcb26858c6435062bedef4f6c942b
@@ -2850,7 +2713,6 @@ Children:
       Id: g=1625e3765a2de04555d6e0f10da37ed5
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
     - Name: ImagePath
       Id: g=0b2e84142f13f2fdba9282fa2d3559e6
       Type: BaseDataVariableType
@@ -2866,7 +2728,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
-          Value: false
           Children:
           - Name: DynamicLink
             Id: g=21b6e697f5f765c08191490c8842be2c
@@ -2961,7 +2822,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=8b973b3d9b83229a4f6c3181b3548973
@@ -2984,7 +2844,6 @@ Children:
       Id: g=f2c2520cb9a63ebadd1615b649f9ecf9
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
       Children:
       - Name: DynamicLink
         Id: g=79bd8fcf0bf451bec1e9b1fef2383cbc
@@ -3013,7 +2872,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
-          Value: false
           Children:
           - Name: DynamicLink
             Id: g=c5c813112d1e41b0eea5cda93ca1b1a6
@@ -3108,7 +2966,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ReferenceType: HasSource
-        Value: false
         Children:
         - Name: DynamicLink
           Id: g=15cb9694a49bc8a577975cae11bd75f2
@@ -3122,7 +2979,6 @@ Children:
     Id: g=f5de42d8061f91152b32a7010acac672
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
 - Name: TextBox1
   Id: g=801ce647a8a890f90593122519a8225a
   Supertype: TextBox
@@ -3132,7 +2988,6 @@ Children:
     Id: g=36c799b63ae2b96fe264d4639d120cb0
     Type: BaseDataVariableType
     DataType: LocalizedText
-    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
   - Name: Width
     Id: g=b5917559552d54b7d6fc41037e3f4636
     Type: BaseVariableType
@@ -3206,7 +3061,7 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../TxtBox_Abilitato"
-      - Name: Pairs
+      - Name: ns=9;Pairs
         Id: g=010d2ff5a905d8a7d183f6c6ae516f50
         Type: BaseObjectType
         Children:
@@ -3218,7 +3073,6 @@ Children:
             Id: g=b37e324207d74f04796d5ed178424d4f
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
           - Name: Value
             Id: g=0f3c081efbe3f373cc0dcc7179e44aab
             Type: BaseDataVariableType
@@ -3333,7 +3187,6 @@ Children:
         Id: g=ce26e0c5205684868d5fd5ab67561aa0
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ExpressionEvaluator1
           Id: g=e232219b5ab1be5ca49395b771a5dd33
@@ -3371,7 +3224,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#00000000"
       - Name: TextHorizontalAlignment
         Id: g=cc87eb54cbb5a3bcd7d66ea82cbc2a5b
         Type: BaseVariableType
@@ -3405,7 +3257,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: TextVerticalAlignment
         Id: g=021082f5cb5c7565778e484bf55d6f2b
         Type: BaseVariableType
@@ -3441,13 +3292,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BottomMargin
         Id: g=a9766a86bcf096ce58c6dd06e37696ca
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Text
         Id: g=852238c797d444523262c2ab73e2e520
         Type: BaseDataVariableType
@@ -3471,13 +3320,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: RightMargin
       Id: g=72ed8dab733c12f9739167faa9a7f49c
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
   - Name: TxtBox_Abilitato
     Id: g=e9d4689babdd3a7f08d781162b50bd85
     Type: BaseDataVariableType
@@ -3487,7 +3334,6 @@ Children:
     Id: g=bb4877ac541a8a21c03c2931a8443d10
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=7ae5ee2f9ad8814f66e0837b99c53bed
     Type: BaseDataVariableType
@@ -3497,7 +3343,6 @@ Children:
     Id: g=262eb95ffbe158726e52511095fdd5eb
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EURange
       Id: g=bc157cc3c28f5323275c842868993f25
@@ -3509,7 +3354,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=bc77c5d76a9e2881f753663b870597ea
         Type: BaseVariableType
@@ -3552,13 +3396,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=adac72a9be28f2c7ff9dda71aa4d0042
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=02d0637a58b662683869a8a314db07a4
@@ -3571,7 +3413,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=47e2949cb2ff0c491521e2daf7474e55
         Type: BaseDataVariableType
@@ -3591,13 +3432,11 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
   - Name: TopMargin
     Id: g=73a3979051bdebfd22e60db06b699929
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 0.0
 - Name: TextBoxEuConverter_R0_0
   Id: g=ab3d07c56b37d33c7cc512395313a6ac
   Supertype: Rectangle
@@ -3654,7 +3493,7 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../TxtBox_Abilitato"
-      - Name: Pairs
+      - Name: ns=9;Pairs
         Id: g=5c40b85cf38f8ea6f5b9af89ec2c15ff
         Type: BaseObjectType
         Children:
@@ -3666,7 +3505,6 @@ Children:
             Id: g=8561be570458b77dc7baecedc00f6473
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
           - Name: Value
             Id: g=fdefa2b89369c98c925ac0d5481a0772
             Type: BaseDataVariableType
@@ -3781,7 +3619,6 @@ Children:
         Id: g=af7e0a5dcb51dc29a5e0928cf7503cdb
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ExpressionEvaluator1
           Id: g=6e388117e77bce64ddd3dd6d620218ed
@@ -3819,7 +3656,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#00000000"
       - Name: TextHorizontalAlignment
         Id: g=b9aa1ce18fee892c5cf69120764f889d
         Type: BaseVariableType
@@ -3853,7 +3689,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: TextVerticalAlignment
         Id: g=4807358bb74994e28ff95d8d333c0eec
         Type: BaseVariableType
@@ -3889,13 +3724,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BottomMargin
         Id: g=85ae6d52eb4fa70c9d49ebc322b46456
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: Text
         Id: g=db2355884c88b2f174bb2ec3f7008c58
         Type: BaseDataVariableType
@@ -3924,13 +3757,11 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: RightMargin
       Id: g=d8bb0ad906024cc4160d908c3f1ee1fe
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
   - Name: TxtBox_Abilitato
     Id: g=472dc23d9496867980d8839df5191db1
     Type: BaseDataVariableType
@@ -3940,7 +3771,6 @@ Children:
     Id: g=daadf4cb56a98babb67277dd4c8c44cb
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: ScaleFactor
     Id: g=9dc2c1488176e1122bb2fd7bad5da1ae
     Type: BaseDataVariableType
@@ -3950,7 +3780,6 @@ Children:
     Id: g=3b3ba84d7905c5855fa30be744ef0b5a
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: ns=0;EngineeringUnits
       Id: g=c162673670f421da62086b434abab564
@@ -3968,13 +3797,11 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=8c106203265cd6b395ca11170ed26dfb
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConvertitoreDiUnit__Ingegneristica1
       Id: g=15043e94f88df33e1140817a67a0739f
       Type: EUConverter
@@ -4004,13 +3831,11 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: RawMax
         Id: g=0c59d8b482fcead2ac60438b25ee0ec0
         Type: BaseDataVariableType
         DataType: Double
         ReferenceType: HasParameter
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=c0178748894bd37d4698ce73bdb2b9bc
@@ -4023,7 +3848,6 @@ Children:
         DataType: Double
         ReferenceType: HasParameter
         ModellingRule: Optional
-        Value: 0.0
       - Name: ScaledMax
         Id: g=45ab25373325aecf98e1d4f092bd3adb
         Type: BaseDataVariableType
@@ -4048,7 +3872,6 @@ Children:
         Type: BaseVariableType
         DataType: Double
         ReferenceType: HasProperty
-        Value: 0.0
       - Name: High
         Id: g=c5c7be5969d23c00fe99bf1db8193140
         Type: BaseVariableType
@@ -4066,7 +3889,6 @@ Children:
     Id: g=9cb038346ae8d8b07abe790456dedfb1
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=9d7b58c74d1637859c2739204de4fd8d
@@ -4084,7 +3906,6 @@ Children:
         Id: g=93ff572d14cd9e2d389bda621027c7bf
         Type: BaseVariableType
         DataType: DynamicLinkEUMode
-        Value: 0
     - Name: ns=0;EngineeringUnits
       Id: g=a882f879f5efc85e5482c2d467bc1c72
       Type: EUInformationType
@@ -4101,10 +3922,8 @@ Children:
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: Description
         Id: g=4305e2ac234628d4a7c8701ba3d27b63
         Type: BaseVariableType
         DataType: LocalizedText
         ReferenceType: HasProperty
-        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}

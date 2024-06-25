@@ -126,7 +126,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [143,6],
+    "Dimensions": [144,6],
     "Body": [
      "","it-IT","en-US","de-DE","fr-FR","es-ES",
      "Piastra Attuale","Piastra Attuale","Current Plate","Aktuelle Platte","Plaque Actuelle","Plancha Actual",
@@ -270,7 +270,8 @@ Children:
      "Cappa Soffiatura","Cappa Soffiatura","Blower Hood","","","",
      "Consumo motore (kWh)","Consumo motore (kWh)","Motor consumption (kWh)","","","",
      "Consumo motore depressore","Consumo motore depressore","Vac. pump motor consumption","","","",
-     "Avvia calibrazione filtro","Avvia calibrazione filtro","Start filter calibration","","",""
+     "Avvia calibrazione filtro","Avvia calibrazione filtro","Start filter calibration","","","",
+     "Importa/Esporta Ricette","Importa/Esporta Ricette","Import/Export Recipe","","",""
     ]
    }
 - Name: Traduz_UsrStandard
@@ -483,7 +484,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [338,3],
+    "Dimensions": [339,3],
     "Body": [
      "","it-IT","en-US",
      "oem Abilita creazione report","Abilita creazione report","Enable report creation",
@@ -822,7 +823,8 @@ Children:
      "Abilita","Abilita","Enable",
      "Industria 4.0","Industria 4.0","Industry 4.0",
      "stOemEnc","Setup encoder","Encoder setup",
-     "Set posizione zero","Set posizione zero","Set position zero"
+     "Set posizione zero","Set posizione zero","Set position zero",
+     "Importa/Esporta Oem","Importa/Esporta Oem","Import/Export Oem"
     ]
    }
 - Name: Traduz_LocaleID
@@ -876,7 +878,6 @@ Children:
     Id: g=893a0e42584f46355349187ae3aa7b20
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: LocalizationDictionary
     Id: g=87407d50d5900699c1d4260f10469d7a
     Type: NodePointer

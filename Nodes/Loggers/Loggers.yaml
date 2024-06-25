@@ -27,7 +27,6 @@ Children:
       Id: g=e81dd9d9bb09b487c1efe63276edbc48
       Type: PropertyType
       DataType: NodePointerNodeClass
-      Value: 0
   - Name: EventFieldPaths
     Id: g=d4d9986a1f6b02571b456d1ee9c695e3
     Type: BaseObjectType
@@ -78,7 +77,6 @@ Children:
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
-    Value: []
     Children:
     - Name: CollegamentoDinamico
       Id: g=24b0aac32814c0806e5ed4520fb948aa
@@ -97,7 +95,6 @@ Children:
         Id: g=5d1988286417a19829263bfc006c008c
         Type: PropertyType
         DataType: Boolean
-        Value: false
       - Name: EventType
         Id: g=953383796b29e6e1b4a8f21e8d65311c
         Type: NodePointer
@@ -123,7 +120,6 @@ Children:
       Id: g=098f28df7decf7eb23f039571367816c
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Name: LocalTime
       Id: g=8219e312378cc82e808f3617be1811c3
       Type: BaseDataVariableType
@@ -132,37 +128,30 @@ Children:
       Id: g=f06455257cd6415dcfa23e1e11706bac
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: ConditionName
       Id: g=b6843b8afe797155168b3ca9252c1e8f
       Type: BaseDataVariableType
       DataType: String
-      Value: ""
     - Name: Message
       Id: g=8b6cb3fb011ac0c44001cdf9bb90277e
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: Time
       Id: g=3e7d70f104626965067764c57881379d
       Type: BaseDataVariableType
       DataType: UtcTime
-      Value: "1601-01-01T00:00:00.0000000"
     - Name: AckedState
       Id: g=7866f195f4202ed0e2dec54660858dbf
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: SourceName
       Id: g=b855c23c7db2ed99c37454d7544861d1
       Type: BaseDataVariableType
       DataType: String
-      Value: ""
     - Name: Severity
       Id: g=b42c517354d5aa982f974cef72d3dcc9
       Type: BaseDataVariableType
       DataType: UInt16
-      Value: 0
   - Name: EventFieldsToLog
     Id: g=fa3dd969dee3efc3b2362b392f157002
     Type: BaseObjectType
@@ -181,7 +170,6 @@ Children:
       Id: g=5a2e898d6cb78cf194e3edcc67e45930
       Type: EventFieldToLog
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=906dfe5406d63b03113e2493cbcf6f9b
@@ -198,7 +186,6 @@ Children:
       Id: g=dd9ebf336b4a21ae78644a59e4e6e454
       Type: EventFieldToLog
       DataType: String
-      Value: ""
       Children:
       - Name: DynamicLink
         Id: g=b47f04a72c7ddc451363131d714ebdc1
@@ -209,7 +196,6 @@ Children:
       Id: g=3bbea1a1f989aa1c35b026483c8a0e96
       Type: EventFieldToLog
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=e97cd7bea8ed154096bc128a47702bbc
@@ -226,7 +212,6 @@ Children:
       Id: g=50933f2cd2e40839562b4de0a873c2fb
       Type: EventFieldToLog
       DataType: UtcTime
-      Value: "1601-01-01T00:00:00.0000000"
       Children:
       - Name: DynamicLink
         Id: g=6b8e2bda3a32808d78520eb0b763a5b6
@@ -237,7 +222,6 @@ Children:
       Id: g=fe3d42abe22516a1d565721ae520e6b0
       Type: EventFieldToLog
       DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
       - Name: DynamicLink
         Id: g=3d2377ad6a0e4e293cad738ac498f617
@@ -254,7 +238,6 @@ Children:
       Id: g=14edd42e1909c6a6a691ebe3aeabcf4f
       Type: EventFieldToLog
       DataType: String
-      Value: ""
       Children:
       - Name: DynamicLink
         Id: g=94c4f5ba480a4a0c7eab7c496e50c1b0
@@ -265,7 +248,6 @@ Children:
       Id: g=541a6779b539b29611abfa5b45dbfb3e
       Type: EventFieldToLog
       DataType: UInt16
-      Value: 0
       Children:
       - Name: DynamicLink
         Id: g=23204c0acc7aab9ff0cbc3ae8090f7af

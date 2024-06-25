@@ -6,7 +6,7 @@ Project:
  Company: ''
  Copyright: ''
  FormatVersion: 1
- ProductVersion: 1.3
+ ProductVersion: 1.4
  CoreVersion: 3.0
  Dependencies:
   2:
@@ -36,7 +36,7 @@ Project:
   9:
    Uri: 'urn:FTOptix:CoreBase'
    Module: FTOptix.CoreBase
-   Version: 3.1
+   Version: 4.0
   10:
    Uri: 'urn:FTOptix:CoreBase:Net'
    Module: FTOptix.CoreBase.Net
@@ -44,11 +44,11 @@ Project:
   11:
    Uri: 'urn:FTOptix:UI'
    Module: FTOptix.UI
-   Version: 11.0
+   Version: 12.4
   12:
    Uri: 'urn:FTOptix:UI:Net'
    Module: FTOptix.UI.Net
-   Version: 11.0
+   Version: 12.4
   13:
    Uri: 'urn:FTOptix:EventLogger'
    Module: FTOptix.EventLogger
@@ -76,23 +76,23 @@ Project:
   19:
    Uri: 'urn:FTOptix:OPCUAClient'
    Module: FTOptix.OPCUAClient
-   Version: 1.1
+   Version: 1.2
   20:
    Uri: 'urn:FTOptix:OPCUAClient:Net'
    Module: FTOptix.OPCUAClient.Net
-   Version: 1.0
+   Version: 1.1
   21:
    Uri: 'urn:FTOptix:CommunicationDriver'
    Module: FTOptix.CommunicationDriver
-   Version: 2.0
+   Version: 2.1
   22:
    Uri: 'urn:FTOptix:CommunicationDriver:Net'
    Module: FTOptix.CommunicationDriver.Net
-   Version: 2.0
+   Version: 2.1
   23:
    Uri: 'urn:FTOptix:HMIProject'
    Module: FTOptix.HMIProject
-   Version: 5.3
+   Version: 6.1
   24:
    Uri: 'urn:FTOptix:HMIProject:Net'
    Module: FTOptix.HMIProject.Net
@@ -108,11 +108,11 @@ Project:
   31:
    Uri: 'urn:FTOptix:Alarm'
    Module: FTOptix.Alarm
-   Version: 2.0
+   Version: 4.0
   32:
    Uri: 'urn:FTOptix:Alarm:Net'
    Module: FTOptix.Alarm.Net
-   Version: 1.0
+   Version: 1.2
   33:
    Uri: 'urn:FTOptix:NativeUI'
    Module: FTOptix.NativeUI
@@ -132,7 +132,7 @@ Project:
   37:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
-   Version: 1.0
+   Version: 3.0
   38:
    Uri: 'urn:FTOptix:WebUI'
    Module: FTOptix.WebUI
@@ -149,15 +149,33 @@ Project:
    Uri: 'urn:FTOptix:CODESYS:Net'
    Module: FTOptix.CODESYS.Net
    Version: 2.0
+  47:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#urn:6040000002899972:Murrelektronik GmbH:IMPACT67_Pro_EC_DIO8_IOL8_M12L_5P'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
+  48:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#http://opcfoundation.org/UA/IOLink/'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
+  49:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#http://www.murrelektronik.com/UA/IMPACT67_Pro_EC_DIO8_IOL8_M12L_5PType/'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
+  50:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#http://www.murrelektronik.com/UA/Diagnostics/'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
+  51:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#http://www.murrelektronik.com/UA/IMPACT67_Pro_EC_DIO8_IOL8_M12L_5P'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
+  52:
+   Uri: '42d17b6bf3137439feecde27ef6f44ec#http://www.murrelektronik.com/UA/AppInfo/'
+   ServerUri: 42d17b6bf3137439feecde27ef6f44ec
  Statistics:
-  TotalNodeCount: 77074
-  Objects: 16050
-  ObjectTypes: 173
-  Variables: 60731
+  TotalNodeCount: 77654
+  Objects: 16139
+  ObjectTypes: 174
+  Variables: 61219
   VariableTypes: 0
   DataTypes: 0
-  Methods: 120
-  References: 859
+  Methods: 122
+  References: 1170
   ReferenceTypes: 0
   Files: 79
  Nodes:

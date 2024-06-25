@@ -12,7 +12,6 @@ Children:
     Id: g=4444bed8b589e1c351f08c767fd1e6ed
     Type: BaseDataVariableType
     DataType: String
-    Value: ""
   - Name: MeasurementSystem
     Id: g=7c09b61f9c24961dad58a060942544c3
     Type: BaseVariableType
@@ -26,7 +25,6 @@ Children:
     DataType: String
     ReferenceType: HasProperty
     ModellingRule: Optional
-    Value: ""
 - Name: ClientOpc
   Id: g=bfb67522d8cfac8e91124cf8d08fdcf5
   Type: UserType
@@ -37,7 +35,6 @@ Children:
     DataType: Password
     ReferenceType: HasProperty
     AccessLevel: Read
-    Value: ""
     Children:
     - Name: Hash
       Id: g=7e2a8fc0e8c228caf133b4b55377c13a

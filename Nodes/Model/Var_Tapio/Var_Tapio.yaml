@@ -6,7 +6,6 @@ Children:
   Id: g=8424057ffe792d9c301164b41b689326
   Type: BaseDataVariableType
   DataType: String
-  Value: ""
   Children:
   - Name: CollegamentoDinamico
     Id: g=d857bf2c6eaa3a4dd18a1fc6979b30fa
@@ -17,7 +16,6 @@ Children:
   Id: g=e3682a07c4bb2d1a16f666eba502b907
   Type: BaseDataVariableType
   DataType: String
-  Value: ""
   Children:
   - Name: CollegamentoDinamico
     Id: g=019bcc137e35d1939569952d9d0b200f
@@ -82,7 +80,6 @@ Children:
         Type: PropertyType
         DataType: DynamicLinkMode
         ReferenceType: HasComponent
-        Value: 0
   - Name: Descrip
     Id: g=c2cf3d3f65209b51d17a1f831b50f1bf
     Type: BaseDataVariableType
@@ -146,7 +143,6 @@ Children:
         Type: PropertyType
         DataType: DynamicLinkMode
         ReferenceType: HasComponent
-        Value: 0
   - Name: Descrip
     Id: g=d25917bf1769a5c8811c49e148c9596a
     Type: BaseDataVariableType

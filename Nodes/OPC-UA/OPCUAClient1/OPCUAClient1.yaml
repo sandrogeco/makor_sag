@@ -11,34 +11,28 @@ Children:
   Id: g=e2dc3b67c97ef169b9624c34b977ce40
   Type: BaseDataVariableType
   DataType: ns=19;MessageSecurityModeEnum
-  Value: 0
 - Name: MinimumSecurityPolicy
   Id: g=fc963b5271298138b270e872c95c229a
   Type: BaseDataVariableType
   DataType: ns=19;SecurityPolicyEnum
-  Value: 0
 - Name: UserIdentityType
   Id: g=24215feb7a6b9294909ff93ac42e984e
   Type: BaseDataVariableType
   DataType: UserIdentityTypeEnum
-  Value: 0
 - Name: ConnectionStatus
   Id: g=d221f0ac3bc9512eec3139aef27c9d01
   Type: BaseDataVariableType
   DataType: ConnectionStatusEnum
   AccessLevel: Read
-  Value: 0
 - Name: ServerUri
   Id: g=49610ec2ed10fa563180552524eefa15
   Type: BaseDataVariableType
   DataType: String
   AccessLevel: Read
-  Value: ""
 - Name: Events
   Id: g=94b172efbb720bb7e48e21f1661a6ba3
   Type: BaseDataVariableType
   DataType: EventsEnum
-  Value: 0
 - Name: RuntimeConfigurations
   Id: g=836efbab64375000d0cf289eeeb958bd
   Type: BaseObjectType
@@ -69,3 +63,6 @@ Children:
 - Class: Reference
   Target: ns=19;i=75
   Direction: Forward
+- Name: Objects
+  Id: g=ad786df184b10b7aae2c4de82a1ae9aa
+  Type: BaseObjectType

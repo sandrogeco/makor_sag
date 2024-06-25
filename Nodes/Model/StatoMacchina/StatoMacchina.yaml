@@ -6,24 +6,19 @@ Children:
   Id: g=e02d861598cc5831117e0ea5ab5041f5
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
 - Name: CycOff
   Id: g=3dc6df5c3dd1446715f281075fe717c4
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
 - Name: MachMajorAlm
   Id: g=9aa9dc902dde879838bb88d518a4cb52
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
 - Name: MachAlm
   Id: g=41e0549d20c16faabab3e43dc54b279a
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false
 - Name: MachWrn
   Id: g=7af06d0f6ac2b5f52d23c615709e1685
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false

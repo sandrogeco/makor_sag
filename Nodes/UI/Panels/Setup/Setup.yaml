@@ -23,7 +23,6 @@ Children:
           Id: g=f21bb7d04dfb5924965da23978c8d73f
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
         - Name: MouseClickEventHandler1
           Id: g=0b159c3cf70c90e0f323c3a1db7b0ac8
           Type: EventHandler
@@ -45,7 +44,6 @@ Children:
                 Id: g=7d493b930464a44200a93c48dc9c8635
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Id: g=9da1d9fa253b6cc347f238812123faab
@@ -85,7 +83,6 @@ Children:
                   DataType: NodeId
                   Description: {"NamespaceIndex":11,"TextId":"ChangePanelAliasNodeDescription"}
                   ValueRank: ScalarOrOneDimension
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: EventArguments
             Id: g=ecc808cbdba0db620ed07aacaec6b118
             Type: MouseClickEvent
@@ -94,48 +91,39 @@ Children:
               Id: g=7f4f63e473be5ac8fb2afd46112645ab
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Id: g=61a05de1fe929524a5ce35987755d0c2
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Id: g=addb3c927ec01556cb61e7d52ff561ad
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Id: g=16636206d7fff97171f96ba5da5cf243
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Id: g=a4ccef787fd37b22113463a3e3c7af84
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Id: g=7fe6082938dd69fbcb221cacfade9cab
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Id: g=d9a9e79dcb1fb1527fef84fb1bd6dbbf
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Id: g=75ac95c7c06dc6c907bd7000ced877e5
               Type: PropertyType
               DataType: UInt16
-              Value: 0
         - Name: Visible
           Id: g=d4a6ca7bd833b8ed1b9355925da65aed
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
       - Name: Titolo
         Id: g=875182614b275a34488927eefa1d0b1c
         Type: Rectangle
@@ -163,13 +151,11 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
         - Name: Visible
           Id: g=0450208c41e8c6890e99a1b01d04a480
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
   - Name: Background
     Id: g=6eee8db1861b2df88e079cadfc035975
     Type: Rectangle
@@ -200,7 +186,6 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
     - Name: DisposizioneVerticale1
       Id: g=9dbd1226422c42ca0f0c78eb5e07e9d9
       Type: ColumnLayout
@@ -233,7 +218,6 @@ Children:
         Id: g=86248b57e6d06fefff7db1a4536435eb
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: CollegamentoDinamico
           Id: g=0b13b4a5d0a5373ab4e4e52059221a40
@@ -279,7 +263,6 @@ Children:
         Id: g=7ee93c96d7411cc890cf9c575e91331f
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ValutatoreDiEspressioni1
           Id: g=8a5347b74b4aaee88f89852c79192b1e
@@ -401,13 +384,11 @@ Children:
       Type: BaseDataVariableType
       DataType: Color
       ModellingRule: Optional
-      Value: "#00000000"
     - Name: Enabled
       Id: g=57884ee0e7599f4ef03e5996938e4600
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
   - Name: RollyIngresso
     Id: g=12bba4c5379bf489be7d81064b751dd6
     Type: Image
@@ -434,7 +415,6 @@ Children:
       Type: BaseDataVariableType
       DataType: FillModeEnum
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Id: g=62cc04fbd7920ee0f2ef7e0aaa4c9ca3
       Type: BaseVariableType
@@ -540,7 +520,6 @@ Children:
       Type: BaseDataVariableType
       DataType: FillModeEnum
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Id: g=c05a58d40129f1d2f9fa83174e8e1af3
       Type: BaseVariableType
@@ -569,7 +548,6 @@ Children:
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: RightMargin
       Id: g=33d347ed3788f8593fa1037a7046a239
       Type: BaseVariableType
@@ -648,13 +626,11 @@ Children:
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: VerticalAlignment
         Id: g=4231e0c5ad313a6064dedd3c9058adb7
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: Opacity
         Id: g=fdfad7f7b0cf52fd388f947c702bf308
         Type: BaseVariableType
@@ -684,7 +660,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: ImagePath
         Id: g=3de6cf4e721397738eca3c2c7f0feabe
         Type: BaseDataVariableType
@@ -714,7 +689,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BackgroundColor
         Id: g=bfbc26a311b0f72d7a1a479aae814cab
         Type: BaseDataVariableType
@@ -765,7 +739,6 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
     - Name: BottomMargin
       Id: g=c959f7c543f994834e91bab3b2b707bb
       Type: BaseVariableType
@@ -867,7 +840,6 @@ Children:
             Id: g=3cd90540aa37e998c4075b58a4394f3b
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=cf7b2a32e196f51e3155d1e352bb2cd7
@@ -896,7 +868,6 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
-                Value: false
                 Children:
                 - Name: DynamicLink
                   Id: g=df6a18dd51897c58962125d5d9ee4132
@@ -956,7 +927,6 @@ Children:
                     Type: BaseDataVariableType
                     DataType: VariablePointer
                     Description: {"NamespaceIndex":9,"TextId":"ToggleVariableToModifyDescription"}
-                    Value: {"IdType":0,"Id":0,"Namespace":-1}
                     Children:
                     - Name: DynamicLink
                       Id: g=321c499c870a80b6169ca6b69e5307a5
@@ -969,7 +939,6 @@ Children:
                     DataType: UInt32
                     Description: {"NamespaceIndex":9,"TextId":"ToggleArrayIndexDescription"}
                     ValueRank: ScalarOrOneDimension
-                    Value: 0
             - Name: EventArguments
               Id: g=87cf5ee8257b32b87f15b6c262b4222b
               Type: MouseClickEvent
@@ -978,42 +947,34 @@ Children:
                 Id: g=3d21f00e3d610bd77e55e5edc36661bb
                 Type: PropertyType
                 DataType: ByteString
-                Value: ""
               - Name: EventType
                 Id: g=25300b8eedb665645b8808e7141f850d
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceNode
                 Id: g=36749ee29ef163faca27b6318909db4f
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceName
                 Id: g=cbbd70126b92ff627550b4b3d2b75aac
                 Type: PropertyType
                 DataType: String
-                Value: ""
               - Name: Time
                 Id: g=c7ab2dc09ac7f70629c9e8f9c9deed47
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: ReceiveTime
                 Id: g=84aa44532d635241f0f3f44699cc9b55
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: Message
                 Id: g=6bcbd7af72696c34a9aa0748d41919fb
                 Type: PropertyType
                 DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               - Name: Severity
                 Id: g=3f0e56a150589e45b4fee94bc62bbfa1
                 Type: PropertyType
                 DataType: UInt16
-                Value: 0
         - Name: IconaPar
           Id: g=06060b233bfadd4dce337140feac6c90
           Type: Image
@@ -1043,7 +1004,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=e8ce044d93d736064325f04a482a64c8
@@ -1090,7 +1050,6 @@ Children:
             Id: g=af2462d1965be6abb78172655ad1cb52
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=4f5a9421b51d0b3efec5d3a0c20c2d33
@@ -1119,7 +1078,6 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
-                Value: false
                 Children:
                 - Name: DynamicLink
                   Id: g=80badf0ce18d55eddbde04d16c6a6dfe
@@ -1179,7 +1137,6 @@ Children:
                     Type: BaseDataVariableType
                     DataType: VariablePointer
                     Description: {"NamespaceIndex":9,"TextId":"ToggleVariableToModifyDescription"}
-                    Value: {"IdType":0,"Id":0,"Namespace":-1}
                     Children:
                     - Name: DynamicLink
                       Id: g=b9ff65d67471c28b770befc28171d4a8
@@ -1192,7 +1149,6 @@ Children:
                     DataType: UInt32
                     Description: {"NamespaceIndex":9,"TextId":"ToggleArrayIndexDescription"}
                     ValueRank: ScalarOrOneDimension
-                    Value: 0
             - Name: EventArguments
               Id: g=94e4faa0e193ef881ccd4112d6df77dd
               Type: MouseClickEvent
@@ -1201,42 +1157,34 @@ Children:
                 Id: g=f56431257a97d197350a442d2c9aa0e8
                 Type: PropertyType
                 DataType: ByteString
-                Value: ""
               - Name: EventType
                 Id: g=272c35b4446ded0b58a24979d88b8059
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceNode
                 Id: g=102f05ac7e47c5c3fad74b455e0dcd17
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceName
                 Id: g=63dbee9dcfd1f34951b850d5728e193e
                 Type: PropertyType
                 DataType: String
-                Value: ""
               - Name: Time
                 Id: g=76c1529367505a64f871fe57712bd0cc
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: ReceiveTime
                 Id: g=39d956270ce942adc8344a6faed75882
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: Message
                 Id: g=31aaba842abce37f0e8c88e2caf80311
                 Type: PropertyType
                 DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               - Name: Severity
                 Id: g=1e71abe0c4cad2a7e1e50338d162aa67
                 Type: PropertyType
                 DataType: UInt16
-                Value: 0
         - Name: IconaPar
           Id: g=51c16277f4f161b7c01d56698e8502dd
           Type: Image
@@ -1266,7 +1214,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=10fe4866c362fd8895005c30e74b2a3e
@@ -1323,7 +1270,6 @@ Children:
             Id: g=c58cd6843d97756124161137d0676bf8
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
             - Name: FormattatoreStringa1
               Id: g=13ebd99712fa6ad279663ccbe00ce24d
@@ -1365,7 +1311,6 @@ Children:
             Id: g=8ce1260d7f8392bcaa28fb38b816e748
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: ExpressionEvaluator1
               Id: g=908eb52a52239a7861aa1aef53cfe19c
@@ -1399,7 +1344,6 @@ Children:
             Id: g=4d293838d59bddded35c49379135badc
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
             - Name: DynamicLink
               Id: g=5395dcb8c711031065f82d1a7e2a497d
@@ -1435,7 +1379,6 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             ReferenceType: HasSource
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=7bb94cdbb2ff6862b900abd549da52a1
@@ -1456,7 +1399,6 @@ Children:
         Id: g=7ef6c4aa07448225652b82046c869181
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
       - Name: ScaleFactor
         Id: g=fc6bbcad08cbc91e244d522e355820d9
         Type: BaseDataVariableType
@@ -1466,7 +1408,6 @@ Children:
         Id: g=dbb108e93ef807aabc96c529cec10dcc
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EngineeringUnits
           Id: g=b23a7b30c41971c0ec3ab7c69786390a
@@ -1484,13 +1425,11 @@ Children:
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
             Id: g=091b108e079313c6ef3ed4d9a5cec639
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: ConvertitoreDiUnit__Ingegneristica1
           Id: g=1b278e73175f63314cc2fdee432f0f29
           Type: EUConverter
@@ -1512,7 +1451,6 @@ Children:
             Type: BaseDataVariableType
             DataType: Double
             ReferenceType: HasParameter
-            Value: 0.0
             Children:
             - Name: DynamicLink
               Id: g=6ab7b8eeb1a2529a8bce476d2ecbf5f4
@@ -1529,7 +1467,6 @@ Children:
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Id: g=a6fbaa9a352042d1035e69d91f796ee9
             Type: BaseVariableType
@@ -1540,7 +1477,6 @@ Children:
         Id: g=fa07661d125baeea36e6d277d8896236
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=58fcf9e9cdd39eb874823744729729c0
@@ -1552,7 +1488,6 @@ Children:
             Id: g=035c00fcda92b76b1108454e416487de
             Type: BaseVariableType
             DataType: DynamicLinkEUMode
-            Value: 0
         - Name: EngineeringUnits
           Id: g=9b0ddd6f5cf5159526db5b3e8984b715
           Type: EUInformationType
@@ -1569,13 +1504,11 @@ Children:
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
             Id: g=850bfe995ca087c0041def9f3a05b080
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
     - Name: VerticalLayout2
       Id: g=bedc61fc1a44e32ddfc6099776d9d79f
       Type: ColumnLayout
@@ -1632,7 +1565,6 @@ Children:
               Id: g=4c1dfdc5a00cf46d6659223a73b29c9b
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=bb194e7ad700d6772c2845b06c63b74e
@@ -1703,7 +1635,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=c37f627b74525d7b09b3621e63355c45
@@ -1724,7 +1655,6 @@ Children:
           Id: g=ee38217f2494461ef40d04e4e559a527
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=879edbc45a09d66bed6bbd3a0f749e34
@@ -1747,7 +1677,6 @@ Children:
           Id: g=28b44b50b489971c808e7e814f3226fb
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=82a47825a306f98c61aa90db91a8ed9d
@@ -1770,7 +1699,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=5fcf64bdb313cc93ec34f72cc47ff32b
@@ -1828,7 +1756,6 @@ Children:
               Id: g=27d983abb3e732558c72c0975d1010f8
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=ac03fdf923e445d3646b715fd742388c
@@ -1899,7 +1826,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=9f8a8a0d1b5085c80abedcc65aeb7bca
@@ -1920,7 +1846,6 @@ Children:
           Id: g=9cd327d4c75df50dca1d6d40a28cee4d
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=3b443294856b219fcd4102c8ea38a8b4
@@ -1943,7 +1868,6 @@ Children:
           Id: g=0e654734d6dd4603ba1989623e9a06ba
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=d9649438fee416a3a0982415a7320a54
@@ -1966,7 +1890,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=0edd81179c627cda69fedc1657af28b4
@@ -2035,7 +1958,6 @@ Children:
               Id: g=916bec708864196a476ddb41d90856ad
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=bb234b15c4548f5a0e7f433b2bc2f1f9
@@ -2106,7 +2028,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=0eab209981c40aa9b7eb18d7263031d5
@@ -2127,7 +2048,6 @@ Children:
           Id: g=cf3e2141c72bbdd7e15ce5eba16a4c32
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=ed2a9978af3429d1a100ee9452986ce4
@@ -2150,7 +2070,6 @@ Children:
           Id: g=be9fc35cce14c92fbca060f3c93c2340
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=e2c4f559cd57a0c9114688159183e9a9
@@ -2173,7 +2092,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=1e93af94ca32fe3c8e7ae3fcdb146587
@@ -2231,13 +2149,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TopMargin
         Id: g=cca956e8db4317fedc2c2b25f6083f8d
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: HorizontalGap
       Id: g=46510cf6288b11015e338ff768371ebf
       Type: BaseDataVariableType
@@ -2265,7 +2181,6 @@ Children:
           Id: g=8f13011dbe9bdd79ff8274c70fbc50c0
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
         - Name: MouseClickEventHandler1
           Id: g=57554b2a54266eb13853a238dd5c7d25
           Type: EventHandler
@@ -2287,7 +2202,6 @@ Children:
                 Id: g=1e8dbc3f0f4bd697b62a8f7fe4ac9059
                 Type: NodePointer
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
                 Children:
                 - Name: Kind
                   Id: g=fb515e74a2d3e68d81fd7a8450906aab
@@ -2327,7 +2241,6 @@ Children:
                   DataType: NodeId
                   Description: {"NamespaceIndex":11,"TextId":"ChangePanelAliasNodeDescription"}
                   ValueRank: ScalarOrOneDimension
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
           - Name: EventArguments
             Id: g=11106d37a469f98fdbebb68aa96be2b3
             Type: MouseClickEvent
@@ -2336,48 +2249,39 @@ Children:
               Id: g=42a6c24d1bf997b5b5c0e0d4d05224bb
               Type: PropertyType
               DataType: ByteString
-              Value: ""
             - Name: EventType
               Id: g=7cf581eef76ab8ce72fdabfd20993bd8
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceNode
               Id: g=a5b7f5f02b831d4331873c1e0807bd7d
               Type: PropertyType
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
             - Name: SourceName
               Id: g=120a7edf986ad601a4093cb8736f5b48
               Type: PropertyType
               DataType: String
-              Value: ""
             - Name: Time
               Id: g=55890fafa6e7c6d473dad0a562883582
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: ReceiveTime
               Id: g=265a17938ee01a8c0b2be3ba76140991
               Type: PropertyType
               DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
             - Name: Message
               Id: g=5f109f0e83d0a908e12125cf5a139acb
               Type: PropertyType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             - Name: Severity
               Id: g=ab70143a6a7b1a541a8415b1a245fb21
               Type: PropertyType
               DataType: UInt16
-              Value: 0
         - Name: Visible
           Id: g=faa8ae9fdf40a4bcd2dd47d355825fd5
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
       - Name: Titolo
         Id: g=a8723b93dad2ae26bee991d026840d0f
         Type: Rectangle
@@ -2405,13 +2309,11 @@ Children:
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
         - Name: Visible
           Id: g=67d0fadfae3cfc5314dbf85b610b9951
           Type: BaseDataVariableType
           DataType: Boolean
           ModellingRule: Optional
-          Value: false
   - Name: Background
     Id: g=e3e3b1eff328f4fd864859d22edc1086
     Type: Rectangle
@@ -2442,7 +2344,6 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
     - Name: DisposizioneVerticale1
       Id: g=28151d6bdc296b5726b0c246749362f8
       Type: ColumnLayout
@@ -2475,7 +2376,6 @@ Children:
         Id: g=92ca511b601b92ac257a118c77ab5732
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: CollegamentoDinamico
           Id: g=e1987dc7d49ffc06ffe170de27db6f43
@@ -2521,7 +2421,6 @@ Children:
         Id: g=4e6ac5bf757d177227df9cef8d59024a
         Type: BaseDataVariableType
         DataType: Boolean
-        Value: false
         Children:
         - Name: ValutatoreDiEspressioni1
           Id: g=0a8f1b67b8ed39d85c223241244f31b1
@@ -2643,13 +2542,11 @@ Children:
       Type: BaseDataVariableType
       DataType: Color
       ModellingRule: Optional
-      Value: "#00000000"
     - Name: Enabled
       Id: g=e4c1754563621a0accc245b50dfb3698
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-      Value: false
   - Name: RollyIngresso
     Id: g=4a3356eeabefbf299a3703448b650ece
     Type: Image
@@ -2676,7 +2573,6 @@ Children:
       Type: BaseDataVariableType
       DataType: FillModeEnum
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Id: g=bb475c766729a224f1eb63d765339fe4
       Type: BaseVariableType
@@ -2828,13 +2724,11 @@ Children:
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: VerticalAlignment
         Id: g=007ba6fb46d34933c16a16e07213f52b
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 0
       - Name: Opacity
         Id: g=69d70c34366cb6a145a694500f4b293a
         Type: BaseVariableType
@@ -2864,7 +2758,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: ImagePath
         Id: g=c803dc077b1a8f99498d246bbbf62cf3
         Type: BaseDataVariableType
@@ -2894,7 +2787,6 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: BackgroundColor
         Id: g=bf4ed2253925a49b0133cab994f5f073
         Type: BaseDataVariableType
@@ -2999,7 +2891,6 @@ Children:
       Type: BaseDataVariableType
       DataType: FillModeEnum
       ModellingRule: Optional
-      Value: 0
     - Name: BottomMargin
       Id: g=afa7fb5df1e3389888f0e0957991a914
       Type: BaseVariableType
@@ -3028,7 +2919,6 @@ Children:
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
-      Value: 0
     - Name: RightMargin
       Id: g=42d060f6d768f766442cd2b260aa8070
       Type: BaseVariableType
@@ -3097,7 +2987,6 @@ Children:
             Id: g=7b80c4cce5d27ee25614329796f005c1
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=9e02578d61375521a7c08b6059cc2ea9
@@ -3126,7 +3015,6 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
-                Value: false
                 Children:
                 - Name: DynamicLink
                   Id: g=d3c634802919513fddb90219357a89c8
@@ -3186,7 +3074,6 @@ Children:
                     Type: BaseDataVariableType
                     DataType: VariablePointer
                     Description: {"NamespaceIndex":9,"TextId":"ToggleVariableToModifyDescription"}
-                    Value: {"IdType":0,"Id":0,"Namespace":-1}
                     Children:
                     - Name: DynamicLink
                       Id: g=466dc64665bcc40a7dd6edd63e2ad786
@@ -3199,7 +3086,6 @@ Children:
                     DataType: UInt32
                     Description: {"NamespaceIndex":9,"TextId":"ToggleArrayIndexDescription"}
                     ValueRank: ScalarOrOneDimension
-                    Value: 0
             - Name: EventArguments
               Id: g=c7f9a4e29f327c4e46665e2fe30e69e0
               Type: MouseClickEvent
@@ -3208,42 +3094,34 @@ Children:
                 Id: g=2b0fb96df197ee0b51836b4f29693314
                 Type: PropertyType
                 DataType: ByteString
-                Value: ""
               - Name: EventType
                 Id: g=7644fba07cbb1fc9c983c6156e295e50
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceNode
                 Id: g=ae11ff6fa3946f36d722f9ed21dafb6e
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceName
                 Id: g=61612d3fae9b96ff0b33f9f6231d401c
                 Type: PropertyType
                 DataType: String
-                Value: ""
               - Name: Time
                 Id: g=c9f815ea6af9108a947136c3e6723379
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: ReceiveTime
                 Id: g=6dc254e3a0d49885a59ddb88aa79cd04
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: Message
                 Id: g=69a4682878a1db46d4ab8ed92f21648b
                 Type: PropertyType
                 DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               - Name: Severity
                 Id: g=8bbf6af764ce551331be07167960982c
                 Type: PropertyType
                 DataType: UInt16
-                Value: 0
         - Name: IconaPar
           Id: g=b0a1fe135ed03f2867403c9980820375
           Type: Image
@@ -3273,7 +3151,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=00aaab463cab2369f8893490031ec5e3
@@ -3320,7 +3197,6 @@ Children:
             Id: g=2f02877146038bf0548e7929d036cccc
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=579d1bdb3268294992e2ef110477bfe7
@@ -3349,7 +3225,6 @@ Children:
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
-                Value: false
                 Children:
                 - Name: DynamicLink
                   Id: g=3f3ab24fcc78015684e7bcc1dcc9aa46
@@ -3409,7 +3284,6 @@ Children:
                     Type: BaseDataVariableType
                     DataType: VariablePointer
                     Description: {"NamespaceIndex":9,"TextId":"ToggleVariableToModifyDescription"}
-                    Value: {"IdType":0,"Id":0,"Namespace":-1}
                     Children:
                     - Name: DynamicLink
                       Id: g=84edb5e566edc053418233554d701ec9
@@ -3422,7 +3296,6 @@ Children:
                     DataType: UInt32
                     Description: {"NamespaceIndex":9,"TextId":"ToggleArrayIndexDescription"}
                     ValueRank: ScalarOrOneDimension
-                    Value: 0
             - Name: EventArguments
               Id: g=d2937b75673fc5914a4327a63fc08a86
               Type: MouseClickEvent
@@ -3431,42 +3304,34 @@ Children:
                 Id: g=e3b3a9897908df18f6cb2c3cc3f138cc
                 Type: PropertyType
                 DataType: ByteString
-                Value: ""
               - Name: EventType
                 Id: g=f9ee8c5481ca857fb72286c7c881c7ef
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceNode
                 Id: g=fe54ebea2066562bf7a28aca3dfb301a
                 Type: PropertyType
                 DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
               - Name: SourceName
                 Id: g=da22628999317492180db525f56dd4de
                 Type: PropertyType
                 DataType: String
-                Value: ""
               - Name: Time
                 Id: g=5036dcf8f23e00056ed392b8eb3e74ce
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: ReceiveTime
                 Id: g=7084290db720ac8438011255b9f4a496
                 Type: PropertyType
                 DataType: UtcTime
-                Value: "1601-01-01T00:00:00.0000000"
               - Name: Message
                 Id: g=360e8e2b8dc641b0416aa301e6f79c23
                 Type: PropertyType
                 DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
               - Name: Severity
                 Id: g=69fb3f9a9854b18517fd61b11531de98
                 Type: PropertyType
                 DataType: UInt16
-                Value: 0
         - Name: IconaPar
           Id: g=b2a1107f3efcec41c7f75a218d6c6edb
           Type: Image
@@ -3496,7 +3361,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=2332d4449b4a28a4154e6d1b3989317c
@@ -3553,7 +3417,6 @@ Children:
             Id: g=69854c658df0959559c9af3f8379c77d
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
             - Name: FormattatoreStringa1
               Id: g=bf36c18c6d1904b4fa8b54dbe3205fc9
@@ -3595,7 +3458,6 @@ Children:
             Id: g=f07d19171d876ddc0f0a8b22b1f33be9
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
             Children:
             - Name: ExpressionEvaluator1
               Id: g=b7fdcd5ac59f96c8938441c42272cac3
@@ -3629,7 +3491,6 @@ Children:
             Id: g=ff611aedb164d242307154e977f5df23
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
             Children:
             - Name: DynamicLink
               Id: g=33d698e2497fdfc341755958f8a05102
@@ -3665,7 +3526,6 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             ReferenceType: HasSource
-            Value: false
             Children:
             - Name: DynamicLink
               Id: g=f1815a10aae81868f47cb3b35fc636d8
@@ -3686,7 +3546,6 @@ Children:
         Id: g=21ebabb6f278496a7bca1487507bb80f
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
       - Name: ScaleFactor
         Id: g=77668b4a6db19583fad0a5d51b264529
         Type: BaseDataVariableType
@@ -3696,7 +3555,6 @@ Children:
         Id: g=504c51ffb2125a3d1dd373d9d4be0885
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: EngineeringUnits
           Id: g=da80f72f27ec3b40061ed3a9d249625d
@@ -3714,13 +3572,11 @@ Children:
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
             Id: g=5f142b4c86e977f9124a87deb21c12e7
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: ConvertitoreDiUnit__Ingegneristica1
           Id: g=d4f0daa87bc2b7aad493d8e3e64078ed
           Type: EUConverter
@@ -3742,7 +3598,6 @@ Children:
             Type: BaseDataVariableType
             DataType: Double
             ReferenceType: HasParameter
-            Value: 0.0
             Children:
             - Name: DynamicLink
               Id: g=87297e5fa332e657f0f8680e58351f0e
@@ -3759,7 +3614,6 @@ Children:
             Type: BaseVariableType
             DataType: Double
             ReferenceType: HasProperty
-            Value: 0.0
           - Name: High
             Id: g=1be8ce86b6a75208d66343be2a720e7e
             Type: BaseVariableType
@@ -3770,7 +3624,6 @@ Children:
         Id: g=870ab443ad1e8df6c155c46f5f86ef6c
         Type: BaseDataVariableType
         DataType: Float
-        Value: 0.0
         Children:
         - Name: DynamicLink
           Id: g=9bd3c82f7976daeff540582cbe9a3603
@@ -3782,7 +3635,6 @@ Children:
             Id: g=0ae8f3db0b9ea146f9ccc4c0e0930f08
             Type: BaseVariableType
             DataType: DynamicLinkEUMode
-            Value: 0
         - Name: EngineeringUnits
           Id: g=e34b6c652d179b1b3239c1720502c59a
           Type: EUInformationType
@@ -3799,25 +3651,21 @@ Children:
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
           - Name: Description
             Id: g=f7654a936e3fc1374ffe217ed18640c7
             Type: BaseVariableType
             DataType: LocalizedText
             ReferenceType: HasProperty
-            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: LeftMargin
         Id: g=c49cd83f2a133510d8cf9780703729f8
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TopMargin
         Id: g=19f279f3563045754d2feb8f91ae385d
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: VerticalLayout2
       Id: g=1552ce38caf6f41d52ce0f4afd70ae52
       Type: ColumnLayout
@@ -3874,7 +3722,6 @@ Children:
               Id: g=77b0a7266877be58c1a9f5608506e0e7
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=a44983e5ce93a77064eced6d07d4da5e
@@ -3945,7 +3792,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=f2b4f5448d9ec0b4847b61a1487f5c4b
@@ -3966,7 +3812,6 @@ Children:
           Id: g=e18ede2e2b494c00535bf70b32863dda
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=502c4dd1ee1161c96b7a24aec4535ac7
@@ -3989,7 +3834,6 @@ Children:
           Id: g=f35ce6283c08303a5b803da091938b87
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=3bdbbeed71ff22b36801f432a887e170
@@ -4012,7 +3856,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=d806c71e3c71300af3c39a69eff5be82
@@ -4070,7 +3913,6 @@ Children:
               Id: g=dc426e99026ea7439b2b0329756b71d4
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=ab6e264d9b4500a4162b8431182667e0
@@ -4141,7 +3983,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=03100723331c96a47719f0efb5b2cd8f
@@ -4162,7 +4003,6 @@ Children:
           Id: g=ce0b5d493ef0021f4a49c61bdc224bc7
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=be858d588690d9c4ede13db69788d13f
@@ -4185,7 +4025,6 @@ Children:
           Id: g=448a49332d35c1aee68b4409ec3d215d
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=c2f96b34cbd117ba43d671ff29a7988f
@@ -4208,7 +4047,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=587901ae9e2c5e17d47c7a9e1e25e5eb
@@ -4277,7 +4115,6 @@ Children:
               Id: g=8d2d1e061be2d2d9f67cf4163fa79090
               Type: BaseDataVariableType
               DataType: Boolean
-              Value: false
               Children:
               - Name: ExpressionEvaluator1
                 Id: g=c7c52ab109e61a90f1fa4f76886cb984
@@ -4348,7 +4185,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
-              Value: false
               Children:
               - Name: DynamicLink
                 Id: g=219b7bcbf77522596c5679c5c148166a
@@ -4369,7 +4205,6 @@ Children:
           Id: g=0149e9192f1b88db559b214e2782c462
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: DynamicLink
             Id: g=d67e7760482311057eeb41025a609bdc
@@ -4392,7 +4227,6 @@ Children:
           Id: g=62185eac82af26e18d6a327cda3bde36
           Type: BaseDataVariableType
           DataType: Float
-          Value: 0.0
           Children:
           - Name: ConvertitoreDiUnit__Ingegneristica1
             Id: g=1283ba44f7d661518a8bcb498cabf9d6
@@ -4415,7 +4249,6 @@ Children:
               Type: BaseDataVariableType
               DataType: Double
               ReferenceType: HasParameter
-              Value: 0.0
               Children:
               - Name: DynamicLink
                 Id: g=1918bc0eeec0531fb952b429ca5df42c
@@ -4473,13 +4306,11 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
       - Name: TopMargin
         Id: g=5126ebaf9fca7631c2e49811a35abbba
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 0.0
     - Name: HorizontalGap
       Id: g=2f96ad7a2ab04ee64ce14e63ff87bd23
       Type: BaseDataVariableType

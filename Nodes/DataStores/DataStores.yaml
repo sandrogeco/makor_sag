@@ -88,7 +88,6 @@ Children:
           Id: g=ed39e515fabf5651906f6700f5ad7c0c
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: Nome
           Id: g=8a64ddd344387b8e7b80fe5562e95aed
           Type: StoreColumn
@@ -108,12 +107,10 @@ Children:
           Id: g=c604c8c9c611b56cb84aba7955dd82c1
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: DataOraModifica
           Id: g=3bb555c5a3c8d3e1703107fe3bcebb95
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
     - Name: RicetteDettagli
       Id: g=375b71b26ad2b327525d093038fc4f24
       Type: SQLiteStoreTable
@@ -138,17 +135,14 @@ Children:
           Id: g=2674d327d680e29d3522e280eac82bc2
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: PercorsoTag
           Id: g=301d81820c0086abc1be651ceb407a9e
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Valore
           Id: g=d47841fc65c95a8057db583e6f35b6f1
           Type: StoreColumn
           DataType: String
-          Value: ""
     - Name: RicettePiastra
       Id: g=95f4ad39f8e5a2a0997437ca46fb1a3d
       Type: SQLiteStoreTable
@@ -161,32 +155,26 @@ Children:
           Id: g=1de8b432e72392dc3dfad57197165d17
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: Nome
           Id: g=66c519256b539c88ab95ab674f295e87
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Descrizione
           Id: g=fd24227f78a9890a76bd1c8c826b8e4e
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: TipoRicetta
           Id: g=3019b522fe800929eb74c92e79bac1a9
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: DataOraCreazione
           Id: g=610ebc38669b595d2022e3faa96e4228
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: DataOraModifica
           Id: g=edb93d5bdfd05821ed0bd2ce8b9a2b82
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
     - Name: RicettePiastraDettagli
       Id: g=ab7850977fe813704f3fa018928e55c8
       Type: SQLiteStoreTable
@@ -211,17 +199,14 @@ Children:
           Id: g=7e4a8a045d7859858eb132cf8c67188d
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: PercorsoTag
           Id: g=1c3af0576ea9f7177da6f7ae0b5160cb
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Valore
           Id: g=6eadcce7e6f8801a4f600f7790b04ec9
           Type: StoreColumn
           DataType: String
-          Value: ""
     - Name: AlarmLogger
       Id: g=7984fc7bcb35f5d3f696ae451a7189aa
       Type: SQLiteStoreTable
@@ -243,104 +228,85 @@ Children:
         Type: BaseObjectType
         Children:
         - Name: LocalTime
-          Id: g=cefbcecdd2413c7978d36040b57e3c35
+          Id: g=157a0a92578458fd7960d09abf1423f5
           Type: StoreColumn
           DataType: TimeZoneDataType
         - Name: 'ActiveState_it-IT'
-          Id: g=eb66bc808b7df531d4f8f7c0308628d7
+          Id: g=f221f0c6ce79fd2f407720583637acb8
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'ActiveState_en-US'
-          Id: g=c8e7723fce8615514d0adc19650423a9
+          Id: g=3ea8842bade06972d69ed3c858c1b364
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'ActiveState_de-DE'
-          Id: g=339f5acdc464c3bd243193c7c4492e67
+          Id: g=630c0b8a455b2e544eeec7aa8cebab83
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'ActiveState_fr-FR'
-          Id: g=b02cee2f863df6d3daf8e2119414e3d8
+          Id: g=b44e4a323da712416e19bf00c8677c2b
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'ActiveState_es-ES'
-          Id: g=0c4a1e66cddd1766c362dc476c73587a
+          Id: g=5aa3e81795605e79546267f8546e0389
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: ConditionName
-          Id: g=68520e84f85318d37d9d93fab3d88924
+          Id: g=66cad72d1a09859602a98bc537119694
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'Message_it-IT'
-          Id: g=994a9eae5e85dac24b91c5b6969ca752
+          Id: g=6c56db83cff11b1ca5d693104d7cbe76
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'Message_en-US'
-          Id: g=18309bc229a968256f24b2d19131de6b
+          Id: g=121ad46cefa31601892351db66d18f08
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'Message_de-DE'
-          Id: g=3a12bf628afa4757aa12f67bb03a2097
+          Id: g=2b1c14bf0f779613b8848fac81a520f1
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'Message_fr-FR'
-          Id: g=2af2601c8ab1eb4535cb714d0975dd50
+          Id: g=da0475a34926f81464a04e04cc33f040
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'Message_es-ES'
-          Id: g=cfbff7d6fa4bf2e51c62b22b7baa5a58
+          Id: g=fe3a2bad579ee00daa2a37f5c68e4125
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Time
-          Id: g=4616c5e39031070d643955ea5fdb3491
+          Id: g=ba940ae861111a5ad5e740311828b0ee
           Type: StoreColumn
           DataType: UtcTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: 'AckedState_it-IT'
-          Id: g=6602497f66545a487294b5bea0a1b3bf
+          Id: g=f0bf0782173082c5dfd30ce39f7fbb62
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'AckedState_en-US'
-          Id: g=f37732e8fa347121ba492f250beaa35a
+          Id: g=0ccda2e7b5f6be492e97df01351b035c
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'AckedState_de-DE'
-          Id: g=39badbd0bcece7294ebca179d4744b3b
+          Id: g=81ec3a1c9a89ae3e640256cefd1494ee
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'AckedState_fr-FR'
-          Id: g=ca413660cad36b9593d422a88ec7bf1a
+          Id: g=60e4f551d915a2470f0eb817aead062a
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: 'AckedState_es-ES'
-          Id: g=aef4fda954d9cbe6c4c17650ed0622c8
+          Id: g=38ecd252f4b698301a930f5da8070831
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: SourceName
-          Id: g=cbd8504df78bccb385c11cbb8cf012f4
+          Id: g=de606d2577eca609d2e9df193a00c3d5
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Severity
-          Id: g=93251be235af2f2cadb477ad510eb606
+          Id: g=e7e3b3c81d4c90c6c3a2d098fae66b79
           Type: StoreColumn
           DataType: UInt16
-          Value: 0
     - Name: CntProduzione
       Id: g=8faa6bdc17327c08e45b82c40daef2ce
       Type: SQLiteStoreTable
@@ -365,12 +331,10 @@ Children:
           Id: g=b39a2589018e45ba3d39163086773994
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Attivo
           Id: g=769b415e07dad3b05ff3302f34a1eab4
           Type: StoreColumn
           DataType: Boolean
-          Value: false
         - Name: LoginDate
           Id: g=81dbf82d5d69da79d20a0248b7502e06
           Type: StoreColumn
@@ -380,69 +344,56 @@ Children:
           Id: g=9f8716a4ca63b93674c47852a5de00ed
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: LogoutTime
           Id: g=013d61074e12b2a76ae212c15a46669d
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: CntPezziLav
           Id: g=c0f962878af4255b3d4b6dd82da6a8a0
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMetriLav
           Id: g=d700fb72b2bee9fa6af862ff38b92198
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntMetriQLav
           Id: g=2c2c0f817bff70036e7e2bfb3d36847c
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntOreCicloOn
           Id: g=b54aba06cd3c7278d7e1f93db314d51e
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMinCicloOn
           Id: g=7b5c1d895aea2c4ca818e1d5388cbfd5
           Type: StoreColumn
           DataType: Int16
-          Value: 0
         - Name: CntOrePowerOn
           Id: g=467ae67a62d26ad0c34a5b16a5775f70
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMinPowerOn
           Id: g=e8111c45ff8dfeeed4e8665b387ebca1
           Type: StoreColumn
           DataType: Int16
-          Value: 0
         - Name: CntKwOra
           Id: g=0f959673c1a32ea5175bb5d7daf2ba5f
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntMetriTrasp
           Id: g=7ef45b9da4c198395996209cd4830810
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
   - Name: MaxColumnNameLength
     Id: g=bfda81c1516dec6e39a10a051332d18f
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: MaxColumnCount
     Id: g=aa5035fc6cb16e9876d9a76ab4b10a70
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: DataTypeCompatibilityMap
     Id: g=511d00427339a58a6888b93ab9633af9
     Type: BaseDataVariableType
@@ -450,7 +401,6 @@ Children:
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
-    Value: {"Type":12,"Dimensions":[0,0],"Body":[]}
   - Name: Status
     Id: g=c3b0943d2c722857390ea1f7db7c1cb8
     Type: PropertyType
@@ -516,7 +466,6 @@ Children:
     Id: g=c3579ae8bc5042d40fa37cd8fd9519ba
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=076b5d413a3c61deb79c12cf10ddb76c
@@ -586,7 +535,6 @@ Children:
     Type: PropertyType
     DataType: String
     ModellingRule: Optional
-    Value: ""
   - Name: Server
     Id: g=482032ef30dbc42f51ff0c0802088d2f
     Type: PropertyType
@@ -671,13 +619,11 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: MaxColumnCount
     Id: g=4a5e8e04a8f905523ffd8111bcb83417
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: DataTypeCompatibilityMap
     Id: g=99520f7ba7e34c7d4a077fd42cb3b46c
     Type: BaseDataVariableType
@@ -685,7 +631,6 @@ Children:
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
-    Value: {"Type":12,"Dimensions":[0,0],"Body":[]}
   - Name: EseguiBackupAvvio
     Id: g=56b4ac098a0b66ca7d7707443a4a8e3c
     Type: BaseDataVariableType
@@ -729,7 +674,6 @@ Children:
     Id: g=810af6b04534f7d09c826dffff1d3df8
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=fd78b78867e4fb5686ab59950da26e1c
@@ -788,7 +732,6 @@ Children:
       Id: g=7ca198c557ec636e8b77cf4b1b2bd466
       Type: BaseDataVariableType
       DataType: Boolean
-      Value: false
 - Name: MakorSqlLiteType
   Id: g=77738ab7615e74b4af97c10ae0bc78cf
   Supertype: SQLiteStore
@@ -860,7 +803,6 @@ Children:
           Id: g=ec88fe0e0dd3a820cb95bea8ce78817f
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: Nome
           Id: g=fe23f1b45b9a5a85691d549d3112dc83
           Type: StoreColumn
@@ -880,12 +822,10 @@ Children:
           Id: g=0449dae73fdf3b37be38137e2c8f3985
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: DataOraModifica
           Id: g=a6699746ac82770be61bc14b15e90187
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
     - Name: RicetteDettagli
       Id: g=44f0d84b1e357ba3b3c2de071d23bbae
       Type: SQLiteStoreTable
@@ -910,17 +850,14 @@ Children:
           Id: g=980b09b4a970fc953b8f753d0e2a6fdc
           Type: StoreColumn
           DataType: Int64
-          Value: 0
         - Name: PercorsoTag
           Id: g=a0aa09a51b3b0138441545bdab120a52
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Valore
           Id: g=2badbb11559d100550e7ca615ce0c3ac
           Type: StoreColumn
           DataType: String
-          Value: ""
     - Name: CntProduzione
       Id: g=320d73c8c361d18abab0cd7d8ea28cf0
       Type: SQLiteStoreTable
@@ -945,12 +882,10 @@ Children:
           Id: g=d7aff96b6c7de773a2d1e25f97957f06
           Type: StoreColumn
           DataType: String
-          Value: ""
         - Name: Attivo
           Id: g=d3c76bfcc690006366d580cf5d75d09e
           Type: StoreColumn
           DataType: Boolean
-          Value: false
         - Name: LoginDate
           Id: g=cb6000c62cb6ed0962d0e67473103f8b
           Type: StoreColumn
@@ -960,75 +895,61 @@ Children:
           Id: g=34b08ce0d3f23f6534d2c0aac67ca211
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: LogoutTime
           Id: g=d946f6e2e55e88d6a27d323fe435f716
           Type: StoreColumn
           DataType: DateTime
-          Value: "1601-01-01T00:00:00.0000000"
         - Name: CntPezziLav
           Id: g=395c1454469d7ed290ce20bfcc4bf594
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMetriLav
           Id: g=e1512cdc1fe6921ba2d8bcbea5851b6e
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntMetriQLav
           Id: g=cb4cfb4c12f1ee0cf92e94a9c49c8b6a
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntOreCicloOn
           Id: g=d270f301db0fb6e63cb2163d2f6fbe6f
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMinCicloOn
           Id: g=989b0a002843410e90a23b4759bfff43
           Type: StoreColumn
           DataType: Int16
-          Value: 0
         - Name: CntOrePowerOn
           Id: g=18ec37c0c5c827eb02b3e3c542154818
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: CntMinPowerOn
           Id: g=ee5a1e3c3ccea62dde470133ba4c7b5f
           Type: StoreColumn
           DataType: Int16
-          Value: 0
         - Name: CntKwOra
           Id: g=311c19a2c2855446cd6fbced736d6dff
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
         - Name: CntMetriTrasp
           Id: g=a40de5bf9b1849e8148e3eed540d0d70
           Type: StoreColumn
           DataType: Float
-          Value: 0.0
       - Name: RecordLimit
         Id: g=4daf88e99c3da7ac3933187258dd8392
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: Optional
-        Value: 0
   - Name: MaxColumnNameLength
     Id: g=5b378526713906fa17b217a27fa14908
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: MaxColumnCount
     Id: g=1720ee580a89c698f8f5f2e49a07923c
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
-    Value: 0
   - Name: DataTypeCompatibilityMap
     Id: g=f93928931c940aa55a8fd793af7af7bb
     Type: BaseDataVariableType
@@ -1036,7 +957,6 @@ Children:
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
-    Value: {"Type":12,"Dimensions":[0,0],"Body":[]}
   - Name: Status
     Id: g=a85b808acd0b3ace927a880dd9cbaedb
     Type: PropertyType
@@ -1071,13 +991,11 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     ModellingRule: Optional
-    Value: ""
   - Name: InMemory
     Id: g=7351e2620ba3fda126562582984d9e89
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
-    Value: false
   - Name: GestBackupSqlLite_R0
     Id: g=a0651a0bc5c8213b71973387f5f6e186
     Type: NetLogic
@@ -1110,7 +1028,6 @@ Children:
     Id: g=a2610ea8034c75490af47fb2224643b4
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=0a86133ed4754b96e6ff3797cc7efd49

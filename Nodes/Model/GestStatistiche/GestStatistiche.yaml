@@ -10,62 +10,50 @@ Children:
     Id: g=4eee01010832298937109453a71f7a68
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: NMetri_Prodotti
     Id: g=1c902e14a73e3488fab24832e05e8c5a
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntOreAccensQuadro
     Id: g=cdb8f7a333af465fe801fd902d7ad35a
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntMinutiAccensQuadro
     Id: g=354939caf632a05e2adbfe4616a4cb21
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntOreCicloOn
     Id: g=449438c746b16d5dc154ee121dec8d7f
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntMinutiCicloOn
     Id: g=fb9f732d19c8213e33578dde8826a24c
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntOreAllarmeOn
     Id: g=2043d669d2de02bd5369463ddcbfc287
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntMinutiAllarmeOn
     Id: g=f412c6e0d6c76ff54e29fe54049a6953
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntOreStopOn
     Id: g=1b192586f6d698b99b5f9fad7f4f886c
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntMinutiStopOn
     Id: g=39155d7d7d78046f43706da8b1099016
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntOrePausaOn
     Id: g=bc20852c6a27371e0c3b3ee9b270dcbd
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
   - Name: CntMinutiPausaOn
     Id: g=5cb74873149f519d76ffce64e4ba015a
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
 - Name: CntProduzPlc_R1
   Id: g=936fd9a5941af42807105d14fc5e2804
   Type: BaseObjectType
@@ -74,7 +62,6 @@ Children:
     Id: g=10378c50e96d4d9d32dd9c532cbfbc18
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
     Children:
     - Name: DynamicLink
       Id: g=45dd756cf8ee44e16245c6d80ce3c1a8
@@ -91,12 +78,10 @@ Children:
     Id: g=6d65de915ce86d81f093185c5d19ce38
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
   - Name: CntMetriQLav
     Id: g=39a8fa77312c7cc5bdfe05ecbd35ff23
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=47b85d626ff95c71d32697cff6d5b88b
@@ -113,7 +98,6 @@ Children:
     Id: g=ad259be65971e6076df1e76f67b7efa2
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
     Children:
     - Name: DynamicLink
       Id: g=d9254d73d076b72c3b84c7a0a6e84c9c
@@ -130,7 +114,6 @@ Children:
     Id: g=ea54133555a0f95ed33ba4e10d502c8b
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
     Children:
     - Name: DynamicLink
       Id: g=15640506034ad0087141189f7c0cb103
@@ -147,7 +130,6 @@ Children:
     Id: g=c087a7c51bc235440aa257bcdb66935e
     Type: BaseDataVariableType
     DataType: Int32
-    Value: 0
     Children:
     - Name: DynamicLink
       Id: g=7d14fd9733b982931c9dbc5073c423a6
@@ -164,7 +146,6 @@ Children:
     Id: g=2336ded0c9ea8b9567eca9fb8a6ac94c
     Type: BaseDataVariableType
     DataType: Int16
-    Value: 0
     Children:
     - Name: DynamicLink
       Id: g=0dab814d42741bbe4482de1a7c616dca
@@ -181,7 +162,6 @@ Children:
     Id: g=4d043123ddb02058e092852e882a3712
     Type: BaseDataVariableType
     DataType: Float
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=75201775a64a7c4dbbf3b350bb89b5bd
@@ -199,7 +179,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Float
     Description: {"LocaleId":"it-IT","Text":"Metri percorsi dal trasporto"}
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=6592c19c37ac54e9dcfd819de941ccf1
@@ -220,7 +199,6 @@ Children:
     Id: g=8c14681755b971991c32c9761c4f7b13
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=55e2c6eda98c2770b523e444b1162d86
@@ -237,12 +215,10 @@ Children:
     Id: g=55edaabd505955afee56687adcebb065
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
   - Name: RstCntMetriQLav
     Id: g=72b17aa9bee5a914cb96a0f031425706
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=9da2fcf9acd3bc8596009f1a176d8ac8
@@ -259,7 +235,6 @@ Children:
     Id: g=ca353a82f1b5376d0e38b198fc1736c8
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=9eef30bac219d6336cf01080e65b738d
@@ -276,7 +251,6 @@ Children:
     Id: g=1b6f780ecadcc6ed41e671c991138e2f
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=fcfe25dd910b34518db272a7f2e97023
@@ -293,7 +267,6 @@ Children:
     Id: g=e68bc164199c6e860abcd1c4512f6e09
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=8938a213478625c793d2e0ea7b7f6ad4
@@ -310,7 +283,6 @@ Children:
     Id: g=1969484c89a9ecf716fe2d3a387cdfd3
     Type: BaseDataVariableType
     DataType: Boolean
-    Value: false
     Children:
     - Name: DynamicLink
       Id: g=55b2b1b8121caf04c418d06f53b2ef6c
@@ -327,7 +299,6 @@ Children:
   Id: g=db20df129a06356051d9f9fd926076a0
   Type: BaseDataVariableType
   DataType: DateTime
-  Value: "1601-01-01T00:00:00.0000000"
   Children:
   - Name: DynamicLink
     Id: g=704d409c5f509e121d51274e30455c50

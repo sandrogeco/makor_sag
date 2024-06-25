@@ -18,7 +18,7 @@ public class DBRicetteToCSV : BaseNetLogic
 	/// Script che esporta/importa ricette su/da un file cvs
 	///	viene salvato: NomeRic, Desrcizione per la tabella Ricette/RicettePiastra
 	/// viene salvato: PercorsoTag, Valore per la tabella RicetteDettagli/RicettePiastraDettagli
-	/// Nel caso di importazione di ricette gia esistenti le sovrascive con i nuovi valori
+	/// Nel caso di importazione di ricette gia esistenti le sovrascrive con i nuovi valori
 	/// </summary>
 	[ExportMethod]
 	public void ToCSV()

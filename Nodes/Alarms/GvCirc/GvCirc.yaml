@@ -19,12 +19,10 @@ Children:
     Id: g=8463b5a579006ed21c6f51c61a3d8ac0
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
   - Name: InputValue
     Id: g=425ead6edd238a40c9c1436669cc5172
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=382e7cce6f4e4dda9accfaa7c66794f3
@@ -68,3 +66,12 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvCirc_bMsgMaintOscInCorso"}
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward

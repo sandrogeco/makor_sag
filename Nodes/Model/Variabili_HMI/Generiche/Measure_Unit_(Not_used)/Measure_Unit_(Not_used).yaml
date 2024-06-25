@@ -6,7 +6,6 @@ Children:
   Id: g=6cadc72d5a46a4a6042b450239ff0830
   Type: BaseDataVariableType
   DataType: Float
-  Value: 0.0
   Children:
   - Name: KeyValueConverter1
     Id: g=664baab64663e5be5e5ed2bcafebf64c
@@ -23,7 +22,7 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
-    - Name: Pairs
+    - Name: ns=9;Pairs
       Id: g=38bce7379f84408bda5c4b59e0d734d2
       Type: BaseObjectType
       Children:
@@ -35,7 +34,6 @@ Children:
           Id: g=137945e3fc15f94f4740d271b7668bed
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
         - Name: Value
           Id: g=c716d5335c9432b96d54397043ec184b
           Type: BaseDataVariableType
@@ -59,7 +57,6 @@ Children:
   Id: g=2ae2184b643816aecd1b0175ce124238
   Type: BaseDataVariableType
   DataType: Float
-  Value: 0.0
   Children:
   - Name: KeyValueConverter1
     Id: g=73a2eabe4f60cc74cbb20b275da889be
@@ -76,7 +73,7 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
-    - Name: Pairs
+    - Name: ns=9;Pairs
       Id: g=e6e9f9a395e3ce629ed051c423c24453
       Type: BaseObjectType
       Children:
@@ -88,7 +85,6 @@ Children:
           Id: g=55bf1071deab2e5c8526c5c33108f0ef
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
         - Name: Value
           Id: g=f63df4ae43396ad45df7a6cb08c9bef5
           Type: BaseDataVariableType
@@ -112,7 +108,6 @@ Children:
   Id: g=52ffc928157b9c6777c86d0b43505b16
   Type: BaseDataVariableType
   DataType: Int32
-  Value: 0
   Children:
   - Name: KeyValueConverter1
     Id: g=dd6b5730eed1113b8b9b4feb0ace5c31
@@ -129,7 +124,7 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../Var_Ritentive/MisurUnitSelecMt_Ft"
-    - Name: Pairs
+    - Name: ns=9;Pairs
       Id: g=d908689f056c0e17ff6f71b74797c813
       Type: BaseObjectType
       Children:
@@ -141,7 +136,6 @@ Children:
           Id: g=8ee04eddeb0bd6360affe114543c9e20
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: false
         - Name: Value
           Id: g=9b983519107e7b16b64fff4d5443c873
           Type: BaseDataVariableType

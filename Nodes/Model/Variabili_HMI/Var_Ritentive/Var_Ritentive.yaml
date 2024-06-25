@@ -11,12 +11,10 @@ Children:
   Id: g=af046e916943313ca80dc73ea91baa26
   Type: BaseDataVariableType
   DataType: String
-  Value: ""
 - Name: sNomeRicAttualePiastra
   Id: g=dbaeab01ada6086957cbf5dccfa1459c
   Type: BaseDataVariableType
   DataType: String
-  Value: ""
 - Name: OemUserLogoutTime
   Id: g=ee9f05a1d8b736ab6faf4202d3f5ee14
   Type: BaseDataVariableType
@@ -27,4 +25,3 @@ Children:
   Id: g=656ff937b3f96dfb5183063dafa64d1e
   Type: BaseDataVariableType
   DataType: Boolean
-  Value: false

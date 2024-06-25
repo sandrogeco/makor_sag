@@ -7,7 +7,7 @@ Children:
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
   Children:
-  - Name: Pairs
+  - Name: ns=9;Pairs
     Id: g=04b507232d86ac5e6ac3f017bd81bb4b
     Type: BaseObjectType
     ModellingRule: None
@@ -22,13 +22,11 @@ Children:
         Type: BaseDataVariableType
         DataType: Int32
         ModellingRule: None
-        Value: 0
       - Name: Value
         Id: g=8763cdf540ac20de24813e2c2de01c6e
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
-        Value: false
     - Name: Pair1
       Id: g=a250151f7f9bbe0fd9b2c5519b799f92
       Type: ValueMapPair
@@ -51,7 +49,7 @@ Children:
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
   Children:
-  - Name: Pairs
+  - Name: ns=9;Pairs
     Id: g=47ae597dd716b5c7315f921e3ddd8ff5
     Type: BaseObjectType
     ModellingRule: None
@@ -66,13 +64,11 @@ Children:
         Type: BaseDataVariableType
         DataType: ConnectionStatusEnum
         ModellingRule: None
-        Value: 0
       - Name: Value
         Id: g=8191f167e3ec2f36ea20f11741574f42
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
-        Value: false
     - Name: Pair1
       Id: g=de812e66b20a1462ead4d81047372fb3
       Type: ValueMapPair
