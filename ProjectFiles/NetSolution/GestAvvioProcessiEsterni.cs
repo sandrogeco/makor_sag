@@ -3,6 +3,8 @@ using FTOptix.Core;
 using FTOptix.NetLogic;
 using System.Diagnostics;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestAvvioProcessiEsterni : BaseNetLogic

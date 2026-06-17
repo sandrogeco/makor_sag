@@ -22,6 +22,10 @@ using FTOptix.Core;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 
 #endregion
 
@@ -29,6 +33,8 @@ public class OemToCSV : BaseNetLogic
 {
 	List<RemoteChildVariable> tagList = new();
 	List<String[]> fileLines = new();
+	List<bool> taskSlot = new();
+
 	/// <summary>
 	///		Script che crea il file csv salvando i tag dal plc
 	///		Rileva tutti i tag che iniziano per bAlm, bWnr, bMsg
@@ -39,12 +45,17 @@ public class OemToCSV : BaseNetLogic
 	{
 		try
 		{
-
-			var start = DateTime.Now;
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = true;
+            var start = DateTime.Now;
 			Log.Info($"Inizio: {start}");
 			string pathCSV = new ResourceUri(LogicObject.GetVariable("CSVpath").Value).Uri;
-			var Stazione = Project.Current.Get($"CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next");
+			var Stazione = Project.Current.Get($"CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC");
 			RemoteChildVariableValue[] tags = { };
+
+			if (!pathCSV.Contains(".csv"))
+			{
+				pathCSV += ".csv";
+			}
 
 			foreach (var TblVarTagNode in Stazione.GetNodesByType<TagStructure>())
 			{
@@ -93,13 +104,14 @@ public class OemToCSV : BaseNetLogic
 			Log.Info($"Fine: {DateTime.Now}");
 			Log.Info($"Durata: {DateTime.Now - start}");
 			Log.Info("File creato correttamente in: " + pathCSV);
-		}
-		catch (Exception ex)													//Nel caso si fosse verificato un qualsiasi errore lo metto a schermo e sulla console
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = false;
+        }
+        catch (Exception ex)													//Nel caso si fosse verificato un qualsiasi errore lo metto a schermo e sulla console
 		{
 			Log.Error("Import failed: " + ex.ToString());
 			((Image)LogicObject.Owner.GetObject("loadingRect/loadImage")).Visible = false;
 			((Label)LogicObject.Owner.GetObject("loadingRect/errorLabel")).Visible = true;
-			((Label)LogicObject.Owner.GetObject("loadingRect/errorMsg")).Text = "Import failed: " + ex.ToString().Split('\n')[0];
+			((Label)LogicObject.Owner.GetObject("loadingRect/errorMsg")).Text = "Export failed: " + ex.ToString().Split('\n')[0];
 			((Button)LogicObject.Owner.GetObject("loadingRect/errorButton")).Visible = true;
 			return;
 		}
@@ -185,6 +197,11 @@ public class OemToCSV : BaseNetLogic
 				bool[] arrPlc4 = Tag.Value;
 				for (int i = 0; i < arrPlc4.Length; i++)
 					scrivifile(arrPlc4[i], i, "Boolean");
+				break;
+			case "Double[]":
+				bool[] arrPlc5 = Tag.Value;
+				for (int i = 0; i < arrPlc5.Length; i++)
+					scrivifile(arrPlc5[i], i, "Double");
 				break;
 		}
 
@@ -281,6 +298,11 @@ public class OemToCSV : BaseNetLogic
 				for (int i = 0; i < arr5.Length; i++)
 					scriviFile(arr5[i], i, "String");
 				break;
+			case "Double[]":
+				bool[] arrPlc5 = variable.Value;
+				for (int i = 0; i < arrPlc5.Length; i++)
+					scriviFile(arrPlc5[i], i, "Double");
+				break;
 		}
 		void scriviFile(object valVar, int i, string type)
 		{
@@ -300,8 +322,10 @@ public class OemToCSV : BaseNetLogic
 	public void LeggiFileCSV()
 	{
 		try 
-		{ 
-			var start = DateTime.Now;
+		{
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = true;
+            ((ColumnLayout)LogicObject.Owner.GetObject("FileSelectorRectangle/TagsMancanti")).Visible = true;
+            var start = DateTime.Now;
 			Log.Info($"Inizio: {start}");
 			string pathCSV = new ResourceUri(LogicObject.GetVariable("CSVpath").Value).Uri;
 			List<string[]> lines = new();
@@ -319,35 +343,64 @@ public class OemToCSV : BaseNetLogic
 			string lastPath = "";
 
 			List<RemoteChildVariableValue> tagList = new();
+            IUAObject tagNotFoundObj = Owner.GetObject("TagsNotFound");			//Object che contiene la variabili che hanno dato errore, usato come modello in una data grid
+            var cntVarNotFound = Owner.GetVariable("NVarNotFound");             //Variabile che conta il numero di variabili che hanno dato errore, mostrato a schermo
+            int timeOut = Owner.GetVariable("TimeOut_Write_[ms]").Value;
 
-			foreach (string[] line in lines)
+            foreach (string[] line in lines)
 			{
 				var path = $"{line[0]}/{line[1]}";
-				var tag = Project.Current.GetVariable(path);
-				if (arrObj.Count > 1 && line[1] != arrTag.BrowseName)                       //Mi chiedo se ho finito di leggere un array
-				{                                                                           //se si allora lo salvo e resetto le variabili per il controllo
-					tagList.Add(new RemoteChildVariableValue(lastPath, arrObj.ToArray()));
-					arrObj.Clear();
-					arrTag = null;
-					lastPath = "";
-				}
-				if (line[2] == "")																			//Se line[2] è vuota allora è una variabile semplice
-					tagList.Add(new RemoteChildVariableValue(path, stringParserValue(line[3], line[4])));		//Salvo la variabile parsando la stringa nel tipo richiesto
-				else
-				{													//altrimenti è un array
+                if (path.Contains("CntRetentive"))			//Salto l'oggetto "CntRetentive" perchè contiene lo storico dei contatori e genera un errore durante la scrittura
+                    continue;
+
+                var tag = Project.Current.GetVariable(path);
+				if (arrObj.Count > 1 && lastPath != path)               //Mi chiedo se ho finito di leggere un array
+				{                                                       //se si allora lo scrivo e resetto le variabili per il controllo
+                    try
+                    {
+                        InformationModel.RemoteWrite(new List<RemoteVariableValue> { new(Project.Current.GetVariable(lastPath), arrObj.ToArray()) }, timeOut);
+                        arrObj.Clear();
+                        arrTag = null;
+                        lastPath = "";
+                    }
+                    catch (Exception e)		//Controllo se si verifica un errore generico per ignorare la variabile e continuare con le altre
+                    {
+                        tagNotFoundObj.Add(InformationModel.MakeVariable(lastPath, OpcUa.DataTypes.Boolean));
+                        cntVarNotFound.Value += 1;
+                        Log.Warning("Variabile non trovata: " + lastPath+" Con errore: "+e.Message);
+                        arrObj.Clear();
+                        arrTag = null;
+                        lastPath = "";
+                    }
+                }
+				if (line[2] == "")          //Se line[2] è vuota allora è una variabile semplice
+                    try
+                    {
+                        InformationModel.RemoteWrite(new List<RemoteVariableValue> { new(tag, stringParserValue(line[3], line[4])) }, timeOut);
+
+                    }
+                    catch (Exception)		//Controllo se si verifica un errore generico per ignorare la variabile e continuare con le altre
+                    {
+                        tagNotFoundObj.Add(InformationModel.MakeVariable(path, OpcUa.DataTypes.Boolean));
+                        cntVarNotFound.Value += 1;
+                        Log.Warning("Variabile non trovata: " + path);
+                        continue;
+                    }
+                else						//altrimenti è un array
+                {													
 					arrTag = tag;										//Setto delle variabili che controllerò per vedere se ho finito di leggere l'array
 					lastPath = path;																			
 					arrObj.Add(stringParserObj(line[3], line[4]));      //Aggiungo ad una lista d'appoggio tutti i valori dell'array parsando la stringa nel tipo richiesto	
 				}
 			}
 
-			Project.Current.ChildrenRemoteWrite(tagList);               //Alla fine scrivo tutti i valori contemporaneamente
-
 			Log.Info($"Fine: {DateTime.Now}");
 			Log.Info($"Durata: {DateTime.Now - start}");
 			Log.Info(pathCSV + " è stato importato correttamente");
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = false;
 
-			static UAValue stringParserValue(string input, string type)
+
+            static UAValue stringParserValue(string input, string type)
 			{
 				return type switch
 				{
@@ -355,6 +408,7 @@ public class OemToCSV : BaseNetLogic
 					"Byte" => byte.Parse(input),
 					"Int" => long.Parse(input),
 					"Single" => float.Parse(input),
+					"Double" => double.Parse(input),
 					"DateTime" => DateTime.Parse(input),
 					"String" => input,
 					_ => 0,
@@ -368,6 +422,7 @@ public class OemToCSV : BaseNetLogic
 					"Byte" => byte.Parse(input),
 					"Int" => long.Parse(input),
 					"Single" => float.Parse(input),
+					"Double" => double.Parse(input),
 					"DateTime" => DateTime.Parse(input),
 					"String" => input,
 					_ => 0,
@@ -379,9 +434,161 @@ public class OemToCSV : BaseNetLogic
 			Log.Error("Export failed: " + ex.ToString());
 			((Image)LogicObject.Owner.GetObject("loadingRect/loadImage")).Visible = false;
 			((Label)LogicObject.Owner.GetObject("loadingRect/errorLabel")).Visible = true;
-			((Label)LogicObject.Owner.GetObject("loadingRect/errorMsg")).Text = "Export failed: " + ex.ToString().Split('\n')[0];
+			((Label)LogicObject.Owner.GetObject("loadingRect/errorMsg")).Text = "Import failed: " + ex.ToString().Split('\n')[0];
 			((Button)LogicObject.Owner.GetObject("loadingRect/errorButton")).Visible = true;
 			return;
 		}
 	}
+
+
+
+    // Pseudocodice dettagliato per ottimizzazione LeggiFileCSV_
+    // 1. Carica tutte le righe del file CSV in memoria (già fatto)
+    // 2. Usa un dizionario per raggruppare le righe per path (così puoi gestire array in modo batch)
+    // 3. Per ogni path:
+    //    a. Se tutte le righe hanno indice array vuoto, sono variabili semplici: scrivi in parallelo (Task + SemaphoreSlim)
+    //    b. Se ci sono indici array, raccogli tutti i valori e scrivi l'array in un'unica chiamata
+    // 4. Gestisci errori e aggiorna la UI come già fatto
+    // 5. Elimina codice duplicato (parser, try/catch, ecc.)
+    // 6. Usa Task.WhenAll per attendere tutte le scritture parallele
+
+    [ExportMethod]
+    public void LeggiFileCSV_()
+    {
+        try
+        {
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = true;
+            ((ColumnLayout)LogicObject.Owner.GetObject("FileSelectorRectangle/TagsMancanti")).Visible = true;
+            var start = DateTime.Now;
+            DateTime scriptEnd;
+            Log.Info($"Inizio: {start}");
+            string pathCSV = new ResourceUri(LogicObject.GetVariable("CSVpath").Value).Uri;
+            List<string[]> lines = new();
+            using (StreamReader sw = File.OpenText(pathCSV))
+            {
+                sw.ReadLine();
+                while (!sw.EndOfStream)
+                    lines.Add(sw.ReadLine().Split("\t"));
+            }
+
+            var tagNotFoundObj = Owner.GetObject("TagsNotFound");
+            var cntVarNotFound = Owner.GetVariable("NVarNotFound");
+            var cntVarOK = Owner.GetVariable("VarScritteOK");
+            int timeOut = Owner.GetVariable("TimeOut_Write_[ms]").Value;
+			int nScrittureParallele = 100; // Numero di scritture parallele consentite
+
+            // Raggruppa per path (path = $"{line[0]}/{line[1]}")
+            var grouped = lines
+                .Where(line => !($"{line[0]}/{line[1]}".Contains("CntRetentive")))
+                .GroupBy(line => $"{line[0]}/{line[1]}");
+
+            foreach (var group in grouped)
+            {
+                var path = group.Key;
+                var tag = Project.Current.GetVariable(path);
+                // Se tutte le righe hanno indice array vuoto, è una variabile semplice
+                if (group.All(line => string.IsNullOrEmpty(line[2])))
+                {
+                    while (taskSlot.Count >= nScrittureParallele) { }
+
+                    var line = group.First();
+                    new LongRunningTask (func => {
+                        try
+                        {
+                            taskSlot.Add(true);
+                            InformationModel.RemoteWrite(new List<RemoteVariableValue> { new(tag, StringParserValue(line[3], line[4])) }, timeOut);
+							cntVarOK.Value++;
+                        }
+                        catch (Exception e)
+                        {
+                            tagNotFoundObj.Add(InformationModel.MakeVariable(path, OpcUa.DataTypes.Boolean));
+                            cntVarNotFound.Value++;
+                            Log.Warning("Variabile non trovata: " + path + " " + e.Message);
+                        }
+                        finally
+                        {
+                            taskSlot.RemoveAt(0);
+                        }
+                    },LogicObject).Start();
+                }
+                else // Array: Ordina i valori in base all'indice e scrive l'array
+                {
+                    while (taskSlot.Count >= nScrittureParallele) { }
+
+                    var arrayValues = group
+                        .OrderBy(line => int.TryParse(line[2], out var idx) ? idx : 0)
+                        .Select(line => StringParserObj(line[3], line[4]))
+                        .ToArray();
+
+                    new LongRunningTask(func => {
+                        try
+						{
+                            taskSlot.Add(true);
+                            InformationModel.RemoteWrite(new List<RemoteVariableValue> { new(tag, arrayValues) }, timeOut);
+                            cntVarOK.Value++;
+                        }
+                        catch (Exception e)
+						{
+							tagNotFoundObj.Add(InformationModel.MakeVariable(path, OpcUa.DataTypes.Boolean));
+							cntVarNotFound.Value++;
+							Log.Warning("Variabile non trovata: " + path + " " + e.Message);
+                        }
+                        finally
+                        {
+                            taskSlot.RemoveAt(0);
+                        }
+                    }, LogicObject).Start();
+                }
+            }
+
+            scriptEnd = DateTime.Now;
+            while (taskSlot.Count > 0) {
+				if ((DateTime.Now - scriptEnd).TotalMilliseconds > 30000)
+					break; // Timeout di 30 secondi per evitare blocchi
+            }
+
+            Log.Info($"Fine: {DateTime.Now}");
+            Log.Info($"Durata: {DateTime.Now - start}");
+            Log.Info(pathCSV + " è stato importato correttamente");
+            ((Rectangle)LogicObject.Owner.GetObject("loadingRect")).Visible = false;
+        }
+        catch (Exception ex)
+        {
+            Log.Error("Export failed: " + ex.ToString());
+            ((Image)LogicObject.Owner.GetObject("loadingRect/loadImage")).Visible = false;
+            ((Label)LogicObject.Owner.GetObject("loadingRect/errorLabel")).Visible = true;
+            ((Label)LogicObject.Owner.GetObject("loadingRect/errorMsg")).Text = "Import failed: " + ex.ToString().Split('\n')[0];
+            ((Button)LogicObject.Owner.GetObject("loadingRect/errorButton")).Visible = true;
+            return;
+        }
+
+        static UAValue StringParserValue(string input, string type)
+        {
+            return type switch
+            {
+                "Boolean" => bool.Parse(input),
+                "Byte" => byte.Parse(input),
+                "Int" => long.Parse(input),
+                "Single" => float.Parse(input),
+                "Double" => double.Parse(input),
+                "DateTime" => DateTime.Parse(input),
+                "String" => input,
+                _ => 0,
+            };
+        }
+        static object StringParserObj(string input, string type)
+        {
+            return type switch
+            {
+                "Boolean" => bool.Parse(input),
+                "Byte" => byte.Parse(input),
+                "Int" => long.Parse(input),
+                "Single" => float.Parse(input),
+                "Double" => double.Parse(input),
+                "DateTime" => DateTime.Parse(input),
+                "String" => input,
+                _ => 0,
+            };
+        }
+    }
 }

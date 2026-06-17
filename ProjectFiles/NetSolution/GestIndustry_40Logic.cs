@@ -5,6 +5,8 @@ using FTOptix.Store;
 using System;
 using System.Collections.Generic;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestIndustry_40Logic : BaseNetLogic

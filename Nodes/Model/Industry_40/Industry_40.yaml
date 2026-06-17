@@ -62,7 +62,7 @@ Children:
       Id: g=185c9c7044f848fbbd845e42fe53c5a0
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedMt/rCntMt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProcessedMt/rCntMt"
       Children:
       - Name: Mode
         Id: g=00b7151e03fff1fabc72f12674834167
@@ -82,7 +82,7 @@ Children:
       Id: g=132088b130130cc5182fe7820c17728e
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedPcs/dCntPcs"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProcessedPcs/dCntPcs"
       Children:
       - Name: Mode
         Id: g=9ce33360f49652a5eee9139725958a42
@@ -98,7 +98,7 @@ Children:
       Id: g=74ac5695c2dbb29b7b8ca2d42da92921
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/dCntOre"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProducHour/dCntOre"
       Children:
       - Name: Mode
         Id: g=e7cc5acc7300f0796d2ddc370514e156
@@ -114,7 +114,7 @@ Children:
       Id: g=c5e6bd0aa772f50607a8397c4e8df0fc
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/dCntMin"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProducHour/dCntMin"
       Children:
       - Name: Mode
         Id: g=277f0ce49e18bed2965b5027a993eb1c
@@ -198,7 +198,7 @@ Children:
       Id: g=1c22f976e0b6e346061b2e9fdd3e333f
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedMt/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProcessedMt/bRstCnt"
       Children:
       - Name: Mode
         Id: g=581a7216ebdf391ff12797d40d5b5587
@@ -218,7 +218,7 @@ Children:
       Id: g=9c84ee5bda04a9127a7894f9379c4fd1
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProcessedPcs/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProcessedPcs/bRstCnt"
       Children:
       - Name: Mode
         Id: g=c5318e43f43e0a2aefa65a2907872788
@@ -234,7 +234,7 @@ Children:
       Id: g=eb67516c5bd523a76f2ab298efc01725
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
       Children:
       - Name: Mode
         Id: g=5e618f1022401d3efab0434737a7211e
@@ -250,7 +250,7 @@ Children:
       Id: g=4e470759d1f4373735f81afdd65a8e82
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntSmartFactory/stCntProducHour/bRstCnt"
       Children:
       - Name: Mode
         Id: g=fb303e7f1d6e06b9bc652e0aa561c7c6

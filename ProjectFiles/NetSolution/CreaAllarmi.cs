@@ -6,6 +6,8 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using FTOptix.CommunicationDriver;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class CreaAllarmi : BaseNetLogic
@@ -19,7 +21,7 @@ public class CreaAllarmi : BaseNetLogic
         var Id_CartellaAlm = Project.Current.Get("Alarms");
         string NomeAlm;
 
-        var Stazione = Project.Current.Get("CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next");
+        var Stazione = Project.Current.Get("CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC");
         foreach (var TblVarAlmNode in Stazione.GetNodesByType<TagStructure>())
         {
             //if (!(TabVarAlm.BrowseName == "BehaviourStartPriority"))

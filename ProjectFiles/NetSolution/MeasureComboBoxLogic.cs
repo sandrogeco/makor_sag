@@ -24,6 +24,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
 using FTOptix.Recipe;
+using FTOptix.System;
 #endregion
 
 public class MeasureComboBoxLogic : BaseNetLogic

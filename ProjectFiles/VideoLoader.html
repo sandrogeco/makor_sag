@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Player</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #cbcbcb;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      object-fit: cover;
+    }
+
+    .controls {
+      margin-top: 15px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 800px;
+    }
+
+    .controls button, .dropup-button {
+      background-color: #545454;
+      border: none;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 24px;
+      min-width: 80px;
+      user-select: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .controls button:hover, .dropup-button:hover {
+      background-color: #ef9051;
+    }
+
+    /* Dropup container */
+    .dropup {
+      position: relative;
+      display: inline-block;
+      min-width: 100px;
+      user-select: none;
+    }
+
+    /* Dropup menu */
+    .dropup-menu {
+      display: none;
+      position: absolute;
+      bottom: 100%; /* apre verso l'alto */
+      left: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      width: 100%;
+      z-index: 10;
+    }
+
+    /* Dropup items */
+    .dropup-menu a {
+      display: block;
+      padding: 10px 15px;
+      color: #545454;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.2s ease;
+    }
+
+    .dropup-menu a:hover {
+      background-color: #ef9051;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-wrapper">
+    <video id="myVideo">
+      <source src="" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="controls">
+    <button type="button" onclick="skip(-10)">⏪</button>
+    <button type="button" onclick="playVideo()">▶️</button>
+    <button type="button" onclick="pauseVideo()">⏸️</button>
+    <button type="button" onclick="skip(10)">⏩</button>
+
+    <div class="dropup">
+      <button id="speedBtn" class="dropup-button" type="button" aria-haspopup="true" aria-expanded="false">
+        1x ▲
+      </button>
+      <div id="speedMenu" class="dropup-menu" role="menu" aria-labelledby="speedBtn">
+        <a href="#" data-speed="0.5" role="menuitem">0.5x</a>
+        <a href="#" data-speed="1" role="menuitem">1x</a>
+        <a href="#" data-speed="1.5" role="menuitem">1.5x</a>
+        <a href="#" data-speed="2" role="menuitem">2x</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('myVideo');
+
+    const videoPath = getQueryParam('videoPath');
+    if (videoPath) {
+      video.src = videoPath;
+    }
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function skip(seconds) {
+      video.currentTime += seconds;
+    }
+
+    // Funzione per leggere i parametri URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Dropdown (dropup) toggle
+    const speedBtn = document.getElementById('speedBtn');
+    const speedMenu = document.getElementById('speedMenu');
+
+    speedBtn.addEventListener('click', () => {
+      const expanded = speedBtn.getAttribute('aria-expanded') === 'true';
+      speedBtn.setAttribute('aria-expanded', !expanded);
+      speedMenu.style.display = expanded ? 'none' : 'block';
+    });
+
+    // Seleziona velocità e aggiorna bottone e video
+    speedMenu.querySelectorAll('a').forEach(item => {
+      item.addEventListener('click', e => {
+        e.preventDefault();
+        const speed = parseFloat(item.getAttribute('data-speed'));
+        video.playbackRate = speed;
+        speedBtn.textContent = speed + 'x ▲';
+        speedMenu.style.display = 'none';
+        speedBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Chiudi menu se clicchi fuori
+    window.addEventListener('click', (event) => {
+      if (!speedBtn.contains(event.target) && !speedMenu.contains(event.target)) {
+        speedMenu.style.display = 'none';
+        speedBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+  </script>
+</body>
+</html>

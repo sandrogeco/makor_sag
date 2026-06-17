@@ -5,6 +5,8 @@ using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using System.Linq;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class DesignTimeCreaTabelleCntProduz : BaseNetLogic

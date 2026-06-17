@@ -1,24 +1,68 @@
 Name: StatoMacchina
-Id: g=986c99409c143c7f3cbb833c95b302a8
 Type: FolderType
 Children:
 - Name: CycOn
-  Id: g=e02d861598cc5831117e0ea5ab5041f5
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCiclo/bCycleRun"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: CycOff
-  Id: g=3dc6df5c3dd1446715f281075fe717c4
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCiclo/bCycleStop"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: MachMajorAlm
-  Id: g=9aa9dc902dde879838bb88d518a4cb52
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCiclo/bGenEmergOn"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: MachAlm
-  Id: g=41e0549d20c16faabab3e43dc54b279a
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCiclo/bGenAlmOn"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: MachWrn
-  Id: g=7af06d0f6ac2b5f52d23c615709e1685
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCiclo/bGenWrnOn"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

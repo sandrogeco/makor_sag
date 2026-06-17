@@ -14,6 +14,8 @@ using FTOptix.Store;
 using FTOptix.DataLogger;
 using System.IO;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class CopySqliteLogic : BaseNetLogic

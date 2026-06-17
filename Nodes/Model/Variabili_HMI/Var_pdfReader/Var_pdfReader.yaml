@@ -1,17 +1,12 @@
 Name: Var_pdfReader
-Id: g=3b524c9303e35430a01ebc02c2dc9293
 Type: FolderType
 Children:
 - Name: pdfSelector
   Id: g=3a13e1cbb30aa0cee7ecc9d1c54e9a3f
   Type: BaseDataVariableType
   DataType: Int32
+  Value: 1
 - Name: pdfCurrentPage
   Id: g=25f99c6af1cec5242bc8f60ddd1a75bd
   Type: BaseDataVariableType
   DataType: Int32
-- Name: pdfZoom
-  Id: g=d88f84a4010399b1241658e126062959
-  Type: BaseDataVariableType
-  DataType: Int32
-  Value: 100

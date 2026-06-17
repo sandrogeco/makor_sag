@@ -1,57 +1,43 @@
 Name: GestStatistiche
-Id: g=780a1ce40d6f416b6774e32f32052c75
 Type: FolderType
 Children:
 - Name: CntProduzPlc
-  Id: g=4fa9e7c9c6e7e5bf44782c3458f442ec
   Type: BaseObjectType
   Children:
   - Name: NPezzi_Prodotti
-    Id: g=4eee01010832298937109453a71f7a68
     Type: BaseDataVariableType
     DataType: Int32
   - Name: NMetri_Prodotti
-    Id: g=1c902e14a73e3488fab24832e05e8c5a
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntOreAccensQuadro
-    Id: g=cdb8f7a333af465fe801fd902d7ad35a
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntMinutiAccensQuadro
-    Id: g=354939caf632a05e2adbfe4616a4cb21
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntOreCicloOn
-    Id: g=449438c746b16d5dc154ee121dec8d7f
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntMinutiCicloOn
-    Id: g=fb9f732d19c8213e33578dde8826a24c
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntOreAllarmeOn
-    Id: g=2043d669d2de02bd5369463ddcbfc287
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntMinutiAllarmeOn
-    Id: g=f412c6e0d6c76ff54e29fe54049a6953
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntOreStopOn
-    Id: g=1b192586f6d698b99b5f9fad7f4f886c
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntMinutiStopOn
-    Id: g=39155d7d7d78046f43706da8b1099016
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntOrePausaOn
-    Id: g=bc20852c6a27371e0c3b3ee9b270dcbd
     Type: BaseDataVariableType
     DataType: Int32
   - Name: CntMinutiPausaOn
-    Id: g=5cb74873149f519d76ffce64e4ba015a
     Type: BaseDataVariableType
     DataType: Int32
 - Name: CntProduzPlc_R1
@@ -59,102 +45,83 @@ Children:
   Type: BaseObjectType
   Children:
   - Name: CntPezziLav
-    Id: g=10378c50e96d4d9d32dd9c532cbfbc18
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=45dd756cf8ee44e16245c6d80ce3c1a8
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntPezziStat/dCntPcs"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntPezziStat/dCntPcs"
       Children:
       - Name: Mode
-        Id: g=646f54133ed9183b34ef18f4822b2816
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntMetriLav
-    Id: g=6d65de915ce86d81f093185c5d19ce38
     Type: BaseDataVariableType
     DataType: Float
   - Name: CntMetriQLav
-    Id: g=39a8fa77312c7cc5bdfe05ecbd35ff23
     Type: BaseDataVariableType
     DataType: Float
     Children:
     - Name: DynamicLink
-      Id: g=47b85d626ff95c71d32697cff6d5b88b
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntMtQuadStat/rCntMt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntMtQuadStat/rCntMt"
       Children:
       - Name: Mode
-        Id: g=b5e8ecc0e9929f875750f5775ab917ac
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntOreCicloOn
-    Id: g=ad259be65971e6076df1e76f67b7efa2
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=d9254d73d076b72c3b84c7a0a6e84c9c
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreProdStat/dCntOre"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreProdStat/dCntOre"
       Children:
       - Name: Mode
-        Id: g=ee47238ccba0a9e39c408d28586367ae
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntMinCicloOn
-    Id: g=ea54133555a0f95ed33ba4e10d502c8b
     Type: BaseDataVariableType
     DataType: Int16
     Children:
     - Name: DynamicLink
-      Id: g=15640506034ad0087141189f7c0cb103
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreProdStat/dCntMin"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreProdStat/dCntMin"
       Children:
       - Name: Mode
-        Id: g=90c4004c4106867e190a0cf9c9c7c75a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntOrePowerOn
-    Id: g=c087a7c51bc235440aa257bcdb66935e
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=7d14fd9733b982931c9dbc5073c423a6
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreAccStat/dCntOre"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreAccStat/dCntOre"
       Children:
       - Name: Mode
-        Id: g=918188651d04c8cbcb6e3eb2ae5d895a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntMinPowerOn
-    Id: g=2336ded0c9ea8b9567eca9fb8a6ac94c
     Type: BaseDataVariableType
     DataType: Int16
     Children:
     - Name: DynamicLink
-      Id: g=0dab814d42741bbe4482de1a7c616dca
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreAccStat/dCntMin"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreAccStat/dCntMin"
       Children:
       - Name: Mode
-        Id: g=421078b031070f901aa752ed2714158b
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
@@ -164,150 +131,122 @@ Children:
     DataType: Float
     Children:
     - Name: DynamicLink
-      Id: g=75201775a64a7c4dbbf3b350bb89b5bd
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntPowerCons/rCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntPowerCons/rCnt"
       Children:
       - Name: Mode
-        Id: g=b7464f8b2899086b5c7a5c354c33daa2
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: CntMetriTrasp
-    Id: g=7cd81fff9174b98f26938c192ac7ed0a
     Type: BaseDataVariableType
     DataType: Float
     Description: {"LocaleId":"it-IT","Text":"Metri percorsi dal trasporto"}
     Children:
     - Name: DynamicLink
-      Id: g=6592c19c37ac54e9dcfd819de941ccf1
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntMtLinStat/rCntMt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntMtLinStat/rCntMt"
       Children:
       - Name: Mode
-        Id: g=1ac4da433ee40c2c168f9765b0016721
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
 - Name: PlcCntRst
-  Id: g=033d3fe9ec45bb371bda9b4f68ad2a7d
   Type: BaseObjectType
   Children:
   - Name: RstCntPezziLav
-    Id: g=8c14681755b971991c32c9761c4f7b13
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=55e2c6eda98c2770b523e444b1162d86
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntPezziStat/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntPezziStat/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=21fda9668d7754ea69d5799f5eb09e5e
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: RstCntMetriLav
-    Id: g=55edaabd505955afee56687adcebb065
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: RstCntMetriQLav
-    Id: g=72b17aa9bee5a914cb96a0f031425706
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=9da2fcf9acd3bc8596009f1a176d8ac8
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntMtQuadStat/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntMtQuadStat/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=e02f0d3dd4a86e04058fb0fd7f691740
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: RstCntOreCicloOn
-    Id: g=ca353a82f1b5376d0e38b198fc1736c8
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=9eef30bac219d6336cf01080e65b738d
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreProdStat/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreProdStat/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=50e02e6179146c5fba70680907ee58fe
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: RstCntOrePowerOn
-    Id: g=1b6f780ecadcc6ed41e671c991138e2f
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=fcfe25dd910b34518db272a7f2e97023
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntOreAccStat/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntOreAccStat/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=daf633b89f861d009aff967983e59d57
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: RstCntKwOra
-    Id: g=e68bc164199c6e860abcd1c4512f6e09
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=8938a213478625c793d2e0ea7b7f6ad4
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntPowerCons/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntPowerCons/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=06c34e1b72a8112be8ff4adee2f4a5d8
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: RstCntMetriTrasp
-    Id: g=1969484c89a9ecf716fe2d3a387cdfd3
     Type: BaseDataVariableType
     DataType: Boolean
     Children:
     - Name: DynamicLink
-      Id: g=55b2b1b8121caf04c418d06f53b2ef6c
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvGen/stCntStatistic/stCntMtLinStat/bRstCnt"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvGen/stCntStatistic/stCntMtLinStat/bRstCnt"
       Children:
       - Name: Mode
-        Id: g=339aa28095eeb59b0a5689127e683091
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
 - Name: AppStatLastSaveDate
-  Id: g=db20df129a06356051d9f9fd926076a0
   Type: BaseDataVariableType
   DataType: DateTime
   Children:
   - Name: DynamicLink
-    Id: g=704d409c5f509e121d51274e30455c50
     Type: DynamicLink
     DataType: NodePath
     Value: "../../../UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem/DataUltimoSalvataggio"
     Children:
     - Name: Mode
-      Id: g=246af0bf60d80f73519b128a843f3534
       Type: BaseVariableType
       DataType: DynamicLinkMode
       Value: 2

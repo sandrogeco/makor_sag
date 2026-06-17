@@ -1,8 +1,8 @@
 Name: Types_Var
-Id: g=0d26e31f3ef637c0a194b310df5177d0
 Type: FolderType
 Children:
 - File: TemplateAppoggio/TemplateAppoggio.yaml
 - File: Generali/Generali.yaml
 - File: Macchina/Macchina.yaml
 - File: Industry_40/Industry_40.yaml
+- File: DevicesStructure/DevicesStructure.yaml

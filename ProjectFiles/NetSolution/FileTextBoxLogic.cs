@@ -16,6 +16,8 @@ using FTOptix.SQLiteStore;
 using FTOptix.S7TCP;
 using FTOptix.RAEtherNetIP;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 
 public class FileTextBoxLogic : BaseNetLogic
 {

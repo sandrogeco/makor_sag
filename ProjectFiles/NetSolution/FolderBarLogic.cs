@@ -14,6 +14,8 @@ using FilesystemBrowser;
 using FTOptix.Modbus;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 
 
 class Location

@@ -20,8 +20,46 @@ Children:
   Type: BaseDataVariableType
   DataType: Duration
   Description: {"LocaleId":"it-IT","Text":"Tempo dopo il quale viene fatto il logout di un utente Oem"}
-  Value: "0:00:10:0.0000000"
+  Value: "0:00:10:00.0000000"
 - Name: OemAbilitaModoTransfert
   Id: g=656ff937b3f96dfb5183063dafa64d1e
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: FlagUK_USA
+  Id: g=a38f1c8bce6a191078cbe47e8b53ce75
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: CntRetentive
+  Id: g=5ac4caf0479527f0d4e27aa9095a1ab2
+  Type: BaseObjectType
+- Name: EnbMaki
+  Id: g=0c7da42fb474630d9c292d7381d1c260
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: BraccioSelezionato
+  Id: g=25a493aeda3e9891a47c92900156e5d5
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Description: {"LocaleId":"it-IT","Text":"0->braccio di sx, 1-> di dx"}
+  Children:
+  - Name: DynamicLink
+    Id: g=06466c5cc2691816cb6aa77bf373fc4d
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/bHmiSelezBraccio"
+    Children:
+    - Name: Mode
+      Id: g=c7b446351f285d6fac140fd0a3031510
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: iOemBeckhoff_IO_Pages
+  Id: g=fbe34c1472ace4557d652b37d6207ecd
+  Type: BaseDataVariableType
+  DataType: Int16
+- Name: iOemMurrMaster_IO_Pages
+  Id: g=432e294144434787e1179f40d6098efc
+  Type: BaseDataVariableType
+  DataType: Int16
+  ValueRank: OneDimension
+  ArrayDimensions: [32]

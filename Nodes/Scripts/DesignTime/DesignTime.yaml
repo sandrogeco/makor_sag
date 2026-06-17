@@ -1,120 +1,44 @@
 Name: DesignTime
-Id: g=87e625a8fea126aafd7a2c94ec0bf842
 Type: FolderType
 Children:
 - Name: SpostaOggetti_Logic
-  Id: g=d40d41b30be5b908dc25614b29b3bc3f
   Type: NetLogic
   Children:
   - Name: BehaviourStartPriority
-    Id: g=924a56863f0054cacec4e41e84f9a57d
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Class: Method
     Name: SpostaSu
-    Id: g=ea18e9c78d2c75a0a4c38f37888cb8aa
   - Class: Method
     Name: SpostaGiu
-    Id: g=f792ad3ecd39988c7208d03e864c8b0b
   - Name: NodoDaSpostare
-    Id: g=cdf40b327d83b67ca68f798929e2c6f6
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/Hmi_Next/Model/GestStatistiche/CntProduzPlc_R1/CntKwOra"
     Children:
     - Name: Kind
-      Id: g=7460870ee64075130b44053fd2677e04
       Type: PropertyType
       DataType: NodeId
 - Name: DesignTime_Utility
-  Id: g=815383357dd2aae8f17cf25f7b0a560c
   Type: NetLogic
   Description: {"LocaleId":"it-IT","Text":"Revisione R0"}
   Children:
   - Name: BehaviourStartPriority
-    Id: g=00b92aa04d97b541d9dc54b8926a1993
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
 - Name: DsTime_XmlReader
-  Id: g=ddc30149dd739c56012bee46a6f190ca
   Type: NetLogic
   Description: {"LocaleId":"it-IT","Text":"Revisione R0"}
   Children:
   - Name: BehaviourStartPriority
-    Id: g=ad66bb66b000aa0abd6bbdcf1418dd6a
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Name: Path
-    Id: g=6cbcf9c6c53e6b034e70e78dffcaf23f
     Type: BaseDataVariableType
     DataType: AbsoluteResourceUri
     Value: "file:///C:/ALavori/Works/In Progress/S-One Versione QStudio/Nuova cartella/PrjTest.Device.TestApp.xml"
   - Class: Method
     Name: ParseXmlFile
-    Id: g=428e4f9bfab5224b22f5492f60567e06
-- Name: ProjectOptimizer
-  Id: g=5a665c54d896fac777047b6866e55745
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Name: BehaviourStartPriority
-    Id: g=ac4e3aa5bab52f54a972b3a3852fa03e
-    Type: BehaviourStartPriorityVariableType
-    DataType: Byte
-    Value: 180
-  - Class: Method
-    Name: Verify_1_DataItemTemplates
-    Id: g=4b66e02ec7f3b07ec5324867653597dd
-  - Class: Method
-    Name: Optimize_1_DataItemTemplates
-    Id: g=751c32e4fb12818398dc5676b34dd1d9
-  - Class: Method
-    Name: Verify_2_DuplicatedProperties
-    Id: g=af0d8da22e0c84314c543f370b8d853b
-  - Class: Method
-    Name: Optimize_2_DuplicatedProperties
-    Id: g=0ee1d0d27204a14610d2991b9b40f2ab
-  - Class: Method
-    Name: Verify_3_OptionalInstanceDeclarations
-    Id: g=0f0cca9536cb88a49cc8f0d9171ad7f1
-  - Class: Method
-    Name: Optimize_3_OptionalInstanceDeclarations
-    Id: g=063691a21385c440e55a132d04b89bd0
-  - Class: Method
-    Name: Verify_4_InheritanceGraph
-    Id: g=21d35c65df3ed5a64b0367e11bd38f92
-  - Class: Method
-    Name: Optimize_4_InheritanceGraph
-    Id: g=39792cc2233d563dc3552b0c276363a0
-  - Class: Method
-    Name: Verify_5_ModellingRules
-    Id: g=960d3eb0991afe26e5fde8a0830ff64d
-  - Class: Method
-    Name: Optimize_5_ModellingRules
-    Id: g=bceba61bfaaf53bf2842cb9d1c654d54
-  - Class: Method
-    Name: Verify_7_DynamicLinkModes
-    Id: g=c21ac6a3d551bf30df88aa6a4a9bcad4
-  - Class: Method
-    Name: Optimize_7_DynamicLinkModes
-    Id: g=517efee2313af8f1bd050b138252ae8c
-  - Class: Method
-    Name: VerifyProject
-    Id: g=9cbf34d0ec79b7dff0ba7fcba98f7a9d
-  - Class: Method
-    Name: OptimizeProject
-    Id: g=788e0d2a8931d23d7c8aaaa9e1a05875
-  - Name: OptimizationLogFilePath
-    Id: g=cbb48bd3e1bcdddaf937be9f1c7d1472
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=46;%PROJECTDIR%/LogOttimizzazioneProgetto.txt"
-  - Class: Method
-    Name: Verify_6_ReadWriteModes
-    Id: g=b685bafce5767a86ade05dd8faaae6db
-  - Class: Method
-    Name: Optimize_6_ReadWriteModes
-    Id: g=1b81f70ae588965fe0a6ac3e80dd3aac

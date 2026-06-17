@@ -11,6 +11,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestStatisticheLogic : BaseNetLogic
@@ -381,7 +383,7 @@ public class GestStatisticheLogic : BaseNetLogic
             var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
             foreach (var Par in reads)
             {
-                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
+                query.Append(", " + Par.RelativePath + " = " + (int)Par.Value);
             }
 
             query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");
@@ -407,7 +409,7 @@ public class GestStatisticheLogic : BaseNetLogic
             var reads = CntProduzPlc.ChildrenRemoteRead(myVariables);
             foreach (var Par in reads)
             {
-                query.Append(", " + Par.RelativePath + " = " + Par.Value.Value.ToString());
+                query.Append(", " + Par.RelativePath + " = " + (int)Par.Value);
             }
 
             query.Append(" WHERE Utente = '" + Utente + "' AND Attivo = true");

@@ -19,6 +19,8 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using static GestIndustry_40Logic;
 #endregion
 

@@ -1,0 +1,2915 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XY Chart - DXF CSV Viewer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #fff8f2;
+            --bg-secondary: #fffbf7;
+            --bg-tertiary: #fff2e6;
+            --accent-blue: #e07828;
+            --accent-cyan: #c45c10;
+            --accent-color: #e07828;
+            --accent-hover: #c45c10;
+            --text-primary: #2d1a08;
+            --text-secondary: #8a6040;
+            --border-color: #f0d0b0;
+            --shadow: 0 2px 8px rgba(180, 90, 30, 0.12);
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 8px;
+            min-height: 100vh;
+        }
+
+        .widget-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .chart-area {
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #chartCanvas {
+            width: 100%;
+            height: 500px;
+            cursor: crosshair;
+            border-radius: 6px;
+            background: linear-gradient(180deg, rgba(224, 120, 40, 0.04) 0%, transparent 100%);
+        }
+
+        .controls-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .control-group {
+            background: var(--bg-tertiary);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .control-group:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(224, 120, 40, 0.15);
+        }
+
+        .control-group h3 {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, rgba(224, 120, 40, 0.1), rgba(255, 180, 80, 0.1));
+            border: 1px solid var(--accent-blue);
+            color: var(--text-primary);
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .control-btn:hover {
+            background: linear-gradient(135deg, rgba(224, 120, 40, 0.2), rgba(255, 180, 80, 0.2));
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(224, 120, 40, 0.3);
+        }
+
+        .control-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .toggle-btn.active {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(224, 120, 40, 0.4);
+        }
+
+        .slider-container {
+            margin-top: 4px;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .slider-value {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-cyan);
+            font-weight: 500;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border-color);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(224, 120, 40, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 16px rgba(224, 120, 40, 0.6);
+        }
+
+        .info-panel {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent-cyan);
+        }
+
+        .file-upload-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-upload-label {
+            display: block;
+            width: 100%;
+            padding: 7px 12px;
+            background: linear-gradient(135deg, rgba(224, 120, 40, 0.1), rgba(255, 180, 80, 0.1));
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-label:hover {
+            background: linear-gradient(135deg, rgba(224, 120, 40, 0.2), rgba(255, 180, 80, 0.2));
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(224, 120, 40, 0.3);
+        }
+
+        .file-name-display {
+            margin-top: 4px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Range Selector */
+        .range-selector-container {
+            width: 100%;
+            padding: 8px 60px;
+            box-sizing: border-box;
+        }
+
+        .range-selector {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            user-select: none;
+        }
+
+        .range-track {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--bg-secondary);
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .range-selection {
+            position: absolute;
+            top: 15px;
+            height: 10px;
+            background: rgba(224, 120, 40, 0.25);
+            border: 1px solid rgba(224, 120, 40, 0.55);
+            border-radius: 5px;
+            pointer-events: none;
+        }
+
+        .range-handle {
+            position: absolute;
+            top: 8px;
+            width: 12px;
+            height: 24px;
+            background: var(--accent-color);
+            border: 2px solid var(--bg-primary);
+            border-radius: 4px;
+            cursor: ew-resize;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .range-handle:hover {
+            background: var(--accent-hover);
+            transform: scaleX(1.3);
+        }
+
+        .range-handle:active {
+            box-shadow: 0 4px 12px rgba(224, 120, 40, 0.6);
+        }
+
+        /* Tastierino numerico */
+        #numpadOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        #numpadOverlay.active { display: flex; }
+        #numpadPopup {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+        #numpadLabel {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        #numpadDisplay {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 26px;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            text-align: right;
+            min-height: 52px;
+            margin-bottom: 16px;
+            word-break: break-all;
+        }
+        .numpad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .numpad-btn {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            padding: 14px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: background 0.15s, transform 0.1s;
+            user-select: none;
+        }
+        .numpad-btn:active { transform: scale(0.93); }
+        .numpad-btn.confirm { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+        .numpad-btn.cancel  { background: #444; }
+        .numpad-btn.backsp  { background: var(--bg-primary); }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <div class="header">
+            <h1>XY Chart - DXF Viewer</h1>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="connectionStatus">Caricamento...</span>
+            </div>
+        </div>
+
+
+        <div class="chart-area">
+            <canvas id="chartCanvas"></canvas>
+            <!-- Range Selector sotto il grafico -->
+            <div class="range-selector-container">
+                <div class="range-selector">
+                    <div class="range-track"></div>
+                    <div class="range-selection" id="rangeSelection"></div>
+                    <div class="range-handle range-handle-left" id="rangeHandleLeft"></div>
+                    <div class="range-handle range-handle-right" id="rangeHandleRight"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <!-- Upload DXF & CSV -->
+            <div class="control-group">
+                <h3>📊 Dati</h3>
+                <div class="file-upload-wrapper">
+                    <input type="file" id="dxfFileInput" accept=".dxf" onchange="handleDXFUpload(event)">
+                    <label for="dxfFileInput" class="file-upload-label">
+                        📁 Carica File DXF
+                    </label>
+                </div>
+                <div class="file-upload-wrapper" style="margin-top: 8px;">
+                    <input type="file" id="csvFileInput" accept=".csv" onchange="handleCSVUpload(event)">
+                    <label for="csvFileInput" class="file-upload-label">
+                        📄 Carica File CSV
+                    </label>
+                </div>
+                <div class="file-name-display" id="fileName">Nessun file selezionato</div>
+                <button class="control-btn full-width" onclick="downloadCSV()" style="margin-top: 8px;">
+                    <span>💾 Esporta CSV</span>
+                </button>
+            </div>
+
+            <!-- Offset Parallelo -->
+            <div class="control-group">
+                <h3>↔️ Offset Parallelo</h3>
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>Distanza Offset</span>
+                        <span class="slider-value" id="offsetYValue">0</span>
+                    </div>
+                    <input type="text" inputmode="none" readonly id="offsetYInput" value="0"
+                           onclick="numpadOpen(this, 'Distanza Offset')"
+                           style="width: 100%; padding: 8px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; cursor: pointer;">
+                </div>
+                <button class="control-btn full-width" onclick="applyOffset()" style="margin-top: 8px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));">
+                    <span>Applica Offset</span>
+                </button>
+                <div id="debugButtons" style="display: none;">
+                    <button class="control-btn full-width" onclick="initOffsetStep()" style="margin-top: 8px; background: #ff9900;">
+                        <span>Init Step</span>
+                    </button>
+                    <button class="control-btn full-width" onclick="nextOffsetStep()" style="margin-top: 8px; background: #ff5500;">
+                        <span>Step Avanti</span>
+                    </button>
+                </div>
+                <button class="control-btn full-width" onclick="resetOffset()" style="margin-top: 8px;">
+                    <span>Reset</span>
+                </button>
+            </div>
+
+            <!-- Passo Interpolazione -->
+            <div class="control-group">
+                <h3>🔧 Passo Interpolazione</h3>
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>Precisione</span>
+                        <span class="slider-value" id="interpolationValue">0.005</span>
+                    </div>
+                    <input type="text" inputmode="none" readonly id="interpolationInput" value="0.005"
+                           onclick="numpadOpen(this, 'Passo Interpolazione')"
+                           style="width: 100%; padding: 8px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; cursor: pointer;">
+                </div>
+
+                <!-- Modalità Interpolazione -->
+                <div style="margin-top: 12px;">
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 6px;">Modalità:</div>
+                    <label style="display: flex; align-items: center; margin-bottom: 4px; cursor: pointer; font-size: 12px;">
+                        <input type="radio" name="interpolationMode" value="geometric" checked onchange="setInterpolationMode(this.value)"
+                               style="margin-right: 6px;">
+                        <span>Su lunghezza geometrica</span>
+                    </label>
+                    <label style="display: flex; align-items: center; cursor: pointer; font-size: 12px;">
+                        <input type="radio" name="interpolationMode" value="deltaX" onchange="setInterpolationMode(this.value)"
+                               style="margin-right: 6px;">
+                        <span>Su delta X (asse orizzontale)</span>
+                    </label>
+                </div>
+
+                <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">
+                    Punti generati: <span id="generatedPointsCount" style="color: var(--accent-color); font-weight: bold;">0</span>
+                </div>
+            </div>
+
+            <!-- Limiti Orizzontali -->
+            <div class="control-group">
+                <h3>📏 Limiti Orizzontali</h3>
+                <div class="slider-container" style="margin-bottom: 8px;">
+                    <div class="slider-label">
+                        <span>Limite 1 (X)</span>
+                        <span class="slider-value" id="line1Value">0</span>
+                    </div>
+                    <input type="text" inputmode="none" readonly id="line1Input" value="0"
+                           onclick="numpadOpen(this, 'Limite 1 (X)')"
+                           style="width: 100%; padding: 8px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; cursor: pointer;">
+                </div>
+                <div class="slider-container">
+                    <div class="slider-label">
+                        <span>Limite 2 (X)</span>
+                        <span class="slider-value" id="line2Value">100</span>
+                    </div>
+                    <input type="text" inputmode="none" readonly id="line2Input" value="100"
+                           onclick="numpadOpen(this, 'Limite 2 (X)')"
+                           style="width: 100%; padding: 8px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; cursor: pointer;">
+                </div>
+                <div style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">
+                    Trascina i limiti sul grafico per spostarli
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="info-item">
+                <span class="info-label">Punti Dati</span>
+                <span class="info-value" id="dataPointsCount">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Offset Y</span>
+                <span class="info-value" id="currentOffsetY">0</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Interpolazione</span>
+                <span class="info-value" id="currentInterpolation">0.005</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Range X</span>
+                <span class="info-value" id="rangeX">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Range Y</span>
+                <span class="info-value" id="rangeY">-</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Alias numerici per le chiavi parametro
+        const _paramAlias = {
+            '0': 'larghezza',
+            '1': 'altezza',
+            '2': 'lingua',
+            '3': 'um',
+            '4': 'mode',
+            '5': 'csv',
+            '6': 'debug',
+            '7': 'endpoint'
+        };
+
+        // Parametri da URL: supporta sia ?key=val&... che #key=val;...
+        function _parseParams() {
+            const map = {};
+            // hash: #key=val;key=val (separatore ;)
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                hash.split(';').forEach(p => {
+                    // supporta sia key=value che key:value
+                    const sep = p.includes('=') ? '=' : ':';
+                    const idx = p.indexOf(sep);
+                    if (idx < 0) return;
+                    const k = p.slice(0, idx).trim();
+                    const v = p.slice(idx + 1).trim();
+                    if (k) map[_paramAlias[k] || k] = decodeURIComponent(v);
+                });
+            }
+            // query string: ?key=val&key=val (fallback / compatibilità)
+            new URLSearchParams(window.location.search).forEach((v, k) => { map[k] = v; });
+            return map;
+        }
+        let DEBUG_MODE, PARAM_MODE, PARAM_CSV, PARAM_LARGHEZZA, PARAM_ALTEZZA, PARAM_LINGUA, PARAM_UM, PARAM_ENDPOINT;
+        let _opcWs = null;
+
+        function applyParams() {
+            const p = _parseParams();
+            DEBUG_MODE      = p['debug']     === 'true';
+            PARAM_MODE      = p['mode']      || null;
+            PARAM_CSV       = p['csv']       || null;
+            PARAM_LARGHEZZA = p['larghezza'] ? parseInt(p['larghezza']) : null;
+            PARAM_ALTEZZA   = p['altezza']   ? parseInt(p['altezza'])   : null;
+            PARAM_LINGUA    = p['lingua']    || null;
+            PARAM_UM        = p['um']        || null;
+            PARAM_ENDPOINT  = p['endpoint']  || 'ws://localhost:8765/';
+
+            // Larghezza container
+            const container = document.querySelector('.widget-container');
+            if (container) container.style.maxWidth = PARAM_LARGHEZZA ? PARAM_LARGHEZZA + 'px' : '';
+
+            // Altezza canvas
+            document.getElementById('chartCanvas').style.height = PARAM_ALTEZZA ? PARAM_ALTEZZA + 'px' : '500px';
+
+            // Modalità viewer
+            const controlsPanel  = document.querySelector('.controls-panel');
+            const infoPanel      = document.querySelector('.info-panel');
+            const rangeContainer = document.querySelector('.range-selector-container');
+            const header         = document.querySelector('.header');
+            if (PARAM_MODE === 'viewer' || PARAM_MODE === 'opc') {
+                // Layout full-canvas 870x410 senza margini
+                document.body.style.cssText = 'margin:0;padding:0;overflow:hidden';
+                if (container) {
+                    container.style.cssText = 'width:870px;height:410px;padding:0;margin:0;border:none;border-radius:0;box-shadow:none;overflow:hidden';
+                }
+                const chartArea = document.querySelector('.chart-area');
+                if (chartArea) chartArea.style.cssText = 'padding:0;margin:0;border:none;border-radius:0;height:410px';
+                document.getElementById('chartCanvas').style.height = '410px';
+                if (header)         header.style.display         = 'none';
+            }
+            if (PARAM_MODE === 'viewer') {
+                if (controlsPanel)  controlsPanel.style.display  = 'none';
+                if (infoPanel)      infoPanel.style.display      = 'none';
+                if (rangeContainer) rangeContainer.style.display = 'none';
+                // Auto-carica CSV
+                if (PARAM_CSV) {
+                    document.getElementById('connectionStatus').textContent = 'Caricamento CSV...';
+                    let csvUrl = PARAM_CSV;
+                    if (/^[a-zA-Z]:[\\\/]/.test(csvUrl))
+                        csvUrl = 'file:///' + csvUrl.replace(/\\/g, '/');
+                    fetch(csvUrl + (csvUrl.startsWith('file') ? '' : '?' + new Date().getTime()))
+                        .then(r => { if (!r.ok) throw new Error('File non trovato'); return r.text(); })
+                        .then(text => parseCSV(text))
+                        .catch(err => {
+                            document.getElementById('connectionStatus').textContent = 'ERRORE: ' + err.message;
+                        });
+                }
+            } else if (PARAM_MODE === 'opc') {
+                if (controlsPanel)  controlsPanel.style.display  = 'none';
+                if (infoPanel)      infoPanel.style.display      = 'none';
+                if (rangeContainer) rangeContainer.style.display = 'none';
+
+                // Chiudi WebSocket precedente se esiste
+                if (_opcWs) { _opcWs.close(); _opcWs = null; }
+
+                function connectOpcWs() {
+                    _opcWs = new WebSocket(PARAM_ENDPOINT);
+
+                    _opcWs.onopen = function() {
+                        document.getElementById('connectionStatus').textContent = 'OPC: connesso';
+                    };
+
+                    _opcWs.onmessage = function(e) {
+                        try {
+                            const json = JSON.parse(e.data);
+                            chartState.data = json.points
+                                .filter(p => !isNaN(p[0]) && !isNaN(p[1]))
+                                .map(p => ({ x: p[0], y: p[1] }));
+                            chartState.segments = [];
+                            chartState.offsetPolyline = [];
+                            chartState.offsetSurvivors = [];
+                            if (chartState.data.length > 0) {
+                                const xs = chartState.data.map(p => p.x);
+                                const ys = chartState.data.map(p => p.y);
+                                const axisMax = Math.max(...xs, ...ys);
+                                chartState.axisMinX = 0; chartState.axisMaxX = axisMax;
+                                chartState.axisMinY = 0; chartState.axisMaxY = axisMax;
+                            }
+                            document.getElementById('connectionStatus').textContent =
+                                'OPC: ' + chartState.data.length + ' punti';
+                            drawChart();
+                        } catch(err) {
+                            document.getElementById('connectionStatus').textContent = 'ERRORE parse: ' + err.message;
+                        }
+                    };
+
+                    _opcWs.onerror = function() {
+                        document.getElementById('connectionStatus').textContent = 'OPC: errore connessione';
+                    };
+
+                    _opcWs.onclose = function() {
+                        // Riconnette dopo 2s se ancora in modalità opc
+                        if (PARAM_MODE === 'opc') setTimeout(connectOpcWs, 2000);
+                    };
+                }
+
+                connectOpcWs();
+
+            } else {
+                if (controlsPanel)  controlsPanel.style.display  = '';
+                if (infoPanel)      infoPanel.style.display      = '';
+                if (rangeContainer) rangeContainer.style.display = '';
+                if (_opcWs) { _opcWs.close(); _opcWs = null; }
+            }
+        }
+
+        applyParams();
+
+        let chartState = {
+            data: [],
+            segments: [],   // Array di segmenti separati [{points: [{x,y}...]}, ...]
+            offsetLines: [], // Rette parallele calcolate da applyOffset [{x1,y1,x2,y2}, ...]
+            offsetPolyline: [], // Polilinea offset tagliata alle intersezioni [{x,y}, ...]
+            offsetSurvivors: [], // Segmenti sopravvissuti per visualizzazione step-by-step
+            offsetNewSeg: null,  // Nuovo segmento che si sta inserendo (per visualizzazione)
+            autoScale: false,    // Autoscala disabilitata
+            offsetY: 0,
+            line1X: 0,
+            line2X: 100,
+            xRangeMin: 0,   // 0% = inizio dati
+            xRangeMax: 100, // 100% = fine dati
+            // Limiti assi fissi (impostati solo al caricamento file)
+            axisMinX: 0,
+            axisMaxX: 100,
+            axisMinY: 0,
+            axisMaxY: 100
+        };
+
+        let INTERPOLATION_STEP = 0.005;
+        let INTERPOLATION_MODE = 'geometric'; // 'geometric' o 'deltaX'
+
+        // Salva l'ultimo file caricato per refresh automatico
+        let lastDxfString = null;
+        let lastDxfFileName = null;
+        let lastCsvData = null;  // Per CSV
+        let lastLoadType = null; // 'dxf' o 'csv'
+
+        // Stato per drag delle linee verticali
+        let isDraggingLine = null; // 'line1' o 'line2'
+
+        const canvas = document.getElementById('chartCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * window.devicePixelRatio;
+            canvas.height = rect.height * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            drawChart();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // ===== CARICA CSV =====
+        function loadCSVData() {
+            console.log("Caricamento CSV...");
+            document.getElementById('connectionStatus').textContent = 'Caricamento CSV...';
+
+            // Percorso relativo al CSV nella cartella data
+            fetch('../data/output.csv?' + new Date().getTime())  // Cache busting
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('File CSV non trovato');
+                    }
+                    return response.text();
+                })
+                .then(csvText => {
+                    parseCSV(csvText);
+                })
+                .catch(error => {
+                    console.error('Errore caricamento CSV:', error);
+                    document.getElementById('connectionStatus').textContent = 'ERRORE: ' + error.message;
+                    chartState.data = [];
+                    updateUI();
+                    drawChart();
+                });
+        }
+
+        function parseCSV(csvText) {
+            console.log('=== CARICAMENTO NUOVO CSV ===');
+            // Salva per refresh automatico e resetta DXF
+            lastCsvData = csvText;
+            lastLoadType = 'csv';
+            lastDxfString = null;  // Reset DXF quando carichi CSV
+            lastDxfFileName = null;
+
+            // Reset offset Y a 0
+            chartState.offsetY = 0;
+            document.getElementById('offsetYInput').value = 0;
+
+            console.log('CSV salvato per refresh. lastLoadType:', lastLoadType);
+            applyCSVData(csvText);
+        }
+
+        function applyCSVData(csvText) {
+            const lines = csvText.trim().split('\n');
+            chartState.data = [];
+            chartState.segments = [];
+
+            // Salta l'header (prima riga)
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line === '') continue;
+
+                const parts = line.split(',');
+                if (parts.length >= 2) {
+                    const x = parseFloat(parts[0]);
+                    const y = parseFloat(parts[1]);
+
+                    if (!isNaN(x) && !isNaN(y)) {
+                        chartState.data.push({ x: x, y: y });
+                    }
+                }
+            }
+
+            // Ordina per X crescente
+            chartState.data.sort((a, b) => a.x - b.x);
+
+            console.log('CSV parsato: ' + chartState.data.length + ' punti (ordinati per X)');
+
+            // Inizializza limiti assi e linee al caricamento
+            if (chartState.data.length > 0) {
+                // Calcola min per traslazione
+                const xValues = chartState.data.map(p => p.x);
+                const yValues = chartState.data.map(p => p.y);
+                const dataMinX = Math.min(...xValues);
+                const dataMinY = Math.min(...yValues);
+
+                // Trasla tutti i punti: x = x - xmin, y = y - ymin
+                chartState.data = chartState.data.map(p => ({
+                    x: p.x - dataMinX,
+                    y: p.y - dataMinY
+                }));
+
+                // Ricalcola max dopo traslazione
+                const dataMaxX = Math.max(...chartState.data.map(p => p.x));
+                const dataMaxY = Math.max(...chartState.data.map(p => p.y));
+
+                // Limiti assi: min = 0, max = max(xmax, ymax)
+                const axisMax = Math.max(dataMaxX, dataMaxY);
+                chartState.axisMinX = 0;
+                chartState.axisMaxX = axisMax;
+                chartState.axisMinY = 0;
+                chartState.axisMaxY = axisMax;
+
+                // Linee verticali ai limiti dati
+                chartState.line1X = 0;
+                chartState.line2X = dataMaxX;
+                document.getElementById('line1Input').value = '0';
+                document.getElementById('line2Input').value = dataMaxX.toFixed(3);
+            }
+
+            document.getElementById('connectionStatus').textContent = 'CSV caricato (' + chartState.data.length + ' punti)';
+
+            updateUI();
+            drawChart();
+        }
+
+        // ===== CONTROLLI =====
+        function reloadLastFile() {
+            console.log('=== RELOAD LAST FILE ===');
+            console.log('lastLoadType:', lastLoadType);
+            console.log('lastDxfString presente:', !!lastDxfString);
+            console.log('lastCsvData presente:', !!lastCsvData);
+
+            if (lastLoadType === 'dxf' && lastDxfString) {
+                console.log('→ Ricarico DXF');
+                parseDXF(lastDxfString, lastDxfFileName);
+            } else if (lastLoadType === 'csv' && lastCsvData) {
+                console.log('→ Ricarico CSV');
+                applyCSVData(lastCsvData);
+            } else {
+                console.log('→ Nessun file da ricaricare, ridisegno solo');
+                drawChart();
+            }
+        }
+
+        function resetOffset() {
+            chartState.offsetY = 0;
+            chartState.offsetLines = [];
+            chartState.offsetPolyline = [];
+            chartState.offsetSurvivors = [];
+            stepState = null;
+            document.getElementById('offsetYInput').value = 0;
+            updateUI();
+            drawChart();
+        }
+
+        // Stato per step-by-step
+        let stepState = null;
+
+        // Inizializza step-by-step
+        function initOffsetStep() {
+            const offset = parseFloat(document.getElementById('offsetYInput').value) || 0;
+            console.log('=== INIT STEP ===');
+            console.log('Offset:', offset);
+
+            // Raccogli segmenti
+            let allSegments = [];
+            if (chartState.segments && chartState.segments.length > 0) {
+                chartState.segments.forEach(seg => {
+                    for (let i = 0; i < seg.points.length - 1; i++) {
+                        allSegments.push({
+                            ax: seg.points[i].x,
+                            ay: seg.points[i].y,
+                            bx: seg.points[i + 1].x,
+                            by: seg.points[i + 1].y
+                        });
+                    }
+                });
+            } else if (chartState.data.length > 1) {
+                for (let i = 0; i < chartState.data.length - 1; i++) {
+                    allSegments.push({
+                        ax: chartState.data[i].x,
+                        ay: chartState.data[i].y,
+                        bx: chartState.data[i + 1].x,
+                        by: chartState.data[i + 1].y
+                    });
+                }
+            }
+
+            // Ordina per X
+            allSegments.sort((a, b) => Math.min(a.ax, a.bx) - Math.min(b.ax, b.bx));
+
+            // Range X per i segmenti
+            const allX = chartState.data.map(p => p.x);
+            const dataMinX = Math.min(...allX);
+            const dataMaxX = Math.max(...allX);
+            const xMin = dataMinX;   // Inizio da xmin dati
+            const xMax = dataMaxX;   // Fine a xmax dati
+
+            // Calcola offset per tutti i segmenti
+            // Ogni segmento parte da xMin e va verso xMax (infinito)
+            const offsetSegs = allSegments.map((seg, i) => {
+                const dx = seg.bx - seg.ax;
+                const dy = seg.by - seg.ay;
+
+                let m, q;
+                if (Math.abs(dx) < 1e-10) {
+                    m = Infinity;
+                    q = seg.ax + offset;
+                } else {
+                    m = dy / dx;
+                    q = seg.ay - m * seg.ax + offset * Math.sqrt(m * m + 1);
+                }
+
+                // Punti iniziale e finale: da xMin a xMax lungo la retta
+                let xi, yi, xf, yf;
+                if (m === Infinity) {
+                    // Retta verticale
+                    xi = q;
+                    yi = -1000;
+                    xf = q;
+                    yf = 1000;
+                } else {
+                    xi = xMin;
+                    yi = m * xMin + q;
+                    xf = xMax;
+                    yf = m * xMax + q;
+                }
+
+                return {
+                    m: m,
+                    q: q,
+                    xi: xi,
+                    yi: yi,
+                    xf: xf,
+                    yf: yf,
+                    origIdx: i
+                };
+            });
+
+            // Salva stato
+            stepState = {
+                offset: offset,
+                allSegments: allSegments,
+                offsetSegs: offsetSegs,
+                currentIdx: 0,
+                survivors: []
+            };
+
+            // Disegna le rette offset (linee sottili) - usa stessi punti dei segmenti
+            chartState.offsetLines = offsetSegs.map(seg => ({
+                x1: seg.xi,
+                y1: seg.yi,
+                x2: seg.xf,
+                y2: seg.yf
+            }));
+
+            chartState.offsetSurvivors = [];
+            chartState.offsetPolyline = [];
+
+            console.log('Segmenti offset:', offsetSegs.length);
+            console.log('Premi "Step Avanti" per iniziare');
+
+            drawChart();
+        }
+
+        // Avanza di uno step
+        function nextOffsetStep() {
+            if (!stepState) {
+                console.log('Prima premi "Init Step"');
+                return;
+            }
+
+            const { offsetSegs, survivors } = stepState;
+            const i = stepState.currentIdx;
+
+            if (i >= offsetSegs.length) {
+                console.log('Completato!');
+                return;
+            }
+
+            const newSeg = offsetSegs[i];
+            console.log(`\n=== STEP ${i} ===`);
+            console.log(`Inserisco so_${i}: (${newSeg.xi.toFixed(4)}, ${newSeg.yi.toFixed(4)}) -> (${newSeg.xf.toFixed(4)}, ${newSeg.yf.toFixed(4)})`);
+            console.log(`  m=${newSeg.m.toFixed(4)}, q=${newSeg.q.toFixed(4)}`);
+
+            // Salva nuovo segmento per visualizzazione (in arancione)
+            chartState.offsetNewSeg = {
+                xi: newSeg.xi, yi: newSeg.yi,
+                xf: newSeg.xf, yf: newSeg.yf,
+                m: newSeg.m, q: newSeg.q
+            };
+
+            // Funzione intersezione - verifica che cada dentro i limiti del segmento
+            function intersect(s1, s2) {
+                let ix, iy;
+
+                if (s1.m === Infinity && s2.m === Infinity) {
+                    // Entrambe verticali
+                    if (Math.abs(s1.q - s2.q) < 1e-9) {
+                        // Stessa retta verticale - punto in comune
+                        ix = s1.q;
+                        iy = Math.max(Math.min(s1.yi, s1.yf), Math.min(s2.yi, s2.yf));
+                        return { x: ix, y: iy };
+                    }
+                    return null; // Verticali parallele diverse
+                }
+                if (s1.m === Infinity) {
+                    ix = s1.q;
+                    iy = s2.m * ix + s2.q;
+                } else if (s2.m === Infinity) {
+                    ix = s2.q;
+                    iy = s1.m * ix + s1.q;
+                } else if (Math.abs(s1.m - s2.m) < 1e-10) {
+                    // Parallele
+                    if (Math.abs(s1.q - s2.q) < 1e-9) {
+                        // Stessa retta - ritorna un punto sulla retta
+                        return { x: s1.xi, y: s1.yi, sameLine: true };
+                    }
+                    return null; // Parallele diverse
+                } else {
+                    ix = (s2.q - s1.q) / (s1.m - s2.m);
+                    iy = s1.m * ix + s1.q;
+                }
+
+                // Nessuna verifica limiti - usa intersezione delle RETTE
+                return { x: ix, y: iy };
+            }
+
+            if (i === 0) {
+                // Primo segmento
+                survivors.push({
+                    xi: newSeg.xi, yi: newSeg.yi,
+                    xf: newSeg.xf, yf: newSeg.yf,
+                    m: newSeg.m, q: newSeg.q
+                });
+                console.log('  Primo segmento inserito');
+            } else {
+                // Cerca indietro
+                let k = survivors.length - 1;
+                let lastIntersection = null;
+
+                while (k >= 0 && !lastIntersection) {
+                    const prevSeg = survivors[k];
+                    const inter = intersect(newSeg, prevSeg);
+
+                    if (inter) {
+                        // Verifica che l'intersezione sia >= xi del survivor
+                        if (inter.x >= prevSeg.xi - 1e-9) {
+                            console.log(`  so_${i} ∩ survivors[${k}] = (${inter.x.toFixed(4)}, ${inter.y.toFixed(4)}) VALIDA - STOP`);
+                            lastIntersection = inter;
+                            lastIntersection.survivorIdx = k;
+                            // STOP alla prima intersezione valida
+                        } else {
+                            console.log(`  so_${i} ∩ survivors[${k}] = (${inter.x.toFixed(4)}, ${inter.y.toFixed(4)}) FUORI (x < xi=${prevSeg.xi.toFixed(4)})`);
+                            k--;
+                        }
+                    } else {
+                        console.log(`  so_${i} ∩ survivors[${k}] = PARALLELE`);
+                        k--;
+                    }
+                }
+
+                if (lastIntersection) {
+                    const firstIntersecting = lastIntersection.survivorIdx;
+                    const removed = survivors.length - firstIntersecting - 1;
+                    if (removed > 0) {
+                        console.log(`  Rimuovo ${removed} segmenti (da ${firstIntersecting + 1})`);
+                        survivors.splice(firstIntersecting + 1);
+                    }
+
+                    survivors[firstIntersecting].xf = lastIntersection.x;
+                    survivors[firstIntersecting].yf = lastIntersection.y;
+                    console.log(`  Modifico survivors[${firstIntersecting}].end = (${lastIntersection.x.toFixed(4)}, ${lastIntersection.y.toFixed(4)})`);
+
+                    survivors.push({
+                        xi: lastIntersection.x, yi: lastIntersection.y,
+                        xf: newSeg.xf, yf: newSeg.yf,
+                        m: newSeg.m, q: newSeg.q
+                    });
+                    console.log(`  Nuovo segmento da intersezione a (${newSeg.xf.toFixed(4)}, ${newSeg.yf.toFixed(4)})`);
+                } else {
+                    console.log('  ERRORE: nessuna intersezione trovata!');
+                }
+            }
+
+            console.log(`Survivors: ${survivors.length}`);
+            survivors.forEach((s, idx) => {
+                console.log(`  [${idx}]: (${s.xi.toFixed(4)}, ${s.yi.toFixed(4)}) -> (${s.xf.toFixed(4)}, ${s.yf.toFixed(4)})`);
+            });
+
+            // Aggiorna visualizzazione
+            chartState.offsetSurvivors = [...survivors];
+
+            // Costruisci polilinea
+            chartState.offsetPolyline = [];
+            survivors.forEach((s, idx) => {
+                if (idx === 0) {
+                    chartState.offsetPolyline.push({ x: s.xi, y: s.yi });
+                }
+                chartState.offsetPolyline.push({ x: s.xf, y: s.yf });
+            });
+
+            stepState.currentIdx++;
+            drawChart();
+        }
+
+        // Applica offset: per ogni segmento crea una retta parallela a distanza offset in Y+
+        function applyOffset() {
+            const offset = parseFloat(document.getElementById('offsetYInput').value) || 0;
+
+            console.log('=== APPLICA OFFSET ===');
+            console.log('Distanza offset:', offset);
+
+            chartState.offsetLines = [];
+
+            // Raccogli tutti i segmenti (coppie di punti consecutivi)
+            let allSegments = [];
+
+            if (chartState.segments && chartState.segments.length > 0) {
+                chartState.segments.forEach(seg => {
+                    for (let i = 0; i < seg.points.length - 1; i++) {
+                        allSegments.push({
+                            ax: seg.points[i].x,
+                            ay: seg.points[i].y,
+                            bx: seg.points[i + 1].x,
+                            by: seg.points[i + 1].y
+                        });
+                    }
+                });
+            } else if (chartState.data.length > 1) {
+                for (let i = 0; i < chartState.data.length - 1; i++) {
+                    allSegments.push({
+                        ax: chartState.data[i].x,
+                        ay: chartState.data[i].y,
+                        bx: chartState.data[i + 1].x,
+                        by: chartState.data[i + 1].y
+                    });
+                }
+            }
+
+            console.log('Segmenti trovati:', allSegments.length);
+
+            // Log ordine segmenti PRIMA dell'ordinamento
+            console.log('Segmenti PRIMA ordinamento:');
+            allSegments.forEach((seg, i) => {
+                console.log(`  ${i}: (${seg.ax.toFixed(4)},${seg.ay.toFixed(4)}) -> (${seg.bx.toFixed(4)},${seg.by.toFixed(4)})`);
+            });
+
+            // Ordina segmenti per X crescente (usa il minimo X tra ax e bx)
+            allSegments.sort((a, b) => {
+                const minXa = Math.min(a.ax, a.bx);
+                const minXb = Math.min(b.ax, b.bx);
+                return minXa - minXb;
+            });
+
+            // Log ordine segmenti DOPO l'ordinamento
+            console.log('Segmenti DOPO ordinamento (sx->dx):');
+            allSegments.forEach((seg, i) => {
+                console.log(`  ${i}: (${seg.ax.toFixed(4)},${seg.ay.toFixed(4)}) -> (${seg.bx.toFixed(4)},${seg.by.toFixed(4)})`);
+            });
+
+            // Range X per disegnare le rette "infinite"
+            const allX = chartState.data.map(p => p.x);
+            const minX = Math.min(...allX);
+            const maxX = Math.max(...allX);
+            const rangeX = maxX - minX;
+            const xStart = minX - rangeX * 5;
+            const xEnd = maxX + rangeX * 5;
+
+            // Per ogni segmento ((ax,ay),(bx,by)):
+            // Calcolo m, q, poi q' = q + offset * sqrt(m² + 1)
+            // Per segmenti verticali uso approccio diverso
+            allSegments.forEach((seg, idx) => {
+                const { ax, ay, bx, by } = seg;
+                const dx = bx - ax;
+                const dy = by - ay;
+
+                console.log(`Seg ${idx}: (${ax.toFixed(4)},${ay.toFixed(4)}) -> (${bx.toFixed(4)},${by.toFixed(4)})`);
+
+                // Segmento verticale: retta parallela è x = ax + offset
+                if (Math.abs(dx) < 1e-10) {
+                    console.log(`  Verticale: x = ${ax.toFixed(6)}, offset x' = ${(ax + offset).toFixed(6)}`);
+                    chartState.offsetLines.push({
+                        x1: ax + offset,
+                        y1: -1000,
+                        x2: ax + offset,
+                        y2: 1000,
+                        vertical: true
+                    });
+                    return;
+                }
+
+                const m = dy / dx;
+                const q = ay - m * ax;
+                const qOffset = q + offset * Math.sqrt(m * m + 1);
+
+                console.log(`  m=${m.toFixed(6)}, q=${q.toFixed(6)}`);
+                console.log(`  q'=${qOffset.toFixed(6)} (q + ${offset} * sqrt(${(m*m+1).toFixed(4)}) = q + ${(offset * Math.sqrt(m*m+1)).toFixed(6)})`);
+
+                // Retta offset: y = m*x + qOffset
+                const y1 = m * xStart + qOffset;
+                const y2 = m * xEnd + qOffset;
+
+                chartState.offsetLines.push({
+                    x1: xStart,
+                    y1: y1,
+                    x2: xEnd,
+                    y2: y2
+                });
+            });
+
+            console.log('Rette offset create:', chartState.offsetLines.length);
+
+            // INTERSEZIONI con backtracking:
+            // Per ogni so_i, cerca intersezione andando indietro fino a so_k che non interseca
+            // Rimuovi segmenti intermedi, modifica endpoint di so_k+1
+
+            if (chartState.offsetLines.length < 2) {
+                updateUI();
+                drawChart();
+                return;
+            }
+
+            // Calcola m e q per tutti i segmenti offset
+            const offsetSegs = allSegments.map((seg, i) => {
+                const dx = seg.bx - seg.ax;
+                const dy = seg.by - seg.ay;
+                const len = Math.sqrt(dx * dx + dy * dy);
+
+                let m, q;
+                if (Math.abs(dx) < 1e-10) {
+                    m = Infinity;
+                    q = seg.ax + offset;
+                } else {
+                    m = dy / dx;
+                    q = seg.ay - m * seg.ax + offset * Math.sqrt(m * m + 1);
+                }
+
+                // Calcola punti iniziale e finale del segmento offset
+                const nx = -dy / len;
+                const ny = dx / len;
+
+                return {
+                    m: m,
+                    q: q,
+                    xi: seg.ax + nx * offset,
+                    yi: seg.ay + ny * offset,
+                    xf: seg.bx + nx * offset,
+                    yf: seg.by + ny * offset
+                };
+            });
+
+            // Funzione per calcolare intersezione tra due RETTE (no bounds checking)
+            function intersect(s1, s2) {
+                let ix, iy;
+                if (s1.m === Infinity && s2.m === Infinity) {
+                    if (Math.abs(s1.q - s2.q) < 1e-9) {
+                        return { x: s1.q, y: 0, sameLineVertical: true };
+                    }
+                    return null;
+                }
+                if (s1.m === Infinity) {
+                    ix = s1.q;
+                    iy = s2.m * ix + s2.q;
+                } else if (s2.m === Infinity) {
+                    ix = s2.q;
+                    iy = s1.m * ix + s1.q;
+                } else if (Math.abs(s1.m - s2.m) < 1e-10) {
+                    if (Math.abs(s1.q - s2.q) < 1e-9) {
+                        return { x: s1.xi, y: s1.yi, sameLine: true };
+                    }
+                    return null;
+                } else {
+                    ix = (s2.q - s1.q) / (s1.m - s2.m);
+                    iy = s1.m * ix + s1.q;
+                }
+                return { x: ix, y: iy };
+            }
+
+            // Lista dei segmenti sopravvissuti: [{xi, yi, xf, yf}, ...]
+            const survivors = [];
+
+            // Inserisci primo segmento
+            survivors.push({
+                xi: offsetSegs[0].xi,
+                yi: offsetSegs[0].yi,
+                xf: offsetSegs[0].xf,
+                yf: offsetSegs[0].yf,
+                m: offsetSegs[0].m,
+                q: offsetSegs[0].q
+            });
+
+            console.log('=== ALGORITMO INTERSEZIONI ===');
+            console.log('Inserisco so_0:', survivors[0]);
+
+            // Inserisci gli altri segmenti uno alla volta
+            for (let i = 1; i < offsetSegs.length; i++) {
+                const newSeg = offsetSegs[i];
+                console.log(`\nInserisco so_${i}: m=${newSeg.m.toFixed(4)}, q=${newSeg.q.toFixed(4)}`);
+
+                // Cerca indietro: STOP alla PRIMA intersezione valida
+                let k = survivors.length - 1;
+                let lastIntersection = null;
+
+                while (k >= 0 && !lastIntersection) {
+                    const prevSeg = survivors[k];
+                    const inter = intersect(newSeg, prevSeg);
+
+                    if (inter) {
+                        // Intersezione valida solo se x >= punto iniziale del survivor
+                        if (inter.x >= prevSeg.xi - 1e-9) {
+                            console.log(`  so_${i} ∩ survivors[${k}] = (${inter.x.toFixed(4)}, ${inter.y.toFixed(4)}) VALIDA - STOP`);
+                            lastIntersection = inter;
+                            lastIntersection.survivorIdx = k;
+                            // STOP - non continuare a cercare
+                        } else {
+                            console.log(`  so_${i} ∩ survivors[${k}] = (${inter.x.toFixed(4)}, ${inter.y.toFixed(4)}) FUORI (x < xi)`);
+                            k--;
+                        }
+                    } else {
+                        console.log(`  so_${i} ∩ survivors[${k}] = PARALLELE`);
+                        k--;
+                    }
+                }
+
+                if (lastIntersection) {
+                    const survivorIdx = lastIntersection.survivorIdx;
+
+                    // Rimuovi segmenti dopo survivorIdx
+                    const removed = survivors.length - survivorIdx - 1;
+                    if (removed > 0) {
+                        console.log(`  Rimuovo ${removed} segmenti (da ${survivorIdx + 1} a ${survivors.length - 1})`);
+                        survivors.splice(survivorIdx + 1);
+                    }
+
+                    // Modifica endpoint del segmento survivorIdx
+                    survivors[survivorIdx].xf = lastIntersection.x;
+                    survivors[survivorIdx].yf = lastIntersection.y;
+                    console.log(`  survivors[${survivorIdx}].end = (${lastIntersection.x.toFixed(4)}, ${lastIntersection.y.toFixed(4)})`);
+
+                    // Aggiungi nuovo segmento che parte dall'intersezione
+                    survivors.push({
+                        xi: lastIntersection.x,
+                        yi: lastIntersection.y,
+                        xf: newSeg.xf,
+                        yf: newSeg.yf,
+                        m: newSeg.m,
+                        q: newSeg.q
+                    });
+                    console.log(`  Nuovo segmento: (${lastIntersection.x.toFixed(4)}, ${lastIntersection.y.toFixed(4)}) -> (${newSeg.xf.toFixed(4)}, ${newSeg.yf.toFixed(4)})`);
+                }
+                // Se nessuna intersezione valida, non aggiungiamo nulla (no "collegamento normale")
+
+                console.log(`  Survivors totali: ${survivors.length}`);
+            }
+
+            console.log('\n=== SEGMENTI SOPRAVVISSUTI ===');
+            survivors.forEach((s, i) => {
+                console.log(`  ${i}: (${s.xi.toFixed(4)}, ${s.yi.toFixed(4)}) -> (${s.xf.toFixed(4)}, ${s.yf.toFixed(4)})`);
+            });
+
+            // Costruisci polilinea dai sopravvissuti
+            chartState.offsetPolyline = [];
+            survivors.forEach((s, i) => {
+                if (i === 0) {
+                    chartState.offsetPolyline.push({ x: s.xi, y: s.yi });
+                }
+                chartState.offsetPolyline.push({ x: s.xf, y: s.yf });
+            });
+
+            console.log('Polilinea offset:', chartState.offsetPolyline.length, 'punti');
+
+            updateUI();
+            drawChart();
+        }
+
+        function setInterpolationStep(value) {
+            INTERPOLATION_STEP = parseFloat(value) || 0.005;
+            // Aggiorna step delle linee verticali e offset Y
+            document.getElementById('line1Input').step = INTERPOLATION_STEP;
+            document.getElementById('line2Input').step = INTERPOLATION_STEP;
+            document.getElementById('offsetYInput').step = INTERPOLATION_STEP;
+            updateUI();
+            reloadLastFile();
+        }
+
+        function setInterpolationMode(mode) {
+            INTERPOLATION_MODE = mode;
+            console.log('Modalità interpolazione:', mode);
+            updateUI();
+            reloadLastFile();
+        }
+
+        function setLine1X(value) {
+            chartState.line1X = parseFloat(value) || 0;
+            updateUI();
+            drawChart();
+        }
+
+        function setLine2X(value) {
+            chartState.line2X = parseFloat(value) || 0;
+            updateUI();
+            drawChart();
+        }
+
+        function updateUI() {
+            document.getElementById('dataPointsCount').textContent = chartState.data.length;
+            document.getElementById('generatedPointsCount').textContent = chartState.data.length;
+            document.getElementById('offsetYValue').textContent = chartState.offsetY.toFixed(0);
+            document.getElementById('currentOffsetY').textContent = chartState.offsetY.toFixed(0);
+            document.getElementById('interpolationValue').textContent = INTERPOLATION_STEP.toFixed(3);
+            document.getElementById('currentInterpolation').textContent = INTERPOLATION_STEP.toFixed(3);
+
+            // Calcola range se ci sono dati
+            if (chartState.data.length > 0) {
+                const xValues = chartState.data.map(p => p.x);
+                const yValues = chartState.data.map(p => p.y);
+                const minX = Math.min(...xValues);
+                const maxX = Math.max(...xValues);
+                const minY = Math.min(...yValues);
+                const maxY = Math.max(...yValues);
+
+                // Calcola decimali appropriati in base ai range
+                const rangeX = maxX - minX;
+                const rangeY = maxY - minY;
+                const decimalsX = getDecimalPlaces(rangeX);
+                const decimalsY = getDecimalPlaces(rangeY);
+
+                // Limiti con decimali appropriati
+                document.getElementById('line1Value').textContent = chartState.line1X.toFixed(decimalsX);
+                document.getElementById('line2Value').textContent = chartState.line2X.toFixed(decimalsX);
+
+                document.getElementById('rangeX').textContent = minX.toFixed(decimalsX) + ' ~ ' + maxX.toFixed(decimalsX);
+                document.getElementById('rangeY').textContent = minY.toFixed(decimalsY) + ' ~ ' + maxY.toFixed(decimalsY);
+            } else {
+                document.getElementById('line1Value').textContent = chartState.line1X.toFixed(2);
+                document.getElementById('line2Value').textContent = chartState.line2X.toFixed(2);
+                document.getElementById('rangeX').textContent = '-';
+                document.getElementById('rangeY').textContent = '-';
+            }
+        }
+
+        // Funzione per determinare il numero di decimali appropriato in base al range
+        function getDecimalPlaces(range) {
+            if (range === 0) return 1;
+            const absRange = Math.abs(range);
+            if (absRange >= 100) return 0;
+            if (absRange >= 10) return 1;
+            if (absRange >= 1) return 2;
+            if (absRange >= 0.1) return 3;
+            if (absRange >= 0.01) return 4;
+            return 5;
+        }
+
+        function drawChart() {
+            console.log('drawChart() chiamato. Punti disponibili:', chartState.data.length);
+
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width;
+            const height = rect.height;
+            const padding = 60;
+
+            ctx.clearRect(0, 0, width, height);
+
+            if (chartState.data.length === 0) {
+                ctx.fillStyle = '#666666';
+                ctx.font = '16px Barlow';
+                ctx.textAlign = 'center';
+                ctx.fillText('Nessun dato disponibile.', width / 2, height / 2 - 10);
+                ctx.fillText('Carica un file DXF o CSV', width / 2, height / 2 + 15);
+                return;
+            }
+
+            // Limiti assi fissi (impostati al caricamento file)
+            const axisMinX = chartState.axisMinX;
+            const axisMaxX = chartState.axisMaxX;
+            const axisMinY = chartState.axisMinY;
+            const axisMaxY = chartState.axisMaxY;
+            const fullRangeX = axisMaxX - axisMinX;
+            const fullRangeY = axisMaxY - axisMinY;
+
+            // Applica scroll/zoom (xRangeMin/xRangeMax in percentuale 0-100)
+            const minX = axisMinX + (fullRangeX * chartState.xRangeMin / 100);
+            const maxX = axisMinX + (fullRangeX * chartState.xRangeMax / 100);
+            const rangeX = maxX - minX;
+
+            // Y segue stessa proporzione
+            const minY = axisMinY + (fullRangeY * chartState.xRangeMin / 100);
+            const maxY = axisMinY + (fullRangeY * chartState.xRangeMax / 100);
+            const rangeY = maxY - minY;
+
+            // Dimensioni area plot
+            const plotWidth = width - 2 * padding;
+            const plotHeight = height - 2 * padding;
+
+            // Scala uguale per entrambi gli assi
+            const scaleX = plotWidth / rangeX;
+            const scaleY = plotHeight / rangeY;
+            const scale = Math.min(scaleX, scaleY);
+
+            // Applica offset Y ai dati per disegnare (l'asse rimane fisso)
+            const dataWithOffset = chartState.data.map(p => ({
+                x: p.x,
+                y: p.y + chartState.offsetY
+            }));
+
+            // Grid
+            ctx.strokeStyle = '#e0e0e0';
+            ctx.lineWidth = 1;
+
+            for (let i = 0; i <= 10; i++) {
+                const x = padding + (width - 2 * padding) * (i / 10);
+                ctx.beginPath();
+                ctx.moveTo(x, padding);
+                ctx.lineTo(x, height - padding);
+                ctx.stroke();
+
+                const y = padding + (height - 2 * padding) * (i / 10);
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Axes
+            ctx.strokeStyle = '#666666';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.stroke();
+
+            // Labels
+            ctx.fillStyle = '#666666';
+            ctx.font = '12px JetBrains Mono';
+            ctx.textAlign = 'center';
+
+            const decimalsX = getDecimalPlaces(rangeX);
+            const decimalsY = getDecimalPlaces(rangeY);
+
+            for (let i = 0; i <= 5; i++) {
+                const screenX = padding + plotWidth * (i / 5);
+                const value = minX + rangeX * (i / 5);
+                ctx.fillText(value.toFixed(decimalsX), screenX, height - padding + 20);
+            }
+
+            ctx.textAlign = 'right';
+            for (let i = 0; i <= 5; i++) {
+                const screenY = height - padding - plotHeight * (i / 5);
+                const value = minY + rangeY * (i / 5);
+                ctx.fillText(value.toFixed(decimalsY), padding - 10, screenY + 4);
+            }
+
+            // Transform con scala uguale per X e Y
+            const transformX = (x) => padding + (x - minX) * scale;
+            const transformY = (y) => height - padding - (y - minY) * scale;
+
+            // Line - disegna segmenti separati se disponibili
+            ctx.strokeStyle = '#e07828';
+            ctx.lineWidth = 2;
+
+            if (chartState.segments && chartState.segments.length > 0) {
+                // Disegna ogni segmento separatamente (non li collega)
+                chartState.segments.forEach((segment, segIndex) => {
+                    ctx.beginPath();
+                    segment.points.forEach((point, index) => {
+                        const x = transformX(point.x);
+                        const y = transformY(point.y + chartState.offsetY);
+                        if (index === 0) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    });
+                    ctx.stroke();
+                });
+                console.log('Disegnati', chartState.segments.length, 'segmenti separati');
+            } else {
+                // Fallback: disegna tutto come linea continua (per CSV)
+                ctx.beginPath();
+                dataWithOffset.forEach((point, index) => {
+                    const x = transformX(point.x);
+                    const y = transformY(point.y);
+                    if (index === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                });
+                ctx.stroke();
+            }
+
+            // DEBUG: Disegna le rette offset (linee sottili verdi)
+            if (DEBUG_MODE && chartState.offsetLines && chartState.offsetLines.length > 0) {
+                ctx.strokeStyle = '#88cc88';
+                ctx.lineWidth = 1;
+                chartState.offsetLines.forEach((line, idx) => {
+                    ctx.beginPath();
+                    ctx.moveTo(transformX(line.x1), transformY(line.y1));
+                    ctx.lineTo(transformX(line.x2), transformY(line.y2));
+                    ctx.stroke();
+                });
+            }
+
+            // DEBUG: Disegna il nuovo segmento che si sta inserendo (ARANCIONE)
+            if (DEBUG_MODE && chartState.offsetNewSeg) {
+                const ns = chartState.offsetNewSeg;
+                ctx.strokeStyle = '#ff9900';
+                ctx.lineWidth = 4;
+                ctx.setLineDash([10, 5]);
+                ctx.beginPath();
+                ctx.moveTo(transformX(ns.xi), transformY(ns.yi));
+                ctx.lineTo(transformX(ns.xf), transformY(ns.yf));
+                ctx.stroke();
+                ctx.setLineDash([]);
+
+                ctx.fillStyle = '#ff9900';
+                ctx.beginPath();
+                ctx.arc(transformX(ns.xi), transformY(ns.yi), 8, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(transformX(ns.xf), transformY(ns.yf), 8, 0, 2 * Math.PI);
+                ctx.fill();
+
+                ctx.font = 'bold 12px Arial';
+                ctx.fillText('NEW', transformX(ns.xi) + 10, transformY(ns.yi) - 10);
+            }
+
+            // Disegna profilo offset finale
+            if (chartState.offsetSurvivors && chartState.offsetSurvivors.length > 0) {
+                ctx.strokeStyle = '#c45c10';
+                ctx.lineWidth = 3;
+
+                chartState.offsetSurvivors.forEach((seg, idx) => {
+                    ctx.beginPath();
+                    ctx.moveTo(transformX(seg.xi), transformY(seg.yi));
+                    ctx.lineTo(transformX(seg.xf), transformY(seg.yf));
+                    ctx.stroke();
+                });
+
+                // DEBUG: punti e numeri
+                if (DEBUG_MODE) {
+                    chartState.offsetSurvivors.forEach((seg, idx) => {
+                        ctx.fillStyle = '#0000ff';
+                        ctx.beginPath();
+                        ctx.arc(transformX(seg.xi), transformY(seg.yi), 6, 0, 2 * Math.PI);
+                        ctx.fill();
+
+                        ctx.fillStyle = '#ff0000';
+                        ctx.beginPath();
+                        ctx.arc(transformX(seg.xf), transformY(seg.yf), 6, 0, 2 * Math.PI);
+                        ctx.fill();
+
+                        ctx.fillStyle = '#000';
+                        ctx.font = '10px Arial';
+                        ctx.fillText(idx.toString(), transformX(seg.xi) + 8, transformY(seg.yi) - 8);
+                    });
+                    console.log('Disegnati', chartState.offsetSurvivors.length, 'segmenti sopravvissuti');
+                }
+            } else if (chartState.offsetPolyline && chartState.offsetPolyline.length > 1) {
+                // Fallback: disegna polilinea se non ci sono survivors
+                ctx.strokeStyle = '#c45c10';
+                ctx.lineWidth = 3;
+
+                ctx.beginPath();
+                chartState.offsetPolyline.forEach((pt, idx) => {
+                    const sx = transformX(pt.x);
+                    const sy = transformY(pt.y);
+                    if (idx === 0) ctx.moveTo(sx, sy);
+                    else ctx.lineTo(sx, sy);
+                });
+                ctx.stroke();
+            }
+
+            // Axis titles
+            ctx.fillStyle = '#1a1a1a';
+            ctx.font = '14px Barlow';
+            ctx.textAlign = 'center';
+            ctx.fillText('Asse X', width / 2, height - 10);
+
+            ctx.save();
+            ctx.translate(20, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('Asse Y', 0, 0);
+            ctx.restore();
+
+            // Disegna limiti orizzontali (linee verticali) — solo in modalità normale
+            if (PARAM_MODE !== 'viewer' && PARAM_MODE !== 'opc') {
+            const line1ScreenX = transformX(chartState.line1X);
+            const line2ScreenX = transformX(chartState.line2X);
+
+            // Trova Y alla posizione X delle linee (dal dataset con offset)
+            const findYatX = (targetX) => {
+                for (let i = 0; i < dataWithOffset.length - 1; i++) {
+                    const p1 = dataWithOffset[i];
+                    const p2 = dataWithOffset[i + 1];
+                    if ((p1.x <= targetX && targetX <= p2.x) || (p2.x <= targetX && targetX <= p1.x)) {
+                        const t = Math.abs(p2.x - p1.x) < 0.00001 ? 0 : (targetX - p1.x) / (p2.x - p1.x);
+                        return p1.y + t * (p2.y - p1.y);
+                    }
+                }
+                return null;
+            };
+
+            const line1Y = findYatX(chartState.line1X);
+            const line2Y = findYatX(chartState.line2X);
+
+            // Limite 1 (rosso)
+            ctx.strokeStyle = '#ff4444';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(line1ScreenX, padding);
+            ctx.lineTo(line1ScreenX, height - padding);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Label Limite 1 con coordinate X e Y
+            ctx.fillStyle = '#ff4444';
+            ctx.font = '11px JetBrains Mono';
+            ctx.textAlign = 'left';
+            const line1Label = 'L1: X=' + chartState.line1X.toFixed(decimalsX) +
+                               (line1Y !== null ? ' Y=' + line1Y.toFixed(decimalsY) : '');
+            ctx.fillText(line1Label, line1ScreenX + 5, padding + 15);
+
+            // Limite 2 (verde)
+            ctx.strokeStyle = '#44ff44';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(line2ScreenX, padding);
+            ctx.lineTo(line2ScreenX, height - padding);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Label Limite 2 con coordinate X e Y
+            ctx.fillStyle = '#44ff44';
+            ctx.font = '11px JetBrains Mono';
+            ctx.textAlign = 'left';
+            const line2Label = 'L2: X=' + chartState.line2X.toFixed(decimalsX) +
+                               (line2Y !== null ? ' Y=' + line2Y.toFixed(decimalsY) : '');
+            ctx.fillText(line2Label, line2ScreenX + 5, padding + 30);
+            } // fine blocco linee verticali
+
+            // Linea orizzontale per offset (se offset ≠ 0)
+            if (chartState.offsetY !== 0) {
+                const offsetScreenY = transformY(chartState.offsetY);
+
+                ctx.strokeStyle = '#ffaa00';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([10, 5]);
+                ctx.beginPath();
+                ctx.moveTo(padding, offsetScreenY);
+                ctx.lineTo(width - padding, offsetScreenY);
+                ctx.stroke();
+                ctx.setLineDash([]);
+
+                // Label linea offset
+                ctx.fillStyle = '#ffaa00';
+                ctx.font = '11px JetBrains Mono';
+                ctx.textAlign = 'right';
+                ctx.fillText('Offset: Y=' + chartState.offsetY.toFixed(decimalsY), width - padding - 5, offsetScreenY - 5);
+            }
+        }
+
+        // ===== FILE UPLOAD =====
+
+        function handleCSVUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            console.log('=== CARICAMENTO NUOVO CSV DA FILE ===');
+            console.log('File:', file.name);
+
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('connectionStatus').textContent = 'Caricamento CSV...';
+
+            // Reset completo stato offset
+            chartState.offsetY = 0;
+            chartState.offsetLines = [];
+            chartState.offsetPolyline = [];
+            chartState.offsetSurvivors = [];
+            chartState.offsetNewSeg = null;
+            document.getElementById('offsetYInput').value = 0;
+
+            // Reset step state
+            if (stepState) {
+                stepState.initialized = false;
+                stepState.currentIdx = 0;
+                stepState.offsetSegs = [];
+                stepState.survivors = [];
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const csvText = e.target.result;
+                    parseCSV(csvText);
+                } catch (error) {
+                    console.error('Errore lettura file CSV:', error);
+                    document.getElementById('connectionStatus').textContent = 'ERRORE: ' + error.message;
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // ===== DXF PARSING =====
+
+        function handleDXFUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            console.log('=== CARICAMENTO NUOVO DXF ===');
+            console.log('File:', file.name);
+
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('connectionStatus').textContent = 'Caricamento DXF...';
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const dxfString = e.target.result;
+                    // Salva per refresh automatico e resetta CSV
+                    lastDxfString = dxfString;
+                    lastDxfFileName = file.name;
+                    lastLoadType = 'dxf';
+                    lastCsvData = null;  // Reset CSV quando carichi DXF
+
+                    // Reset completo stato offset
+                    chartState.offsetY = 0;
+                    chartState.offsetLines = [];
+                    chartState.offsetPolyline = [];
+                    chartState.offsetSurvivors = [];
+                    chartState.offsetNewSeg = null;
+                    document.getElementById('offsetYInput').value = 0;
+
+                    // Reset step state
+                    if (stepState) {
+                        stepState.initialized = false;
+                        stepState.currentIdx = 0;
+                        stepState.offsetSegs = [];
+                        stepState.survivors = [];
+                    }
+
+                    console.log('DXF salvato per refresh. lastLoadType:', lastLoadType);
+                    parseDXF(dxfString, file.name);
+                } catch (error) {
+                    console.error('Errore lettura file:', error);
+                    document.getElementById('connectionStatus').textContent = 'ERRORE: ' + error.message;
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // ===== PARSER DXF NATIVO =====
+        function parseDXFNative(dxfString) {
+            const lines = dxfString.split('\n').map(l => l.trim());
+            const entities = [];
+            let currentEntity = null;
+            let inEntitiesSection = false;
+            let groupCode = null;
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+
+                // Rileva sezione ENTITIES
+                if (line === 'ENTITIES') {
+                    inEntitiesSection = true;
+                    continue;
+                }
+                if (line === 'ENDSEC' && inEntitiesSection) {
+                    if (currentEntity) entities.push(currentEntity);
+                    break;
+                }
+
+                if (!inEntitiesSection) continue;
+
+                // Group code (numero)
+                if (i % 2 === 0) {
+                    groupCode = parseInt(line);
+                } else {
+                    // Value
+                    const value = line;
+
+                    if (groupCode === 0) {
+                        // Nuovo entity
+                        if (currentEntity) entities.push(currentEntity);
+                        currentEntity = { type: value, data: {} };
+                    } else if (currentEntity) {
+                        // Store data by group code
+                        if (!currentEntity.data[groupCode]) {
+                            currentEntity.data[groupCode] = [];
+                        }
+                        currentEntity.data[groupCode].push(value);
+                    }
+                }
+            }
+
+            console.log('Parser nativo: trovate', entities.length, 'entità');
+            return { entities: entities };
+        }
+
+        function parseDXF(dxfString, fileName) {
+            try {
+                // Leggi passo interpolazione dal campo input
+                INTERPOLATION_STEP = parseFloat(document.getElementById('interpolationInput').value) || 0.005;
+
+                console.log('=== PARSING DXF (Parser Nativo) ===');
+                console.log('File:', fileName);
+                console.log('Dimensione file:', dxfString.length, 'caratteri');
+                console.log('Passo interpolazione:', INTERPOLATION_STEP);
+
+                const dxf = parseDXFNative(dxfString);
+
+                console.log('DXF parsato');
+                console.log('Entità trovate:', dxf.entities ? dxf.entities.length : 0);
+
+                if (!dxf || !dxf.entities || dxf.entities.length === 0) {
+                    throw new Error('DXF non valido o vuoto');
+                }
+
+                // Log dei tipi di entità presenti
+                const entityTypes = {};
+                dxf.entities.forEach(entity => {
+                    entityTypes[entity.type] = (entityTypes[entity.type] || 0) + 1;
+                });
+                console.log('Tipi di entità nel DXF:', entityTypes);
+
+                let xPoints = [];
+                let yPoints = [];
+                let segments = [];  // Array di segmenti separati
+                let splineCount = 0;
+                let lineCount = 0;
+                let arcCount = 0;
+                let circleCount = 0;
+                let polylineCount = 0;
+                let ignoredCount = 0;
+
+                // Processa tutte le entità - ogni entità è un segmento separato
+                dxf.entities.forEach(entity => {
+                    console.log('Processando entità tipo:', entity.type);
+
+                    // Array temporanei per questa entità
+                    let entityXPoints = [];
+                    let entityYPoints = [];
+
+                    if (entity.type === 'SPLINE') {
+                        splineCount++;
+                        console.log('Processando Spline #' + splineCount, entity);
+                        processSplineNative(entity, entityXPoints, entityYPoints);
+                    } else if (entity.type === 'LINE') {
+                        lineCount++;
+                        console.log('Processando Line #' + lineCount, entity);
+                        processLineNative(entity, entityXPoints, entityYPoints);
+                    } else if (entity.type === 'ARC') {
+                        arcCount++;
+                        console.log('Processando Arc #' + arcCount, entity);
+                        processArcNative(entity, entityXPoints, entityYPoints);
+                    } else if (entity.type === 'CIRCLE') {
+                        circleCount++;
+                        console.log('Processando Circle #' + circleCount, entity);
+                        processCircleNative(entity, entityXPoints, entityYPoints);
+                    } else if (entity.type === 'LWPOLYLINE' || entity.type === 'POLYLINE') {
+                        polylineCount++;
+                        console.log('Processando Polyline #' + polylineCount, entity);
+                        processPolylineNative(entity, entityXPoints, entityYPoints);
+                    } else {
+                        ignoredCount++;
+                        console.log('Entità ignorata:', entity.type);
+                    }
+
+                    // Se questa entità ha prodotto punti, salvala come segmento separato
+                    if (entityXPoints.length > 0) {
+                        let segmentPoints = [];
+                        for (let i = 0; i < entityXPoints.length; i++) {
+                            segmentPoints.push({ x: entityXPoints[i], y: entityYPoints[i] });
+                            // Aggiungi anche all'array globale per compatibilità
+                            xPoints.push(entityXPoints[i]);
+                            yPoints.push(entityYPoints[i]);
+                        }
+                        segments.push({ points: segmentPoints, type: entity.type });
+                        console.log('  Segmento salvato con ' + segmentPoints.length + ' punti');
+                    }
+                });
+
+                console.log('Punti totali generati (prima della scala):', xPoints.length);
+                console.log('Splines:', splineCount, 'Lines:', lineCount, 'Arcs:', arcCount, 'Circles:', circleCount, 'Polylines:', polylineCount, 'Ignorati:', ignoredCount);
+
+                if (xPoints.length === 0) {
+                    const errorMsg = `DXF processato ma nessun punto estratto. Entità trovate: ${dxf.entities.length}. Controllare console per dettagli.`;
+                    document.getElementById('connectionStatus').textContent = errorMsg;
+                    throw new Error(errorMsg);
+                }
+
+                console.log('Punti estratti.');
+                console.log('X:', Math.min(...xPoints).toFixed(2), 'to', Math.max(...xPoints).toFixed(2));
+                console.log('Y:', Math.min(...yPoints).toFixed(2), 'to', Math.max(...yPoints).toFixed(2));
+
+                // Trasla tutti i punti: x = x - xmin, y = y - ymin
+                const minXValue = Math.min(...xPoints);
+                const minYValue = Math.min(...yPoints);
+                for (let i = 0; i < xPoints.length; i++) {
+                    xPoints[i] -= minXValue;
+                    yPoints[i] -= minYValue;
+                }
+
+                console.log('Traslazione completata. Sottratti minX:', minXValue.toFixed(2), 'minY:', minYValue.toFixed(2));
+                console.log('X dopo traslazione:', Math.min(...xPoints).toFixed(2), 'to', Math.max(...xPoints).toFixed(2));
+                console.log('Y dopo traslazione:', Math.min(...yPoints).toFixed(2), 'to', Math.max(...yPoints).toFixed(2));
+
+                // Converti in formato chartState.data
+                chartState.data = [];
+                for (let i = 0; i < xPoints.length; i++) {
+                    chartState.data.push({ x: xPoints[i], y: yPoints[i] });
+                }
+
+                // Salva i segmenti separati (traslati)
+                chartState.segments = segments.map(seg => ({
+                    type: seg.type,
+                    points: seg.points.map(p => ({ x: p.x - minXValue, y: p.y - minYValue }))
+                }));
+
+                console.log('chartState.data popolato con', chartState.data.length, 'punti');
+                console.log('chartState.segments:', chartState.segments.length, 'segmenti separati');
+                console.log('Primi 3 punti:', chartState.data.slice(0, 3));
+
+                // Calcola statistiche dopo traslazione
+                const maxX = Math.max(...xPoints);
+                const maxY = Math.max(...yPoints);
+
+                // Limiti assi: min = 0, max = max(xmax, ymax)
+                const axisMax = Math.max(maxX, maxY);
+                chartState.axisMinX = 0;
+                chartState.axisMaxX = axisMax;
+                chartState.axisMinY = 0;
+                chartState.axisMaxY = axisMax;
+
+                // Inizializza linee verticali ai limiti dati
+                chartState.line1X = 0;
+                chartState.line2X = maxX;
+                document.getElementById('line1Input').value = '0';
+                document.getElementById('line2Input').value = maxX.toFixed(3);
+
+                let successMsg = `Caricati ${xPoints.length} punti`;
+                const parts = [];
+                if (splineCount > 0) parts.push(`${splineCount} splines`);
+                if (lineCount > 0) parts.push(`${lineCount} linee`);
+                if (arcCount > 0) parts.push(`${arcCount} archi`);
+                if (circleCount > 0) parts.push(`${circleCount} cerchi`);
+                if (polylineCount > 0) parts.push(`${polylineCount} polylines`);
+                if (parts.length > 0) successMsg += ` (${parts.join(', ')})`;
+
+                document.getElementById('connectionStatus').textContent = successMsg;
+
+                console.log('=== DXF CARICATO CON SUCCESSO ===');
+                console.log(successMsg);
+                console.log('Range X: 0 to', maxX.toFixed(1));
+                console.log('Range Y: 0 to', maxY.toFixed(1));
+
+                // Esporta CSV (opzionale)
+                exportToCSV(chartState.data);
+
+                updateUI();
+                drawChart();
+
+            } catch (error) {
+                console.error('Errore parsing DXF:', error);
+                document.getElementById('connectionStatus').textContent = 'ERRORE: ' + error.message;
+                chartState.data = [];
+                updateUI();
+                drawChart();
+            }
+        }
+
+        // ===== FUNZIONI DI PROCESSAMENTO PER PARSER NATIVO =====
+        function processLineNative(entity, xPoints, yPoints) {
+            // LINE: group codes 10,20 (start), 11,21 (end)
+            const x1 = entity.data[10] ? parseFloat(entity.data[10][0]) : 0;
+            const y1 = entity.data[20] ? parseFloat(entity.data[20][0]) : 0;
+            const x2 = entity.data[11] ? parseFloat(entity.data[11][0]) : 0;
+            const y2 = entity.data[21] ? parseFloat(entity.data[21][0]) : 0;
+
+            console.log('  LINE da (' + x1 + ',' + y1 + ') a (' + x2 + ',' + y2 + ')');
+            interpolateLine(x1, y1, x2, y2, xPoints, yPoints);
+        }
+
+        function processArcNative(entity, xPoints, yPoints) {
+            // ARC: 10,20 (center), 40 (radius), 50 (start angle), 51 (end angle)
+            const cx = entity.data[10] ? parseFloat(entity.data[10][0]) : 0;
+            const cy = entity.data[20] ? parseFloat(entity.data[20][0]) : 0;
+            const radius = entity.data[40] ? parseFloat(entity.data[40][0]) : 0;
+            const startAngle = entity.data[50] ? parseFloat(entity.data[50][0]) : 0;
+            const endAngle = entity.data[51] ? parseFloat(entity.data[51][0]) : 360;
+
+            console.log('  ARC centro (' + cx + ',' + cy + ') raggio ' + radius + ' angoli ' + startAngle + '-' + endAngle);
+
+            const arc = {
+                center: { x: cx, y: cy },
+                radius: radius,
+                startAngle: startAngle,
+                endAngle: endAngle
+            };
+            interpolateArc(arc, xPoints, yPoints);
+        }
+
+        function processCircleNative(entity, xPoints, yPoints) {
+            // CIRCLE: 10,20 (center), 40 (radius)
+            const cx = entity.data[10] ? parseFloat(entity.data[10][0]) : 0;
+            const cy = entity.data[20] ? parseFloat(entity.data[20][0]) : 0;
+            const radius = entity.data[40] ? parseFloat(entity.data[40][0]) : 0;
+
+            console.log('  CIRCLE centro (' + cx + ',' + cy + ') raggio ' + radius);
+
+            // Un cerchio è un arco completo da 0 a 360 gradi
+            const circle = {
+                center: { x: cx, y: cy },
+                radius: radius,
+                startAngle: 0,
+                endAngle: 360
+            };
+            interpolateArc(circle, xPoints, yPoints);
+        }
+
+        function processPolylineNative(entity, xPoints, yPoints) {
+            // LWPOLYLINE/POLYLINE: group codes 10,20 per ogni vertice
+            const xs = entity.data[10] || [];
+            const ys = entity.data[20] || [];
+            const closed = entity.data[70] && parseInt(entity.data[70][0]) & 1;
+
+            console.log('  POLYLINE con ' + xs.length + ' vertici, closed=' + closed);
+
+            for (let i = 0; i < xs.length - 1; i++) {
+                const x1 = parseFloat(xs[i]);
+                const y1 = parseFloat(ys[i]);
+                const x2 = parseFloat(xs[i + 1]);
+                const y2 = parseFloat(ys[i + 1]);
+                interpolateLine(x1, y1, x2, y2, xPoints, yPoints);
+            }
+
+            // Se chiusa, collega ultimo a primo
+            if (closed && xs.length > 1) {
+                const x1 = parseFloat(xs[xs.length - 1]);
+                const y1 = parseFloat(ys[ys.length - 1]);
+                const x2 = parseFloat(xs[0]);
+                const y2 = parseFloat(ys[0]);
+                interpolateLine(x1, y1, x2, y2, xPoints, yPoints);
+            }
+        }
+
+        function processSplineNative(entity, xPoints, yPoints) {
+            // SPLINE: control points in 10,20,30
+            // Fit points in 11,21,31
+            const controlX = entity.data[10] || [];
+            const controlY = entity.data[20] || [];
+            const fitX = entity.data[11] || [];
+            const fitY = entity.data[21] || [];
+            const degree = entity.data[71] ? parseInt(entity.data[71][0]) : 3;
+            const closed = entity.data[70] && parseInt(entity.data[70][0]) & 1;
+
+            // Usa fit points se disponibili, altrimenti control points
+            let xs = fitX.length > 0 ? fitX : controlX;
+            let ys = fitY.length > 0 ? fitY : controlY;
+
+            console.log('  SPLINE con ' + xs.length + ' punti originali, degree=' + degree + ', closed=' + closed);
+
+            if (xs.length < 2) {
+                console.warn('  SPLINE senza punti sufficienti');
+                return;
+            }
+
+            const startLength = xPoints.length;
+
+            // Genera una rappresentazione ad alta risoluzione della spline (curva liscia)
+            const highResPoints = generatePolygonalVertices(xs, ys, closed, 5000);
+
+            if (highResPoints.length === 0) {
+                console.warn('  SPLINE: nessun punto generato');
+                return;
+            }
+
+            console.log('  Generati ' + highResPoints.length + ' punti ad alta risoluzione');
+
+            if (INTERPOLATION_MODE === 'deltaX') {
+                // Modalità DELTA X: campiona la curva a intervalli regolari sull'asse X
+                sampleSplineByX(highResPoints, xPoints, yPoints, INTERPOLATION_STEP);
+            } else {
+                // Modalità GEOMETRICA: campiona la curva a intervalli regolari di lunghezza
+                sampleSplineByLength(highResPoints, xPoints, yPoints, INTERPOLATION_STEP);
+            }
+
+            const addedPoints = xPoints.length - startLength;
+            console.log('  SPLINE processata. Punti aggiunti:', addedPoints);
+        }
+
+        // Campiona una spline ad alta risoluzione a intervalli regolari sull'asse X
+        function sampleSplineByX(highResPoints, xPoints, yPoints, step) {
+            // Trova range X
+            const allX = highResPoints.map(p => p.x);
+            const minX = Math.min(...allX);
+            const maxX = Math.max(...allX);
+
+            // Per ogni valore X desiderato, trova Y sulla curva
+            for (let targetX = minX; targetX <= maxX; targetX += step) {
+                // Trova il segmento della curva che contiene targetX
+                for (let i = 0; i < highResPoints.length - 1; i++) {
+                    const p1 = highResPoints[i];
+                    const p2 = highResPoints[i + 1];
+
+                    // Controlla se targetX è compreso tra p1.x e p2.x (gestisce direzione)
+                    const minSegX = Math.min(p1.x, p2.x);
+                    const maxSegX = Math.max(p1.x, p2.x);
+
+                    if (targetX >= minSegX && targetX <= maxSegX) {
+                        // Interpola linearmente per trovare Y
+                        const t = Math.abs(p2.x - p1.x) < 0.00001 ? 0 : (targetX - p1.x) / (p2.x - p1.x);
+                        const y = p1.y + t * (p2.y - p1.y);
+                        xPoints.push(targetX);
+                        yPoints.push(y);
+                        break;
+                    }
+                }
+            }
+
+            // Aggiungi sempre l'ultimo punto
+            if (highResPoints.length > 0) {
+                const last = highResPoints[highResPoints.length - 1];
+                if (xPoints.length === 0 || Math.abs(xPoints[xPoints.length - 1] - last.x) > step / 2) {
+                    xPoints.push(last.x);
+                    yPoints.push(last.y);
+                }
+            }
+        }
+
+        // Campiona una spline ad alta risoluzione a intervalli regolari di lunghezza
+        function sampleSplineByLength(highResPoints, xPoints, yPoints, step) {
+            if (highResPoints.length === 0) return;
+
+            // Aggiungi sempre il primo punto
+            xPoints.push(highResPoints[0].x);
+            yPoints.push(highResPoints[0].y);
+
+            let accumulatedLength = 0;
+            let nextSampleAt = step;
+
+            for (let i = 0; i < highResPoints.length - 1; i++) {
+                const p1 = highResPoints[i];
+                const p2 = highResPoints[i + 1];
+
+                const dx = p2.x - p1.x;
+                const dy = p2.y - p1.y;
+                const segmentLength = Math.sqrt(dx * dx + dy * dy);
+
+                while (accumulatedLength + segmentLength >= nextSampleAt) {
+                    // Interpola sul segmento corrente
+                    const remainingDist = nextSampleAt - accumulatedLength;
+                    const t = segmentLength < 0.00001 ? 0 : remainingDist / segmentLength;
+                    const x = p1.x + t * dx;
+                    const y = p1.y + t * dy;
+                    xPoints.push(x);
+                    yPoints.push(y);
+                    nextSampleAt += step;
+                }
+
+                accumulatedLength += segmentLength;
+            }
+
+            // Aggiungi sempre l'ultimo punto
+            const last = highResPoints[highResPoints.length - 1];
+            xPoints.push(last.x);
+            yPoints.push(last.y);
+        }
+
+        // Genera punti poligonali da una spline usando interpolazione Catmull-Rom
+        // Simula il comportamento di PolygonalVertexes(100) del codice C#
+        function generatePolygonalVertices(xs, ys, closed, numPoints) {
+            const points = [];
+
+            // Converti in array di oggetti {x, y}
+            const controlPoints = [];
+            for (let i = 0; i < xs.length; i++) {
+                controlPoints.push({
+                    x: parseFloat(xs[i]),
+                    y: parseFloat(ys[i])
+                });
+            }
+
+            if (controlPoints.length === 2) {
+                // Se ci sono solo 2 punti, ritorna quelli
+                return controlPoints;
+            }
+
+            // Usa interpolazione Catmull-Rom per generare una curva liscia
+            const segments = controlPoints.length - (closed ? 0 : 1);
+            const pointsPerSegment = Math.floor(numPoints / segments);
+
+            for (let i = 0; i < segments; i++) {
+                const p0 = closed ? controlPoints[(i - 1 + controlPoints.length) % controlPoints.length] :
+                           (i === 0 ? controlPoints[0] : controlPoints[i - 1]);
+                const p1 = controlPoints[i];
+                const p2 = controlPoints[(i + 1) % controlPoints.length];
+                const p3 = closed ? controlPoints[(i + 2) % controlPoints.length] :
+                           (i + 2 < controlPoints.length ? controlPoints[i + 2] : controlPoints[controlPoints.length - 1]);
+
+                for (let t = 0; t < pointsPerSegment; t++) {
+                    const u = t / pointsPerSegment;
+                    const point = catmullRomPoint(p0, p1, p2, p3, u);
+                    points.push(point);
+                }
+            }
+
+            // Aggiungi l'ultimo punto se non chiusa
+            if (!closed && points.length > 0) {
+                const lastControl = controlPoints[controlPoints.length - 1];
+                points.push({ x: lastControl.x, y: lastControl.y });
+            }
+
+            return points;
+        }
+
+        // Interpolazione Catmull-Rom tra 4 punti di controllo
+        function catmullRomPoint(p0, p1, p2, p3, t) {
+            const t2 = t * t;
+            const t3 = t2 * t;
+
+            const x = 0.5 * (
+                (2 * p1.x) +
+                (-p0.x + p2.x) * t +
+                (2 * p0.x - 5 * p1.x + 4 * p2.x - p3.x) * t2 +
+                (-p0.x + 3 * p1.x - 3 * p2.x + p3.x) * t3
+            );
+
+            const y = 0.5 * (
+                (2 * p1.y) +
+                (-p0.y + p2.y) * t +
+                (2 * p0.y - 5 * p1.y + 4 * p2.y - p3.y) * t2 +
+                (-p0.y + 3 * p1.y - 3 * p2.y + p3.y) * t3
+            );
+
+            return { x: x, y: y };
+        }
+
+        // ===== FUNZIONI LEGACY (NON PIÙ USATE) =====
+        function processSpline(spline, xPoints, yPoints) {
+            console.log('processSpline chiamato con:', spline);
+            console.log('  controlPoints:', spline.controlPoints ? spline.controlPoints.length : 'N/A');
+            console.log('  fitPoints:', spline.fitPoints ? spline.fitPoints.length : 'N/A');
+            console.log('  closed:', spline.closed);
+
+            // Le spline nel DXF parser hanno controlPoints
+            if (!spline.controlPoints || spline.controlPoints.length < 2) {
+                // Prova anche fitPoints
+                if (!spline.fitPoints || spline.fitPoints.length < 2) {
+                    console.warn('Spline senza control points o fit points sufficienti:', spline);
+                    return;
+                }
+            }
+
+            // Genera punti poligonali dalla spline
+            // Interpolazione semplificata: crea segmenti tra i control points
+            const points = spline.controlPoints || [];
+
+            // Se la spline ha fitPoints, usali invece
+            const interpolatePoints = spline.fitPoints && spline.fitPoints.length > 0
+                ? spline.fitPoints
+                : points;
+
+            console.log('  Usando', interpolatePoints.length, 'punti per interpolazione');
+            console.log('  Primi 2 punti:', interpolatePoints.slice(0, 2));
+
+            const startLength = xPoints.length;
+
+            // Interpola tra i punti
+            for (let i = 0; i < interpolatePoints.length - 1; i++) {
+                const p1 = interpolatePoints[i];
+                const p2 = interpolatePoints[i + 1];
+                interpolateLine(p1.x, p1.y, p2.x, p2.y, xPoints, yPoints);
+            }
+
+            // Se chiusa, collega ultimo a primo
+            if (spline.closed && interpolatePoints.length > 1) {
+                const p1 = interpolatePoints[interpolatePoints.length - 1];
+                const p2 = interpolatePoints[0];
+                interpolateLine(p1.x, p1.y, p2.x, p2.y, xPoints, yPoints);
+            }
+
+            const addedPoints = xPoints.length - startLength;
+            console.log('  Spline processata. Punti aggiunti:', addedPoints);
+        }
+
+        function interpolateLine(x1, y1, x2, y2, xPoints, yPoints) {
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+
+            let numSegments;
+
+            if (INTERPOLATION_MODE === 'deltaX') {
+                // Interpolazione basata sul delta X
+                const deltaX = Math.abs(dx);
+                if (deltaX < 0.0001) {
+                    // Linea verticale, aggiungi solo i due estremi
+                    xPoints.push(x1);
+                    yPoints.push(y1);
+                    if (Math.abs(dy) > 0.0001) {
+                        xPoints.push(x2);
+                        yPoints.push(y2);
+                    }
+                    return;
+                }
+                numSegments = Math.max(1, Math.floor(deltaX / INTERPOLATION_STEP));
+            } else {
+                // Interpolazione basata sulla lunghezza geometrica
+                const length = Math.sqrt(dx * dx + dy * dy);
+                if (length < 0.0001) return;
+                numSegments = Math.max(1, Math.floor(length / INTERPOLATION_STEP));
+            }
+
+            for (let i = 0; i <= numSegments; i++) {
+                const t = i / numSegments;
+                xPoints.push(x1 + dx * t);
+                yPoints.push(y1 + dy * t);
+            }
+        }
+
+        function interpolateArc(arc, xPoints, yPoints) {
+            let startAngle = arc.startAngle || 0;
+            let endAngle = arc.endAngle || 360;
+
+            // Normalizza angoli
+            while (endAngle < startAngle) endAngle += 360;
+
+            const angleRange = endAngle - startAngle;
+            let numSegments;
+
+            if (INTERPOLATION_MODE === 'deltaX') {
+                // Interpolazione basata sul delta X
+                // Calcola punti iniziale e finale dell'arco
+                const startAngleRad = startAngle * Math.PI / 180.0;
+                const endAngleRad = endAngle * Math.PI / 180.0;
+                const x1 = arc.center.x + arc.radius * Math.cos(startAngleRad);
+                const x2 = arc.center.x + arc.radius * Math.cos(endAngleRad);
+
+                // Trova il range X dell'arco (considera tutti i punti dell'arco)
+                // Per un arco completo o parziale, dobbiamo considerare i punti critici (0°, 90°, 180°, 270°)
+                let minX = Math.min(x1, x2);
+                let maxX = Math.max(x1, x2);
+
+                // Controlla se l'arco attraversa 0° (destra, x massimo)
+                if (startAngle <= 0 && endAngle >= 0 || startAngle <= 360 && endAngle >= 360) {
+                    maxX = Math.max(maxX, arc.center.x + arc.radius);
+                }
+                // Controlla se l'arco attraversa 180° (sinistra, x minimo)
+                if (startAngle <= 180 && endAngle >= 180) {
+                    minX = Math.min(minX, arc.center.x - arc.radius);
+                }
+
+                const deltaX = maxX - minX;
+                numSegments = Math.max(2, Math.floor(deltaX / INTERPOLATION_STEP));
+            } else {
+                // Interpolazione basata sulla lunghezza geometrica (arcLength)
+                const arcLength = arc.radius * (angleRange * Math.PI / 180.0);
+                numSegments = Math.max(2, Math.floor(arcLength / INTERPOLATION_STEP));
+            }
+
+            for (let i = 0; i <= numSegments; i++) {
+                const t = i / numSegments;
+                const angle = startAngle + angleRange * t;
+                const angleRad = angle * Math.PI / 180.0;
+
+                const x = arc.center.x + arc.radius * Math.cos(angleRad);
+                const y = arc.center.y + arc.radius * Math.sin(angleRad);
+
+                xPoints.push(x);
+                yPoints.push(y);
+            }
+        }
+
+        async function downloadCSV() {
+            if (chartState.data.length === 0) {
+                alert('Nessun dato disponibile. Carica prima un file DXF.');
+                return;
+            }
+
+            try {
+                // Determina range X dei limiti orizzontali
+                const minLimitX = Math.min(chartState.line1X, chartState.line2X);
+                const maxLimitX = Math.max(chartState.line1X, chartState.line2X);
+
+                console.log('=== EXPORT CSV ===');
+                console.log('Limiti X:', minLimitX, 'a', maxLimitX);
+                console.log('Offset Y:', chartState.offsetY);
+
+                // Raccogli punti: se c'è offset polyline usa quella, altrimenti dati originali
+                let allPoints = [];
+                if (chartState.offsetPolyline && chartState.offsetPolyline.length > 0) {
+                    // Esporta polilinea offset
+                    console.log('Esporto polilinea offset:', chartState.offsetPolyline.length, 'punti');
+                    chartState.offsetPolyline.forEach(point => {
+                        allPoints.push({ x: point.x, y: point.y });
+                    });
+                } else if (chartState.segments && chartState.segments.length > 0) {
+                    // Esporta segmenti originali
+                    chartState.segments.forEach(segment => {
+                        segment.points.forEach(point => {
+                            allPoints.push({ x: point.x, y: point.y });
+                        });
+                    });
+                } else {
+                    // Esporta dati originali
+                    chartState.data.forEach(point => {
+                        allPoints.push({ x: point.x, y: point.y });
+                    });
+                }
+
+                // Filtra per limiti X e ordina per X crescente
+                allPoints = allPoints
+                    .filter(p => p.x >= minLimitX && p.x <= maxLimitX)
+                    .sort((a, b) => a.x - b.x);
+
+                console.log('Punti da esportare:', allPoints.length);
+
+                if (allPoints.length === 0) {
+                    alert('Nessun punto compreso tra i limiti orizzontali.\nLimiti: ' + minLimitX.toFixed(2) + ' - ' + maxLimitX.toFixed(2));
+                    return;
+                }
+
+                // Crea CSV con solo X,Y
+                let csv = 'X,Y\n';
+                allPoints.forEach(point => {
+                    csv += point.x.toFixed(6) + ',' + point.y.toFixed(6) + '\n';
+                });
+
+                // Chiedi nome file all'utente
+                const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+                const defaultName = `dxf_export_${timestamp}.csv`;
+
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+
+                // Usa File System Access API se disponibile (permette di scegliere destinazione)
+                if (window.showSaveFilePicker) {
+                    try {
+                        const handle = await window.showSaveFilePicker({
+                            suggestedName: defaultName,
+                            types: [{
+                                description: 'File CSV',
+                                accept: { 'text/csv': ['.csv'] }
+                            }]
+                        });
+                        const writable = await handle.createWritable();
+                        await writable.write(blob);
+                        await writable.close();
+                    } catch (e) {
+                        if (e.name === 'AbortError') return; // Utente ha annullato
+                        throw e;
+                    }
+                } else {
+                    // Fallback: chiedi almeno il nome file
+                    const fileName = prompt('Nome del file CSV:', defaultName);
+                    if (!fileName) return; // Utente ha annullato
+
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = fileName.endsWith('.csv') ? fileName : fileName + '.csv';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                }
+
+                console.log('CSV scaricato: ' + allPoints.length + ' punti (X crescente)');
+                document.getElementById('connectionStatus').textContent = 'CSV esportato (' + allPoints.length + ' punti)';
+            } catch (error) {
+                console.error('Errore export CSV:', error);
+                alert('Errore durante l\'esportazione del CSV: ' + error.message);
+            }
+        }
+
+        function exportToCSV(data) {
+            // Funzione legacy chiamata automaticamente dopo il parsing
+            // Ora non fa nulla, l'export è manuale tramite pulsante
+            console.log('CSV pronto per l\'export (' + data.length + ' punti). Usa il pulsante "Esporta CSV".');
+        }
+
+        // ===== MOUSE DRAG PER LINEE VERTICALI =====
+        // Helper function per calcolare il range X visibile (con scroll applicato)
+        function getVisibleXRange() {
+            const fullRangeX = chartState.axisMaxX - chartState.axisMinX;
+            const minX = chartState.axisMinX + (fullRangeX * chartState.xRangeMin / 100);
+            const maxX = chartState.axisMinX + (fullRangeX * chartState.xRangeMax / 100);
+            return { minX, maxX };
+        }
+
+        canvas.addEventListener('mousedown', function(e) {
+            if (chartState.data.length === 0) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const padding = 60;
+            const width = rect.width;
+            const height = rect.height;
+            const plotWidth = width - 2 * padding;
+            const plotHeight = height - 2 * padding;
+
+            // Calcola range visibile e scala (come in drawChart)
+            const { minX, maxX } = getVisibleXRange();
+            const rangeX = maxX - minX;
+            const fullRangeY = chartState.axisMaxY - chartState.axisMinY;
+            const minY = chartState.axisMinY + (fullRangeY * chartState.xRangeMin / 100);
+            const maxY = chartState.axisMinY + (fullRangeY * chartState.xRangeMax / 100);
+            const rangeY = maxY - minY;
+
+            const scaleX = plotWidth / rangeX;
+            const scaleY = plotHeight / rangeY;
+            const scale = Math.min(scaleX, scaleY);
+
+            const transformX = (x) => padding + (x - minX) * scale;
+            const line1ScreenX = transformX(chartState.line1X);
+            const line2ScreenX = transformX(chartState.line2X);
+
+            // Verifica se il click è vicino a una linea (tolleranza 10px)
+            if (Math.abs(mouseX - line1ScreenX) < 10) {
+                isDraggingLine = 'line1';
+                canvas.style.cursor = 'ew-resize';
+            } else if (Math.abs(mouseX - line2ScreenX) < 10) {
+                isDraggingLine = 'line2';
+                canvas.style.cursor = 'ew-resize';
+            }
+        });
+
+        canvas.addEventListener('mousemove', function(e) {
+            if (chartState.data.length === 0) return;
+
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const padding = 60;
+            const width = rect.width;
+            const height = rect.height;
+            const plotWidth = width - 2 * padding;
+            const plotHeight = height - 2 * padding;
+
+            // Calcola range visibile e scala (come in drawChart)
+            const { minX, maxX } = getVisibleXRange();
+            const rangeX = maxX - minX;
+            const fullRangeY = chartState.axisMaxY - chartState.axisMinY;
+            const minY = chartState.axisMinY + (fullRangeY * chartState.xRangeMin / 100);
+            const maxY = chartState.axisMinY + (fullRangeY * chartState.xRangeMax / 100);
+            const rangeY = maxY - minY;
+
+            const scaleX = plotWidth / rangeX;
+            const scaleY = plotHeight / rangeY;
+            const scale = Math.min(scaleX, scaleY);
+
+            const transformX = (x) => padding + (x - minX) * scale;
+            const inverseTransformX = (screenX) => minX + (screenX - padding) / scale;
+
+            if (isDraggingLine) {
+                const dataX = inverseTransformX(mouseX);
+                const decimals = getDecimalPlaces(rangeX);
+
+                if (isDraggingLine === 'line1') {
+                    chartState.line1X = dataX;
+                    document.getElementById('line1Input').value = dataX.toFixed(decimals);
+                } else if (isDraggingLine === 'line2') {
+                    chartState.line2X = dataX;
+                    document.getElementById('line2Input').value = dataX.toFixed(decimals);
+                }
+
+                updateUI();
+                drawChart();
+            } else {
+                // Mostra cursore resize se vicino a una linea
+                const line1ScreenX = transformX(chartState.line1X);
+                const line2ScreenX = transformX(chartState.line2X);
+
+                if (Math.abs(mouseX - line1ScreenX) < 10 || Math.abs(mouseX - line2ScreenX) < 10) {
+                    canvas.style.cursor = 'ew-resize';
+                } else {
+                    canvas.style.cursor = 'default';
+                }
+            }
+        });
+
+        canvas.addEventListener('mouseup', function(e) {
+            isDraggingLine = null;
+            canvas.style.cursor = 'default';
+        });
+
+        canvas.addEventListener('mouseleave', function(e) {
+            isDraggingLine = null;
+            canvas.style.cursor = 'default';
+        });
+
+        // ===== RANGE SELECTOR DRAG & DROP =====
+        const rangeHandleLeft = document.getElementById('rangeHandleLeft');
+        const rangeHandleRight = document.getElementById('rangeHandleRight');
+        const rangeSelection = document.getElementById('rangeSelection');
+        let isDraggingRangeHandle = null;
+
+        function updateRangeSelector() {
+            const container = rangeHandleLeft.parentElement;
+            const containerWidth = container.offsetWidth;
+
+            const leftPos = (chartState.xRangeMin / 100) * containerWidth;
+            const rightPos = (chartState.xRangeMax / 100) * containerWidth;
+
+            rangeHandleLeft.style.left = leftPos + 'px';
+            rangeHandleRight.style.left = rightPos + 'px';
+            rangeSelection.style.left = leftPos + 'px';
+            rangeSelection.style.width = (rightPos - leftPos) + 'px';
+        }
+
+        rangeHandleLeft.addEventListener('mousedown', function(e) {
+            isDraggingRangeHandle = 'left';
+            e.preventDefault();
+        });
+
+        rangeHandleRight.addEventListener('mousedown', function(e) {
+            isDraggingRangeHandle = 'right';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDraggingRangeHandle) return;
+
+            const container = rangeHandleLeft.parentElement;
+            const rect = container.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const containerWidth = rect.width;
+            let percentage = (mouseX / containerWidth) * 100;
+            percentage = Math.max(0, Math.min(100, percentage));
+
+            if (isDraggingRangeHandle === 'left') {
+                if (percentage < chartState.xRangeMax) {
+                    chartState.xRangeMin = percentage;
+                }
+            } else if (isDraggingRangeHandle === 'right') {
+                if (percentage > chartState.xRangeMin) {
+                    chartState.xRangeMax = percentage;
+                }
+            }
+
+            updateRangeSelector();
+            drawChart();
+        });
+
+        document.addEventListener('mouseup', function(e) {
+            isDraggingRangeHandle = null;
+        });
+
+        // Carica automaticamente all'avvio
+        window.addEventListener('load', function() {
+            console.log('Widget caricato - Pronto per upload DXF o caricamento CSV');
+            console.log('DEBUG_MODE:', DEBUG_MODE, '(usa ?debug=true per attivare)');
+            updateRangeSelector();
+
+            // Mostra bottoni debug se DEBUG_MODE
+            if (DEBUG_MODE) {
+                document.getElementById('debugButtons').style.display = 'block';
+            }
+
+            applyParams();
+
+            // Chiudi numpad cliccando sullo sfondo
+            document.getElementById('numpadOverlay').addEventListener('click', function(e) {
+                if (e.target === this) numpadCancel();
+            });
+
+            // Listener per input tastierino (sostituiscono gli oninput rimossi dagli attributi)
+            document.getElementById('interpolationInput').addEventListener('input', function() {
+                setInterpolationStep(this.value);
+            });
+            document.getElementById('line1Input').addEventListener('input', function() {
+                setLine1X(this.value);
+            });
+            document.getElementById('line2Input').addEventListener('input', function() {
+                setLine2X(this.value);
+            });
+        });
+
+        // Aggiorna range selector quando la finestra viene ridimensionata
+        window.addEventListener('resize', function() {
+            updateRangeSelector();
+        });
+
+        // Riapplica parametri se l'app cambia l'hash senza ricaricare la pagina
+        window.addEventListener('hashchange', function() {
+            applyParams();
+        });
+
+        // ===== TASTIERINO NUMERICO =====
+        let _numpadTarget = null;
+        let _numpadOriginal = '';
+
+        function numpadOpen(inputEl, label) {
+            _numpadTarget = inputEl;
+            _numpadOriginal = inputEl.value;
+            document.getElementById('numpadLabel').textContent = label;
+            document.getElementById('numpadDisplay').textContent = inputEl.value;
+            document.getElementById('numpadOverlay').classList.add('active');
+        }
+
+        function numpadAppend(char) {
+            const disp = document.getElementById('numpadDisplay');
+            let val = disp.textContent;
+            if (char === '.' && val.includes('.')) return;
+            if (char === '-') return; // gestito da toggleSign
+            if (val === '0' && char !== '.') val = char;
+            else val += char;
+            disp.textContent = val;
+        }
+
+        function numpadToggleSign() {
+            const disp = document.getElementById('numpadDisplay');
+            let val = disp.textContent;
+            if (val.startsWith('-')) disp.textContent = val.slice(1);
+            else disp.textContent = '-' + val;
+        }
+
+        function numpadBackspace() {
+            const disp = document.getElementById('numpadDisplay');
+            let val = disp.textContent;
+            disp.textContent = val.length > 1 ? val.slice(0, -1) : '0';
+        }
+
+        function numpadConfirm() {
+            if (!_numpadTarget) return;
+            const val = document.getElementById('numpadDisplay').textContent;
+            _numpadTarget.value = val;
+            _numpadTarget.dispatchEvent(new Event('input', { bubbles: true }));
+            _numpadTarget.dispatchEvent(new Event('change', { bubbles: true }));
+            numpadClose();
+        }
+
+        function numpadCancel() {
+            if (_numpadTarget) _numpadTarget.value = _numpadOriginal;
+            numpadClose();
+        }
+
+        function numpadClose() {
+            document.getElementById('numpadOverlay').classList.remove('active');
+            _numpadTarget = null;
+        }
+
+    </script>
+    <!-- Tastierino numerico popup -->
+    <div id="numpadOverlay">
+        <div id="numpadPopup">
+            <div id="numpadLabel"></div>
+            <div id="numpadDisplay"></div>
+            <div class="numpad-grid">
+                <button class="numpad-btn" onclick="numpadAppend('7')">7</button>
+                <button class="numpad-btn" onclick="numpadAppend('8')">8</button>
+                <button class="numpad-btn" onclick="numpadAppend('9')">9</button>
+                <button class="numpad-btn" onclick="numpadAppend('4')">4</button>
+                <button class="numpad-btn" onclick="numpadAppend('5')">5</button>
+                <button class="numpad-btn" onclick="numpadAppend('6')">6</button>
+                <button class="numpad-btn" onclick="numpadAppend('1')">1</button>
+                <button class="numpad-btn" onclick="numpadAppend('2')">2</button>
+                <button class="numpad-btn" onclick="numpadAppend('3')">3</button>
+                <button class="numpad-btn" onclick="numpadToggleSign()">±</button>
+                <button class="numpad-btn" onclick="numpadAppend('0')">0</button>
+                <button class="numpad-btn" onclick="numpadAppend('.')">.</button>
+                <button class="numpad-btn backsp" onclick="numpadBackspace()">⌫</button>
+                <button class="numpad-btn cancel"  onclick="numpadCancel()">✕</button>
+                <button class="numpad-btn confirm" onclick="numpadConfirm()">✓</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

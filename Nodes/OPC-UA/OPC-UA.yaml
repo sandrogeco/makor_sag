@@ -1,133 +1,120 @@
 Name: 'OPC-UA'
-Id: g=d598c56cee14fbbc216426f4fdc9c1e2
 Type: OPCUACategoryFolder
 Children:
 - Name: 'OPC-UA Server'
-  Id: g=e56cb1926c90f8be3544ad45f3f3ff5a
   Type: OPCUAServer
   Children:
   - Name: EndpointURL
-    Id: g=81553c8b222e41b837e506dfa71a1000
     Type: PropertyType
     DataType: ResourceUri
     Value: "opc.tcp://localhost:59100"
   - Name: NodesToPublish
-    Id: g=3769e178340dbe63b015b7fb94f5e761
     Type: BaseObjectType
     Children:
     - Name: Configuration1
-      Id: g=f125db67e7277d7f54e73af1820256ec
       Type: NodesToPublishConfigurationEntry
       Children:
       - Name: Nodes
-        Id: g=dd02b3c919bbc7d639714524753c60ea
         Type: BaseObjectType
         Children:
-        - Name: Node1
-          Id: g=10caf43c11a5a3f3a83ab8ef7c4e7e5a
+        - Name: Node2
           Type: NodePointer
           DataType: NodeId
-          Value: "/Objects/Hmi_Next"
+          Value: "/Objects/Hmi_Next/Model/VariabiliRicetta/nomeFilePunti"
           Children:
           - Name: Kind
-            Id: g=8e6643d00604136acb478860cf34336f
             Type: PropertyType
             DataType: NodeId
           - Name: NodeClass
-            Id: g=9fdd3bbbd58f4d6c82b99d29d258f12f
             Type: PropertyType
             DataType: NodePointerNodeClass
             Value: 2
       - Name: Users
-        Id: g=916f1b03532665602a4c57d7d407e366
         Type: BaseObjectType
         Children:
         - Name: User1
-          Id: g=97a890c39ca7f5865094c646aaabfbfe
           Type: NodePointer
           DataType: NodeId
           Value: "/Objects/Hmi_Next/Users/Utenti/Makor"
           Children:
           - Name: Kind
-            Id: g=ec12c03dca10eeb3b107721c4d8c34fb
             Type: PropertyType
             DataType: NodeId
             Value: "/Types/ObjectTypes/BaseObjectType/UserType"
           - Name: NodeClass
-            Id: g=187aac523978a7dbcc16ee6822188c1e
+            Type: PropertyType
+            DataType: NodePointerNodeClass
+        - Name: User2
+          Type: NodePointer
+          DataType: NodeId
+          Value: "/Objects/Hmi_Next/Users/Utenti/ClientWdg"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+          - Name: NodeClass
             Type: PropertyType
             DataType: NodePointerNodeClass
       - Name: PublishDynamicConfiguration
-        Id: g=bd490126e8a00ebc29cf070c7a7e73fe
         Type: BaseDataVariableType
         DataType: Boolean
     - Name: Configuration2
-      Id: g=f821ada4c8975afaeed71813dc8d20b3
       Type: NodesToPublishConfigurationEntry
       Children:
       - Name: Nodes
-        Id: g=7000895ffeb4875480d2decfbe94faf9
         Type: BaseObjectType
         Children:
         - Name: Node1
-          Id: g=50d3a4e639e593e9d1dded12db80eb9c
           Type: NodePointer
           DataType: NodeId
           Value: "/Objects/Hmi_Next/Model/Industry_40"
           Children:
           - Name: Kind
-            Id: g=859eb28d8e0af552a49d045583e9891d
             Type: PropertyType
             DataType: NodeId
           - Name: NodeClass
-            Id: g=0816ae8a1b08e99e9e6d957528407270
             Type: PropertyType
             DataType: NodePointerNodeClass
             Value: 2
       - Name: Users
-        Id: g=7aea49cf958fa4825d349abdc48b16b2
         Type: BaseObjectType
         Children:
         - Name: User1
-          Id: g=b7af852dba07c61f07224994ba69a7cf
           Type: NodePointer
           DataType: NodeId
           Value: "/Objects/Hmi_Next/Users/ClientOpc"
           Children:
           - Name: Kind
-            Id: g=c8fae9cfa1178b3e16839f084e6ea067
             Type: PropertyType
             DataType: NodeId
             Value: "/Types/ObjectTypes/BaseObjectType/UserType"
           - Name: NodeClass
-            Id: g=e0d676bbf45d6ea3ab7df369bc5a1caf
             Type: PropertyType
             DataType: NodePointerNodeClass
       - Name: PublishDynamicConfiguration
-        Id: g=4971822faee24a04111542eab7d1daa1
         Type: BaseDataVariableType
         DataType: Boolean
   - Name: SamplingInterval
-    Id: g=202c6b440454ac96bf3e53894cdb5ad5
     Type: PropertyType
     DataType: Duration
-    Value: "0:00:00:0.1000000"
+    Value: "0:00:00:00.1000000"
   - Name: MinimumSecurityPolicy
-    Id: g=785dd679fbb7449734c9ee3d4415d684
     Type: BaseDataVariableType
     DataType: ns=7;SecurityPolicyEnum
   - Name: MinimumMessageSecurityMode
-    Id: g=100e50ed0b3c384206b48cd76fb26880
     Type: BaseDataVariableType
     DataType: ns=7;MessageSecurityModeEnum
   - Name: AllowMultipleConnection
-    Id: g=ee19823ff910995bf04eb8f917e4fcb8
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: MaxNumberOfConnections
-    Id: g=42184d8572ace2dfd1eb1b197b3d89b2
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 3
+  - Name: UseNodePathInNodeIds
+    Type: BaseDataVariableType
+    DataType: Boolean
+- File: OPCUAWdg/OPCUAWdg.yaml
 - File: OPCUAClient1/OPCUAClient1.yaml

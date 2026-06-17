@@ -20,81 +20,76 @@ using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using static System.Net.Mime.MediaTypeNames;
 
 #endregion
 
 public class Creazione_Ottiche : BaseNetLogic
 {
-	 /*
-	 *	Script per creare n rettangoli per rappresentare ogni singola ottica presente
-	 *	n viene ottenuto in base al tag presente sul plc
-	 *	Quando il bit va off il rettangolo collegato ad esso diventa invisibile per far notare il problema sull'ottica in questione
-	 */
 
-
+	/// <summary>
+	/// Metodo che crea n rettangoli per rappresentare lo stato di ogni ottica presente nella barriera
+	///	n viene ottenuto in base alle dimensione dell'array (di byte) sul plc
+    /// Quando un bit va off il rettangolo collegato ad esso diventa invisibile per far notare il problema sull'ottica in questione
+	/// </summary>
     [ExportMethod]
-    public void CreaRettOttiche()
+    public void CreaRett()
     {
-		var tagPlc = Project.Current.Get("CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc").GetVariable("i_abyBarrOttLetta");
-		byte[] arrPlc = tagPlc.Value;
-		var imgStatoOttiche = LogicObject.Owner.FindObject("StatoOttiche");
-		var leftMargin = LogicObject.GetVariable("LeftMargin").Value;
+        var offset1stRect = (int)LogicObject.GetVariable("Offset1stRect").Value.Value;     //offset d'inizio del primo rettangolo
+        var rectWidth  = (int)LogicObject.GetVariable("LarghRect").Value.Value;            //larghezza rettangolo
+        var rectHeight = (int)LogicObject.GetVariable("AltezRect").Value.Value;            //altezza rettangolo
 
-		int cnt = 0;
-		for (uint i = 0; i < arrPlc.Length; i++)
-		{
-			for (uint ibit = 0; ibit < 8; ibit++)
-			{
-				if (i==16 & ibit == 7)
-					break;
+        var tagPlcOttiche = Owner.Context.GetVariable(LogicObject.GetVariable("TagStatoOttiche").Value);    //tag plc
+        var imgStatoOttiche = LogicObject.Owner.FindObject("StatoOttiche");                                 //immagine barriera "padre" dei rect da creare
+        CreaRett_OttMas(tagPlcOttiche, imgStatoOttiche, offset1stRect, rectWidth, rectHeight, false);
 
-				var rect = InformationModel.Make<Rectangle>("Rect" + cnt);
+        var tagPlcMaschera = Owner.Context.GetVariable(LogicObject.GetVariable("TagStatoMaschera").Value);  //tag plc
+        var imgStatoMaschera = LogicObject.Owner.FindObject("StatoMaschera");                               //immagine barriera "padre" dei rect da creare
+        CreaRett_OttMas(tagPlcMaschera, imgStatoMaschera, offset1stRect, rectWidth, rectHeight, true);
+    }
 
-				rect.Height = 39;
-				rect.Width = 10;
-				rect.VerticalAlignment = VerticalAlignment.Center;
-				rect.FillColor = new Color(0xff, 0, 255, 25);
-				rect.LeftMargin = leftMargin + cnt * 10;
-				rect.VisibleVariable.SetDynamicLink(tagPlc, i, DynamicLinkMode.Read);
-				rect.VisibleVariable.GetVariable("DynamicLink").Value = rect.VisibleVariable.GetVariable("DynamicLink").Value + "[" + i + "]." + (7-ibit);
-				imgStatoOttiche.Add(rect);
-
-				cnt++;
-			}
-		}
-	}
-
-	[ExportMethod]
-	public void CreaRettMaschera()
+    /// <summary>
+    ///     Funzione che crea i rettangoli con i parametri dati
+    /// </summary>
+    /// <param name="tagPlc"></param>
+    /// <param name="img"></param>
+    /// <param name="offset1stRect"></param>
+    /// <param name="rectWidth"></param>
+    /// <param name="rectHeight"></param>
+	public void CreaRett_OttMas(IUAVariable tagPlc, IUAObject img, int offset1stRect, int rectWidth, int rectHeight, bool ott_mas)
 	{
-		var tagPlc = Project.Current.Get("CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc").GetVariable("abyMascheraBarr");
-		byte[] arrPlc = tagPlc.Value;
-		var imgStatoOttiche = LogicObject.Owner.FindObject("StatoMaschera");
-		var leftMargin = LogicObject.GetVariable("LeftMargin").Value;
+        byte[] arrPlc = tagPlc.Value;
 
-		int cnt = 0;
-		for (uint i = 0; i < arrPlc.Length; i++)
-		{
-			for (uint ibit = 0; ibit < 8; ibit++)
-			{
-				if (i == 16 & ibit == 7)
-					break;
+        //Per ogni bit nell'array di byte creo un rettangolo assegnandoli le varie proprieta e il bit sulla visibilità
+        int cnt = 0;
+        for (uint i = 0; i < arrPlc.Length; i++)    //Scorro l'array di byte   
+        {
+            for (uint ibit = 0; ibit < 8; ibit++)   //Scorro il byte pendendo i singoli bit
+            {
+                if (i == arrPlc.Length-1 & ibit == 7)   //Salto l'ultimo bit dell'ultimo elemento
+                    break;
 
-				var rect = InformationModel.Make<Rectangle>("Rect" + cnt);
+                var rect = InformationModel.Make<Rectangle>("Rect" + cnt); //Creo l'istanza assegnandoli come nome "Rect0","Rect1", ...
 
-				rect.Height = 39;
-				rect.Width = 10;
-				rect.VerticalAlignment = VerticalAlignment.Center;
-				rect.FillColor = new Color(0xff, 0, 255, 25);
-				rect.LeftMargin = leftMargin + cnt * 10;
-				rect.VisibleVariable.SetDynamicLink(tagPlc, i, DynamicLinkMode.Read);
-				rect.VisibleVariable.GetVariable("DynamicLink").Value = rect.VisibleVariable.GetVariable("DynamicLink").Value + "[" + i + "]." + ibit;
+                //Setto le varie proprieta
+                rect.Height = rectHeight;
+                rect.Width = rectWidth;
+                rect.VerticalAlignment = VerticalAlignment.Center;
+                rect.FillColor = new Color(0xff, 0, 255, 25);
+                rect.LeftMargin = offset1stRect + rectWidth * cnt;  //Il margine sinistro è = margine iniziale + larghezza rect * numero di rect attuale
 
-				imgStatoOttiche.Add(rect);
+                //creo il collegamento dinamico assegnando alla visibilita del rect il bit attuale
+                rect.VisibleVariable.SetDynamicLink(tagPlc, i, DynamicLinkMode.Read);
+                if (ott_mas)
+                    rect.VisibleVariable.GetVariable("DynamicLink").Value = rect.VisibleVariable.GetVariable("DynamicLink").Value + "[" + i + "]." + (7 - ibit);
+                else
+                    rect.VisibleVariable.GetVariable("DynamicLink").Value = rect.VisibleVariable.GetVariable("DynamicLink").Value + "[" + i + "]." + ibit;
 
-				cnt++;
-			}
-		}
-	}
+                img.Add(rect);  //Aggiungo all'immagine padre il nuovo figlio "Rect..."
+                cnt++;
+            }
+        }
+    }
 }

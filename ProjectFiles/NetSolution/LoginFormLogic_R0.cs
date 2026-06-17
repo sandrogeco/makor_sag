@@ -6,6 +6,8 @@ using FTOptix.UI;
 using System;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class LoginFormLogic_R0 : BaseNetLogic

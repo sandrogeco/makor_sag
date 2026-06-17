@@ -1,0 +1,78 @@
+Name: OPCUAWdg
+Id: g=03cc08facb16ebbf414addbbb2dcbf76
+Type: OPCUAClient
+Children:
+- Name: ServerEndpointURL
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "opc.tcp://localhost:59100"
+- Name: MinimumMessageSecurityMode
+  Type: BaseDataVariableType
+  DataType: ns=19;MessageSecurityModeEnum
+- Name: MinimumSecurityPolicy
+  Type: BaseDataVariableType
+  DataType: ns=19;SecurityPolicyEnum
+- Name: UserIdentityType
+  Type: BaseDataVariableType
+  DataType: UserIdentityTypeEnum
+  Value: 1
+- Name: ConnectionStatus
+  Type: BaseDataVariableType
+  DataType: ConnectionStatusEnum
+  AccessLevel: Read
+- Name: ServerUri
+  Type: BaseDataVariableType
+  DataType: String
+  AccessLevel: Read
+- Name: Events
+  Type: BaseDataVariableType
+  DataType: EventsEnum
+- Name: RuntimeConfigurations
+  Type: BaseObjectType
+- Class: Reference
+  Target: ns=19;i=8
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=9
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=54
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=57
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=91
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=60
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=63
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=83
+  Direction: Forward
+- Class: Reference
+  Target: ns=19;i=75
+  Direction: Forward
+- Name: Username
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "ClientWdg"
+- Name: Password
+  Type: BaseDataVariableType
+  DataType: Password
+  Value: "1234"
+- Name: Objects
+  Type: BaseObjectType
+  Children:
+  - Name: ns=51;Hmi_Next
+    Id: ns=51;g=838da0774d62974971e2014a882bd617
+    Type: ProjectFolder
+    Children:
+    - File: Model/Model.yaml
+- Name: VerifyServerIdentity
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true

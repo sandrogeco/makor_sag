@@ -1,0 +1,9 @@
+Name: ns=51;VariabiliRicetta
+Id: ns=51;g=c9e29e6b0570c982fb40577867b02450
+Type: FolderType
+Children:
+- Name: ns=51;nomeFilePunti
+  Id: ns=51;g=4ecefcb7bee563a99644f8e6b84d259a
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"

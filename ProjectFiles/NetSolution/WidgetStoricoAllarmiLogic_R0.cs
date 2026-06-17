@@ -23,6 +23,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.Recipe;
+using FTOptix.System;
 #endregion
 
 public class WidgetStoricoAllarmiLogic_R0 : BaseNetLogic

@@ -8,6 +8,8 @@ using System.IO;
 using System.IO.Compression;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class Runtime_Utility : BaseNetLogic

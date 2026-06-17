@@ -14,6 +14,7 @@ using FTOptix.System;
 using FTOptix.AuditSigning;
 using FTOptix.CODESYS;
 using FTOptix.Recipe;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class BackProvider1 : FTOptix.NetLogic.BaseNetLogic

@@ -14,6 +14,8 @@ using FTOptix.Store;
 using FTOptix.SQLiteStore;
 using FTOptix.Core;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class AlarmsHistoryExporter_R0 : BaseNetLogic

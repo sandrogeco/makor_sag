@@ -1,0 +1,26 @@
+Name: WidgetDXF
+Type: FolderType
+Children:
+- Name: URL
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "file:///C:/Users/diego/OneDrive/Desktop/Hmi_Next_R01D_01_01_002/ProjectFiles/widget/INDEX.HTML"
+- Name: nomeFilePuntiChanged1
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../URL"
+- Name: HD
+  Type: BaseDataVariableType
+  DataType: String
+- Name: nomeFilePuntiChanged2
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../HD"
+- Name: Publish
+  Type: NetLogic

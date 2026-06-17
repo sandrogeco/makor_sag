@@ -2,6 +2,8 @@
 using FTOptix.NetLogic;
 using System;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using static FrameDatiProduzLogic;
 #endregion
 

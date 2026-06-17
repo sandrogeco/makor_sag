@@ -10,6 +10,8 @@ using FTOptix.CoreBase;
 using FTOptix.Core;
 using System.Collections.Generic;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class CalendarLogic_R0 : BaseNetLogic

@@ -1,0 +1,204 @@
+Name: DevicesStructure
+Type: FolderType
+Children:
+- Name: Standard_Devices
+  Id: g=2afb6ef9c27155d123982e339c4a87d0
+  Supertype: BaseObjectType
+  Children:
+  - Name: bDeviceOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bDiagAlmDevice
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bRichCfg
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: byErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byPortNum
+    Type: BaseDataVariableType
+    DataType: Byte
+- Name: SL_Devices
+  Id: g=b982a2fbe5513fec1f34dc682d7bf301
+  Supertype: BaseObjectType
+  Children:
+  - Name: stDiagStd_bDeviceOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bDiagAlmDevice
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bRichCfg
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_byErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: stDiagStd_byStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: bDiagAlmCh
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bDiagAlmComm
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bRichSdo
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: byAddErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byDeviceStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: bySlaveErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: bySlavePortErr
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: uTemperature
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byUaStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: uUaValue
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byUsStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: uUsValue
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: udSeqError
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: byComErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: stDiagStd_byPortNum
+    Type: BaseDataVariableType
+    DataType: Byte
+- Name: BQ_Devices
+  Id: g=427028beb9418d0df25a10b4a70b6328
+  Supertype: BaseObjectType
+  Children:
+  - Name: stDiagStd_bDeviceOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bDiagAlmDevice
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bRichCfg
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_byErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: stDiagStd_byStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: bConfigNoOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bDiagAlmComm
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bRichSdo
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: byAddErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: udSeqError
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: byComErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: stDiagStd_byPortNum
+    Type: BaseDataVariableType
+    DataType: Byte
+- Name: BF_Devices
+  Id: g=4502fe17912230a896741a652a990410
+  Supertype: BaseObjectType
+  Children:
+  - Name: stDiagStd_bDeviceOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bDiagAlmDevice
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_bRichCfg
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: stDiagStd_byErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: stDiagStd_byStatus
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: bConfigNoOk
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bDiagAlmComm
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bRichSdo
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: byAddErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: udSeqError
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: byComErrCod
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byDiagDevStat
+    Type: BaseDataVariableType
+    DataType: Byte
+  - Name: byParamCfgErr_aby
+    Type: BaseDataVariableType
+    DataType: Byte
+    ValueRank: OneDimension
+    ArrayDimensions: [8]
+  - Name: byParamCfgErr_l
+    Type: BaseDataVariableType
+    DataType: Int64
+  - Name: byDetaDevStat_aby
+    Type: BaseDataVariableType
+    DataType: Byte
+    ValueRank: OneDimension
+    ArrayDimensions: [4]
+  - Name: byDetaDevStat_d
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: byOperatHours_aby
+    Type: BaseDataVariableType
+    DataType: Byte
+    ValueRank: OneDimension
+    ArrayDimensions: [4]
+  - Name: byOperatHours_d
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: byPowerCycle_aby
+    Type: BaseDataVariableType
+    DataType: Byte
+    ValueRank: OneDimension
+    ArrayDimensions: [4]
+  - Name: byPowerCycle_d
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: stDiagStd_byPortNum
+    Type: BaseDataVariableType
+    DataType: Byte

@@ -21,6 +21,8 @@ using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FilesystemBrowser;
 using System.IO;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 
 #endregion
 

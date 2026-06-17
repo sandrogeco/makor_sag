@@ -1,81 +1,74 @@
 Name: Generiche
-Id: g=120b9815ab8fb6858f96e13b0c06a60c
 Type: FolderType
 Children:
 - File: Colors/Colors.yaml
 - File: Measure_Unit_(Not_used)/Measure_Unit_(Not_used).yaml
 - Name: UtenteAttuale_SessioneNativa
-  Id: g=2a267a20cd0547960c3884cc29313ae2
   Type: BaseDataVariableType
   DataType: String
   Value: "Anonymous"
 - Name: AlmSeverityFilter
-  Id: g=3ac35c65303a6124c0f9ddae32d3f36b
   Type: BaseDataVariableType
   DataType: Int16
 - Name: InfoProgettoHmi
-  Id: g=b6555bcfe97167d8bed9659ea92a5a27
   Type: BaseObjectType
   Children:
   - Name: NomeMacchina
-    Id: g=a02d37853b09f7116ae27d76d58a167d
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: SwRev_MajorRelease
-    Id: g=b08e165d158ce1eb93b0112aa4651cbf
     Type: BaseDataVariableType
     DataType: String
+    Description: {"LocaleId":"it-IT","Text":"Versione file IO"}
+    Value: "01D"
+  - Name: SwRev_MinorRelease1
+    Type: BaseDataVariableType
+    DataType: String
+    Description: {"LocaleId":"it-IT","Text":"Versione tag PLC"}
     Value: "01"
-  - Name: SwRev_MinorRelease
-    Id: g=a03452ab76f419054016e6e3aa2bd90b
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "00"
   - Name: SwRev_Build
-    Id: g=9bc2b209e9416cbe8ed7fc0ca5ced542
     Type: BaseDataVariableType
     DataType: String
+    Description: {"LocaleId":"it-IT","Text":"Piccole modifiche HMI"}
     Value: "002"
-  - Name: RevHw
-    Id: g=e64223d89fbcccf8b81d7c6336567db0
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "A"
   - Name: MatricolaSpec
-    Id: g=418818db0540f485630f84952e1c500d
     Type: BaseDataVariableType
     DataType: Int16
+  - Name: SwRev_MinorRelease
+    Type: BaseDataVariableType
+    DataType: String
+    Description: {"LocaleId":"it-IT","Text":"New features e aggiornamenti non retro compatibili"}
+    Value: "01"
 - Name: InfoProgettoPLC
-  Id: g=9c020e781e4165f3636c19833f7ad483
   Type: BaseObjectType
   Children:
   - Name: NomeMacchina
-    Id: g=f8bcf4b887003cc29ba123c6c1e7bd45
     Type: BaseDataVariableType
     DataType: String
     Value: "Next"
   - Name: SwRev_MajorRelease
-    Id: g=54ecb581671944940fcc13a58fb3f124
     Type: BaseDataVariableType
     DataType: Int16
   - Name: SwRev_MinorRelease
-    Id: g=3ccdf81312dbade3f7a97e7c402b8cd6
     Type: BaseDataVariableType
     DataType: Int16
   - Name: SwRev_Build
-    Id: g=efb4efbe06965999e0f762768fa7b579
     Type: BaseDataVariableType
     DataType: Int16
   - Name: RevHw
-    Id: g=3ac748799f529ff69344bba7ee3174ab
     Type: BaseDataVariableType
     DataType: String
   - Name: MatricolaSpec
-    Id: g=f790aeb762b0c5c1bd6453ebe7f6ae85
     Type: BaseDataVariableType
     DataType: Int16
 - Name: DebugMode
-  Id: g=485d9d206d2eca8190d8062f0cc347ff
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: ErrBackUpDB
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: csvViewerHeader
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "mode=viewer;"

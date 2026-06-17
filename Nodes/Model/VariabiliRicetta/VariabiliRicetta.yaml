@@ -1,0 +1,178 @@
+Name: VariabiliRicetta
+Id: g=c9e29e6b0570c982fb40577867b02450
+Type: FolderType
+Children:
+- Name: DsTime_ImportExportVarRicFromCSV
+  Type: NetLogic
+  Description: {"LocaleId":"it-IT","Text":"Revisione R2"}
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: ImportaTag
+  - Class: Method
+    Name: EsportaTag
+  - Name: CSVPath
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=46;%PROJECTDIR%/VarRicetta.csv"
+  - Name: CharacterSeparator
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ","
+  - Name: WrapFields
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"it-IT","Text":"Se = vero allora tutti i campi del file devono essere delimitati da \"\""}
+  - Name: CreaCollegamentiDinamici
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Class: Method
+    Name: CreaObjectType
+- Name: nomeFilePunti
+  Id: g=4ecefcb7bee563a99644f8e6b84d259a
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: nomeFilePuntiChanged
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../nomeFilePunti"
+  - Name: VariableValueChangedEventHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=9;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../Scripts/varToFromCSV@NodeId"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=9;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "FromCSVDaRcp"
+    - Name: EventArguments
+      Type: VariableValueChangedEvent
+      Children:
+      - Name: VariableNodeId
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+- Name: absNomeFilePunti
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: nomeFilePunti1Changed
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../absNomeFilePunti"
+- Name: nPunti
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: profiloStartX
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloStartX"
+- Name: profiloEndX
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloEndX"
+- Name: profiloStartY
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloStartY"
+- Name: profiloEndY
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloEndY"
+- Name: profiloStartSync
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloStartSync"
+- Name: profiloVelX
+  Type: S7TiaProfinetTag
+  DataType: Double
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "G2_PLC_1.Blocks.DB_profilo.profiloVelX"

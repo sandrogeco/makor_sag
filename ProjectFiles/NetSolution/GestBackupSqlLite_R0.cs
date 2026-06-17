@@ -6,6 +6,9 @@ using System;
 using System.IO;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.HMIProject;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestBackupSqlLite_R0 : BaseNetLogic
@@ -66,5 +69,27 @@ public class GestBackupSqlLite_R0 : BaseNetLogic
 
         NumBack.Value++;
         Owner.GetVariable("DataUltimoSalvataggio").Value = DateTime.Now;
+    }
+
+
+    [ExportMethod]
+    public void BackupDBManuale(string filePath)
+    {
+        if (!filePath.Contains(".sqlite"))
+            filePath += ".sqlite";
+
+        if (!((SQLiteStore)Owner).Backup(filePath))      //eseguo il backup 
+        {
+            Project.Current.GetVariable("Model/Variabili_HMI/Generiche/ErrBackUpDB").Value = true;
+        }
+    }
+
+    [ExportMethod]
+    public void RestoreDBManuale(string filePath)
+    {
+        if (!((SQLiteStore)Owner).Restore(filePath))      //eseguo il restore 
+        {
+            Project.Current.GetVariable("Model/Variabili_HMI/Generiche/ErrBackUpDB").Value = true;
+        }
     }
 }

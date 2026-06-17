@@ -1,112 +1,89 @@
 Name: Retentivity
-Id: g=0c136f28fc82ffe153dc7813c842a651
 Type: RetentivityCategoryFolder
 Children:
 - Name: RetentiveStorage
-  Id: g=d6e74c308aaa7609dc78bd1955453cb0
   Type: RetentivityStorage
   Children:
   - Name: Nodes
-    Id: g=073571fbc88221eedf52263f1ea31c01
     Type: BaseObjectType
     Children:
     - Name: ns=17;Nodo1
-      Id: g=ca2bd7343d67e9a1e2531585ce48c51d
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/Model/Variabili_HMI/Var_Ritentive"
       Children:
       - Name: Kind
-        Id: g=f71ef4d03684de08ccdf420a79b54260
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=1b3091ce58306456590a1ba7dfca6726
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
     - Name: Nodo2
-      Id: g=47b11d75df5dc77c2c5fb343538afa71
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/Users/Utenti"
       Children:
       - Name: Kind
-        Id: g=8cfb60dce3119383f830fdaefbd1ccdb
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=82bbd6821881649af62ff0c1919dc384
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
     - Name: Nodo3
-      Id: g=d5f06ea311f891216229596f46408cb8
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/UI/Panels/GestStatistiche/GestStatisticheLogic/ImpostazOem"
       Children:
       - Name: Kind
-        Id: g=542c94f45714228854df0b3a07e38b42
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=aaa9d0225a183a9b313e593d2d3d065e
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
     - Name: Nodo4
-      Id: g=136e4bdb1edd676c7c09c86a5e03a8dd
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/Scripts/EmailSenderLogic"
       Children:
       - Name: Kind
-        Id: g=259b59013085c7685f46e18aeb1797f6
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=00905b2127862fe07938f723d0e93687
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
     - Name: Nodo5
-      Id: g=be44f36f17f1a2a81bf25b19fca7c5d9
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/Model/Industry_40"
       Children:
       - Name: Kind
-        Id: g=eeb7ed125f45c077d5c8f093fe0e2123
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=a54924a1c2958558326fa6ed64579602
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
     - Name: Nodo6
-      Id: g=c6f74b35973f8b092fd9047b25544a32
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/Hmi_Next/DataStores/DatabaseRicette"
       Children:
       - Name: Kind
-        Id: g=8e0007bd2df0a2e59393cf2d310ce1b1
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=632fbafdd9e0e46c505f3ef7cd5e1d9d
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
   - Name: WriteDelay
-    Id: g=922c13b9f7eb591f3dbe322cccd7d380
     Type: BaseDataVariableType
     DataType: Duration
     ReferenceType: HasProperty
   - Name: DeltaObserverEnabled
-    Id: g=4f47df35a68867675af663005daba7fb
     Type: BaseDataVariableType
     DataType: Boolean
     ReferenceType: HasProperty

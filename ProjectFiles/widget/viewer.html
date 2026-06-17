@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // Prende i parametri hash correnti e aggiunge mode=viewer
+        var hash = window.location.hash.slice(1);
+        var params = hash ? hash + ';mode=opc' : 'mode=opc';
+        window.location.replace('index.html#' + params);
+    </script>
+</head>
+</html>

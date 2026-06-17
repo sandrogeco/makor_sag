@@ -4,6 +4,8 @@ using FTOptix.Store;
 using System;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestPuliziaDB_R2 : BaseNetLogic

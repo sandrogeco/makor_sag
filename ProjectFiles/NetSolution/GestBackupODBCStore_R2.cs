@@ -6,6 +6,8 @@ using System.Diagnostics;
 using System.IO;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class GestBackupODBCStore_R2 : BaseNetLogic

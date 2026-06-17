@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using UAManagedCore;
 using FTOptix.WebUI;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using OpcUa = UAManagedCore.OpcUa;
 public class DsTime_CreaAllarmiDaCSV : BaseNetLogic
 {

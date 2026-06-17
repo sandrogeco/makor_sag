@@ -20,6 +20,8 @@ using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class OnChangePiastra : BaseNetLogic
@@ -33,7 +35,7 @@ public class OnChangePiastra : BaseNetLogic
     {
         if (e.NewValue == true)
         {
-			Project.Current.GetVariable("CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvCirc/bHmiCnfCambioPiastra").RemoteWrite(false);
+			Project.Current.GetVariable("CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvCirc/bHmiCnfCambioPiastra").RemoteWrite(false);
 			((Dialog)Owner.Owner).Close();
 		}
         

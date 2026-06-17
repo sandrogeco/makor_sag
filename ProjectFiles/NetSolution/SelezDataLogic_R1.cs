@@ -18,6 +18,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.Recipe;
+using FTOptix.System;
 #endregion
 
 public class SelezDataLogic_R1 : BaseNetLogic

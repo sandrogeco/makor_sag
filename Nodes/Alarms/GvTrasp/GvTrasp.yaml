@@ -1,9 +1,7 @@
 Name: GvTrasp
-Id: g=af32da2bdd7d416d9165a6888abdb72b
 Type: FolderType
 Children:
 - Name: GvTrasp_bAlmAnomEnc
-  Id: g=b7747e3377e24a7fa4708e8bbc4c2eeb
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -16,67 +14,71 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=4dd98cf28b1a2b5c4fa907f4077b2d37
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=e9d069312771617204b8550be28f77b3
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=0e6d05dea6d44ff0bce28b791cfb80d9
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/bAlmAnomEnc"
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/bAlmAnomEnc"
       Children:
       - Name: Mode
-        Id: g=e964d1a84e0545a7841afd2ab64b4394
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=f1c8c51ea319ae622a642aca125192bb
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=8c7be28c7e7afff5630c70590a403f2b
     Type: BaseDataVariableType
     DataType: String
-    Value: "Next"
+    Value: "PLC"
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
   - Name: AutoAcknowledge
-    Id: g=0add7c4018ae20013f100f5562758f1f
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=31f4f92702c958bd16dc7299edb623b1
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=8e7b15941781d1f2949ffe9e5637db4a
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=52bc77f4f876d17e8e050c410336d383
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvTrasp_bAlmAnomEnc"}
-  - Class: Reference
-    Target: ns=31;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=135
-    Direction: Forward
 - Name: GvTrasp_bAlmSlipTrasp
-  Id: g=13dad3c070ef4a76bfbdbf9f0bc71a90
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -89,67 +91,71 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=ad23b3e3afd551a92f237505369a9759
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=96deb5c9f5e95e96cf9203c52ab6ae14
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=c53f104cbcab4e3a848eb43e946cf7ab
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/bAlmSlipTrasp"
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/bAlmSlipTrasp"
       Children:
       - Name: Mode
-        Id: g=ad4b3ab55a9d4333b976904837edeca0
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=3248111524b660de2b68a05eb3d4d87c
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=7ebcee8953b1e64018a50825c97cc3b2
     Type: BaseDataVariableType
     DataType: String
-    Value: "Next"
+    Value: "PLC"
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
   - Name: AutoAcknowledge
-    Id: g=5984822bb084e7a9c1784177f6282751
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=20f3b437873f0b15a518687c9b6cb1a6
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=c35a8051a088e0f121df4ce4bca07b89
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=250c6e27b888e9f25d2df0a1d8980eaa
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvTrasp_bAlmSlipTrasp"}
-  - Class: Reference
-    Target: ns=31;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=135
-    Direction: Forward
 - Name: GvTrasp_stTraspAlm_bAlmErrComInv
-  Id: g=a3230d938a074839b863f45f025787ca
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -162,67 +168,71 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=6c99c278dfefde4b9e7acc085466b374
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=40d8b3fdf4cbb06bf275e9cfa1f29719
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=803a089bb71f4ddf8a8a375cf9960681
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/stTraspAlm/bAlmErrComInv"
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/stTraspAlm/bAlmErrComInv"
       Children:
       - Name: Mode
-        Id: g=2d97d9bd609444b7b1e0973cbdf98780
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=06e5936223c39c3a9363c04320f03f08
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=8cc93a978b150750623025049252cbb6
     Type: BaseDataVariableType
     DataType: String
-    Value: "Next"
+    Value: "PLC"
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
   - Name: AutoAcknowledge
-    Id: g=8a76494e5af001ca9f92cd5ab9fdcca3
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=dc41fac839bf09b8438bbbf208afb48d
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=d1f4126e06bb642fdc092ae3f31cc133
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=233721cea83cc2ceca47eb5764f2b0f7
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvTrasp_stTraspAlm_bAlmErrComInv"}
-  - Class: Reference
-    Target: ns=31;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=135
-    Direction: Forward
 - Name: GvTrasp_stTraspAlm_bAlmInv
-  Id: g=f9e7454526394f45ba9a48454e1d4599
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -235,67 +245,71 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=e60058ac3df2581076e3b3252ff5da51
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=f8064e413fc850c392d510860bb263b8
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=0faf743b57b14887b65b638127571b3f
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/stTraspAlm/bAlmInv"
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/stTraspAlm/bAlmInv"
       Children:
       - Name: Mode
-        Id: g=2e8182fc264041e3ad7900793b58b9d4
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=e9b770ecdb809ccb6647395c95eefc26
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=d8e7acf20719b3a6abda77ecf67433a2
     Type: BaseDataVariableType
     DataType: String
-    Value: "Next"
+    Value: "PLC"
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
   - Name: AutoAcknowledge
-    Id: g=32e63c218c6de257d5408bdd7d047dab
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: AutoConfirm
-    Id: g=35113e041927f0fbe1f321bd0ed777bd
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Severity
-    Id: g=fcc0d637a55d401261aad91e5a90d348
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
   - Name: Message
-    Id: g=190f3227e40d4175fed03bc7a2b654e7
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"NamespaceIndex":46,"TextId":"GvTrasp_stTraspAlm_bAlmInv"}
-  - Class: Reference
-    Target: ns=31;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=31;i=135
-    Direction: Forward
 - Name: GvTrasp_stTraspAlm_bAlmPto
-  Id: g=8ca2ab2ec2224ef4afebb1f2d77f1b60
   Type: CategoryDigitalAlarmType
   Children:
   - Class: Reference
@@ -308,56 +322,30 @@ Children:
     Target: ns=31;i=83
     Direction: Forward
   - Name: NormalStateValue
-    Id: g=88f3b4bb868c8601538ecb347ee5814d
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=7127ef9eb906cacdf5c89b3eda6c3bbb
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=7d08f75d86e244809d2c0a98a703d6be
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvTrasp/stTraspAlm/bAlmPto"
+      Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/stTraspAlm/bAlmPto"
       Children:
       - Name: Mode
-        Id: g=e2cb05b818874c829a39b17e72bbd1fd
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: LastEvent
-    Id: g=3de7783d8a5b698daba57bae845e76f9
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
   - Name: Category
-    Id: g=eb8895ef6417245a9f533a098bbf65c1
     Type: BaseDataVariableType
     DataType: String
-    Value: "Next"
-  - Name: AutoAcknowledge
-    Id: g=ac479513c85ad2dac412e99510470759
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: AutoConfirm
-    Id: g=164fe6f82dffe5115ab96c4d636336c0
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Severity
-    Id: g=b6a6fb52bae4188e3517aa84e5eb1a5f
-    Type: BaseDataVariableType
-    DataType: UInt16
-    Value: 1000
-  - Name: Message
-    Id: g=33269c45098d2133d95a8a368d9c60dd
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"NamespaceIndex":46,"TextId":"GvTrasp_stTraspAlm_bAlmPto"}
+    Value: "PLC"
   - Class: Reference
     Target: ns=31;i=130
     Direction: Forward
@@ -367,3 +355,180 @@ Children:
   - Class: Reference
     Target: ns=31;i=135
     Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":46,"TextId":"GvTrasp_stTraspAlm_bAlmPto"}
+- Name: bAlmAnomEnc
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/bAlmAnomEnc"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=31;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":"bAlmAnomEnc"}
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+- Name: bAlmSlipTrasp
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvTrasp/bAlmSlipTrasp"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=31;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=31;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"it-IT","Text":"bAlmSlipTrasp"}
+  - Name: Severity
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000

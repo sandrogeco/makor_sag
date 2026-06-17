@@ -7,6 +7,8 @@ using System;
 using System.Linq;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class DsTime_ImportExportVarRicFromCSV : BaseNetLogic

@@ -10,6 +10,8 @@ using FTOptix.Alarm;
 using System.Collections.Generic;
 using System.Threading;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class AlarmBannerLogic : BaseNetLogic

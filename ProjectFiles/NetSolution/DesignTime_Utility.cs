@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 

@@ -1,5 +1,4 @@
 Name: Colori
-Id: g=8d89a88c948dbe22127dbf54e0902a7b
 Type: FolderType
 Children:
 - Name: ConvertAlmSeverity
@@ -8,57 +7,47 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=1828deb9cb4d025935d828ce05f116fe
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=82dad98fd372e1a3a52422c1188cced8
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=cb27d350cfab41815d8d4c9256ea818c
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 1
       - Name: Value
-        Id: g=30cadd2b294de42f7091e98f7c6cb388
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
         Value: "#2f850e"
     - Name: Pair1
-      Id: g=8565c6344149647274991a98205e3bbb
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=74d2bda24c35a3473f5793996707c6a7
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 500
       - Name: Value
-        Id: g=3b08e014b4797f59c8ce57291596f472
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
         Value: "#8a4615"
     - Name: Pair2
-      Id: g=252866f97c0098bb7a0db283ddc1055e
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=28febaabea1b86b7a87b9b6a514a817a
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 1000
       - Name: Value
-        Id: g=4b6b392a0a003f10bcefb0c539a70494
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
@@ -69,57 +58,47 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=59772a9daeecbf6aab6a18625c492909
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=3935061ee48a2d88c6aaee7b28f62ddd
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=e48784a3cf9f74e86a068c39f1b63d8b
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 1
       - Name: Value
-        Id: g=353a60003e0537b151e073ae6345fc30
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
         Value: "#47e50b"
     - Name: Pair1
-      Id: g=beb8504cb18b2087af44299a3d36b5fa
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=fec24d88f42fe71e6827bb138c6f1161
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 500
       - Name: Value
-        Id: g=b7689a42430ce59c6e2234922a843af4
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None
         Value: "#f8e832"
     - Name: Pair2
-      Id: g=1df0adf62814022ff4fcf44f2affe997
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=7e738601f3f1c9be6b655d0477edb86b
         Type: BaseDataVariableType
         DataType: UInt32
         ModellingRule: None
         Value: 1000
       - Name: Value
-        Id: g=2c048ca1607fcbb7345c55659077dfc4
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: None

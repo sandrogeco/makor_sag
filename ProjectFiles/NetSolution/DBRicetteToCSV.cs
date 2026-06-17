@@ -6,6 +6,8 @@ using FTOptix.Store;
 using System;
 using System.IO;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 
 
 
@@ -61,8 +63,13 @@ public class DBRicetteToCSV : BaseNetLogic
 			}
 		}
 	}
-
-	[ExportMethod]
+    /// <summary>
+    /// Script che esporta/importa ricette su/da un file cvs
+    ///	viene salvato: NomeRic, Desrcizione per la tabella Ricette/RicettePiastra
+    /// viene salvato: PercorsoTag, Valore per la tabella RicetteDettagli/RicettePiastraDettagli
+    /// Nel caso di importazione di ricette gia esistenti le sovrascrive con i nuovi valori
+    /// </summary>
+    [ExportMethod]
 	public void FromCSV()
 	{
 		Store MyStore = InformationModel.Get<Store>(LogicObject.GetVariable("DBToExport").Value);

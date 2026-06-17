@@ -3,27 +3,22 @@ Id: g=59a7102789c8d63a0f3898fc3e1bda79
 Type: CODESYSStation
 Children:
 - Name: GatewayIP
-  Id: g=0836f9657799ea491e487b986345ddfb
   Type: BaseDataVariableType
   DataType: String
   Value: "10.11.5.1"
 - Name: Port
-  Id: g=095d084063c96febbe00c4cfc831a00b
   Type: BaseDataVariableType
   DataType: UInt16
   Value: 1217
 - Name: PLCAddress
-  Id: g=27050cc3382a68ca5e3828407e1c1fee
   Type: BaseDataVariableType
   DataType: String
-  Value: "SoftPLC"
+  Value: "10.11.5.1"
 - Name: Timeout
-  Id: g=4a20f9f6ce6ca202c7af10d44dbf5df3
   Type: BaseDataVariableType
   DataType: Duration
-  Value: "0:00:00:5.0000000"
+  Value: "0:00:00:05.0000000"
 - Name: OperationCode
-  Id: g=b3f69363eabafe4823ef8a41cb27c1a4
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
   AccessLevel: Read
@@ -47,7 +42,6 @@ Children:
   Direction: Forward
 - File: Tags/Tags.yaml
 - Name: Types
-  Id: g=6c35fa013e1adffbf29bfb3054cfcf78
   Type: FolderType
   Children:
   - File: DataTypes/DataTypes.yaml

@@ -4,6 +4,8 @@ using FTOptix.NetLogic;
 using FTOptix.Store;
 using System;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class FrameDatiProduzLogic : BaseNetLogic

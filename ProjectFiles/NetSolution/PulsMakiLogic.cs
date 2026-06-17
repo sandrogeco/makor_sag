@@ -20,14 +20,16 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using System.Diagnostics;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class PulsMakiLogic : BaseNetLogic
 {
     [ExportMethod]
     public void ApriBrowser()
-    {        
+    {
         // Open Google Chrome with a specific URL
-        Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe");
+        Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", "https://maky.makor.it");
     }
 }

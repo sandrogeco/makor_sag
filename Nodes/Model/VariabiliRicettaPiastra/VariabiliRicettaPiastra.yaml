@@ -3,201 +3,277 @@ Id: g=1d68e41901f1a6008fc664f3e68f543e
 Type: FolderType
 Children:
 - Name: DsTime_ImportExportVarRicFromCSV
-  Id: g=896776de00ae9f70b9531ec9b61c7bc8
   Type: NetLogic
   Description: {"LocaleId":"it-IT","Text":"Revisione R2"}
   Children:
   - Name: BehaviourStartPriority
-    Id: g=aed573982fff9a12a477f7b8b10bd03b
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Class: Method
     Name: ImportaTag
-    Id: g=2b8c5d3d50a0a9d5d07708995dbe6b94
   - Class: Method
     Name: EsportaTag
-    Id: g=dd81b3b1785314387f32a2e292bddd32
   - Name: CSVPath
-    Id: g=30f3881d68467515ce65871c158a0d52
     Type: BaseDataVariableType
     DataType: ResourceUri
     Value: "ns=46;%PROJECTDIR%/VarRicetta.csv"
   - Name: CharacterSeparator
-    Id: g=36ba94f27f9c3c9a7b6d1b9581e892ef
     Type: BaseDataVariableType
     DataType: String
     Value: ","
   - Name: WrapFields
-    Id: g=0e2d2f292bee0db75936a909212887a6
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"LocaleId":"it-IT","Text":"Se = vero allora tutti i campi del file devono essere delimitati da \"\""}
   - Name: CreaCollegamentiDinamici
-    Id: g=31a001239790c635be7bf73283f973d2
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Class: Method
     Name: CreaObjectType
-    Id: g=de19df2cda1ba9169c4a5aec712479dc
 - Name: GvOsc_dUsrLarghVentaglio
-  Id: g=ba0083e4f10ea2005f20b90a2e96e4bf
   Type: BaseDataVariableType
   DataType: Int32
   Children:
   - Name: DynamicLink
-    Id: g=86773ba3c82cbfdb5d65671b13b15bb1
     Type: DynamicLink
     DataType: NodePath
-    Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/dUsrLarghVentaglio"
+    Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/dUsrLarghVentaglio"
     Children:
     - Name: Mode
-      Id: g=96ce53c4a734f8a776b0499cd86ad87e
       Type: BaseVariableType
       DataType: DynamicLinkMode
       Value: 2
-- Name: ParPist1
-  Id: g=fdb688b0312fd7f1dbcd1e6b25b54fa0
+- Name: Osc1_ParPist1
   Type: BaseObjectType
   Children:
   - Name: dDistXSetupGun
-    Id: g=17ce1c196fa4c42311a7c8187c6aa9eb
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=9e3713d03df4de5d29ab04e2e3b84493
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dDistXSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/1/stUsr/dDistXSetupGun"
       Children:
       - Name: Mode
-        Id: g=802134f773013858fe81d0c1abc2bdb6
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: dDistYSetupGun
-    Id: g=a48a163711b6b4491f9234b5e46ec44e
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=2fe389790e097c862b3c75fd6f16a9e8
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola01/usr/dDistYSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/1/stUsr/dDistYSetupGun"
       Children:
       - Name: Mode
-        Id: g=7a8b48ccb5722c265e052e6fdf35c556
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-- Name: ParPist2
-  Id: g=b0cc99c223cbc645c9c2329b493b3322
+- Name: Osc1_ParPist2
   Type: BaseObjectType
   Children:
   - Name: dDistXSetupGun
-    Id: g=ccf61c0fdce123cb51b4b6e50fd89948
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=08b5edf77e4bee15c3d1351cf965b2bc
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dDistXSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/2/stUsr/dDistXSetupGun"
       Children:
       - Name: Mode
-        Id: g=c2cd49fcf31c380eb958394be7253c4e
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: dDistYSetupGun
-    Id: g=264823e1da8267cef7aa7fa8faf97d14
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=2c6e0ed770662fdb05767709baf468a1
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola02/usr/dDistYSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/2/stUsr/dDistYSetupGun"
       Children:
       - Name: Mode
-        Id: g=ed9a3f436476e84591c513fedee60b2d
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-- Name: ParPist3
-  Id: g=da0d98d2f6dea4e4aec314f53e9ecece
+- Name: Osc1_ParPist3
   Type: BaseObjectType
   Children:
   - Name: dDistXSetupGun
-    Id: g=8b01cbc8aa3a6d8286d0fc1102875b6d
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=b418f01d2d94a6b7bab91ac432c3b5be
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dDistXSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/3/stUsr/dDistXSetupGun"
       Children:
       - Name: Mode
-        Id: g=675f602bc6025522b3459b4d6145d789
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: dDistYSetupGun
-    Id: g=6103d7ca44ba4ba619d28b6c9c24160a
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=9b181d1876af4976bb6b9d655f28630f
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola03/usr/dDistYSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/3/stUsr/dDistYSetupGun"
       Children:
       - Name: Mode
-        Id: g=a61ced939d1e8efbd6d12bb422575ac5
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-- Name: ParPist4
-  Id: g=fba5e8b23aaa68c282f5526084af2ec4
+- Name: Osc1_ParPist4
   Type: BaseObjectType
   Children:
   - Name: dDistXSetupGun
-    Id: g=9af27c0a0e47ec32eb90f559c3a1c0d5
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=29b174a1bc2e8367a3bf82b09da9459f
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dDistXSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/4/stUsr/dDistXSetupGun"
       Children:
       - Name: Mode
-        Id: g=61f3f1f125c1f9432ab5da2ec918d6d4
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: dDistYSetupGun
-    Id: g=3dfefaa392137389ac9c3e3676b1d696
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=cd814bd6a52adc1a60625db5c85719fe
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/Next/GvOsc/stPrPistola04/usr/dDistYSetupGun"
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/1/astPist/4/stUsr/dDistYSetupGun"
       Children:
       - Name: Mode
-        Id: g=dfa04bc4a531b26c429da1d9dc6b088e
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: Osc2_ParPist1
+  Type: BaseObjectType
+  Children:
+  - Name: dDistXSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/1/stUsr/dDistXSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dDistYSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/1/stUsr/dDistYSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: Osc2_ParPist2
+  Type: BaseObjectType
+  Children:
+  - Name: dDistXSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/2/stUsr/dDistXSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dDistYSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/2/stUsr/dDistYSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: Osc2_ParPist3
+  Type: BaseObjectType
+  Children:
+  - Name: dDistXSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/3/stUsr/dDistXSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dDistYSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/3/stUsr/dDistYSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: Osc2_ParPist4
+  Type: BaseObjectType
+  Children:
+  - Name: dDistXSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/4/stUsr/dDistXSetupGun"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: dDistYSetupGun
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvOsc/astBraccio/2/astPist/4/stUsr/dDistYSetupGun"
+      Children:
+      - Name: Mode
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2

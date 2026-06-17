@@ -1,5 +1,4 @@
 Name: Users
-Id: g=312cb5b83bea73af42d1f83e65605b41
 Type: FolderType
 Children:
 - File: Groups/Groups.yaml
@@ -9,18 +8,15 @@ Children:
   Supertype: UserType
   Children:
   - Name: GruppoAppartenenza
-    Id: g=4444bed8b589e1c351f08c767fd1e6ed
     Type: BaseDataVariableType
     DataType: String
   - Name: MeasurementSystem
-    Id: g=7c09b61f9c24961dad58a060942544c3
     Type: BaseVariableType
     DataType: MeasurementSystem
     ReferenceType: HasProperty
     ModellingRule: Optional
     Value: 1
   - Name: Domain
-    Id: g=878e81c4073b64f6d431f9194d4c1eb6
     Type: BaseVariableType
     DataType: String
     ReferenceType: HasProperty
@@ -30,14 +26,12 @@ Children:
   Type: UserType
   Children:
   - Name: Password
-    Id: g=24299e045b936b99346965259af61441
     Type: Password
     DataType: Password
     ReferenceType: HasProperty
     AccessLevel: Read
     Children:
     - Name: Hash
-      Id: g=7e2a8fc0e8c228caf133b4b55377c13a
       Type: PropertyType
       DataType: PasswordHash
       AccessLevel: Read
@@ -53,13 +47,11 @@ Children:
         }
        }
     - Name: ChangeTimestamp
-      Id: g=d5f0bda386b0dc1da425f6bbd4f90732
       Type: PropertyType
       DataType: UtcTime
       AccessLevel: Read
       Value: "2024-05-04T09:03:56.0411752"
     - Name: History
-      Id: g=b8cd190f65f8e4ff664acc4626769bb9
       Type: PropertyType
       DataType: PasswordHash
       AccessLevel: Read

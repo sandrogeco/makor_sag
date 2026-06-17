@@ -1,5 +1,4 @@
 Name: Immagini
-Id: g=52c470a13a2608dfb6115c73b44ecf2c
 Type: FolderType
 Children:
 - Name: Imm_TuboApertoOffOn
@@ -8,39 +7,32 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=eb98f3e05c71ec0d9f471af75ddefd1f
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=1f0789c7a724a1d3e1d3a71fff950a7c
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=f3b695ffe9f3054191b54cf9cb79cc53
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
       - Name: Value
-        Id: g=9c2e7dc7af146bcd67862bf393477146
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=46;%PROJECTDIR%/Images/SimbVari/Tubi/SimbTuboApertoOff.png"
     - Name: Pair1
-      Id: g=6d23b06021a35b1685a5dcbb84ace169
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=7cd038f8fe2f787b33425191ba971647
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
         Value: true
       - Name: Value
-        Id: g=04352bb0194aa21e1d6d1f8c5e8ce158
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
@@ -51,39 +43,32 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=695a59c88904d50c009f667973390513
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=631273afb2d900e4e2debde6101a5213
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=678e46954fcd214abdbd520c39f4db1b
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
       - Name: Value
-        Id: g=d85ca4cbbd883c1b09cd5aaec90c2bda
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=46;%PROJECTDIR%/Images/SimbVari/Tubi/SimbTuboCurvaOff.png"
     - Name: Pair1
-      Id: g=ff9e97c5fd51f727ad387d946e43f0b9
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=6c187f6d1cc086176231cf12a29edf01
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
         Value: true
       - Name: Value
-        Id: g=536fa93201405cf1b4a44a966580a6fb
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
@@ -94,39 +79,32 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=0b466db4c71bde7d847cde024bbadc53
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=a5b3cd47483b9e4147409fd562141971
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=4828da78ddb4ec5170690cddc0ecc453
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
       - Name: Value
-        Id: g=702638ccdffecc0f47ddb4ea7162ac51
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=46;%PROJECTDIR%/Images/SimbVari/Tubi/SimbTuboVertOff.png"
     - Name: Pair1
-      Id: g=4693725f587051c4999f847daadf4579
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=d7d15ee4d0afbb508d54492300a9a112
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
         Value: true
       - Name: Value
-        Id: g=06bd1a4c17bbdb28c7041749781e1894
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
@@ -137,39 +115,32 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: ns=9;Pairs
-    Id: g=cd7bebca89a5f81ce40fa312b0f4a069
     Type: BaseObjectType
     ModellingRule: None
     Children:
     - Name: Pair
-      Id: g=e985ac06c66dd8fab374d80f93e558a8
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=967a03aa9ca0fd02544b14ce376173fd
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
       - Name: Value
-        Id: g=cf436e70290540b5eacb3e17b9d6d491
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None
         Value: "ns=46;%PROJECTDIR%/Images/SimbVari/Tubi/SimbTuboOrizOff.png"
     - Name: Pair1
-      Id: g=5dd03604ab7f196af22d9b44310815c7
       Type: ValueMapPair
       ModellingRule: None
       Children:
       - Name: Key
-        Id: g=57d30c987edede9ea3ac10aad32138d1
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: None
         Value: true
       - Name: Value
-        Id: g=51473c339961517d030fe6565a1bf33f
         Type: BaseDataVariableType
         DataType: ResourceUri
         ModellingRule: None

@@ -7,6 +7,8 @@ using FTOptix.Store;
 using System;
 using System.IO;
 using UAManagedCore;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 using static GestIndustry_40Logic;
 
 #endregion

@@ -1,70 +1,36 @@
 #region Using directives
+using System;
 using UAManagedCore;
-using FTOptix.NetLogic;
-using FTOptix.Core;
+using OpcUa = UAManagedCore.OpcUa;
 using FTOptix.UI;
 using FTOptix.HMIProject;
-using FTOptix.Recipe;
+using FTOptix.NetLogic;
+using FTOptix.NativeUI;
+using FTOptix.WebUI;
+using FTOptix.Alarm;
+using FTOptix.CoreBase;
+using FTOptix.CODESYS;
+using FTOptix.S7TiaProfinet;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.ODBCStore;
+using FTOptix.OPCUAServer;
+using FTOptix.OPCUAClient;
+using FTOptix.Retentivity;
+using FTOptix.EventLogger;
+using FTOptix.CommunicationDriver;
+using FTOptix.Core;
 #endregion
 
 public class CurrentUserLogic_R1 : BaseNetLogic
 {
-    private PeriodicTask periodicTask;    
-    private DelayedTask LogoutTask;
-    private DelayedTask myTask;
-
     public override void Start()
     {
-        if (LogicObject.GetVariable("LoginAvvio").Value)        //Se è abilitato l'apertura del pop-up di login allora creo il task ritardato per aprire il pop-up
-        {
-            myTask = new DelayedTask(ApriLoginForm, 1000, LogicObject);
-            myTask.Start();
-        }
-
-        //Sottoscrivo l'evento di cambiamento dell'utente
-        Session.UserChange += Session_UserChange;
-
-        //se siamo sulla sessione Native allora tiro fuori il nome dell'utente attualmente loggato
-        if (Session.GetVariable("IsNativeUI").Value)
-        { 
-            periodicTask = new PeriodicTask(GetSessionUser, 500, LogicObject);
-            periodicTask.Start();
-        }
+        // Insert code to be executed when the user-defined logic is started
     }
 
     public override void Stop()
     {
-        myTask?.Dispose();
-        myTask = null;
-
-        periodicTask?.Dispose();
-        periodicTask = null;
-    }
-
-    private void GetSessionUser() => LogicObject.GetVariable("UtenteAttuale_NativeUI").Value = Session.User.BrowseName;
-
-    private void Session_UserChange(object sender, UserChangeEventArgs e)
-    {
-        var TimeOut = LogicObject.GetVariable("OemUserLogutTimeout").Value;
-        if (TimeOut > 0 && e.newUser.BrowseName == "Makor")
-        {
-            LogoutTask = new DelayedTask(PerformLogout, TimeOut, LogicObject);
-            LogoutTask.Start();
-        }
-    }
-
-    private void PerformLogout()
-    {
-        LogoutTask?.Cancel();
-        LogoutTask?.Dispose();
-        LogoutTask = null;
-        Session.ChangeUser("Anonymous", "");
-        ApriLoginForm();
-    }
-
-    private void ApriLoginForm()
-    {
-        var myDialog = Project.Current.Get("UI/Panels/Prj_DialogBox").Get<DialogType>("Login");
-        _ = UICommands.OpenDialog(LogicObject.Owner, myDialog, NodeId.Empty);
+        // Insert code to be executed when the user-defined logic is stopped
     }
 }

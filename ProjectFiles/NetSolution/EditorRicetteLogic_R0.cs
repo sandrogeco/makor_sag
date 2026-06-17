@@ -6,6 +6,8 @@ using System;
 using UAManagedCore;
 using System.Collections.Generic;
 using FTOptix.Recipe;
+using FTOptix.System;
+using FTOptix.S7TiaProfinet;
 #endregion
 
 public class EditorRicetteLogic_R0 : BaseNetLogic
