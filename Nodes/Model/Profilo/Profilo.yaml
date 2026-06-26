@@ -32023,3 +32023,39 @@ Children:
   DataType: Float
   ValueRank: 2
   ArrayDimensions: [1000,2]
+- Name: aggiorna
+  Type: AnalogItemType
+  DataType: Boolean
+  Children:
+  - Name: EURange
+    Type: RangeType
+    DataType: Range
+    Children:
+    - Name: Low
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: High
+      Type: BaseDataVariableType
+      DataType: Double
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/merkerCmd/aggiornaCamm"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: manmola
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/merkerCmd/cmdManMola"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

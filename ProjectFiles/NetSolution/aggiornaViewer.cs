@@ -20,6 +20,7 @@ using FTOptix.OPCUAClient;
 using FTOptix.Retentivity;
 using FTOptix.EventLogger;
 using FTOptix.Core;
+using FTOptix.S7TCP;
 #endregion
 
 public class AggiornaViewer : BaseNetLogic

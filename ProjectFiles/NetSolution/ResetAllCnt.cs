@@ -22,6 +22,7 @@ using FTOptix.Core;
 using System.Collections.Generic;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class ResetAllCnt : BaseNetLogic

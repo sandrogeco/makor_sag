@@ -1,11 +1,19 @@
-Name: S7TIAPROFINETStation1
-Id: g=4f02d8da8fb99c7bd1a804280c0167e1
-Type: S7TiaProfinetStation
+Name: S7TCPStation1
+Id: g=3893612a13db3215a0b4c2cd9f83b0f8
+Type: S7TCPStation
 Children:
+- Name: MaximumJobSizeInBytes
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 243
+- Name: MaximumGapInBytes
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Value: 4
 - Name: IPAddress
   Type: BaseDataVariableType
   DataType: String
-  Value: "192.168.0.1"
+  Value: "192.168.1.100"
 - Name: Port
   Type: BaseDataVariableType
   DataType: UInt16
@@ -14,6 +22,17 @@ Children:
   Type: BaseDataVariableType
   DataType: Duration
   Value: "0:00:00:05.0000000"
+- Name: RemoteDeviceId
+  Type: BaseDataVariableType
+  DataType: Byte
+  Value: 2
+- Name: RemoteRack
+  Type: BaseDataVariableType
+  DataType: Byte
+- Name: RemoteSlot
+  Type: BaseDataVariableType
+  DataType: Byte
+  Value: 1
 - Name: OperationCode
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
@@ -42,7 +61,3 @@ Children:
   Children:
   - File: DataTypes/DataTypes.yaml
   - File: VariableTypes/VariableTypes.yaml
-- Name: CertificateFile
-  Type: BaseDataVariableType
-  DataType: ResourceUri
-  Value: "ns=46;%PROJECTDIR%/PKI/Own/Certs/PLC-1Communication-2.cer"

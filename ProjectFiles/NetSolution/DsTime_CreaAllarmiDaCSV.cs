@@ -10,6 +10,7 @@ using FTOptix.WebUI;
 using FTOptix.Recipe;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 using OpcUa = UAManagedCore.OpcUa;
 public class DsTime_CreaAllarmiDaCSV : BaseNetLogic
 {

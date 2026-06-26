@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UAManagedCore;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class GestIndustry_40Logic : BaseNetLogic

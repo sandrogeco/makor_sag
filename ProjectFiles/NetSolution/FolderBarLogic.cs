@@ -16,6 +16,7 @@ using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 
 
 class Location

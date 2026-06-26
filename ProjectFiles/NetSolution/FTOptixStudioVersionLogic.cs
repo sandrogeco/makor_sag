@@ -7,6 +7,7 @@ using UAManagedCore;
 using FTOptix.InfluxDBStoreLocal;
 using FTOptix.InfluxDBStore;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class FTOptixStudioVersionLogic : BaseNetLogic

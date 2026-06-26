@@ -20,6 +20,7 @@ using FTOptix.Retentivity;
 using FTOptix.EventLogger;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
+using FTOptix.S7TCP;
 #endregion
 
 public class CurrentUserLogic_R1 : BaseNetLogic

@@ -9,6 +9,7 @@ using System.Runtime.ConstrainedExecution;
 using UAManagedCore;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class CreaFileCSV_DaTagCommDrivers : BaseNetLogic

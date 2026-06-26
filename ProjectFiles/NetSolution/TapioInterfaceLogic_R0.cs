@@ -2,6 +2,7 @@ using UAManagedCore;
 using FTOptix.Recipe;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 
 public class TapioInterfaceLogic_R0 : FTOptix.NetLogic.BaseNetLogic
 {

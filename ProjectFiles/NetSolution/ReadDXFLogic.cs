@@ -5,6 +5,7 @@ using UAManagedCore;
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class ReadDXFLogic : BaseNetLogic

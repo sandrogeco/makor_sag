@@ -1,0 +1,14 @@
+Name: S7TCPDriver1
+Type: S7TCPDriver
+Children:
+- Name: LocalDeviceId
+  Type: BaseDataVariableType
+  DataType: Byte
+  Value: 1
+- Name: LocalRack
+  Type: BaseDataVariableType
+  DataType: Byte
+- Name: LocalSlot
+  Type: BaseDataVariableType
+  DataType: Byte
+- File: S7TCPStation1/S7TCPStation1.yaml

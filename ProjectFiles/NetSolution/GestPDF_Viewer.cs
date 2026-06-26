@@ -24,6 +24,7 @@ using System.IO;
 using System.Collections;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 
 #endregion
 

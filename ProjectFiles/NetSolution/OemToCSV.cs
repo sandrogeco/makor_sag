@@ -26,6 +26,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 
 #endregion
 

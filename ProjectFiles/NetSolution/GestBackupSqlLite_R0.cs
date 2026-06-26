@@ -9,6 +9,7 @@ using FTOptix.Recipe;
 using FTOptix.HMIProject;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class GestBackupSqlLite_R0 : BaseNetLogic

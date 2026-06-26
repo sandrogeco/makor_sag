@@ -121,6 +121,7 @@ using FTOptix.EventLogger;
 using FTOptix.Core;
 using System.Net;
 using System.Threading;
+using FTOptix.S7TCP;
 
 
 #endregion

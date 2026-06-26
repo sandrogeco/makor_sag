@@ -812,6 +812,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: -3.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
@@ -1194,12 +1195,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 1192.0
+      Value: 1207.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 370.0
+      Value: 150.0
     - Name: MouseClickEventHandler1
       Type: EventHandler
       Children:
@@ -1324,7 +1325,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 510.0
+      Value: 310.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -1504,7 +1505,7 @@ Children:
           - Name: CollegamentoDinamico
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvIoGen/i_dGenAirActPress"
+            Value: "/Objects/Hmi_Next/CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/asseXActPos"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -1711,7 +1712,7 @@ Children:
           - Name: CollegamentoDinamico
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/Hmi_Next/CommDrivers/CODESYSDriver1/PLC_Next/Tags/PLC/GvIoGen/i_dGenAirActPress"
+            Value: "/Objects/Hmi_Next/CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/asseYActPos"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -1821,7 +1822,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 246.0
+      Value: 526.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -2509,6 +2510,836 @@ Children:
             - Name: Description
               Type: BaseDataVariableType
               DataType: LocalizedText
+      - Name: StartX1
+        Type: TextBoxEuConverterConImm_R1_0
+        Children:
+        - Name: Valore
+          Type: RowLayout
+          Children:
+          - Name: ValorePar
+            Type: TextBox
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"it-IT","Text":"{0:f1}"}
+                - Name: ns=9;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../DisplayVar"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../ObjAbilitato"
+            - Name: TextChanged
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+          - Name: Unit
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+        - Name: IconaPar
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPosSx.svg"
+        - Name: ObjAbilitato
+          Type: BaseDataVariableType
+          DataType: Boolean
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#fff2bd"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ObjAbilitato"
+        - Name: DescrizPar
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"it-IT","Text":"Punto Y iniziale"}
+        - Name: Var
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: CollegamentoDinamico
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/VariabiliRicetta/profiloStartY"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 10.0
+        - Name: VarAnalog
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 5066068
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+          - Name: EURange
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Type: BaseDataVariableType
+              DataType: Double
+            - Name: High
+              Type: BaseDataVariableType
+              DataType: Double
+              Value: 3000.0
+        - Name: DisplayVar
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../VarAnalog"
+            Children:
+            - Name: EUMode
+              Type: BaseVariableType
+              DataType: DynamicLinkEUMode
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: -1
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+      - Name: VelX1
+        Type: TextBoxEuConverterConImm_R1_0
+        Children:
+        - Name: Valore
+          Type: RowLayout
+          Children:
+          - Name: ValorePar
+            Type: TextBox
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"it-IT","Text":"{0:f1}"}
+                - Name: ns=9;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../DisplayVar"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../ObjAbilitato"
+            - Name: TextChanged
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+          - Name: Unit
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+        - Name: IconaPar
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVel.svg"
+        - Name: ObjAbilitato
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#fff2bd"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ObjAbilitato"
+        - Name: DescrizPar
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"it-IT","Text":"Velocità X Denti"}
+        - Name: Var
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: CollegamentoDinamico
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/VariabiliRicetta/profiloVelXDenti"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 10.0
+        - Name: VarAnalog
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 4732977
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+          - Name: EURange
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Type: BaseDataVariableType
+              DataType: Double
+            - Name: High
+              Type: BaseDataVariableType
+              DataType: Double
+              Value: 3000.0
+        - Name: DisplayVar
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../VarAnalog"
+            Children:
+            - Name: EUMode
+              Type: BaseVariableType
+              DataType: DynamicLinkEUMode
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: -1
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+      - Name: VelX2
+        Type: TextBoxEuConverterConImm_R1_0
+        Children:
+        - Name: Valore
+          Type: RowLayout
+          Children:
+          - Name: ValorePar
+            Type: TextBox
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"it-IT","Text":"{0:f1}"}
+                - Name: ns=9;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../DisplayVar"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../ObjAbilitato"
+            - Name: TextChanged
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+          - Name: Unit
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+        - Name: IconaPar
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVel.svg"
+        - Name: ObjAbilitato
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#fff2bd"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ObjAbilitato"
+        - Name: DescrizPar
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"it-IT","Text":"Velocità Y Denti"}
+        - Name: Var
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: CollegamentoDinamico
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/VariabiliRicetta/profiloVelYDenti"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 10.0
+        - Name: VarAnalog
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 4732977
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+          - Name: EURange
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Type: BaseDataVariableType
+              DataType: Double
+            - Name: High
+              Type: BaseDataVariableType
+              DataType: Double
+              Value: 3000.0
+        - Name: DisplayVar
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../VarAnalog"
+            Children:
+            - Name: EUMode
+              Type: BaseVariableType
+              DataType: DynamicLinkEUMode
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: -1
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+      - Name: StartX2
+        Type: TextBoxEuConverterConImm_R1_0
+        Children:
+        - Name: Valore
+          Type: RowLayout
+          Children:
+          - Name: ValorePar
+            Type: TextBox
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: StringFormatter1
+                Type: StringFormatter
+                Children:
+                - Name: Format
+                  Type: BaseDataVariableType
+                  DataType: LocalizedText
+                  ReferenceType: HasParameter
+                  ModellingRule: Optional
+                  Value: {"LocaleId":"it-IT","Text":"{0:f1}"}
+                - Name: ns=9;Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../DisplayVar"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DynamicLinkMode
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: Mode
+                  Type: PropertyType
+                  DataType: DynamicLinkMode
+                  ReferenceType: HasComponent
+                  ModellingRule: Optional
+                  Value: 2
+            - Name: ReadOnly
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../ObjAbilitato"
+            - Name: TextChanged
+              Type: VariableChangedEventDispatcher
+              Children:
+              - Name: VariableNodePath
+                Type: BaseVariableType
+                DataType: NodePath
+                Value: "../Text"
+          - Name: Unit
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../DisplayVar/EngineeringUnits/DisplayName"
+        - Name: IconaPar
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbPosSx.svg"
+        - Name: ObjAbilitato
+          Type: BaseDataVariableType
+          DataType: Boolean
+        - Name: FillColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#fff2bd"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ObjAbilitato"
+        - Name: DescrizPar
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ModellingRule: Optional
+            Value: {"LocaleId":"it-IT","Text":"Larghezza dente"}
+        - Name: Var
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: CollegamentoDinamico
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/Hmi_Next/Model/VariabiliRicetta/profiloLarghezzaDenti"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: ScaleFactor
+          Type: BaseDataVariableType
+          DataType: Float
+          Value: 10.0
+        - Name: VarAnalog
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 5066068
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+          - Name: ConvertitoreDiUnit__Ingegneristica1
+            Type: EUConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: Number
+              ReferenceType: HasSource
+              Value: {"Type":11,"Body":0.0}
+              Children:
+              - Name: CollegamentoDinamico
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../Var"
+            - Name: RawMax
+              Type: BaseDataVariableType
+              DataType: Double
+              ReferenceType: HasParameter
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../ScaleFactor"
+          - Name: EURange
+            Type: RangeType
+            DataType: Range
+            Children:
+            - Name: Low
+              Type: BaseDataVariableType
+              DataType: Double
+            - Name: High
+              Type: BaseDataVariableType
+              DataType: Double
+              Value: 3000.0
+        - Name: DisplayVar
+          Type: BaseDataVariableType
+          DataType: Float
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../VarAnalog"
+            Children:
+            - Name: EUMode
+              Type: BaseVariableType
+              DataType: DynamicLinkEUMode
+          - Name: EngineeringUnits
+            Type: EUInformationType
+            DataType: EUInformation
+            Children:
+            - Name: UnitId
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: -1
+            - Name: DisplayName
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Description
+              Type: BaseDataVariableType
+              DataType: LocalizedText
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -2519,47 +3350,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 1420.0
-  - Name: LayoutMacchina
-    Type: Rectangle
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 870.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 410.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 320.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 510.0
-    - Name: Label1
-      Type: Label
-      Children:
-      - Name: Text
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"PlcaHolder layout macchina"}
-      - Name: LeftMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 321.0
-      - Name: TopMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 160.0
   - Name: ComboBoxConImm_R1_1
     Type: ComboBoxConImm_R1_0
     Children:
@@ -2638,6 +3428,15 @@ Children:
         Type: BaseDataVariableType
         DataType: ResourceUri
         Value: "ns=46;%PROJECTDIR%/Images/SimbPerVariabili/SimbVuoto.svg"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 70.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
     - Name: ObjAbilitato
       Type: BaseDataVariableType
       DataType: Boolean
@@ -2682,70 +3481,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 530.0
-  - Name: TextBox1
-    Type: TextBox
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/Hmi_Next/Model/Profilo/xyGraph[10,0]"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 240.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1270.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 350.0
-  - Name: TextBox2
-    Type: TextBox
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/Hmi_Next/Model/Profilo/xyGraph[20,1]"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 240.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1270.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 400.0
 - Name: Pag_Comandi_Manuali_sx
   Id: g=c0a11889ef071ca87684a6f1994181c9
   Supertype: PagMainPanel_R0_0

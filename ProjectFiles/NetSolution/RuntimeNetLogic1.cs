@@ -9,6 +9,7 @@ using FTOptix.Core;
 using FTOptix.CoreBase;
 using FTOptix.NetLogic;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic

@@ -7,6 +7,7 @@ using System.Linq;
 using UAManagedCore;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class DesignTimeCreaTabelleCntProduz : BaseNetLogic

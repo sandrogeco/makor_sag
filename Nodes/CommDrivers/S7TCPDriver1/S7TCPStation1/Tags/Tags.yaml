@@ -1,0 +1,2494 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: G2_PLC_1
+  Type: TagStructure
+  DataType: Structure
+  Value: 
+   {
+    "Type": 22,
+    "Body": {
+     "TypeId": {
+      "IdType": 0,
+      "Id": 0,
+      "Namespace": -1
+     },
+     "Body":    {}
+    }
+   }
+  Children:
+  - Name: DB_Imppostazioni
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: vel_x_jog
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: vel_y_jog
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 8
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: defaultVel
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 16
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: LaserMin
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 24
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: LaserMax
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: velUtensile
+      Type: S7TCPTag
+      DataType: Float
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 40
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: velMola
+      Type: S7TCPTag
+      DataType: Float
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 9
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 44
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: DB_profilo
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: profiloStartX
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloEndX
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 8
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloStartY
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 16
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloEndY
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 24
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloStartSync
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloLarghezzaDenti
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 40
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloVelXDenti
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 48
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloVelYDenti
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 56
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloVelX
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 64
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: nDente
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 72
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: stepDente
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 74
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: profiloDentiNextPos
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 82
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: asseXActPos
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 90
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: asseYActPos
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 98
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: nPunti
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 14
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 106
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: DB_Generale
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: mode
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: laser
+      Type: S7TCPTag
+      DataType: Double
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: Db_appoggioProfilo
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: pointx
+      Type: S7TCPTag
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [1000]
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [0]
+      - Name: ArrayUpdateMode
+        Type: BaseDataVariableType
+        DataType: TagArrayUpdateMode
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../../../Model/Profilo/x_graph"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: pointy
+      Type: S7TCPTag
+      DataType: Float
+      ValueRank: OneDimension
+      ArrayDimensions: [1000]
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+      - Name: BlockNumber
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 20000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: StartArrayIndex
+        Type: BaseDataVariableType
+        DataType: UInt32
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [0]
+      - Name: ArrayUpdateMode
+        Type: BaseDataVariableType
+        DataType: TagArrayUpdateMode
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../../../Model/Profilo/y_graph"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+  - Name: Default tag table
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: System_Byte
+      Type: S7TCPTag
+      DataType: Byte
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: FirstScan
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: DiagStatusUpdate
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: AlwaysTRUE
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: AlwaysFALSE
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: Clock_Byte
+      Type: S7TCPTag
+      DataType: Byte
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: Clock_10Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: Clock_5Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: Clock_2_5Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: Clock_2Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: Clock_1_25Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: Clock_1Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: Clock_0_625Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+    - Name: Clock_0_5Hz
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1001
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+  - Name: Default tag table_1
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: EXTRACORSA_X_SX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: EXTRACORSA_X_DX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: EXTRACORSA_Y_UP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: EXTRACORSA_Y_DOWN
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: START
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: OK_PC
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: STOP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+    - Name: START_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+    - Name: STOP_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: X_SX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: X_DX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: Y_UP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: Y_DOWN
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: ALL_TERMICI
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: EMERGENZA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: ABL_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: SPIA_CICLO
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: ABL_MANDRINO
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: ABL_LUBRIFICAZIONE
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: AsseX_Drive_IN
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: ZSW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: ZSW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_ZSW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: AsseX_Drive_OUT
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: STW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: STW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_STW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: ASSEY_Drive_IN
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: ZSW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: ZSW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_ZSW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: ASSEY_Drive_OUT
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: STW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: STW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_STW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+  - Name: inout
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: EXTRACORSA_X_SX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: EXTRACORSA_X_DX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: EXTRACORSA_Y_UP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: EXTRACORSA_Y_DOWN
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: START
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: OK_PC
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: STOP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+    - Name: START_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+    - Name: STOP_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: X_SX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: X_DX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: Y_UP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: Y_DOWN
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: SPORTELLO_AP
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: ABL_MOLA
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: SPIA_CICLO
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: ABL_LUBRIFICAZIONE
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 6
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: AsseX_Drive_IN
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: ZSW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: ZSW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_ZSW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: AsseX_Drive_OUT
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: STW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: STW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_STW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: ASSEY_Drive_IN
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: ZSW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: ZSW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_ZSW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: ASSEY_Drive_OUT
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: STW1
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: STW2
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+      - Name: G1_STW
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+    - Name: IN_LASER
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 5
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 104
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: Allarmi
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: All_Emergenza
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: All_Termici_scattati
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: All_Cum_Stop
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 20
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: AllMW
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: Reset_all
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 21
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: merkerStati
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: man_aut
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: cicli_on
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: ciclo_xy
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: ciclo_mola
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: ciclo_scansione
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: ciclo_denti
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: homingXInCorso
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+    - Name: HomingYInCorso
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+    - Name: HomingInCorso
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: HomingXOk
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: HomingYOk
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: HomingOk
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: okMarcia
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: marciaAut
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: cicloStop
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+  - Name: merkerCmd
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: cmdHomingX
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: cmdHomingY
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: cmdHoming
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+    - Name: cmdScan
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 3
+    - Name: cmdDenti
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 4
+    - Name: cmdProfilo
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 5
+    - Name: cmdRun
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 6
+    - Name: aggiornaCamm
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 7
+    - Name: cmManUtensile
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 101
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+    - Name: cmdManMola
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 101
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+    - Name: cmdDsbPwr
+      Type: S7TCPTag
+      DataType: Boolean
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 101
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 2
+  - Name: stepCicloXY
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: stepProfiloXY
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 50
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32
+  - Name: stepCicloDenti
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: stepProfiloDenti
+      Type: S7TCPTag
+      DataType: Int16
+      Children:
+      - Name: MemoryArea
+        Type: BaseDataVariableType
+        DataType: MemoryArea
+        Value: 1
+      - Name: Position
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 52
+      - Name: Bit
+        Type: BaseDataVariableType
+        DataType: UInt32

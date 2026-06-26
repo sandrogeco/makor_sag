@@ -27,6 +27,7 @@ using System.Xml.Linq;
 using FTOptix.System;
 using System.Linq;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class GestSelectedDevice : BaseNetLogic

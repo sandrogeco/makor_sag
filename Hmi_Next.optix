@@ -148,16 +148,24 @@ Project:
   51:
    Uri: '03cc08facb16ebbf414addbbb2dcbf76#Hmi_Next'
    ServerUri: 03cc08facb16ebbf414addbbb2dcbf76
+  52:
+   Uri: 'urn:FTOptix:S7TCP'
+   Module: FTOptix.S7TCP
+   Version: 1.0
+  53:
+   Uri: 'urn:FTOptix:S7TCP:Net'
+   Module: FTOptix.S7TCP.Net
+   Version: 1.0
  Statistics:
-  TotalNodeCount: 107028
-  Objects: 16860
+  TotalNodeCount: 94440
+  Objects: 16889
   ObjectTypes: 184
-  Variables: 89864
+  Variables: 77247
   VariableTypes: 0
   DataTypes: 0
   Methods: 120
-  References: 2689
+  References: 2680
   ReferenceTypes: 0
-  Files: 97
+  Files: 96
  Nodes:
  - File: Nodes/Hmi_Next.yaml

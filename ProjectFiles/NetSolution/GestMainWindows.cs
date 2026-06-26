@@ -9,6 +9,7 @@ using System.IO;
 using UAManagedCore;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 using static GestIndustry_40Logic;
 
 #endregion

@@ -6,6 +6,7 @@ using UAManagedCore;
 using FTOptix.Recipe;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class AppCloseBtn_logic : BaseNetLogic

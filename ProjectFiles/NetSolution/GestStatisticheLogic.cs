@@ -13,6 +13,7 @@ using System.Text;
 using UAManagedCore;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class GestStatisticheLogic : BaseNetLogic

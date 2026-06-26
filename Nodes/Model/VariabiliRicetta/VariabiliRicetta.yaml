@@ -127,7 +127,17 @@ Children:
     Value: "../absNomeFilePunti"
 - Name: nPunti
   Type: BaseDataVariableType
-  DataType: Int32
+  DataType: Int16
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/nPunti"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: profiloStartX
   Type: S7TiaProfinetTag
   DataType: Double
@@ -136,6 +146,16 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "G2_PLC_1.Blocks.DB_profilo.profiloStartX"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloStartX"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
 - Name: profiloEndX
   Type: S7TiaProfinetTag
   DataType: Double
@@ -144,6 +164,16 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "G2_PLC_1.Blocks.DB_profilo.profiloEndX"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloEndX"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
 - Name: profiloStartY
   Type: S7TiaProfinetTag
   DataType: Double
@@ -152,6 +182,16 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "G2_PLC_1.Blocks.DB_profilo.profiloStartY"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloStartY"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
 - Name: profiloEndY
   Type: S7TiaProfinetTag
   DataType: Double
@@ -160,6 +200,16 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "G2_PLC_1.Blocks.DB_profilo.profiloEndY"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloEndY"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
 - Name: profiloStartSync
   Type: S7TiaProfinetTag
   DataType: Double
@@ -176,3 +226,94 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "G2_PLC_1.Blocks.DB_profilo.profiloVelX"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloVelX"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- Name: profiloLarghezzaDenti
+  Type: S7TCPTag
+  DataType: Double
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: MemoryArea
+  - Name: BlockNumber
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 14
+  - Name: Position
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 40
+  - Name: Bit
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloLarghezzaDenti"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: profiloVelXDenti
+  Type: S7TCPTag
+  DataType: Double
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: MemoryArea
+  - Name: BlockNumber
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 14
+  - Name: Position
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 48
+  - Name: Bit
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloVelXDenti"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: profiloVelYDenti
+  Type: S7TCPTag
+  DataType: Double
+  Children:
+  - Name: MemoryArea
+    Type: BaseDataVariableType
+    DataType: MemoryArea
+  - Name: BlockNumber
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 14
+  - Name: Position
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 56
+  - Name: Bit
+    Type: BaseDataVariableType
+    DataType: UInt32
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TCPDriver1/S7TCPStation1/Tags/G2_PLC_1/DB_profilo/profiloVelYDenti"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

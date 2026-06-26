@@ -19,6 +19,7 @@ using FTOptix.OPCUAClient;
 using FTOptix.Core;
 using FTOptix.Recipe;
 using FTOptix.System;
+using FTOptix.S7TCP;
 #endregion
 
 public class SelezDataLogic_R1 : BaseNetLogic

@@ -21,6 +21,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using FTOptix.System;
 using FTOptix.S7TiaProfinet;
+using FTOptix.S7TCP;
 #endregion
 
 public class TestBtn_Logic : BaseNetLogic

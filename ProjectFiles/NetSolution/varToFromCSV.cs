@@ -9,6 +9,7 @@ using FTOptix.S7TiaProfinet;
 using FTOptix.Store;
 using FTOptix.System;
 using UAManagedCore;
+using FTOptix.S7TCP;
 #endregion
 
 public class varToFromCSV : BaseNetLogic
@@ -102,19 +103,35 @@ public class varToFromCSV : BaseNetLogic
     [ExportMethod]
     public void FromCSVDaRcp()
     {
-            var csvName = Project.Current.GetVariable("Model/VariabiliRicetta/nomeFilePunti");
+        /*int i=1;
+        var prova = Project.Current.GetVariable("Model/Profilo/prova");
+        prova.Value = new UAValue(34);
+        var PointNodeX = Project.Current.GetVariable("Model/Profilo/x_graph[1]");
+         PointNodeX.Value = new UAValue(12.0f);
+        var PointNodeY = Project.Current.GetVariable("Model/Profilo/y_graph[" + i.ToString() + "]");
+        PointNodeX.Value = new UAValue(34.0f);*/
+        
+        
+           var csvName = Project.Current.GetVariable("Model/VariabiliRicetta/nomeFilePunti");
             String path = csvName.Value;
-            File.Copy(path, "c:\\tmp\\actualCSV.csv", overwrite: true);
+       //     File.Copy(path, "c:\\tmp\\actualCSV.csv", overwrite: true);
             var lines = File.ReadAllLines(path);
 
             // Recupero il nodo variabile (oggetto nodo) invece di prendere direttamente il suo UAValue
             var xGraphNode = Project.Current.GetVariable("Model/Profilo/xyGraph");
             var nPuntiNode = Project.Current.GetVariable("Model/VariabiliRicetta/nPunti");
+            var PointNodeX = Project.Current.GetVariable("Model/Profilo/x_graph");
+            var PointNodeY = Project.Current.GetVariable("Model/Profilo/y_graph");
+            var aggiorna = Project.Current.GetVariable("Model/Profilo/aggiorna");
+            float[] xArr = new float[1000];
+            float[] yArr = new float[1000];
+
             nPuntiNode.Value = new UAValue(lines.Length-1);
 
             // Verifico che il nodo e il suo valore contengano una matrice float[,]
             if (xGraphNode?.Value?.Value is float[,] xyGraph)
             {
+                
                 for (int i = 1; i < lines.Length; i++)
                 {
                     var sep = lines[i].Contains('\t') ? '\t' : ','; // tenta a riconoscere il separatore
@@ -126,13 +143,14 @@ public class varToFromCSV : BaseNetLogic
                     {
                         if (i - 1 < xyGraph.GetLength(0))
                         {
-                        
                             xyGraph[i - 1, 0] = v0*1000;
                             xyGraph[i - 1, 1] = v1*1000;
-                            var PointNodeX = Project.Current.GetVariable("Model/Profilo/Points/"+i.ToString()+"/x");
-                            var PointNodeY = Project.Current.GetVariable("Model/Profilo/Points/" + i.ToString() + "/y");
-                            PointNodeX.Value = new UAValue(xyGraph[i - 1, 0]);
-                            PointNodeY.Value = new UAValue(xyGraph[i - 1, 1]);
+                            xArr[i - 1] = v0*1000;
+                            yArr[i - 1] = v1*1000;
+                           /* var PointNodeX = Project.Current.GetVariable("Model/Profilo/x_graph[" + i.ToString() + "]");
+                            var PointNodeY = Project.Current.GetVariable("Model/Profilo/y_graph[" + i.ToString() + "]");
+                            PointNodeX.Value = new UAValue(v0);
+                            PointNodeY.Value = new UAValue(v1);*/
                         }
                     }
                     else
@@ -141,13 +159,17 @@ public class varToFromCSV : BaseNetLogic
                     }
                 }
 
-                // NON assegnare a UAValue.Value (proprietà read-only).
-                // Assegnare un nuovo UAValue contenente la matrice al Value del nodo variabile.
                 xGraphNode.Value= new UAValue(xyGraph);
+                PointNodeX.Value = new UAValue(xArr);
+                PointNodeY.Value = new UAValue(yArr);
+                nPuntiNode.Value = new UAValue(lines.Length-1);
+                aggiorna.Value = new UAValue(true);
             }
             else
             {
                 // loggare: variabile xGraph mancante o tipo diverso
             }
+        
         }
+        
 }

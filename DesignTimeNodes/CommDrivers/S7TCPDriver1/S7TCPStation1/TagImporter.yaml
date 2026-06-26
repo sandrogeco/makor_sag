@@ -1,6 +1,6 @@
-Name: OPCUATagImporter
-Type: OPCUAImporter
-OwnerId: ns=2;g=42d17b6bf3137439feecde27ef6f44ec
+Name: TagImporter
+Type: S7TagImporter
+OwnerId: ns=2;g=3893612a13db3215a0b4c2cd9f83b0f8
 Children:
 - Name: IgnoredPLCItems
   Type: BaseDataVariableType
@@ -12,7 +12,10 @@ Children:
   DataType: NodeId
   ValueRank: OneDimension
   ArrayDimensions: [0]
+- Name: FilePath
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: "file:///C:/Users/diego/OneDrive/Desktop/makor/sag24062026/sag24062026.ap20"
 - Name: Mode
   Type: BaseDataVariableType
-  DataType: ns=18;FetchProviderModes
-  Value: 1
+  DataType: ns=23;FetchProviderModes
